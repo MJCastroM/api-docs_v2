@@ -1,0 +1,11 @@
+.api-page-container {
+  display: flex;
+  flex-wrap: wrap;         // permite varias filas si no caben todo en una
+  gap: 1.5rem;             // espacio entre elementos
+  align-items: flex-start; // alineados por la parte superior
+
+  > * {
+    flex: 1 1 300px;       // ancho base de 300px, crece o encoge según espacio
+    min-width: 250px;      // nunca más estrecho que 250px
+  }
+}

@@ -1,0 +1,30 @@
+.app-container {
+  height: 100vh;
+  mat-sidenav {
+    width: 240px;
+    background: #fff;
+  }
+}
+.page-container {
+  opacity: 1;
+}
+
+// Fade-out: baja opacidad de 1→0
+.fade-out {
+  animation: fadeOut 300ms ease-out forwards;
+}
+
+// Fade-in: sube opacidad de 0→1
+.fade-in {
+  animation: fadeIn 300ms ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

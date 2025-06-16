@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let col of columns">{{ col }}</th>
+    </tr>
+  </thead>
+  <tbody>
+     <ng-container *ngIf="columns?.length; else dynamicRow">      
+      <tr *ngFor="let row of data">
+        <td *ngFor="let col of columns">
+          {{ row[col] || '' }}
+        </td>
+      </tr>
+    </ng-container>
+    <!-- Si no hay columnas, recorre dinámicamente las propiedades del objeto -->
+    <ng-template #dynamicRow>
+      <tr *ngFor="let row of data">
+        <th>{{row.campo}}</th><td>{{row.valor}}</td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>
+    

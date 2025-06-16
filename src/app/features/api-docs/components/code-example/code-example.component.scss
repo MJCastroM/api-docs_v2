@@ -1,0 +1,54 @@
+@import '~prismjs/themes/prism.css';
+$primary-color:   #c62828;
+$text-main:       #333;
+$bg-light:        #f4f4f4;
+$grey-header:     #e0e0e0;
+$shadow-light:    rgba(0,0,0,0.15);
+$border-radius:   8px;
+// 4) Toggle de código
+.code-toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  button[mat-button] {
+    margin-right: 0.5rem;
+      background: white !important;
+    &.active {
+      border-top: 2px solid $primary-color;
+      color: $primary-color;
+    background: $bg-light !important;
+    }
+  }
+
+  button[mat-icon-button] {
+    color: $grey-header;
+    &:hover {
+      color: $text-main;
+    }
+  }
+}
+
+// --- Ahora nuestro override:
+pre[class*="language-"] code {
+  // Opcional: asegurar contraste
+  background: none;  
+}
+
+// Cambiamos el color de los números
+:host ::ng-deep .token.number { 
+  color: #025c52 !important;   // verde oscuro
+  font-weight: 500;            // opcional, dar énfasis
+}
+
+.accordion-container {
+  max-height: 400px;   /* ajusta a la altura deseada */
+  overflow-y: auto;
+}
+
+/* tu panel de código interno también scrollable si quieres */
+.code-container {
+  max-height: 200px;
+  overflow-y: auto;
+}

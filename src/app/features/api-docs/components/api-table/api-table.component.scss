@@ -1,0 +1,51 @@
+// variables.scss (asegúrate de importarlas donde uses estos estilos)
+$primary-color:   #c62828;
+$text-main:       #333;
+$bg-light:        #f4f4f4;
+$grey-header:     #e0e0e0;
+$shadow-light:    rgba(0,0,0,0.15);
+$border-radius:   8px;
+
+// 1) Tablas genéricas
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 4px $shadow-light;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  thead {
+    background: $grey-header;
+    th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: $text-main;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background: lighten($bg-light, 2%);
+      }
+      &:hover {
+        background: lighten($primary-color, 45%);
+      }
+    }
+    td, th {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid lighten($grey-header, 20%);
+      color: $text-main;
+    }
+  }
+
+  // mensaje "No aplica"
+  .no-aplica {
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+    color: darken($grey-header, 20%);
+  }
+}
