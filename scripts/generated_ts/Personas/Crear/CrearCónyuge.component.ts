@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CrearConyugeComponent {
-  // Cabecera e info-card
   pageTitle = 'Crear Conyuge';
   description = `Metodo para crear una persona de forma reducida y asociarla en una relacion de conyuge con otra.`;
   pubName    = 'BTPersonas.CrearConyuge';
   programa   = 'RBTPG396';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId', 'estadoCivilId', 'sdtPersona'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'estadoCivilId', Tipo: 'String', Comentarios: 'Identificador del estado civil.' }, { Nombre: 'sdtPersona', Tipo: '[sBTDatosBasicosPersona](#sbtdatosbasicospersona)', Comentarios: 'Datos del conyuge.' }];
-  outputCols = ['personaUIdConyuge'];
   outputData = [{ Nombre: 'personaUIdConyuge', Tipo: 'Long', Comentarios: 'Identificador unico del conyuge.' }];
-  errorCols  = ['30001', '30002', '40001', '40002', '40003', '40004', '40005', '40006', '40007', '40008', '40012', '40016', '40051', '70001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibio el codigo de estado civil.' }, { Codigo: '40001', Descripcion: 'Debe ingresar Pais del Documento.' }, { Codigo: '40002', Descripcion: 'El Pais del Documento no existe.' }, { Codigo: '40003', Descripcion: 'Debe ingresar Tipo de Documento.' }, { Codigo: '40004', Descripcion: 'El Tipo de Documento no existe.' }, { Codigo: '40005', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '40006', Descripcion: 'Numero de Documento incorrecto.' }, { Codigo: '40007', Descripcion: 'Debe ingresar Primer Apellido.' }, { Codigo: '40008', Descripcion: 'Debe ingresar Primer Nombre.' }, { Codigo: '40012', Descripcion: 'Debe ingresar Sexo.' }, { Codigo: '40016', Descripcion: 'Caracteres incorrectos en nombre/apellido.' }, { Codigo: '40051', Descripcion: 'La persona ya existe.' }, { Codigo: '70001', Descripcion: 'El estado civil ingresado no admite conyuge.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.CrearConyuge>
@@ -80,7 +76,8 @@ export class CrearConyugeComponent {
 	  "primerNombre": "MARCOS",
 	  "sexo": "M"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.CrearConyugeResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -103,7 +100,7 @@ export class CrearConyugeComponent {
          </Btoutreq>
       </BTPersonas.CrearConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -124,8 +121,8 @@ export class CrearConyugeComponent {
         "Hora": "18:47:21",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del pais.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre.' }, { Nombre: 'sexo', Tipo: 'String', Comentarios: 'Sexo (M/F).' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosBasicosPersona', fields: [{ Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del pais.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre.' }, { Nombre: 'sexo', Tipo: 'String', Comentarios: 'Sexo (M/F).' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }] }];
 }

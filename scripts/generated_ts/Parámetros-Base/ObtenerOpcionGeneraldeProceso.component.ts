@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerOpcionGeneraldeProcesoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Opcion General de Proceso';
   description = `Metodo para obtener los datos de una determinada opcion general de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralDeProceso';
   programa   = 'RBTPG286';
   scope      = 'Institucional';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['empresaId', 'codigo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Codigo de empresa [Hidden].' }, { Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo de la opcion general de procesos.' }];
-  outputCols = ['sdtOpcionGeneralDeProceso'];
   outputData = [{ Nombre: 'sdtOpcionGeneralDeProceso', Tipo: '[sBTOpcionGeneral](#sbtopciongeneral)', Comentarios: 'Datos de la opcion general de procesos.' }];
-  errorCols  = ['30001', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de opcion general.' }, { Codigo: '40001', Descripcion: 'No existe la opcion general con el identificador ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTParametrosBase.ObtenerOpcionGeneralDeProceso>
@@ -57,7 +53,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
       "Token": "200f0b8b654A8B5C60A82434"
     },
     "codigo": "2850"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTParametrosBase.ObtenerOpcionGeneralDeProcesoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerOpcionGeneralDeProcesoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "MC",
       "Usuario": "MI",
@@ -106,8 +103,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
       "Canal": "BTDIGITAL",
       "Hora": "13:29:43"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la opcion general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Codigo de la opcion general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opcion general de procesos (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTOpcionGeneral', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la opcion general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Codigo de la opcion general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opcion general de procesos (S/N).' }] }];
 }

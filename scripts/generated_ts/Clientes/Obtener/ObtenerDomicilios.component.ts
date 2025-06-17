@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDomiciliosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Domicilios';
   description = `Metodo para obtener los datos del domicilio de un cliente.`;
   pubName    = 'BTClientes.ObtenerDomicilios';
   programa   = 'RBTPG577';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sbtDomicilioCompleto'];
   outputData = [{ Nombre: 'sbtDomicilioCompleto', Tipo: '[sBTDomicilioCompleto](#sbtdomiciliocompleto)', Comentarios: 'Datos de domicilio.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la cuenta.' }, { Codigo: '30002', Descripcion: 'El identificador de la cuenta no es correcto.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerDomicilios>
@@ -59,7 +55,8 @@ export class ObtenerDomiciliosComponent {
          "bts:Token": "6C363FC1CD2072DE525376D3"
          },
       "bts:clienteUID": "322"
-        }` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        }` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerDomiciliosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -113,7 +110,7 @@ export class ObtenerDomiciliosComponent {
          </Btoutreq>
       </BTClientes.ObtenerDomiciliosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `curl -X POST \
+</SOAP-ENV:Envelope>`,  json: `curl -X POST \
   'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDomicilios=' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
@@ -172,8 +169,8 @@ export class ObtenerDomiciliosComponent {
       "Canal": "BTDIGITAL",
       "Hora": "11:02:11"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'agrupador1', Tipo: 'String', Comentarios: 'Agrupador 1.' }, { Nombre: 'agrupador1Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 1.' }, { Nombre: 'agrupador2', Tipo: 'String', Comentarios: 'Agrupador 2.' }, { Nombre: 'agrupador2Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 2.' }, { Nombre: 'agrupador3', Tipo: 'String', Comentarios: 'Agrupador 3.' }, { Nombre: 'agrupador3Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 3.' }, { Nombre: 'agrupador4', Tipo: 'String', Comentarios: 'Agrupador 4.' }, { Nombre: 'agrupador4Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 4.' }, { Nombre: 'agrupador5', Tipo: 'String', Comentarios: 'Agrupador 5.' }, { Nombre: 'agrupador5Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 5.' }, { Nombre: 'barrio', Tipo: 'String', Comentarios: 'Nombre del barrio.' }, { Nombre: 'barrioId', Tipo: 'Int', Comentarios: 'Identificador del barrio.' }, { Nombre: 'codigoPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'colonia', Tipo: 'String', Comentarios: 'Nombre de la colonia.' }, { Nombre: 'coloniaId', Tipo: 'Int', Comentarios: 'Identificador de la colonia.' }, { Nombre: 'departamento', Tipo: 'String', Comentarios: 'Nombre del departamento.' }, { Nombre: 'departamentoId', Tipo: 'Int', Comentarios: 'Identificador del departamento.' }, { Nombre: 'detalleUbicacion', Tipo: 'String', Comentarios: 'Detalle de la ubicacion.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion.' }, { Nombre: 'localidad', Tipo: 'String', Comentarios: 'Nombre de la localidad.' }, { Nombre: 'localidadId', Tipo: 'Int', Comentarios: 'Identificador de la localidad.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador del pais.' }, { Nombre: 'tipoDomicilio', Tipo: 'String', Comentarios: 'Tipo de domicilio.' }, { Nombre: 'tipoDomicilioId', Tipo: 'Short', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'tipoVivienda', Tipo: 'String', Comentarios: 'Tipo de vivienda.' }, { Nombre: 'tipoViviendaId', Tipo: 'String', Comentarios: 'Identificador del tipo de vivienda.' }, { Nombre: 'ubicacionDesde', Tipo: 'Date', Comentarios: 'Fecha desde la que se utiliza esta ubicacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDomicilioCompleto', fields: [{ Nombre: 'agrupador1', Tipo: 'String', Comentarios: 'Agrupador 1.' }, { Nombre: 'agrupador1Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 1.' }, { Nombre: 'agrupador2', Tipo: 'String', Comentarios: 'Agrupador 2.' }, { Nombre: 'agrupador2Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 2.' }, { Nombre: 'agrupador3', Tipo: 'String', Comentarios: 'Agrupador 3.' }, { Nombre: 'agrupador3Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 3.' }, { Nombre: 'agrupador4', Tipo: 'String', Comentarios: 'Agrupador 4.' }, { Nombre: 'agrupador4Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 4.' }, { Nombre: 'agrupador5', Tipo: 'String', Comentarios: 'Agrupador 5.' }, { Nombre: 'agrupador5Id', Tipo: 'Short', Comentarios: 'Identificador del agrupador 5.' }, { Nombre: 'barrio', Tipo: 'String', Comentarios: 'Nombre del barrio.' }, { Nombre: 'barrioId', Tipo: 'Int', Comentarios: 'Identificador del barrio.' }, { Nombre: 'codigoPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'colonia', Tipo: 'String', Comentarios: 'Nombre de la colonia.' }, { Nombre: 'coloniaId', Tipo: 'Int', Comentarios: 'Identificador de la colonia.' }, { Nombre: 'departamento', Tipo: 'String', Comentarios: 'Nombre del departamento.' }, { Nombre: 'departamentoId', Tipo: 'Int', Comentarios: 'Identificador del departamento.' }, { Nombre: 'detalleUbicacion', Tipo: 'String', Comentarios: 'Detalle de la ubicacion.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion.' }, { Nombre: 'localidad', Tipo: 'String', Comentarios: 'Nombre de la localidad.' }, { Nombre: 'localidadId', Tipo: 'Int', Comentarios: 'Identificador de la localidad.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador del pais.' }, { Nombre: 'tipoDomicilio', Tipo: 'String', Comentarios: 'Tipo de domicilio.' }, { Nombre: 'tipoDomicilioId', Tipo: 'Short', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'tipoVivienda', Tipo: 'String', Comentarios: 'Tipo de vivienda.' }, { Nombre: 'tipoViviendaId', Tipo: 'String', Comentarios: 'Identificador del tipo de vivienda.' }, { Nombre: 'ubicacionDesde', Tipo: 'Date', Comentarios: 'Fecha desde la que se utiliza esta ubicacion.' }] }];
 }

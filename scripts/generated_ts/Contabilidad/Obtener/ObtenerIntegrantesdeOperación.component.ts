@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerIntegrantesdeOperacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Integrantes de Operacion';
   description = `Metodo para obtener los integrantes de una operacion.`;
   pubName    = 'BTContabilidad.ObtenerIntegrantesOperacion';
   programa   = 'RBTPG330';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['sdtIntegrantes'];
   outputData = [{ Nombre: 'sdtIntegrantes', Tipo: '[sBTIntegrante](#sbtintegrante)', Comentarios: 'Listado de integrantes de la operacion.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el identificador de operacion: [Numero de identificador].' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIntegrantesOperacion>
@@ -57,7 +53,8 @@ export class ObtenerIntegrantesdeOperacionComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"operacionUId": "21",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIntegrantesOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +90,7 @@ export class ObtenerIntegrantesdeOperacionComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerIntegrantesOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -129,8 +126,8 @@ export class ObtenerIntegrantesdeOperacionComponent {
         "Hora": "16:11:00",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'nombre', Tipo: 'Long', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Nombre del pais del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'representativo', Tipo: 'String', Comentarios: 'Indica si es titular representativo (S/N).' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'titularidad', Tipo: '[sBTTipoIntegrante](#sbttipointegrante)', Comentarios: 'Tipo de integrante.' }, { Nombre: '### sBTTipoIntegrante', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTTipoIntegrante son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del tipo de integrante.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTIntegrante', fields: [{ Nombre: 'nombre', Tipo: 'Long', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Nombre del pais del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'representativo', Tipo: 'String', Comentarios: 'Indica si es titular representativo (S/N).' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'titularidad', Tipo: '[sBTTipoIntegrante](#sbttipointegrante)', Comentarios: 'Tipo de integrante.' }, { Nombre: '### sBTTipoIntegrante', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del tipo de integrante.' }] }];
 }

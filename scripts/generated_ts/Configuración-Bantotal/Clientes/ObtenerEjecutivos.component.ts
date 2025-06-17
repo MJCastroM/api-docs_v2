@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEjecutivosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Ejecutivos';
   description = `Metodo para obtener un listado de los ejecutivos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEjecutivos';
   programa   = 'RBTPG046';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtEjecutivos'];
   outputData = [{ Nombre: 'sdtEjecutivos', Tipo: '[sBTEjecutivo](#sbtejecutivo)', Comentarios: 'Listado de ejecutivos.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerEjecutivos>
@@ -56,7 +52,8 @@ export class ObtenerEjecutivosComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerEjecutivosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -156,7 +153,7 @@ export class ObtenerEjecutivosComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEjecutivosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -256,8 +253,8 @@ export class ObtenerEjecutivosComponent {
         "Hora": "18:03:54",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripcion de ejecutivo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEjecutivo', fields: [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripcion de ejecutivo.' }] }];
 }

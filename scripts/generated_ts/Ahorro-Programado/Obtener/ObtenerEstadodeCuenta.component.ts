@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEstadodeCuentaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Estado de Cuenta';
   description = `Metodo para obtener el estado de cuenta del ahorro.`;
   pubName    = 'BTAhorroProgramado.ObtenerEstadoDeCuenta';
   programa   = 'RBTPG249';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['ahorroUId', 'fechaDesde', 'fechaHasta'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico del ahorro.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la cual se emite el estado de cuenta' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la cual se emite el estado de cuenta' }];
-  outputCols = ['sdtEstadoCuentaAhorro'];
   outputData = [{ Nombre: 'sdtEstadoCuentaAhorro', Tipo: '[sBTEstadoCuentaAhorro](#sbtestadocuentaahorro)', Comentarios: 'Estado de cuenta del ahorro.' }];
-  errorCols  = ['30001', '30011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de la operacion.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion para el identificador recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ObtenerEstadoDeCuenta>
@@ -62,7 +58,8 @@ export class ObtenerEstadodeCuentaComponent {
     "ahorroUId": 205,
 	"fechaDesde": "2017-03-06",
    "fechaHasta": "2017-11-30"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerEstadoDeCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -140,7 +137,7 @@ export class ObtenerEstadodeCuentaComponent {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerEstadoDeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "MINSTALADOR", 
@@ -218,8 +215,8 @@ export class ObtenerEstadodeCuentaComponent {
         "Hora": "11:26:34", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'abonoActual', Tipo: 'Double', Comentarios: 'Abono actual.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico del ahorro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'diaIncremento', Tipo: 'Short', Comentarios: 'Dia en que se da el incremento.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del ahorro.' }, { Nombre: 'fechaProximoVencimiento', Tipo: 'Date', Comentarios: 'Fecha del proximo vencimiento del ahorro.' }, { Nombre: 'intentosIncremento', Tipo: 'Short', Comentarios: 'Intentos de incremento permitidos.' }, { Nombre: 'movimientos', Tipo: '[sBTMovimientoAhorro](#sbtmovimientoahorro)', Comentarios: 'Listado de movimientos del ahorro.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observacion.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de destino.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de origen.' }, { Nombre: 'periodicidad', Tipo: 'Short', Comentarios: 'Periodicidad del ahorro en dias.' }, { Nombre: 'periodosGraciaUtilizados', Tipo: 'Short', Comentarios: 'Periodos de gracia utilizados.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'renueva', Tipo: 'String', Comentarios: '¿Renueva? (S/N).' }, { Nombre: 'totalDepositado', Tipo: 'Double', Comentarios: 'Saldo total depositado.' }, { Nombre: 'totalInteresesAcreditados', Tipo: 'Double', Comentarios: 'Total de intereses acreditados.' }, { Nombre: 'totalInteresesGenerados', Tipo: 'Double', Comentarios: 'Total de intereses generados.' }, { Nombre: '### sBTMovimientoAhorro', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTMovimientoAhorro son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital de movimiento.' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto de movimiento.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de movimiento.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses del movimiento.' }, { Nombre: 'saldoAhorro', Tipo: 'Double', Comentarios: 'Saldo del ahorro.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEstadoCuentaAhorro', fields: [{ Nombre: 'abonoActual', Tipo: 'Double', Comentarios: 'Abono actual.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico del ahorro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'diaIncremento', Tipo: 'Short', Comentarios: 'Dia en que se da el incremento.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del ahorro.' }, { Nombre: 'fechaProximoVencimiento', Tipo: 'Date', Comentarios: 'Fecha del proximo vencimiento del ahorro.' }, { Nombre: 'intentosIncremento', Tipo: 'Short', Comentarios: 'Intentos de incremento permitidos.' }, { Nombre: 'movimientos', Tipo: '[sBTMovimientoAhorro](#sbtmovimientoahorro)', Comentarios: 'Listado de movimientos del ahorro.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observacion.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de destino.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de origen.' }, { Nombre: 'periodicidad', Tipo: 'Short', Comentarios: 'Periodicidad del ahorro en dias.' }, { Nombre: 'periodosGraciaUtilizados', Tipo: 'Short', Comentarios: 'Periodos de gracia utilizados.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'renueva', Tipo: 'String', Comentarios: '¿Renueva? (S/N).' }, { Nombre: 'totalDepositado', Tipo: 'Double', Comentarios: 'Saldo total depositado.' }, { Nombre: 'totalInteresesAcreditados', Tipo: 'Double', Comentarios: 'Total de intereses acreditados.' }, { Nombre: 'totalInteresesGenerados', Tipo: 'Double', Comentarios: 'Total de intereses generados.' }, { Nombre: '### sBTMovimientoAhorro', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTMovimientoAhorro', fields: [{ Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital de movimiento.' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto de movimiento.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de movimiento.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses del movimiento.' }, { Nombre: 'saldoAhorro', Tipo: 'Double', Comentarios: 'Saldo del ahorro.' }] }];
 }

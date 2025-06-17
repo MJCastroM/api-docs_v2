@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTransaccionesporEstadosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Transacciones por Estados';
   description = `Metodo para obtener las transacciones por estado ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerTransaccionesEstados';
   programa   = 'RBTPG706';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTransaccionesEstados'];
   outputData = [{ Nombre: 'sdtTransaccionesEstados', Tipo: '[sBTTransaccionesEstados](#sbttransaccionesestados)', Comentarios: 'Listado de trasacciones.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerTransaccionesEstados>
@@ -56,7 +52,8 @@ export class ObtenerTransaccionesporEstadosComponent {
       "Usuario": "INSTALADOR",
       "Requerimiento": "?"
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerTransaccionesEstadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +93,7 @@ export class ObtenerTransaccionesporEstadosComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerTransaccionesEstadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -132,8 +129,8 @@ export class ObtenerTransaccionesporEstadosComponent {
       "Canal": "BTDIGITAL",
       "Hora": "15:37:04"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'error', Tipo: 'Int', Comentarios: 'Transacciones contabilizadas con error.' }, { Nombre: 'exito', Tipo: 'Int', Comentarios: 'Transacciones contabilizadas con exito.' }, { Nombre: 'otros', Tipo: 'Int', Comentarios: 'Otros tipos de contabilizacion.' }, { Nombre: 'sucursalParametros', Tipo: 'Int', Comentarios: 'Parametros de sucursal.' }, { Nombre: 'transaccionA', Tipo: 'Int', Comentarios: 'Movimiento autorizado sin contabilizar.' }, { Nombre: 'transaccionB', Tipo: 'Int', Comentarios: 'Movimiento de ingreso batch no contabilizado.' }, { Nombre: 'transaccionE', Tipo: 'Int', Comentarios: 'Movimiento con errores.' }, { Nombre: 'transaccionH', Tipo: 'Int', Comentarios: 'Movimiento contabilizado y pasado al historico.' }, { Nombre: 'transaccionL', Tipo: 'Int', Comentarios: 'Movimiento de ingreso libre no contabilizado.' }, { Nombre: 'transaccionM', Tipo: 'Int', Comentarios: 'Movimiento con autorizaciones pendientes.' }, { Nombre: 'transaccionN', Tipo: 'Int', Comentarios: 'Movimiento ingresado por el transaccional no contabilizado.' }, { Nombre: 'transaccionP', Tipo: 'Int', Comentarios: 'Movimiento contabilizado, pasado al historico, con archivos de saldos historicos actualizados.' }, { Nombre: 'transaccionR', Tipo: 'Int', Comentarios: 'Movimiento con autorizaciones denegadas.' }, { Nombre: 'transaccionS', Tipo: 'Int', Comentarios: 'Movimiento contabilizado sin pasar al historico.' }, { Nombre: 'transaccionSP', Tipo: 'Int', Comentarios: 'Movimiento sin especificar.' }, { Nombre: 'transaccionX', Tipo: 'Int', Comentarios: 'Movimiento con autorizacion por tipo cambio ingresado, para ser retomado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTransaccionesEstados', fields: [{ Nombre: 'error', Tipo: 'Int', Comentarios: 'Transacciones contabilizadas con error.' }, { Nombre: 'exito', Tipo: 'Int', Comentarios: 'Transacciones contabilizadas con exito.' }, { Nombre: 'otros', Tipo: 'Int', Comentarios: 'Otros tipos de contabilizacion.' }, { Nombre: 'sucursalParametros', Tipo: 'Int', Comentarios: 'Parametros de sucursal.' }, { Nombre: 'transaccionA', Tipo: 'Int', Comentarios: 'Movimiento autorizado sin contabilizar.' }, { Nombre: 'transaccionB', Tipo: 'Int', Comentarios: 'Movimiento de ingreso batch no contabilizado.' }, { Nombre: 'transaccionE', Tipo: 'Int', Comentarios: 'Movimiento con errores.' }, { Nombre: 'transaccionH', Tipo: 'Int', Comentarios: 'Movimiento contabilizado y pasado al historico.' }, { Nombre: 'transaccionL', Tipo: 'Int', Comentarios: 'Movimiento de ingreso libre no contabilizado.' }, { Nombre: 'transaccionM', Tipo: 'Int', Comentarios: 'Movimiento con autorizaciones pendientes.' }, { Nombre: 'transaccionN', Tipo: 'Int', Comentarios: 'Movimiento ingresado por el transaccional no contabilizado.' }, { Nombre: 'transaccionP', Tipo: 'Int', Comentarios: 'Movimiento contabilizado, pasado al historico, con archivos de saldos historicos actualizados.' }, { Nombre: 'transaccionR', Tipo: 'Int', Comentarios: 'Movimiento con autorizaciones denegadas.' }, { Nombre: 'transaccionS', Tipo: 'Int', Comentarios: 'Movimiento contabilizado sin pasar al historico.' }, { Nombre: 'transaccionSP', Tipo: 'Int', Comentarios: 'Movimiento sin especificar.' }, { Nombre: 'transaccionX', Tipo: 'Int', Comentarios: 'Movimiento con autorizacion por tipo cambio ingresado, para ser retomado.' }] }];
 }

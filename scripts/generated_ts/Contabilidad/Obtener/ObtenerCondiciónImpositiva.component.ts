@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCondicionImpositivaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Condicion Impositiva';
   description = `Metodo para obtener una condicion impositiva de una persona.`;
   pubName    = 'BTContabilidad.ObtenerCondicionImpositiva';
   programa   = 'RBTPG533';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId', 'codigoImpuesto'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'codigoImpuesto', Tipo: 'Short', Comentarios: 'Codigo de impuesto.' }];
-  outputCols = ['codigoCondicion'];
   outputData = [{ Nombre: 'codigoCondicion', Tipo: 'Short', Comentarios: 'Codigo de condicion.' }];
-  errorCols  = ['30001', '30002', '40004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibio el codigo del impuesto.' }, { Codigo: '40004', Descripcion: 'Condicion por Impuesto/Persona inexistente.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerCondicionImpositiva>
@@ -60,7 +56,8 @@ export class ObtenerCondicionImpositivaComponent {
 	},
 	"personaUId": 202,
 	"codigoImpuesto": 1,
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerCondicionImpositivaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerCondicionImpositivaComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerCondicionImpositivaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -103,8 +100,8 @@ export class ObtenerCondicionImpositivaComponent {
 	  "Numero": "7984",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

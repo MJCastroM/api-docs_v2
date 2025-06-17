@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class RechazarOrdenComponent {
-  // Cabecera e info-card
   pageTitle = 'Rechazar Orden';
   description = `Metodo para rechazar una orden de pago determinada.`;
   pubName    = 'BTCASHManagement.RechazarOrden';
   programa   = 'RBTPGC08R';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['ordenId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['1030726', '1030724'];
   errors     = [{ Codigo: '1030726', Descripcion: 'No se encontro orden a rechazar.' }, { Codigo: '1030724', Descripcion: 'El estado de la orden, no permite rechazar.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.RechazarOrden>
@@ -58,7 +54,8 @@ export class RechazarOrdenComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "ordenId": "1418"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.RechazarOrdenResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +77,7 @@ export class RechazarOrdenComponent {
          </Btoutreq>
       </BTCASHManagement.RechazarOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -100,8 +97,8 @@ export class RechazarOrdenComponent {
         "Hora": "10:53:19",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

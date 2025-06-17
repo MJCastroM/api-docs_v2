@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerAsesoresComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Asesores';
   description = `Metodo para obtener los usuarios asesores.`;
   pubName    = 'BTMicrofinanzas.ObtenerAsesores';
   programa   = 'RBTPG420';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtAsesores'];
   outputData = [{ Nombre: 'sdtAsesores', Tipo: '[sBTAsesor](#sbtasesor)', Comentarios: 'Listado de asesores.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerAsesores>
@@ -56,7 +52,8 @@ export class ObtenerAsesoresComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerAsesoresResponse>
          <Btinreq>
@@ -124,7 +121,7 @@ export class ObtenerAsesoresComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerAsesoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -189,8 +186,8 @@ export class ObtenerAsesoresComponent {
         "Numero": "122",
         "Estado": "OK"
       }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del asesor.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Nombre de usuario asesor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTAsesor', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del asesor.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Nombre de usuario asesor.' }] }];
 }

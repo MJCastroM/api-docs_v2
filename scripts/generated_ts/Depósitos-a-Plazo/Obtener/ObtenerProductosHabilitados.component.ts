@@ -9,28 +9,37 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerProductosHabilitadosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Productos Habilitados';
   description = `Metodo para obtener un listado de los productos de deposito a plazo habilitados.`;
   pubName    = 'BTDepositoAPlazo.ObtenerProductosHabilitados';
   programa   = 'RBTPG447';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tipoDeProducto'];
+  hasBackendConfig  = true;
+  backendText       = `Para configurar los productos habilitados, se debe agregar un registro en la guia especial 70100 para cada producto de la siguiente manera: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | Valor incremental. 
+Correlativo 2 | Modulo. 
+Correlativo 3 | Tipo de operacion. 
+Valor especifico 1 | Moneda. 
+Valor especifico 2 | Papel. 
+Valor especifico 3 | Tipo de producto (1- Deposito al vencimiento, 2- Pago periodico de intereses). 
+Importe especifico 1 | Tipo de dia para el calculo del plazo (1 - Comercial, 2 - Calendario). 
+Importe especifico 2 | Tipo de ano para el calculo de intereses (1 - Comercial, 2 - Calendario).
+Importe especifico 3 | Ajuste de dia al vencimiento (0 - No ajusta, 1 - Ajuste dia anterior, 2 - Ajuste dia posterior).
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tipoDeProducto', Tipo: 'String', Comentarios: 'Tipo de producto (VTO: Vencimiento, PP: Pago periodico).' }];
-  outputCols = ['sdtProductosDepositoAPlazo'];
   outputData = [{ Nombre: 'sdtProductosDepositoAPlazo', Tipo: '[sBTProductosDepositoAPlazo](#sbtproductosdepositoaplazo)', Comentarios: 'Listado de productos habilitados.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ObtenerProductosHabilitados>
@@ -58,7 +67,8 @@ export class ObtenerProductosHabilitadosComponent {
             "Device": "GL"
          },
          "tipoDeProducto": ""
-      }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ObtenerProductosHabilitados xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +102,7 @@ export class ObtenerProductosHabilitadosComponent {
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerProductosHabilitados>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,
@@ -122,8 +132,8 @@ export class ObtenerProductosHabilitadosComponent {
           "Numero": 496,
           "Estado": "OK"
         }
-      }'` } };
+      }'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'datosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'tipoDeDeposito', Tipo: 'String', Comentarios: 'Tipo de deposito. (VTO: Vencimiento, PP: Pago periodico).' }, { Nombre: '### sBTDatoExtendido', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoExtendido son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'clave', Tipo: 'String', Comentarios: 'Clave del dato extendido.' }, { Nombre: 'lista', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Lista de datos' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de dato extendido.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de dato extendido.' }, { Nombre: '### sBTDatoLista', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de informacion adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de informacion adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTProductosDepositoAPlazo', fields: [{ Nombre: 'datosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'tipoDeDeposito', Tipo: 'String', Comentarios: 'Tipo de deposito. (VTO: Vencimiento, PP: Pago periodico).' }, { Nombre: '### sBTDatoExtendido', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDatoExtendido', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Clave del dato extendido.' }, { Nombre: 'lista', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Lista de datos' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de dato extendido.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de dato extendido.' }, { Nombre: '### sBTDatoLista', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de informacion adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de informacion adicional.' }] }];
 }

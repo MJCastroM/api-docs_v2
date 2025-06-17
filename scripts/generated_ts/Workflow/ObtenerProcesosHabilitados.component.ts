@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerProcesosHabilitadosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Procesos Habilitados';
   description = ``;
   pubName    = '';
   programa   = '';
   scope      = '';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = [];
   outputData = [];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
    <soapenv:Header/> 
    <soapenv:Body> 
       <bts:BTWorkflow.ObtenerProcesosHabilitados> 
@@ -55,7 +51,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
         "Usuario": "INSTALADOR", 
         "Token": "3789c5608bCD285A89A23FBE" 
     }, 
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTWorkflow.ObtenerProcesosHabilitadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -169,7 +166,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerProcesosHabilitadosResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`, json: `'{ 
+</SOAP-ENV:Envelope>`,  json: `'{ 
   "Btinreq": { 
       "Device": "GP", 
       "Usuario": "INSTALADOR", 
@@ -281,8 +278,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
       "Hora": "13:04:36", 
       "Canal": "BTDIGITAL" 
   } 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'deadline', Tipo: 'Double', Comentarios: 'Tiempo de deadline.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'fechaActualizacion', Tipo: 'Date', Comentarios: 'Fecha de actualizacion.' }, { Nombre: 'fechaCreacion', Tipo: 'Date', Comentarios: 'Fecha de creacion.' }, { Nombre: 'idProceso', Tipo: 'Long', Comentarios: 'Codigo de proceso.' }, { Nombre: 'idVersion', Tipo: 'Short', Comentarios: 'Version del proceso.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del proceso.' }, { Nombre: 'warning', Tipo: 'Double', Comentarios: 'Tiempo de warning.' }];
+  structuredTypes = [{ typeName: 'sBTProcesoWF', fields: [{ Nombre: 'deadline', Tipo: 'Double', Comentarios: 'Tiempo de deadline.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'fechaActualizacion', Tipo: 'Date', Comentarios: 'Fecha de actualizacion.' }, { Nombre: 'fechaCreacion', Tipo: 'Date', Comentarios: 'Fecha de creacion.' }, { Nombre: 'idProceso', Tipo: 'Long', Comentarios: 'Codigo de proceso.' }, { Nombre: 'idVersion', Tipo: 'Short', Comentarios: 'Version del proceso.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del proceso.' }, { Nombre: 'warning', Tipo: 'Double', Comentarios: 'Tiempo de warning.' }] }];
 }

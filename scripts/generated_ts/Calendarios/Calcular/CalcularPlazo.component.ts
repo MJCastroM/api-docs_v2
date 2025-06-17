@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CalcularPlazoComponent {
-  // Cabecera e info-card
   pageTitle = 'Calcular Plazo';
   description = `Metodo para calcular el plazo entre una fecha de inicio y una fecha de fin dadas.`;
   pubName    = 'BTCalendarios.CalcularPlazo';
   programa   = 'RBTPG338';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sucursalId', 'fechaInicio', 'fechaFin', 'tipoDia', 'tipoVencimiento'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio del plazo.' }, { Nombre: 'fechaFin', Tipo: 'Date', Comentarios: 'Fecha de fin del plazo.' }, { Nombre: 'tipoDia', Tipo: 'Byte', Comentarios: '[Hidden: Valor fijo 1 para este metodo].' }, { Nombre: 'tipoVencimiento', Tipo: 'String', Comentarios: 'Tipo de ajuste al vencimiento ('A': Habil anterior, 'P': Habil posterior, 'N': No ajusta).' }];
-  outputCols = ['plazo'];
   outputData = [{ Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.CalcularPlazo>
@@ -64,7 +60,8 @@ export class CalcularPlazoComponent {
     "fechaInicio": "2020-02-15",
     "fechaFin": "2020-03-12",
     "tipoVencimiento": "A"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.CalcularPlazoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +84,7 @@ export class CalcularPlazoComponent {
          </Btoutreq>
       </BTCalendarios.CalcularPlazoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",
@@ -107,8 +104,8 @@ export class CalcularPlazoComponent {
       "Numero": "8156",
       "Estado": "OK"
     }
-  }` } };
+  }` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

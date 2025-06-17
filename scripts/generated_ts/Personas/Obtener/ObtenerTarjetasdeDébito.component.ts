@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTarjetasdeDebitoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tarjetas de Debito';
   description = `Metodo para obtener las tarjetas de debito de una persona.`;
   pubName    = 'BTPersonas.ObtenerTarjetasDeDebito';
   programa   = 'RBTPG383';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }];
-  outputCols = ['sdtTarjetas'];
   outputData = [{ Nombre: 'sdtTarjetas', Tipo: '[sBDProductoTarjeta](#sbdproductotarjeta)', Comentarios: 'Listado de tarjetas de debito.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recupero la persona para el identificador: [Numero de identificador].' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTarjetasDeDebito>
@@ -58,7 +54,8 @@ export class ObtenerTarjetasdeDebitoComponent {
         "Token": "bc8b678bc44A8B5C60A82434"
     },
    "personaUId": "381"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTarjetasDeDebitoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -124,7 +121,7 @@ export class ObtenerTarjetasdeDebitoComponent {
          </Btoutreq>
       </BTPersonas.ObtenerTarjetasDeDebitoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "GP", 
         "Usuario": "MINSTALADOR", 
@@ -189,8 +186,8 @@ export class ObtenerTarjetasdeDebitoComponent {
         "Hora": "15:35:54", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'adicional', Tipo: 'String', Comentarios: 'Adicional.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Sucursal de la tarjeta.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta de debito.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBDProductoTarjeta', fields: [{ Nombre: 'adicional', Tipo: 'String', Comentarios: 'Adicional.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Sucursal de la tarjeta.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta de debito.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }] }];
 }

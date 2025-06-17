@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AnularMovimientoComponent {
-  // Cabecera e info-card
   pageTitle = 'Anular Movimiento';
   description = `Metodo para anular un movimiento.`;
   pubName    = 'BTContabilidad.AnularMovimiento';
   programa   = 'RBTPG237';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['movimientoUId', 'fecha'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de anulacion.' }];
-  outputCols = ['movimientoUIdAnulacion'];
   outputData = [{ Nombre: 'movimientoUIdAnulacion', Tipo: 'Long', Comentarios: 'Identificador unico de la anulacion de movimiento.' }];
-  errorCols  = ['30001', '30002', '40003', '40004', '40071'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de movimiento.' }, { Codigo: '30002', Descripcion: 'No se recibio fecha de anulacion.' }, { Codigo: '40003', Descripcion: 'No se permite ingresar operaciones anteriores al ultimo cierre.' }, { Codigo: '40004', Descripcion: 'Usuario no autorizado a cambiar la Fecha Valor Contable.' }, { Codigo: '40071', Descripcion: 'La fecha valor contable no puede ser un feriado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.AnularMovimiento>
@@ -60,7 +56,8 @@ export class AnularMovimientoComponent {
 	},
     "movimientoUId": 245,
     "fecha": 2018-08-10
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.AnularMovimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class AnularMovimientoComponent {
          </Btoutreq>
       </BTContabilidad.AnularMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class AnularMovimientoComponent {
         "Hora": "17:22:04",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

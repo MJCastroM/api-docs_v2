@@ -9,28 +9,34 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ContratarComponent {
-  // Cabecera e info-card
   pageTitle = 'Contratar';
   description = `Metodo para contratar un deposito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Contratar';
   programa   = 'RBTPG094';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['simulacionUId', 'clienteUId', 'operacionUIdOrigen', 'operacionUIdDestino', 'instruccionAlVencimiento', 'controlaMismoCliente'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion de alta de deposito a plazo, teniendo en cuenta que:
+
+   - El deposito a plazo se almacena en el preformato 1.
+   - La cuenta vista de debito se almacena en el preformato 2.
+   - Los correlativos del subordinal deben corresponderse con los modulos de los productos de cuenta vista definidos en el subordinal.
+
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T)
+
+   - Se debe indicar los ordinales donde se encuentra definido el deposito a plazo y la cuenta vista de debito.
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la simulacion.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de donde se retira el monto del DPF.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de acreditacion (Capital y/o intereses segun instruccion).' }, { Nombre: 'instruccionAlVencimiento', Tipo: 'Short', Comentarios: 'Identificador de instruccion al vencimiento.' }, { Nombre: 'controlaMismoCliente', Tipo: 'String', Comentarios: '¿Controla correspondencia de cuenta de debito contra cuenta cliente originante? [Hidden: Valores 'S'/'N'].' }];
-  outputCols = ['operacionUId', 'movimientoUId'];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el identificador.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.Contratar>
@@ -66,7 +72,8 @@ export class ContratarComponent {
     "operacionUIdOrigen":281,
     "operacionUIdDestino":281,
     "instruccionAlVencimiento":2   
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ContratarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -94,7 +101,7 @@ export class ContratarComponent {
          </Btoutreq>
       </BTDepositosAPlazo.ContratarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -121,8 +128,8 @@ export class ContratarComponent {
         "Hora": "18:10:30",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

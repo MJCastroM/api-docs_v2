@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class HabilitarComponent {
-  // Cabecera e info-card
   pageTitle = 'Habilitar';
   description = `Metodo para habilitar una cuenta cliente que se encuentra inhabilitada.`;
   pubName    = 'BTClientes.Habilitar';
   programa   = 'RBTPG499';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '40001', '40002', '40003'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de cliente.' }, { Codigo: '40001', Descripcion: 'No se puede habilitar la cuenta porque esta cerrada.' }, { Codigo: '40002', Descripcion: 'La cuenta ya se encuentra habilitada.' }, { Codigo: '40003', Descripcion: 'La cuenta ingresada no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.Habilitar>
@@ -58,7 +54,8 @@ export class HabilitarComponent {
 		"Token": "f3fced1925CD285A89A23FBE"
 	},
 	"clienteUId": 882,
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.HabilitarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +77,7 @@ export class HabilitarComponent {
          </Btoutreq>
       </BTClientes.HabilitarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	 "Btinreq": {
         "Device": "GP",
         "Token": "f3fced1925CD285A89A23FBE",
@@ -100,8 +97,8 @@ export class HabilitarComponent {
         "Fecha": "2022-10-04",
         "Estado": "OK"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerInicioyFindeMesdeSucursalComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Inicio y Fin de Mes de Sucursal';
   description = `Metodo para obtener la primer y ultima fecha habil para el mes indicado, para la sucursal recibida por parametro.`;
   pubName    = 'BTCalendario.ObtenerInicioYFinMesSucursal';
   programa   = 'RBTPG334';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['mesConsulta', 'anioConsulta', 'sucursalId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'mesConsulta', Tipo: 'Short', Comentarios: 'Mes de consulta.' }, { Nombre: 'anioConsulta', Tipo: 'Int', Comentarios: 'Ano de consulta.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }];
-  outputCols = ['fechaHabilInicio', 'fechaHabilFin'];
   outputData = [{ Nombre: 'fechaHabilInicio', Tipo: 'Date', Comentarios: 'Primera fecha habil del mes.' }, { Nombre: 'fechaHabilFin', Tipo: 'Date', Comentarios: 'Ultima fecha habil del mes.' }];
-  errorCols  = ['30001', '30002', '30003', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar mes a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar ano a consultar.' }, { Codigo: '30003', Descripcion: 'Debe ingresar identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.ObtenerInicioYFinMesSucursal>
@@ -62,7 +58,8 @@ export class ObtenerInicioyFindeMesdeSucursalComponent {
     "mesConsulta": "11",
     "anioConsulta": "2020",
     "sucursalId": "1"
-  },` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  },` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.ObtenerInicioYFinMesSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +83,7 @@ export class ObtenerInicioyFindeMesdeSucursalComponent {
          </Btoutreq>
       </BTCalendarios.ObtenerInicioYFinMesSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",
@@ -107,8 +104,8 @@ export class ObtenerInicioyFindeMesdeSucursalComponent {
       "Numero": "8090",
       "Estado": "OK"
     }
-  }` } };
+  }` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

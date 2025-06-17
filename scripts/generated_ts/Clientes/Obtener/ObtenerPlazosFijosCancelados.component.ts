@@ -9,28 +9,41 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPlazosFijosCanceladosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Plazos Fijos Cancelados';
   description = `Metodo para obtener los productos de deposito a plazo fijo cancelados de un cliente.`;
   pubName    = 'BTClientes.ObtenerPlazosFijosCancelados';
   programa   = 'RBTPG275';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = true;
+  backendText       = `Se pueden parametrizar modulos adicionales a incluir ingresando en la guia especial 1041 los siguientes valores: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | 3
+Correlativo 2 | 1 
+Valor especifico 1 | Identificador del modulo a incluir. 
+
+Se pueden parametrizar tipos de operacion a excluir ingresando en la guia especial 1041 los siguientes valores: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | 3
+Correlativo 2 | 2 
+Valor especifico 1 | Modulo del tipo de operacion a excluir. 
+Valor especifico 2 | Tipo de operacion a excluir.	 
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sdtProductosPlazoFijoCancelados'];
   outputData = [{ Nombre: 'sdtProductosPlazoFijoCancelados', Tipo: '[sBTProductoPlazoFijoCancelado](#sbtproductoplazofijocancelado)', Comentarios: 'Listado de plazos fijos cancelados.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el Identificador.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPlazosFijosCancelados>
@@ -58,7 +71,8 @@ export class ObtenerPlazosFijosCanceladosComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "clienteUId": 4
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPlazosFijosCanceladosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -105,7 +119,7 @@ export class ObtenerPlazosFijosCanceladosComponent {
          </Btoutreq>
       </BTClientes.ObtenerPlazosFijosCanceladosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -150,8 +164,8 @@ export class ObtenerPlazosFijosCanceladosComponent {
         "Hora": "13:50:44",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del deposito.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del deposito.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del deposito.' }, { Nombre: 'idOperacionBT', Tipo: 'String', Comentarios: 'Identificador String Bantotal (concatenacion de todos los conceptos claves de la operacion).' }, { Nombre: 'idOperacionFmt', Tipo: 'String', Comentarios: 'Identificador String (concatenacion de algunos conceptos claves de la operacion).' }, { Nombre: 'impuestos', Tipo: 'Double', Comentarios: 'Impuestos del deposito.' }, { Nombre: 'instruccion', Tipo: 'String', Comentarios: 'Descripcion de la instruccion del deposito.' }, { Nombre: 'instruccionCod', Tipo: 'Short', Comentarios: 'Codigo de instruccion.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses del deposito.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo del deposito.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del producto.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'tasaFinal', Tipo: 'Double', Comentarios: 'Tasa final del deposito.' }, { Nombre: 'tasaOriginal', Tipo: 'Double', Comentarios: 'Tasa original del deposito.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Descripcion del tipo de tasa.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTProducto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTConcepto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTProductoPlazoFijoCancelado', fields: [{ Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del deposito.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del deposito.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del deposito.' }, { Nombre: 'idOperacionBT', Tipo: 'String', Comentarios: 'Identificador String Bantotal (concatenacion de todos los conceptos claves de la operacion).' }, { Nombre: 'idOperacionFmt', Tipo: 'String', Comentarios: 'Identificador String (concatenacion de algunos conceptos claves de la operacion).' }, { Nombre: 'impuestos', Tipo: 'Double', Comentarios: 'Impuestos del deposito.' }, { Nombre: 'instruccion', Tipo: 'String', Comentarios: 'Descripcion de la instruccion del deposito.' }, { Nombre: 'instruccionCod', Tipo: 'Short', Comentarios: 'Codigo de instruccion.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses del deposito.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo del deposito.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del producto.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'tasaFinal', Tipo: 'Double', Comentarios: 'Tasa final del deposito.' }, { Nombre: 'tasaOriginal', Tipo: 'Double', Comentarios: 'Tasa original del deposito.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Descripcion del tipo de tasa.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTProducto', fields: [{ Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }] }];
 }

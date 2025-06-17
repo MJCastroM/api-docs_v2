@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEstadodeCompraComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Estado de Compra';
   description = `Metodo para obtener el estado de la compra de un titulo.`;
   pubName    = 'BTTitulos.ObtenerEstadoCompra';
   programa   = 'RBTPG497';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['respuesta', 'codigo'];
   outputData = [{ Nombre: 'respuesta', Tipo: 'String', Comentarios: 'Estado de la compra.' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de la respuesta.' }];
-  errorCols  = ['30001', '30011', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de la operacion.' }, { Codigo: '30011', Descripcion: 'No se recupero el identificador para la operacion recibida.' }, { Codigo: '40001', Descripcion: 'No existe registro para el identificador indicado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTitulos.ObtenerEstadoCompra>
@@ -44,7 +40,8 @@ export class ObtenerEstadodeCompraComponent {
          <bts:operacionUId>44</bts:operacionUId>
       </bts:BTTitulos.ObtenerEstadoCompra>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTitulos.ObtenerEstadoCompraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -68,8 +65,8 @@ export class ObtenerEstadodeCompraComponent {
          </Btoutreq>
       </BTTitulos.ObtenerEstadoCompraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `` } };
+</SOAP-ENV:Envelope>`,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

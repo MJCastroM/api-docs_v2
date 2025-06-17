@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActualizarIntegrantedePersonaJuridicaComponent {
-  // Cabecera e info-card
   pageTitle = 'Actualizar Integrante de Persona Juridica';
   description = `Metodo para actualizar un integrante de una persona juridica.`;
   pubName    = 'BTPersonas.ActualizarIntegrantePersonaJuridica';
   programa   = 'RBTPG280';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaJuridicaUId', 'sdtIntegranteAlta', 'modo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaJuridicaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona juridica.' }, { Nombre: 'sdtIntegranteAlta', Tipo: '[sBTIntegranteJuridicoAlta](#sbtintegrantejuridicoalta)', Comentarios: 'Datos de la persona fisica integrante de la persona juridica indicada.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo 'UP1' para este metodo].' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '40001', '40003', '40004', '40005', '40006', '40007', '40008', '40009', '40010'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador unico de persona juridica.' }, { Codigo: '30002', Descripcion: 'No se recibio identificador unico de integrante de persona juridica.' }, { Codigo: '30003', Descripcion: 'No se recibio identificador de vinculo del integrante de persona juridica.' }, { Codigo: '40001', Descripcion: 'La sumatoria de porcentajes asociados a los integrantes de la persona juridica es mayor a 100%.' }, { Codigo: '40003', Descripcion: 'Debe ingresar el % de participacion del accionista.' }, { Codigo: '40004', Descripcion: 'El % de Participacion no puede ser mayor al 100%.' }, { Codigo: '40005', Descripcion: 'Si la persona no es Accionista tiene que haber sido ingresado con Alta Normal para poder integrar a la persona.' }, { Codigo: '40006', Descripcion: 'Debe ingresar al menos un Representante Legal.' }, { Codigo: '40007', Descripcion: 'No se puede cambiar el vinculo, ya que es el unico Representante Legal.' }, { Codigo: '40008', Descripcion: 'La persona a vincular no puede ser la misma.' }, { Codigo: '40009', Descripcion: 'No puede asociar una persona juridica como representante legal.' }, { Codigo: '40010', Descripcion: 'No existe el identificador de vinculo ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarIntegrantePersonaJuridica>
@@ -68,7 +64,8 @@ export class ActualizarIntegrantedePersonaJuridicaComponent {
 		 "vinculoId": "1",
 		 "participacion": "50",
 	 }
-   }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarIntegrantePersonaJuridicaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +87,7 @@ export class ActualizarIntegrantedePersonaJuridicaComponent {
          </Btoutreq>
       </BTPersonas.ActualizarIntegrantePersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 		"Canal": "BTDIGITAL",
 		"Requerimiento": "1",
@@ -108,8 +105,8 @@ export class ActualizarIntegrantedePersonaJuridicaComponent {
 		"Numero": "10140",
 		"Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'participacion', Tipo: 'Double', Comentarios: 'Porcentaje de participacion del integrante.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador de vinculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTIntegranteJuridicoAlta', fields: [{ Nombre: 'participacion', Tipo: 'Double', Comentarios: 'Porcentaje de participacion del integrante.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador de vinculo.' }] }];
 }

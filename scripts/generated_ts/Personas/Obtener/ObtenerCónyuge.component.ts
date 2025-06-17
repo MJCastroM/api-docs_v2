@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerConyugeComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Conyuge';
   description = `Metodo para obtener los datos del conyuge de una persona fisica.`;
   pubName    = 'BTPersonas.ObtenerConyuge';
   programa   = 'RBTPG290';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador de persona.' }];
-  outputCols = ['apellidoMatrimonio', 'sdtDatosConyuge'];
   outputData = [{ Nombre: 'apellidoMatrimonio', Tipo: 'String', Comentarios: 'Apellido de matrimonio' }, { Nombre: 'sdtDatosConyuge', Tipo: '[sBTDatosConyuge](#sbtdatosconyuge)', Comentarios: 'Datos del conyuge.' }];
-  errorCols  = ['30001', '30002', '30013'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30002', Descripcion: 'El identificador no corresponde a una persona fisica.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador unico.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerConyuge>
@@ -58,7 +54,8 @@ export class ObtenerConyugeComponent {
 	  "bts:Device": "AC"
 	},
 	"personaUId": 2,
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerConyugeResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ObtenerConyugeComponent {
          </Btoutreq>
       </BTPersonas.ObtenerConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -115,8 +112,8 @@ export class ObtenerConyugeComponent {
 	  "Numero": "10689",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador del conyuge.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido del conyuge.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre del conyuge.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido del conyuge.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre del conyuge.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosConyuge', fields: [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador del conyuge.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido del conyuge.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre del conyuge.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido del conyuge.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre del conyuge.' }] }];
 }

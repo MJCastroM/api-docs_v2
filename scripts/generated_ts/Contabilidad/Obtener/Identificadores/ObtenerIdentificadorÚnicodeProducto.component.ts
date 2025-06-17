@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerIdentificadorUnicodeProductoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Identificador Unico de Producto';
   description = `Metodo para obtener el identificador unico de un producto.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoProducto';
   programa   = 'RBTPG837';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['empresaId', 'moduloId', 'tipoOperacionBT', 'monedaId', 'papelId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Modulo Bantotal.' }, { Nombre: 'tipoOperacionBT', Tipo: 'Short', Comentarios: 'Tipo de operacion Bantotal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }];
-  outputCols = ['productoUId'];
   outputData = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio modulo.' }, { Codigo: '30002', Descripcion: 'No se recibio tipo de operacion.' }, { Codigo: '30003', Descripcion: 'Moneda no existe.' }, { Codigo: '30004', Descripcion: 'Papel no existe.' }, { Codigo: '30005', Descripcion: 'No se recibio empresa.' }, { Codigo: '30006', Descripcion: 'Producto no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdentificadorUnicoProducto>
@@ -65,7 +61,8 @@ export class ObtenerIdentificadorUnicodeProductoComponent {
     "tipoOperacionBT": "36",
     "monedaId": "80",
     "papelId": "0"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdentificadorUnicoProductoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ObtenerIdentificadorUnicodeProductoComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "bms", 
         "Usuario": "MINSTALADOR", 
@@ -109,8 +106,8 @@ export class ObtenerIdentificadorUnicodeProductoComponent {
         "Hora": "18:27:46", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

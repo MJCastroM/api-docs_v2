@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTasaParaClienteComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tasa Para Cliente';
   description = `Metodo para obtener la tasa parametrizada al cliente para el producto indicado, junto con la fecha de vigencia.`;
   pubName    = 'BTPrecios.ObtenerTasaCliente';
   programa   = 'RBTPG319';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'productoUId', 'fecha', 'importe', 'plazo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador del cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador del producto.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha del consulta.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe a calcular.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }];
-  outputCols = ['tipoTasa', 'tasa', 'tasaMinima', 'tasaMaxima', 'fechaVigencia'];
   outputData = [{ Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaMinima', Tipo: 'Double', Comentarios: 'Tasa minima.' }, { Nombre: 'tasaMaxima', Tipo: 'Double', Comentarios: 'Tasa maxima.' }, { Nombre: 'fechaVigencia', Tipo: 'Date', Comentarios: 'Fecha de vigencia' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '40003', '40004', '40005', '41003', '41004', '50001'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de producto.' }, { Codigo: '30003', Descripcion: 'Debe ingresar fecha.' }, { Codigo: '30004', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30005', Descripcion: 'Debe ingresar plazo.' }, { Codigo: '40003', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40004', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '40005', Descripcion: 'No se recibio identificador de cuenta a consultar.' }, { Codigo: '41003', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '41004', Descripcion: 'No existe registro para el producto indicado.' }, { Codigo: '50001', Descripcion: 'El registro no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerTasaCliente>
@@ -66,7 +62,8 @@ export class ObtenerTasaParaClienteComponent {
 	"fecha": "2021-11-11",
 	"importe": 10000,
 	"plazo": 360
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerTasaClienteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +90,7 @@ export class ObtenerTasaParaClienteComponent {
          </Btoutreq>
       </BTPrecios.ObtenerTasaClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -116,8 +113,8 @@ export class ObtenerTasaParaClienteComponent {
 	  "Numero": "8050",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

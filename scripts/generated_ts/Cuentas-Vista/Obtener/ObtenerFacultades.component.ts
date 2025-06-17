@@ -9,28 +9,25 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerFacultadesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Facultades';
   description = `Metodo para obtener un listado de las facultades de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerFacultades';
   programa   = 'RBTPG451';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['sdtFacultades', 'sdtFirmantes'];
   outputData = [{ Nombre: 'sdtFacultades', Tipo: '[sBTFacultad](#sbtfacultad)', Comentarios: 'Listado de datos de facultades.' }, { Nombre: 'sdtFirmantes', Tipo: '[sBTFacultadFirmantes](#sbtfacultadfirmantes)', Comentarios: 'Listado de datos de firmantes.' }];
-  errorCols  = ['30001', '30002', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el Identificador: [Numero de identificador].' }, { Codigo: '30003', Descripcion: 'La operacion ingresada no corresponde a una cuenta corriente / cuenta de ahorro.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: ``, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  examples = {
+    invocation: { xml: ``, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerFacultadesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +93,7 @@ export class ObtenerFacultadesComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,
@@ -160,8 +157,8 @@ export class ObtenerFacultadesComponent {
           "Numero": 486,
           "Estado": "OK"
         }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'firmantes', Tipo: '[sBTFacultadFirmante](#sbtfacultadfirmante)', Comentarios: 'Listado de firmantes de la facultad.' }, { Nombre: 'grupos', Tipo: '[sBTFacultadGrupo](#sbtfacultadgrupo)', Comentarios: 'Listado de grupos de la facultad.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo.' }, { Nombre: '### sBTFacultadGrupo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTFacultadGrupo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigoMoneda', Tipo: 'Int', Comentarios: 'Codigo de moneda.' }, { Nombre: 'codigoPapel', Tipo: 'Long', Comentarios: 'Codigo de papel.' }, { Nombre: 'firmantes', Tipo: '[sBTFacultadFirmante](#sbtfacultadfirmante)', Comentarios: 'Listado de firmantes.' }, { Nombre: 'habilitado', Tipo: 'String', Comentarios: '¿Habilitado? (S/N).' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Moneda.' }, { Nombre: 'monto', Tipo: 'Long', Comentarios: 'Monto.' }, { Nombre: 'numero', Tipo: 'Short', Comentarios: 'Numero de grupo.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Papel.' }, { Nombre: 'vigenciaDesde', Tipo: 'Date', Comentarios: 'Fecha de vigencia desde.' }, { Nombre: 'vigenciaHasta', Tipo: 'Date', Comentarios: 'Fecha de vigencia hasta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTFacultadFirmante', Tipo: '', Comentarios: '' }, { Nombre: '### sBTFacultadFirmante', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTFacultadFirmante son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'categoria', Tipo: 'String', Comentarios: 'Categoria.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre.' }, { Nombre: 'personaUId', Tipo: 'long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'potestad', Tipo: 'String', Comentarios: 'Potestad.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTFacultad', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'firmantes', Tipo: '[sBTFacultadFirmante](#sbtfacultadfirmante)', Comentarios: 'Listado de firmantes de la facultad.' }, { Nombre: 'grupos', Tipo: '[sBTFacultadGrupo](#sbtfacultadgrupo)', Comentarios: 'Listado de grupos de la facultad.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo.' }, { Nombre: '### sBTFacultadGrupo', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTFacultadGrupo', fields: [{ Nombre: 'codigoMoneda', Tipo: 'Int', Comentarios: 'Codigo de moneda.' }, { Nombre: 'codigoPapel', Tipo: 'Long', Comentarios: 'Codigo de papel.' }, { Nombre: 'firmantes', Tipo: '[sBTFacultadFirmante](#sbtfacultadfirmante)', Comentarios: 'Listado de firmantes.' }, { Nombre: 'habilitado', Tipo: 'String', Comentarios: '¿Habilitado? (S/N).' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Moneda.' }, { Nombre: 'monto', Tipo: 'Long', Comentarios: 'Monto.' }, { Nombre: 'numero', Tipo: 'Short', Comentarios: 'Numero de grupo.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Papel.' }, { Nombre: 'vigenciaDesde', Tipo: 'Date', Comentarios: 'Fecha de vigencia desde.' }, { Nombre: 'vigenciaHasta', Tipo: 'Date', Comentarios: 'Fecha de vigencia hasta.' }] }, { typeName: 'sBTFacultadFirmante', fields: [{ Nombre: 'categoria', Tipo: 'String', Comentarios: 'Categoria.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre.' }, { Nombre: 'personaUId', Tipo: 'long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'potestad', Tipo: 'String', Comentarios: 'Potestad.' }] }];
 }

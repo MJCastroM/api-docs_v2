@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActualizarRegistroEmpleadoComponent {
-  // Cabecera e info-card
   pageTitle = 'Actualizar Registro Empleado';
   description = `Metodo para actualizar si una persona es empleado de la institucion, asi como la fecha de ingreso si corresponde.`;
   pubName    = 'BTPersonas.ActualizarRegistroEmpleado';
   programa   = 'RBTPG536';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId', 'empleado', 'fechaAlta', 'fechaBaja'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'empleado', Tipo: 'String', Comentarios: '¿Es empleado de la institucion? (S/N).' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de ingreso.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de baja' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30005', '40001', '40002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de persona.' }, { Codigo: '30002', Descripcion: 'No se recibio si la persona es un empleado de la institucion o no.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '30005', Descripcion: 'El valor de empleado no es correcto.' }, { Codigo: '40001', Descripcion: 'La persona no existe.' }, { Codigo: '40002', Descripcion: 'No se encontro una cuenta valida para la persona ingresada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarRegistroEmpleado>
@@ -64,7 +60,8 @@ export class ActualizarRegistroEmpleadoComponent {
     "empleado": "S",
     "fechaAlta": "2024-01-01",
     "fechaBaja": ""
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarRegistroEmpleadoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +83,7 @@ export class ActualizarRegistroEmpleadoComponent {
          </Btoutreq>
       </BTPersonas.ActualizarRegistroEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -104,8 +101,8 @@ export class ActualizarRegistroEmpleadoComponent {
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

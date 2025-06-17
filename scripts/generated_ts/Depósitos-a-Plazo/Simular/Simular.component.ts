@@ -9,28 +9,36 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SimularComponent {
-  // Cabecera e info-card
   pageTitle = 'Simular';
   description = `Metodo para simular el alta de un deposito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Simular';
   programa   = 'RBTPG074';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'monto', 'productoUId', 'plazo'];
+  hasBackendConfig  = true;
+  backendText       = `Para configurar los productos habilitados, se debe agregar un registro en la guia especial 70100 para cada producto de la siguiente manera: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | Valor incremental. 
+Correlativo 2 | Modulo. 
+Correlativo 3 | Tipo de operacion. 
+Valor especifico 1 | Moneda. 
+Valor especifico 2 | Papel. 
+Importe especifico 1 | Tipo de dia para el calculo del plazo (1 - Comercial, 2 - Calendario). 
+Importe especifico 2 | Tipo de ano para el calculo de intereses (1 - Comercial, 2 - Calendario).
+Importe especifico 3 | Ajuste de dia al vencimiento (0 - No ajusta, 1 - Ajuste dia anterior, 2 - Ajuste dia posterior).
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto del deposito.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo del DPF.' }];
-  outputCols = ['fechaAlta', 'fechaVencimiento', 'intereses', 'tasa', 'operacionUId'];
   outputData = [{ Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha en que venceria el DPF.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de la simulacion.' }];
-  errorCols  = ['30001', '30002', '30003', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'El monto es de ingreso obligatorio.' }, { Codigo: '30002', Descripcion: 'El Plazo es de ingreso obligatorio.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de la Cuenta.' }, { Codigo: '30004', Descripcion: 'No se recibio el identificador del Producto.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.Simular>
@@ -64,7 +72,8 @@ export class SimularComponent {
    "monto": 000,
    "productoUId": 103,
    "plazo": 360
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.SimularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +100,7 @@ export class SimularComponent {
          </Btoutreq>
       </BTDepositosAPlazo.SimularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -116,8 +125,8 @@ export class SimularComponent {
       "Hora": "18:10:30",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

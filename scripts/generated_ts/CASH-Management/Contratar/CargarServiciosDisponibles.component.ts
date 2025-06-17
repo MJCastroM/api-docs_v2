@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CargarServiciosDisponiblesComponent {
-  // Cabecera e info-card
   pageTitle = 'Cargar Servicios Disponibles';
   description = `Metodo para obtener los servicios disponibles para el cliente.`;
   pubName    = 'BTCASHManagement.CargarServiciosDisponibles';
   programa   = 'RBTPGC07';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sdtServicios'];
   outputData = [{ Nombre: 'sdtServicios', Tipo: '[sBTConvServicioCASH](#sbtconvserviciocash)', Comentarios: 'Lista de servicios del contrato.' }];
-  errorCols  = ['1030705', '1030709'];
   errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.CargarServiciosDisponibles>
@@ -60,7 +56,8 @@ export class CargarServiciosDisponiblesComponent {
             "Token": "1e39d33c824A8B5C60A82434"
         },
         "clienteUId": "1"
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.CargarServiciosDisponiblesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +87,7 @@ export class CargarServiciosDisponiblesComponent {
          </Btoutreq>
       </BTCASHManagement.CargarServiciosDisponiblesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -122,8 +119,8 @@ export class CargarServiciosDisponiblesComponent {
 	  "Hora": "12:43:25",
 	  "Canal": "BTDIGITAL"
 	 }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'contratoId', Tipo: 'Long', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'descripcionServicio', Tipo: 'String', Comentarios: 'Descripcion de servicios.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'tipoServicio', Tipo: 'String', Comentarios: 'Tipo de servicio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTConvServicioCASH', fields: [{ Nombre: 'contratoId', Tipo: 'Long', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'descripcionServicio', Tipo: 'String', Comentarios: 'Descripcion de servicios.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'tipoServicio', Tipo: 'String', Comentarios: 'Tipo de servicio.' }] }];
 }

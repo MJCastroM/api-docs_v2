@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerVariablesReglaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Variables Regla';
   description = `Metodo para obtener las variables de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ObtenerVariablesRegla';
   programa   = 'RBTPGR54';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['reglaId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'reglaId', Tipo: 'Long', Comentarios: 'Codigo de regla de negocio.' }];
-  outputCols = ['sdtVariablesRegla'];
   outputData = [{ Nombre: 'sdtVariablesRegla', Tipo: '[sBTVariableRegla](#sbtvariableregla)', Comentarios: 'Listado de variables.' }];
-  errorCols  = ['1011050'];
   errors     = [{ Codigo: '1011050', Descripcion: 'No se recibio ID de Regla.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTReglasNegocio.ObtenerVariablesRegla>
@@ -57,7 +53,8 @@ export class ObtenerVariablesReglaComponent {
         "Canal": "BTDIGITAL",
         "Token": "bc8b678bc44A8B5C60A82434"
     },
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTReglasNegocio.ObtenerVariablesReglaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -105,7 +102,7 @@ export class ObtenerVariablesReglaComponent {
          </Btoutreq>
       </BTReglasNegocio.ObtenerVariablesReglaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
@@ -152,8 +149,8 @@ export class ObtenerVariablesReglaComponent {
         "Hora": "10:05:38",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de variable.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripcion de variable.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Tipo de dato.' }, { Nombre: 'variableId', Tipo: 'Short', Comentarios: 'Codigo de variable.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTVariableRegla', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de variable.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripcion de variable.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Tipo de dato.' }, { Nombre: 'variableId', Tipo: 'Short', Comentarios: 'Codigo de variable.' }] }];
 }

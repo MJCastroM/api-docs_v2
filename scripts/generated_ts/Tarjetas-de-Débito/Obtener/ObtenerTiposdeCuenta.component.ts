@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeCuentaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Cuenta';
   description = `Metodo para obtener los tipos de cuenta de tarjetas de debito ingresados en el sistema.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTiposDeCuenta';
   programa   = 'RBTPG379';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposDeCuenta'];
   outputData = [{ Nombre: 'sdtTiposDeCuenta', Tipo: '[sBTTipoDeCuenta](#sbttipodecuenta)', Comentarios: 'Listado de tipos de cuenta.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerTiposDeCuenta>
@@ -51,7 +47,8 @@ export class ObtenerTiposdeCuentaComponent {
         "Token": "1518870407CD285A89A23FBE",
         "Device": ""
     }
-}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerTiposDeCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerTiposdeCuentaComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTiposDeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -115,8 +112,8 @@ export class ObtenerTiposdeCuentaComponent {
         "Numero": 8449,
         "Estado": "OK"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo del tipo de cuenta.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de cuenta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoDeCuenta', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo del tipo de cuenta.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de cuenta.' }] }];
 }

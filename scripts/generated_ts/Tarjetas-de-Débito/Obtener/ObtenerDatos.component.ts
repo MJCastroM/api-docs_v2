@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDatosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Datos';
   description = `Metodo para obtener los datos de un producto de tarjeta de debito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerDatos';
   programa   = 'RBTPG016';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tarjetaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }];
-  outputCols = ['sdtEntidadTarjetaDebito'];
   outputData = [{ Nombre: 'sdtEntidadTarjetaDebito', Tipo: '[sBDTarjetaDebito](#sbdtarjetadebito)', Comentarios: 'Datos de tarjeta de debito.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de tarjeta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerDatos>
@@ -58,7 +54,8 @@ export class ObtenerDatosComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "tarjetaUId": 3
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerDatosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -94,7 +91,7 @@ export class ObtenerDatosComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -130,8 +127,8 @@ export class ObtenerDatosComponent {
       "Hora": "17:41:23",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descPaquete', Tipo: 'String', Comentarios: 'Descripcion de paquete.' }, { Nombre: 'diasHastaVencimiento', Tipo: 'Int', Comentarios: 'Dias restantes para el vencimiento.' }, { Nombre: 'estadoPlastico', Tipo: 'String', Comentarios: 'Descripcion de estado del plastico.' }, { Nombre: 'estadoTarjeta', Tipo: 'String', Comentarios: 'Descripcion de estado de la tarjeta.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'limites', Tipo: '[sBDLimitesTarjeta](#sbdlimitestarjeta)', Comentarios: 'Listado de limites de la tarjeta.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de la tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'paquete', Tipo: 'String', Comentarios: '¿Tiene paquete? (S/N).' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: '### sBDLimitesTarjeta', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBDLimitesTarjeta son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Campo', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del limite.' }, { Nombre: 'limiteBandaMagnetica', Tipo: 'Double', Comentarios: 'Monto del limite por banda magnetica.' }, { Nombre: 'limiteChip', Tipo: 'Double', Comentarios: 'Monto del limite por chip.' }, { Nombre: 'limiteNoPresencial', Tipo: 'Double', Comentarios: 'Monto del limite no presencial.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBDTarjetaDebito', fields: [{ Nombre: 'descPaquete', Tipo: 'String', Comentarios: 'Descripcion de paquete.' }, { Nombre: 'diasHastaVencimiento', Tipo: 'Int', Comentarios: 'Dias restantes para el vencimiento.' }, { Nombre: 'estadoPlastico', Tipo: 'String', Comentarios: 'Descripcion de estado del plastico.' }, { Nombre: 'estadoTarjeta', Tipo: 'String', Comentarios: 'Descripcion de estado de la tarjeta.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'limites', Tipo: '[sBDLimitesTarjeta](#sbdlimitestarjeta)', Comentarios: 'Listado de limites de la tarjeta.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de la tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'paquete', Tipo: 'String', Comentarios: '¿Tiene paquete? (S/N).' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: '### sBDLimitesTarjeta', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBDLimitesTarjeta son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Campo', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del limite.' }, { Nombre: 'limiteBandaMagnetica', Tipo: 'Double', Comentarios: 'Monto del limite por banda magnetica.' }, { Nombre: 'limiteChip', Tipo: 'Double', Comentarios: 'Monto del limite por chip.' }, { Nombre: 'limiteNoPresencial', Tipo: 'Double', Comentarios: 'Monto del limite no presencial.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }] }];
 }

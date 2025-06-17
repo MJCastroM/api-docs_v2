@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerGruposComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Grupos';
   description = `Metodo para obtener los grupos de credito existentes.`;
   pubName    = 'BTMicrofinanzas.ObtenerGrupos';
   programa   = 'RBTPG428';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tipoGrupoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tipoGrupoId', Tipo: 'Short', Comentarios: 'Tipo de grupos.' }];
-  outputCols = ['sdtGrupos'];
   outputData = [{ Nombre: 'sdtGrupos', Tipo: '[sBTGrupo](#sbtgrupo)', Comentarios: 'Listado de grupos.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el tipo de grupo.' }, { Codigo: '30002', Descripcion: 'No existen grupos para el tipo de grupo ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerGrupos>
@@ -58,7 +54,8 @@ export class ObtenerGruposComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "tipoGrupoId": 4
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerGruposResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -94,7 +91,7 @@ export class ObtenerGruposComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerGruposResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
@@ -130,8 +127,8 @@ export class ObtenerGruposComponent {
         "Hora": "16:35:22",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo del grupo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripcion del grupo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTGrupo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo del grupo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripcion del grupo.' }] }];
 }

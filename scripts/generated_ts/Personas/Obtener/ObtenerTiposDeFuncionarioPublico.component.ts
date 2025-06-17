@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeFuncionarioPublicoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Funcionario Publico';
   description = `Metodo para obtener los tipos de funcionario publico.`;
   pubName    = 'BTPersonas.ObtenerTiposDeFuncionarioPublico';
   programa   = 'RBTPG554';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposFuncionarios'];
   outputData = [{ Nombre: 'sdtTiposFuncionarios', Tipo: '[sBTTipoFuncionario](#sbttipofuncionario)', Comentarios: 'Listado de los tipos de funcionario publico.' }];
-  errorCols  = ['40002'];
   errors     = [{ Codigo: '40002', Descripcion: 'La guia 8260 no esta parametrizada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTiposDeFuncionarioPublico>
@@ -56,7 +52,8 @@ export class ObtenerTiposdeFuncionarioPublicoComponent {
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ObtenerTiposdeFuncionarioPublicoComponent {
          </Btoutreq>
       </BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -120,8 +117,8 @@ export class ObtenerTiposdeFuncionarioPublicoComponent {
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de funcionario publico.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de funcionario publico.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoFuncionario', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de funcionario publico.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de funcionario publico.' }] }];
 }

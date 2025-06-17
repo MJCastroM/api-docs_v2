@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AgregarPerfilComponent {
-  // Cabecera e info-card
   pageTitle = 'Agregar Perfil';
   description = `Metodo para agregar un perfil a un usuario.`;
   pubName    = 'BTUsuarios.AgregarPerfil';
   programa   = 'RBTPG122';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['usuario', 'sdtPerfil'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador del usuario.' }, { Nombre: 'sdtPerfil', Tipo: '[sBTPerfilBT](#sbtperfilbt)', Comentarios: 'Datos del perfil.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30002', Descripcion: 'No existe Usuario.' }, { Codigo: '30003', Descripcion: 'Debe ingresar Perfil.' }, { Codigo: '30004', Descripcion: 'No existe Perfil.' }, { Codigo: '30005', Descripcion: 'Debe ingresar Fecha de Alta.' }, { Codigo: '30006', Descripcion: 'Fecha de Alta debe ser posterior a Fecha de Apertura.' }, { Codigo: '30007', Descripcion: 'Debe ingresar Fecha de Vencimiento.' }, { Codigo: '30008', Descripcion: 'Fecha de Vencimiento debe ser posterior a Fecha de Apertura.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.AgregarPerfil>
@@ -68,7 +64,8 @@ export class AgregarPerfilComponent {
       "FechaAlta": "2018-12-01",
       "FechaVencimiento": "2020-01-01"
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.AgregarPerfilResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +87,7 @@ export class AgregarPerfilComponent {
          </Btoutreq>
       </BTUsuarios.AgregarPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -110,8 +107,8 @@ export class AgregarPerfilComponent {
         "Hora": "15:54:29",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

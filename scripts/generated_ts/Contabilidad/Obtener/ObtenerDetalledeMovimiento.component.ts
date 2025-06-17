@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDetalledeMovimientoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Detalle de Movimiento';
   description = `Metodo para obtener el detalle de un movimiento contable.`;
   pubName    = 'BTContabilidad.ObtenerDetalleMovimiento';
   programa   = 'RBTPG228';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['movimientoUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }];
-  outputCols = ['sdtDetalleAsiento'];
   outputData = [{ Nombre: 'sdtDetalleAsiento', Tipo: '[sBTDetalleAsiento](#sbtdetalleasiento)', Comentarios: 'Datos del movimiento.' }];
-  errorCols  = ['30001', '30103', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de movimiento.' }, { Codigo: '30103', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '40001', Descripcion: 'No existe el asiento.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerDetalleMovimiento>
@@ -58,7 +54,8 @@ export class ObtenerDetalledeMovimientoComponent {
 		"Device": "MC"
 	 },
 	 "movimientoUId": "8"
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerDetalleMovimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -142,7 +139,7 @@ export class ObtenerDetalledeMovimientoComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerDetalleMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 
@@ -223,8 +220,8 @@ export class ObtenerDetalledeMovimientoComponent {
       "Numero": "7704", 
       "Estado": "OK" 
     } 
-  }` } };
+  }` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'anulado', Tipo: 'String', Comentarios: '¿Anulado? (S/N)' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del movimiento.' }, { Nombre: 'fechaContabilizacion', Tipo: 'Date', Comentarios: 'Fecha de contabilizacion.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'hora', Tipo: 'String', Comentarios: 'Hora de contabilizacion.' }, { Nombre: 'movimientoUIdAnulacion', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento de anulacion.' }, { Nombre: 'movimientoUIdOriginal', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento original.' }, { Nombre: 'ordinales', Tipo: '[sBTOrdinal](#sbtordinal)', Comentarios: 'Listado de ordinales del movimiento.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'usuarioConfirmacion', Tipo: 'String', Comentarios: 'Usuario de confirmacion del movimiento.' }, { Nombre: 'usuarioIngreso', Tipo: 'String', Comentarios: 'Usuario de ingreso del movimiento.' }, { Nombre: '### sBTOrdinal', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTOrdinal son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'debitoCredito', Tipo: 'String', Comentarios: '¿Es debito o credito? (Credito: 'C', Debito: 'D').' }, { Nombre: 'idOperacionBT', Tipo: 'String', Comentarios: 'Identificador String Bantotal (concatenacion de todos los conceptos claves de la operacion).' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del Producto.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTProducto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTConcepto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDetalleAsiento', fields: [{ Nombre: 'anulado', Tipo: 'String', Comentarios: '¿Anulado? (S/N)' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del movimiento.' }, { Nombre: 'fechaContabilizacion', Tipo: 'Date', Comentarios: 'Fecha de contabilizacion.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'hora', Tipo: 'String', Comentarios: 'Hora de contabilizacion.' }, { Nombre: 'movimientoUIdAnulacion', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento de anulacion.' }, { Nombre: 'movimientoUIdOriginal', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento original.' }, { Nombre: 'ordinales', Tipo: '[sBTOrdinal](#sbtordinal)', Comentarios: 'Listado de ordinales del movimiento.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'usuarioConfirmacion', Tipo: 'String', Comentarios: 'Usuario de confirmacion del movimiento.' }, { Nombre: 'usuarioIngreso', Tipo: 'String', Comentarios: 'Usuario de ingreso del movimiento.' }, { Nombre: '### sBTOrdinal', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTOrdinal', fields: [{ Nombre: 'debitoCredito', Tipo: 'String', Comentarios: '¿Es debito o credito? (Credito: 'C', Debito: 'D').' }, { Nombre: 'idOperacionBT', Tipo: 'String', Comentarios: 'Identificador String Bantotal (concatenacion de todos los conceptos claves de la operacion).' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del Producto.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTProducto', fields: [{ Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }] }];
 }

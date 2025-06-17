@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ValidarPoliticasComponent {
-  // Cabecera e info-card
   pageTitle = 'Validar Politicas';
   description = `Metodo para validar las politicas crediticias de una determinada etapa del proceso de otorgamiento de creditos.`;
   pubName    = 'BTMicrofinanzas.ValidarPoliticas';
   programa   = 'RBTPG417';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['solicitudUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }];
-  outputCols = ['controlOK', 'sdtValidacionesPoliticas'];
   outputData = [{ Nombre: 'controlOK', Tipo: 'String', Comentarios: 'Devuelve "N" si existen politicas que no permiten continuar. "S" en caso contrario.' }, { Nombre: 'sdtValidacionesPoliticas', Tipo: '[sBTValidacionPoliticas](#sbtvalidacionpoliticas)', Comentarios: 'Listado de validacion de politicas.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de solicitud.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ValidarPoliticas>
@@ -58,7 +54,8 @@ export class ValidarPoliticasComponent {
          "Device": "GP"
       },
       "solicitudUId": "10972"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ValidarPoliticasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -131,7 +128,7 @@ export class ValidarPoliticasComponent {
          </Btoutreq>
       </BTMicrofinanzas.ValidarPoliticasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "95",
@@ -191,8 +188,8 @@ export class ValidarPoliticasComponent {
       "Numero": "1400",
       "Estado": "OK"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoDsc', Tipo: 'String', Comentarios: 'Descripcion del estado.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observacion que aplique para una politica. Por ejemplo, que haya sido autorizada en una etapa previa.' }, { Nombre: 'politica', Tipo: 'String', Comentarios: 'Descripcion de la politica.' }, { Nombre: 'politicaId', Tipo: 'Int', Comentarios: 'Identificador de politica.' }, { Nombre: 'restriccion', Tipo: 'String', Comentarios: 'Tipo de restriccion de la politica.' }, { Nombre: 'restriccionDsc', Tipo: 'String', Comentarios: 'Descripcion de la restriccion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTValidacionPoliticas', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoDsc', Tipo: 'String', Comentarios: 'Descripcion del estado.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observacion que aplique para una politica. Por ejemplo, que haya sido autorizada en una etapa previa.' }, { Nombre: 'politica', Tipo: 'String', Comentarios: 'Descripcion de la politica.' }, { Nombre: 'politicaId', Tipo: 'Int', Comentarios: 'Identificador de politica.' }, { Nombre: 'restriccion', Tipo: 'String', Comentarios: 'Tipo de restriccion de la politica.' }, { Nombre: 'restriccionDsc', Tipo: 'String', Comentarios: 'Descripcion de la restriccion.' }] }];
 }

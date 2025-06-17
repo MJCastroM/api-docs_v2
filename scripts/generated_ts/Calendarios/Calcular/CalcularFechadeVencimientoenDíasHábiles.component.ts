@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CalcularFechadeVencimientoenDiasHabilesComponent {
-  // Cabecera e info-card
   pageTitle = 'Calcular Fecha de Vencimiento en Dias Habiles';
   description = `Metodo para calcular la fecha de vencimiento en dias habiles de un plazo, a partir de la fecha de inicio.`;
   pubName    = 'BTCalendarios.CalcularFechaVencimientoDiasHabiles';
   programa   = 'RBTPG340';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sucursalId', 'fechaInicio', 'plazo', 'tipoDia', 'tipoVencimiento'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio del plazo.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'tipoDia', Tipo: 'Byte', Comentarios: '[Hidden: Valor fijo 6 para este metodo].' }, { Nombre: 'tipoVencimiento', Tipo: 'String', Comentarios: 'Tipo de ajuste al vencimiento ('A': Habil anterior, 'P': Habil posterior, 'N': No ajusta).' }];
-  outputCols = ['fechaVencimiento'];
   outputData = [{ Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del plazo.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.CalcularFechaVencimientoDiasHabiles>
@@ -64,7 +60,8 @@ export class CalcularFechadeVencimientoenDiasHabilesComponent {
     "plazo": "30",
     "fechaInicio": "2020-02-15",
     "tipoVencimiento": "A"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.CalcularFechaVencimientoDiasHabilesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +84,7 @@ export class CalcularFechadeVencimientoenDiasHabilesComponent {
          </Btoutreq>
       </BTCalendarios.CalcularFechaVencimientoDiasHabilesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 
@@ -107,8 +104,8 @@ export class CalcularFechadeVencimientoenDiasHabilesComponent {
       "Numero": "8156", 
       "Estado": "OK" 
     } 
-  }` } };
+  }` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

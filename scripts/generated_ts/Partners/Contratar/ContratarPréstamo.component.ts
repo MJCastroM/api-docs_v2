@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ContratarPrestamoComponent {
-  // Cabecera e info-card
   pageTitle = 'Contratar Prestamo';
   description = `Metodo para contratar un prestamo de Partner.`;
   pubName    = 'BTPartners.ContratarPrestamo';
   programa   = 'RBTPN008';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sdtPartner', 'operacionUId', 'cuentaUId', 'operacionAcreditacionUId', 'operacionCobroUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'cuentaUId', Tipo: 'Long', Comentarios: 'Identificador unico de la cuenta.' }, { Nombre: 'operacionAcreditacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de acreditacion.' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de cobro' }];
-  outputCols = ['movimientoUId'];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico del movimiento' }];
-  errorCols  = ['30001', '30002', '30004', '30005', '30006', '30007', '30008', '30009', '30010', '30014', '30015', '30100'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion de prestamo' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de operacion de Acreditacion' }, { Codigo: '30004', Descripcion: 'No se recupero el prestamo para el identificador: [Numero de identificador]' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion para el identificador: [Numero de identificador]' }, { Codigo: '30006', Descripcion: 'No se recibio el identificador de cliente' }, { Codigo: '30007', Descripcion: 'No se recupero la cuenta para el Identificador de cliente: [Numero de identificador]' }, { Codigo: '30008', Descripcion: 'El prestamo no pertenece al cliente' }, { Codigo: '30009', Descripcion: 'La operacion de cobro no pertenece al cliente' }, { Codigo: '30010', Descripcion: 'No se recibio el identificador unico de operacion de cobro' }, { Codigo: '30014', Descripcion: 'No existe una empresa con los datos ingresados' }, { Codigo: '30015', Descripcion: 'No se pudo resolver la empresa del usuario' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPartners.ContratarPrestamo>
@@ -74,7 +70,8 @@ export class ContratarPrestamoComponent {
    "cuentaUId": 23,
    "operacionAcreditacionUId": 8542,
    "operacionCobroUId": 8412
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ContratarPrestamoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +94,7 @@ export class ContratarPrestamoComponent {
          </Btoutreq>
       </BTPartners.ContratarPrestamoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -118,8 +115,8 @@ export class ContratarPrestamoComponent {
         "Hora": "17:15:28",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }];
 }

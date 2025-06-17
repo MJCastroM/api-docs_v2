@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeListasNegrasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Listas Negras';
   description = `Metodo para obtener un listado de los tipos de listas negras ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposListasNegras';
   programa   = 'RBTPG214';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposListaNegra'];
   outputData = [{ Nombre: 'sdtTiposListaNegra', Tipo: '[sBTTipoListaNegra](#sbttipolistanegra)', Comentarios: 'Listado de tipos de listas negras.' }];
-  errorCols  = ['30011'];
   errors     = [{ Codigo: '30011', Descripcion: 'No existen Tipos de Lista Negra ingresados en el sistema.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerTiposListasNegras>
@@ -56,7 +52,8 @@ export class ObtenerTiposdeListasNegrasComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerTiposListasNegrasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -104,7 +101,7 @@ export class ObtenerTiposdeListasNegrasComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerTiposListasNegrasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -152,8 +149,8 @@ export class ObtenerTiposdeListasNegrasComponent {
       "Hora": "15:54:44",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Identificador de tipo de lista negra.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de tipo de lista negra.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [];
 }

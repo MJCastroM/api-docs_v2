@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerAvanceComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Avance';
   description = `Metodo para obtener el avance de un deposito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerAvance';
   programa   = 'RBTPG402';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'depositoUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'depositoUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de deposito.' }];
-  outputCols = ['fechaAlta', 'fechaVencimiento', 'plazoTranscurrido', 'plazoTotal', 'porcentajeAvance'];
   outputData = [{ Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del deposito.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del deposito.' }, { Nombre: 'plazoTranscurrido', Tipo: 'Int', Comentarios: 'Plazo transcurrido del deposito.' }, { Nombre: 'plazoTotal', Tipo: 'Int', Comentarios: 'Plazo total del deposito.' }, { Nombre: 'porcentajeAvance', Tipo: 'Double', Comentarios: 'Porcentaje de avance del deposito (segun el plazo).' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la Cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador del deposito.' }, { Codigo: '30003', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30004', Descripcion: 'No se recupero la operacion para el identificador recibido.' }, { Codigo: '30005', Descripcion: 'La operacion de deposito no pertenece al cliente ingresado.' }, { Codigo: '40001', Descripcion: 'La operacion de deposito ingresada no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositoAPlazo.ObtenerAvance>
@@ -60,7 +56,8 @@ export class ObtenerAvanceComponent {
 	},
    "clienteUId": "10003",
    "depositoUId": "10121"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositoAPlazo.ObtenerAvanceResponse>
          <Btinreq>
@@ -87,7 +84,7 @@ export class ObtenerAvanceComponent {
          </Btoutreq>
       </BTDepositoAPlazo.ObtenerAvanceResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -112,8 +109,8 @@ export class ObtenerAvanceComponent {
       "Hora": "15:23:05",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

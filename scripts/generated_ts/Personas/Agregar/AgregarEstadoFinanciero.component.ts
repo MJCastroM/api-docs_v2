@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AgregarEstadoFinancieroComponent {
-  // Cabecera e info-card
   pageTitle = 'Agregar Estado Financiero';
   description = `Metodo para agregar los estados financieros a una persona.`;
   pubName    = 'BTPersonas.AgregarEstadoFinanciero';
   programa   = 'RBTPG580';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId', 'sdtEstadoFinanciero', 'sdtCondicionTributaria', 'sdtConceptosEstadoFinanciero'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de la persona.' }, { Nombre: 'sdtEstadoFinanciero', Tipo: '[sBTEstadoFinanciero ](#sbtestadofinanciero)', Comentarios: 'Datos del estado financiero.' }, { Nombre: 'sdtCondicionTributaria', Tipo: '[sBTCondicionTributaria ](#sbtcondiciontributaria)', Comentarios: 'Datos de la condicion tributaria.' }, { Nombre: 'sdtConceptosEstadoFinanciero', Tipo: '[sBTDetallesEstadosFinancieros ](#sbtdetallesestadosfinancieros)', Comentarios: 'Listado de los conceptos financieros.' }];
-  outputCols = ['sdtEstadoFinanciero'];
   outputData = [{ Nombre: 'sdtEstadoFinanciero', Tipo: '[sBTEstadoFinanciero ](#sbtestadofinanciero)', Comentarios: 'Datos del estado financiero.' }];
-  errorCols  = ['30001', '30002', '30003', '30005', '30006', '30007', '30008', '30009', '30010', '30011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibio la fecha de elaboracion.' }, { Codigo: '30003', Descripcion: 'No se recibio el codigo de la moneda.' }, { Codigo: '30005', Descripcion: 'Ya existe un Estado Financiero con esa fecha de elaboracion.' }, { Codigo: '30006', Descripcion: 'El codigo de moneda no coincide.' }, { Codigo: '30007', Descripcion: 'El valor de activo no corresponde.' }, { Codigo: '30008', Descripcion: 'La fecha de Elaborado en EEFF no puede ser mayor a la fecha de Hoy.' }, { Codigo: '30009', Descripcion: 'El concepto [Nombre del concepto] tiene valor [valor del concepto] el cual no esta parametrizado.' }, { Codigo: '30010', Descripcion: 'El concepto [Identificador del concepto] no esta parametrizado.' }, { Codigo: '30011', Descripcion: 'Los "Activos Totales" son diferente al "Total Pasivo + Patrimonio".' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarEstadoFinanciero>
@@ -98,7 +94,8 @@ export class AgregarEstadoFinancieroComponent {
             "valorConcepto": ""
           }
         }
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarEstadoFinancieroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -128,7 +125,7 @@ export class AgregarEstadoFinancieroComponent {
          </Btoutreq>
       </BTPersonas.AgregarEstadoFinancieroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -156,8 +153,8 @@ export class AgregarEstadoFinancieroComponent {
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'auditado', Tipo: 'String', Comentarios: '¿Es auditado? (S/N).' }, { Nombre: 'fechaDeElaborado', Tipo: 'Date', Comentarios: 'Fecha de elaborado.' }, { Nombre: 'fechaRegistro', Tipo: 'Date', Comentarios: 'Fecha de registro.' }, { Nombre: 'id', Tipo: 'int', Comentarios: 'Identificador de estado financiero.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'usuarioDeIngreso', Tipo: 'String', Comentarios: 'Usuario de ingreso.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTCondicionTributaria', Tipo: '', Comentarios: '' }, { Nombre: '### sBTCondicionTributaria', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTCondicionTributaria son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'activo', Tipo: 'String', Comentarios: '¿Esta activo? (S/N).' }, { Nombre: 'regimenTributario', Tipo: 'String', Comentarios: 'Regimen tributario.' }, { Nombre: 'RUC', Tipo: 'String', Comentarios: 'RUC.' }, { Nombre: 'ventasAnuales', Tipo: 'Double', Comentarios: 'Total de ventas anuales.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTDetallesEstadosFinancieros', Tipo: '', Comentarios: '' }, { Nombre: '### sBTDetallesEstadosFinancieros', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDetallesEstadosFinancieros son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'idConcepto', Tipo: 'int', Comentarios: 'Identificador del concepto del estado financiero.' }, { Nombre: 'valorConcepto', Tipo: 'Double', Comentarios: 'Valor del concepto del estado financiero.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEstadoFinanciero', fields: [{ Nombre: 'auditado', Tipo: 'String', Comentarios: '¿Es auditado? (S/N).' }, { Nombre: 'fechaDeElaborado', Tipo: 'Date', Comentarios: 'Fecha de elaborado.' }, { Nombre: 'fechaRegistro', Tipo: 'Date', Comentarios: 'Fecha de registro.' }, { Nombre: 'id', Tipo: 'int', Comentarios: 'Identificador de estado financiero.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'usuarioDeIngreso', Tipo: 'String', Comentarios: 'Usuario de ingreso.' }] }, { typeName: 'sBTCondicionTributaria', fields: [{ Nombre: 'activo', Tipo: 'String', Comentarios: '¿Esta activo? (S/N).' }, { Nombre: 'regimenTributario', Tipo: 'String', Comentarios: 'Regimen tributario.' }, { Nombre: 'RUC', Tipo: 'String', Comentarios: 'RUC.' }, { Nombre: 'ventasAnuales', Tipo: 'Double', Comentarios: 'Total de ventas anuales.' }] }, { typeName: 'sBTDetallesEstadosFinancieros', fields: [{ Nombre: 'idConcepto', Tipo: 'int', Comentarios: 'Identificador del concepto del estado financiero.' }, { Nombre: 'valorConcepto', Tipo: 'Double', Comentarios: 'Valor del concepto del estado financiero.' }] }];
 }

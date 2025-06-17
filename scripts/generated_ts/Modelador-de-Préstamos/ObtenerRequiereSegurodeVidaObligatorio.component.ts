@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerRequiereSegurodeVidaObligatorioComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Requiere Seguro de Vida Obligatorio';
   description = `Metodo para obtener si un producto de prestamo requiere seguro de vida obligatorio.`;
   pubName    = 'BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio';
   programa   = 'RBTPG353';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['productoUID', 'parametro'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'productoUID', Tipo: 'Long', Comentarios: 'Identificador de producto.' }, { Nombre: 'parametro', Tipo: 'Short', Comentarios: '[Hidden: Valor '350' definido por defecto].' }];
-  outputCols = ['valor'];
   outputData = [{ Nombre: 'valor', Tipo: 'String', Comentarios: 'Requiere o no seguro de vida obligatorio.' }];
-  errorCols  = ['30002', '30003', '30004'];
   errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio>
@@ -44,7 +40,8 @@ export class ObtenerRequiereSegurodeVidaObligatorioComponent {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -69,8 +66,8 @@ export class ObtenerRequiereSegurodeVidaObligatorioComponent {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `` } };
+</SOAP-ENV:Envelope>`,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

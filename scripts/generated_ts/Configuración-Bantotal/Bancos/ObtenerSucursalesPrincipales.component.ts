@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerSucursalesPrincipalesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Sucursales Principales';
   description = `Metodo para obtener un listado de las sucursales principales.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerSucursalesPrincipales';
   programa   = 'RBTPG570';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtSucursalesPrincipales'];
   outputData = [{ Nombre: 'sdtSucursalesPrincipales', Tipo: '[sBTSucursal](#sbtsucursal)', Comentarios: 'Listado de sucursales principales.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerSucursalesPrincipales>
@@ -56,7 +52,8 @@ export class ObtenerSucursalesPrincipalesComponent {
       "Token": "6B4647555001A737F61D4995",
       "Canal": "BTDIGITAL"
     }
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerSucursalesPrincipalesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +93,7 @@ export class ObtenerSucursalesPrincipalesComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerSucursalesPrincipalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
   "Btinreq": {
     "Device": "GP",
     "Usuario": "INSTALADOR",
@@ -133,8 +130,8 @@ export class ObtenerSucursalesPrincipalesComponent {
     "Hora": "15:58:51"
   }
 }
-'` } };
+'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion de sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Long', Comentarios: 'Latitud de sucursal.' }, { Nombre: 'longitud', Tipo: 'Long', Comentarios: 'Longitud de sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion de sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Long', Comentarios: 'Latitud de sucursal.' }, { Nombre: 'longitud', Tipo: 'Long', Comentarios: 'Longitud de sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de sucursal.' }] }];
 }

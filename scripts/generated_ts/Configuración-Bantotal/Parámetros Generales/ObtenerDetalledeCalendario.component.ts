@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDetalledeCalendarioComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Detalle de Calendario';
   description = `Metodo para obtener el detalle de los dias de un determinado calendario.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendario';
   programa   = 'RBTPG285';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['calendarioId', 'fechaInicio', 'fechaFin'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio de visualizacion de calendario.' }, { Nombre: 'fechaFin', Tipo: 'Date', Comentarios: 'Fecha de fin de visualizacion de calendario.' }];
-  outputCols = ['descripcionCalendario', 'sdtDetalleCalendario'];
   outputData = [{ Nombre: 'descripcionCalendario', Tipo: 'String', Comentarios: 'Descripcion del calendario.' }, { Nombre: 'sdtDetalleCalendario', Tipo: '[sBTDiaCalendario](#sbtdiacalendario)', Comentarios: 'Detalle de la consulta del calendario.' }];
-  errorCols  = ['30001', '30002', '30003', '40001', '40002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de calendario.' }, { Codigo: '30002', Descripcion: 'No se recibio fecha de inicio.' }, { Codigo: '30003', Descripcion: 'No se recibio fecha de fin.' }, { Codigo: '40001', Descripcion: 'No existe calendario con el identificador ingresado.' }, { Codigo: '40002', Descripcion: 'No se pudo obtener detalle para los datos ingresados ingresados.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>
@@ -61,7 +57,8 @@ export class ObtenerDetalledeCalendarioComponent {
 	"calendarioId":1,
 	"calendarioId":"2020-10-01",
 	"calendarioId":"2020-10-31",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +92,7 @@ export class ObtenerDetalledeCalendarioComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
 		"Device": "MC",
 		"Usuario": "MINSTALADOR",
@@ -126,8 +123,8 @@ export class ObtenerDetalledeCalendarioComponent {
 	  "Canal": "BTDIGITAL",
 	  "Hora": "10:41:08"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Dia del calendario.' }, { Nombre: 'habil', Tipo: 'String', Comentarios: '¿Dia habil? (S/N)' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDiaCalendario', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Dia del calendario.' }, { Nombre: 'habil', Tipo: 'String', Comentarios: '¿Dia habil? (S/N)' }] }];
 }

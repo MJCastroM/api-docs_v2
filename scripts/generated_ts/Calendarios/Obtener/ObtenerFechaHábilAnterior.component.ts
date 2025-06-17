@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerFechaHabilAnteriorComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Fecha Habil Anterior';
   description = `Metodo para obtener la fecha habil anterior a la fecha ingresada.`;
   pubName    = 'BTCalendario.ObtenerFechaHabilAnterior';
   programa   = 'RBTPG331';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['calendarioId', 'fecha', 'sentido'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario (Si no se recibe, devuelve para el calendario de la sucursal central).' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'sentido', Tipo: 'String', Comentarios: '[Hidden: Valor fijo 'D' para este metodo].' }];
-  outputCols = ['fechaHabil'];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'Date', Comentarios: 'Fecha habil anterior.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.ObtenerFechaHabilAnterior>
@@ -60,7 +56,8 @@ export class ObtenerFechaHabilAnteriorComponent {
     },
 	"calendarioId": "1",
     "fecha": "2021-03-27"
-  },` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  },` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.ObtenerFechaHabilAnteriorResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerFechaHabilAnteriorComponent {
          </Btoutreq>
       </BTCalendarios.ObtenerFechaHabilAnteriorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 
@@ -103,8 +100,8 @@ export class ObtenerFechaHabilAnteriorComponent {
       "Numero": "8094", 
       "Estado": "OK" 
     } 
-  }` } };
+  }` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

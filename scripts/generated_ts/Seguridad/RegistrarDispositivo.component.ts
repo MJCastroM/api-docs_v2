@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class RegistrarDispositivoComponent {
-  // Cabecera e info-card
   pageTitle = 'Registrar Dispositivo';
   description = `Metodo para registrar un dispositivo en el sistema.`;
   pubName    = 'BTSeguridad.RegistrarDispositivo';
   programa   = 'RBTPG150';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['usuario', 'idDispositivo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Nombre identificador de usuario.' }, { Nombre: 'idDispositivo', Tipo: 'String', Comentarios: 'Identificador de dispositivo.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el usuario.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador para notificaciones.' }, { Codigo: '30003', Descripcion: 'Usuario no valido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSeguridad.RegistrarDispositivo>
@@ -60,7 +56,8 @@ export class RegistrarDispositivoComponent {
 	},
     "usuario": "BANTOTAL",
     "idDispositivo": "MFYCE9TC1215TP56789"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSeguridad.RegistrarDispositivoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +79,7 @@ export class RegistrarDispositivoComponent {
          </Btoutreq>
       </BTSeguridad.RegistrarDispositivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -102,8 +99,8 @@ export class RegistrarDispositivoComponent {
         "Hora": "10:58:58",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

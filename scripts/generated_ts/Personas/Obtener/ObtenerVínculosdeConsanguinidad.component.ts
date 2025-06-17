@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerVinculosdeConsanguinidadComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Vinculos de Consanguinidad';
   description = `Metodo para obtener un listado de los vinculos de consanguinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosConsanguinidad';
   programa   = 'RBTPG395';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tipo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vinculo [Hidden: Valor fijo 'C' para este metodo].' }];
-  outputCols = ['sdtVinculos'];
   outputData = [{ Nombre: 'sdtVinculos', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Listado de vinculos.' }];
-  errorCols  = ['40001'];
   errors     = [{ Codigo: '40001', Descripcion: 'No existen Vinculos ingresados en el sistema.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerVinculosConsanguinidad>
@@ -56,7 +52,8 @@ export class ObtenerVinculosdeConsanguinidadComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerVinculosConsanguinidadResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +97,7 @@ export class ObtenerVinculosdeConsanguinidadComponent {
          </Btoutreq>
       </BTPersonas.ObtenerVinculosConsanguinidadResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -144,8 +141,8 @@ export class ObtenerVinculosdeConsanguinidadComponent {
         "Hora": "18:47:21",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de vinculo.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de vinculo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vinculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTVinculo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de vinculo.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de vinculo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vinculo.' }] }];
 }

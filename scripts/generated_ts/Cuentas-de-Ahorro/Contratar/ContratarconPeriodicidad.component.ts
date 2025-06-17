@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ContratarconPeriodicidadComponent {
-  // Cabecera e info-card
   pageTitle = 'Contratar con Periodicidad';
   description = `Metodo para contratar un producto de cuenta de ahorro ingresando un periodo de acreditacion.`;
   pubName    = 'BTCuentasDeAhorro.ContratarConPeriodicidad';
   programa   = 'RBTPG358';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'productoUId', 'nombreSubcuenta', 'periodoAcreditacion', 'producto'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de Cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de Producto.' }, { Nombre: 'nombreSubcuenta', Tipo: 'String', Comentarios: 'Nombre de la Subcuenta.' }, { Nombre: 'periodoAcreditacion', Tipo: 'Long', Comentarios: 'Periodo de Acreditacion de Intereses.' }, { Nombre: 'producto', Tipo: 'String', Comentarios: '[Hidden: Valor 'CA' por defecto].' }];
-  outputCols = ['operacionUId'];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la subcuenta contratada.' }];
-  errorCols  = ['30001', '30002', '30003', '31003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador unico de producto.' }, { Codigo: '30003', Descripcion: 'El periodo de acreditacion ingresado es invalido.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador unico.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
     <soapenv:Body>
       <bts:BTCuentasCorrientes.ContratarConPeriodicidad>
@@ -47,7 +43,8 @@ export class ContratarconPeriodicidadComponent {
          <bts:periodoAcreditacion>1</bts:periodoAcreditacion>
       </bts:BTCuentasCorrientes.ContratarConPeriodicidad>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasDeAhorro.ContratarConPeriodicidadResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -70,8 +67,8 @@ export class ContratarconPeriodicidadComponent {
          </Btoutreq>
       </BTCuentasDeAhorro.ContratarConPeriodicidadResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `` } };
+</SOAP-ENV:Envelope>`,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

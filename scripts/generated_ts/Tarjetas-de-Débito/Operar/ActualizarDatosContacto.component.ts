@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActualizarDatosdeContactoComponent {
-  // Cabecera e info-card
   pageTitle = 'Actualizar Datos de Contacto';
   description = `Metodo para actualizar los datos de contacto de una tarjeta de debito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarDatosContacto';
   programa   = 'RBTPG633';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tarjetaUId', 'sdtDatosContacto'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }, { Nombre: 'sdtDatosContacto', Tipo: '[sBTDatosContacto](#sbtdatoscontacto)', Comentarios: 'Datos del contacto de tarjeta.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30001', '30001', '30001', '40001', '40002', '40003', '42005'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de tarjeta de debito' }, { Codigo: '30001', Descripcion: 'No se recibio codigo de domicilio a actualizar.' }, { Codigo: '30001', Descripcion: 'No se recibio correo electronico a actualizar.' }, { Codigo: '30001', Descripcion: 'No se recibio numero de telefono a actualizar.' }, { Codigo: '40001', Descripcion: 'El codigo de domicilio ingresado no es valido.' }, { Codigo: '40002', Descripcion: 'No existe una tarjeta con el identificador ingresado.' }, { Codigo: '40003', Descripcion: 'El tarjeta habiente no tiene un domicilio con el codigo ingresado.' }, { Codigo: '42005', Descripcion: 'Funcionalidad inexistente TDD025.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ActualizarDatosContacto>
@@ -68,7 +64,8 @@ export class ActualizarDatosdeContactoComponent {
       "correoElectronico": "BenitoSA@GMAIL.COM",
       "numeroTelefono": 422306581
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ActualizarDatosContactoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +92,7 @@ export class ActualizarDatosdeContactoComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ActualizarDatosContactoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
    "Btinreq": {
         "Device": "AS",
         "Usuario": "INSTALADOR",
@@ -120,8 +117,8 @@ export class ActualizarDatosdeContactoComponent {
         "Hora": "16:41:12",
         "Canal": "BTDIGITAL"
         }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electronico.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Telefono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosContacto', fields: [{ Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electronico.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Telefono.' }] }];
 }

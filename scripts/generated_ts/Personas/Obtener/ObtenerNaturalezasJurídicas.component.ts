@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerNaturalezasJuridicasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Naturalezas Juridicas';
   description = `Metodo para obtener un listado de las naturalezas juridicas ingresadas.`;
   pubName    = 'BTPersonas.ObtenerNaturalezasJuridicas';
   programa   = 'RBTPG311';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtNaturalezas'];
   outputData = [{ Nombre: 'sdtNaturalezas', Tipo: '[sBTNaturalezaJuridica](#sbtnaturalezajuridica)', Comentarios: 'Listado de naturalezas juridicas.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerNaturalezasJuridicas>
@@ -56,7 +52,8 @@ export class ObtenerNaturalezasJuridicasComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerNaturalezasJuridicasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -116,7 +113,7 @@ export class ObtenerNaturalezasJuridicasComponent {
          </Btoutreq>
       </BTPersonas.ObtenerNaturalezasJuridicasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -176,8 +173,8 @@ export class ObtenerNaturalezasJuridicasComponent {
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de naturaleza juridica.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de naturaleza juridica.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTNaturalezaJuridica', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de naturaleza juridica.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de naturaleza juridica.' }] }];
 }

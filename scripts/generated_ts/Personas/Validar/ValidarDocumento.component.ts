@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ValidarDocumentoComponent {
-  // Cabecera e info-card
   pageTitle = 'Validar Documento';
   description = `Metodo para validar el documento de una persona.`;
   pubName    = 'BTPersonas.ValidarDocumento';
   programa   = 'RBTPG531';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['paisDocumentoId', 'tipoDocumentoId', 'nroDocumento'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de pais del documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }];
-  outputCols = ['valido', 'mensaje'];
   outputData = [{ Nombre: 'valido', Tipo: 'String', Comentarios: '¿Valido? (S/N).' }, { Nombre: 'mensaje', Tipo: 'String', Comentarios: 'Mensaje de salida cuando el documento no es valido.' }];
-  errorCols  = ['30001', '30002', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de pais.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibio el numero de documento.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ValidarDocumento>
@@ -62,7 +58,8 @@ export class ValidarDocumentoComponent {
    "paisDocumentoId":845,
    "tipoDocumentoId":1,
    "numeroDocumento":"52116325"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ValidarDocumentoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +83,7 @@ export class ValidarDocumentoComponent {
          </Btoutreq>
       </BTPersonas.ValidarDocumentoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",
@@ -108,8 +105,8 @@ export class ValidarDocumentoComponent {
        "Hora": "01:48:53",
        "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

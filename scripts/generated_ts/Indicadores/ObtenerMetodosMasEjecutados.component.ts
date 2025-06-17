@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerMetodosMasEjecutadosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Metodos Mas Ejecutados';
   description = `Metodo para obtener un listado de los metodos mas ejecutados para un servicio dado y sus estadisticas.`;
   pubName    = 'BTIndicadores.ObtenerMetodosMasEjecutados';
   programa   = 'RBTPG712';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['servicio', 'cantidadDeRegistros'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'servicio', Tipo: 'String', Comentarios: 'Identificador del servicio.' }, { Nombre: 'cantidadDeRegistros', Tipo: 'Int', Comentarios: '[Hidden: Valor por defecto '10' para este metodo].' }];
-  outputCols = ['sdtEstadisticasMetodos'];
   outputData = [{ Nombre: 'sdtEstadisticasMetodos', Tipo: '[sBTEstadisticasServicioMetodo](#sbtestadisticasserviciometodo)', Comentarios: 'Coleccion de datos de metodos y sus estadisticas.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerMetodosMasEjecutados>
@@ -58,7 +54,8 @@ export class ObtenerMetodosMasEjecutadosComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"servicio": "BTClientes"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerMetodosMasEjecutadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -162,7 +159,7 @@ export class ObtenerMetodosMasEjecutadosComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerMetodosMasEjecutadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -263,8 +260,8 @@ export class ObtenerMetodosMasEjecutadosComponent {
         "Hora": "18:40:30",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cantidadEjecuciones', Tipo: 'Long', Comentarios: 'Cantidad de ejecuciones.' }, { Nombre: 'metodo', Tipo: 'String', Comentarios: 'Metodo del servicio.' }, { Nombre: 'servicio', Tipo: 'String', Comentarios: 'Identificador del servicio' }, { Nombre: 'tiempoMaximo', Tipo: 'Int', Comentarios: 'Tiempo maximo registrado para los metodos del servicio.' }, { Nombre: 'tiempoMinimo', Tipo: 'Int', Comentarios: 'Tiempo minimo registrado para los metodos del servicio.' }, { Nombre: 'tiempoPromedio', Tipo: 'Int', Comentarios: 'Tiempo promedio de las ejecuciones a los metodos del servicio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEstadisticasServicioMetodo', fields: [{ Nombre: 'cantidadEjecuciones', Tipo: 'Long', Comentarios: 'Cantidad de ejecuciones.' }, { Nombre: 'metodo', Tipo: 'String', Comentarios: 'Metodo del servicio.' }, { Nombre: 'servicio', Tipo: 'String', Comentarios: 'Identificador del servicio' }, { Nombre: 'tiempoMaximo', Tipo: 'Int', Comentarios: 'Tiempo maximo registrado para los metodos del servicio.' }, { Nombre: 'tiempoMinimo', Tipo: 'Int', Comentarios: 'Tiempo minimo registrado para los metodos del servicio.' }, { Nombre: 'tiempoPromedio', Tipo: 'Int', Comentarios: 'Tiempo promedio de las ejecuciones a los metodos del servicio.' }] }];
 }

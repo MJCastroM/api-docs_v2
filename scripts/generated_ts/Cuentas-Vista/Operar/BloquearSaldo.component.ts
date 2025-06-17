@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class BloquearSaldoComponent {
-  // Cabecera e info-card
   pageTitle = 'Bloquear Saldo';
   description = `Metodo para realizar un bloqueo de saldo.`;
   pubName    = 'BTCuentasVista.BloquearSaldo';
   programa   = 'RBTPG090';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'clienteUId', 'importe', 'fechaVencimiento', 'motivo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe a bloquear.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha vencimiento de bloqueo.' }, { Nombre: 'motivo', Tipo: 'String', Comentarios: 'Motivo del bloqueo.' }];
-  outputCols = ['idBloqueo', 'movimientoUId', 'saldo'];
   outputData = [{ Nombre: 'idBloqueo', Tipo: 'Long', Comentarios: 'Identificador de bloqueo.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo disponible de la operacion.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30100'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la Operacion a bloquear.' }, { Codigo: '30002', Descripcion: 'No se encontro el Id de Operacion para la Cuenta Vista a bloquear.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador del Cliente.' }, { Codigo: '30004', Descripcion: 'No se encontro el Id del Cliente.' }, { Codigo: '30005', Descripcion: 'La Cuenta Vista a bloquear no pertenece al Cliente.' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.BloquearSaldo>
@@ -48,7 +44,8 @@ export class BloquearSaldoComponent {
          <bts:motivo>Motivo Bloqueo 01</bts:motivo>
       </bts:BTCuentasVista.BloquearSaldo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.BloquearSaldoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -73,8 +70,8 @@ export class BloquearSaldoComponent {
          </Btoutreq>
       </BTCuentasVista.BloquearSaldoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `` } };
+</SOAP-ENV:Envelope>`,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerFechaHabildeSucursalComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Fecha Habil de Sucursal';
   description = `Metodo para obtener si una fecha es habil en la sucursal ingresada.`;
   pubName    = 'BTCalendario.ObtenerFechaHabilSucursal';
   programa   = 'RBTPG327';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['fecha', 'sucursalId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha a consultar.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de Sucursal a consultar.' }];
-  outputCols = ['fechaHabil'];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'String', Comentarios: '¿Es habil? (S/N)' }];
-  errorCols  = ['40001'];
   errors     = [{ Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerFechaHabilSucursal>
@@ -60,7 +56,8 @@ export class ObtenerFechaHabildeSucursalComponent {
 	},
 	"fecha": "2020-11-14",
 	"sucursalId": "1000"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerFechaHabildeSucursalComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
  	"Btinreq": { 
 	  "Device": "AC", 
 	  "Usuario": "INSTALADOR", 
@@ -101,8 +98,8 @@ export class ObtenerFechaHabildeSucursalComponent {
 	  "Canal": "BTDIGITAL", 
 	  "Hora": "15:58:02" 
 	} 
- }` } };
+ }` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

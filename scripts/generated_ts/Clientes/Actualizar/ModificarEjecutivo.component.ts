@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ModificarEjecutivoComponent {
-  // Cabecera e info-card
   pageTitle = 'Modificar Ejecutivo';
   description = `Metodo para modificar el ejecutivo de una cuenta cliente.`;
   pubName    = 'BTClientes.ModificarEjecutivo';
   programa   = 'RBTPG188';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'ejecutivoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'ejecutivoId', Tipo: 'Short', Comentarios: 'Identificador de ejecutivo a modificar.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el Identificador del ejecutivo.' }, { Codigo: '30011', Descripcion: 'El identificador de ejecutivo no es valido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ModificarEjecutivo>
@@ -45,7 +41,8 @@ export class ModificarEjecutivoComponent {
          <bts:ejecutivoId>1</bts:ejecutivoId>
       </bts:BTClientes.ModificarEjecutivo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ModificarEjecutivoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -67,8 +64,8 @@ export class ModificarEjecutivoComponent {
          </Btoutreq>
       </BTClientes.ModificarEjecutivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `` } };
+</SOAP-ENV:Envelope>`,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

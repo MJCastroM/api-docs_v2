@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ModificarCuentaDestinoComponent {
-  // Cabecera e info-card
   pageTitle = 'Modificar Cuenta Destino';
   description = `Metodo para modificar la cuenta destino donde se acreditaran los ahorros al vencimiento.`;
   pubName    = 'BTAhorroProgramado.ModificarCuentaDestino';
   programa   = 'RBTPG114';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'ahorroUId', 'cuentaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador de operacion de ahorro.' }, { Nombre: 'cuentaUId', Tipo: 'Int', Comentarios: 'Identificador unico de la operacion de cuenta vista destino.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '40001', '40002', '40003', '40004', '40005', '40006'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador del ahorro.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de operacion de la cuenta destino.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de identificador].' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion del ahorro para el identificador: [Numero de identificador].' }, { Codigo: '30006', Descripcion: 'No se recupero la operacion de la cuenta vista para el identificador: [Numero de identificador].' }, { Codigo: '30007', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'La operacion seleccionada no corresponde a un producto de ahorro.' }, { Codigo: '40002', Descripcion: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40003', Descripcion: 'El producto de la cuenta de origen seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40004', Descripcion: 'El producto del ahorro no permite operar con cuentas de distinta moneda.' }, { Codigo: '40005', Descripcion: 'El producto acredita una cuenta externa, no es posible modificar la misma.' }, { Codigo: '40006', Descripcion: 'El producto del ahorro no permite operar con cuentas vistas de distintos clientes.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ModificarCuentaDestino>
@@ -62,7 +58,8 @@ export class ModificarCuentaDestinoComponent {
       "clienteUId": 81,
       "ahorroUId": 61,
       "cuentaUId": 21
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ModificarCuentaDestinoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class ModificarCuentaDestinoComponent {
          </Btoutreq>
       </BTAhorroProgramado.ModificarCuentaDestinoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class ModificarCuentaDestinoComponent {
         "Hora": "17:08:21",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

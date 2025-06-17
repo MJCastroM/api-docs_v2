@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener';
   description = `Metodo para obtener los datos de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.Obtener';
   programa   = 'RBTPG256';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['ahorroUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico del ahorro.' }];
-  outputCols = ['sdtDetalleAhorro'];
   outputData = [{ Nombre: 'sdtDetalleAhorro', Tipo: '[sBTDetalleAhorro](#sbtdetalleahorro)', Comentarios: 'Datos del ahorro.' }];
-  errorCols  = ['30001', '30011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de la operacion.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion para el identificador recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.Obtener>
@@ -58,7 +54,8 @@ export class ObtenerComponent {
    "Token": "75e20bd1614A8B5C60A82434"
 },
    "ahorroUId": 205
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -111,7 +108,7 @@ export class ObtenerComponent {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "MINSTALADOR", 
@@ -162,8 +159,8 @@ export class ObtenerComponent {
         "Hora": "11:46:44", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'abono', Tipo: 'Double', Comentarios: 'Abono.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico del ahorro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'diadeIncremento', Tipo: 'Short', Comentarios: 'Dia en que se da el incremento.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del ahorro.' }, { Nombre: 'fechaAltaSolicitud', Tipo: 'Date', Comentarios: 'Fecha de alta de la solicitud.' }, { Nombre: 'fechaMeta', Tipo: 'Date', Comentarios: 'Fecha meta del ahorro.' }, { Nombre: 'fechaProximaRenovacion', Tipo: 'Date', Comentarios: 'Fecha del proximo incremento.' }, { Nombre: 'fechaProximoIncremento', Tipo: 'Date', Comentarios: 'Fecha del proximo incremento.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor del ahorro.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha del vencimiento del ahorro.' }, { Nombre: 'intentosDeIncrementoHabilitados', Tipo: 'Short', Comentarios: 'Intentos de incremento habilitados.' }, { Nombre: 'intentosDeIncrementoUtilizados', Tipo: 'Short', Comentarios: 'Intentos de incremento utilizados.' }, { Nombre: 'montoMeta', Tipo: 'Double', Comentarios: 'Monto meta del ahorro.' }, { Nombre: 'motivoMeta', Tipo: 'String', Comentarios: 'Motivo de la meta.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observacion.' }, { Nombre: 'operacionUIddestino', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de destino.' }, { Nombre: 'operacionUIdorigen', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de origen.' }, { Nombre: 'periodicidad', Tipo: 'Short', Comentarios: 'Periodicidad (en dias) del ahorro.' }, { Nombre: 'periodosDeGraciaHabilitados', Tipo: 'Short', Comentarios: 'Periodos de gracia habilitados.' }, { Nombre: 'periodosDeGraciaUtilizados', Tipo: 'Short', Comentarios: 'Periodos de gracia utilizados.' }, { Nombre: 'plazo', Tipo: 'Short', Comentarios: 'Plazo para el ahorro.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'renueva', Tipo: 'String', Comentarios: '¿Renueva? (S/N).' }, { Nombre: 'saldoActual', Tipo: 'Double', Comentarios: 'Saldo actual del ahorro.' }, { Nombre: 'tasaActual', Tipo: 'Double', Comentarios: 'Tasa actual.' }, { Nombre: 'tasaOriginal', Tipo: 'Double', Comentarios: 'Tasa original.' }, { Nombre: 'tipoDeDia', Tipo: 'String', Comentarios: 'Tipo de dia utilizado.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDetalleAhorro', fields: [{ Nombre: 'abono', Tipo: 'Double', Comentarios: 'Abono.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico del ahorro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'diadeIncremento', Tipo: 'Short', Comentarios: 'Dia en que se da el incremento.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del ahorro.' }, { Nombre: 'fechaAltaSolicitud', Tipo: 'Date', Comentarios: 'Fecha de alta de la solicitud.' }, { Nombre: 'fechaMeta', Tipo: 'Date', Comentarios: 'Fecha meta del ahorro.' }, { Nombre: 'fechaProximaRenovacion', Tipo: 'Date', Comentarios: 'Fecha del proximo incremento.' }, { Nombre: 'fechaProximoIncremento', Tipo: 'Date', Comentarios: 'Fecha del proximo incremento.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor del ahorro.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha del vencimiento del ahorro.' }, { Nombre: 'intentosDeIncrementoHabilitados', Tipo: 'Short', Comentarios: 'Intentos de incremento habilitados.' }, { Nombre: 'intentosDeIncrementoUtilizados', Tipo: 'Short', Comentarios: 'Intentos de incremento utilizados.' }, { Nombre: 'montoMeta', Tipo: 'Double', Comentarios: 'Monto meta del ahorro.' }, { Nombre: 'motivoMeta', Tipo: 'String', Comentarios: 'Motivo de la meta.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observacion.' }, { Nombre: 'operacionUIddestino', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de destino.' }, { Nombre: 'operacionUIdorigen', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de origen.' }, { Nombre: 'periodicidad', Tipo: 'Short', Comentarios: 'Periodicidad (en dias) del ahorro.' }, { Nombre: 'periodosDeGraciaHabilitados', Tipo: 'Short', Comentarios: 'Periodos de gracia habilitados.' }, { Nombre: 'periodosDeGraciaUtilizados', Tipo: 'Short', Comentarios: 'Periodos de gracia utilizados.' }, { Nombre: 'plazo', Tipo: 'Short', Comentarios: 'Plazo para el ahorro.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'renueva', Tipo: 'String', Comentarios: '¿Renueva? (S/N).' }, { Nombre: 'saldoActual', Tipo: 'Double', Comentarios: 'Saldo actual del ahorro.' }, { Nombre: 'tasaActual', Tipo: 'Double', Comentarios: 'Tasa actual.' }, { Nombre: 'tasaOriginal', Tipo: 'Double', Comentarios: 'Tasa original.' }, { Nombre: 'tipoDeDia', Tipo: 'String', Comentarios: 'Tipo de dia utilizado.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }] }];
 }

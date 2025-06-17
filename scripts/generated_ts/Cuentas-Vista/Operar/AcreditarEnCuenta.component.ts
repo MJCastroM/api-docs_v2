@@ -9,28 +9,38 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AcreditarenCuentaComponent {
-  // Cabecera e info-card
   pageTitle = 'Acreditar en Cuenta';
   description = `Metodo para realizar una acreditacion a una cuenta vista determinada.`;
   pubName    = 'BTCuentasVista.AcreditarEnCuenta ';
   programa   = 'RBTPG569';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sdtDatosAcreditar'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion de compra, teniendo en cuenta que:
+
+	- La cuenta vista origen se almacena en el preformato 1.
+		
+	- Los diferentes importes se almacenan en los preformatos 1, 2, 3, y 4 respectivamente.
+	
+	- Los diferentes conceptos se almacenan en los preformatos 1, 2, 3, y 4 respectivamente.
+	
+	- Los correlativos del subordinal deben corresponderse con los modulos de los productos definidos en el subordinal.
+	
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):
+
+	- Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.
+ 
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sdtDatosAcreditar', Tipo: '[sBTDatosAcreditarDebitar](#sbtdatosacreditardebitar)', Comentarios: 'Datos de la acreditacion.' }];
-  outputCols = ['movimientoUId'];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador del movimiento realizado.' }];
-  errorCols  = ['30001', '30002', '30004', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar una operacion.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un importe.' }, { Codigo: '30004', Descripcion: 'No se recupero la operacion origen para el Identificador: X.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta cliente origen para el Identificador: X.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.AcreditarEnCuenta>
@@ -109,7 +119,8 @@ curl -X POST \
 		"concepto3": "",
 		"concepto4": ""
 	}    
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTCuentasVista.AcreditarEnCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -132,7 +143,7 @@ curl -X POST \
             </Btoutreq>
         </BTCuentasVista.AcreditarEnCuentaResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",
@@ -150,8 +161,8 @@ curl -X POST \
         "Canal": "BTDIGITAL",
         "Hora": "16:00:37"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'concepto1', Tipo: 'String', Comentarios: 'Concepto 1 del movimiento.' }, { Nombre: 'concepto2', Tipo: 'String', Comentarios: 'Concepto 2 del movimiento.' }, { Nombre: 'concepto3', Tipo: 'String', Comentarios: 'Concepto 3 del movimiento.' }, { Nombre: 'concepto4', Tipo: 'String', Comentarios: 'Concepto 4 del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosAcreditarDebitar', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'concepto1', Tipo: 'String', Comentarios: 'Concepto 1 del movimiento.' }, { Nombre: 'concepto2', Tipo: 'String', Comentarios: 'Concepto 2 del movimiento.' }, { Nombre: 'concepto3', Tipo: 'String', Comentarios: 'Concepto 3 del movimiento.' }, { Nombre: 'concepto4', Tipo: 'String', Comentarios: 'Concepto 4 del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }] }];
 }

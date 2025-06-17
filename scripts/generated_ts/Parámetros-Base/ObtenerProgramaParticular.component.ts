@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerProgramaParticularComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Programa Particular';
   description = `Metodo para obtener el programa particular a ejecutar segun el programa estandar ingresado.`;
   pubName    = 'BTParametrosBase.ObtenerProgramaParticular';
   programa   = 'RBTPG444';
   scope      = 'Institucional';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['empresaId', 'programaStandard'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Codigo de empresa [Hidden].' }, { Nombre: 'programaStandard', Tipo: 'String', Comentarios: 'Nombre de programa Standard.' }];
-  outputCols = ['sdtProgramaParticular'];
   outputData = [{ Nombre: 'sdtProgramaParticular', Tipo: '[sBTProgramaParticular](#sbtprogramaparticular)', Comentarios: 'Datos del programa particular.' }];
-  errorCols  = ['30001', '30002', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de empresa.' }, { Codigo: '30002', Descripcion: 'No se recibio el programa standard.' }, { Codigo: '40001', Descripcion: 'No existe programa particular para el programa standard ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTParametrosBase.ObtenerProgramaParticular>
@@ -57,7 +53,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
       "Token": "200f0b8b654A8B5C60A82434"
     },
    "programaStandard": "BLOCKING1"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTParametrosBase.ObtenerProgramaParticularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +83,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerProgramaParticularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
 	  "Device": "GP",
 	  "Usuario": "INSTALADOR",
@@ -110,8 +107,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	  "Canal": "BTDIGITAL",
 	  "Hora": "13:29:43"
 	}
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la opcion general de procesos.' }, { Nombre: 'programaParticular', Tipo: 'String', Comentarios: 'Nombre de programa particular.' }, { Nombre: 'programaStandard', Tipo: 'String', Comentarios: 'Nombre de programa standard.' }, { Nombre: 'valorCaracteres', Tipo: 'String', Comentarios: 'Valor caracteres.' }, { Nombre: 'valorNumerico', Tipo: 'Int', Comentarios: 'Valor numerico.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTProgramaParticular', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la opcion general de procesos.' }, { Nombre: 'programaParticular', Tipo: 'String', Comentarios: 'Nombre de programa particular.' }, { Nombre: 'programaStandard', Tipo: 'String', Comentarios: 'Nombre de programa standard.' }, { Nombre: 'valorCaracteres', Tipo: 'String', Comentarios: 'Valor caracteres.' }, { Nombre: 'valorNumerico', Tipo: 'Int', Comentarios: 'Valor numerico.' }] }];
 }

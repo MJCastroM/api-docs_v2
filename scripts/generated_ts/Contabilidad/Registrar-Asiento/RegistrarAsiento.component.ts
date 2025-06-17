@@ -9,28 +9,28 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class RegistrarAsientoComponent {
-  // Cabecera e info-card
   pageTitle = 'Registrar Asiento';
   description = `Metodo para registrar en el sistema un movimiento entre dos operaciones genericas.`;
   pubName    = 'BTContabilidad.RegistrarAsiento';
   programa   = 'RBTPG029';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sdtDatosAsiento'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion a contabilizar, teniendo en cuenta que la operacionUId1 y el importe1 se almacena en el preformato 1, la operacionUId2 y el importe2 se almacena en el preformato 2 y asi sucesivamente.
+
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T).
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sdtDatosAsiento', Tipo: '[sBTDatosAsiento](#sbtdatosasiento)', Comentarios: 'Datos del movimiento' }];
-  outputCols = ['movimientoUId'];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }];
-  errorCols  = ['30001', '30004', '30100'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos una operacion.' }, { Codigo: '30004', Descripcion: 'No se recupero la operacion origen para el Identificador:' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.RegistrarAsiento>
@@ -87,7 +87,8 @@ export class RegistrarAsientoComponent {
 		"importe8": "", 
 		"concepto": "" 
 	}    
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTContabilidad.RegistrarAsientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -110,7 +111,7 @@ export class RegistrarAsientoComponent {
          </Btoutreq> 
       </BTContabilidad.RegistrarAsientoResponse> 
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 
@@ -131,8 +132,8 @@ export class RegistrarAsientoComponent {
         "Hora": "17:15:28", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'importe5', Tipo: 'Double', Comentarios: 'Importe 5 del movimiento.' }, { Nombre: 'importe6', Tipo: 'Double', Comentarios: 'Importe 6 del movimiento.' }, { Nombre: 'importe7', Tipo: 'Double', Comentarios: 'Importe 7 del movimiento.' }, { Nombre: 'importe8', Tipo: 'Double', Comentarios: 'Importe 8 del movimiento.' }, { Nombre: 'operacionUId1', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 1.' }, { Nombre: 'operacionUId2', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 2.' }, { Nombre: 'operacionUId3', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 3.' }, { Nombre: 'operacionUId4', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 4.' }, { Nombre: 'operacionUId5', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 5.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosAsiento', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'importe5', Tipo: 'Double', Comentarios: 'Importe 5 del movimiento.' }, { Nombre: 'importe6', Tipo: 'Double', Comentarios: 'Importe 6 del movimiento.' }, { Nombre: 'importe7', Tipo: 'Double', Comentarios: 'Importe 7 del movimiento.' }, { Nombre: 'importe8', Tipo: 'Double', Comentarios: 'Importe 8 del movimiento.' }, { Nombre: 'operacionUId1', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 1.' }, { Nombre: 'operacionUId2', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 2.' }, { Nombre: 'operacionUId3', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 3.' }, { Nombre: 'operacionUId4', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 4.' }, { Nombre: 'operacionUId5', Tipo: 'Long', Comentarios: 'Identificador unico de operacion 5.' }] }];
 }

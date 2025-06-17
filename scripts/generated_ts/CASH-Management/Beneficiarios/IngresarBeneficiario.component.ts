@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class IngresarBeneficiarioComponent {
-  // Cabecera e info-card
   pageTitle = 'Ingresar Beneficiario';
   description = `Metodo para ingresar un beneficiario a la agenda.`;
   pubName    = 'BTCASHManagement.IngresarBeneficiario';
   programa   = 'RBTPGC72';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['contratoId', 'servicio', 'clienteUId', 'agendaId', 'beneficiarioDatos'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del contrato CASH del cliente.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio de pago CASH.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'agendaId', Tipo: 'Short', Comentarios: 'Identificador del tipo de agenda.' }, { Nombre: 'beneficiarioDatos', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Datos de Beneficiario con sus valores.' }];
-  outputCols = ['contratoIdO', 'servicioIdO', 'agendaIdO', 'beneficiarioId', 'beneficiarioCorr'];
   outputData = [{ Nombre: 'contratoIdO', Tipo: 'Int', Comentarios: 'Identificador del Contrato CASH.' }, { Nombre: 'servicioIdO', Tipo: 'Short', Comentarios: 'Servicio de Pago CASH.' }, { Nombre: 'agendaIdO', Tipo: 'Short', Comentarios: 'Identificador del tipo de agenda.' }, { Nombre: 'beneficiarioId', Tipo: 'String', Comentarios: 'Se devuelve el Id que identifica el Beneficiario.' }, { Nombre: 'beneficiarioCorr', Tipo: 'Int', Comentarios: 'Correlativo asignado en la Agenda al nuevo Beneficiario.' }];
-  errorCols  = ['1030701', '1030704', '1030770', '1030774', '1030777'];
   errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030770', Descripcion: 'No se recupero informacion para la cuenta recibida.' }, { Codigo: '1030774', Descripcion: 'No se recibio Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor.' }, { Codigo: '1030777', Descripcion: 'Error al validar Beneficiario.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"	xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"	xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
 	<soapenv:Header/>
 	<soapenv:Body>
 		<bts:BTCASHManagement.IngresarBeneficiario>
@@ -142,7 +138,8 @@ export class IngresarBeneficiarioComponent {
             }
          ]    
       }
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.IngresarBeneficiarioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -169,7 +166,7 @@ export class IngresarBeneficiarioComponent {
          </Btoutreq>
       </BTCASHManagement.IngresarBeneficiarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -194,8 +191,8 @@ export class IngresarBeneficiarioComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }] }];
 }

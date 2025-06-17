@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCodigosdeLimitesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Codigos de Limites';
   description = `Metodo para obtener un listado de los codigos de limites disponibles para tarjetas de debito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCodigosDeLimites';
   programa   = 'RBTPG147';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtLimites'];
   outputData = [{ Nombre: 'sdtLimites', Tipo: '[sBTLimiteTarjeta](#sbtlimitetarjeta)', Comentarios: 'Listado de codigos de limite.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerCodigosDeLimites>
@@ -55,7 +51,8 @@ export class ObtenerCodigosdeLimitesComponent {
         "Canal": "BTDIGITAL",
         "Token": "352296800F955E77534D3E02"
     }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerCodigosDeLimitesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -114,7 +111,7 @@ export class ObtenerCodigosdeLimitesComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerCodigosDeLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
 	"Btinreq": { 
         "Device": "AC", 
         "Usuario": "BANTOTAL", 
@@ -174,8 +171,8 @@ export class ObtenerCodigosdeLimitesComponent {
 		"Numero": "7833", 
 		"Estado": "OK" 
 	} 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

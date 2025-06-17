@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerAcuerdosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Acuerdos';
   description = `Metodo para obtener los acuerdos de sobregiro de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerAcuerdos';
   programa   = 'RBTPG632';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }];
-  outputCols = ['sdtAcuerdosCliente'];
   outputData = [{ Nombre: 'sdtAcuerdosCliente', Tipo: '[sBTAcuerdoClienteCC](#sbtacuerdoclientecc)', Comentarios: 'Listado de acuerdos del cliente.' }];
-  errorCols  = ['30001', '30004', '30101'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30101', Descripcion: 'No se recupero la operacion para el identificador recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerAcuerdos>
@@ -58,7 +54,8 @@ export class ObtenerAcuerdosComponent {
           "Token": "6fc29caa9d4A8B5C60A82434"
     },
     "clienteUId": 1,
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerAcuerdosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -112,7 +109,7 @@ export class ObtenerAcuerdosComponent {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerAcuerdosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -166,8 +163,8 @@ export class ObtenerAcuerdosComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha de inicio del acuerdo.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha del vencimiento.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Limite disponible.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Limite otorgado.' }, { Nombre: 'limiteUtilizado', Tipo: 'Double', Comentarios: 'Limite utilizado.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'operacionUIdCuentaVista', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de la cuenta vista.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaActualizada', Tipo: 'Double', Comentarios: 'Tasa actualizada.' }, { Nombre: 'tipoTasa', Tipo: 'Byte', Comentarios: 'Tipo de tasa.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTAcuerdoClienteCC', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha de inicio del acuerdo.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha del vencimiento.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Limite disponible.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Limite otorgado.' }, { Nombre: 'limiteUtilizado', Tipo: 'Double', Comentarios: 'Limite utilizado.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'operacionUIdCuentaVista', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de la cuenta vista.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaActualizada', Tipo: 'Double', Comentarios: 'Tasa actualizada.' }, { Nombre: 'tipoTasa', Tipo: 'Byte', Comentarios: 'Tipo de tasa.' }] }];
 }

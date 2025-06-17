@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCuentaClienteComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cuenta Cliente';
   description = `Metodo para obtener la empresa y numero de cuenta de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerCuentaCliente';
   programa   = 'RBTPG211';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Short', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['empresaId', 'cuentaBT'];
   outputData = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de la empresa del cliente.' }, { Nombre: 'cuentaBT', Tipo: 'Long', Comentarios: 'Identificador de la cuenta cliente.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerCuentaCliente>
@@ -58,7 +54,8 @@ export class ObtenerCuentaClienteComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"clienteUId": "21",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerCuentaClienteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +79,7 @@ export class ObtenerCuentaClienteComponent {
          </Btoutreq>
       </BTClientes.ObtenerCuentaClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class ObtenerCuentaClienteComponent {
         "Hora": "12:09:15",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

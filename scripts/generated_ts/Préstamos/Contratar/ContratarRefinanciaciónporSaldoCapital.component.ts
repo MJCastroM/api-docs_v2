@@ -9,28 +9,38 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ContratarRefinanciacionporSaldoCapitalComponent {
-  // Cabecera e info-card
   pageTitle = 'Contratar Refinanciacion por Saldo Capital';
   description = `Metodo para contratar un prestamo refinanciado, cancelando las operaciones indicadas en la simulacion.`;
   pubName    = 'BTPrestamos.ContratarRefinanciacionSaldoCapital';
   programa   = 'RBTPG235';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['refinanciacionId', 'clienteUId', 'accion', 'operacionUId_dif', 'operacionUId_cobro'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion de alta, teniendo en cuenta que: 
+
+	- El prestamo se almacena en el preformato 1 para pfdid = cero. La diferencia entre deuda total y saldo capital se almacena en el importe 2 
+
+	- La cuenta vista de acreditacion se almacena en el preformato 2 para pfdid = cero 
+
+	- Los correlativos del subordinal deben corresponderse con los modulos de los productos definidos en el subordinal 
+
+	- Las operaciones a cancelar se almacenan en el preformato 1 para pfdid > cero 
+
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). 
+
+3)	Se debe indicar los ordinales donde se encuentra definido el prestamo y la cuenta de cobro. Ademas cargar en el Auxiliar Numerico el ordinal de baja de prestamo.  
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'refinanciacionId', Tipo: 'Long', Comentarios: 'Identificador de la refinanciacion simulada.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'accion', Tipo: 'String', Comentarios: '[Hidden: Valor fijo 'REFIS' para este metodo].' }, { Nombre: 'operacionUId_dif', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de la cuenta vista de donde se cobrara la diferencia entre la deuda total de los prestamos a refinanciar y el capital del nuevo prestamo.' }, { Nombre: 'operacionUId_cobro', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de la cuenta vista de donde se cobrara el prestamo.' }];
-  outputCols = ['movimientoUId'];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento [Asiento].' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008', '30009', '30010', '30011', '30012', '30013', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de refinanciacion.' }, { Codigo: '30002', Descripcion: 'El identificador de refinanciacion no es valido.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de operacion de la cuenta vista.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta vista para el identificador: [Numero de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibio el identificador de operacion de la instruccion de cobro.' }, { Codigo: '30006', Descripcion: 'No se recupero la operacion para el identificador: [Numero de Identificador].' }, { Codigo: '30007', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30008', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de Identificador].' }, { Codigo: '30009', Descripcion: 'El prestamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'La operacion de cobro no pertenece al cliente.' }, { Codigo: '30011', Descripcion: 'La operacion de cobro no pertenece al cliente.' }, { Codigo: '30012', Descripcion: 'No se recupero la operacion para el identificador [Numero de Identificador].' }, { Codigo: '30013', Descripcion: 'No se recupero la operacion simulada con identificador.' }, { Codigo: '40001', Descripcion: 'en adelante, errores de contabilizacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ContratarRefinanciacionSaldoCapital>
@@ -64,7 +74,8 @@ export class ContratarRefinanciacionporSaldoCapitalComponent {
 	"clienteUId":"221",
 	"operacionUId_dif":"211",
 	"operacionUId_cobro":"211",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ContratarRefinanciacionSaldoCapitalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +97,7 @@ export class ContratarRefinanciacionporSaldoCapitalComponent {
          </Btoutreq>
       </BTPrestamos.ContratarRefinanciacionSaldoCapitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -107,8 +118,8 @@ export class ContratarRefinanciacionporSaldoCapitalComponent {
         "Hora": "13:47:48",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

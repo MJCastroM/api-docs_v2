@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerMonedasIndicesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Monedas Indices';
   description = `Metodo para obtener las monedas e indices en funcionamiento.`;
   pubName    = 'BTIndicadores.ObtenerMonedasIndices';
   programa   = 'RBTPG704';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtMonedas'];
   outputData = [{ Nombre: 'sdtMonedas', Tipo: '[sBTMonedaIndice](#sbtmonedaindice)', Comentarios: 'Listado de monedas en uso contable.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerMonedasIndices>
@@ -56,7 +52,8 @@ export class ObtenerMonedasIndicesComponent {
       "Usuario": "INSTALADOR",
       "Requerimiento": "?"
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerMonedasIndicesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -127,7 +124,7 @@ export class ObtenerMonedasIndicesComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerMonedasIndicesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -198,8 +195,8 @@ export class ObtenerMonedasIndicesComponent {
       "Canal": "BTDIGITAL",
       "Hora": "15:09:29"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo identificador de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'tipoCambio', Tipo: 'String', Comentarios: 'Tipo Cambio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTMonedaIndice', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo identificador de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'tipoCambio', Tipo: 'String', Comentarios: 'Tipo Cambio.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class DepositarChequeElectronicodeBancoPropioComponent {
-  // Cabecera e info-card
   pageTitle = 'Depositar Cheque Electronico de Banco Propio';
   description = `Metodo para depositar un cheque electronico propio.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoPropio';
   programa   = 'RBTPAR34';
   scope      = 'Argentina';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUIdOrigen', 'operacionUIdDestino', 'importe', 'numeroCheque'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de origen.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador unico de operacion destino.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'numeroCheque', Tipo: 'Long', Comentarios: 'Numero de cheque.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la operacion origen.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de la operacion destino.' }, { Codigo: '30004', Descripcion: 'No existe registro con el identificador indicado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.DepositarChequeElectronicoPropio>
@@ -64,7 +60,8 @@ export class DepositarChequeElectronicodeBancoPropioComponent {
 	"operacionUIdDestino": "30",
 	"importe": "3000",
 	"numeroCheque": "5030",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.DepositarChequeElectronicoPropioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +83,7 @@ export class DepositarChequeElectronicodeBancoPropioComponent {
          </Btoutreq>
       </BTCuentasCorrientes.DepositarChequeElectronicoPropioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -106,8 +103,8 @@ export class DepositarChequeElectronicodeBancoPropioComponent {
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ValidarExistenciaComponent {
-  // Cabecera e info-card
   pageTitle = 'Validar Existencia';
   description = `Metodo para validar la existencia de una persona.`;
   pubName    = 'BTPersonas.ValidarExistencia';
   programa   = 'RBTPG489';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['paisId', 'tipoDocumentoId', 'numeroDocumento'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador del pais de origen del documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Numero de documento de la persona.' }];
-  outputCols = ['existe'];
   outputData = [{ Nombre: 'existe', Tipo: 'String', Comentarios: '¿Existe? (S/N).' }];
-  errorCols  = ['30001', '30002', '30003', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de pais.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibio el numero de documento.' }, { Codigo: '30004', Descripcion: 'La persona no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ValidarExistencia>
@@ -62,7 +58,8 @@ export class ValidarExistenciaComponent {
     "paisId": 604,
     "tipoDocumentoId": 1,
     "numeroDocumento": 10587456
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ValidarExistenciaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +82,7 @@ export class ValidarExistenciaComponent {
          </Btoutreq>
       </BTPersonas.ValidarExistenciaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -104,8 +101,8 @@ export class ValidarExistenciaComponent {
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

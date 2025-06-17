@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerAgenciasBancoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Agencias Banco';
   description = `Metodo para obtener un listado de las agencias de un banco.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerAgenciasBanco';
   programa   = 'RBTPG236';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['bancoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'bancoId', Tipo: 'Long', Comentarios: 'Identificador de Banco.' }];
-  outputCols = ['sdtAgencias'];
   outputData = [{ Nombre: 'sdtAgencias', Tipo: '[sBTAgenciaBanco](#sbtagenciabanco)', Comentarios: 'Listado de las agencias.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerAgenciasBanco>
@@ -59,7 +55,8 @@ export class ObtenerAgenciasBancoComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "bancoId": 2
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerAgenciasBancoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +86,7 @@ export class ObtenerAgenciasBancoComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerAgenciasBancoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -117,8 +114,8 @@ export class ObtenerAgenciasBancoComponent {
       "Hora": "17:00:28",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'banco', Tipo: 'Int', Comentarios: 'Identificador de banco.' }, { Nombre: 'codPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursal', Tipo: 'Long', Comentarios: 'Identificador de sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTAgenciaBanco', fields: [{ Nombre: 'banco', Tipo: 'Int', Comentarios: 'Identificador de banco.' }, { Nombre: 'codPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursal', Tipo: 'Long', Comentarios: 'Identificador de sucursal.' }] }];
 }

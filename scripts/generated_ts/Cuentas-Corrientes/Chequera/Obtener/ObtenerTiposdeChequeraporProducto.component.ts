@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeChequeraporProductoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Chequera por Producto';
   description = `Metodo para obtener un listado de las chequeras que se pueden asignar a un determinado producto.`;
   pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto';
   programa   = 'RBTPG254';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['productoUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }];
-  outputCols = ['sdtTiposChequera'];
   outputData = [{ Nombre: 'sdtTiposChequera', Tipo: '[sBTTipoChequera](#sbttipochequera)', Comentarios: 'Listado de tipos de chequera.' }];
-  errorCols  = ['30001', '30003', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de producto.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '40001', Descripcion: 'El producto no tiene habilitado el manejo de chequeras.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto>
@@ -58,7 +54,8 @@ export class ObtenerTiposdeChequeraporProductoComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
       "productoUId": "43"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerTiposDeChequeraPorProductoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +87,7 @@ export class ObtenerTiposdeChequeraporProductoComponent {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerTiposDeChequeraPorProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -119,8 +116,8 @@ export class ObtenerTiposdeChequeraporProductoComponent {
         "Hora": "14:38:57",
         "Canal": "BTDIGITAL"
       }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de tipo de chequera.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de tipo de chequera.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoChequera', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de tipo de chequera.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de tipo de chequera.' }] }];
 }

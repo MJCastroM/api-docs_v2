@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDolarUSAComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Dolar USA';
   description = `Metodo para obtener los datos del dolar estadounidense.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDolarUSA';
   programa   = 'RBTPG154';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tipoMoneda'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tipoMoneda', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "USD" para este metodo].' }];
-  outputCols = ['sdtMoneda'];
   outputData = [{ Nombre: 'sdtMoneda', Tipo: '[sBTMoneda](#sbtmoneda)', Comentarios: 'Datos de la moneda.' }];
-  errorCols  = ['40001'];
   errors     = [{ Codigo: '40001', Descripcion: 'No existen Monedas ingresadas en el sistema.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerDolarUSA>
@@ -56,7 +52,8 @@ export class ObtenerDolarUSAComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "669747179CD285A89A23FBEE"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerDolarUSAResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerDolarUSAComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDolarUSAResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
@@ -105,8 +102,8 @@ export class ObtenerDolarUSAComponent {
         "Numero": "7535",
         "Estado": "OK"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de moneda.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTMoneda', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de moneda.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCampanasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Campanas';
   description = `Metodo para obtener las campanas de credito.`;
   pubName    = 'BTMicrofinanzas.ObtenerCampanias';
   programa   = 'RBTPG425';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'fecha'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente fiador.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de inicio de campana.' }];
-  outputCols = ['sdtCampanias'];
   outputData = [{ Nombre: 'sdtCampanias', Tipo: '[sBTCampania](#sbtcampania)', Comentarios: 'Listado de campanas.' }];
-  errorCols  = ['30001', '30002', '30011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el Identificador de cliente.' }, { Codigo: '30011', Descripcion: 'No se obtuvo el titular representativo de la cuenta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerCampanias>
@@ -60,7 +56,8 @@ export class ObtenerCampanasComponent {
 	},
    "clienteUId": "3",
    "fecha": "2019-01-01"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerCampaniasResponse>
          <Btinreq>
@@ -88,7 +85,7 @@ export class ObtenerCampanasComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerCampaniasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -111,8 +108,8 @@ export class ObtenerCampanasComponent {
           "Numero": "246",
           "Estado": "OK"
         }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de campana.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de campana.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTCampania', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de campana.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de campana.' }] }];
 }

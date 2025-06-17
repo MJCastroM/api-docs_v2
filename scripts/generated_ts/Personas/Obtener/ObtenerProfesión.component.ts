@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerProfesionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Profesion';
   description = `Metodo para obtener la profesion de una persona fisica.`;
   pubName    = 'BTPersonas.ObtenerProfesion';
   programa   = 'RBTPG289';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }];
-  outputCols = ['sdtProfesion', 'fechaInicioProfesion'];
   outputData = [{ Nombre: 'sdtProfesion', Tipo: '[sBTProfesion](#sbtprofesion)', Comentarios: 'Datos de la profesion.' }, { Nombre: 'fechaInicioProfesion', Tipo: 'Date', Comentarios: 'Fecha de inicio de la profesion.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerProfesion>
@@ -44,7 +40,8 @@ export class ObtenerProfesionComponent {
          <bts:personaUId>10003</bts:personaUId>
       </bts:BTPersonas.ObtenerProfesion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerProfesionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -71,7 +68,7 @@ export class ObtenerProfesionComponent {
          </Btoutreq>
       </BTPersonas.ObtenerProfesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -95,8 +92,8 @@ export class ObtenerProfesionComponent {
 	  "Numero": "7984",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de profesion.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de profesion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTProfesion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de profesion.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de profesion.' }] }];
 }

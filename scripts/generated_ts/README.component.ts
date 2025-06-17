@@ -9,29 +9,26 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class NovedadesReleaseMayo2025Component {
-  // Cabecera e info-card
   pageTitle = 'Novedades Release Mayo 2025';
   description = ``;
   pubName    = '';
   programa   = '';
   scope      = '';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = [];
   outputData = [];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: ``, json: `` }, response: { xml: ``, json: `` } };
+  examples = {
+    invocation: { xml: ``, json: `` },
+    response:   { xml: ``,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

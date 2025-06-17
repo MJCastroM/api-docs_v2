@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent {
-  // Cabecera e info-card
   pageTitle = 'Modificar Cuenta Destino de Acreditacion Periodica';
   description = `Metodo para modificar la cuenta de destino de la instruccion de acreditacion de un deposito con pago periodico de intereses.`;
   pubName    = 'BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion';
   programa   = 'RBTPG108';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'depositoUId', 'cuentaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'depositoUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de deposito.' }, { Nombre: 'cuentaUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de cuenta.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008', '30009', '30010', '30011', '30012', '30013', '40002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de la operacion del deposito.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de la operacion de la cuenta.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta para el Identificador de cliente: [Numero de identificador]' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion del deposito para el identificador: [Numero de identificador]' }, { Codigo: '30006', Descripcion: 'La operacion asociada al identificador: [Numero de identificador] no pertenece a un deposito a plazo.' }, { Codigo: '30007', Descripcion: 'El producto de deposito ingresado no tiene instruccion de acreditacion.' }, { Codigo: '30008', Descripcion: 'La cuenta del deposito no pertenece al identificador del cliente: [Numero de identificador]' }, { Codigo: '30009', Descripcion: 'No se encontro instruccion de acreditacion para el deposito ingresado.' }, { Codigo: '30010', Descripcion: 'El deposito tiene instruccion de renovacion automatica, para especificar una cuenta debe modificar la instruccion.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion de la cuenta para el identificador: [Numero de identificador]' }, { Codigo: '30012', Descripcion: 'La operacion asociada al identificador: [Numero de identificador] no pertenece a un cuenta.' }, { Codigo: '30013', Descripcion: 'La cuenta indicada es igual a la de la instruccion.' }, { Codigo: '40002', Descripcion: 'No existe instruccion para operacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion>
@@ -62,7 +58,8 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent {
    "clienteUId": 61,
 	"depositoUId": 4,
 	"cuentaUId": 3
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ModificarCuentaDestinoAcreditacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent {
          </Btoutreq>
       </BTDepositosAPlazo.ModificarCuentaDestinoAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent {
         "Hora": "12:04:07",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

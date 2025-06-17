@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEmpresasOriginantesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Empresas Originantes';
   description = `Metodo para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.`;
   pubName    = 'BTSNP.ObtenerEmpresasOriginantes';
   programa   = 'RBTPG325';
   scope      = 'Argentina';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sdtEmpresas'];
   outputData = [{ Nombre: 'sdtEmpresas', Tipo: '[sBTEmpresaOriginante](#sbtempresaoriginante)', Comentarios: 'Listado de empresas originantes.' }];
-  errorCols  = ['30001', '30002', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontro un cliente para el identificador: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'No se encontraron empresas originantes para este cliente.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.ObtenerEmpresasOriginantes>
@@ -58,7 +54,8 @@ export class ObtenerEmpresasOriginantesComponent {
 			"Token": "fbd47e2319F955E77534D3E0"
 		},
 		"clienteUId": 4
-	}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.ObtenerEmpresasOriginantesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +97,7 @@ export class ObtenerEmpresasOriginantesComponent {
          </Btoutreq>
       </BTSNP.ObtenerEmpresasOriginantesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
@@ -146,8 +143,8 @@ export class ObtenerEmpresasOriginantesComponent {
         "Hora": "16:19:38",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'prestaciones', Tipo: '[sBTPrestacion](#sbtprestacion)', Comentarios: 'Listado de prestaciones.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '### sBTPrestacion', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPrestacion son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'String', Comentarios: 'Codigo identificador de la prestacion.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la prestacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEmpresaOriginante', fields: [{ Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'prestaciones', Tipo: '[sBTPrestacion](#sbtprestacion)', Comentarios: 'Listado de prestaciones.' }] }, { typeName: 'sBTPrestacion', fields: [{ Nombre: 'codigo', Tipo: 'String', Comentarios: 'Codigo identificador de la prestacion.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la prestacion.' }] }];
 }

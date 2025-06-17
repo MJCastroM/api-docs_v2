@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ValidarListasInhabilitadosComponent {
-  // Cabecera e info-card
   pageTitle = 'Validar Listas Inhabilitados';
   description = `Metodo para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: pais, tipo de documento y numero de documento, o primer nombre y primer apellido)`;
   pubName    = 'BTPersonas.ValidarListasInhabilitados';
   programa   = 'RBTPG313';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['pais', 'tipoDocumento', 'numeroDocumento', 'tipoPersona', 'primerNombre', 'segundoNombre', 'primerApellido', 'segundoApellido', 'razonSocial'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'pais', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'tipoDocumento', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'tipoPersona', Tipo: 'String', Comentarios: 'Tipo de persona (Fisica / Juridica).' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido.' }, { Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razon social' }];
-  outputCols = ['listaInhabilitados'];
   outputData = [{ Nombre: 'listaInhabilitados', Tipo: '[sBTListaInhabilitados](#sbtlistainhabilitados)', Comentarios: 'Listado de lista de inhabilitados.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se ingreso primer nombre de la persona.' }, { Codigo: '30002', Descripcion: 'No se ingreso primer apellido de la persona.' }, { Codigo: '30003', Descripcion: 'No se ingreso pais de la persona.' }, { Codigo: '30004', Descripcion: 'No se ingreso tipo de documento de la persona.' }, { Codigo: '30005', Descripcion: 'No se ingreso documento de la persona.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ValidarListasInhabilitados>
@@ -74,7 +70,8 @@ export class ValidarListasInhabilitadosComponent {
 	"primerApellido":"",
 	"segundoApellido":"",
 	"razonSocial":""
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ValidarListasInhabilitadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -105,7 +102,7 @@ export class ValidarListasInhabilitadosComponent {
          </Btoutreq>
       </BTPersonas.ValidarListasInhabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -134,8 +131,8 @@ export class ValidarListasInhabilitadosComponent {
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'bloqueante', Tipo: 'String', Comentarios: '¿Es bloqueante? (S/N).' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de lista de inhabilitados.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de lista de inhabilitados.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha en que la persona ingresa a la lista de inhabilitados.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha en que la persona deja de pertenecer a la lista.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTListaInhabilitados', fields: [{ Nombre: 'bloqueante', Tipo: 'String', Comentarios: '¿Es bloqueante? (S/N).' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de lista de inhabilitados.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de lista de inhabilitados.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha en que la persona ingresa a la lista de inhabilitados.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha en que la persona deja de pertenecer a la lista.' }] }];
 }

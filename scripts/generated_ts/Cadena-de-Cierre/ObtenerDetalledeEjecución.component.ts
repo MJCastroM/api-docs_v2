@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDetalledeEjecucionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Detalle de Ejecucion';
   description = `Metodo para obtener el detalle de la ejecucion de un proceso en la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerDetalleEjecucion';
   programa   = 'RBTPG504';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['identificador', 'fecha'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de proceso batch.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de ejecucion.' }];
-  outputCols = ['identificador', 'fechaInicio', 'fechaFin', 'duracion'];
   outputData = [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de proceso batch.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio de ejecucion.' }, { Nombre: 'fechaFin', Tipo: 'Date', Comentarios: 'Fecha de fin de ejecucion.' }, { Nombre: 'duracion', Tipo: 'String', Comentarios: 'Duracion.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCadenaCierre.ObtenerDatelleEjecucion>
@@ -60,7 +56,8 @@ export class ObtenerDetalledeEjecucionComponent {
     }, 
     "identificador":"93",
     "fecha":"2021-10-12",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCadenaCierre.ObtenerDatelleEjecucionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +82,7 @@ export class ObtenerDetalledeEjecucionComponent {
          </Btoutreq>
       </BTCadenaCierre.ObtenerDatelleEjecucionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
       "Device": "mc", 
       "Usuario": "INSTALADOR", 
@@ -107,8 +104,8 @@ export class ObtenerDetalledeEjecucionComponent {
       "Hora": "13:44:21", 
       "Canal": "BTDIGITAL" 
     } 
-  },` } };
+  },` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

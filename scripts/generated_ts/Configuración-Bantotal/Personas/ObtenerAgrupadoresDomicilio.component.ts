@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerAgrupadoresdeDomicilioComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Agrupadores de Domicilio';
   description = `Metodo para obtener los diferentes niveles de agrupadores de domicilios.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio';
   programa   = 'RBTPG221';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['agrupadorId1', 'agrupadorId2', 'agrupadorId3', 'agrupadorId4', 'agrupadorId5', 'agrupadorId6'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'agrupadorId1', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 1.' }, { Nombre: 'agrupadorId2', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 2.' }, { Nombre: 'agrupadorId3', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 3.' }, { Nombre: 'agrupadorId4', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 4.' }, { Nombre: 'agrupadorId5', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 5.' }, { Nombre: 'agrupadorId6', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 6.' }];
-  outputCols = ['sdtAgrupadores'];
   outputData = [{ Nombre: 'sdtAgrupadores', Tipo: '[sBTAgrupadores](#sbtagrupadores)', Comentarios: 'Listado de agrupadores.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se encontraron agrupadores.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio>
@@ -68,7 +64,8 @@ export class ObtenerAgrupadoresdeDomicilioComponent {
     "agrupadorId4": "",
     "agrupadorId5": "",
     "agrupadorId6": ""
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerAgrupadoresDomicilioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -123,7 +120,7 @@ export class ObtenerAgrupadoresdeDomicilioComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerAgrupadoresDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
   "Btinreq": {
     "Device": "GP",
     "Usuario": "INSTALADOR",
@@ -174,8 +171,8 @@ export class ObtenerAgrupadoresdeDomicilioComponent {
     "Canal": "BTDIGITAL",
     "Hora": "16:39:16"
   }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'niveles', Tipo: '[sBTAgrupadorNiv1](#sbtagrupadorniv1)', Comentarios: 'Coleccion del primer subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv1', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAgrupadorNiv1 son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel2', Tipo: '[sBTAgrupadorNiv2](#sbtagrupadorniv2)', Comentarios: 'Coleccion del segundo subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv2', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAgrupadorNiv2 son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel3', Tipo: '[sBTAgrupadorNiv3](#sbtagrupadorniv3)', Comentarios: 'Coleccion del tercer subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv3', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAgrupadorNiv3 son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel4', Tipo: '[sBTAgrupadorNiv4](#sbtagrupadorniv4)', Comentarios: 'Coleccion del cuarto subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv4', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAgrupadorNiv4 son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel', Tipo: '[sBTAgrupadorNiv5](#sbtagrupadorniv5)', Comentarios: 'Coleccion del quinto subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv5', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAgrupadorNiv5 son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel6', Tipo: '[sBTAgrupadorNiv6](#sbtagrupadorniv6)', Comentarios: 'Coleccion del quinto subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv6', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAgrupadorNiv6 son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTAgrupadores', fields: [{ Nombre: 'niveles', Tipo: '[sBTAgrupadorNiv1](#sbtagrupadorniv1)', Comentarios: 'Coleccion del primer subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv1', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAgrupadorNiv1', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel2', Tipo: '[sBTAgrupadorNiv2](#sbtagrupadorniv2)', Comentarios: 'Coleccion del segundo subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv2', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAgrupadorNiv2', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel3', Tipo: '[sBTAgrupadorNiv3](#sbtagrupadorniv3)', Comentarios: 'Coleccion del tercer subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv3', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAgrupadorNiv3', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel4', Tipo: '[sBTAgrupadorNiv4](#sbtagrupadorniv4)', Comentarios: 'Coleccion del cuarto subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv4', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAgrupadorNiv4', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel', Tipo: '[sBTAgrupadorNiv5](#sbtagrupadorniv5)', Comentarios: 'Coleccion del quinto subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv5', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAgrupadorNiv5', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }, { Nombre: 'subNivel6', Tipo: '[sBTAgrupadorNiv6](#sbtagrupadorniv6)', Comentarios: 'Coleccion del quinto subnivel de agrupacion.' }, { Nombre: '### sBTAgrupadorNiv6', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAgrupadorNiv6', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre de agrupador.' }] }];
 }

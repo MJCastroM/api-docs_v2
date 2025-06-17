@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCronogramaOriginalComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cronograma Original';
   description = `Metodo que devuelve el cronograma original de un prestamo.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaOriginal';
   programa   = 'RBTPG291';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la operacion.' }];
-  outputCols = ['sdtPrestamoOriginal'];
   outputData = [{ Nombre: 'sdtPrestamoOriginal', Tipo: '[sBTPrestamoOriginal](#sbtprestamooriginal)', Comentarios: 'Informacion del prestamo original.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero prestamo para el identificador:' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerCronogramaOriginal>
@@ -58,7 +54,8 @@ export class ObtenerCronogramaOriginalComponent {
 	  "bts:Device": "AC"
 	},
 	"operacionUId": 10118
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerCronogramaOriginalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -278,7 +275,7 @@ export class ObtenerCronogramaOriginalComponent {
          </Btoutreq>
       </BTPrestamos.ObtenerCronogramaOriginalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
 	"Btinreq": { 
 	  "Canal": "BTDIGITAL", 
 	  "Requerimiento": "1", 
@@ -497,8 +494,8 @@ export class ObtenerCronogramaOriginalComponent {
 	  "Numero": "8032", 
 	  "Estado": "OK" 
 	} 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cantidadCuotas', Tipo: 'Short', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'especie', Tipo: 'String', Comentarios: 'Especie del prestamo.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha vencimiento.' }, { Nombre: 'idOperacionBT', Tipo: 'String', Comentarios: 'Identificador String Bantotal (concatenacion de todos los conceptos claves de la operacion).' }, { Nombre: 'modalidad', Tipo: 'String', Comentarios: 'Modalidad.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la operacion.' }, { Nombre: 'planDePagos', Tipo: '[sBTCuotaPrestamoOriginal](#sbtcuotaprestamooriginal)', Comentarios: 'Plan de pagos original.' }, { Nombre: 'precio', Tipo: 'Double', Comentarios: 'Precio.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Informacion del producto.' }, { Nombre: 'simboloMoneda', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'totalCapital', Tipo: 'Double', Comentarios: 'Capital total.' }, { Nombre: 'totalComisiones', Tipo: 'Double', Comentarios: 'Total comisiones.' }, { Nombre: 'totalImpuestos', Tipo: 'Double', Comentarios: 'Total de impuestos.' }, { Nombre: 'totalIntereses', Tipo: 'Double', Comentarios: 'Total de intereses.' }, { Nombre: 'totalMora', Tipo: 'Double', Comentarios: 'Total de mora.' }, { Nombre: 'totalPagar', Tipo: 'Double', Comentarios: 'Total a pagar.' }, { Nombre: 'totalSeguros', Tipo: 'Double', Comentarios: 'Total de seguros.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTProducto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTConcepto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: '### sBTCuotaPrestamoOriginal', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTCuotaPrestamoOriginal son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital.' }, { Nombre: 'comisiones', Tipo: 'Double', Comentarios: 'Comisiones.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta.' }, { Nombre: 'impuestos', Tipo: 'Double', Comentarios: 'Impuestos.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'nroCuota', Tipo: 'Short', Comentarios: 'Numero de cuota.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'saldoCapital', Tipo: 'Double', Comentarios: 'Saldo capital.' }, { Nombre: 'seguros', Tipo: 'Double', Comentarios: 'Seguros.' }, { Nombre: 'situacion', Tipo: 'String', Comentarios: 'Situacion.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total de la cuota.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPrestamoOriginal', fields: [{ Nombre: 'cantidadCuotas', Tipo: 'Short', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'especie', Tipo: 'String', Comentarios: 'Especie del prestamo.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha vencimiento.' }, { Nombre: 'idOperacionBT', Tipo: 'String', Comentarios: 'Identificador String Bantotal (concatenacion de todos los conceptos claves de la operacion).' }, { Nombre: 'modalidad', Tipo: 'String', Comentarios: 'Modalidad.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la operacion.' }, { Nombre: 'planDePagos', Tipo: '[sBTCuotaPrestamoOriginal](#sbtcuotaprestamooriginal)', Comentarios: 'Plan de pagos original.' }, { Nombre: 'precio', Tipo: 'Double', Comentarios: 'Precio.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Informacion del producto.' }, { Nombre: 'simboloMoneda', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'totalCapital', Tipo: 'Double', Comentarios: 'Capital total.' }, { Nombre: 'totalComisiones', Tipo: 'Double', Comentarios: 'Total comisiones.' }, { Nombre: 'totalImpuestos', Tipo: 'Double', Comentarios: 'Total de impuestos.' }, { Nombre: 'totalIntereses', Tipo: 'Double', Comentarios: 'Total de intereses.' }, { Nombre: 'totalMora', Tipo: 'Double', Comentarios: 'Total de mora.' }, { Nombre: 'totalPagar', Tipo: 'Double', Comentarios: 'Total a pagar.' }, { Nombre: 'totalSeguros', Tipo: 'Double', Comentarios: 'Total de seguros.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTProducto', fields: [{ Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: '### sBTCuotaPrestamoOriginal', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTCuotaPrestamoOriginal', fields: [{ Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital.' }, { Nombre: 'comisiones', Tipo: 'Double', Comentarios: 'Comisiones.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta.' }, { Nombre: 'impuestos', Tipo: 'Double', Comentarios: 'Impuestos.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'nroCuota', Tipo: 'Short', Comentarios: 'Numero de cuota.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'saldoCapital', Tipo: 'Double', Comentarios: 'Saldo capital.' }, { Nombre: 'seguros', Tipo: 'Double', Comentarios: 'Seguros.' }, { Nombre: 'situacion', Tipo: 'String', Comentarios: 'Situacion.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total de la cuota.' }] }];
 }

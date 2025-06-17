@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerSaldoBloqueadoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Saldo Bloqueado';
   description = `Metodo para obtener el total de saldo bloqueado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldoBloqueado';
   programa   = 'RBTPG141';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['saldoBloqueado'];
   outputData = [{ Nombre: 'saldoBloqueado', Tipo: 'Double', Comentarios: 'Total de saldo bloqueado.' }];
-  errorCols  = ['30002'];
   errors     = [{ Codigo: '30002', Descripcion: 'No se encontro el Id de Operacion para la Cuenta Vista Bloqueada' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerSaldoBloqueado>
@@ -58,7 +54,8 @@ export class ObtenerSaldoBloqueadoComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "operacionUId": 3
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerSaldoBloqueadoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +78,7 @@ export class ObtenerSaldoBloqueadoComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerSaldoBloqueadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -102,8 +99,8 @@ export class ObtenerSaldoBloqueadoComponent {
         "Hora": "15:58:32",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerLimitesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Limites';
   description = `Metodo para obtener los limites de una tarjeta de debito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerLimites';
   programa   = 'RBTPG144';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tarjetaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de la tarjeta de debito.' }];
-  outputCols = ['sdtLimites'];
   outputData = [{ Nombre: 'sdtLimites', Tipo: '[sBTLimiteTarjeta](#sbtlimitetarjeta)', Comentarios: 'Datos de los limites de la tarjeta.' }];
-  errorCols  = ['30001', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de tarjeta.' }, { Codigo: '40001', Descripcion: 'No existe la tarjeta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerLimites>
@@ -58,7 +54,8 @@ export class ObtenerLimitesComponent {
 	  "Device": "AC"
 	},
 	"tarjetaUId": "2000002050"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerLimitesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +86,7 @@ export class ObtenerLimitesComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -115,8 +112,8 @@ export class ObtenerLimitesComponent {
 	  "Numero": "7910",
 	  "Estado": "OK"
 	}
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Codigo de limite.' }, { Nombre: 'limiteBandaMagnetica', Tipo: 'Double', Comentarios: 'Monto limite en banda magnetica.' }, { Nombre: 'limiteEMV', Tipo: 'Double', Comentarios: 'Monto limite EMV.' }, { Nombre: 'limiteNoPresencial', Tipo: 'Double', Comentarios: 'Monto limite no presencial.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Codigo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTLimiteTarjeta', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Codigo de limite.' }, { Nombre: 'limiteBandaMagnetica', Tipo: 'Double', Comentarios: 'Monto limite en banda magnetica.' }, { Nombre: 'limiteEMV', Tipo: 'Double', Comentarios: 'Monto limite EMV.' }, { Nombre: 'limiteNoPresencial', Tipo: 'Double', Comentarios: 'Monto limite no presencial.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Codigo de moneda.' }] }];
 }

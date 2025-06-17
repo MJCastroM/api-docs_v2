@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerAdhesionesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Adhesiones';
   description = `Metodo para obtener las adhesiones de un cliente a una determinada empresa originante.`;
   pubName    = 'BTSNP.ObtenerAdhesiones';
   programa   = 'RBTPG324';
   scope      = 'Argentina';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'empresaOriginante'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }];
-  outputCols = ['sdtAdhesiones'];
   outputData = [{ Nombre: 'sdtAdhesiones', Tipo: '[sBTAdhesion](#sbtadhesion)', Comentarios: 'Listado de adhesiones.' }];
-  errorCols  = ['30001', '30002', '30003', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontro un cliente para el identificador: [Numero de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibio empresa originante.' }, { Codigo: '40001', Descripcion: 'No existe la empresa originante.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.ObtenerAdhesiones>
@@ -60,7 +56,8 @@ export class ObtenerAdhesionesComponent {
 		},
 		"clienteUId": 4,
 		"empresaOriginante": "3050001626"
-	}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.ObtenerAdhesionesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -99,7 +96,7 @@ export class ObtenerAdhesionesComponent {
          </Btoutreq>
       </BTSNP.ObtenerAdhesionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
@@ -138,8 +135,8 @@ export class ObtenerAdhesionesComponent {
         "Canal": "BTDIGITAL",
         "Hora": "12:14:12"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'CBU1', Tipo: 'String', Comentarios: 'Primer bloque del CBU.' }, { Nombre: 'CBU2', Tipo: 'String', Comentarios: 'Segundo bloque del CBU.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'dscEmpresaOri', Tipo: 'String', Comentarios: 'Descripcion empresa originante.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la adhesion.' }, { Nombre: 'fechaDeAlta', Tipo: 'Date', Comentarios: 'Fecha de alta' }, { Nombre: 'fechaDeBaja', Tipo: 'Date', Comentarios: 'Fecha de baja.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestacion.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de debito (1=Abierto/2=Cerrado).' }, { Nombre: 'transaccionCod', Tipo: 'Byte', Comentarios: 'Codigo de transaccion.' }, { Nombre: 'transaccionInfoAd', Tipo: 'Byte', Comentarios: 'Codigo de transaccion para informacion adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTAdhesion', fields: [{ Nombre: 'CBU1', Tipo: 'String', Comentarios: 'Primer bloque del CBU.' }, { Nombre: 'CBU2', Tipo: 'String', Comentarios: 'Segundo bloque del CBU.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'dscEmpresaOri', Tipo: 'String', Comentarios: 'Descripcion empresa originante.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la adhesion.' }, { Nombre: 'fechaDeAlta', Tipo: 'Date', Comentarios: 'Fecha de alta' }, { Nombre: 'fechaDeBaja', Tipo: 'Date', Comentarios: 'Fecha de baja.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestacion.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de debito (1=Abierto/2=Cerrado).' }, { Nombre: 'transaccionCod', Tipo: 'Byte', Comentarios: 'Codigo de transaccion.' }, { Nombre: 'transaccionInfoAd', Tipo: 'Byte', Comentarios: 'Codigo de transaccion para informacion adicional.' }] }];
 }

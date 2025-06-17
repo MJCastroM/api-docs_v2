@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActivarComponent {
-  // Cabecera e info-card
   pageTitle = 'Activar';
   description = `Metodo para activar una cuenta vista.`;
   pubName    = 'BTCuentasVista.Activar';
   programa   = 'RBTPG442';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'nuevoEstado', 'fechaVencimientoEstado', 'observaciones'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'nuevoEstado', Tipo: 'Short', Comentarios: 'Nuevo estado [Hidden: Valor fijo '0'].' }, { Nombre: 'fechaVencimientoEstado', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del estado.' }, { Nombre: 'observaciones', Tipo: 'String', Comentarios: 'Observaciones.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el Identificador: [Numero de Identificador].' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.Activar>
@@ -62,7 +58,8 @@ export class ActivarComponent {
         "operacionUId": 1215,
         "fechaFencimientoEstado": "",
         "observaciones": "Cuenta Activa"
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ActivarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class ActivarComponent {
          </Btoutreq>
       </BTCuentasVista.ActivarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
           "Token": "2772EB28927EAC58EF950EBA",
           "Canal": "BTDIGITAL",
@@ -102,8 +99,8 @@ export class ActivarComponent {
           "Numero": 225689,
           "Requerimiento": 1
         }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

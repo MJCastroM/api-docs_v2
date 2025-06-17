@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCotizacionaFechaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cotizacion a Fecha';
   description = `Metodo para obtener un listado de las cotizaciones de las monedas ingresadas.`;
   pubName    = 'BTPrecios.ObtenerCotizacionAFecha';
   programa   = 'RBTPG251';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['monedaId', 'fecha'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda. [Si es vacio devuelve las cotizaciones de todas las monedas].' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de cotizacion. [Si es vacia devuelve cotizacion al dia de hoy].' }];
-  outputCols = ['sdtCotizacion'];
   outputData = [{ Nombre: 'sdtCotizacion', Tipo: '[sBTCotizacion](#sbtcotizacion)', Comentarios: 'Listado de cotizaciones.' }];
-  errorCols  = ['40001', '40002', '40003'];
   errors     = [{ Codigo: '40001', Descripcion: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Codigo: '40002', Descripcion: 'No se recupero moneda para el identificador ingresado.' }, { Codigo: '40003', Descripcion: 'No se recuperaron monedas.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"><soapenv:Header/>    
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"><soapenv:Header/>    
 	<soapenv:Body>        
 		<bts:BTPrecios.ObtenerCotizacionAFecha>  
 			 <bts:Btinreq>        
@@ -59,7 +55,8 @@ export class ObtenerCotizacionaFechaComponent {
 	}, 
    "monedaId": "", 
 	"fecha": "" 
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
 	<SOAP-ENV:Body>       
 		<BTPrecios.ObtenerCotizacionAFechaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">  
 			<Btinreq>      
@@ -113,7 +110,7 @@ export class ObtenerCotizacionaFechaComponent {
 			 </Btoutreq> 
         </BTPrecios.ObtenerCotizacionAFechaResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`, json: `'{ 
+</SOAP-ENV:Envelope>`,  json: `'{ 
 	"Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 
@@ -164,8 +161,8 @@ export class ObtenerCotizacionaFechaComponent {
 	  "Canal": "BTDIGITAL", 
 	  "Hora": "16:00:37" 
 	} 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'compra', Tipo: 'Double', Comentarios: 'Cotizacion Compra.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monedaISO', Tipo: 'String', Comentarios: 'Codigo ISO de la moneda.' }, { Nombre: 'venta', Tipo: 'Double', Comentarios: 'Cotizacion Venta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTCotizacion', fields: [{ Nombre: 'compra', Tipo: 'Double', Comentarios: 'Cotizacion Compra.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monedaISO', Tipo: 'String', Comentarios: 'Codigo ISO de la moneda.' }, { Nombre: 'venta', Tipo: 'Double', Comentarios: 'Cotizacion Venta.' }] }];
 }

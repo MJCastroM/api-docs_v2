@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDetalledeSucursalComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Detalle de Sucursal';
   description = `Metodo para obtener el detalle de una sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleSucursal';
   programa   = 'RBTPG558';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sucursalId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }];
-  outputCols = ['sdtDetalleSucursal'];
   outputData = [{ Nombre: 'sdtDetalleSucursal', Tipo: '[sBTDetalleSucursal](#sbtdetallesucursal)', Comentarios: 'Detalle de la sucursal.' }];
-  errorCols  = ['30001', '41001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de sucursal.' }, { Codigo: '41001', Descripcion: 'La Sucursal no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerDetalleSucursal>
@@ -58,7 +54,8 @@ export class ObtenerDetalledeSucursalComponent {
             "Token": "6fc29caa9d4A8B5C60A82434"
       },
       "sucursalId": 1,
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerDetalleSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -102,7 +99,7 @@ export class ObtenerDetalledeSucursalComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -144,8 +141,8 @@ export class ObtenerDetalledeSucursalComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'barrio', Tipo: 'String', Comentarios: 'Barrio.' }, { Nombre: 'barrioId', Tipo: 'Int', Comentarios: 'Identificador del barrio.' }, { Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario.' }, { Nombre: 'calle', Tipo: 'String', Comentarios: 'Calle.' }, { Nombre: 'categoria', Tipo: 'String', Comentarios: 'Categoria.' }, { Nombre: 'categoriaId', Tipo: 'Int', Comentarios: 'Identificador de la categoria.' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'ciudadId', Tipo: 'Int', Comentarios: 'Identificador de la ciudad.' }, { Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo.' }, { Nombre: 'codigoPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'departamento', Tipo: 'String', Comentarios: 'Departamento.' }, { Nombre: 'departamentoId', Tipo: 'Int', Comentarios: 'Identificador del departamento.' }, { Nombre: 'email', Tipo: 'String', Comentarios: 'Email.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoId', Tipo: 'Short', Comentarios: 'Identificador del estado.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'nroPuerta', Tipo: 'Int', Comentarios: 'Numero de puerta.' }, { Nombre: 'oficinaPrincipal', Tipo: 'String', Comentarios: 'Oficina principal.' }, { Nombre: 'oficinaPrincipalId', Tipo: 'Int', Comentarios: 'Identificador de la oficina principal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de la sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDetalleSucursal', fields: [{ Nombre: 'barrio', Tipo: 'String', Comentarios: 'Barrio.' }, { Nombre: 'barrioId', Tipo: 'Int', Comentarios: 'Identificador del barrio.' }, { Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario.' }, { Nombre: 'calle', Tipo: 'String', Comentarios: 'Calle.' }, { Nombre: 'categoria', Tipo: 'String', Comentarios: 'Categoria.' }, { Nombre: 'categoriaId', Tipo: 'Int', Comentarios: 'Identificador de la categoria.' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'ciudadId', Tipo: 'Int', Comentarios: 'Identificador de la ciudad.' }, { Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo.' }, { Nombre: 'codigoPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'departamento', Tipo: 'String', Comentarios: 'Departamento.' }, { Nombre: 'departamentoId', Tipo: 'Int', Comentarios: 'Identificador del departamento.' }, { Nombre: 'email', Tipo: 'String', Comentarios: 'Email.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoId', Tipo: 'Short', Comentarios: 'Identificador del estado.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'nroPuerta', Tipo: 'Int', Comentarios: 'Numero de puerta.' }, { Nombre: 'oficinaPrincipal', Tipo: 'String', Comentarios: 'Oficina principal.' }, { Nombre: 'oficinaPrincipalId', Tipo: 'Int', Comentarios: 'Identificador de la oficina principal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de la sucursal.' }] }];
 }

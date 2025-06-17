@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposAvalComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos Aval';
   description = `Metodo para obtener una lista de los tipos de aval.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposAval';
   programa   = 'RBTPG426';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposAval'];
   outputData = [{ Nombre: 'sdtTiposAval', Tipo: '[sBTTipoAval](#sbttipoaval)', Comentarios: 'Listado de tipos de aval.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerTiposAval>
@@ -56,7 +52,8 @@ export class ObtenerTiposAvalComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerTiposAvalResponse>
          <Btinreq>
@@ -84,7 +81,7 @@ export class ObtenerTiposAvalComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerTiposAvalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -107,8 +104,8 @@ export class ObtenerTiposAvalComponent {
           "Numero": "135",
           "Estado": "OK"
         }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de tipo de aval.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de tipo de aval.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoAval', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de tipo de aval.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de tipo de aval.' }] }];
 }

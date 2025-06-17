@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SolicitarChequeraComponent {
-  // Cabecera e info-card
   pageTitle = 'Solicitar Chequera';
   description = `Metodo para solicitar una chequera para una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.SolicitarChequera';
   programa   = 'RBTPG242';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'tipoCheque', 'cantidadLibretas', 'datosSolicitud'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de subcuenta.' }, { Nombre: 'tipoCheque', Tipo: 'Double', Comentarios: 'Tipo de chequera a solicitar.' }, { Nombre: 'cantidadLibretas', Tipo: 'Double', Comentarios: 'Cantidad de libretas a solicitar.' }, { Nombre: 'datosSolicitud', Tipo: '[sBTSolicitudChequera](#sbtsolicitudchequera)', Comentarios: 'Datos de solicitud de chequera.' }];
-  outputCols = ['chequeraId'];
   outputData = [{ Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera.' }];
-  errorCols  = ['30001', '40003', '40004', '40005', '40007', '40008', '40010', '40011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de operacion.' }, { Codigo: '40003', Descripcion: 'El tipo de chequera a agregar es incorrecto.' }, { Codigo: '40004', Descripcion: 'El tipo de chequera a agregar es incorrecto para el modulo.' }, { Codigo: '40005', Descripcion: 'La subcuenta no tiene estado normal.' }, { Codigo: '40007', Descripcion: 'El tipo de chequera a agregar es incorrecto para el producto.' }, { Codigo: '40008', Descripcion: 'Usuario no autorizado.' }, { Codigo: '40010', Descripcion: 'La cuenta no tiene habilitada la entrega de chequeras.' }, { Codigo: '40011', Descripcion: 'Debe indicar la cantidad de libretas.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.SolicitarChequera>
@@ -82,7 +78,8 @@ export class SolicitarChequeraComponent {
           "bts:domicilio": "Avenida Italia 2145",
           "bts:sucuraslDeRetiroId": " "
         }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.SolicitarChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -104,7 +101,7 @@ export class SolicitarChequeraComponent {
          </Btoutreq>
       </BTCuentasCorrientes.SolicitarChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -125,8 +122,8 @@ export class SolicitarChequeraComponent {
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio a enviar la chequera.' }, { Nombre: 'persona1Texto1', Tipo: 'String', Comentarios: 'Informacion persona 1.' }, { Nombre: 'persona1Texto2', Tipo: 'String', Comentarios: 'Informacion complementaria persona 1.' }, { Nombre: 'persona2Texto1', Tipo: 'String', Comentarios: 'Informacion persona 2.' }, { Nombre: 'persona2Texto2', Tipo: 'String', Comentarios: 'Informacion complementaria persona 2.' }, { Nombre: 'persona3Texto1', Tipo: 'String', Comentarios: 'Informacion persona 3.' }, { Nombre: 'persona3Texto2', Tipo: 'String', Comentarios: 'Informacion complementaria persona 3.' }, { Nombre: 'sucuraslDeRetiroId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal de retiro.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSolicitudChequera', fields: [{ Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio a enviar la chequera.' }, { Nombre: 'persona1Texto1', Tipo: 'String', Comentarios: 'Informacion persona 1.' }, { Nombre: 'persona1Texto2', Tipo: 'String', Comentarios: 'Informacion complementaria persona 1.' }, { Nombre: 'persona2Texto1', Tipo: 'String', Comentarios: 'Informacion persona 2.' }, { Nombre: 'persona2Texto2', Tipo: 'String', Comentarios: 'Informacion complementaria persona 2.' }, { Nombre: 'persona3Texto1', Tipo: 'String', Comentarios: 'Informacion persona 3.' }, { Nombre: 'persona3Texto2', Tipo: 'String', Comentarios: 'Informacion complementaria persona 3.' }, { Nombre: 'sucuraslDeRetiroId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal de retiro.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class DenunciarDesdeREDComponent {
-  // Cabecera e info-card
   pageTitle = 'Denunciar Desde RED';
   description = `Metodo para denunciar una tarjeta de debito y darla de baja sin notificar a la RED.`;
   pubName    = 'BTTarjetasDeDebito.DenunciarDesdeRED';
   programa   = 'RBTPG070';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tarjetaUId', 'clienteUId', 'novedad'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'novedad', Tipo: 'String', Comentarios: '[Hidden: Valor fijo 'DLTRE' para este metodo].' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '40001', '40002', '40003', '40004', '40005', '40006', '40007'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recupero la tarjeta de debito para el identificador: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'Error interno.' }, { Codigo: '40002', Descripcion: 'No existen tarjetas de debito para los datos ingresados.' }, { Codigo: '40003', Descripcion: 'Error en parametros de input.' }, { Codigo: '40004', Descripcion: 'No existe la persona (con los datos del titular recibidos).' }, { Codigo: '40005', Descripcion: 'No existe la funcionalidad en TDD025.' }, { Codigo: '40006', Descripcion: 'Motivo de cancelacion no valido.' }, { Codigo: '40007', Descripcion: 'Funcionalidad TDD025 inhabilitada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.DenunciarDesdeRED>
@@ -59,7 +55,8 @@ export class DenunciarDesdeREDComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "tarjetaUId": 3
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.DenunciarDesdeREDResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +78,7 @@ export class DenunciarDesdeREDComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.DenunciarDesdeREDResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -101,8 +98,8 @@ export class DenunciarDesdeREDComponent {
       "Hora": "16:15:27",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

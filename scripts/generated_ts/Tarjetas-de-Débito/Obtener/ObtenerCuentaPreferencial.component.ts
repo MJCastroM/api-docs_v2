@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCuentaPreferencialComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cuenta Preferencial';
   description = `Metodo para obtener la operacion de la cuenta preferencial de tarjeta de debito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCuentaPreferencial';
   programa   = 'RBTPG773';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tarjetaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }];
-  outputCols = ['operacionUId'];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de cuenta preferencial del cliente.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la tarjeta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerCuentaPreferencial>
@@ -57,7 +53,8 @@ export class ObtenerCuentaPreferencialComponent {
 		"Device": "MC"
 	 },
 	 "tarjetaId": "109"
-  }` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerCuentaPreferencialResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +77,7 @@ export class ObtenerCuentaPreferencialComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerCuentaPreferencialResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
    "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 
@@ -99,8 +96,8 @@ export class ObtenerCuentaPreferencialComponent {
       "Numero": "10140", 
       "Estado": "OK" 
    } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDatosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Datos';
   description = `Metodo para obtener los datos de una cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.ObtenerDatos';
   programa   = 'RBTPG616';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['bolsilloUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'bolsilloUId', Tipo: 'Long', Comentarios: 'Identificador unico del bolsillo.' }];
-  outputCols = ['sdtInformacionBolsillo'];
   outputData = [{ Nombre: 'sdtInformacionBolsillo', Tipo: '[sBTInfBolsillo](#sbtinfbolsillo)', Comentarios: 'Informacion del bolsillo.' }];
-  errorCols  = ['30001', '30002', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el identificador: [Numero de identificador].' }, { Codigo: '30003', Descripcion: 'La operacion ingresada no corresponde a una cuenta bolsillo.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasBolsillo.ObtenerDatos>
@@ -58,7 +54,8 @@ export class ObtenerDatosComponent {
 	  "Requerimiento": "1"
 	},
     "bolsilloUId": 183
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasBolsillo.ObtenerDatosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -98,7 +95,7 @@ export class ObtenerDatosComponent {
          </Btoutreq>
       </BTCuentasBolsillo.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "1",
         "Usuario": "MINSTALADOR",
@@ -133,8 +130,8 @@ export class ObtenerDatosComponent {
         "Canal": "BTDIGITAL",
         "Hora": "15:10:52"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cuentaPrincipalUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion principal.' }, { Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado.' }, { Nombre: 'fechaApert', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de la baja.' }, { Nombre: 'instruccionUId', Tipo: 'Long', Comentarios: 'Identificador de la instruccion.' }, { Nombre: 'nombreProducto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'nombreSubcuenta', Tipo: 'String', Comentarios: 'Nombre de la subcuenta.' }, { Nombre: 'operacionBolsilloUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de bolsillo.' }, { Nombre: 'parametros', Tipo: '[sBTParamBolsillo](#sbtparambolsillo)', Comentarios: '' }, { Nombre: 'productoBolsilloId', Tipo: 'Short', Comentarios: 'Identificador unico del producto del bolsillo.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }, { Nombre: '### sBTParamBolsillo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTParamBolsillo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'heredaCondiciones', Tipo: 'String', Comentarios: '¿Hereda condiciones? (S/N).' }, { Nombre: 'metaAhorro', Tipo: 'Double', Comentarios: 'Meta de ahorro de la cuenta.' }, { Nombre: 'pagaIntereses', Tipo: 'String', Comentarios: '¿Paga intereses? (S/N).' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTInfBolsillo', fields: [{ Nombre: 'cuentaPrincipalUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion principal.' }, { Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado.' }, { Nombre: 'fechaApert', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de la baja.' }, { Nombre: 'instruccionUId', Tipo: 'Long', Comentarios: 'Identificador de la instruccion.' }, { Nombre: 'nombreProducto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'nombreSubcuenta', Tipo: 'String', Comentarios: 'Nombre de la subcuenta.' }, { Nombre: 'operacionBolsilloUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de bolsillo.' }, { Nombre: 'parametros', Tipo: '[sBTParamBolsillo](#sbtparambolsillo)', Comentarios: '' }, { Nombre: 'productoBolsilloId', Tipo: 'Short', Comentarios: 'Identificador unico del producto del bolsillo.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }, { Nombre: '### sBTParamBolsillo', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTParamBolsillo', fields: [{ Nombre: 'heredaCondiciones', Tipo: 'String', Comentarios: '¿Hereda condiciones? (S/N).' }, { Nombre: 'metaAhorro', Tipo: 'Double', Comentarios: 'Meta de ahorro de la cuenta.' }, { Nombre: 'pagaIntereses', Tipo: 'String', Comentarios: '¿Paga intereses? (S/N).' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }] }];
 }

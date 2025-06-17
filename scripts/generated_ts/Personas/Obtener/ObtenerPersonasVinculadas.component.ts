@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPersonasVinculadasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Personas Vinculadas';
   description = `Metodo para obtener un listado de los vinculos de la persona.`;
   pubName    = 'BTPersonas.ObtenerPersonasVinculadas';
   programa   = 'RBTPG375';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }];
-  outputCols = ['sdtPersonasVinculadas'];
   outputData = [{ Nombre: 'sdtPersonasVinculadas', Tipo: '[sBTPersonaVinculada](#sbtpersonavinculada)', Comentarios: 'Datos de la persona vinculada.' }];
-  errorCols  = ['30001', '31003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador unico.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerPersonasVinculadas>
@@ -58,7 +54,8 @@ export class ObtenerPersonasVinculadasComponent {
 	  "Requerimiento": "1"
 	},
 	"personaUId": "1",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerPersonasVinculadasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +97,7 @@ export class ObtenerPersonasVinculadasComponent {
          </Btoutreq>
       </BTPersonas.ObtenerPersonasVinculadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
 	    "Device": "GP", 
 	    "Usuario": "MINSTALADOR", 
@@ -139,8 +136,8 @@ export class ObtenerPersonasVinculadasComponent {
         "Numero": "11003", 
         "Estado": "OK" 
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'vinculo', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Datos del vinculo.' }, { Nombre: '### sBTVinculo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTVinculo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de vinculo.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de vinculo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vinculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPersonaVinculada', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'vinculo', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Datos del vinculo.' }, { Nombre: '### sBTVinculo', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTVinculo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de vinculo.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de vinculo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vinculo.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AgregarIntegranteComponent {
-  // Cabecera e info-card
   pageTitle = 'Agregar Integrante';
   description = `Metodo para agregar un integrante a una cuenta cliente.`;
   pubName    = 'BTClientes.AgregarIntegrante';
   programa   = 'RBTPG186';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'personaUId', 'codigoDeTitularidad'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'codigoDeTitularidad', Tipo: 'Byte', Comentarios: 'Codigo de titularidad.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30014', '30023', '30032', '30033', '30034', '30036', '30037', '30038', '30039', '30040', '30041', '30042', '30043', '30046'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30003', Descripcion: 'No se recibio codigo de titularidad.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de identificador].' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30023', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '30032', Descripcion: 'La persona tiene que haber sido ingresado con Alta Normal para poder integrar una cuenta.' }, { Codigo: '30033', Descripcion: 'Persona inhabilitada por Banco Central.' }, { Codigo: '30034', Descripcion: 'La persona seleccionada no tiene segmento asociado.' }, { Codigo: '30036', Descripcion: 'La persona se encuentra en la lista de inhabilitados: [Numero de identificador].' }, { Codigo: '30037', Descripcion: 'La persona se encuentra en la lista de inhabilitados: [Numero de identificador].' }, { Codigo: '30038', Descripcion: 'La persona seleccionada figura como fallecida.' }, { Codigo: '30039', Descripcion: 'Persona seleccionada no tiene domicilio legal.' }, { Codigo: '30040', Descripcion: 'Codigo de Titularidad Incorrecto.' }, { Codigo: '30041', Descripcion: 'La persona no tiene condicion ante el impuesto.' }, { Codigo: '30042', Descripcion: 'La persona tiene alta inconclusa no puede asociarse.' }, { Codigo: '30043', Descripcion: 'La persona seleccionada no tiene actividad economica.' }, { Codigo: '30046', Descripcion: 'La cuenta [Numero de identificador] tiene la misma integracion que la cuenta actual.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.AgregarIntegrante>
@@ -62,7 +58,8 @@ export class AgregarIntegranteComponent {
     "clienteUId": "21",
     "personaUId": "41",
     "codigoDeTitularidad": "1"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.AgregarIntegranteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class AgregarIntegranteComponent {
          </Btoutreq>
       </BTClientes.AgregarIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class AgregarIntegranteComponent {
         "Hora": "15:31:49",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

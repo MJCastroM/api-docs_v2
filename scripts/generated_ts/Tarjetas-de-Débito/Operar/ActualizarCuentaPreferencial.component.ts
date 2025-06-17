@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActualizarCuentaPreferencialComponent {
-  // Cabecera e info-card
   pageTitle = 'Actualizar Cuenta Preferencial';
   description = `Metodo para actualizar la cuenta preferencial de tarjeta de debito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarCuentaPreferencial';
   programa   = 'RBTPG774';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'tarjetaId', 'operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'tarjetaId', Tipo: 'Long', Comentarios: 'Identificador de tarjeta.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de cuenta preferencial del cliente.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30000', '30001', '30002', '30003', '30004', '30005', '30006', '40001', '40102', '40104', '40105', '40105', '40105', '40105', '40105', '40105', '40105'];
   errors     = [{ Codigo: '30000', Descripcion: 'No se recibio el identificador de la tarjeta.' }, { Codigo: '30001', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el identificador recibido.' }, { Codigo: '30003', Descripcion: 'La Cuenta Preferencial no pertenece al Cliente.' }, { Codigo: '30004', Descripcion: 'No se recibio ni Id ni Numero de Tarjeta.' }, { Codigo: '30005', Descripcion: 'No se encontro una tarjeta con el Id recibido.' }, { Codigo: '30006', Descripcion: 'No se encontro una tarjeta con el Numero recibido.' }, { Codigo: '40001', Descripcion: 'La Tarjeta no pertenece al Cliente.' }, { Codigo: '40102', Descripcion: 'Error, se ha indicado un Tipo de Cuenta inhabilitado/erroneo.' }, { Codigo: '40104', Descripcion: 'Tarjeta inexistente TDD003.' }, { Codigo: '40105', Descripcion: 'Error, se ha excedido el maximo de X cuentas permitidas.' }, { Codigo: '40105', Descripcion: 'Error, no se permiten mas de X Cajas de Ahorro.' }, { Codigo: '40105', Descripcion: 'Error, no se permiten mas de X Cuentas Corriente.' }, { Codigo: '40105', Descripcion: 'Error, solo se permite una Cuenta PREFERENCIAL por Moneda.' }, { Codigo: '40105', Descripcion: 'Error, solo se permiten X Cuentas PREFERENCIALES.' }, { Codigo: '40105', Descripcion: 'Error, no se han asociado Cuentas a la Tarjeta.' }, { Codigo: '40105', Descripcion: 'Error, se debera indicar una Cuenta como PREFERENCIAL, por favor indicarla.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ActualizarCuentaPreferencial>
@@ -61,7 +57,8 @@ export class ActualizarCuentaPreferencialComponent {
 	 "clienteUId": "1",
 	 "tarjetaUId": "109"
 	 "operacionUId": "10"
-  }` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ActualizarCuentaPreferencialResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ActualizarCuentaPreferencialComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ActualizarCuentaPreferencialResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
    "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 
@@ -101,8 +98,8 @@ export class ActualizarCuentaPreferencialComponent {
       "Numero": "10140", 
       "Estado": "OK" 
    } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

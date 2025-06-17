@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerClientedeunaOperacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cliente de una Operacion';
   description = `Metodo para obtener el identificador de cuenta cliente asociado a una operacion.`;
   pubName    = 'BTContabilidad.ObtenerClienteDeOperacion';
   programa   = 'RBTPG298';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion' }];
-  outputCols = ['clienteUId'];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  errorCols  = ['30001', '30101'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador unico de operacion.' }, { Codigo: '30101', Descripcion: 'No se recupero la operacion para el identificador recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerClienteDeOperacion>
@@ -58,7 +54,8 @@ export class ObtenerClientedeunaOperacionComponent {
 	  "bts:Device": "AC"
 	},
 	"bts:operacionUId": "787"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerClienteDeOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +78,7 @@ export class ObtenerClientedeunaOperacionComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerClienteDeOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
  	"Btinreq": { 
 	  "Device": "AC", 
 	  "Usuario": "BANTOTAL", 
@@ -99,8 +96,8 @@ export class ObtenerClientedeunaOperacionComponent {
 	  "Canal": "BTDIGITAL", 
 	  "Hora": "14:37:54" 
 	} 
- }` } };
+ }` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

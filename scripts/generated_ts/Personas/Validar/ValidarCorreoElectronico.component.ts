@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ValidarCorreoelectronicoComponent {
-  // Cabecera e info-card
   pageTitle = 'Validar Correo electronico';
   description = `Metodo para validar un correo electronico.`;
   pubName    = 'BTPersonas.ValidarCorreoElectronico';
   programa   = 'RBTPG752';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['correoElectronico'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electronico.' }];
-  outputCols = ['valido'];
   outputData = [{ Nombre: 'valido', Tipo: 'String', Comentarios: '¿Es valido? (S/N).' }];
-  errorCols  = ['30001', '30002', '30003', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se ingreso el usuario del correo electronico.' }, { Codigo: '30002', Descripcion: 'Caracteres invalidos en el dominio.' }, { Codigo: '30003', Descripcion: 'No se ingreso dominio.' }, { Codigo: '30004', Descripcion: 'Dominio invalido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ValidarCorreoElectronico>
@@ -58,7 +54,8 @@ export class ValidarCorreoelectronicoComponent {
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
     "correoElectronico": "AABB@GMAIL.COM",
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ValidarCorreoElectronicoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +78,7 @@ export class ValidarCorreoelectronicoComponent {
          </Btoutreq>
       </BTPersonas.ValidarCorreoElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -102,8 +99,8 @@ export class ValidarCorreoelectronicoComponent {
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

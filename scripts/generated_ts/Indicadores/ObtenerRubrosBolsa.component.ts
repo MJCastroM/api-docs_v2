@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerRubrosBolsaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Rubros Bolsa';
   description = `Metodo para obtener posibles rubros de bolsa ingresados en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerRubrosBolsa';
   programa   = 'RBTPG708';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtRubrosBolsa'];
   outputData = [{ Nombre: 'sdtRubrosBolsa', Tipo: '[sBTRubroBolsa](#sbtrubrobolsa)', Comentarios: 'Listado de rubros de bolsa.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerRubrosBolsa>
@@ -56,7 +52,8 @@ export class ObtenerRubrosBolsaComponent {
       "Usuario": "INSTALADOR",
       "Requerimiento": "?"
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerRubrosBolsaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -101,7 +98,7 @@ export class ObtenerRubrosBolsaComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerRubrosBolsaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
   "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -144,8 +141,8 @@ export class ObtenerRubrosBolsaComponent {
       "Canal": "BTDIGITAL",
       "Hora": "13:55:55"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cuentaCliente', Tipo: 'Int', Comentarios: 'Cuenta cliente.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre del rubro.' }, { Nombre: 'empresa', Tipo: 'Int', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moneda', Tipo: 'Int', Comentarios: 'Identificador de moneda.' }, { Nombre: 'nombreEmpresa', Tipo: 'String', Comentarios: 'Nombre de la empresa.' }, { Nombre: 'nombrePapel', Tipo: 'String', Comentarios: 'Nombre del papel.' }, { Nombre: 'nombreSucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'ocurrencias', Tipo: 'Int', Comentarios: 'Ocurrencias.' }, { Nombre: 'operacion', Tipo: 'Int', Comentarios: 'Identificador de operacion.' }, { Nombre: 'papel', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'rubro', Tipo: 'Int', Comentarios: 'Numero de rubro.' }, { Nombre: 'signoMoneda', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'subOperacion', Tipo: 'Int', Comentarios: 'Identificador de sub operacion.' }, { Nombre: 'sucursal', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'tipoOperacion', Tipo: 'Int', Comentarios: 'Identificador de tipo de operacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTRubroBolsa', fields: [{ Nombre: 'cuentaCliente', Tipo: 'Int', Comentarios: 'Cuenta cliente.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre del rubro.' }, { Nombre: 'empresa', Tipo: 'Int', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moneda', Tipo: 'Int', Comentarios: 'Identificador de moneda.' }, { Nombre: 'nombreEmpresa', Tipo: 'String', Comentarios: 'Nombre de la empresa.' }, { Nombre: 'nombrePapel', Tipo: 'String', Comentarios: 'Nombre del papel.' }, { Nombre: 'nombreSucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'ocurrencias', Tipo: 'Int', Comentarios: 'Ocurrencias.' }, { Nombre: 'operacion', Tipo: 'Int', Comentarios: 'Identificador de operacion.' }, { Nombre: 'papel', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'rubro', Tipo: 'Int', Comentarios: 'Numero de rubro.' }, { Nombre: 'signoMoneda', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'subOperacion', Tipo: 'Int', Comentarios: 'Identificador de sub operacion.' }, { Nombre: 'sucursal', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'tipoOperacion', Tipo: 'Int', Comentarios: 'Identificador de tipo de operacion.' }] }];
 }

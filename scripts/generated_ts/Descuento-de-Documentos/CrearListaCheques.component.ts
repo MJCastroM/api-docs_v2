@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CrearListaChequesComponent {
-  // Cabecera e info-card
   pageTitle = 'Crear Lista Cheques';
   description = `Metodo para crear una lista de cheques a descontar.`;
   pubName    = 'BTDescuentoDocumentos.CrearListaCheques';
   programa   = 'RBTPG162';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'productoUId', 'sdtListaCheques', 'montoADescontar', 'tasa', 'porcentajeAforo', 'fechaValor'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'sdtListaCheques', Tipo: '[sBTDescuentoCheque](#sbtdescuentocheque)', Comentarios: 'Lista de documentos.' }, { Nombre: 'montoADescontar', Tipo: 'Long', Comentarios: 'Monto total a descontar.' }, { Nombre: 'tasa', Tipo: 'Long', Comentarios: 'Tasa para aplicar.' }, { Nombre: 'porcentajeAforo', Tipo: 'Long', Comentarios: 'Porcentaje de aforo.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }];
-  outputCols = ['listaUId'];
   outputData = [{ Nombre: 'listaUId', Tipo: 'Long', Comentarios: 'Identificador de lista.' }];
-  errorCols  = ['30001', '30002', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recupero la cuenta para el identificador.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDescuentoDocumentos.CrearListaCheques>
@@ -99,7 +95,8 @@ export class CrearListaChequesComponent {
          "tasa": "0"
       }
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDescuentoDocumentos.CrearListaChequesResponse>
          <Btinreq>
@@ -122,7 +119,7 @@ export class CrearListaChequesComponent {
          </Btoutreq>
       </BTDescuentoDocumentos.CrearListaChequesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -143,8 +140,8 @@ export class CrearListaChequesComponent {
         "Hora": "15:59:42",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'agencia', Tipo: 'Int', Comentarios: 'Agencia.' }, { Nombre: 'banco', Tipo: 'Int', Comentarios: 'Banco.' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emision del documento.' }, { Nombre: 'fechaVto', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'identificacion', Tipo: 'String', Comentarios: 'Identificador del documento.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona titular del documento.' }, { Nombre: 'plaza', Tipo: 'Short', Comentarios: 'Plaza.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa a aplicar al documento.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDescuentoCheque', fields: [{ Nombre: 'agencia', Tipo: 'Int', Comentarios: 'Agencia.' }, { Nombre: 'banco', Tipo: 'Int', Comentarios: 'Banco.' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emision del documento.' }, { Nombre: 'fechaVto', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'identificacion', Tipo: 'String', Comentarios: 'Identificador del documento.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona titular del documento.' }, { Nombre: 'plaza', Tipo: 'Short', Comentarios: 'Plaza.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa a aplicar al documento.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono.' }] }];
 }

@@ -1,10 +1,10 @@
 // scripts/generate-components-from-md.js
-const fs = require('fs');
-const path = require('path');
+const fs     = require('fs');
+const path   = require('path');
 const matter = require('gray-matter');
 
-// Configurable input/output paths
-const MD_DIR = path.resolve(__dirname, './archivos_markdown');
+// Configurable paths
+const MD_DIR  = path.resolve(__dirname, './archivos_markdown');
 const OUT_DIR = path.resolve(__dirname, './generated_ts');
 
 function ensureDir(dir) {
@@ -40,6 +40,60 @@ function parseTable(md) {
     return obj;
   });
 }
+// Extrae configuración backend si existe
+function extractBackendConfig(content) {
+  const block = extractBlock(content,
+    '<!-- ABRE CONFIGURACIÓN BACKEND -->',
+    '<!-- CIERRA CONFIGURACIÓN BACKEND -->'
+  );
+  if (!block) return { hasConfig: false, text: '', config: [] };
+  const infoTag = '::: info Configuración Backend';
+  let text = block;
+  const idx = block.indexOf(infoTag);
+  if (idx >= 0) {
+    text = block.slice(idx + infoTag.length).trim();
+  }
+  // Extraer líneas numeradas
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => /^\d+\)/.test(l));
+  const config = lines.map(line => {
+    const parts = line.replace(/^\d+\)\s*/, '').split(/:\s*/);
+    if (parts.length > 1) {
+      return { campo: stripAccents(parts[0].trim()), valor: stripAccents(parts.slice(1).join(':').trim()) };
+    }
+    return { campo: stripAccents(line), valor: '' };
+  });
+  return { hasConfig: true, text: stripAccents(text) };
+}
+
+
+function extractSdts(content) {
+  const block = extractBlock(content,
+    '<!-- ABRE SDT -->',
+    '<!-- CIERRA SDT -->'
+  );
+  const sdts = [];
+  const headerRe = /###\s*([A-Za-z0-9_]+)/g;
+  const entries = Array.from(block.matchAll(headerRe));
+  for (let i = 0; i < entries.length; i++) {
+    const typeName = stripAccents(entries[i][1]);
+    // Search from end of this header
+    const startIdx = entries[i].index + entries[i][0].length;
+    // Find center block for this SDT
+    const centerMarker = '::: center';
+    const centerPos = block.indexOf(centerMarker, startIdx);
+    if (centerPos < 0) continue;
+    const afterCenter = block.slice(centerPos + centerMarker.length);
+    const endCenter = afterCenter.indexOf(':::');
+    const centerContent = endCenter >= 0 ? afterCenter.slice(0, endCenter) : afterCenter;
+    // Locate table
+    const tableStart = centerContent.search(/Nombre\s*\|\s*Tipo\s*\|\s*Comentarios/);
+    if (tableStart < 0) continue;
+    const tableMd = centerContent.slice(tableStart);
+    const fields = parseTable(tableMd);
+    sdts.push({ typeName, fields });
+  }
+  return sdts;
+}
 
 function extractApiTabs(content) {
   const block = extractBlock(content,
@@ -70,91 +124,89 @@ function extractExamples(content) {
   );
   const code = (blk, lang) => {
     const re = new RegExp('```' + lang + '[\\s\\S]*?```', 'm');
-    const m = blk.match(re); return m ? m[0].replace(/```(?:xml|json)/g,'').replace(/```/g,'').trim() : '';
+    const mm = blk.match(re);
+    return mm ? mm[0].replace(/```(?:xml|json)/g, '').replace(/```/g, '').trim() : '';
   };
-  return { invocation: { xml: code(inv,'xml'), json: code(inv,'json') }, response: { xml: code(resp,'xml'), json: code(resp,'json') } };
-}
-
-function extractSdts(content) {
-  const block = extractBlock(content,
-    '<!-- ABRE SDT -->',
-    '<!-- CIERRA SDT -->'
-  );
-  // extraer tabla Markdown que sigue a "Nombre | Tipo | Comentarios"
-  const tblRe = /Nombre\s*\|\s*Tipo\s*\|\s*Comentarios[\s\S]*?(\n[\s\S]*)/m;
-  const m = block.match(tblRe);
-  return m ? parseTable(block.slice(block.indexOf(m[0]))) : [];
+  return {
+    invocation: { xml: code(inv, 'xml'), json: code(inv, 'json') },
+    response:   { xml: code(resp,'xml'),  json: code(resp,'json') }
+  };
 }
 
 function renderComponent(mdPath) {
-  const txt = fs.readFileSync(mdPath, 'utf8');
+  const txt     = fs.readFileSync(mdPath, 'utf8');
   const { data, content } = matter(txt);
-  const name = path.basename(mdPath, '.md');
-  const key = stripAccents(data.title || name);
-  const cls = stripAccents(key.replace(/\W/g,'')) + 'Component';
-  const meta = extractBlock(content,'<!-- ABRE DATOS DEL MÉTODO -->','<!-- CIERRA DATOS DEL MÉTODO -->');
-  const pub  = meta.match(/\*\*Nombre publicación:\*\*\s*(.+)/)?.[1]||'';
-  const prog = meta.match(/\*\*Programa:\*\*\s*(.+)/)?.[1]||'';
-  const sc   = meta.match(/\*\*Global\/País:\*\*\s*(.+)/)?.[1]||'';
-  const desc = stripAccents(meta.replace(/::: note/, '').split('\n')[0].trim());
+  const name    = path.basename(mdPath, '.md');
+  const key     = stripAccents(data.title || name);
+  const cls     = stripAccents(key.replace(/\W/g, '')) + 'Component';
+
+  const meta    = extractBlock(content,
+    '<!-- ABRE DATOS DEL MÉTODO -->',
+    '<!-- CIERRA DATOS DEL MÉTODO -->'
+  );
+  const pub     = meta.match(/\*\*Nombre publicación:\*\*\s*(.+)/)?.[1] || '';
+  const prog    = meta.match(/\*\*Programa:\*\*\s*(.+)/)?.[1] || '';
+  const sc      = meta.match(/\*\*Global\/País:\*\*\s*(.+)/)?.[1] || '';
+  const desc    = stripAccents(meta.replace(/::: note/, '').split('\n')[0].trim());
+
   const { inTbl, outTbl, errTbl } = extractApiTabs(content);
-  const ex = extractExamples(content);
-  const sdt = extractSdts(content);
-  // flatten arrays inline
-  const inputCols  = `[${inTbl.map(r=>`'${r.Nombre}'`).join(', ')}]`;
-  const inputData  = `[${inTbl.map(r=>`{ Nombre: '${r.Nombre}', Tipo: '${r.Tipo}', Comentarios: '${r.Comentarios}' }`).join(', ')}]`;
-  const outputCols = `[${outTbl.map(r=>`'${r.Nombre}'`).join(', ')}]`;
-  const outputData = `[${outTbl.map(r=>`{ Nombre: '${r.Nombre}', Tipo: '${r.Tipo}', Comentarios: '${r.Comentarios}' }`).join(', ')}]`;
-  const errorCols  = `[${errTbl.map(r=>`'${r.Codigo || r.Código}'`).join(', ')}]`;
-  const errors     = `[${errTbl.map(r=>`{ Codigo: '${r.Codigo||r.Código}', Descripcion: '${stripAccents(r.Descripcion||r.Descripción)}' }`).join(', ')}]`;
-  const structured = `[${sdt.map(r=>`{ Nombre: '${r.Nombre}', Tipo: '${r.Tipo}', Comentarios: '${r.Comentarios}' }`).join(', ')}]`;
+  const examples = extractExamples(content);
+  const sdts     = extractSdts(content);
+
+  const toCols = tbl => `[${tbl.map(r => `\'${r.Nombre}\'`).join(', ')}]`;
+  const toRows = tbl => `[${tbl.map(r => `{ Nombre: \'${r.Nombre}\', Tipo: \'${r.Tipo}\', Comentarios: \'${r.Comentarios}\' }`).join(', ')}]`;
+  const toRowsErr = tbl => `[${tbl.map(r => `{ Codigo: \'${r.Codigo}\', Descripcion: \'${r.Descripcion}\' }`).join(', ')}]`;
+
+  const inputData  = toRows(inTbl);
+  const outputData = toRows(outTbl);
+  const errors     = toRowsErr(errTbl.map(r => ({ Codigo: r.Codigo || r.Código, Descripcion: r.Descripcion || r.Descripción })));
+  const sdtLit     = `[${sdts.map(s => `{ typeName: \'${s.typeName}\', fields: ${toRows(s.fields)} }`).join(', ')}]`;
+  const { hasConfig, text: backendText } = extractBackendConfig(content);
+
   return `import { Component } from '@angular/core';
 import { fadeInOut } from '../../../../route-animations';
 
 @Component({
-  selector: 'app-${name.replace(/\W/g,'')}',
+  selector: 'app-${name.replace(/\W/g, '')}',
   templateUrl: './DocTemplate.component.html',
   styleUrls: ['./DocTemplate.component.scss'],
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
 export class ${cls} {
-  // Cabecera e info-card
   pageTitle = '${key}';
   description = \`${desc}\`;
   pubName    = '${pub}';
   programa   = '${prog}';
   scope      = '${sc}';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ${inputCols};
+  hasBackendConfig  = ${hasConfig};
+  backendText       = \`${backendText.replace(/`/g, '\\`')}\`;
+  backendConfig     = [];
+
   inputData  = ${inputData};
-  outputCols = ${outputCols};
   outputData = ${outputData};
-  errorCols  = ${errorCols};
   errors     = ${errors};
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: \`${ex.invocation.xml}\`, json: \`${ex.invocation.json}\` }, response: { xml: \`${ex.response.xml}\`, json: \`${ex.response.json}\` } };
+  examples = {
+    invocation: { xml: \`${examples.invocation.xml}\`, json: \`${examples.invocation.json}\` },
+    response:   { xml: \`${examples.response.xml}\`,  json: \`${examples.response.json}\` }
+  };
 
-  // Datos estructurados
-  structuredTypes = ${structured};
+  structuredTypes = ${sdtLit};
 }
 `;
 }
 
-// generate
 ensureDir(OUT_DIR);
-walkMd(MD_DIR).forEach(md => {
-  const rel = path.relative(MD_DIR, path.dirname(md));
-  const d = path.join(OUT_DIR, rel); ensureDir(d);
-  const f = path.basename(md, '.md');
-  const out = path.join(d, f + '.component.ts');
-  fs.writeFileSync(out, renderComponent(md), 'utf8');
+walkMd(MD_DIR).forEach(mdPath => {
+  const rel   = path.relative(MD_DIR, path.dirname(mdPath));
+  const dir   = path.join(OUT_DIR, rel);
+  ensureDir(dir);
+  const file  = path.basename(mdPath, '.md') + '.component.ts';
+  const out   = path.join(dir, file);
+  fs.writeFileSync(out, renderComponent(mdPath), 'utf8');
   console.log('Generated:', out);
 });

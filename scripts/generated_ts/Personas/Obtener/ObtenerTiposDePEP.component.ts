@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdePEPComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de PEP';
   description = `Metodo para obtener los tipos de personas expuestas politicamente.`;
   pubName    = 'BTPersonas.ObtenerTiposDePEP';
   programa   = 'RBTPG553';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposPEP'];
   outputData = [{ Nombre: 'sdtTiposPEP', Tipo: '[sBTTipoPEP](#sbttipospep)', Comentarios: 'Listado de los tipos de PEP.' }];
-  errorCols  = ['40002'];
   errors     = [{ Codigo: '40002', Descripcion: 'La guia 8260 no esta parametrizada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTiposDePEP>
@@ -56,7 +52,8 @@ export class ObtenerTiposdePEPComponent {
         "Usuario": "Instalador",
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
-    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTiposDePEPResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +93,7 @@ export class ObtenerTiposdePEPComponent {
          </Btoutreq>
       </BTPersonas.ObtenerTiposDePEPResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",
@@ -136,8 +133,8 @@ export class ObtenerTiposdePEPComponent {
         "Hora": "17:11:02",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de PEP.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de PEP.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTiposPEP', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de PEP.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de PEP.' }] }];
 }

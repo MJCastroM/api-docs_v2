@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeIntegranteComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Integrante';
   description = `Metodo para obtener los tipos de integrante correspondientes a un tipo de grupo de credito.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposDeIntegrante';
   programa   = 'RBTPG432';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tipoGrupoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tipoGrupoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de grupo.' }];
-  outputCols = ['sdtTiposIntegrantesGrupo'];
   outputData = [{ Nombre: 'sdtTiposIntegrantesGrupo', Tipo: '[sBTTipoIntegranteGrupo](#sbttipointegrantegrupo)', Comentarios: 'Listado de tipos de integrantes.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No existen Tipos de Grupo ingresados en el sistema.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerTiposDeIntegrante>
@@ -58,7 +54,8 @@ export class ObtenerTiposdeIntegranteComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"tipoGrupoId": 1
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerTiposDeIntegranteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +93,7 @@ export class ObtenerTiposdeIntegranteComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerTiposDeIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -134,8 +131,8 @@ export class ObtenerTiposdeIntegranteComponent {
         "Hora": "16:35:22",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cantidadPermitida', Tipo: 'Int', Comentarios: 'Cantidad maxima de integrantes de este tipo permitidos.' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador del tipo de integrante.' }, { Nombre: 'coordinador', Tipo: 'String', Comentarios: 'Indica si el integrante es coordinador o no (S/N).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de integrante.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si el tipo de integrante esta vigente (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoIntegranteGrupo', fields: [{ Nombre: 'cantidadPermitida', Tipo: 'Int', Comentarios: 'Cantidad maxima de integrantes de este tipo permitidos.' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador del tipo de integrante.' }, { Nombre: 'coordinador', Tipo: 'String', Comentarios: 'Indica si el integrante es coordinador o no (S/N).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de integrante.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si el tipo de integrante esta vigente (S/N).' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActualizarPerfilTransaccionalComponent {
-  // Cabecera e info-card
   pageTitle = 'Actualizar Perfil Transaccional';
   description = `Metodo para actualizar el perfil transaccional de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ActualizarPerfilTransaccional';
   programa   = 'RBTPG624';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'sdtPerfilTransaccional', 'modo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'sdtPerfilTransaccional', Tipo: '[sBTDatosPerfilTransaccional](#sbtdatosperfiltransaccional)', Comentarios: 'Datos del perfil transaccional.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo 'UPD' para este metodo].' }];
-  outputCols = ['totalCantidadDepositos', 'totalCantidadRetiros', 'totalMontoDepositos', 'totalMontoRetiros'];
   outputData = [{ Nombre: 'totalCantidadDepositos', Tipo: 'Int', Comentarios: 'Total de movimientos de depositos.' }, { Nombre: 'totalCantidadRetiros', Tipo: 'Int', Comentarios: 'Total de movimientos de retiros.' }, { Nombre: 'totalMontoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depositos.' }, { Nombre: 'totalMontoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30021', '40001', '40002', '40003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de operacion.' }, { Codigo: '30002', Descripcion: 'No se recibio la cantidad de depositos en efectivo.' }, { Codigo: '30003', Descripcion: 'No se recibio el monto de depositos en efectivo.' }, { Codigo: '30004', Descripcion: 'No se recibio la cantidad de retiros en efectivo.' }, { Codigo: '30005', Descripcion: 'No se recibio el monto de retiros en efectivo.' }, { Codigo: '30006', Descripcion: 'No se recibio el origen de los Fondos.' }, { Codigo: '30007', Descripcion: 'La operacion ingresada no corresponde a una cuenta vista.' }, { Codigo: '30021', Descripcion: 'No se recupero la operacion para el Identificador: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'Producto a consultar no existe.' }, { Codigo: '40002', Descripcion: 'El identificador de pais [Numero de identificador] no existe.' }, { Codigo: '40003', Descripcion: 'El identificador de origenes de fondo [Numero de identificador] no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ActualizarPerfilTransaccional>
@@ -126,7 +122,8 @@ export class ActualizarPerfilTransaccionalComponent {
             }
         }
     }
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ActualizarPerfilTransaccionalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -152,7 +149,7 @@ export class ActualizarPerfilTransaccionalComponent {
          </Btoutreq>
       </BTCuentasVista.ActualizarPerfilTransaccionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -176,8 +173,8 @@ export class ActualizarPerfilTransaccionalComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'origenDeFondosId', Tipo: 'Short', Comentarios: 'Identificador del origen de los fondos.' }, { Nombre: 'origenDeFondos', Tipo: 'String', Comentarios: 'Origen de los fondos.' }, { Nombre: 'movimientosMensuales', Tipo: '[sBTPerfilTrnMovimientosMensuales](#sbtperfiltrnmovimientosmensuales)', Comentarios: 'Datos de los movimientos mensuales.' }, { Nombre: '### sBTPerfilTrnMovimientosMensuales', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPerfilTrnMovimientosMensuales son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'enEfectivo', Tipo: '[sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos)', Comentarios: 'Datos de los movimientos mensuales en efectivo.' }, { Nombre: 'conCheque', Tipo: '[sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos)', Comentarios: 'Datos de los movimientos mensuales con cheques.' }, { Nombre: 'transferenciaLocal', Tipo: '[sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos)', Comentarios: 'Datos de los movimientos mensuales de transferencias locales.' }, { Nombre: 'transferenciaInternacional', Tipo: '[sBTPerfilTrnDatosMovInternacionales](#sbtperfiltrndatosmovinternacionales)', Comentarios: 'Datos de los movimientos mensuales de transferencias internacionales.' }, { Nombre: '### sBTPerfilTrnDatosMovimientos', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPerfilTrnDatosMovimientos son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'montoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }, { Nombre: 'montoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depositos.' }, { Nombre: 'cantidadDepositos', Tipo: 'int', Comentarios: 'Cantidad de movimientos de depositos.' }, { Nombre: 'cantidadRetiros', Tipo: 'int', Comentarios: 'Cantidad de movimientos de retiros.' }, { Nombre: '### sBTPerfilTrnDatosMovInternacionales', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPerfilTrnDatosMovInternacionales son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'montoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }, { Nombre: 'montoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depositos.' }, { Nombre: 'cantidadDepositos', Tipo: 'int', Comentarios: 'Cantidad de movimientos de depositos.' }, { Nombre: 'cantidadRetiros', Tipo: 'int', Comentarios: 'Cantidad de movimientos de retiros.' }, { Nombre: 'paisOrigenId', Tipo: 'int', Comentarios: 'Identificador del pais.' }, { Nombre: 'paisOrigen', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: 'paisDestinoId', Tipo: 'int', Comentarios: 'Identificador del pais.' }, { Nombre: 'paisDestino', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosPerfilTransaccional', fields: [{ Nombre: 'origenDeFondosId', Tipo: 'Short', Comentarios: 'Identificador del origen de los fondos.' }, { Nombre: 'origenDeFondos', Tipo: 'String', Comentarios: 'Origen de los fondos.' }, { Nombre: 'movimientosMensuales', Tipo: '[sBTPerfilTrnMovimientosMensuales](#sbtperfiltrnmovimientosmensuales)', Comentarios: 'Datos de los movimientos mensuales.' }, { Nombre: '### sBTPerfilTrnMovimientosMensuales', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPerfilTrnMovimientosMensuales son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'enEfectivo', Tipo: '[sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos)', Comentarios: 'Datos de los movimientos mensuales en efectivo.' }, { Nombre: 'conCheque', Tipo: '[sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos)', Comentarios: 'Datos de los movimientos mensuales con cheques.' }, { Nombre: 'transferenciaLocal', Tipo: '[sBTPerfilTrnDatosMovimientos](#sbtperfiltrndatosmovimientos)', Comentarios: 'Datos de los movimientos mensuales de transferencias locales.' }, { Nombre: 'transferenciaInternacional', Tipo: '[sBTPerfilTrnDatosMovInternacionales](#sbtperfiltrndatosmovinternacionales)', Comentarios: 'Datos de los movimientos mensuales de transferencias internacionales.' }, { Nombre: '### sBTPerfilTrnDatosMovimientos', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPerfilTrnDatosMovimientos son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'montoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }, { Nombre: 'montoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depositos.' }, { Nombre: 'cantidadDepositos', Tipo: 'int', Comentarios: 'Cantidad de movimientos de depositos.' }, { Nombre: 'cantidadRetiros', Tipo: 'int', Comentarios: 'Cantidad de movimientos de retiros.' }, { Nombre: '### sBTPerfilTrnDatosMovInternacionales', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPerfilTrnDatosMovInternacionales son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'montoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }, { Nombre: 'montoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depositos.' }, { Nombre: 'cantidadDepositos', Tipo: 'int', Comentarios: 'Cantidad de movimientos de depositos.' }, { Nombre: 'cantidadRetiros', Tipo: 'int', Comentarios: 'Cantidad de movimientos de retiros.' }, { Nombre: 'paisOrigenId', Tipo: 'int', Comentarios: 'Identificador del pais.' }, { Nombre: 'paisOrigen', Tipo: 'String', Comentarios: 'Nombre del pais.' }, { Nombre: 'paisDestinoId', Tipo: 'int', Comentarios: 'Identificador del pais.' }, { Nombre: 'paisDestino', Tipo: 'String', Comentarios: 'Nombre del pais.' }] }];
 }

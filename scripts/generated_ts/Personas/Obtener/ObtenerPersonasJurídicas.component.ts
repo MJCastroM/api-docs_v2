@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPersonasJuridicasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Personas Juridicas';
   description = `Metodo para obtener un listado de personas juridicas (10 maximo), dada una razon social.`;
   pubName    = 'BTPersonas.ObtenerPersonasJuridicas';
   programa   = 'RBTPG159';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['razonSocial'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razon social.' }];
-  outputCols = ['sdtPersonasJuridicas'];
   outputData = [{ Nombre: 'sdtPersonasJuridicas', Tipo: '[sBTPersonaJuridica](#sbtpersonajuridica)', Comentarios: 'Listado de personas juridicas.' }];
-  errorCols  = ['30001', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'Campo Razon Social requerido.' }, { Codigo: '40001', Descripcion: 'No se encontro ninguna persona juridica con el patron de busqueda ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerPersonasJuridicas>
@@ -58,7 +54,8 @@ export class ObtenerPersonasJuridicasComponent {
 		"Token": "1839023315CD285A89A23FBE"
 	},
    "razonSocial": "BANCO"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerPersonasJuridicasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -102,7 +99,7 @@ export class ObtenerPersonasJuridicasComponent {
          </Btoutreq>
       </BTPersonas.ObtenerPersonasJuridicasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -146,8 +143,8 @@ export class ObtenerPersonasJuridicasComponent {
       "Hora": "15:54:29",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'fechaConstitucion', Tipo: 'Date', Comentarios: 'Fecha de constitucion.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre de pais.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razon social.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre de tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPersonaJuridica', fields: [{ Nombre: 'fechaConstitucion', Tipo: 'Date', Comentarios: 'Fecha de constitucion.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre de pais.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razon social.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre de tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }] }];
 }

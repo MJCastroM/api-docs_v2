@@ -9,28 +9,30 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class PrecancelarComponent {
-  // Cabecera e info-card
   pageTitle = 'Precancelar';
   description = `Metodo para precancelar una operacion de un deposito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Precancelar';
   programa   = 'RBTPG637';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'operacionUId', 'cuentaAcreditacionUId'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion de cancelacion teniendo en cuenta que:
+   
+   - Tenga asociada la RTE PRT006 en el ordinal de la operacion.
+   
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T).
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'cuentaAcreditacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de cuenta vista de cobro.' }];
-  outputCols = ['movimientoUId'];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico del movimiento.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30003', Descripcion: 'No se recupero la operacion origen para el Identificador ingresado.' }, { Codigo: '30004', Descripcion: 'La operacion recuperada no tiene relacion con la cuenta.' }, { Codigo: '30005', Descripcion: 'No se recibio el identificador de operacion de acreditacion.' }, { Codigo: '30006', Descripcion: 'La operacion a precancelar y de acreditacion no pueden ser la misma.' }, { Codigo: '30007', Descripcion: 'No se recupero la operacion de acreditacion para el Identificador ingresado.' }, { Codigo: '30008', Descripcion: 'La operacion de acreditacion no tiene relacion con la cuenta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.Precancelar>
@@ -62,7 +64,8 @@ export class PrecancelarComponent {
    "clienteUId": 4,
 	"operacionUId": 100,
    "cuentaAcreditacionUId": 12
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.PrecancelarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +88,7 @@ export class PrecancelarComponent {
          </Btoutreq>
       </BTDepositosAPlazo.PrecancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -106,8 +109,8 @@ export class PrecancelarComponent {
         "Hora": "12:09:09",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

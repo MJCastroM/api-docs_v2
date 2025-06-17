@@ -9,28 +9,26 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerIdentificadorUnicodeOperacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Identificador Unico de Operacion';
   description = `Metodo para obtener el identificador unico de una operacion.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoOperacion';
   programa   = 'RBTPG836';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['empresaId', 'moduloId', 'sucursalId', 'monedaId', 'papelId', 'cuentaBT', 'operacionBT', 'subOperacionBT', 'tipoOperacionBT'];
+  hasBackendConfig  = true;
+  backendText       = `Se puede parametrizar la opcion general por modulo 1416. En caso de estar en 'S', se inhabilitara el control de existencia de la operacion en la tabla FSD011. 
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Modulo Bantotal.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'cuentaBT', Tipo: 'Int', Comentarios: 'Cuenta Bantotal.' }, { Nombre: 'operacionBT', Tipo: 'Int', Comentarios: 'Operacion Bantotal.' }, { Nombre: 'subOperacionBT', Tipo: 'Int', Comentarios: 'Sub Operacion Bantotal.' }, { Nombre: 'tipoOperacionBT', Tipo: 'Short', Comentarios: 'Tipo de operacion Bantotal.' }];
-  outputCols = ['operacionUId'];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008', '30009', '30010'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio empresaId.' }, { Codigo: '30002', Descripcion: 'No se recibio modulo.' }, { Codigo: '30003', Descripcion: 'No se recibio sucursal.' }, { Codigo: '30004', Descripcion: 'Moneda no existe.' }, { Codigo: '30005', Descripcion: 'Papel no existe.' }, { Codigo: '30006', Descripcion: 'No se recibio cuenta de cliente.' }, { Codigo: '30007', Descripcion: 'No se recibio operacion.' }, { Codigo: '30008', Descripcion: 'No se recibio sub operacion.' }, { Codigo: '30009', Descripcion: 'No se recibio tipo de operacion.' }, { Codigo: '30010', Descripcion: 'Operacion no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdentificadorUnicoOperacion>
@@ -73,7 +71,8 @@ export class ObtenerIdentificadorUnicodeOperacionComponent {
     "operacionBT": "0",
     "subOperacionBT": "8",
     "tipoOperacionBT": "48"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdentificadorUnicoOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +95,7 @@ export class ObtenerIdentificadorUnicodeOperacionComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "bms", 
         "Usuario": "MINSTALADOR", 
@@ -117,8 +116,8 @@ export class ObtenerIdentificadorUnicodeOperacionComponent {
         "Hora": "10:12:26", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

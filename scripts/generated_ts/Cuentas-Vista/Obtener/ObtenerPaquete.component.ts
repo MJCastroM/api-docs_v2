@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPaqueteComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Paquete';
   description = `Metodo para obtener los datos de un paquete.`;
   pubName    = 'BTCuentasVista.ObtenerPaquete';
   programa   = 'RBTPG321';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['paqueteId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'paqueteId', Tipo: 'Int', Comentarios: 'Identificador de paquete.' }];
-  outputCols = ['sdtPaquete'];
   outputData = [{ Nombre: 'sdtPaquete', Tipo: '[sBTPaquete](#sbtpaquete)', Comentarios: 'Datos del paquete.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se encontraron paquetes para el identificador ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/> 	 
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerPaquete>
@@ -58,7 +54,8 @@ export class ObtenerPaqueteComponent {
 		"Token": "1752711512CD285A89A23FBE"
 	},
    "paqueteId": "1"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerPaqueteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -108,7 +105,7 @@ export class ObtenerPaqueteComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerPaqueteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "GP",
 		"Usuario": "INSTALADOR",
@@ -157,8 +154,8 @@ export class ObtenerPaqueteComponent {
       "Hora": "15:53:26",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo de paquete.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de paquete.' }, { Nombre: 'productos', Tipo: '[sBTProductoPaquete](#sbtproductopaquete)', Comentarios: 'Listado de productos incluidos en el paquete.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si esta vigente el paquete (S/N).' }, { Nombre: '### sBTProductoPaquete', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTProductoPaquete son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidad', Tipo: 'Short', Comentarios: 'Cantidad de productos de este tipo incluidos en el paquete.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de producto.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo de papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPaquete', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo de paquete.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de paquete.' }, { Nombre: 'productos', Tipo: '[sBTProductoPaquete](#sbtproductopaquete)', Comentarios: 'Listado de productos incluidos en el paquete.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si esta vigente el paquete (S/N).' }, { Nombre: '### sBTProductoPaquete', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTProductoPaquete', fields: [{ Nombre: 'cantidad', Tipo: 'Short', Comentarios: 'Cantidad de productos de este tipo incluidos en el paquete.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de producto.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo de papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPeriodosHabilitadosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Periodos Habilitados';
   description = `Metodo para obtener un listado de periodos habilitados para los casos que el alta de ahorro programado se realice mediante seleccion de periodo como lista de valores.`;
   pubName    = 'BTAhorroProgramado.ObtenerPeriodosHabilitados';
   programa   = 'RBTPG419';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['productoUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }];
-  outputCols = ['sdtPeriodos'];
   outputData = [{ Nombre: 'sdtPeriodos', Tipo: '[sBTPlazo](#sbtplazo)', Comentarios: 'Listado de periodos habilitados.' }];
-  errorCols  = ['30001', '30002', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del producto.' }, { Codigo: '30002', Descripcion: 'No se recupero el producto de ahorro para el identificador: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'Error de configuracion: No se definio listado de periodos.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ObtenerPeriodosHabilitados>
@@ -58,7 +54,8 @@ export class ObtenerPeriodosHabilitadosComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 		"productoUId": 41
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerPeriodosHabilitadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +94,7 @@ export class ObtenerPeriodosHabilitadosComponent {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerPeriodosHabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -136,8 +133,8 @@ export class ObtenerPeriodosHabilitadosComponent {
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion extendida del periodo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de periodo (Diario: 'D', Mensual: 'M', Anual: 'A').' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Periodo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPlazo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion extendida del periodo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de periodo (Diario: 'D', Mensual: 'M', Anual: 'A').' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Periodo.' }] }];
 }

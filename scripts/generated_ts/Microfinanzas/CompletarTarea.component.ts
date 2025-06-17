@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CompletarTareaComponent {
-  // Cabecera e info-card
   pageTitle = 'Completar Tarea';
   description = `Metodo para completar la tarea de solicitud de creditos y pasar a la etapa de evaluacion.`;
   pubName    = 'BTMicrofinanzas.CompletarTarea';
   programa   = 'RBTPG418';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['solicitudUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30011', '30012', '30013'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de solicitud' }, { Codigo: '30011', Descripcion: 'No es posible completar la tarea. Se debe validar politicas previamente' }, { Codigo: '30012', Descripcion: 'No es posible completar la tarea. Existen politicas incumplidas' }, { Codigo: '30013', Descripcion: 'No es posible completar la tarea. No se pudo determinar el modelo de evaluacion crediticia' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.CompletarTarea>
@@ -58,7 +54,8 @@ export class CompletarTareaComponent {
       "bts:Device": "GP"
    },
    "solicitudUId": "11109"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.CompletarTareaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +77,7 @@ export class CompletarTareaComponent {
          </Btoutreq>
       </BTMicrofinanzas.CompletarTareaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "95",
@@ -97,8 +94,8 @@ export class CompletarTareaComponent {
       "Numero": "1591",
       "Estado": "OK"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

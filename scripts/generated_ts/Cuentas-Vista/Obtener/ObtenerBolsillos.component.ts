@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerBolsillosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Bolsillos';
   description = `Metodo para obtener un listado de las cuentas bolsillo asociadas a una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerBolsillos';
   programa   = 'RBTPG614';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }];
-  outputCols = ['sdtInformacionBolsillos'];
   outputData = [{ Nombre: 'sdtInformacionBolsillos', Tipo: '[sBTInfRBolsillo](#sbtinfrbolsillo)', Comentarios: 'Listado de la informacion del bolsillo.' }];
-  errorCols  = ['30003', '30005', '30006'];
   errors     = [{ Codigo: '30003', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30005', Descripcion: 'OperacionUID no corresponde a CA.' }, { Codigo: '30006', Descripcion: 'La cuenta no existe o no se encuentra activa.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerBolsillos>
@@ -58,7 +54,8 @@ export class ObtenerBolsillosComponent {
 	  "Requerimiento": "1"
 	},
    "operacionUId": 9,
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerBolsillosResponse xmlns=http://uy.com.dlya.bantotal/BTSOA/>
          <Btinreq>
@@ -112,7 +109,7 @@ export class ObtenerBolsillosComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerBolsillosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "1", 
         "Usuario": "MINSTALADOR", 
@@ -163,8 +160,8 @@ export class ObtenerBolsillosComponent {
         "Canal": "BTDIGITAL", 
         "Hora": "15:10:52" 
     } 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado.' }, { Nombre: 'nombreProducto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'operacionBolsilloUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de bolsillo.' }, { Nombre: 'productoBolsilloId', Tipo: 'Short', Comentarios: 'Identificador unico del producto del bolsillo.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTInfRBolsillo', fields: [{ Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado.' }, { Nombre: 'nombreProducto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'operacionBolsilloUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de bolsillo.' }, { Nombre: 'productoBolsilloId', Tipo: 'Short', Comentarios: 'Identificador unico del producto del bolsillo.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }] }];
 }

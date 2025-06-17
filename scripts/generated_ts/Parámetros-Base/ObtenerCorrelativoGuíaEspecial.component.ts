@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCorrelativoGuiaEspecialComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Correlativo Guia Especial';
   description = `Metodo para obtener los datos de un correlativo de una determinada guia especial de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerCorrelativoGuiaEspecial';
   programa   = 'RBTPG051';
   scope      = 'Institucional';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['empresaId', 'codigo', 'correlativo1', 'correlativo2', 'correlativo3'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Codigo de empresa [Hidden].' }, { Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Codigo de la Guia de Procesos.' }, { Nombre: 'correlativo1', Tipo: 'Short', Comentarios: 'Correlativo 1.' }, { Nombre: 'correlativo2', Tipo: 'Short', Comentarios: 'Correlativo 2.' }, { Nombre: 'correlativo3', Tipo: 'Short', Comentarios: 'Correlativo 3.' }];
-  outputCols = ['sdtCorrelativo'];
   outputData = [{ Nombre: 'sdtCorrelativo', Tipo: '[sBTCorrelativoGuiaEspecial](#sbtcorrelativoguiaespecial)', Comentarios: 'Datos de la guia especial de proceso.' }];
-  errorCols  = ['30001', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio codigo de guia.' }, { Codigo: '40001', Descripcion: 'No existe el registro.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTParametrosBase.ObtenerCorrelativoGuiaEspecial>
@@ -63,7 +59,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	"correlativo1": "50",
 	"correlativo2": "539",
 	"correlativo3": ""
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTParametrosBase.ObtenerCorrelativoGuiaEspecialResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +94,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerCorrelativoGuiaEspecialResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
@@ -126,8 +123,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	  "Hora": "12:04:38",
 	  "Canal": "BTDIGITAL"
 	}
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'correlativo1', Tipo: 'Short', Comentarios: 'Correlativo 1.' }, { Nombre: 'correlativo2', Tipo: 'Short', Comentarios: 'Correlativo 2.' }, { Nombre: 'correlativo3', Tipo: 'Short', Comentarios: 'Correlativo 3.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'importeEspecifico1', Tipo: 'Double', Comentarios: 'Importe especifico 1.' }, { Nombre: 'importeEspecifico2', Tipo: 'Double', Comentarios: 'Importe especifico 2.' }, { Nombre: 'importeEspecifico3', Tipo: 'Double', Comentarios: 'Importe especifico 3.' }, { Nombre: 'valorEspecifico1', Tipo: 'Long', Comentarios: 'Valor especifico 1.' }, { Nombre: 'valorEspecifico2', Tipo: 'Long', Comentarios: 'Valor especifico 2.' }, { Nombre: 'valorEspecifico3', Tipo: 'Long', Comentarios: 'Valor especifico 3.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTCorrelativoGuiaEspecial', fields: [{ Nombre: 'correlativo1', Tipo: 'Short', Comentarios: 'Correlativo 1.' }, { Nombre: 'correlativo2', Tipo: 'Short', Comentarios: 'Correlativo 2.' }, { Nombre: 'correlativo3', Tipo: 'Short', Comentarios: 'Correlativo 3.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'importeEspecifico1', Tipo: 'Double', Comentarios: 'Importe especifico 1.' }, { Nombre: 'importeEspecifico2', Tipo: 'Double', Comentarios: 'Importe especifico 2.' }, { Nombre: 'importeEspecifico3', Tipo: 'Double', Comentarios: 'Importe especifico 3.' }, { Nombre: 'valorEspecifico1', Tipo: 'Long', Comentarios: 'Valor especifico 1.' }, { Nombre: 'valorEspecifico2', Tipo: 'Long', Comentarios: 'Valor especifico 2.' }, { Nombre: 'valorEspecifico3', Tipo: 'Long', Comentarios: 'Valor especifico 3.' }] }];
 }

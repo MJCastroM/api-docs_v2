@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPerfilComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Perfil';
   description = `Metodo para obtener los datos de la persona titular de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerPerfil';
   programa   = 'RBTPG002';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sCTPersona'];
   outputData = [{ Nombre: 'sCTPersona', Tipo: '[sCTPersona](#sctpersona)', Comentarios: 'Datos de cliente.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el Identificador.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPerfil>
@@ -58,7 +54,8 @@ export class ObtenerPerfilComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "clienteUId": 181
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPerfilResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -119,7 +116,7 @@ export class ObtenerPerfilComponent {
          </Btoutreq>
       </BTClientes.ObtenerPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -178,8 +175,8 @@ export class ObtenerPerfilComponent {
         "Hora": "16:34:42",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'actividad', Tipo: 'String', Comentarios: 'Actividad laboral.' }, { Nombre: 'antiguedadLaboral', Tipo: 'Short', Comentarios: 'Antiguedad laboral.' }, { Nombre: 'apellidos', Tipo: 'String', Comentarios: 'Apellidos.' }, { Nombre: 'celular', Tipo: 'String', Comentarios: 'Celular.' }, { Nombre: 'documento', Tipo: '[sCTDocumento](#sctdocumento)', Comentarios: 'Datos del documento.' }, { Nombre: 'domicilio', Tipo: '[sCTDomicilio](#sctdomicilio)', Comentarios: 'Datos de domicilio.' }, { Nombre: 'email', Tipo: 'String', Comentarios: 'Corre electronico.' }, { Nombre: 'estadoCivil', Tipo: 'String', Comentarios: 'Estado civil.' }, { Nombre: 'fechaNacimiento', Tipo: 'Date', Comentarios: 'Fecha de nacimiento.' }, { Nombre: 'hijos', Tipo: 'Byte', Comentarios: 'Cantidad de hijos.' }, { Nombre: 'ingresoMensual', Tipo: 'Double', Comentarios: 'Ingreso mensual.' }, { Nombre: 'nacionalidad', Tipo: 'String', Comentarios: 'Nacionalidad.' }, { Nombre: 'nivelEducativo', Tipo: 'String', Comentarios: 'Nivel de educacion.' }, { Nombre: 'nombres', Tipo: 'String', Comentarios: 'Nombres.' }, { Nombre: 'ocupacion', Tipo: 'String', Comentarios: 'Ocupacion de la persona.' }, { Nombre: 'otrosIngresos', Tipo: 'Double', Comentarios: 'Otros ingresos.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'profesion', Tipo: 'String', Comentarios: 'Profesion.' }, { Nombre: 'sexo', Tipo: 'String', Comentarios: 'Sexo (M/F).' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono.' }, { Nombre: '### sCTDomicilio', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sCTDomicilio son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'barrio', Tipo: 'String', Comentarios: 'Barrio.' }, { Nombre: 'codPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'departamento', Tipo: 'String', Comentarios: 'Departamento del domicilio.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion.' }, { Nombre: 'latitud', Tipo: 'Double', Comentarios: 'Latitud del domicilio.' }, { Nombre: 'localidad', Tipo: 'String', Comentarios: 'Localidad del domicilio.' }, { Nombre: 'longitud', Tipo: 'Double', Comentarios: 'Longitud del domicilio.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Pais del domicilio.' }, { Nombre: 'propietario', Tipo: 'String', Comentarios: 'Propietario del domicilio.' }, { Nombre: 'zona', Tipo: 'String', Comentarios: 'Zona del domicilio.' }, { Nombre: '### sCTDocumento', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sCTDocumento son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'nombreTipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Pais del documento.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo del documento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sCTPersona', fields: [{ Nombre: 'actividad', Tipo: 'String', Comentarios: 'Actividad laboral.' }, { Nombre: 'antiguedadLaboral', Tipo: 'Short', Comentarios: 'Antiguedad laboral.' }, { Nombre: 'apellidos', Tipo: 'String', Comentarios: 'Apellidos.' }, { Nombre: 'celular', Tipo: 'String', Comentarios: 'Celular.' }, { Nombre: 'documento', Tipo: '[sCTDocumento](#sctdocumento)', Comentarios: 'Datos del documento.' }, { Nombre: 'domicilio', Tipo: '[sCTDomicilio](#sctdomicilio)', Comentarios: 'Datos de domicilio.' }, { Nombre: 'email', Tipo: 'String', Comentarios: 'Corre electronico.' }, { Nombre: 'estadoCivil', Tipo: 'String', Comentarios: 'Estado civil.' }, { Nombre: 'fechaNacimiento', Tipo: 'Date', Comentarios: 'Fecha de nacimiento.' }, { Nombre: 'hijos', Tipo: 'Byte', Comentarios: 'Cantidad de hijos.' }, { Nombre: 'ingresoMensual', Tipo: 'Double', Comentarios: 'Ingreso mensual.' }, { Nombre: 'nacionalidad', Tipo: 'String', Comentarios: 'Nacionalidad.' }, { Nombre: 'nivelEducativo', Tipo: 'String', Comentarios: 'Nivel de educacion.' }, { Nombre: 'nombres', Tipo: 'String', Comentarios: 'Nombres.' }, { Nombre: 'ocupacion', Tipo: 'String', Comentarios: 'Ocupacion de la persona.' }, { Nombre: 'otrosIngresos', Tipo: 'Double', Comentarios: 'Otros ingresos.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'profesion', Tipo: 'String', Comentarios: 'Profesion.' }, { Nombre: 'sexo', Tipo: 'String', Comentarios: 'Sexo (M/F).' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono.' }, { Nombre: '### sCTDomicilio', Tipo: '', Comentarios: '' }] }, { typeName: 'sCTDomicilio', fields: [{ Nombre: 'barrio', Tipo: 'String', Comentarios: 'Barrio.' }, { Nombre: 'codPostal', Tipo: 'String', Comentarios: 'Codigo postal.' }, { Nombre: 'departamento', Tipo: 'String', Comentarios: 'Departamento del domicilio.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion.' }, { Nombre: 'latitud', Tipo: 'Double', Comentarios: 'Latitud del domicilio.' }, { Nombre: 'localidad', Tipo: 'String', Comentarios: 'Localidad del domicilio.' }, { Nombre: 'longitud', Tipo: 'Double', Comentarios: 'Longitud del domicilio.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Pais del domicilio.' }, { Nombre: 'propietario', Tipo: 'String', Comentarios: 'Propietario del domicilio.' }, { Nombre: 'zona', Tipo: 'String', Comentarios: 'Zona del domicilio.' }, { Nombre: '### sCTDocumento', Tipo: '', Comentarios: '' }] }, { typeName: 'sCTDocumento', fields: [{ Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'nombreTipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Pais del documento.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo del documento.' }] }];
 }

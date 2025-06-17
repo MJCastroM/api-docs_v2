@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerSucursalesCajasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Sucursales Cajas';
   description = `Metodo para obtener porcentajes y listados de sucursales y cajas del sistema.`;
   pubName    = 'BTIndicadores.ObtenerSucursalesCajas';
   programa   = 'RBTPG705';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['totalSucursales', 'sucursalesCerradas', 'sucursalesAbiertas', 'porcentajeSucursalesC', 'porcentajeSucursalesA', 'listadoSucursalesC', 'listadoSucursalesA', 'totalCajas', 'cajasCerradas', 'cajasAbiertas', 'porcentajeCajasC', 'porcentajeCajasA', 'listadoCajasC', 'listadoCajasA'];
   outputData = [{ Nombre: 'totalSucursales', Tipo: 'Int', Comentarios: 'Numero total de sucursales.' }, { Nombre: 'sucursalesCerradas', Tipo: 'Int', Comentarios: 'Numero de sucursales cerradas.' }, { Nombre: 'sucursalesAbiertas', Tipo: 'Int', Comentarios: 'Numero de sucursales abiertas.' }, { Nombre: 'porcentajeSucursalesC', Tipo: 'Int', Comentarios: 'Porcentaje de sucursales cerradas.' }, { Nombre: 'porcentajeSucursalesA', Tipo: 'Int', Comentarios: 'Porcentaje de sucursales abiertas.' }, { Nombre: 'listadoSucursalesC', Tipo: '[sBTSucursal](#sbtsucursal)', Comentarios: 'Listado de sucursales cerradas.' }, { Nombre: 'listadoSucursalesA', Tipo: '[sBTSucursal](#sbtsucursal)', Comentarios: 'Listado de sucursales abiertas.' }, { Nombre: 'totalCajas', Tipo: 'Int', Comentarios: 'Numero total de cajas.' }, { Nombre: 'cajasCerradas', Tipo: 'Int', Comentarios: 'Numero de cajas cerradas.' }, { Nombre: 'cajasAbiertas', Tipo: 'Int', Comentarios: 'Numero de cajas abiertas.' }, { Nombre: 'porcentajeCajasC', Tipo: 'Int', Comentarios: 'Porcentaje de cajas cerradas.' }, { Nombre: 'porcentajeCajasA', Tipo: 'Int', Comentarios: 'Porcentaje de cajas abiertas.' }, { Nombre: 'listadoCajasC', Tipo: '[sBTCaja](#sbtcaja)', Comentarios: 'Listado de cajas cerradas.' }, { Nombre: 'listadoCajasA', Tipo: '[sBTCaja](#sbtcaja)', Comentarios: 'Listado de cajas abiertas.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerSucursalesCajas>
@@ -56,7 +52,8 @@ export class ObtenerSucursalesCajasComponent {
       "Usuario": "INSTALADOR",
       "Requerimiento": "?"
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerSucursalesCajasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerSucursalesCajasComponent {
          ...
       </BTIndicadores.ObtenerSucursalesCajasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -108,8 +105,8 @@ export class ObtenerSucursalesCajasComponent {
       ...
    },
    ...
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion de la sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Int', Comentarios: 'Latitud de la sucursal.' }, { Nombre: 'longitud', Tipo: 'Int', Comentarios: 'Longitud de la sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de la sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTCaja', Tipo: '', Comentarios: '' }, { Nombre: '### sBTCaja', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTCaja son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'indicador', Tipo: 'Int', Comentarios: 'Indicador de la caja.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la caja.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario de la caja.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion de la sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Int', Comentarios: 'Latitud de la sucursal.' }, { Nombre: 'longitud', Tipo: 'Int', Comentarios: 'Longitud de la sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de la sucursal.' }] }, { typeName: 'sBTCaja', fields: [{ Nombre: 'indicador', Tipo: 'Int', Comentarios: 'Indicador de la caja.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la caja.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario de la caja.' }] }];
 }

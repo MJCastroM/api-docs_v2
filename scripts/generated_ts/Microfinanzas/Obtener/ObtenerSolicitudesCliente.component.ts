@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerSolicitudesClienteComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Solicitudes Cliente';
   description = `Metodo para obtener un listado de las solicitudes activas de prestamos de un cliente.`;
   pubName    = 'BTMicrofinanzas.ObtenerSolicitudesCliente';
   programa   = 'RBTPG416';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sdtDatosInstancias'];
   outputData = [{ Nombre: 'sdtDatosInstancias', Tipo: '[sBTDatosInstancia](#sbtdatosinstancia)', Comentarios: 'Listado de solicitudes.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerSolicitudesCliente>
@@ -58,7 +54,8 @@ export class ObtenerSolicitudesClienteComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "clienteUId": "3"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerSolicitudesClienteResponse>
          <Btinreq>
@@ -96,7 +93,7 @@ export class ObtenerSolicitudesClienteComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerSolicitudesClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -131,8 +128,8 @@ export class ObtenerSolicitudesClienteComponent {
       "Numero": "245",
       "Estado": "OK"
    }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'asesor', Tipo: 'String', Comentarios: 'Usuario asesor del credito.' }, { Nombre: 'capital', Tipo: 'Decimal', Comentarios: 'Importe capital del credito.' }, { Nombre: 'instancia', Tipo: 'Long', Comentarios: 'Numero de instancia WorkFlow.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'tarea', Tipo: 'String', Comentarios: 'Tarea en la que se encuentra la instancia.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosInstancia', fields: [{ Nombre: 'asesor', Tipo: 'String', Comentarios: 'Usuario asesor del credito.' }, { Nombre: 'capital', Tipo: 'Decimal', Comentarios: 'Importe capital del credito.' }, { Nombre: 'instancia', Tipo: 'Long', Comentarios: 'Numero de instancia WorkFlow.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'tarea', Tipo: 'String', Comentarios: 'Tarea en la que se encuentra la instancia.' }] }];
 }

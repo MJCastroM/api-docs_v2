@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTarjetaHabienteComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tarjeta Habiente';
   description = `Metodo para obtener el habiente de una tarjeta.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetaHabiente';
   programa   = 'RBTPG357';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tarjetaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta de debito.' }];
-  outputCols = ['sdtTarjetaHabiente'];
   outputData = [{ Nombre: 'sdtTarjetaHabiente', Tipo: '[sBTTitularTarjeta](#sbttitulartarjeta)', Comentarios: 'Datos del titular de la tarjeta.' }];
-  errorCols  = ['30001', '40001', '40002', '40003', '40004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el Identificador de tarjeta.' }, { Codigo: '40001', Descripcion: 'No existe registro para el numero de tarjeta.' }, { Codigo: '40002', Descripcion: 'No existe registro de pais.' }, { Codigo: '40003', Descripcion: 'No existe registro para el tipo de documento de la persona.' }, { Codigo: '40004', Descripcion: 'No existe registro para el titular de la tarjeta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerTarjetaHabiente>
@@ -58,7 +54,8 @@ export class ObtenerTarjetaHabienteComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"tarjetaUId": "2000001942",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerTarjetaHabienteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +84,7 @@ export class ObtenerTarjetaHabienteComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTarjetaHabienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -111,8 +108,8 @@ export class ObtenerTarjetaHabienteComponent {
         "Hora": "17:47:27",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Pais del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de la persona.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo de documento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTitularTarjeta', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Numero de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Pais del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de la persona.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo de documento.' }] }];
 }

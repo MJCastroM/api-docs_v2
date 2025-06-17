@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class RegistrarOrdendeNoPagodeChequesComponent {
-  // Cabecera e info-card
   pageTitle = 'Registrar Orden de No Pago de Cheques';
   description = `Metodo para registrar una orden de no pago de cheques.`;
   pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques';
   programa   = 'RBTPG143';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'chequeraId', 'tipoDenunciante', 'tipoDenuncia', 'motivoDenuncia', 'sdtCheques'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de subcuenta.' }, { Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de solicitud de chequera.' }, { Nombre: 'tipoDenunciante', Tipo: 'String', Comentarios: 'Tipo de denunciante.' }, { Nombre: 'tipoDenuncia', Tipo: 'String', Comentarios: 'Tipo de denuncia.' }, { Nombre: 'motivoDenuncia', Tipo: 'String', Comentarios: 'Motivo de la denuncia.' }, { Nombre: 'sdtCheques', Tipo: '[sBTCheque](#sbtcheque)', Comentarios: 'Listado de cheques.' }];
-  outputCols = ['numeroDenuncia'];
   outputData = [{ Nombre: 'numeroDenuncia', Tipo: 'Long', Comentarios: 'Identificador de la denuncia.' }];
-  errorCols  = ['30001', '30002', '30003', '30011', '40001', '40002', '40003', '40004', '40005', '40006', '40008', '40013', '40014', '40015', '40016'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No se recibio identificador de chequera.' }, { Codigo: '30003', Descripcion: 'Debe ingresar el numero del cheque.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion para el identificador recibido.' }, { Codigo: '40001', Descripcion: 'No existe la chequera ingresada.' }, { Codigo: '40002', Descripcion: 'No existe la operacion indicada.' }, { Codigo: '40003', Descripcion: 'La chequera no pertenece a la operacion.' }, { Codigo: '40004', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40005', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40006', Descripcion: 'Cuenta Cerrada, solo se permite consultas.' }, { Codigo: '40008', Descripcion: 'Los siguientes cheques no pertenecen a la chequera: [Numeros de cheques].' }, { Codigo: '40013', Descripcion: 'El cheque [Numero de cheque] ya esta pago.' }, { Codigo: '40014', Descripcion: 'El cheque [Numero de cheque] ya tiene O.N.P.' }, { Codigo: '40015', Descripcion: 'El cheque [Numero de cheque] esta rechazado.' }, { Codigo: '40016', Descripcion: 'El cheque [Numero de cheque] esta certificado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques>
@@ -80,7 +76,8 @@ export class RegistrarOrdendeNoPagodeChequesComponent {
 		"descripcion": "Prueba"
 	  }
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -102,7 +99,7 @@ export class RegistrarOrdendeNoPagodeChequesComponent {
          </Btoutreq>
       </BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -120,8 +117,8 @@ export class RegistrarOrdendeNoPagodeChequesComponent {
 	  "Numero": "7899",
 	  "Estado": "NEG_ERROR"
 	}
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'estado', Tipo: 'Short', Comentarios: 'Estado del cheque.' }, { Nombre: 'numero', Tipo: 'Int', Comentarios: 'Numero de cheque.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTCheque', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'estado', Tipo: 'Short', Comentarios: 'Estado del cheque.' }, { Nombre: 'numero', Tipo: 'Int', Comentarios: 'Numero de cheque.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDestinosCreditoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Destinos Credito';
   description = `Metodo para obtener los destinos posibles para un credito.`;
   pubName    = 'BTMicrofinanzas.ObtenerDestinosCredito';
   programa   = 'RBTPG415';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['solicitudUId', 'productoUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador unico de solicitud.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }];
-  outputCols = ['sdtDestinosCredito'];
   outputData = [{ Nombre: 'sdtDestinosCredito', Tipo: '[sBTDestinoCredito](#sbtdestinocredito)', Comentarios: 'Listado de destinos de credito.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerDestinosCredito>
@@ -60,7 +56,8 @@ export class ObtenerDestinosCreditoComponent {
 	},
     "solicitudUId": "10896",
     "productoUId": "23"
- }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerDestinosCreditoResponse>
          <Btinreq>
@@ -116,7 +113,7 @@ export class ObtenerDestinosCreditoComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerDestinosCreditoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -169,8 +166,8 @@ export class ObtenerDestinosCreditoComponent {
         "Numero": "330",
         "Estado": "OK"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de destino de credito.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de destino de credito.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDestinoCredito', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de destino de credito.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de destino de credito.' }] }];
 }

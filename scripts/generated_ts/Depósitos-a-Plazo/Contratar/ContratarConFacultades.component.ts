@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ContratarconFacultadesComponent {
-  // Cabecera e info-card
   pageTitle = 'Contratar con Facultades';
   description = `Metodo para contratar un deposito a plazo fijo dando de alta las facultades correspondientes.`;
   pubName    = 'BTDepositosAPlazo.ContratarConFacultades';
   programa   = 'RBTPG573';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['simulacionUId', 'clienteUId', 'operacionUIdOrigen', 'operacionUIdDestino', 'instruccionAlVencimiento', 'controlaMismoCliente', 'tipoIntegracionCuenta'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la simulacion.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de donde se retira el monto del DPF.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de acreditacion (Capital y/o intereses segun instruccion).' }, { Nombre: 'instruccionAlVencimiento', Tipo: 'Short', Comentarios: 'Identificador de instruccion al vencimiento.' }, { Nombre: 'controlaMismoCliente', Tipo: 'String', Comentarios: '¿Controla correspondencia de cuenta de debito contra cuenta cliente originante? [Hidden: Valores 'S'/'N'].' }, { Nombre: 'tipoIntegracionCuenta', Tipo: 'String', Comentarios: 'Tipo de integracion de la cuenta (Ej: Conjunta, Individual).' }];
-  outputCols = ['operacionUId', 'transaccionUId'];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'transaccionUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }];
-  errorCols  = ['30001', '30002', '30003', '30007', '30008', '30010', '30012', '30014'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la Cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de la Simulacion.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de la operacion a utilizar para el debito.' }, { Codigo: '30007', Descripcion: 'La simulacion ya no se encuentra habilitada para su contratacion.' }, { Codigo: '30008', Descripcion: 'La simulacion ingresada no pertenece al cliente ingresado.' }, { Codigo: '30010', Descripcion: 'La operacion del debito no pertenece al cliente ingresado.' }, { Codigo: '30012', Descripcion: 'La operacion de acreditacion no pertenece al cliente ingresado.' }, { Codigo: '30014', Descripcion: 'Error de configuracion: No se definio control de CAC.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ContratarConFacultades>
@@ -70,7 +66,8 @@ export class ContratarconFacultadesComponent {
     "instruccionAlVencimiento": "1",
     "controlaMismoCliente": "N",
     "tipoIntegracionCuenta": "A"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ContratarConFacultadesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -94,7 +91,7 @@ export class ContratarconFacultadesComponent {
          </Btoutreq>
       </BTDepositosAPlazo.ContratarConFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
   "Btinreq": {
       "Device": "FC",
       "Usuario": "INSTALADOR",
@@ -114,8 +111,8 @@ export class ContratarconFacultadesComponent {
     "Canal": "BTDIGITAL",
     "Hora": "17:50:29"
   },
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

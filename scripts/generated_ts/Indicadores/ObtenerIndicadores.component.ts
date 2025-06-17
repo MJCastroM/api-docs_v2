@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerIndicadoresComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Indicadores';
   description = `Metodo para obtener los indicadores por agrupador.`;
   pubName    = 'BTIndicadores.ObtenerIndicadores';
   programa   = 'RBTPG702';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['agrupadorId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'agrupadorId', Tipo: 'Int', Comentarios: 'Identificador de agrupador.' }];
-  outputCols = ['sdtIndicadores'];
   outputData = [{ Nombre: 'sdtIndicadores', Tipo: '[sBTIndicador](#sbtindicador)', Comentarios: 'Listado de indicadores.' }];
-  errorCols  = ['40001'];
   errors     = [{ Codigo: '40001', Descripcion: 'No existen Indicadores.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerIndicadores>
@@ -58,7 +54,8 @@ export class ObtenerIndicadoresComponent {
       "Requerimiento": "?"
    },
    "agrupadorId": 100
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerIndicadoresResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +87,7 @@ export class ObtenerIndicadoresComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerIndicadoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -120,8 +117,8 @@ export class ObtenerIndicadoresComponent {
       "Canal": "BTDIGITAL",
       "Hora": "14:45:13"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Identificador de indicador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del indicador.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTIndicador', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Identificador de indicador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del indicador.' }] }];
 }

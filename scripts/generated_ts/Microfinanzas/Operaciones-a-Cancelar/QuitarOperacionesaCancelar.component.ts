@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class QuitarOperacionesaCancelarComponent {
-  // Cabecera e info-card
   pageTitle = 'Quitar Operaciones a Cancelar';
   description = `Metodo para quitar operaciones a cancelar para una solicitud de creditos.`;
   pubName    = 'BTMicrofinanzas.QuitarOperacionesACancelar';
   programa   = 'RBTPG363';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['solicitudUId', 'clienteUId', 'sdtOperaciones'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente' }, { Nombre: 'sdtOperaciones', Tipo: '[sBTOperacionId](#sbtoperacionid)', Comentarios: 'Listado de operaciones' }];
-  outputCols = ['montoCancelacion'];
   outputData = [{ Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelacion de la operacion' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '40001', '40002', '40004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de solicitud' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de cliente' }, { Codigo: '30003', Descripcion: 'No se recibio ninguna operacion para cancelar' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de identificador]' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion para el identificador: [Numero de identificador]' }, { Codigo: '40001', Descripcion: 'La solicitud ingresada no existe' }, { Codigo: '40002', Descripcion: 'El cliente ingresado no corresponde con la solicitud' }, { Codigo: '40004', Descripcion: 'No existe registro para la operacion ingresada' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.QuitarOparacionesACancelar>
@@ -70,7 +66,8 @@ export class QuitarOperacionesaCancelarComponent {
 		"operacionUId": "1725"
       },
    },
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.QuitarOparacionesACancelarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +90,7 @@ export class QuitarOperacionesaCancelarComponent {
          </Btoutreq>
       </BTMicrofinanzas.QuitarOparacionesACancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
    "Btinreq": {
       "Device": "GP",
       "Usuario": "MINSTALADOR",
@@ -113,8 +110,8 @@ export class QuitarOperacionesaCancelarComponent {
       "Numero": "11003",
       "Estado": "OK"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'identificador unico de operacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTOperacionId', fields: [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'identificador unico de operacion.' }] }];
 }

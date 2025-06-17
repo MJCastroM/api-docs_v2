@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AgregarTextoAsientoComponent {
-  // Cabecera e info-card
   pageTitle = 'Agregar Texto Asiento';
   description = `Metodo para agregar un texto a un asiento.`;
   pubName    = 'BTContabilidad.AgregarTextoAsiento';
   programa   = 'RBTPG389';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['movimientoUId', 'textoMovimiento'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico del asiento.' }, { Nombre: 'textoMovimiento', Tipo: '[sBTTextoMovimiento](#sbttextomovimiento)', Comentarios: 'Datos del texto del movimiento.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '50001', '50002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de movimiento.' }, { Codigo: '50001', Descripcion: 'El codigo de texto ingresado no existe.' }, { Codigo: '50002', Descripcion: 'Ya existe el texto ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.AgregarTextoAsiento>
@@ -70,7 +66,8 @@ export class AgregarTextoAsientoComponent {
         "renglon": "1",
         "texto": "Prueba",
     }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.AgregarTextoAsientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +89,7 @@ export class AgregarTextoAsientoComponent {
          </Btoutreq>
       </BTContabilidad.AgregarTextoAsientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
@@ -111,8 +108,8 @@ export class AgregarTextoAsientoComponent {
         "Hora": "15:35:54",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo del texto.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de texto.' }, { Nombre: 'renglon', Tipo: 'Short', Comentarios: 'Renglon.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto asociado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTextoMovimiento', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo del texto.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de texto.' }, { Nombre: 'renglon', Tipo: 'Short', Comentarios: 'Renglon.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto asociado.' }] }];
 }

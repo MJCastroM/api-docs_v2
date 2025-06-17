@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPizarraporModuloComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Pizarra por Modulo';
   description = `Metodo para obtener la pizarra generica por modulo.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPizarraPorModulo';
   programa   = 'RBTPG294';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['modulo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Modulo.' }];
-  outputCols = ['sdtPizarras'];
   outputData = [{ Nombre: 'sdtPizarras', Tipo: '[sBTPizarra](#sbtpizarra)', Comentarios: 'Listado de pizarras.' }];
-  errorCols  = ['40001'];
   errors     = [{ Codigo: '40001', Descripcion: 'No se encontraron pizarras de tasas para el modulo indicado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>
@@ -57,7 +53,8 @@ export class ObtenerPizarraporModuloComponent {
 	  "bts:Token": "480647346F955E77534D3E02",
 	  "bts:Device": "AC"
 	},
-	"modulo": 20,` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	"modulo": 20,` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +82,7 @@ export class ObtenerPizarraporModuloComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -109,8 +106,8 @@ export class ObtenerPizarraporModuloComponent {
 	  "Numero": "8033",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

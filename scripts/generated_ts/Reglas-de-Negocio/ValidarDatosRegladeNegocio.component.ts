@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ValidarDatosRegladeNegocioComponent {
-  // Cabecera e info-card
   pageTitle = 'Validar Datos Regla de Negocio';
   description = `Metodo para validar los datos de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ValidarDatosReglaNegocio';
   programa   = 'RBTPGR56';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['reglaId', 'sdtVariables'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'reglaId', Tipo: 'Long', Comentarios: 'Codigo de regla de negocio.' }, { Nombre: 'sdtVariables', Tipo: '[sBTVariable](#sbtvariable)', Comentarios: 'Listado de variables.' }];
-  outputCols = ['resultado', 'sdtRetornos', 'cantidadResultados'];
   outputData = [{ Nombre: 'resultado', Tipo: 'String', Comentarios: 'Resultado de la evaluacion.' }, { Nombre: 'sdtRetornos', Tipo: '[sBTRetorno](#sbtretorno)', Comentarios: 'Listado de retornos.' }, { Nombre: 'cantidadResultados', Tipo: 'Long', Comentarios: 'Cantidad de resultados.' }];
-  errorCols  = ['1011050', '40001'];
   errors     = [{ Codigo: '1011050', Descripcion: 'No se recibio ID de Regla.' }, { Codigo: '40001', Descripcion: 'Error de Parametrizacion' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTReglasNegocio.ValidarDatosReglaNegocio>
@@ -70,7 +66,8 @@ export class ValidarDatosRegladeNegocioComponent {
             "nombre": "CHECKAUX2"
         },
     },
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTReglasNegocio.ValidarDatosReglaNegocioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -99,7 +96,7 @@ export class ValidarDatosRegladeNegocioComponent {
          </Btoutreq>
       </BTReglasNegocio.ValidarDatosReglaNegocioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Device": "GP", 
         "Usuario": "MINSTALADOR", 
@@ -125,8 +122,8 @@ export class ValidarDatosRegladeNegocioComponent {
         "Hora": "12:28:57", 
         "Canal": "BTDIGITAL" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de variable.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de variable.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTRetorno', Tipo: '', Comentarios: '' }, { Nombre: '### sBTRetorno', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTRetorno son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'retorno', Tipo: 'String', Comentarios: 'Retorno de la evaluacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTVariable', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de variable.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de variable.' }] }, { typeName: 'sBTRetorno', fields: [{ Nombre: 'retorno', Tipo: 'String', Comentarios: 'Retorno de la evaluacion.' }] }];
 }

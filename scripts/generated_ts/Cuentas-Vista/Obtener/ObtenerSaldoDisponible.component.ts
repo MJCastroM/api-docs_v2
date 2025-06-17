@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerSaldoDisponibleComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Saldo Disponible';
   description = `Metodo para obtener el total de saldo disponible de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldoDisponible';
   programa   = 'RBTPG245';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['estado', 'saldoDisponible', 'moneda'];
   outputData = [{ Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado de la operacion.' }, { Nombre: 'saldoDisponible', Tipo: 'Double', Comentarios: 'Saldo disponible de la operacion.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Signo de la moneda de la operacion.' }];
-  errorCols  = ['30001', '30002', '30101'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la operacion.' }, { Codigo: '30002', Descripcion: 'La operacion ingresada no corresponde a una cuenta vista.' }, { Codigo: '30101', Descripcion: 'No se recupero la operacion para el identificador recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerSaldoDisponible>
@@ -58,7 +54,8 @@ export class ObtenerSaldoDisponibleComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"operacionUId": "1"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerSaldoDisponibleResponse>
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerSaldoDisponibleComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerSaldoDisponibleResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -103,8 +100,8 @@ export class ObtenerSaldoDisponibleComponent {
 	  "Canal": "BTDIGITAL",
 	  "Hora": "14:52:21"
 	}
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

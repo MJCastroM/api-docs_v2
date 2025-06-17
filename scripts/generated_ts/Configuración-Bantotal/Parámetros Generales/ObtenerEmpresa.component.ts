@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEmpresaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Empresa';
   description = `Metodo para obtener informacion de la empresa.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEmpresa';
   programa   = 'RBTPG320';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtEmpresa'];
   outputData = [{ Nombre: 'sdtEmpresa', Tipo: '[sBTEmpresa](#sbtempresa)', Comentarios: 'Datos de la empresa.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerEmpresa>
@@ -56,7 +52,8 @@ export class ObtenerEmpresaComponent {
 	  "bts:Token": "558273287F955E77534D3E02",
 	  "bts:Device": "AC"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerEmpresaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -103,7 +100,7 @@ export class ObtenerEmpresaComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEmpresaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Device": "AC",
 	  "Usuario": "BANTOTAL",
@@ -148,8 +145,8 @@ export class ObtenerEmpresaComponent {
 	  "Numero": "8025",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'casaCentral', Tipo: '[sBTSucursal](#sbtsucursal)', Comentarios: 'Datos sobre la sucursal indicada como casa central.' }, { Nombre: 'fechaApertura', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaBalance', Tipo: 'Date', Comentarios: 'Fecha de balance.' }, { Nombre: 'fechaCierre', Tipo: 'Date', Comentarios: 'Fecha de cierre.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de la empresa.' }, { Nombre: 'monedaDolar', Tipo: '[sBTMoneda](#sbtmoneda)', Comentarios: 'Codigo moneda dolar.' }, { Nombre: 'monedaNacional', Tipo: '[sBTMoneda](#sbtmoneda)', Comentarios: 'Codigo moneda nacional.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la empresa.' }, { Nombre: '### sBTSucursal', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTSucursal son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion de sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Long', Comentarios: 'Latitud de sucursal.' }, { Nombre: 'longitud', Tipo: 'Long', Comentarios: 'Longitud de sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de sucursal.' }, { Nombre: '### sBTMoneda', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTMoneda son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de moneda.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEmpresa', fields: [{ Nombre: 'casaCentral', Tipo: '[sBTSucursal](#sbtsucursal)', Comentarios: 'Datos sobre la sucursal indicada como casa central.' }, { Nombre: 'fechaApertura', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaBalance', Tipo: 'Date', Comentarios: 'Fecha de balance.' }, { Nombre: 'fechaCierre', Tipo: 'Date', Comentarios: 'Fecha de cierre.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de la empresa.' }, { Nombre: 'monedaDolar', Tipo: '[sBTMoneda](#sbtmoneda)', Comentarios: 'Codigo moneda dolar.' }, { Nombre: 'monedaNacional', Tipo: '[sBTMoneda](#sbtmoneda)', Comentarios: 'Codigo moneda nacional.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la empresa.' }, { Nombre: '### sBTSucursal', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Direccion de sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Long', Comentarios: 'Latitud de sucursal.' }, { Nombre: 'longitud', Tipo: 'Long', Comentarios: 'Longitud de sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Telefono de sucursal.' }, { Nombre: '### sBTMoneda', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTMoneda', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de moneda.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Simbolo de moneda.' }] }];
 }

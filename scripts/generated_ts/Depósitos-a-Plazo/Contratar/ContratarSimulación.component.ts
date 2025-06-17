@@ -9,28 +9,36 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ContratarSimulacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Contratar Simulacion';
   description = `Metodo para contratar un deposito a plazo fijo a partir de una simulacion existente.`;
   pubName    = 'BTDepositoAPlazo.ContratarSimulacion';
   programa   = 'RBTPG457';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'simulacionId', 'instruccionVTO', 'cuentaUIdDestinoVTO', 'InstruccionPP', 'cuentaUIdDestinoPP', 'cuentaUIdDebito', 'sdtDatosExtendidos'];
+  hasBackendConfig  = true;
+  backendText       = `Para configurar los productos validos, se debe agregar un registro en la guia especial 70101 para cada producto de la siguiente manera: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | Modulo. 
+Correlativo 2 | Tipo de operacion (El valor 999 indica todos los tipos de operacion). 
+Correlativo 3 | Valor incremental. 
+Valor especifico 1 | Moneda (El valor 9999 indica todas las monedas). 
+Valor especifico 2 | Papel (El valor 999999 indica todos los papeles). 
+Valor especifico 3 | Codigo de instruccion a habilitar. 
+Importe especifico 1 | Tipo de deposito (1- Deposito al vencimiento, 2- Pago periodico de intereses). 
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador unico de la simulacion.' }, { Nombre: 'instruccionVTO', Tipo: 'Short', Comentarios: 'Identificador de la instruccion al vencimiento' }, { Nombre: 'cuentaUIdDestinoVTO', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de la cuenta destino al vencimiento.' }, { Nombre: 'InstruccionPP', Tipo: 'Long', Comentarios: 'Identificador de la instruccion de pago periodico.' }, { Nombre: 'cuentaUIdDestinoPP', Tipo: 'Short', Comentarios: 'Identificador unico de la operacion de la cuenta destino del pago periodico.' }, { Nombre: 'cuentaUIdDebito', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de la cuenta de debito.' }, { Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)' }];
-  outputCols = ['sdtDatosExtendidos', 'operacionUId', 'movimientoUId'];
   outputData = [{ Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento.' }];
-  errorCols  = ['30001', '30002', '30003', '30005', '30007', '30010', '30011', '30012', '30013', '30015', '30016', '30017', '30020', '30021', '30100'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de la simulacion.' }, { Codigo: '30003', Descripcion: 'No se recibio la instruccion de acreditacion al vencimiento.' }, { Codigo: '30005', Descripcion: 'No se recibio la instruccion de acreditacion periodica.' }, { Codigo: '30007', Descripcion: 'No se recibio el identificador de cuenta de debito.' }, { Codigo: '30010', Descripcion: 'No se recuperaron datos para el identificador de cliente: [Numero de identificador].' }, { Codigo: '30011', Descripcion: 'No se recuperaron datos para el identificador de cuenta de acreditacion al vencimiento: [Numero de identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperaron datos para el identificador de cuenta de acreditacion periodica: [Numero de identificador].' }, { Codigo: '30013', Descripcion: 'No se recuperaron datos para el identificador de cuenta de debito: [Numero de identificador].' }, { Codigo: '30015', Descripcion: 'La simulacion no esta disponible para su contratacion.' }, { Codigo: '30016', Descripcion: 'La simulacion no se encuentra vigente para su contratacion.' }, { Codigo: '30017', Descripcion: 'La simulacion no corresponde al cliente.' }, { Codigo: '30020', Descripcion: 'Ocurrio un error al generar el Identificador de movimiento.' }, { Codigo: '30021', Descripcion: 'Ocurrio un error al generar el Identificador de operacion de deposito.' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ContratarSimulacion>
@@ -72,7 +80,8 @@ export class ContratarSimulacionComponent {
         "cuentaUIdDestinoPP": 10120,
         "cuentaUIdDebito": 10120,
         "sBTDatosExtendidos": ""
-      }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ContratarSimulacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +106,7 @@ export class ContratarSimulacionComponent {
          </Btoutreq>
       </BTDepositosAPlazo.ContratarSimulacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,
@@ -118,8 +127,8 @@ export class ContratarSimulacionComponent {
           "Numero": 507,
           "Estado": "OK"
         }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Clave del dato extendido.' }, { Nombre: 'lista', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Lista de datos.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de dato extendido.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de dato extendido.' }, { Nombre: '### sBTDatoLista', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de informacion adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de informacion adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatoExtendido', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Clave del dato extendido.' }, { Nombre: 'lista', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Lista de datos.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de dato extendido.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de dato extendido.' }, { Nombre: '### sBTDatoLista', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de informacion adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de informacion adicional.' }] }];
 }

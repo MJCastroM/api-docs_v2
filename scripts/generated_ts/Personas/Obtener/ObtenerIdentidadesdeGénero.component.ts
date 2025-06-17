@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerIdentidadesdeGeneroComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Identidades de Genero';
   description = `Metodo para obtener un listado de las identidades de genero ingresadas en el sistema.`;
   pubName    = 'BTPersonas.ObtenerIdentidadesDeGenero';
   programa   = 'RBTPG380';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtIdentidadesDeGenero'];
   outputData = [{ Nombre: 'sdtIdentidadesDeGenero', Tipo: '[sBTIdentidadDeGenero](#sbtidentidaddegenero)', Comentarios: 'Listado de identidades de genero.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerIdentidadesDeGenero>
@@ -51,7 +47,8 @@ export class ObtenerIdentidadesdeGeneroComponent {
          "Token": "963643292CD285A89A23FBEE",
          "Device": "AV"
       }
-}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerIdentidadesDeGeneroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +80,7 @@ export class ObtenerIdentidadesdeGeneroComponent {
          </Btoutreq>
       </BTPersonas.ObtenerIdentidadesDeGeneroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "1",
@@ -115,8 +112,8 @@ export class ObtenerIdentidadesdeGeneroComponent {
         "Numero": 8693,
         "Estado": "OK"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de identidad de genero.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de identidad de genero.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [];
 }

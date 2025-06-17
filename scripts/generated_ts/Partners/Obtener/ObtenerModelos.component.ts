@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerModelosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Modelos';
   description = `Metodo para retornar los modelos de una marca.`;
   pubName    = 'BTPartners.ObtenerModelos';
   programa   = 'RBTPNV04';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sdtPartner', 'marcaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'marcaUId', Tipo: 'Long', Comentarios: 'Identificador de la marca.' }];
-  outputCols = ['sdtModelos'];
   outputData = [{ Nombre: 'sdtModelos', Tipo: '[sBTModelo](#sbtmodelo)', Comentarios: 'Listado de los modelos de una marca.' }];
-  errorCols  = ['30001', '30002', '30003', '30012', '30013'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio Partner ni canal.' }, { Codigo: '30002', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30003', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30012', Descripcion: 'No se recibio punto de venta.' }, { Codigo: '30013', Descripcion: 'No se recibio vendedor.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPartners.ObtenerModelos>
@@ -68,7 +64,8 @@ export class ObtenerModelosComponent {
           "partnerUId": 1
    },
    "marcaUId": 1
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ObtenerModelosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -102,7 +99,7 @@ export class ObtenerModelosComponent {
          </Btoutreq>
       </BTPartners.ObtenerModelosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",
@@ -132,8 +129,8 @@ export class ObtenerModelosComponent {
       "Canal": "BTDIGITAL",
       "Hora": "17:08:56"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTModelo', Tipo: '', Comentarios: '' }, { Nombre: '### sBTModelo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTModelo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'carroceria', Tipo: 'String', Comentarios: 'Carroceria.' }, { Nombre: 'carroceriaId', Tipo: 'Short', Comentarios: 'Identificador de la carroceria.' }, { Nombre: 'gpsObligatorio', Tipo: 'String', Comentarios: '¿Es el GPS obligatorio? (S/N)' }, { Nombre: 'marcaUId', Tipo: 'Long', Comentarios: 'Identificador de la marca.' }, { Nombre: 'modeloUId', Tipo: 'Long', Comentarios: 'Identificador del modelo.' }, { Nombre: 'nombreModelo', Tipo: 'String', Comentarios: 'Nombre del modelo.' }, { Nombre: 'tipoVehiculo', Tipo: 'String', Comentarios: 'Tipo de vehiculo.' }, { Nombre: 'tipoVehiculoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de vehiculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }, { typeName: 'sBTModelo', fields: [{ Nombre: 'carroceria', Tipo: 'String', Comentarios: 'Carroceria.' }, { Nombre: 'carroceriaId', Tipo: 'Short', Comentarios: 'Identificador de la carroceria.' }, { Nombre: 'gpsObligatorio', Tipo: 'String', Comentarios: '¿Es el GPS obligatorio? (S/N)' }, { Nombre: 'marcaUId', Tipo: 'Long', Comentarios: 'Identificador de la marca.' }, { Nombre: 'modeloUId', Tipo: 'Long', Comentarios: 'Identificador del modelo.' }, { Nombre: 'nombreModelo', Tipo: 'String', Comentarios: 'Nombre del modelo.' }, { Nombre: 'tipoVehiculo', Tipo: 'String', Comentarios: 'Tipo de vehiculo.' }, { Nombre: 'tipoVehiculoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de vehiculo.' }] }];
 }

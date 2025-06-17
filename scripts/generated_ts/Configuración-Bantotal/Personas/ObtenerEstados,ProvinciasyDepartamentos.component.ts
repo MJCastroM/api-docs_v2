@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEstadosProvinciasyDepartamentosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Estados, Provincias y Departamentos';
   description = `Metodo para obtener un listado de los estados/provincias/departamentos ingresados en Bantotal para un determinado pais.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos';
   programa   = 'RBTPG043';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['pais'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'pais', Tipo: 'Short', Comentarios: 'Identificador de pais.' }];
-  outputCols = ['sdtEstados'];
   outputData = [{ Nombre: 'sdtEstados', Tipo: '[sBTEstado](#sbtestado)', Comentarios: 'Listado de estados.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos>
@@ -58,7 +54,8 @@ export class ObtenerEstadosProvinciasyDepartamentosComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
    "pais": 845
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -158,7 +155,7 @@ export class ObtenerEstadosProvinciasyDepartamentosComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -258,8 +255,8 @@ export class ObtenerEstadosProvinciasyDepartamentosComponent {
         "Hora": "18:05:18",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de estado.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de estado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEstado', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de estado.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de estado.' }] }];
 }

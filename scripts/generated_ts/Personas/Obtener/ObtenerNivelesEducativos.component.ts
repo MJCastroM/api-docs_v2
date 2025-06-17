@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerNivelesEducativosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Niveles Educativos';
   description = `Metodo para obtener un listado de los niveles educativos.`;
   pubName    = 'BTPersonas.ObtenerNivelesEducativos';
   programa   = 'RBTPG382';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtNivelesEducativos'];
   outputData = [{ Nombre: 'sdtNivelesEducativos', Tipo: '[sBTNivelEducativo](#sbtniveleducativo)', Comentarios: 'Listado de niveles educativos.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerNivelesEducativos>
@@ -43,7 +39,8 @@ export class ObtenerNivelesEducativosComponent {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerNivelesEducativos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, json: `` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerNivelesEducativosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +92,7 @@ export class ObtenerNivelesEducativosComponent {
          </Btoutreq>
       </BTPersonas.ObtenerNivelesEducativosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
@@ -146,8 +143,8 @@ export class ObtenerNivelesEducativosComponent {
         "Hora": "15:35:54",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de nivel educativo.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de nivel educativo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTNivelEducativo', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo de nivel educativo.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de nivel educativo.' }] }];
 }

@@ -9,28 +9,26 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SimularOfertasComponent {
-  // Cabecera e info-card
   pageTitle = 'Simular Ofertas';
   description = `Metodo para simular ofertas de prestamos.`;
   pubName    = 'BTPrestamos.SimularOfertas';
   programa   = 'RBTPG124';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'sdtSimulacion'];
+  hasBackendConfig  = true;
+  backendText       = `Si la opcion general de procesos 3281 se encuentra activada, el servicio considera la sucursal del usuario de conexion, caso contrario, simula con la sucursal de la cuenta cliente. 
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'sdtSimulacion', Tipo: '[sBTDatosSimulacion](#sbtdatossimulacion)', Comentarios: 'Datos necesarios para la simulacion.' }];
-  outputCols = ['simulacionUId', 'sdtOfertasPrestamo'];
   outputData = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la simulacion.' }, { Nombre: 'sdtOfertasPrestamo', Tipo: '[sBTOfertaPrestamo](#sbtofertaprestamo)', Comentarios: 'Coleccion de ofertas de prestamo.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recupero la cuenta para el Identificador: [Numero de Identificador].' }, { Codigo: '30004', Descripcion: 'El Identificador unico de Producto es incorrecto' }, { Codigo: '30005', Descripcion: 'No se recibio Lista de cuotas a simular.' }, { Codigo: '30006', Descripcion: 'No se recibio el Monto de Capital desde el origen.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.SimularOfertas>
@@ -80,7 +78,8 @@ export class SimularOfertasComponent {
 			}
 		}
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.SimularOfertasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -123,7 +122,7 @@ export class SimularOfertasComponent {
          </Btoutreq>
       </BTPrestamos.SimularOfertasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
         "Canal": "BTDIGITAL", 
         "Requerimiento": "", 
@@ -164,8 +163,8 @@ export class SimularOfertasComponent {
         "Numero": 6924, 
         "Estado": "OK" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cuotas', Tipo: '[sBTCuota](#sbtcuota)', Comentarios: 'Coleccion de cantidad de cuotas para simular.' }, { Nombre: 'fechaPrimerPago', Tipo: 'Date', Comentarios: 'Fecha de primer pago.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto del prestamo.' }, { Nombre: 'periodoCuotas', Tipo: 'Int', Comentarios: 'Periodo entre cuotas.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico del producto.' }, { Nombre: '### sBTCuota', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTCuota son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTOfertaPrestamo', Tipo: '', Comentarios: '' }, { Nombre: '### sBTOfertaPrestamo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTOfertaPrestamo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de las cuotas.' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del prestamo.' }, { Nombre: 'cft', Tipo: 'Double', Comentarios: 'CFT del prestamo.' }, { Nombre: 'fechaPrimerPago', Tipo: 'Date', Comentarios: 'Fecha de primer pago.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'otrosConceptos', Tipo: 'Double', Comentarios: 'Monto para otros conceptos.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo para el prestamo.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa del prestamo.' }, { Nombre: 'tea', Tipo: 'Double', Comentarios: 'TEA del prestamo.' }, { Nombre: 'totalAPagar', Tipo: 'Double', Comentarios: 'Total a pagar.' }, { Nombre: 'totalComisiones', Tipo: 'Double', Comentarios: 'Monto total para comisiones.' }, { Nombre: 'totalImpuestos', Tipo: 'Double', Comentarios: 'Monto total para impuestos.' }, { Nombre: 'totalIntereses', Tipo: 'Double', Comentarios: 'Monto total para intereses.' }, { Nombre: 'totalSeguros', Tipo: 'Double', Comentarios: 'Monto total para seguros.' }, { Nombre: 'valorCuota', Tipo: 'Double', Comentarios: 'Valor cuota.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosSimulacion', fields: [{ Nombre: 'cuotas', Tipo: '[sBTCuota](#sbtcuota)', Comentarios: 'Coleccion de cantidad de cuotas para simular.' }, { Nombre: 'fechaPrimerPago', Tipo: 'Date', Comentarios: 'Fecha de primer pago.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto del prestamo.' }, { Nombre: 'periodoCuotas', Tipo: 'Int', Comentarios: 'Periodo entre cuotas.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico del producto.' }, { Nombre: '### sBTCuota', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTCuota', fields: [{ Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }] }, { typeName: 'sBTOfertaPrestamo', fields: [{ Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de las cuotas.' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del prestamo.' }, { Nombre: 'cft', Tipo: 'Double', Comentarios: 'CFT del prestamo.' }, { Nombre: 'fechaPrimerPago', Tipo: 'Date', Comentarios: 'Fecha de primer pago.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'otrosConceptos', Tipo: 'Double', Comentarios: 'Monto para otros conceptos.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo para el prestamo.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa del prestamo.' }, { Nombre: 'tea', Tipo: 'Double', Comentarios: 'TEA del prestamo.' }, { Nombre: 'totalAPagar', Tipo: 'Double', Comentarios: 'Total a pagar.' }, { Nombre: 'totalComisiones', Tipo: 'Double', Comentarios: 'Monto total para comisiones.' }, { Nombre: 'totalImpuestos', Tipo: 'Double', Comentarios: 'Monto total para impuestos.' }, { Nombre: 'totalIntereses', Tipo: 'Double', Comentarios: 'Monto total para intereses.' }, { Nombre: 'totalSeguros', Tipo: 'Double', Comentarios: 'Monto total para seguros.' }, { Nombre: 'valorCuota', Tipo: 'Double', Comentarios: 'Valor cuota.' }] }];
 }

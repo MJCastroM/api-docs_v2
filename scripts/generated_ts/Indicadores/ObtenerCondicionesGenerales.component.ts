@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCondicionesGeneralesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Condiciones Generales';
   description = `Metodo para obtener las condiciones generales ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerCondicionesGenerales';
   programa   = 'RBTPG703';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtCondicionesGenerales'];
   outputData = [{ Nombre: 'sdtCondicionesGenerales', Tipo: '[sBTCondicionesGenerales](#sbtcondicionesgenerales)', Comentarios: 'Listado de las Condiciones Generales.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerCondicionesGenerales>
@@ -56,7 +52,8 @@ export class ObtenerCondicionesGeneralesComponent {
          "Usuario": "INSTALADOR",
          "Requerimiento": "?"
       }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerCondicionesGeneralesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -94,7 +91,7 @@ export class ObtenerCondicionesGeneralesComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerCondicionesGeneralesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -128,8 +125,8 @@ export class ObtenerCondicionesGeneralesComponent {
       "Canal": "BTDIGITAL",
       "Hora": "14:55:00"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cantidadPAE', Tipo: 'Int', Comentarios: 'Cantidad PAE.' }, { Nombre: 'cantidadReglas', Tipo: 'Int', Comentarios: 'Cantidad reglas.' }, { Nombre: 'debug', Tipo: 'String', Comentarios: 'Opcion debug.' }, { Nombre: 'empresasIguales', Tipo: 'String', Comentarios: 'Empresas iguales.' }, { Nombre: 'fechaApertura', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaAperturaCanales', Tipo: 'Date', Comentarios: 'Fecha de apertura de canales.' }, { Nombre: 'fechaCierre', Tipo: 'Date', Comentarios: 'Fecha de cierre.' }, { Nombre: 'fechaCierreCanales', Tipo: 'Date', Comentarios: 'Fecha de cierre de canales.' }, { Nombre: 'opcion7x24', Tipo: 'String', Comentarios: 'Opcion 7x24.' }, { Nombre: 'opcionPAE', Tipo: 'String', Comentarios: 'Opcion PAE.' }, { Nombre: 'opcionWorkFlow', Tipo: 'String', Comentarios: 'Opcion Workflow.' }, { Nombre: 'parametrosGeneralesWF', Tipo: 'String', Comentarios: 'Parametros Generales de Workflow.' }, { Nombre: 'periodo7x24', Tipo: 'String', Comentarios: 'Periodo 7x24.' }, { Nombre: 'reglasNegocio', Tipo: 'String', Comentarios: 'Opcion reglas de negocio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTCondicionesGenerales', fields: [{ Nombre: 'cantidadPAE', Tipo: 'Int', Comentarios: 'Cantidad PAE.' }, { Nombre: 'cantidadReglas', Tipo: 'Int', Comentarios: 'Cantidad reglas.' }, { Nombre: 'debug', Tipo: 'String', Comentarios: 'Opcion debug.' }, { Nombre: 'empresasIguales', Tipo: 'String', Comentarios: 'Empresas iguales.' }, { Nombre: 'fechaApertura', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaAperturaCanales', Tipo: 'Date', Comentarios: 'Fecha de apertura de canales.' }, { Nombre: 'fechaCierre', Tipo: 'Date', Comentarios: 'Fecha de cierre.' }, { Nombre: 'fechaCierreCanales', Tipo: 'Date', Comentarios: 'Fecha de cierre de canales.' }, { Nombre: 'opcion7x24', Tipo: 'String', Comentarios: 'Opcion 7x24.' }, { Nombre: 'opcionPAE', Tipo: 'String', Comentarios: 'Opcion PAE.' }, { Nombre: 'opcionWorkFlow', Tipo: 'String', Comentarios: 'Opcion Workflow.' }, { Nombre: 'parametrosGeneralesWF', Tipo: 'String', Comentarios: 'Parametros Generales de Workflow.' }, { Nombre: 'periodo7x24', Tipo: 'String', Comentarios: 'Periodo 7x24.' }, { Nombre: 'reglasNegocio', Tipo: 'String', Comentarios: 'Opcion reglas de negocio.' }] }];
 }

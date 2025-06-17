@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerItemsModeloComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Items Modelo';
   description = `Metodo para obtener los items de un determinado modelo PAE.`;
   pubName    = 'BTPAE.ObtenerItemsModelo';
   programa   = 'RBTPGP52';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['modeloId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'modeloId', Tipo: 'Short', Comentarios: 'Codigo de modelo.' }];
-  outputCols = ['sdtItems'];
   outputData = [{ Nombre: 'sdtItems', Tipo: '[sBTItemPAE](#sbtitempae)', Comentarios: 'Listado de items de modelo PAE.' }];
-  errorCols  = ['1011050'];
   errors     = [{ Codigo: '1011050', Descripcion: 'No se recibio modelo de evaluacion PAE.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPAE.ObtenerItemsModelo>
@@ -58,7 +54,8 @@ export class ObtenerItemsModeloComponent {
         "Token": "bc8b678bc44A8B5C60A82434"
     },
     "modeloId": 1
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPAE.ObtenerItemsModeloResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +89,7 @@ export class ObtenerItemsModeloComponent {
          </Btoutreq>
       </BTPAE.ObtenerItemsModeloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
@@ -126,8 +123,8 @@ export class ObtenerItemsModeloComponent {
         "Numero": "8881", 
         "Estado": "OK" 
     } 
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'itemId', Tipo: 'Short', Comentarios: 'Codigo de item.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de item.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Descripcion de tipo de dato.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTItemPAE', fields: [{ Nombre: 'itemId', Tipo: 'Short', Comentarios: 'Codigo de item.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de item.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Descripcion de tipo de dato.' }] }];
 }

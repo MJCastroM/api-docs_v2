@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerOrigenesdeCaptacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Origenes de Captacion';
   description = `Metodo para obtener los origenes de captacion.`;
   pubName    = 'BTMicrofinanzas.ObtenerOrigenesCaptacion';
   programa   = 'RBTPG421';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtOrigenesCaptacion'];
   outputData = [{ Nombre: 'sdtOrigenesCaptacion', Tipo: '[sBTOrigenCaptacion](#sbtorigencaptacion)', Comentarios: 'Listado de origenes de captacion.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerOrigenesCaptacion>
@@ -56,7 +52,8 @@ export class ObtenerOrigenesdeCaptacionComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerOrigenesCaptacionResponse>
          <Btinreq>
@@ -112,7 +109,7 @@ export class ObtenerOrigenesdeCaptacionComponent {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerOrigenesCaptacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -165,8 +162,8 @@ export class ObtenerOrigenesdeCaptacionComponent {
         "Numero": "123",
         "Estado": "OK"
       }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de origen de captacion.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de origen de captacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTOrigenCaptacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de origen de captacion.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de origen de captacion.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ActualizarTelefonoComponent {
-  // Cabecera e info-card
   pageTitle = 'Actualizar Telefono';
   description = `Metodo para actualizar el telefono de una persona.`;
   pubName    = 'BTPersonas.ActualizarTelefono';
   programa   = 'RBTPG485';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId', 'numeroTelefono', 'tipoTelefonoId', 'domicilioId', 'telefonoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Numero de telefono.' }, { Nombre: 'tipoTelefonoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de telefono.' }, { Nombre: 'domicilioId', Tipo: 'Byte', Comentarios: 'Identificador de tipo de domicilio.' }, { Nombre: 'telefonoId', Tipo: 'Byte', Comentarios: 'Identificador correlativo de telefono.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30005', '30006', '40002', '40003', '40004', '40005'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de persona.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un telefono.' }, { Codigo: '30005', Descripcion: 'No se recibio el tipo del telefono.' }, { Codigo: '30006', Descripcion: 'No se recibio el codigo del domicilio.' }, { Codigo: '40002', Descripcion: 'No existe persona con los datos ingresados.' }, { Codigo: '40003', Descripcion: 'El numero del telefono es incorrecto (es muy corto).' }, { Codigo: '40004', Descripcion: 'El numero del telefono es incorrecto (es muy largo).' }, { Codigo: '40005', Descripcion: 'El numero del telefono no acepta caracteres.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarTelefono>
@@ -66,7 +62,8 @@ export class ActualizarTelefonoComponent {
    "tipoTelefonoId": "2",
    "domicilioId": "1",
    "telefonoId": "1"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarTelefonoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ActualizarTelefonoComponent {
          </Btoutreq>
       </BTPersonas.ActualizarTelefonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
    "Btinreq": {
       "Device": "AV",
       "Usuario": "MINSTALADOR",
@@ -105,8 +102,8 @@ export class ActualizarTelefonoComponent {
       "Canal": "BTDIGITAL",
       "Hora": "11:45:24"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

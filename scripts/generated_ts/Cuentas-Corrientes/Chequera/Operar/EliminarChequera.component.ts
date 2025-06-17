@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class EliminarChequeraComponent {
-  // Cabecera e info-card
   pageTitle = 'Eliminar Chequera';
   description = `Metodo para eliminar una chequera.`;
   pubName    = 'BTCuentasCorrientes.EliminarChequera';
   programa   = 'RBTPG243';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['chequeraId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '40001', '40002', '40003', '40004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de chequera.' }, { Codigo: '40001', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40002', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40003', Descripcion: 'La chequera contiene cheques utilizados; no puede ser eliminada.' }, { Codigo: '40004', Descripcion: 'Cuenta Cerrada, solo se permite consulta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.EliminarChequera>
@@ -58,7 +54,8 @@ export class EliminarChequeraComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"chequeraId":"37"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.EliminarChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +77,7 @@ export class EliminarChequeraComponent {
          </Btoutreq>
       </BTCuentasCorrientes.EliminarChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -100,8 +97,8 @@ export class EliminarChequeraComponent {
         "Hora": "15:54:44",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

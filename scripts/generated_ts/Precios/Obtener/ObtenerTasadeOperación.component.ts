@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTasadeOperacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tasa de Operacion';
   description = `Metodo para obtener la tasa de la operacion junto con la fecha de vigencia.`;
   pubName    = 'BTPrecios.ObtenerTasaOperacion';
   programa   = 'RBTPG318';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'fecha', 'importe', 'plazo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de operacion.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }];
-  outputCols = ['tipoTasa', 'tasa', 'tasaMinima', 'tasaMaxima', 'fechaVigencia'];
   outputData = [{ Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaMinima', Tipo: 'Double', Comentarios: 'Tasa minima.' }, { Nombre: 'tasaMaxima', Tipo: 'Double', Comentarios: 'Tasa maxima.' }, { Nombre: 'fechaVigencia', Tipo: 'Date', Comentarios: 'Fecha de vigencia' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '40001', '50001'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de operacion.' }, { Codigo: '30002', Descripcion: 'Debe ingresar fecha.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'Debe ingresar plazo.' }, { Codigo: '40001', Descripcion: 'No se recupero la operacion para el identificador recibido.' }, { Codigo: '50001', Descripcion: 'El registro no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerTasaOperacion>
@@ -64,7 +60,8 @@ export class ObtenerTasadeOperacionComponent {
 	"fecha": "2020-11-11",
 	"importe": 100000,
 	"plazo": 360
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerTasaOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +88,7 @@ export class ObtenerTasadeOperacionComponent {
          </Btoutreq>
       </BTPrecios.ObtenerTasaOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",
@@ -115,8 +112,8 @@ export class ObtenerTasadeOperacionComponent {
 	  "Numero": "8063",
 	  "Estado": "OK"
 	}
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

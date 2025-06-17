@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposDeModelosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos De Modelos';
   description = `Metodo para obtener los diferentes tipos de modelos de evaluacion.`;
   pubName    = 'BTPAE.ObtenerTiposDeModelos';
   programa   = 'RBTPG514';
   scope      = 'Institucional';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTModelosPAE'];
   outputData = [{ Nombre: 'sdtTModelosPAE', Tipo: '[sBTTModeloPAE](#sbttmodelopae)', Comentarios: 'Listado de los modelos de evaluacion.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPAE.ObtenerTiposDeModelos>
@@ -55,7 +51,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
       "Usuario": "INSTALADOR",
       "Token": "3789c5608bCD285A89A23FBE"
   },
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPAE.ObtenerTiposDeModelosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -109,7 +106,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
          </Btoutreq>
       </BTPAE.ObtenerTiposDeModelosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
   "Envelope": {
     "Body": {
       "BTPAE.ObtenerTiposDeModelosResponse": {
@@ -167,8 +164,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
       }
     }
   }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'categoriaModelo', Tipo: 'Numerico', Comentarios: 'Categoria de Modelo (1 - Lineal, 2 - Minimo, 3 - Maximo, 4 - Especial).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de modelo.' }, { Nombre: 'programaEvaluacion', Tipo: 'String', Comentarios: 'Programa particular para realizar la evaluacion del modelo.' }, { Nombre: 'tipoModelo', Tipo: 'Numerico', Comentarios: 'Identificador del tipo de modelo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTModeloPAE', fields: [{ Nombre: 'categoriaModelo', Tipo: 'Numerico', Comentarios: 'Categoria de Modelo (1 - Lineal, 2 - Minimo, 3 - Maximo, 4 - Especial).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de modelo.' }, { Nombre: 'programaEvaluacion', Tipo: 'String', Comentarios: 'Programa particular para realizar la evaluacion del modelo.' }, { Nombre: 'tipoModelo', Tipo: 'Numerico', Comentarios: 'Identificador del tipo de modelo.' }] }];
 }

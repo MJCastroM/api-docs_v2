@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class DesbloquearSaldoComponent {
-  // Cabecera e info-card
   pageTitle = 'Desbloquear Saldo';
   description = `Metodo para realizar la baja de un bloqueo de saldo.`;
   pubName    = 'BTCuentasVista.DesbloquearSaldo';
   programa   = 'RBTPG091';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['idBloqueo', 'clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'idBloqueo', Tipo: 'Long', Comentarios: 'Identificador de bloqueo.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30100'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del Bloqueo.' }, { Codigo: '30002', Descripcion: 'No se encontro el ID del bloqueo.' }, { Codigo: '30003', Descripcion: 'El Bloqueo ya no esta Activo, no se puede dar de baja.' }, { Codigo: '30004', Descripcion: 'No se recibio el identificador del Cliente.' }, { Codigo: '30005', Descripcion: 'No se encontro el ID del Cliente.' }, { Codigo: '30006', Descripcion: 'El Bloqueo no pertenece al Cliente.' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.DesbloquearSaldo>
@@ -60,7 +56,8 @@ export class DesbloquearSaldoComponent {
 	},
     "idBloqueo": 22,
     "clienteUId": 61
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.DesbloquearSaldoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +79,7 @@ export class DesbloquearSaldoComponent {
          </Btoutreq>
       </BTCuentasVista.DesbloquearSaldoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -102,8 +99,8 @@ export class DesbloquearSaldoComponent {
         "Hora": "15:48:40",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

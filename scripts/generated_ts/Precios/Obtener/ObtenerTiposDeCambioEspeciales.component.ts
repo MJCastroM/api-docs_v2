@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeCambioEspecialesComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Cambio Especiales';
   description = `Metodo para obtener un listado de los tipos de cambio especiales.`;
   pubName    = 'BTPrecios.ObtenerTiposDeCambioEspeciales ';
   programa   = 'RBTPG568';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposDeCambioEspecial'];
   outputData = [{ Nombre: 'sdtTiposDeCambioEspecial', Tipo: '[sBTTipoDeCambioEspecial](#sbttipodecambioespecial)', Comentarios: 'Listado de pizarras especiales parametrizadas.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
     <soapenv:Header/>
     <soapenv:Body>
         <bts:BTPrecios.ObtenerTiposDeCambioEspeciales>
@@ -56,7 +52,8 @@ export class ObtenerTiposdeCambioEspecialesComponent {
         "Usuario": "MINSTALADOR",
         "Canal": "BTDIGITAL"
     }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTPrecios.ObtenerTiposDeCambioEspecialesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -95,7 +92,7 @@ export class ObtenerTiposdeCambioEspecialesComponent {
             </Btoutreq>
         </BTPrecios.ObtenerTiposDeCambioEspecialesResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",
@@ -131,8 +128,8 @@ export class ObtenerTiposdeCambioEspecialesComponent {
         "Canal": "BTDIGITAL",
         "Hora": "16:00:37"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'esInteractivo', Tipo: 'Double', Comentarios: '¿Es interactiva? (S o N).' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de la pizarra.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoDeCambioEspecial', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'esInteractivo', Tipo: 'Double', Comentarios: '¿Es interactiva? (S o N).' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de la pizarra.' }] }];
 }

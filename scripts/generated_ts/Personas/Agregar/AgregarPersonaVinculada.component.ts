@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class AgregarPersonaVinculadaComponent {
-  // Cabecera e info-card
   pageTitle = 'Agregar Persona Vinculada';
   description = `Metodo para agregar un vinculo de afinidad a una persona.`;
   pubName    = 'BTPersonas.AgregarPersonaVinculada';
   programa   = 'RBTPG370';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId', 'personaVinculadaUId', 'vinculoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }, { Nombre: 'personaVinculadaUId', Tipo: 'Long', Comentarios: 'Identificador unico del vinculo de la persona.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador del vinculo de consanguinidad.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '31003', '32003', '40001', '41001', '42000'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de persona a relacionar.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador unico.' }, { Codigo: '32003', Descripcion: 'Error en identificador de la persona a relacionar: No existe registro para el identificador unico.' }, { Codigo: '40001', Descripcion: 'No se recibio el codigo de vinculo.' }, { Codigo: '41001', Descripcion: 'Registro de relacion de personas existente.' }, { Codigo: '42000', Descripcion: 'El codigo de vinculo ingresado es invalido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarPersonaVinculada>
@@ -62,7 +58,8 @@ export class AgregarPersonaVinculadaComponent {
 	"personaUId": "1",
 	"personaVinculadaUId": "3",
 	"vinculoId": "53"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarPersonaVinculadaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class AgregarPersonaVinculadaComponent {
          </Btoutreq>
       </BTPersonas.AgregarPersonaVinculadaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": {
 	    "Device": "GP",
 	    "Usuario": "MINSTALADOR",
@@ -103,8 +100,8 @@ export class AgregarPersonaVinculadaComponent {
         "Numero": "11003",
         "Estado": "OK"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

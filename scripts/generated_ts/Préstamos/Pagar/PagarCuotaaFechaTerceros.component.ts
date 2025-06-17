@@ -9,28 +9,36 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class PagarCuotaaFechaTercerosComponent {
-  // Cabecera e info-card
   pageTitle = 'Pagar Cuota a Fecha Terceros';
   description = `Metodo para realizar el pago de cuota de un prestamo a terceros dada una fecha valor.`;
   pubName    = 'BTPrestamos.PagarCuotaAFechaTerceros';
   programa   = 'RBTPG832';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'clienteUId', 'importe', 'operacionCobroUId', 'referencia', 'fecha', 'controlaExistenciaOperacionCobro'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion de pago, teniendo en cuenta que: 
+
+	- El prestamo se almacena en el preformato 1. 
+
+	- La cuenta vista de cobro se almacena en el preformato 2. 
+
+	- Los correlativos del subordinal deben corresponderse con los modulos de los productos definidos en el subordinal. 
+
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T). 
+
+3) Se debe indicar los ordinales donde se encuentra definido el prestamo y la cuenta de cobro. 
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion simulada.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe a pagar.' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de la cuenta vista de donde se cobrara el prestamo.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha Valor del pago.' }, { Nombre: 'controlaExistenciaOperacionCobro', Tipo: 'String', Comentarios: 'Indica si se controla la existencia de la operacion de cobro [Hidden: Valores 'S'/'N'].' }];
-  outputCols = ['movimientoUId'];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico de movimiento [Asiento].' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008', '30010', '30100', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion de prestamo.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de operacion de cobro.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recupero la operacion para el Identificador: [Numero de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion para el Identificador: [Numero de Identificador].' }, { Codigo: '30006', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recupero la operacion para el Identificador de Cliente: [Numero de Identificador].' }, { Codigo: '30008', Descripcion: 'El prestamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se recibio una fecha para la operacion.' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion.' }, { Codigo: '40001', Descripcion: 'La Cuenta indicada es incorrecta.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.PagarCuotaAFechaTerceros>
@@ -68,7 +76,8 @@ export class PagarCuotaaFechaTercerosComponent {
     "referencia": "Prueba",
     "importe": 1000,
     "fecha": "2019-07-26"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.PagarCuotaAFechaTercerosResponse>
          <Btinreq>
@@ -91,7 +100,7 @@ export class PagarCuotaaFechaTercerosComponent {
          </Btoutreq>
       </BTPrestamos.PagarCuotaAFechaTercerosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -112,8 +121,8 @@ export class PagarCuotaaFechaTercerosComponent {
         "Hora": "12:04:55",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

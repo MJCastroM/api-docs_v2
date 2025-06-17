@@ -9,28 +9,38 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class TraspasarconTipodeCambioEspecialComponent {
-  // Cabecera e info-card
   pageTitle = 'Traspasar con Tipo de Cambio Especial';
   description = `Metodo para realizar un traspaso entre cuentas de diferente moneda ingresando un tipo de cambio especial.`;
   pubName    = 'BTCuentasVista.TraspasarConTipoDeCambioEspecial ';
   programa   = 'RBTPG569';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'sdtTraspaso', 'tipoCambioEspecial', 'modoCambio'];
+  hasBackendConfig  = true;
+  backendText       = `1) Definir la transaccion de compra-venta, teniendo en cuenta que:
+
+	- La cuenta vista origen se almacena en el preformato 1.
+	
+	- La cuenta vista destino en el preformato 2.
+	
+	- El importe a transferir y el tipo de cambio se almacenan en el preformato 1.
+	
+	- Los correlativos del subordinal deben corresponderse con los modulos de los productos definidos en el subordinal.
+	
+2) Configurar la transaccion parametrizada mediante el mantenimiento de transacciones por servicio (HBTSBT1T):
+
+	- Se debe indicar los ordinales donde se encuentra definida la cuenta origen y destino.
+ 
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'sdtTraspaso', Tipo: '[sBTTraspasoMoneda](#sbttraspasomoneda)', Comentarios: 'Datos de traspaso.' }, { Nombre: 'tipoCambioEspecial', Tipo: 'Short', Comentarios: 'Identificador del tipo de cambio especial a aplicar.' }, { Nombre: 'modoCambio', Tipo: 'String', Comentarios: 'Modo del tipo de cambio a aplicar ('CC': Compra cierre, 'VC': Venta cierre).' }];
-  outputCols = ['sdtResultadoTraspaso'];
   outputData = [{ Nombre: 'sdtResultadoTraspaso', Tipo: '[sBTResultadoTraspaso](#sbtresultadotraspaso)', Comentarios: 'Resultado del traspaso.' }];
-  errorCols  = ['31001', '31002', '31003', '31004', '31011', '31007', '31008', '31009', '31005', '31012', '30001', '30002', '30003', '30100'];
   errors     = [{ Codigo: '31001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '31002', Descripcion: 'No se recupero la cuenta para el Identificador de cliente: [Numero de identificador].' }, { Codigo: '31003', Descripcion: 'No se recibio el identificador unico de operacion de origen.' }, { Codigo: '31004', Descripcion: 'No se recibio el identificador unico de operacion de destino.' }, { Codigo: '31011', Descripcion: 'La operacion origen y operacion destino no pueden ser iguales.' }, { Codigo: '31007', Descripcion: 'No se recupero la operacion origen para el Identificador: [Numero de identificador].' }, { Codigo: '31008', Descripcion: 'La operacion origen no pertenece al cliente.' }, { Codigo: '31009', Descripcion: 'No se recupero la operacion destino para el Identificador: [Numero de identificador].' }, { Codigo: '31005', Descripcion: 'Debe ingresar importe.' }, { Codigo: '31012', Descripcion: 'Debe ingresar importe a debitar o a acreditar, pero no ambos.' }, { Codigo: '30001', Descripcion: 'Moneda Origen y Moneda Destino no pueden ser la misma.' }, { Codigo: '30002', Descripcion: 'Debe ingresar tipo de cotizacion.' }, { Codigo: '30003', Descripcion: 'El tipo de cotizacion ingresado no es correcto.' }, { Codigo: '30100', Descripcion: 'Error en la contabilizacion.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
     <soapenv:Header/>
     <soapenv:Body>
         <bts:BTCuentasVista.TraspasarConTipoDeCambioEspecial>
@@ -79,7 +89,8 @@ export class TraspasarconTipodeCambioEspecialComponent {
     },
 	"tipoCambioEspecial": 1,
 	"modoCambio": "CC"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTCuentasVista.TraspasarConTipoDeCambioEspecialResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -108,7 +119,7 @@ export class TraspasarconTipodeCambioEspecialComponent {
             </Btoutreq>
         </BTCuentasVista.TraspasarConTipoDeCambioEspecialResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",
@@ -133,8 +144,8 @@ export class TraspasarconTipodeCambioEspecialComponent {
         "Canal": "BTDIGITAL",
         "Hora": "16:00:37"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del Traspaso' }, { Nombre: 'importeCredito', Tipo: 'Double', Comentarios: 'Importe a acreditar.' }, { Nombre: 'importeDebito', Tipo: 'Double', Comentarios: 'Importe a debitar.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de Moneda.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador de operacion de origen del traspaso.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador de operacion de destino del traspaso.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTraspasoMoneda', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del Traspaso' }, { Nombre: 'importeCredito', Tipo: 'Double', Comentarios: 'Importe a acreditar.' }, { Nombre: 'importeDebito', Tipo: 'Double', Comentarios: 'Importe a debitar.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de Moneda.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador de operacion de origen del traspaso.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador de operacion de destino del traspaso.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCierredeSaldosporMonedaComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cierre de Saldos por Moneda';
   description = `Metodo para obtener el cierre de saldos por moneda.`;
   pubName    = 'BTIndicadores.ObtenerCierreSaldosPorMoneda';
   programa   = 'RBTPG707';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtBalanceMonedaSaldos'];
   outputData = [{ Nombre: 'sdtBalanceMonedaSaldos', Tipo: '[sBTBalanceMonedaSaldo](#sbtbalancemonedasaldo)', Comentarios: 'Listado de cierre de saldos por moneda.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerCierreSaldosPorMoneda>
@@ -56,7 +52,8 @@ export class ObtenerCierredeSaldosporMonedaComponent {
       "Usuario": "INSTALADOR",
       "Requerimiento": "?"
    }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerCierreSaldosPorMonedaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -122,7 +119,7 @@ export class ObtenerCierredeSaldosporMonedaComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerCierreSaldosPorMonedaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -186,8 +183,8 @@ export class ObtenerCierredeSaldosporMonedaComponent {
       "Canal": "BTDIGITAL",
       "Hora": "15:14:49"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'saldo', Tipo: 'Int', Comentarios: 'Saldo de cierre de moneda.' }, { Nombre: 'signo', Tipo: 'String', Comentarios: 'Signo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTBalanceMonedaSaldo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'saldo', Tipo: 'Int', Comentarios: 'Saldo de cierre de moneda.' }, { Nombre: 'signo', Tipo: 'String', Comentarios: 'Signo de moneda.' }] }];
 }

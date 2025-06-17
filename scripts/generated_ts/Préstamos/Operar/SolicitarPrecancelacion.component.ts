@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SolicitarPrecancelacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Solicitar Precancelacion';
   description = `Metodo para solicitar la precancelacion de un prestamo.`;
   pubName    = 'BTPrestamos.SolicitarPrecancelacion';
   programa   = 'RBTPG572';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'clienteUId', 'importe', 'referencia', 'fechaValor', 'tipoPrecancelacion', 'prepagoManual', 'tipoReduccion', 'modalidadIntereses', 'motivoPrecancelacion'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor del prestamo.' }, { Nombre: 'tipoPrecancelacion', Tipo: 'String', Comentarios: 'Tipo de precancelacion. Se pueden enviar los siguientes [valores](#valores1).' }, { Nombre: 'prepagoManual', Tipo: 'String', Comentarios: '¿El prepago es manual? (S = Si / N = No).' }, { Nombre: 'tipoReduccion', Tipo: 'String', Comentarios: 'Tipo de reduccion. Se pueden enviar los siguientes [valores](#valores2).' }, { Nombre: 'modalidadIntereses', Tipo: 'String', Comentarios: 'Modalidad de intereses. Se pueden enviar los siguientes [valores](#valores3).' }, { Nombre: 'motivoPrecancelacion', Tipo: 'Byte', Comentarios: 'Identificador del motivo de precancelacion.' }];
-  outputCols = ['numeroLote', 'logPrecancelacion'];
   outputData = [{ Nombre: 'numeroLote', Tipo: 'int', Comentarios: 'Numero de lote.' }, { Nombre: 'logPrecancelacion', Tipo: 'int', Comentarios: 'Identificador del log de precancelacion.' }];
-  errorCols  = ['30001', '30002', '30003', '30006', '30007', '30008', '30010', '30011', '30012', '30013', '30014', '30015', '30016', '30017', '30018', '30019', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de operacion de prestamo.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el Identificador: [Numero de identificador].' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30006', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recupero la cuenta para el Identificador de cliente: [Numero de identificador].' }, { Codigo: '30008', Descripcion: 'El prestamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se ingreso el tipo de precancelacion.' }, { Codigo: '30011', Descripcion: 'El valor del campo tipoPrecancelacion tiene que ser P o T.' }, { Codigo: '30012', Descripcion: 'No se ingreso si es pre pago manual.' }, { Codigo: '30013', Descripcion: 'El valor del campo prepagoManual tiene que ser S o N.' }, { Codigo: '30014', Descripcion: 'No se ingreso el tipo de reduccion.' }, { Codigo: '30015', Descripcion: 'El valor del campo tipoReduccion tiene que ser P o C.' }, { Codigo: '30016', Descripcion: 'No se ingreso la modalidad de intereses.' }, { Codigo: '30017', Descripcion: 'El valor del campo modalidadIntereses tiene que ser CP o SP.' }, { Codigo: '30018', Descripcion: 'No se ingreso el motivo de la precancelacion.' }, { Codigo: '30019', Descripcion: 'No se ingreso la fecha valor.' }, { Codigo: '40001', Descripcion: 'El identificador de motivo de precancelacion no esta registrado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.SolicitarPrecancelacion>
@@ -76,7 +72,8 @@ export class SolicitarPrecancelacionComponent {
       "tipoReduccion": "C",
       "modalidadIntereses": "SP",
       "motivoPrecancelacion": 1
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.SolicitarPrecancelacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +97,7 @@ export class SolicitarPrecancelacionComponent {
          </Btoutreq>
       </BTPrestamos.SolicitarPrecancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -120,8 +117,8 @@ export class SolicitarPrecancelacionComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

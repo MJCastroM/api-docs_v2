@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ModificarFechadeAbonoComponent {
-  // Cabecera e info-card
   pageTitle = 'Modificar Fecha de Abono';
   description = `Metodo para modificar la fecha del abono para el ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarFechaDeAbono';
   programa   = 'RBTPG116';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'ahorroUId', 'diaIncremento'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de ahorro.' }, { Nombre: 'diaIncremento', Tipo: 'Int', Comentarios: 'Nuevo dia de incremento.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30004', '30005', '30006', '40001', '40050', '40706', '40709'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador del ahorro.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de identificador].' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion del ahorro para el identificador: [Numero de identificador].' }, { Codigo: '30006', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'No existe registro para el producto de ahorro seleccionado.' }, { Codigo: '40050', Descripcion: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40706', Descripcion: 'Debe indicar dia de incremento.' }, { Codigo: '40709', Descripcion: 'El dia de incremento debe ser un dia habil segun el calendario.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ModificarFechaDeAbono>
@@ -62,7 +58,8 @@ export class ModificarFechadeAbonoComponent {
       "clienteUId": 81,
       "ahorroUId": 61,
       "diaIncremento": 13
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ModificarFechaDeAbonoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class ModificarFechadeAbonoComponent {
          </Btoutreq>
       </BTAhorroProgramado.ModificarFechaDeAbonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class ModificarFechadeAbonoComponent {
         "Hora": "13:24:23",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

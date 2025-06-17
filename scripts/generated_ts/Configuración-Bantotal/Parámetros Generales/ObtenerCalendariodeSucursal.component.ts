@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCalendariodeSucursalComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Calendario de Sucursal';
   description = `Metodo para obtener el calendario de una sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCalendarioDeSucursal';
   programa   = 'RBTPG283';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['sucursalId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }];
-  outputCols = ['descripcionSucursal', 'sdtCalendario'];
   outputData = [{ Nombre: 'descripcionSucursal', Tipo: 'String', Comentarios: 'Descripcion de la sucursal.' }, { Nombre: 'sdtCalendario', Tipo: '[sBTCalendario](#sbtcalendario)', Comentarios: 'Calendario de la sucursal.' }];
-  errorCols  = ['30001', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'No existe sucursal con el identificador ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerCalendarioDeSucursal>
@@ -57,7 +53,8 @@ export class ObtenerCalendariodeSucursalComponent {
         "Token": "200f0b88B5C60A82434"
     },
 	"sucursalId":1000
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerCalendarioDeSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +81,7 @@ export class ObtenerCalendariodeSucursalComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerCalendarioDeSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "MC",
         "Usuario": "MI",
@@ -109,8 +106,8 @@ export class ObtenerCalendariodeSucursalComponent {
         "Hora": "14:13:38",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del calendario.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Codigo del calendario.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTCalendario', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del calendario.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Codigo del calendario.' }] }];
 }

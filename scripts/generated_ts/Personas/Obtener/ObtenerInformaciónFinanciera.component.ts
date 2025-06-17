@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerInformacionFinancieraComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Informacion Financiera';
   description = `Metodo para obtener la informacion financiera de una persona.`;
   pubName    = 'BTPersonas.ObtenerInformacionFinanciera';
   programa   = 'RBTPCO03';
   scope      = 'Colombia';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['personaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }];
-  outputCols = ['sdtInformacionFinanciera'];
   outputData = [{ Nombre: 'sdtInformacionFinanciera', Tipo: '[sBTPCOInformacionFinanciera](#sbtpcoinformacionfinanciera)', Comentarios: 'Datos de informacion financiera de la persona.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de persona.' }, { Codigo: '30002', Descripcion: 'No existe el Registro.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerInformacionFinanciera>
@@ -57,7 +53,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 	"personaUId": "21"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerInformacionFinancieraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -105,7 +102,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.ObtenerInformacionFinancieraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
@@ -148,8 +145,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	  "Canal": "BTDIGITAL",
 	  "Hora": "13:10:51"
 	}
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'egresosMensuales', Tipo: 'Double', Comentarios: 'Importe de egresos mensuales.' }, { Nombre: 'ingresosMensuales', Tipo: 'Double', Comentarios: 'Importe de ingresos mensuales.' }, { Nombre: 'operacionesInternacionales', Tipo: '[sBTPCOOperacionesInternacionales](#sbtpcooperacionesinternacionales)', Comentarios: 'Datos de operaciones internacionales.' }, { Nombre: 'origenRecursos', Tipo: 'String', Comentarios: '(C = Colombia / O = Otro).' }, { Nombre: 'otrosIngresosMensuales', Tipo: 'Double', Comentarios: 'Importe de otros ingresos mensuales.' }, { Nombre: 'otrosIngresosMensualesDesc', Tipo: 'String', Comentarios: 'Descripcion de otros ingresos mensuales.' }, { Nombre: 'paisOrigenRecursos', Tipo: 'String', Comentarios: 'Nombre de pais.' }, { Nombre: 'paisOrigenRecursosId', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'totalActivos', Tipo: 'Double', Comentarios: 'Importe del total de activos.' }, { Nombre: 'totalIngresosMensuales', Tipo: 'Double', Comentarios: 'Importe del total de ingresos mensuales.' }, { Nombre: 'totalPasivos', Tipo: 'Double', Comentarios: 'Importe del total de pasivos.' }, { Nombre: '### sBTPCOOperacionesInternacionales', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTPCOOperacionesInternacionales son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Nombre de ciudad.' }, { Nombre: 'ciudadId', Tipo: 'Short', Comentarios: 'Identificador de ciudad.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Nombre de moneda' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto.' }, { Nombre: 'nombreEntidad', Tipo: 'String', Comentarios: 'Nombre de la entidad.' }, { Nombre: 'numeroProducto', Tipo: 'String', Comentarios: 'Numero del producto.' }, { Nombre: 'operaMonedaExtranjera', Tipo: 'String', Comentarios: '(S = Si / N = No).' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre de pais.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'tipoOperacion', Tipo: 'String', Comentarios: '(Importacion / Exportacion / Inversiones / Prestamos / Otro).' }, { Nombre: 'tipoProducto', Tipo: 'String', Comentarios: '(Cuenta de ahorros / Cuenta Corriente / CDT).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPCOInformacionFinanciera', fields: [{ Nombre: 'egresosMensuales', Tipo: 'Double', Comentarios: 'Importe de egresos mensuales.' }, { Nombre: 'ingresosMensuales', Tipo: 'Double', Comentarios: 'Importe de ingresos mensuales.' }, { Nombre: 'operacionesInternacionales', Tipo: '[sBTPCOOperacionesInternacionales](#sbtpcooperacionesinternacionales)', Comentarios: 'Datos de operaciones internacionales.' }, { Nombre: 'origenRecursos', Tipo: 'String', Comentarios: '(C = Colombia / O = Otro).' }, { Nombre: 'otrosIngresosMensuales', Tipo: 'Double', Comentarios: 'Importe de otros ingresos mensuales.' }, { Nombre: 'otrosIngresosMensualesDesc', Tipo: 'String', Comentarios: 'Descripcion de otros ingresos mensuales.' }, { Nombre: 'paisOrigenRecursos', Tipo: 'String', Comentarios: 'Nombre de pais.' }, { Nombre: 'paisOrigenRecursosId', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'totalActivos', Tipo: 'Double', Comentarios: 'Importe del total de activos.' }, { Nombre: 'totalIngresosMensuales', Tipo: 'Double', Comentarios: 'Importe del total de ingresos mensuales.' }, { Nombre: 'totalPasivos', Tipo: 'Double', Comentarios: 'Importe del total de pasivos.' }, { Nombre: '### sBTPCOOperacionesInternacionales', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTPCOOperacionesInternacionales', fields: [{ Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Nombre de ciudad.' }, { Nombre: 'ciudadId', Tipo: 'Short', Comentarios: 'Identificador de ciudad.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Nombre de moneda' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto.' }, { Nombre: 'nombreEntidad', Tipo: 'String', Comentarios: 'Nombre de la entidad.' }, { Nombre: 'numeroProducto', Tipo: 'String', Comentarios: 'Numero del producto.' }, { Nombre: 'operaMonedaExtranjera', Tipo: 'String', Comentarios: '(S = Si / N = No).' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre de pais.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador de pais.' }, { Nombre: 'tipoOperacion', Tipo: 'String', Comentarios: '(Importacion / Exportacion / Inversiones / Prestamos / Otro).' }, { Nombre: 'tipoProducto', Tipo: 'String', Comentarios: '(Cuenta de ahorros / Cuenta Corriente / CDT).' }] }];
 }

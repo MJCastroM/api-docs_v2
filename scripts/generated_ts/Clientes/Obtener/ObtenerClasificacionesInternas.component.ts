@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerClasificacionesInternasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Clasificaciones Internas';
   description = `Metodo para obtener un listado de las clasificaciones internas ingresadas en Bantotal.`;
   pubName    = 'BTClientes.ObtenerClasificacionesInternas';
   programa   = 'RBTPG057';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtClasificacionesInternas'];
   outputData = [{ Nombre: 'sdtClasificacionesInternas', Tipo: '[sBTClasificacionInterna](#sbtclasificacioninterna)', Comentarios: 'Listado de clasificaciones internas.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerClasificacionesInternas>
@@ -56,7 +52,8 @@ export class ObtenerClasificacionesInternasComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerClasificacionesInternasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -120,7 +117,7 @@ export class ObtenerClasificacionesInternasComponent {
          </Btoutreq>
       </BTClientes.ObtenerClasificacionesInternasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -184,8 +181,8 @@ export class ObtenerClasificacionesInternasComponent {
         "Hora": "02:32:36",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de clasificacion interna.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de clasificacion interna.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTClasificacionInterna', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de clasificacion interna.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de clasificacion interna.' }] }];
 }

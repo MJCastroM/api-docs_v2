@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerScoresComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Scores';
   description = `Metodo para obtener los scores de los modelos de evaluacion.`;
   pubName    = 'BTPAE.ObtenerScores';
   programa   = 'RBTPG511';
   scope      = 'Institucional';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['modeloEvaluacionId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'modeloEvaluacionId', Tipo: 'Int', Comentarios: 'Codigo de modelo de evaluacion.' }];
-  outputCols = ['sdtScoresPAE'];
   outputData = [{ Nombre: 'sdtScoresPAE', Tipo: '[sBTScorePAE](#sbtscorepae)', Comentarios: 'Listado de scores de un modelo PAE.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPAE.ObtenerScores>
@@ -57,7 +53,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
       "Token": "3789c5608bCD285A89A23FBE"
   },
   "modeloEvaluacionId": 101
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPAE.ObtenerScoresResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -98,7 +95,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
          </Btoutreq>
       </BTPAE.ObtenerScoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
   "Envelope": {
     "Body": {
       "BTPAE.ObtenerScoresResponse": {
@@ -143,8 +140,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
       }
     }
   }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigoItem', Tipo: 'Numerico', Comentarios: 'Codigo de item.' }, { Nombre: 'codigoModelo', Tipo: 'Numerico', Comentarios: 'Codigo de modelo.' }, { Nombre: 'correlativo', Tipo: 'Numerico', Comentarios: 'Correlativo.' }, { Nombre: 'desdeNumerico', Tipo: 'Numerico', Comentarios: 'Numero desde.' }, { Nombre: 'desdeCaracter', Tipo: 'String', Comentarios: 'Caracter desde.' }, { Nombre: 'desdeFecha', Tipo: 'Date', Comentarios: 'Fecha desde.' }, { Nombre: 'hastaNumerico', Tipo: 'Numerico', Comentarios: 'Numero hasta.' }, { Nombre: 'hastaCaracter', Tipo: 'String', Comentarios: 'Caracter hasta.' }, { Nombre: 'hastaFecha', Tipo: 'Date', Comentarios: 'Fecha hasta.' }, { Nombre: 'idPolitica', Tipo: 'Numerico', Comentarios: 'Codigo de politica.' }, { Nombre: 'mensajeIncumPolitica', Tipo: 'String', Comentarios: 'Mensaje de politica incumplida.' }, { Nombre: 'tipoRestriccion', Tipo: 'String', Comentarios: 'Tipo de restriccion por defecto. ('I'= Informativa; 'A'= Alerta; 'B'= Bloqueante; 'E'= Bloqueante con Excepcion;).' }, { Nombre: 'valorPolitica', Tipo: 'String', Comentarios: 'Valor de politica para el rango (S/N).' }, { Nombre: 'valorScoreRango', Tipo: 'Numerico', Comentarios: 'Rango del valor score.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTScorePAE', fields: [{ Nombre: 'codigoItem', Tipo: 'Numerico', Comentarios: 'Codigo de item.' }, { Nombre: 'codigoModelo', Tipo: 'Numerico', Comentarios: 'Codigo de modelo.' }, { Nombre: 'correlativo', Tipo: 'Numerico', Comentarios: 'Correlativo.' }, { Nombre: 'desdeNumerico', Tipo: 'Numerico', Comentarios: 'Numero desde.' }, { Nombre: 'desdeCaracter', Tipo: 'String', Comentarios: 'Caracter desde.' }, { Nombre: 'desdeFecha', Tipo: 'Date', Comentarios: 'Fecha desde.' }, { Nombre: 'hastaNumerico', Tipo: 'Numerico', Comentarios: 'Numero hasta.' }, { Nombre: 'hastaCaracter', Tipo: 'String', Comentarios: 'Caracter hasta.' }, { Nombre: 'hastaFecha', Tipo: 'Date', Comentarios: 'Fecha hasta.' }, { Nombre: 'idPolitica', Tipo: 'Numerico', Comentarios: 'Codigo de politica.' }, { Nombre: 'mensajeIncumPolitica', Tipo: 'String', Comentarios: 'Mensaje de politica incumplida.' }, { Nombre: 'tipoRestriccion', Tipo: 'String', Comentarios: 'Tipo de restriccion por defecto. ('I'= Informativa; 'A'= Alerta; 'B'= Bloqueante; 'E'= Bloqueante con Excepcion;).' }, { Nombre: 'valorPolitica', Tipo: 'String', Comentarios: 'Valor de politica para el rango (S/N).' }, { Nombre: 'valorScoreRango', Tipo: 'Numerico', Comentarios: 'Rango del valor score.' }] }];
 }

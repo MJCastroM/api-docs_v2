@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class EliminarUsuarioComponent {
-  // Cabecera e info-card
   pageTitle = 'Eliminar Usuario';
   description = `Metodo para eliminar un usuario.`;
   pubName    = 'BTUsuarios.EliminarUsuario';
   programa   = 'RBTPG390';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['usuario'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador del usuario.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar usuario.' }, { Codigo: '30002', Descripcion: 'No existe el usuario ingresado.' }, { Codigo: '30003', Descripcion: 'No es posible eliminar el usuario. Existen datos relacionados de Perfil/Usuario.' }, { Codigo: '30004', Descripcion: 'El Usuario no existe. (Tabla FST746)' }, { Codigo: '30005', Descripcion: 'La Empresa para el Usuario no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.EliminarUsuario>
@@ -58,7 +54,8 @@ export class EliminarUsuarioComponent {
         "Token": "20130357454A8B5C60A82434"
     },
    "usuario": "GPONTES",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.EliminarUsuarioResponse>
          <Btinreq>
@@ -80,7 +77,7 @@ export class EliminarUsuarioComponent {
          </Btoutreq>
       </BTUsuarios.EliminarUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
@@ -99,8 +96,8 @@ export class EliminarUsuarioComponent {
         "Hora": "15:35:54",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDatosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Datos';
   description = `Metodo para obtener datos de un cliente.`;
   pubName    = 'BTClientes.ObtenerDatos';
   programa   = 'RBTPG441';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }];
-  outputCols = ['sdtDatosCuentaCliente'];
   outputData = [{ Nombre: 'sdtDatosCuentaCliente', Tipo: '[sBTDatosCuentaCliente](#sbtdatoscuentacliente)', Comentarios: 'Datos de la cuenta cliente.' }];
-  errorCols  = ['30001', '30002', '40001', '40099'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el Identificador de cliente: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'No existe titular representativo para la cuenta.' }, { Codigo: '40099', Descripcion: 'La cuenta fue dada de baja.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCliente.ObtenerDatos>
@@ -58,7 +54,8 @@ export class ObtenerDatosComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
 		"clienteUID": 10010
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrueba.ObtenerDatosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -108,7 +105,7 @@ export class ObtenerDatosComponent {
          </Btoutreq>
       </BTPrueba.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -156,8 +153,8 @@ export class ObtenerDatosComponent {
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'actividadLaboral', Tipo: 'String', Comentarios: 'Descripcion de la actividad laboral.' }, { Nombre: 'actividadLaboralId', Tipo: 'Int', Comentarios: 'Identificador de la actividad laboral.' }, { Nombre: 'asesor', Tipo: 'String', Comentarios: 'Nombre del asesor.' }, { Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del asesor.' }, { Nombre: 'clasificacionInterna', Tipo: 'String', Comentarios: 'Descripcion de clasificacion interna.' }, { Nombre: 'clasificacionInternaId', Tipo: 'Int', Comentarios: 'Identificador de clasificacion interna.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electronico.' }, { Nombre: 'cuentaBT', Tipo: 'Int', Comentarios: 'Cuenta Bantotal.' }, { Nombre: 'ejecutivo', Tipo: 'String', Comentarios: 'Nombre del ejecutivo.' }, { Nombre: 'ejecutivoId', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }, { Nombre: 'empleado', Tipo: 'String', Comentarios: '¿Es empleado de la institucion? (S/N).' }, { Nombre: 'empresaId', Tipo: 'Int', Comentarios: 'Identificador de empresa.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Descripcion de estado.' }, { Nombre: 'estadoId', Tipo: 'Int', Comentarios: 'Identificador de estado.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha del alta.' }, { Nombre: 'fechaVtoClasificacion', Tipo: 'Date', Comentarios: 'Fecha de vencimiento de clasificacion.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del cliente.' }, { Nombre: 'proveedor', Tipo: 'String', Comentarios: '¿Es proveedor? (S/N).' }, { Nombre: 'residente', Tipo: 'String', Comentarios: '¿Es residente? (S/N).' }, { Nombre: 'retenerCorrespondencia', Tipo: 'String', Comentarios: '¿Retiene correspondencia? (S/N).' }, { Nombre: 'sector', Tipo: 'String', Comentarios: 'Descripcion del sector.' }, { Nombre: 'sectorId', Tipo: 'Int', Comentarios: 'Identificador de sector.' }, { Nombre: 'segmento', Tipo: 'String', Comentarios: 'Descripcion del segmento.' }, { Nombre: 'segmentoId', Tipo: 'Int', Comentarios: 'Identificador de segmento.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatosCuentaCliente', fields: [{ Nombre: 'actividadLaboral', Tipo: 'String', Comentarios: 'Descripcion de la actividad laboral.' }, { Nombre: 'actividadLaboralId', Tipo: 'Int', Comentarios: 'Identificador de la actividad laboral.' }, { Nombre: 'asesor', Tipo: 'String', Comentarios: 'Nombre del asesor.' }, { Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del asesor.' }, { Nombre: 'clasificacionInterna', Tipo: 'String', Comentarios: 'Descripcion de clasificacion interna.' }, { Nombre: 'clasificacionInternaId', Tipo: 'Int', Comentarios: 'Identificador de clasificacion interna.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electronico.' }, { Nombre: 'cuentaBT', Tipo: 'Int', Comentarios: 'Cuenta Bantotal.' }, { Nombre: 'ejecutivo', Tipo: 'String', Comentarios: 'Nombre del ejecutivo.' }, { Nombre: 'ejecutivoId', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }, { Nombre: 'empleado', Tipo: 'String', Comentarios: '¿Es empleado de la institucion? (S/N).' }, { Nombre: 'empresaId', Tipo: 'Int', Comentarios: 'Identificador de empresa.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Descripcion de estado.' }, { Nombre: 'estadoId', Tipo: 'Int', Comentarios: 'Identificador de estado.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha del alta.' }, { Nombre: 'fechaVtoClasificacion', Tipo: 'Date', Comentarios: 'Fecha de vencimiento de clasificacion.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del cliente.' }, { Nombre: 'proveedor', Tipo: 'String', Comentarios: '¿Es proveedor? (S/N).' }, { Nombre: 'residente', Tipo: 'String', Comentarios: '¿Es residente? (S/N).' }, { Nombre: 'retenerCorrespondencia', Tipo: 'String', Comentarios: '¿Retiene correspondencia? (S/N).' }, { Nombre: 'sector', Tipo: 'String', Comentarios: 'Descripcion del sector.' }, { Nombre: 'sectorId', Tipo: 'Int', Comentarios: 'Identificador de sector.' }, { Nombre: 'segmento', Tipo: 'String', Comentarios: 'Descripcion del segmento.' }, { Nombre: 'segmentoId', Tipo: 'Int', Comentarios: 'Identificador de segmento.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }] }];
 }

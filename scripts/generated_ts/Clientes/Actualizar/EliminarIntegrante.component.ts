@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class EliminarIntegranteComponent {
-  // Cabecera e info-card
   pageTitle = 'Eliminar Integrante';
   description = `Metodo para eliminar un integrante de una cuenta cliente.`;
   pubName    = 'BTClientes.EliminarIntegrantes';
   programa   = 'RBTPG386';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'personaUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador unico de persona.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '40001', '40002', '40003', '40004', '40005', '40006'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de persona.' }, { Codigo: '30003', Descripcion: 'No existe cuenta para el identificador unico: [Numero de identificador].' }, { Codigo: '30004', Descripcion: 'No existe persona para el identificador unico: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'La persona ingresada no integra la cuenta.' }, { Codigo: '40002', Descripcion: 'No se puede realizar esta accion para este tipo de titular.' }, { Codigo: '40003', Descripcion: 'No se pueden realizar cambios de integrantes cuando la cuenta cliente tiene productos activos.' }, { Codigo: '40004', Descripcion: 'No se puede eliminar el titular representativo.' }, { Codigo: '40005', Descripcion: 'No se puede eliminar el representante legal.' }, { Codigo: '40006', Descripcion: 'Error: La Autorizacion a sido negada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.EliminarIntegrante>
@@ -60,7 +56,8 @@ export class EliminarIntegranteComponent {
     },
     "clienteUId": 1,
     "personaUId": 853
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.EliminarIntegranteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +79,7 @@ export class EliminarIntegranteComponent {
          </Btoutreq>
       </BTClientes.EliminarIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
@@ -101,8 +98,8 @@ export class EliminarIntegranteComponent {
         "Hora": "15:35:54",
         "Canal": "BTDIGITAL"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

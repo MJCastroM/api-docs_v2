@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerOpcionGeneralPorModuloComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Opcion General Por Modulo';
   description = `Metodo para obtener los datos de una opcion general de un determinado modulo.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralPorModulo';
   programa   = 'RBTPG443';
   scope      = 'Institucional';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['empresaId', 'modulo', 'codigo'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Codigo de empresa [Hidden].' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Identificador de modulo Bantotal.' }, { Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Codigo de la opcion general de procesos.' }];
-  outputCols = ['sdtOpcionGeneralModulo'];
   outputData = [{ Nombre: 'sdtOpcionGeneralModulo', Tipo: '[sBTOpcionGeneral](#sbtopciongeneral)', Comentarios: 'Datos de la opcion general de procesos.' }];
-  errorCols  = ['30002', '30003', '40001', '40002'];
   errors     = [{ Codigo: '30002', Descripcion: 'No se recibio el modulo.' }, { Codigo: '30003', Descripcion: 'No se recibio identificador de opcion general.' }, { Codigo: '40001', Descripcion: 'El modulo ingresado no es correcto.' }, { Codigo: '40002', Descripcion: 'No se encontro registro para la opcion general ingresada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTParametrosBase.ObtenerOpcionGeneralPorModulo>
@@ -59,7 +55,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
     },
    "modulo": 21,
    "codigo": "2850"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTParametrosBase.ObtenerOpcionGeneralPorModuloResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +83,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerOpcionGeneralPorModuloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `' 
+</SOAP-ENV:Envelope>`,  json: `' 
 { 
     "Btinreq": { 
 	  "Device": "GP", 
@@ -109,8 +106,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 	  "Canal": "BTDIGITAL", 
 	  "Hora": "13:29:43" 
 	} 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la opcion general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Codigo de la opcion general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opcion general de procesos (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTOpcionGeneral', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de la opcion general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Codigo de la opcion general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opcion general de procesos (S/N).' }] }];
 }

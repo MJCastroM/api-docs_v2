@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDetalledePosicionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Detalle de Posicion';
   description = `Metodo para obtener el detalle de una posicion de los titulos de un cliente.`;
   pubName    = 'BTClientes.ObtenerDetallePosicion';
   programa   = 'RBTPG540';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'monedaId', 'fecha', 'identificadorClaseActivo', 'numeradorConsulta'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha.' }, { Nombre: 'identificadorClaseActivo', Tipo: 'Int', Comentarios: 'Identificador de la clase del activo.' }, { Nombre: 'numeradorConsulta', Tipo: 'Int', Comentarios: 'Numerador de la consulta.' }];
-  outputCols = ['totalGeneral', 'sdtDetalleClaseActivo'];
   outputData = [{ Nombre: 'totalGeneral', Tipo: 'Double', Comentarios: 'Total general.' }, { Nombre: 'sdtDetalleClaseActivo', Tipo: '[sBTDetalleClaseActivo](#sbtdetalleclaseactivo)', Comentarios: 'Datos del detalle de la clase del activo.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '30013', '40001', '40002', '40021'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar la fecha.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de la clase de activo.' }, { Codigo: '30004', Descripcion: 'No se recibio el numerador de la consulta.' }, { Codigo: '30013', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40001', Descripcion: 'No se recupero el componente del portafolio para el identificador: [Numero de Identificador].' }, { Codigo: '40002', Descripcion: 'No se encontraron datos de la posicion del cliente, ejecutar el servicio de consultar posicion del cliente.' }, { Codigo: '40021', Descripcion: 'Error - No hay precio para el papel [Numero de Identificador].' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerDetallePosicion>
@@ -66,7 +62,8 @@ export class ObtenerDetalledePosicionComponent {
     "fecha": "2020-08-06",
     "identificadorClaseActivo": 10,
     "numeradorConsulta": 12928
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerDetallePosicionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -121,7 +118,7 @@ export class ObtenerDetalledePosicionComponent {
          </Btoutreq>
       </BTClientes.ObtenerDetallePosicionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -176,8 +173,8 @@ export class ObtenerDetalledePosicionComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'datosConManejoEspecie', Tipo: '[sBTDatoConManejoEspecie](#sbtdatoconmanejoespecie)', Comentarios: 'Listado de datos con manejo de especie.' }, { Nombre: 'datosSinManejoEspecie', Tipo: '[sBTDatoSinManejoEspecie](#sbtdatosinmanejoespecie)', Comentarios: 'Listado de datos sin manejo de especie.' }, { Nombre: 'nombreElemento', Tipo: 'String', Comentarios: 'Nombre del elemento del detalle.' }, { Nombre: 'porcentajeComposicion', Tipo: 'Double', Comentarios: 'Porcentaje de composicion del elemento del detalle.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total del elemento del detalle.' }, { Nombre: '### sBTDatoConManejoEspecie', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoConManejoEspecie son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador del papel.' }, { Nombre: 'resultado', Tipo: 'Double', Comentarios: 'Resultado.' }, { Nombre: 'totalEfectivo', Tipo: 'Double', Comentarios: 'Total en efectivo.' }, { Nombre: 'totalNominal', Tipo: 'Double', Comentarios: 'Total nominal.' }, { Nombre: '### sBTDatoSinManejoEspecie', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoSinManejoEspecie son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadOperaciones', Tipo: 'Int', Comentarios: 'Cantidad de operaciones.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'signo', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total.' }, { Nombre: 'totalOrigen', Tipo: 'Double', Comentarios: 'Total del origen.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDetalleClaseActivo', fields: [{ Nombre: 'datosConManejoEspecie', Tipo: '[sBTDatoConManejoEspecie](#sbtdatoconmanejoespecie)', Comentarios: 'Listado de datos con manejo de especie.' }, { Nombre: 'datosSinManejoEspecie', Tipo: '[sBTDatoSinManejoEspecie](#sbtdatosinmanejoespecie)', Comentarios: 'Listado de datos sin manejo de especie.' }, { Nombre: 'nombreElemento', Tipo: 'String', Comentarios: 'Nombre del elemento del detalle.' }, { Nombre: 'porcentajeComposicion', Tipo: 'Double', Comentarios: 'Porcentaje de composicion del elemento del detalle.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total del elemento del detalle.' }, { Nombre: '### sBTDatoConManejoEspecie', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoConManejoEspecie son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador del papel.' }, { Nombre: 'resultado', Tipo: 'Double', Comentarios: 'Resultado.' }, { Nombre: 'totalEfectivo', Tipo: 'Double', Comentarios: 'Total en efectivo.' }, { Nombre: 'totalNominal', Tipo: 'Double', Comentarios: 'Total nominal.' }, { Nombre: '### sBTDatoSinManejoEspecie', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoSinManejoEspecie son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadOperaciones', Tipo: 'Int', Comentarios: 'Cantidad de operaciones.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'signo', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total.' }, { Nombre: 'totalOrigen', Tipo: 'Double', Comentarios: 'Total del origen.' }] }];
 }

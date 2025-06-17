@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerComisionChequeraComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Comision Chequera';
   description = `Metodo para obtener el importe de comision que se cobrara para una determinada cuenta y un tipo de chequera.`;
   pubName    = 'BTCuentasCorrientes.ObtenerComisionChequera';
   programa   = 'RBTPG247';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'tipoChequeraId', 'cantidadChequeras'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'tipoChequeraId', Tipo: 'Short', Comentarios: 'Identificador de tipo de chequera.' }, { Nombre: 'cantidadChequeras', Tipo: 'Int', Comentarios: 'Cantidad de chequeras.' }];
-  outputCols = ['moneda', 'comision', 'impuestos'];
   outputData = [{ Nombre: 'moneda', Tipo: 'String', Comentarios: 'Moneda de la cuenta.' }, { Nombre: 'comision', Tipo: 'Double', Comentarios: 'Importe de comision a cobrar.' }, { Nombre: 'impuestos', Tipo: 'Double', Comentarios: 'Importe de impuestos a cobrar.' }];
-  errorCols  = ['30001', '30002', '40001', '40002', '40003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No se recibio un tipo de chequera.' }, { Codigo: '40001', Descripcion: 'El tipo de chequera indicado no cobra comision.' }, { Codigo: '40002', Descripcion: 'El codigo de comision asignado al tipo de chequera no existe.' }, { Codigo: '40003', Descripcion: 'El tipo de chequera indicado no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerComisionChequera>
@@ -64,7 +60,8 @@ export class ObtenerComisionChequeraComponent {
       "cantidadChequeras": "1"
     }
   }
-}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerComisionChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ObtenerComisionChequeraComponent {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerComisionChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -107,8 +104,8 @@ export class ObtenerComisionChequeraComponent {
         "Hora": "10:19:03",
         "Canal": "BTDIGITAL"
       }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

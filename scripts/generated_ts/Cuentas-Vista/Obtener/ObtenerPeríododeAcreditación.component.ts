@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPeriododeAcreditacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Periodo de Acreditacion';
   description = `Metodo para obtener el periodo de acreditacion de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerPeriodoDeAcreditacion';
   programa   = 'RBTPG366';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de Subcuenta con acreditacion.' }];
-  outputCols = ['sdtPeriodoAcreditacion'];
   outputData = [{ Nombre: 'sdtPeriodoAcreditacion', Tipo: '[sBTPeriodoDeAcreditacion](#sbtperiododeacreditacion)', Comentarios: 'Datos de la acreditacion de la subcuenta.' }];
-  errorCols  = ['30001', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de Operacion.' }, { Codigo: '30003', Descripcion: 'No se recupero la Operacion para el Identificador: [Numero de identificador].' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>
@@ -53,7 +49,8 @@ export class ObtenerPeriododeAcreditacionComponent {
         "Device": ""
     },
     "operacionUId": 10211
-}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +76,7 @@ export class ObtenerPeriododeAcreditacionComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -103,8 +100,8 @@ export class ObtenerPeriododeAcreditacionComponent {
         "Numero": 8478,
         "Estado": "OK"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del periodo.' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Valor del periodo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPeriodoDeAcreditacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del periodo.' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Valor del periodo.' }] }];
 }

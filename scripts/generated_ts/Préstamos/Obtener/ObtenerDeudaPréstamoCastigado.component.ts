@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerDeudaPrestamoCastigadoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Deuda Prestamo Castigado';
   description = `Metodo para obtener la deuda de un prestamo castigado.`;
   pubName    = 'BTPrestamos.ObtenerDeudaPrestamoCastigado';
   programa   = 'RBTPG080';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion simulada.' }];
-  outputCols = ['sdtPrestamoCastigado'];
   outputData = [{ Nombre: 'sdtPrestamoCastigado', Tipo: '[sBTPrestamoCastigado](#sbtprestamocastigado)', Comentarios: 'Datos del prestamo.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el identificador: [Numero de identificador].' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDeudaPrestamoCastigado>
@@ -58,7 +54,8 @@ export class ObtenerDeudaPrestamoCastigadoComponent {
 		"Token": "908433382F955E77534D3E02"
 	},
     "operacionUId": 10164
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDeudaPrestamoCastigadoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ObtenerDeudaPrestamoCastigadoComponent {
          </Btoutreq>
       </BTPrestamos.ObtenerDeudaPrestamoCastigadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -116,8 +113,8 @@ export class ObtenerDeudaPrestamoCastigadoComponent {
         "Hora": "18:34:34",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'interes', Tipo: 'Double', Comentarios: 'Interes generado.' }, { Nombre: 'interesSuspenso', Tipo: 'Double', Comentarios: 'Interes suspenso.' }, { Nombre: 'mora', Tipo: 'Double', Comentarios: 'Mora generada.' }, { Nombre: 'moraSuspenso', Tipo: 'Double', Comentarios: 'Mora suspenso.' }, { Nombre: 'saldoCapital', Tipo: 'Double', Comentarios: 'Saldo capital del prestamo.' }, { Nombre: 'seguros', Tipo: 'Double', Comentarios: 'Seguros.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPrestamoCastigado', fields: [{ Nombre: 'interes', Tipo: 'Double', Comentarios: 'Interes generado.' }, { Nombre: 'interesSuspenso', Tipo: 'Double', Comentarios: 'Interes suspenso.' }, { Nombre: 'mora', Tipo: 'Double', Comentarios: 'Mora generada.' }, { Nombre: 'moraSuspenso', Tipo: 'Double', Comentarios: 'Mora suspenso.' }, { Nombre: 'saldoCapital', Tipo: 'Double', Comentarios: 'Saldo capital del prestamo.' }, { Nombre: 'seguros', Tipo: 'Double', Comentarios: 'Seguros.' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class VisualizarSituacionLineasComponent {
-  // Cabecera e info-card
   pageTitle = 'Visualizar Situacion Lineas';
   description = `Metodo para visualizar las lineas del archivo con su estado.`;
   pubName    = 'BTCASHManagement.VisualizarSituacionLineas';
   programa   = 'RBTPGC11';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['archivoId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador del archivo.' }];
-  outputCols = ['situacionLineas'];
   outputData = [{ Nombre: 'situacionLineas', Tipo: '[sBTSituacionLinea](#sbtsituacionlinea)', Comentarios: 'Listado de lineas del archivo con su estado y mensaje.' }];
-  errorCols  = ['1030711'];
   errors     = [{ Codigo: '1030711', Descripcion: 'No se recupero informacion para el identificador de archivo recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
      <bts:BTCASHManagement.VisualizarSituacionLineas>
@@ -58,7 +54,8 @@ export class VisualizarSituacionLineasComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "archivoId": "102"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.VisualizarSituacionLineasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +89,7 @@ export class VisualizarSituacionLineasComponent {
          </Btoutreq>
       </BTCASHManagement.VisualizarSituacionLineasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -130,8 +127,8 @@ export class VisualizarSituacionLineasComponent {
         "Hora": "12:56:25",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la linea.' }, { Nombre: 'linea', Tipo: 'String', Comentarios: 'Linea de texto.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la linea.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSituacionLinea', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la linea.' }, { Nombre: 'linea', Tipo: 'String', Comentarios: 'Linea de texto.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la linea.' }] }];
 }

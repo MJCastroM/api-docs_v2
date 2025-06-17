@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SeleccionarOpcionDesembolsoComponent {
-  // Cabecera e info-card
   pageTitle = 'Seleccionar Opcion Desembolso';
   description = `Metodo para seleccionar una opcion de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.SeleccionarOpcionDesembolso';
   programa   = 'RBTPG165';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['listaUId', 'operacionUId', 'tipoDesembolso'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'listaUId', Tipo: 'Long', Comentarios: 'Identificador de lista.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de desembolso.' }, { Nombre: 'tipoDesembolso', Tipo: 'Short', Comentarios: 'Tipo de desembolso.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de lista.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador unico de operacion.' }, { Codigo: '30003', Descripcion: 'No se recibio tipo de desembolso.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>
@@ -62,7 +58,8 @@ export class SeleccionarOpcionDesembolsoComponent {
 	"listaUId":75,
 	"operacionUId":12,
    "tipoDesembolso":3
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>
          <Btinreq>
@@ -84,7 +81,7 @@ export class SeleccionarOpcionDesembolsoComponent {
          </Btoutreq>
       </BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -104,8 +101,8 @@ export class SeleccionarOpcionDesembolsoComponent {
         "Hora": "15:59:42",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

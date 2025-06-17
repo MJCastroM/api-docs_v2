@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerProximaFechaHabilComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Proxima Fecha Habil';
   description = `Metodo para obtener la proxima fecha habil a la fecha ingresada.`;
   pubName    = 'BTCalendario.ObtenerProximaFechaHabil';
   programa   = 'RBTPG331';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['calendarioId', 'fecha', 'sentido'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'sentido', Tipo: 'String', Comentarios: '[Hidden: Valor fijo 'A' para este metodo].' }];
-  outputCols = ['fechaHabil'];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'Date', Comentarios: 'Proxima fecha habil.' }];
-  errorCols  = ['30001'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.ObtenerProximaFechaHabil>
@@ -58,7 +54,8 @@ export class ObtenerProximaFechaHabilComponent {
       "Device": "1"
     },
     "fecha": "2021-03-26"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.ObtenerProximaFechaHabilResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +78,7 @@ export class ObtenerProximaFechaHabilComponent {
          </Btoutreq>
       </BTCalendarios.ObtenerProximaFechaHabilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
 	"Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",
@@ -101,8 +98,8 @@ export class ObtenerProximaFechaHabilComponent {
       "Numero": "8101",
       "Estado": "OK"
     }
-  },` } };
+  },` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CrearConCuentasAsociadasComponent {
-  // Cabecera e info-card
   pageTitle = 'Crear Con Cuentas Asociadas';
   description = `Metodo para dar de alta una tarjeta con cuentas asociadas.`;
   pubName    = 'BTTarjetasDeDebito.CrearConCuentasAsociadas';
   programa   = 'RBTPG556';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'tipoTarjeta', 'nombreTarjeta', 'sdtIdOperaciones'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de tarjeta.' }, { Nombre: 'sdtIdOperaciones', Tipo: '[sBTIdOperacion](#sbtidoperacion)', Comentarios: 'Listado de identificadores unicos de operaciones de las cuentas a asociar.' }];
-  outputCols = ['tarjetaUId', 'numeroTarjeta', 'fechaExpiracion', 'estadoTarjeta', 'estadoPlastico'];
   outputData = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador unico de tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'fechaExpiracion', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'estadoTarjeta', Tipo: 'String', Comentarios: 'Estado de la tarjeta.' }, { Nombre: 'estadoPlastico', Tipo: 'String', Comentarios: 'Estado del plastico.' }];
-  errorCols  = ['30001', '30002', '30003', '30005', '30011', '40001', '40002', '40003', '40004', '40005', '40006', '40007', '40010', '40011', '40020', '40021'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibieron los Identificadores de las operaciones a asociar.' }, { Codigo: '30005', Descripcion: 'La cuenta a asociar de la operacionUId [Numero de Identificador] es incorrecta.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion para el identificador de operacion: [Numero de Identificador].' }, { Codigo: '40001', Descripcion: 'Tipo de tarjeta inexistente TDD015.' }, { Codigo: '40002', Descripcion: 'El titular excede la cantidad maxima de tarjetas activas.' }, { Codigo: '40003', Descripcion: 'El titular no existe en FSD001.' }, { Codigo: '40004', Descripcion: 'Cuenta de costo no pertenece al titular.' }, { Codigo: '40005', Descripcion: 'Cuenta de costo no existe en FSD011.' }, { Codigo: '40006', Descripcion: 'Codigo de domicilio invalido para el titular.' }, { Codigo: '40007', Descripcion: 'Cuenta a asociar a tarjeta no pertenece al titular.' }, { Codigo: '40010', Descripcion: 'Numero de tarjeta no es valido.' }, { Codigo: '40011', Descripcion: 'TD nominada, no se debe informar TDD003TAR.' }, { Codigo: '40020', Descripcion: 'Funcionalidad inexistente en TDD025.' }, { Codigo: '40021', Descripcion: 'Funcionalidad inhabilitada en TDD025.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.CrearConCuentasAsociadas>
@@ -80,7 +76,8 @@ export class CrearConCuentasAsociadasComponent {
         }
         ]
     }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.CrearConCuentasAsociadasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -107,7 +104,7 @@ export class CrearConCuentasAsociadasComponent {
          </Btoutreq>
       </BTTarjetasDeDebito.CrearConCuentasAsociadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -132,8 +129,8 @@ export class CrearConCuentasAsociadasComponent {
       "Hora": "16:15:27",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'idOperacion', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTIdOperacion', fields: [{ Nombre: 'idOperacion', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }] }];
 }

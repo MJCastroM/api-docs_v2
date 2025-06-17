@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerEstadoDeOperacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Estado De Operacion';
   description = `Metodo para obtener el estado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeOperacion';
   programa   = 'RBTPG559';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }];
-  outputCols = ['sdtEstadoOperacion'];
   outputData = [{ Nombre: 'sdtEstadoOperacion', Tipo: '[sBTEstadoOperacion](#sbtestadooperacion)', Comentarios: 'Listado de estados.' }];
-  errorCols  = ['30001', '30002', '30003', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador unico de la operacion.' }, { Codigo: '30002', Descripcion: 'La operacion ingresada no corresponde a una cuenta vista.' }, { Codigo: '30003', Descripcion: 'No se recupero la operacion para el identificador ingresado.' }, { Codigo: '30004', Descripcion: 'No fue posible recuperar el estado para la operacion ingresada.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerEstadoDeOperacion>
@@ -58,7 +54,8 @@ export class ObtenerEstadoDeOperacionComponent {
          "Device": 1
       },
       "operacionUId": 150
-   }` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   }` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerEstadoDeOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +82,7 @@ export class ObtenerEstadoDeOperacionComponent {
          </Btoutreq>
       </BTCuentasVista.ObtenerEstadoDeOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",
@@ -112,8 +109,8 @@ export class ObtenerEstadoDeOperacionComponent {
       "Canal": "BTDIGITAL",
       "Hora": "11:42:12"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo del estado.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del estado.' }, { Nombre: 'permiteOperar', Tipo: 'String', Comentarios: '¿Permite Operar?' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTEstadoOperacion', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Codigo del estado.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del estado.' }, { Nombre: 'permiteOperar', Tipo: 'String', Comentarios: '¿Permite Operar?' }] }];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ReversarDebitosComponent {
-  // Cabecera e info-card
   pageTitle = 'Reversar Debitos';
   description = `Metodo para solicitar el reverso de un debito indicado.`;
   pubName    = 'BTSNP.ReversarDebitos';
   programa   = 'RBTPG336';
   scope      = 'Argentina';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['prestacion', 'empresaOriginante', 'clienteUId', 'idCliente', 'tipoDeDebito', 'fechaVencimiento', 'referencia'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestacion.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de debito (1=Abierto/2=Cerrado).' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del debito.' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '30008', '40001', '40002', '40003', '40004', '40011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibio el tipo de debito.' }, { Codigo: '30004', Descripcion: 'No se recibio la prestacion.' }, { Codigo: '30005', Descripcion: 'No se recibio el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se recibio la fecha de vencimiento.' }, { Codigo: '30007', Descripcion: 'El tipo de debito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se encontro un cliente para el identificador: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'No se puede realizar el reverso debido al tiempo de transcurrido desde la fecha de vencimiento.' }, { Codigo: '40002', Descripcion: 'No se puede reversar el debito el mismo dia de contabilizado.' }, { Codigo: '40003', Descripcion: 'Debito no contabilizado.' }, { Codigo: '40004', Descripcion: 'No existe el debito recibido.' }, { Codigo: '40011', Descripcion: 'Ya existe un reverso en curso' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.ReversarDebito>
@@ -70,7 +66,8 @@ export class ReversarDebitosComponent {
 		"idCliente": "2750101598490000002000",
 		"fechaVencimiento": "2019-11-20",
 		"referencia": "015984900000216"
-	}` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.ReversarDebitoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,8 +89,8 @@ export class ReversarDebitosComponent {
          </Btoutreq>
       </BTSNP.ReversarDebitoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `` } };
+</SOAP-ENV:Envelope>`,  json: `` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

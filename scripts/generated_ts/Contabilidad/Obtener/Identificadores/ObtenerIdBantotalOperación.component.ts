@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerIdentificadorBantotaldeOperacionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Identificador Bantotal de Operacion';
   description = `Metodo para obtener la clave de identificacion Bantotal de una operacion.`;
   pubName    = 'BTContabilidad.ObtenerIdBantotalOperacion';
   programa   = 'RBTPG369';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['empresa', 'sucursalId', 'moduloId', 'monedaId', 'papelId', 'cuenta', 'operacionId', 'subOperacionId', 'tipoOperacionId'];
   outputData = [{ Nombre: 'empresa', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Identificador de modulo.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'cuenta', Tipo: 'Int', Comentarios: 'Numero de cuenta.' }, { Nombre: 'operacionId', Tipo: 'Int', Comentarios: 'Identificador de operacion.' }, { Nombre: 'subOperacionId', Tipo: 'Int', Comentarios: 'Identificador de sub operacion.' }, { Nombre: 'tipoOperacionId', Tipo: 'Short', Comentarios: 'Identificador de tipo de operacion.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No existe registro para el identificador de operacion ingresado.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdBantotalOperacion>
@@ -58,7 +54,8 @@ export class ObtenerIdentificadorBantotaldeOperacionComponent {
 	  "Requerimiento": "1"
 	},
 	"operacionUId": "3"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdBantotalOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +86,7 @@ export class ObtenerIdentificadorBantotaldeOperacionComponent {
          </Btoutreq>
       </BTContabilidad.ObtenerIdBantotalOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{ 
+</SOAP-ENV:Envelope>`,  json: `{ 
     "Btinreq": { 
 	    "Device": "GP", 
 	    "Usuario": "MINSTALADOR", 
@@ -117,8 +114,8 @@ export class ObtenerIdentificadorBantotaldeOperacionComponent {
         "Numero": "11003", 
         "Estado": "OK" 
     } 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerChequerasComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Chequeras';
   description = `Metodo para obtener un listado de las chequeras activas de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequeras';
   programa   = 'RBTPG010';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }];
-  outputCols = ['sdtChequeras'];
   outputData = [{ Nombre: 'sdtChequeras', Tipo: '[sBTChequerasCC](#sbtchequerascc)', Comentarios: 'Listado de chequeras.' }];
-  errorCols  = ['30001', '30002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de Operacion.' }, { Codigo: '30002', Descripcion: 'No se recupero la operacion para el identificador.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerChequeras>
@@ -58,7 +54,8 @@ export class ObtenerChequerasComponent {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	},
     "operacionUId": 81
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerChequerasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +82,7 @@ export class ObtenerChequerasComponent {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerChequerasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -112,8 +109,8 @@ export class ObtenerChequerasComponent {
         "Hora": "11:19:27",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cantidad', Tipo: 'Int', Comentarios: 'Cantidad de chequeras.' }, { Nombre: 'chequera', Tipo: '[sBTChequera](#sbtchequera)', Comentarios: 'Datos de Chequera.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTChequera', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTChequera son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques.' }, { Nombre: 'chequeInicial', Tipo: 'Int', Comentarios: 'Numero de cheque en el cual inicia la chequera.' }, { Nombre: 'chequesDisponibles', Tipo: 'Short', Comentarios: 'Cantidad de cheques disponibles.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'estado de chequera.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'tipo de chequera.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTChequerasCC', fields: [{ Nombre: 'cantidad', Tipo: 'Int', Comentarios: 'Cantidad de chequeras.' }, { Nombre: 'chequera', Tipo: '[sBTChequera](#sbtchequera)', Comentarios: 'Datos de Chequera.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTChequera', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTChequera son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques.' }, { Nombre: 'chequeInicial', Tipo: 'Int', Comentarios: 'Numero de cheque en el cual inicia la chequera.' }, { Nombre: 'chequesDisponibles', Tipo: 'Short', Comentarios: 'Cantidad de cheques disponibles.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'estado de chequera.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'tipo de chequera.' }] }];
 }

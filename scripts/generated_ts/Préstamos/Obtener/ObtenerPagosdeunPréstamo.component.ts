@@ -9,28 +9,41 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPagosdeunPrestamoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Pagos de un Prestamo';
   description = `Metodo para obtener el detalle de pagos de un prestamo.`;
   pubName    = 'BTPrestamos.ObtenerPagos';
   programa   = 'RBTPG096';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'fechaHasta', 'fechaDesde'];
+  hasBackendConfig  = true;
+  backendText       = `Se pueden parametrizar modulos adicionales a incluir ingresando en la guia especial 1041 los siguientes valores: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | 3 
+Correlativo 2 | 1 
+Valor especifico 1 | Identificador del modulo a incluir. 
+
+Se pueden parametrizar tipos de operacion a excluir ingresando en la guia especial 1041 los siguientes valores: 
+
+Campo | Valor 
+:--------- | :----------- 
+Correlativo 1 | 3 
+Correlativo 2 | 2 
+Valor especifico 1 | Modulo del tipo de operacion a excluir. 
+Valor especifico 2 | Tipo de operacion a excluir. 
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion del prestamo.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la cual buscar pagos.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la cual buscar pagos.' }];
-  outputCols = ['sdtPagos'];
   outputData = [{ Nombre: 'sdtPagos', Tipo: '[sBTPagoPrestamo](#sbtpagoprestamo)', Comentarios: 'Listado de pagos del prestamo.' }];
-  errorCols  = ['30001', '30011'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion para el identificador recibido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerPagos>
@@ -62,7 +75,8 @@ export class ObtenerPagosdeunPrestamoComponent {
     "operacionUId": 361,
 	 "fechaHasta": "2020-03-05",
 	 "fechaDesde": "2019-03-05"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerPagosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -114,7 +128,7 @@ export class ObtenerPagosdeunPrestamoComponent {
          </Btoutreq>
       </BTPrestamos.ObtenerPagosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -162,8 +176,8 @@ export class ObtenerPagosdeunPrestamoComponent {
         "Hora": "13:56:38",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe pagado.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico del movimiento.' }, { Nombre: 'operacionUIdCobro', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de cobro.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTPagoPrestamo', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe pagado.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador unico del movimiento.' }, { Nombre: 'operacionUIdCobro', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion de cobro.' }] }];
 }

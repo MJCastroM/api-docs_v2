@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class CrearSolicitudGrupalComponent {
-  // Cabecera e info-card
   pageTitle = 'Crear Solicitud Grupal';
   description = `Metodo para crear una solicitud de credito grupal.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudGrupal';
   programa   = 'RBTPG438';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['procesoId', 'tareaId', 'usuarioIngreso', 'fechaIngreso', 'usuarioAsignacion', 'sdtDatosSolicitud'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'procesoId', Tipo: 'Short', Comentarios: '[Hidden: Identificador de proceso Workflow].' }, { Nombre: 'tareaId', Tipo: 'Short', Comentarios: '[Hidden: Identificador de tarea Workflow].' }, { Nombre: 'usuarioIngreso', Tipo: 'String', Comentarios: 'Usuario que ingresa la solicitud. En caso de no especificarse, se asigna el usuario conectado.' }, { Nombre: 'fechaIngreso', Tipo: 'Date', Comentarios: 'Fecha en la que se ingresa la solicitud. En caso de no especificarse, se asigna fecha apertura.' }, { Nombre: 'usuarioAsignacion', Tipo: 'String', Comentarios: 'Usuario al que queda asignada la tarea de solicitud. En caso de no especificarse, se asigna al Asesor de creditos.' }, { Nombre: 'sdtDatosSolicitud', Tipo: '[sBTSolicitudGrupal](#sbtsolicitudgrupal)', Comentarios: 'Datos de entrada de la solicitud.' }];
-  outputCols = ['solicitudUId'];
   outputData = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }];
-  errorCols  = ['30001', '30002', '30003', '30011', '30012', '30013', '30014', '30015', '30016', '30017', '30018', '30019'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de tarea.' }, { Codigo: '30003', Descripcion: 'No se recibio el identificador de grupo.' }, { Codigo: '30011', Descripcion: 'El Grupo seleccionado no esta vigente.' }, { Codigo: '30012', Descripcion: 'El Tipo de Grupo no existe.' }, { Codigo: '30013', Descripcion: 'No se pudo determinar el coordinador del grupo.' }, { Codigo: '30014', Descripcion: 'No se encontro registro en la FSD008 para la cuenta [Numero de cuenta].' }, { Codigo: '30015', Descripcion: 'No se obtuvo el titular representativo de la cuenta [Numero de cuenta].' }, { Codigo: '30016', Descripcion: 'No se pudo determinar la sucursal de la solicitud.' }, { Codigo: '30017', Descripcion: 'No se pudo determinar el asesor de la solicitud.' }, { Codigo: '30018', Descripcion: 'El codigo de campana no existe.' }, { Codigo: '30019', Descripcion: 'El codigo de origen de captacion no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.CrearSolicitudGrupal>
@@ -73,7 +69,8 @@ export class CrearSolicitudGrupalComponent {
         "sucursalId": "1",
         "origenCaptacion": "6"
     }
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.CrearSolicitudGrupalResponse>
          <Btinreq>
@@ -96,7 +93,7 @@ export class CrearSolicitudGrupalComponent {
          </Btoutreq>
       </BTMicrofinanzas.CrearSolicitudGrupalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",
@@ -114,8 +111,8 @@ export class CrearSolicitudGrupalComponent {
         "Numero": "121",
         "Estado": "OK"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.' }, { Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo que solicita el prestamo.' }, { Nombre: 'origenCaptacion', Tipo: 'Int', Comentarios: 'Identificador de origen captacion.' }, { Nombre: 'sucursalId', Tipo: 'Short', Comentarios: 'Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSolicitudGrupal', fields: [{ Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.' }, { Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo que solicita el prestamo.' }, { Nombre: 'origenCaptacion', Tipo: 'Int', Comentarios: 'Identificador de origen captacion.' }, { Nombre: 'sucursalId', Tipo: 'Short', Comentarios: 'Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente.' }] }];
 }

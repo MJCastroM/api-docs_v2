@@ -9,28 +9,38 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SimularConCronogramaComponent {
-  // Cabecera e info-card
   pageTitle = 'Simular Con Cronograma';
   description = `Metodo para simular el alta de un deposito a plazo con cronograma.`;
   pubName    = 'BTDepositoAPlazo.SimularConCronograma';
   programa   = 'RBTPG454';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'productoUId', 'capital', 'plazo', 'periodicidad', 'sdtDatosExtendidos'];
+  hasBackendConfig  = true;
+  backendText       = `Para configurar los productos habilitados, se debe agregar un registro en la guia especial 70100 para cada producto de la siguiente manera: 
+
+Campo | Valor 
+:--------- | :-----------  
+Correlativo 1 | Valor incremental. 
+Correlativo 2 | Modulo. 
+Correlativo 3 | Tipo de operacion. 
+Valor especifico 1 | Moneda. 
+Valor especifico 2 | Papel. 
+Valor especifico 3 | Tipo de producto (1- Deposito al vencimiento, 2- Pago periodico de intereses). 
+Importe especifico 1 | Tipo de dia para el calculo del plazo (1 - Comercial, 2 - Calendario). 
+Importe especifico 2 | Tipo de ano para el calculo de intereses (1 - Comercial, 2 - Calendario).
+Importe especifico 3 | Ajuste de dia al vencimiento (0 - No ajusta, 1 - Ajuste dia anterior, 2 - Ajuste dia posterior).
+
+:::`;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Importe capital.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'periodicidad', Tipo: 'Int', Comentarios: 'Periodo entre pagos de intereses.' }, { Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)' }];
-  outputCols = ['sdtDatosExtendidos', 'sBTSimulacionDepositoAPlazo'];
   outputData = [{ Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'sBTSimulacionDepositoAPlazo', Tipo: '[sBTSimulacionDepositoAPlazo](#sbtsimulaciondepositoaplazo)', Comentarios: 'Datos de simulacion del deposito.' }];
-  errorCols  = ['30001', '30002', '30003', '30004', '40001', '40003', '40004', '40005', '40006'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador del Producto.' }, { Codigo: '30003', Descripcion: 'No se recibio el capital del Producto.' }, { Codigo: '30004', Descripcion: 'No se recibio el plazo del Producto.' }, { Codigo: '40001', Descripcion: 'El plazo ingresado es menor al plazo minimo parametrizado para el producto.' }, { Codigo: '40003', Descripcion: 'El plazo ingresado es mayor al plazo maximo parametrizado para el producto.' }, { Codigo: '40004', Descripcion: 'El monto ingresado es menor al monto minimo parametrizado para el producto.' }, { Codigo: '40005', Descripcion: 'El monto ingresado es mayor al monto maximo parametrizado para el producto.' }, { Codigo: '40006', Descripcion: 'No se encontro Tasa para el producto a Simular.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.SimularConCronograma>
@@ -68,7 +78,8 @@ export class SimularConCronogramaComponent {
       "plazo": 360,
       "periodicidad": 30,
       "sBTDatosExtendidos": ""
-   }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.SimularConCronograma xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -305,7 +316,7 @@ export class SimularConCronogramaComponent {
          </Btoutreq>
       </BTDepositosAPlazo.SimularConCronograma>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{ 
+</SOAP-ENV:Envelope>`,  json: `'{ 
 "Btinreq": { 
          "Canal": "BTDIGITAL", 
          "Requerimiento": 1, 
@@ -530,8 +541,8 @@ export class SimularConCronogramaComponent {
          ] 
          } 
       } 
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Clave del dato extendido.' }, { Nombre: 'lista', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Lista de datos.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de dato extendido.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de dato extendido.' }, { Nombre: '### sBTDatoLista', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTDatoLista son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de informacion adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de informacion adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTSimulacionDepositoAPlazo', Tipo: '', Comentarios: '' }, { Nombre: '### sBTSimulacionDepositoAPlazo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTSimulacionDepositoAPlazo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del cronograma.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'cronograma', Tipo: '[sBTCuotaPlanDeposito](#sbtcuotaplandeposito)', Comentarios: 'Cronograma del prestamo.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'impuestos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de impuestos.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Otros conceptos.' }, { Nombre: 'periodicidad', Tipo: 'Long', Comentarios: 'Periodicidad.' }, { Nombre: 'plazo', Tipo: 'Long', Comentarios: 'Plazo.' }, { Nombre: 'precio', Tipo: 'Long', Comentarios: 'Precio.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del producto.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador de simulacion.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Sucursal.' }, { Nombre: 'tasa', Tipo: 'Long', Comentarios: 'Tasa.' }, { Nombre: 'tipoAnio', Tipo: 'String', Comentarios: 'Tipo de ano.' }, { Nombre: 'tipoDia', Tipo: 'String', Comentarios: 'Tipo de dia.' }, { Nombre: 'tipoProducto', Tipo: 'String', Comentarios: 'Tipo de producto.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: 'valorNominal', Tipo: 'Double', Comentarios: 'Valor nominal.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTProducto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTConcepto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: '### sBTCuotaPlanDeposito', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTCuotaPlanDeposito son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'impuestos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de impuestos.' }, { Nombre: 'interes', Tipo: 'Double', Comentarios: 'Interes.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Otros conceptos.' }, { Nombre: 'plazo', Tipo: 'Long', Comentarios: 'Plazo.' }, { Nombre: 'tipoCuota', Tipo: 'String', Comentarios: 'Tipo de cuota.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTDatoExtendido', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Clave del dato extendido.' }, { Nombre: 'lista', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Lista de datos.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de dato extendido.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de dato extendido.' }, { Nombre: '### sBTDatoLista', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de informacion adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de informacion adicional.' }] }, { typeName: 'sBTSimulacionDepositoAPlazo', fields: [{ Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del cronograma.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'cronograma', Tipo: '[sBTCuotaPlanDeposito](#sbtcuotaplandeposito)', Comentarios: 'Cronograma del prestamo.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'impuestos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de impuestos.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Otros conceptos.' }, { Nombre: 'periodicidad', Tipo: 'Long', Comentarios: 'Periodicidad.' }, { Nombre: 'plazo', Tipo: 'Long', Comentarios: 'Plazo.' }, { Nombre: 'precio', Tipo: 'Long', Comentarios: 'Precio.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del producto.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador de simulacion.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Sucursal.' }, { Nombre: 'tasa', Tipo: 'Long', Comentarios: 'Tasa.' }, { Nombre: 'tipoAnio', Tipo: 'String', Comentarios: 'Tipo de ano.' }, { Nombre: 'tipoDia', Tipo: 'String', Comentarios: 'Tipo de dia.' }, { Nombre: 'tipoProducto', Tipo: 'String', Comentarios: 'Tipo de producto.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: 'valorNominal', Tipo: 'Double', Comentarios: 'Valor nominal.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTProducto', fields: [{ Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: '### sBTCuotaPlanDeposito', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTCuotaPlanDeposito', fields: [{ Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'impuestos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de impuestos.' }, { Nombre: 'interes', Tipo: 'Double', Comentarios: 'Interes.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Otros conceptos.' }, { Nombre: 'plazo', Tipo: 'Long', Comentarios: 'Plazo.' }, { Nombre: 'tipoCuota', Tipo: 'String', Comentarios: 'Tipo de cuota.' }] }];
 }

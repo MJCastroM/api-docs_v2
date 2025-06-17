@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class SolicitarBajadeAdhesionComponent {
-  // Cabecera e info-card
   pageTitle = 'Solicitar Baja de Adhesion';
   description = `Metodo para solicitar la baja de la adhesion.`;
   pubName    = 'BTSNP.SolicitarBajaDeAdhesion';
   programa   = 'RBTPG326';
   scope      = 'Argentina';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['prestacion', 'empresaOriginante', 'clienteUId', 'idCliente', 'tipoDeDebito'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestacion.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de debito (1=Abierto/2=Cerrado).' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '30007', '40001', '40002'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibio el tipo de debito.' }, { Codigo: '30004', Descripcion: 'No se recibio la prestacion.' }, { Codigo: '30005', Descripcion: 'No se recibio el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se encontro un cliente para el identificador:  [Numero de identificador].' }, { Codigo: '30007', Descripcion: 'El tipo de debito no es correcto.' }, { Codigo: '40001', Descripcion: 'La adhesion no existe.' }, { Codigo: '40002', Descripcion: 'La adhesion ya esta dada de baja.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.SolicitarBajaDeAdhesion>
@@ -66,7 +62,8 @@ export class SolicitarBajadeAdhesionComponent {
     "tipoDeDebito": 1,
     "prestacion": "DEB RIO",
     "idCliente": "2750101459380000006000"
-  }` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.SolicitarBajaDeAdhesionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class SolicitarBajadeAdhesionComponent {
          </Btoutreq>
       </BTSNP.SolicitarBajaDeAdhesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",
@@ -108,8 +105,8 @@ export class SolicitarBajadeAdhesionComponent {
         "Canal": "BTDIGITAL",
         "Hora": "12:27:59"
     }
-}` } };
+}` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

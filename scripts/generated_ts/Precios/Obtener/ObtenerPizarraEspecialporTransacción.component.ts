@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerPizarraEspecialporTransaccionComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Pizarra Especial por Transaccion';
   description = `Metodo para obtener la pizarra especial para una transaccion.`;
   pubName    = 'BTPrecios.ObtenerPizarraEspecialPorTransaccion';
   programa   = 'RBTPG355';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'modulo', 'transaccion', 'monedaId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Codigo de modulo Bantotal.' }, { Nombre: 'transaccion', Tipo: 'Int', Comentarios: 'Codigo de transaccion Bantotal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }];
-  outputCols = ['arbitrajeCompra', 'arbitrajeVenta', 'tipoCambioCompra', 'tipoCambioVenta'];
   outputData = [{ Nombre: 'arbitrajeCompra', Tipo: 'Double', Comentarios: 'Valor del arbitraje (Compra).' }, { Nombre: 'arbitrajeVenta', Tipo: 'Double', Comentarios: 'Valor del arbitraje (Venta).' }, { Nombre: 'tipoCambioCompra', Tipo: 'Double', Comentarios: 'Valor del tipo de cambio (Compra).' }, { Nombre: 'tipoCambioVenta', Tipo: 'Double', Comentarios: 'Valor del tipo de cambio (Venta).' }];
-  errorCols  = ['30001', '30002', '30003', '30004'];
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar transaccion Bantotal.' }, { Codigo: '30002', Descripcion: 'Debe ingresar modulo Bantotal.' }, { Codigo: '30003', Descripcion: 'La moneda ingresada no existe.' }, { Codigo: '30004', Descripcion: 'El modulo ingresado no existe.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerPizarraEspecialPorTransaccion>
@@ -64,7 +60,8 @@ export class ObtenerPizarraEspecialporTransaccionComponent {
     "modulo":"50",
     "transaccion":"100",
     "monedaId":"2222"
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerPizarraEspecialPorTransaccionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +87,7 @@ export class ObtenerPizarraEspecialporTransaccionComponent {
          </Btoutreq>
       </BTPrecios.ObtenerPizarraEspecialPorTransaccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -114,8 +111,8 @@ export class ObtenerPizarraEspecialporTransaccionComponent {
         "Hora": "12:27:52",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

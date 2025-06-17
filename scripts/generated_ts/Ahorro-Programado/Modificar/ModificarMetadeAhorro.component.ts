@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ModificarMetadeAhorroComponent {
-  // Cabecera e info-card
   pageTitle = 'Modificar Meta de Ahorro';
   description = `Metodo para modificar la meta de ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarMetaDeAhorro';
   programa   = 'RBTPG117';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['clienteUId', 'ahorroUId', 'motivoAhorro', 'montoMetaAhorro', 'fechaMetaAhorro'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador unico de cliente.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion de ahorro.' }, { Nombre: 'motivoAhorro', Tipo: 'String', Comentarios: 'Descripcion del motivo por el cual se ahorra [Ingreso opcional].' }, { Nombre: 'montoMetaAhorro', Tipo: 'Double', Comentarios: 'Monto propuesto como meta para el ahorro [Discriminante el ingreso segun si se definio "Meta de ahorro por monto" o "Meta de ahorro por fecha"].' }, { Nombre: 'fechaMetaAhorro', Tipo: 'Date', Comentarios: 'Fecha propuesta como meta para el ahorro [Discriminante el ingreso segun si se definio "Meta de ahorro por monto" o "Meta de ahorro por fecha"].' }];
-  outputCols = [];
   outputData = [];
-  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '40001', '40002', '40003'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador del ahorro.' }, { Codigo: '30003', Descripcion: 'El monto indicado no puede ser menor que cero.' }, { Codigo: '30004', Descripcion: 'No se recupero la cuenta para el identificador de cliente.' }, { Codigo: '30005', Descripcion: 'No se recupero la operacion del ahorro para el identificador: [Numero de identificador].' }, { Codigo: '30006', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Numero de identificador].' }, { Codigo: '40001', Descripcion: 'No existe la operacion de ahorro seleccionada.' }, { Codigo: '40002', Descripcion: 'El producto seleccionado no es un producto con meta de ahorro.' }, { Codigo: '40003', Descripcion: 'La fecha seleccionada como meta de ahorro no puede ser inferior a la del dia.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ModificarMetaDeAhorro>
@@ -66,7 +62,8 @@ export class ModificarMetadeAhorroComponent {
       "motivoAhorro": "Mi ahorro 1",
       "montoMetaAhorro": 15000,  
       "fechaMetaAhorro": "0001-01-01"
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ModificarMetaDeAhorroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +85,7 @@ export class ModificarMetadeAhorroComponent {
          </Btoutreq>
       </BTAhorroProgramado.ModificarMetaDeAhorroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -108,8 +105,8 @@ export class ModificarMetadeAhorroComponent {
         "Hora": "13:30:54",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
   structuredTypes = [];
 }

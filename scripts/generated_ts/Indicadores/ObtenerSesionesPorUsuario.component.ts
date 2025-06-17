@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerSesionesPorUsuarioComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Sesiones Por Usuario';
   description = `Metodo para obtener la cantidad de sesiones abiertas por usuario.`;
   pubName    = 'BTIndicadores.ObtenerSesionesPorUsuario';
   programa   = 'RBTPG711';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtSesionesPorUsuario'];
   outputData = [{ Nombre: 'sdtSesionesPorUsuario', Tipo: '[sBTSesionesPorUsuario](#sbtsesionesporusuario)', Comentarios: 'Coleccion de datos de sesiones por usuario.' }];
-  errorCols  = [];
   errors     = [];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerSesionesPorUsuario>
@@ -56,7 +52,8 @@ export class ObtenerSesionesPorUsuarioComponent {
 		"Canal": "BTDIGITAL",
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerSesionesPorUsuarioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +89,7 @@ export class ObtenerSesionesPorUsuarioComponent {
          </Btoutreq>
       </BTIndicadores.ObtenerSesionesPorUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -125,8 +122,8 @@ export class ObtenerSesionesPorUsuarioComponent {
         "Hora": "18:40:30",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'cantidadsesiones', Tipo: 'Int', Comentarios: 'Cantidad de sesiones abiertas.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador de usuario.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSesionesPorUsuario', fields: [{ Nombre: 'cantidadsesiones', Tipo: 'Int', Comentarios: 'Cantidad de sesiones abiertas.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador de usuario.' }] }];
 }

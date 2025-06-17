@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerActividadesporTipoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Actividades por Tipo';
   description = `Metodo para obtener un listado de las actividades por tipo ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerActividadesPorTipo';
   programa   = 'RBTPG478';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['tipoActividadId'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'tipoActividadId', Tipo: 'Long', Comentarios: 'Identificador de tipo de actividad.' }];
-  outputCols = ['sdtActividades'];
   outputData = [{ Nombre: 'sdtActividades', Tipo: '[sBTActividad](#sbtactividad)', Comentarios: 'Listado de actividades.' }];
-  errorCols  = ['30001', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio codigo de actividad.' }, { Codigo: '40001', Descripcion: 'No existen actividades ingresadas en el sistema.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerActividadesPorTipo>
@@ -58,7 +54,8 @@ export class ObtenerActividadesporTipoComponent {
 	  "Requerimiento": "1"
 	},
 	"tipoActividadId": "1",
-}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerActividadesPorTipoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -247,7 +244,7 @@ export class ObtenerActividadesporTipoComponent {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerActividadesPorTipoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `{
+</SOAP-ENV:Envelope>`,  json: `{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",
@@ -431,8 +428,8 @@ export class ObtenerActividadesporTipoComponent {
       "Canal": "BTDIGITAL",
       "Hora": "16:20:35"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de actividad.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de actividad.' }, { Nombre: 'identificadorEntidadReguladora', Tipo: 'Long', Comentarios: 'Identificador de entidad reguladora.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTActividad', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de actividad.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de actividad.' }, { Nombre: 'identificadorEntidadReguladora', Tipo: 'Long', Comentarios: 'Identificador de entidad reguladora.' }] }];
 }

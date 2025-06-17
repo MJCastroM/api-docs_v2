@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerTiposdeDesembolsoComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Tipos de Desembolso';
   description = `Metodo para obtener los tipos de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.ObtenerTiposDeDesembolso';
   programa   = 'RBTPG578';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = [];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [];
-  outputCols = ['sdtTiposDesembolso'];
   outputData = [{ Nombre: 'sdtTiposDesembolso', Tipo: '[sBTTipoDesembolso](#sbttipodesembolso)', Comentarios: 'Listado de tipos de desembolso.' }];
-  errorCols  = ['40001'];
   errors     = [{ Codigo: '40001', Descripcion: 'No hay tipos de desembolsos parametrizados.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDescuentoDocumentos.ObtenerTiposDeDesembolso>
@@ -56,7 +52,8 @@ export class ObtenerTiposdeDesembolsoComponent {
           "Usuario": "INSTALADOR",
           "Token": "BE98B0157319F32A4ACF3501"
     },
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDescuentoDocumentos.ObtenerTiposDeDesembolsoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -144,7 +141,7 @@ export class ObtenerTiposdeDesembolsoComponent {
          </Btoutreq>
       </BTDescuentoDocumentos.ObtenerTiposDeDesembolsoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Usuario": "INSTALADOR",
@@ -230,8 +227,8 @@ export class ObtenerTiposdeDesembolsoComponent {
       "Requerimiento": "1",
       "Canal": "BTDIGITAL"
    }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de desembolso.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de desembolso.' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Modulo.' }, { Nombre: 'monedaDesembolso', Tipo: 'Short', Comentarios: 'Moneda del tipo de desembolso.' }, { Nombre: 'papelDesembolso', Tipo: 'Int', Comentarios: 'Papel del tipo de desembolso.' }, { Nombre: 'pideCheque', Tipo: 'String', Comentarios: '¿Pide cheque? (S = Si / N = No).' }, { Nombre: 'pideCuenta', Tipo: 'String', Comentarios: '¿Pide cuenta? (S = Si / N = No).' }, { Nombre: 'pideOperacion', Tipo: 'String', Comentarios: '¿Pide operacion? (S = Si / N = No).' }, { Nombre: 'pideSucursal', Tipo: 'String', Comentarios: '¿Pide sucursal? (S = Si / N = No).' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'rubro', Tipo: 'Long', Comentarios: 'Rubro.' }, { Nombre: 'simboloMonedaDesembolso', Tipo: 'String', Comentarios: 'Simbolo de la moneda del tipo de desembolso.' }, { Nombre: 'simboloPapelDesembolso', Tipo: 'String', Comentarios: 'Simbolo del papel del tipo de desembolso.' }, { Nombre: 'tipo', Tipo: 'Byte', Comentarios: 'Tipo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTTipoDesembolso', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion del tipo de desembolso.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de desembolso.' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Modulo.' }, { Nombre: 'monedaDesembolso', Tipo: 'Short', Comentarios: 'Moneda del tipo de desembolso.' }, { Nombre: 'papelDesembolso', Tipo: 'Int', Comentarios: 'Papel del tipo de desembolso.' }, { Nombre: 'pideCheque', Tipo: 'String', Comentarios: '¿Pide cheque? (S = Si / N = No).' }, { Nombre: 'pideCuenta', Tipo: 'String', Comentarios: '¿Pide cuenta? (S = Si / N = No).' }, { Nombre: 'pideOperacion', Tipo: 'String', Comentarios: '¿Pide operacion? (S = Si / N = No).' }, { Nombre: 'pideSucursal', Tipo: 'String', Comentarios: '¿Pide sucursal? (S = Si / N = No).' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'rubro', Tipo: 'Long', Comentarios: 'Rubro.' }, { Nombre: 'simboloMonedaDesembolso', Tipo: 'String', Comentarios: 'Simbolo de la moneda del tipo de desembolso.' }, { Nombre: 'simboloPapelDesembolso', Tipo: 'String', Comentarios: 'Simbolo del papel del tipo de desembolso.' }, { Nombre: 'tipo', Tipo: 'Byte', Comentarios: 'Tipo.' }] }];
 }

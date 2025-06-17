@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerCronogramadeAbonosComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Cronograma de Abonos';
   description = `Metodo para obtener el cronograma de abonos de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.ObtenerCronogramaDeAbonos';
   programa   = 'RBTPG528';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['operacionUId', 'filtroAbono'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'filtroAbono', Tipo: 'Byte', Comentarios: 'Tipo de filtro de abono. Se pueden enviar los siguientes [valores](#valores1).' }];
-  outputCols = ['sdtSituacionAhorro'];
   outputData = [{ Nombre: 'sdtSituacionAhorro', Tipo: '[sBTSituacionAhorro ](#sbtsituacionahorro)', Comentarios: 'Datos de la situacion del cronograma.' }];
-  errorCols  = ['30001', '30002', '30011', '40001'];
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de operacion.' }, { Codigo: '30002', Descripcion: 'No se recibio el valor de filtroCuota.' }, { Codigo: '30011', Descripcion: 'No se recupero la operacion para el identificador recibido.' }, { Codigo: '40001', Descripcion: 'El filtro de la cuota no es valido.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>
@@ -60,7 +56,8 @@ export class ObtenerCronogramadeAbonosComponent {
 	},
 		"operacionUId": 94,
       "filtroAbono": 1
-	}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	}'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -207,7 +204,7 @@ export class ObtenerCronogramadeAbonosComponent {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
@@ -354,8 +351,8 @@ export class ObtenerCronogramadeAbonosComponent {
         "Hora": "11:10:49",
         "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'abonos', Tipo: '[sBTAbono](#sbtabono)', Comentarios: 'Listado de abonos.' }, { Nombre: 'capitalAhorro', Tipo: 'Double', Comentarios: 'Capital.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Indentificador unico del cliente.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'fechaProximoAbono', Tipo: 'Date', Comentarios: 'Fecha del proximo abono.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'producto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'titular', Tipo: 'String', Comentarios: 'Titular.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total.' }, { Nombre: '### sBTAbono', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTAbono son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'abono', Tipo: 'Double', Comentarios: 'Abono.' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del abono.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses del abono.' }, { Nombre: 'numeroAbono', Tipo: 'Int', Comentarios: 'Numero de abono.' }, { Nombre: 'plazo', Tipo: 'int', Comentarios: 'Plazo del abono.' }, { Nombre: 'TAE', Tipo: 'Double', Comentarios: 'TAE.' }, { Nombre: 'TAN', Tipo: 'Double', Comentarios: 'TAN.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa del abono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTSituacionAhorro', fields: [{ Nombre: 'abonos', Tipo: '[sBTAbono](#sbtabono)', Comentarios: 'Listado de abonos.' }, { Nombre: 'capitalAhorro', Tipo: 'Double', Comentarios: 'Capital.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Indentificador unico del cliente.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'fechaProximoAbono', Tipo: 'Date', Comentarios: 'Fecha del proximo abono.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de la operacion.' }, { Nombre: 'producto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'titular', Tipo: 'String', Comentarios: 'Titular.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total.' }, { Nombre: '### sBTAbono', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTAbono', fields: [{ Nombre: 'abono', Tipo: 'Double', Comentarios: 'Abono.' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del abono.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses del abono.' }, { Nombre: 'numeroAbono', Tipo: 'Int', Comentarios: 'Numero de abono.' }, { Nombre: 'plazo', Tipo: 'int', Comentarios: 'Plazo del abono.' }, { Nombre: 'TAE', Tipo: 'Double', Comentarios: 'TAE.' }, { Nombre: 'TAN', Tipo: 'Double', Comentarios: 'TAN.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa del abono.' }] }];
 }

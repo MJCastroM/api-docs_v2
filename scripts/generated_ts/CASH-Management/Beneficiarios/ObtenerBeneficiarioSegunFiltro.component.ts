@@ -9,28 +9,24 @@ import { fadeInOut } from '../../../../route-animations';
   host: { '[@fadeInOut]': '' }
 })
 export class ObtenerBeneficiarioSegunFiltroComponent {
-  // Cabecera e info-card
   pageTitle = 'Obtener Beneficiario Segun Filtro';
   description = `Metodo para obtener el beneficiario segun el filtro.`;
   pubName    = 'BTCASHManagement.ObtenerBeneficiarioSegunFiltro';
   programa   = 'RBTPGC075';
   scope      = 'Global';
 
-  // Backend config
-  hasBackendConfig = false;
-  backendText      = '';
-  backendConfig    = [];
+  
 
-  // Pestañas de Input/Output/Errors
-  inputCols  = ['contratoId', 'servicio', 'clienteUId', 'agendaId', 'sdtValorCampoCash'];
+  hasBackendConfig  = false;
+  backendText       = ``;
+  backendConfig     = [];
+
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Short', Comentarios: 'Identificador del contrato.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'clienteUId', Tipo: 'String', Comentarios: 'Identificador unico del cliente.' }, { Nombre: 'agendaId', Tipo: 'Short', Comentarios: 'Identificador de la agenda.' }, { Nombre: 'sdtValorCampoCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Lista de valores de campos CASH a buscar.' }];
-  outputCols = ['sdtBeneficiario'];
   outputData = [{ Nombre: 'sdtBeneficiario', Tipo: '[sBTResumenBeneficiario](#sbtresumenbeneficiario)', Comentarios: 'Listado de beneficiarios.' }];
-  errorCols  = ['1030701', '1030704', '1030709', '1030713', '1030780'];
   errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente' }, { Codigo: '1030713', Descripcion: 'El contrato no corresponde a la cuenta recibida.' }, { Codigo: '1030780', Descripcion: 'No se recupero Beneficiario para la identificacion recibida.' }];
 
-  // Ejemplos de invocacion / respuesta
-  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+  examples = {
+    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>
@@ -76,7 +72,8 @@ export class ObtenerBeneficiarioSegunFiltroComponent {
          "valor": ""
          }
       }
-  }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  }'` },
+    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -188,7 +185,7 @@ export class ObtenerBeneficiarioSegunFiltroComponent {
          </Btoutreq>
       </BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`, json: `'{
+</SOAP-ENV:Envelope>`,  json: `'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",
@@ -300,8 +297,8 @@ export class ObtenerBeneficiarioSegunFiltroComponent {
       "Hora": "13:10:17",
       "Canal": "BTDIGITAL"
     }
-}'` } };
+}'` }
+  };
 
-  // Datos estructurados
-  structuredTypes = [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }] }];
 }
