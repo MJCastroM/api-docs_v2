@@ -1,11 +1,20 @@
-
 <mat-accordion>
-  <mat-expansion-panel>
+  <mat-expansion-panel *ngFor="let sdt of types">
     <mat-expansion-panel-header>
-      <mat-panel-title>SDT</mat-panel-title>
+      <mat-panel-title>
+        {{ sdt.typeName }}
+      </mat-panel-title>
     </mat-expansion-panel-header>
-    
-    <app-api-table [columns]="['Nombre', 'Tipo', 'Comentarios']" [data]="types"></app-api-table>
-    
+
+    <!-- Main table for this SDT -->
+    <app-api-table
+      [columns]="['Nombre','Tipo','Comentarios']"
+      [data]="sdt.fields">
+    </app-api-table>
+
+    <!-- RECURSION: if this SDT has children, render them here -->
+    <div *ngIf="sdt.children?.length" class="nested-sdts">
+      <app-structured-data [types]="sdt.children || []"></app-structured-data>
+    </div>
   </mat-expansion-panel>
 </mat-accordion>

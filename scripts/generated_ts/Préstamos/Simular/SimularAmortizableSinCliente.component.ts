@@ -1,0 +1,275 @@
+import { Component } from '@angular/core';
+import { fadeInOut } from '../../../../route-animations';
+
+@Component({
+  selector: 'app-SimularAmortizableSinCliente',
+  templateUrl: './DocTemplate.component.html',
+  styleUrls: ['./DocTemplate.component.scss'],
+  animations: [ fadeInOut ],
+  host: { '[@fadeInOut]': '' }
+})
+export class SimularAmortizableSinClienteComponent {
+  // Cabecera e info-card
+  pageTitle = 'Simular Amortizable Sin Cliente';
+  description = `Metodo para simular el alta de un prestamo amortizable sin cliente.`;
+  pubName    = 'BTPrestamos.SimularAmortizableSinCliente';
+  programa   = 'RBTPG265';
+  scope      = 'Global';
+
+  // Backend config
+  hasBackendConfig = false;
+  backendText      = '';
+  backendConfig    = [];
+
+  // Pestañas de Input/Output/Errors
+  inputCols  = ['sdtDatosAmortizable'];
+  inputData  = [{ Nombre: 'sdtDatosAmortizable', Tipo: '[sBTDatosAmortizable](#sbtdatosamortizable)', Comentarios: 'Datos de la simulacion.' }];
+  outputCols = ['sdtSimulacion'];
+  outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos del prestamo simulado' }];
+  errorCols  = ['30001', '30002', '30003', '30004', '30005', '30006', '31001', '31002', '40001', '40012', '40013', '40014', '40015', '40016', '40017', '40018', '40019', '40020', '40021', '40022', '40023', '40024', '40025', '40026', '40027', '40037', '40040', '40041', '40048', '40049', '40054', '40071', '40072', '40076', '40147', '40148', '40149'];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recupero la cuenta para el Identificador.' }, { Codigo: '30004', Descripcion: 'El Identificador unico de Producto es incorrecto.' }, { Codigo: '30005', Descripcion: 'No se recibio la Fecha de Primer Pago desde el origen.' }, { Codigo: '30006', Descripcion: 'No se recibio el Monto de Capital desde el origen.' }, { Codigo: '31001', Descripcion: 'La simulacion no esta vigente.' }, { Codigo: '31002', Descripcion: 'La simulacion no existe.' }, { Codigo: '40001', Descripcion: 'La Cuenta indicada es incorrecta.' }, { Codigo: '40012', Descripcion: 'La Fecha de Primer Pago indicada es menor a la Fecha Valor.' }, { Codigo: '40013', Descripcion: 'La Fecha de Vencimiento indicada es menor a la Fecha Valor.' }, { Codigo: '40014', Descripcion: 'La Fecha de Primer Pago indicada es mayor a la Fecha de Vencimiento.' }, { Codigo: '40015', Descripcion: 'El Plazo Total indicado es incorrecto.' }, { Codigo: '40016', Descripcion: 'La Cantidad de Cuotas indicada es menor al minimo permitido.' }, { Codigo: '40017', Descripcion: 'La Cantidad de Cuotas indicada es mayor al maximo permitido.' }, { Codigo: '40018', Descripcion: 'La Cantidad de Cuotas indicada es incorrecta.' }, { Codigo: '40019', Descripcion: 'La Cantidad de Cuotas indicada no esta preseteada.' }, { Codigo: '40020', Descripcion: 'El periodo entre Cuotas indicado es menor al minimo permitido.' }, { Codigo: '40021', Descripcion: 'El periodo entre Cuotas indicado es mayor al maximo permitido.' }, { Codigo: '40022', Descripcion: 'El periodo entre Cuotas indicado es incorrecto.' }, { Codigo: '40023', Descripcion: 'El periodo entre Cuotas indicado no esta preseteado.' }, { Codigo: '40024', Descripcion: 'El Valor Cuota indicado es incorrecto.' }, { Codigo: '40025', Descripcion: 'El Capital indicado es menor al minimo permitido.' }, { Codigo: '40026', Descripcion: 'El Capital indicado es mayor al maximo permitido.' }, { Codigo: '40027', Descripcion: 'El Capital indicado es incorrecto.' }, { Codigo: '40037', Descripcion: 'La Clase de Tasa indicada es incorrecta.' }, { Codigo: '40040', Descripcion: 'La Tasa Fija indicada esta fuera de tolerancia.' }, { Codigo: '40041', Descripcion: 'La Tasa indicada es mayor a la Tasa de Usura.' }, { Codigo: '40048', Descripcion: 'El periodo indicado es incorrecto.' }, { Codigo: '40049', Descripcion: 'El Tipo de Tasa indicado es incorrecto.' }, { Codigo: '40054', Descripcion: 'La Tasa indicada es incorrecta.' }, { Codigo: '40071', Descripcion: 'El Plazo Total de la Operacion es mayor al maximo permitido.' }, { Codigo: '40072', Descripcion: 'El Plazo Total de la Operacion es menor al minimo permitido.' }, { Codigo: '40076', Descripcion: 'El Producto indicado no esta Preseteado.' }, { Codigo: '40147', Descripcion: 'No se cumple el periodo minimo entre Fecha Valor y Fecha de Primer.' }, { Codigo: '40148', Descripcion: 'El Capital indicado debe ser mayor al Valor Cuota.' }, { Codigo: '40149', Descripcion: 'No se cumple el periodo maximo entre Fecha Valor y Fecha de Primer.' }];
+
+  // Ejemplos de invocacion / respuesta
+  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bts:BTPrestamos.SimularAmortizableSinCliente>
+         <bts:Btinreq>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:Token>72e34bcd9d4A8B5C60A82434</bts:Token>
+            <bts:Device>AV</bts:Device>          
+         </bts:Btinreq>
+         <bts:sdtDatosAmortizable>
+            <bts:monto>10000</bts:monto>
+            <bts:productoUId>61</bts:productoUId>
+            <bts:fechaPrimerPago>2019-01-12</bts:fechaPrimerPago>
+            <bts:pizarra></bts:pizarra>
+            <bts:tasa></bts:tasa>
+            <bts:actividad>11200</bts:actividad>
+            <bts:periodoCuotas>30</bts:periodoCuotas>
+            <bts:cantidadCuotas>12</bts:cantidadCuotas>
+         </bts:sdtDatosAmortizable>
+      </bts:BTPrestamos.SimularAmortizableSinCliente>
+   </soapenv:Body>
+</soapenv:Envelope>`, json: `curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularAmortizableSinCliente=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: ca2f2e9d-b972-f575-227f-cd86920d3961' \
+  -d '{
+	"Btinreq": {
+		"Device": "AV",
+		"Usuario": "MINSTALADOR",
+		"Requerimiento": "",
+		"Canal": "BTDIGITAL",
+		"Token": "fa2c02c95a4A8B5C60A82434"
+	},
+    "sdtDatosAmortizable": {
+        "productoUId": 61,
+        "fechaPrimerPago": "2018-12-10",
+        "monto": 1000,
+        "cantidadCuotas": 12,
+        "periodoCuotas": 30,
+		"pizarra": 0,
+		"tasa": 0,
+		"actividad": 11200,
+		"periodoCuotas": 30,
+		"cantidadCuotas": 12
+    }
+}'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <SOAP-ENV:Body>
+      <BTPrestamos.SimularAmortizableSinClienteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+         <Btinreq>
+            <Device>AV</Device>
+            <Usuario>MINSTALADOR</Usuario>
+            <Requerimiento>1</Requerimiento>
+            <Canal>BTDIGITAL</Canal>
+            <Token>72e34bcd9d4A8B5C60A82434</Token>
+         </Btinreq>
+         <sdtSimulacion>
+            <otrosConceptos></otrosConceptos>
+            <cronograma>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-01-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-02-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-03-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-04-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-05-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-06-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-07-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-08-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-09-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-10-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.01</importe>
+                  <fechaPago>2019-11-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+               <sBTCuotaPrestamoAlta>
+                  <importe>1194.04</importe>
+                  <fechaPago>2019-12-12</fechaPago>
+               </sBTCuotaPrestamoAlta>
+            </cronograma>
+            <fechaValor>2018-12-11</fechaValor>
+            <capital>10000.00</capital>
+            <tasaEfectiva>0.000000</tasaEfectiva>
+            <intereses>1288.18</intereses>
+            <tasaNominalAnual>23.000000</tasaNominalAnual>
+            <totalPrestamo>14328.15</totalPrestamo>
+            <valorCuota>1194.01</valorCuota>
+            <tasaEfectivaAnual>25.590075</tasaEfectivaAnual>
+            <operacionUId>1</operacionUId>
+            <tasa>23.000000</tasa>
+            <fechaPrimerPago>2019-01-12</fechaPrimerPago>
+            <fechaVencimiento>2019-12-12</fechaVencimiento>
+            <plazo>361</plazo>
+            <producto>
+               <papel>$</papel>
+               <moneda>$</moneda>
+               <productoUId>61</productoUId>
+               <nombre>PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF</nombre>
+            </producto>
+         </sdtSimulacion>
+         <Erroresnegocio></Erroresnegocio>
+         <Btoutreq>
+            <Numero>623</Numero>
+            <Estado>OK</Estado>
+            <Servicio>BTPrestamos.SimularAmortizableSinCliente</Servicio>
+            <Fecha>2019-11-20</Fecha>
+            <Requerimiento>1</Requerimiento>
+            <Hora>09:23:04</Hora>
+            <Canal>BTDIGITAL</Canal>
+         </Btoutreq>
+      </BTPrestamos.SimularAmortizableSinClienteResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>`, json: `'{
+    "Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Requerimiento": "1",
+        "Usuario": "BANTOTAL",
+        "Token": "1017966210F955E77534D3E0",
+        "Device": "AC"
+    },
+    "sdtSimulacionPrestamo": {
+        "operacionUId": 1,
+        "producto": {
+            "productoUId": 61,
+            "nombre": "PRÉSTAMOS HIPOTECARIOS, Amortización Automática TF",
+            "moneda": "$",
+            "papel": "$"
+        },
+        "capital": 1000.00,
+        "valorCuota": 420.44,
+        "intereses": 87.11,
+        "tasa": 3.052000,
+        "tasaEfectiva": 0.000000,
+        "tasaEfectivaAnual": 3.052000,
+        "tasaNominalAnual": 3.010070,
+        "totalPrestamo": 5045.27,
+        "fechaValor": "2016-08-15",
+        "fechaVencimiento": "2019-11-11",
+        "fechaPrimerPago": "2018-12-10",
+        "plazo": 1183,
+        "otrosConceptos": {
+            "sBTConcepto": []
+        },
+        "cronograma": {
+            "sBTCuotaPrestamoAlta": [
+                {
+                    "fechaPago": "2018-12-10",
+                    "importe": 2934.49
+                },
+                {
+                    "fechaPago": "2019-01-10",
+                    "importe": 192.14
+                },
+                {
+                    "fechaPago": "2019-02-11",
+                    "importe": 192.11
+                },
+                {
+                    "fechaPago": "2019-03-11",
+                    "importe": 192.00
+                },
+                {
+                    "fechaPago": "2019-04-10",
+                    "importe": 191.98
+                },
+                {
+                    "fechaPago": "2019-05-10",
+                    "importe": 191.93
+                },
+                {
+                    "fechaPago": "2019-06-10",
+                    "importe": 191.89
+                },
+                {
+                    "fechaPago": "2019-07-10",
+                    "importe": 191.83
+                },
+                {
+                    "fechaPago": "2019-08-12",
+                    "importe": 191.81
+                },
+                {
+                    "fechaPago": "2019-09-10",
+                    "importe": 191.73
+                },
+                {
+                    "fechaPago": "2019-10-10",
+                    "importe": 191.69
+                },
+                {
+                    "fechaPago": "2019-11-11",
+                    "importe": 191.67
+                }
+            ]
+        }
+    },
+    "Erroresnegocio": {
+        "BTErrorNegocio": []
+    },
+    "Btoutreq": {
+        "Canal": "BTDIGITAL",
+        "Servicio": "BTPrestamos.SimularAmortizableSinCliente",
+        "Fecha": "2019-11-20",
+        "Hora": "11:44:44",
+        "Requerimiento": "1",
+        "Numero": 7048,
+        "Estado": "OK"
+    }
+}'` } };
+
+  // Datos estructurados
+  structuredTypes = [{ Nombre: 'actividad', Tipo: 'Long', Comentarios: 'Codigo de actividad (Destino del credito).' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'fechaPrimerPago', Tipo: 'Date', Comentarios: 'Fecha de primer pago.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Capital solicitado.' }, { Nombre: 'periodoCuotas', Tipo: 'Int', Comentarios: 'Periodo entre cuotas.' }, { Nombre: 'pizarra', Tipo: 'Short', Comentarios: 'Tipo de pizarra. Si no se indica toma la preseteada para el producto.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa. Si no se indica toma la correspondiente al tipo de pizarra.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTSimulacionPrestamo', Tipo: '', Comentarios: '' }, { Nombre: '### sBTSimulacionPrestamo', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTSimulacionPrestamo son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Capital del prestamo.' }, { Nombre: 'cronograma', Tipo: '[sBTCuotaPrestamoAlta](#sbtcuotaprestamoalta)', Comentarios: 'Cronograma del prestamo.' }, { Nombre: 'fechaPrimerPago', Tipo: 'Date', Comentarios: 'Fecha de primer pago.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador unico de operacion.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Otros conceptos.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo del prestamo.' }, { Nombre: 'producto', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos del producto.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaEfectiva', Tipo: 'Double', Comentarios: 'Tasa efectiva.' }, { Nombre: 'tasaEfectivaAnual', Tipo: 'Double', Comentarios: 'Tasa efectiva anual.' }, { Nombre: 'tasaNominalAnual', Tipo: 'Double', Comentarios: 'Tasa nominal anual.' }, { Nombre: 'totalPrestamo', Tipo: 'Double', Comentarios: 'Total a pagar.' }, { Nombre: 'valorCuota', Tipo: 'Double', Comentarios: 'Valor cuota.' }, { Nombre: '### sBTProducto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTProducto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Simbolo de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Simbolo del papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador unico de producto.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }, { Nombre: '::: center', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTConcepto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: '### sBTCuotaPrestamoAlta', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTCuotaPrestamoAlta son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago de la cuota.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe de la cuota.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+}

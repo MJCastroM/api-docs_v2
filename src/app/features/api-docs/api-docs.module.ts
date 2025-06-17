@@ -23,14 +23,12 @@ import { CodeExampleComponent }    from './components/code-example/code-example.
 import { StructuredDataComponent } from './components/structured-data/structured-data.component';
 //import Page components
 import { BTCliObtSldPrdComp } from './api-doc-page/Clientes/BTCliObtSldPrd.component';
-import { BTCliObtSldPrdComp2 } from './api-doc-page/Clientes/BTCliObtSldPrd2.component';
 //import End page components
 
 @NgModule({
   declarations: [
     //declarations Page components
     BTCliObtSldPrdComp,
-    BTCliObtSldPrdComp2,
     //declarations End page components
     CodeExampleComponent,
     SidebarComponent,
@@ -58,7 +56,6 @@ import { BTCliObtSldPrdComp2 } from './api-doc-page/Clientes/BTCliObtSldPrd2.com
   exports: [
     //exports Page components
     BTCliObtSldPrdComp,
-    BTCliObtSldPrdComp2,
     //exports End page components
     SidebarComponent    // exporta sólo lo que necesites fuera del módulo
   ]

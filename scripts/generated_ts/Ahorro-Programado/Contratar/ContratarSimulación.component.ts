@@ -1,0 +1,119 @@
+import { Component } from '@angular/core';
+import { fadeInOut } from '../../../../route-animations';
+
+@Component({
+  selector: 'app-ContratarSimulacin',
+  templateUrl: './DocTemplate.component.html',
+  styleUrls: ['./DocTemplate.component.scss'],
+  animations: [ fadeInOut ],
+  host: { '[@fadeInOut]': '' }
+})
+export class ContratarSimulacionComponent {
+  // Cabecera e info-card
+  pageTitle = 'Contratar Simulacion';
+  description = `Metodo para contratar un ahorro programado a partir de una simulacion.`;
+  pubName    = 'BTAhorroProgramado.ContratarSimulacion';
+  programa   = 'RBTPG445';
+  scope      = 'Global';
+
+  // Backend config
+  hasBackendConfig = false;
+  backendText      = '';
+  backendConfig    = [];
+
+  // Pestañas de Input/Output/Errors
+  inputCols  = ['sdtDatos'];
+  inputData  = [{ Nombre: 'sdtDatos', Tipo: '[sBTCrearSolicitudAhorro](#sbtcrearsolicitudahorro)', Comentarios: 'Datos de la solicitud de ahorro programado.' }];
+  outputCols = ['ahorroUId'];
+  outputData = [{ Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador de ahorro.' }];
+  errorCols  = ['30001', '30002', '30009', '30010', '30011'];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibio el identificador de la simulacion.' }, { Codigo: '30002', Descripcion: 'No se recibio el identificador del cliente.' }, { Codigo: '30009', Descripcion: 'No se recupero la cuenta para el identificador de cliente: [Numero de Identificador].' }, { Codigo: '30010', Descripcion: 'No se recupero la cuenta origen del ahorro para el identificador: [Numero de Identificador].' }, { Codigo: '30011', Descripcion: 'No se recupero la cuenta destino del ahorro para el identificador: [Numero de Identificador].' }];
+
+  // Ejemplos de invocacion / respuesta
+  examples = { invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bts:BTAhorroProgramado.ContratarSimulacion>
+         <bts:Btinreq>
+            <bts:Canal>BTDIGITAL</bts:Canal>
+            <bts:Usuario>MINSTALADOR</bts:Usuario>
+            <bts:Device>GL</bts:Device>
+            <bts:Requerimiento>1</bts:Requerimiento>
+            <bts:Token>01D45E9964612A4C8CCB1055</bts:Token>
+         </bts:Btinreq>
+         <bts:sdtDatos>
+            <bts:simulacionId>741</bts:simulacionId>
+            <bts:cuentaDestinoUid>661</bts:cuentaDestinoUid>
+            <bts:motivoAhorro>Prueba</bts:motivoAhorro>
+            <bts:cuentaOrigenUid>661</bts:cuentaOrigenUid>
+            <bts:clienteUid>61</bts:clienteUid>
+         </bts:sdtDatos>
+      </bts:BTAhorroProgramado.ContratarSimulacion>
+   </soapenv:Body>
+</soapenv:Envelope>`, json: `curl -X POST \
+  'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ContratarSimulacion' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379' \
+  -d '{
+	"Btinreq": {
+          "Canal": "BTDIGITAL",
+          "Usuario": "MINSTALADOR",
+          "Device": "GL",
+          "Requerimiento": 1,
+          "Token": "01D45E9964612A4C8CCB1055"
+        },
+        "sdtDatos": {
+          "simulacionId": 741,
+          "cuentaDestinoUid": 661,
+          "motivoAhorro": "Prueba",
+          "cuentaOrigenUid": 661,
+          "clienteUid": 61
+        }
+    }'` }, response: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <SOAP-ENV:Body>
+      <BTAhorroProgramado.ContratarSimulacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
+         <Btinreq>
+            <Canal>BTDIGITAL</Canal>
+            <Usuario>MINSTALADOR</Usuario>
+            <Device>GL</Device>
+            <Requerimiento>1</Requerimiento>
+            <Token>01D45E9964612A4C8CCB1055</Token>
+         </Btinreq>
+         <ahorroUId>1102</ahorroUId>
+         <Erroresnegocio></Erroresnegocio>
+         <Btoutreq>
+            <Estado>OK</Estado>
+            <Fecha>2022-11-29</Fecha>
+            <Hora>17:23:23</Hora>
+            <Numero>11097</Numero>
+            <Servicio>BTAhorroProgramado.ContratarSimulacion</Servicio>
+            <Requerimiento>1</Requerimiento>
+            <Canal>BTDIGITAL</Canal>
+         </Btoutreq>
+      </BTAhorroProgramado.ContratarSimulacionResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>`, json: `'{
+	"Btinreq": {
+        "Canal": "BTDIGITAL",
+        "Usuario": "MINSTALADOR",
+        "Device": "GL",
+        "Requerimiento": 1,
+        "Token": "01D45E9964612A4C8CCB1055"
+    },
+    "ahorroUId": 1102,
+    "Erroresnegocio": "",
+    "Btoutreq": {
+        "Estado": "OK",
+        "Fecha": "2022-11-29",
+        "Hora": "17:23:23",
+        "Numero": 11097,
+        "Servicio": "BTAhorroProgramado.ContratarSimulacion",
+        "Requerimiento": 1,
+        "Canal": "BTDIGITAL"
+    }
+}'` } };
+
+  // Datos estructurados
+  structuredTypes = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'cuentaDestinoUId', Tipo: 'Long', Comentarios: 'Identificador de cuenta destino.' }, { Nombre: 'cuentaOrigenUId', Tipo: 'Long', Comentarios: 'Identificador de cuenta origen.' }, { Nombre: 'motivoAhorro', Tipo: 'String', Comentarios: 'Motivo de ahorro.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador de simulacion.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }];
+}

@@ -111,9 +111,23 @@ curl -X POST \\
   };
 
   // Datos estructurados
-  structuredTypes = [
-    { Nombre: 'estado',     Tipo: 'String', Comentarios: 'Descripción de estado' },
-    { Nombre: 'fechaValor', Tipo: 'Date',   Comentarios: 'Fecha de alta del saldo' },
-    { Nombre: 'saldo',      Tipo: 'Decimal',Comentarios: 'Valor numérico del saldo' }
-  ];
+structuredTypes = [
+  {
+    typeName: 'sBTSolicitudSimulacionAhorro',
+    fields: [
+      { Nombre: 'estado',     Tipo: 'String',  Comentarios: 'Descripción de estado' },
+      { Nombre: 'fechaValor', Tipo: 'Date',    Comentarios: 'Fecha de alta del saldo' },
+      { Nombre: 'saldo',      Tipo: 'Decimal', Comentarios: 'Valor numérico del saldo' }
+    ],
+    children:[{
+      typeName: 'sBTSolicitudSimulacionAhorro2',
+      fields: [
+        { Nombre: 'estado',     Tipo: 'String',  Comentarios: 'Descripción de estado' },
+        { Nombre: 'fechaValor', Tipo: 'Date',    Comentarios: 'Fecha de alta del saldo' },
+        { Nombre: 'saldo',      Tipo: 'Decimal', Comentarios: 'Valor numérico del saldo' }
+      ]
+    }]
+  }
+];
+
 }
