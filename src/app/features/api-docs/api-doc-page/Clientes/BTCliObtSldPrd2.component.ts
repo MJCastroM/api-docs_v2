@@ -3,8 +3,8 @@ import { fadeInOut }  from '../../../../route-animations';
 
 @Component({
   selector: 'app-BTCliObtSldPrd2',
-  templateUrl: './BTCliObtSldPrd.component.html',
-  styleUrls: ['./BTCliObtSldPrd.component.scss'],
+  templateUrl: './DocTemplate.component.html',
+  styleUrls: ['./DocTemplate.component.scss'],
   animations: [ fadeInOut ],
   // Esto enlaza el trigger al host, para que el enter/leave funcione
   host: { '[@fadeInOut]': '' }

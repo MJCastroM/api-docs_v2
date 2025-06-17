@@ -10,6 +10,9 @@ import { MatTableModule }     from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule }    from '@angular/material/button';
 
+import { PrismHighlightDirective }     from './prism-highlight.directive';
+import { ApiDocsRoutingModule } from './api-doc-page/api-docs-routing.module';
+
 import { SidebarComponent }        from './components/sidebar/sidebar.component';
 import { PageHeaderComponent }     from './components/page-header/page-header.component';
 import { InfoCardComponent }       from './components/info-card/info-card.component';
@@ -18,17 +21,18 @@ import { ApiTabsComponent }        from './components/api-tabs/api-tabs.componen
 import { ApiTableComponent }       from './components/api-table/api-table.component';
 import { CodeExampleComponent }    from './components/code-example/code-example.component';
 import { StructuredDataComponent } from './components/structured-data/structured-data.component';
-import { BTCliObtSldPrdComp }     from './api-doc-page/BTCliObtSldPrd/BTCliObtSldPrd.component';
-import { BTCliObtSldPrdComp2 }     from './api-doc-page/BTCliObtSldPrd/BTCliObtSldPrd2.component';
-import { PrismHighlightDirective }     from './prism-highlight.directive';
-import { ApiDocsRoutingModule } from './api-doc-page/api-docs-routing.module';
-
+//import Page components
+import { BTCliObtSldPrdComp } from './api-doc-page/Clientes/BTCliObtSldPrd.component';
+import { BTCliObtSldPrdComp2 } from './api-doc-page/Clientes/BTCliObtSldPrd2.component';
+//import End page components
 
 @NgModule({
   declarations: [
+    //declarations Page components
     BTCliObtSldPrdComp,
+    BTCliObtSldPrdComp2,
+    //declarations End page components
     CodeExampleComponent,
-    StructuredDataComponent,
     SidebarComponent,
     PageHeaderComponent,
     InfoCardComponent,
@@ -36,10 +40,8 @@ import { ApiDocsRoutingModule } from './api-doc-page/api-docs-routing.module';
     ApiTabsComponent,
     ApiTableComponent,
     CodeExampleComponent,
-    StructuredDataComponent,
-    BTCliObtSldPrdComp,
-    BTCliObtSldPrdComp2,
-    PrismHighlightDirective
+    PrismHighlightDirective,
+    StructuredDataComponent    
   ],
   imports: [
     CommonModule,
@@ -54,9 +56,11 @@ import { ApiDocsRoutingModule } from './api-doc-page/api-docs-routing.module';
     MatButtonModule
   ],
   exports: [
-    SidebarComponent,
+    //exports Page components
     BTCliObtSldPrdComp,
-    BTCliObtSldPrdComp2     // exporta sólo lo que necesites fuera del módulo
+    BTCliObtSldPrdComp2,
+    //exports End page components
+    SidebarComponent    // exporta sólo lo que necesites fuera del módulo
   ]
 })
 export class ApiDocsModule {}

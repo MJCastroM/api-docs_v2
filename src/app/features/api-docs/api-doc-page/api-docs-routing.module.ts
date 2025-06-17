@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BTCliObtSldPrdComp } from './BTCliObtSldPrd/BTCliObtSldPrd.component';
-import { BTCliObtSldPrdComp2 } from './BTCliObtSldPrd/BTCliObtSldPrd2.component';
+import { BTCliObtSldPrdComp } from './Clientes/BTCliObtSldPrd.component';
+import { BTCliObtSldPrdComp2 } from './Clientes/BTCliObtSldPrd2.component';
 
-const routes: Routes = [
+var routes: Routes = [
   { path: 'BTCliObtSldPrd', component: BTCliObtSldPrdComp },
   { path: 'BTCliObtSldPrd2', component: BTCliObtSldPrdComp2 }
 ];
