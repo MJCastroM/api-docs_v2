@@ -3,15 +3,16 @@ $primary-color:   #c62828;
 $text-main:       #333;
 $bg-light:        #f4f4f4;
 $grey-header:     #e0e0e0;
-$grey-columns:     #f1f1f1;
 $shadow-light:    rgba(0,0,0,0.15);
-$border-radius:   1rem;
+$border-radius:   8px;
 
 // 1) Tablas genéricas
 table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: $border-radius !important;
+  background: white;
+  box-shadow: 0 2px 4px $shadow-light;
+  border-radius: $border-radius;
   overflow: hidden;
 
   thead {
@@ -27,16 +28,15 @@ table {
   tbody {
     tr {
       &:nth-child(even) {
-        background: #f1f1f1;
+        background: lighten($bg-light, 2%);
       }
       &:hover {
         background: lighten($primary-color, 45%);
       }
     }
     td, th {
-      background: $grey-columns;
       padding: 0.6rem 1rem;
-      border: none;
+      border-bottom: 1px solid lighten($grey-header, 20%);
       color: $text-main;
     }
   }
