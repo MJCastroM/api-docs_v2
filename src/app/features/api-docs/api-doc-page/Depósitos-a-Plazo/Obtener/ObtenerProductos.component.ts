@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750258525100 {
+export class ObtenerProductosComponent1750268696180 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de depósito a plazo.`;
-  pubName          = 'Obtener Productos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerProductos';
+  programa   = 'RBTPG093';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 

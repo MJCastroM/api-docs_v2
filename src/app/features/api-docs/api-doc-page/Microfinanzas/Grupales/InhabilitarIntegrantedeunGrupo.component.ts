@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class InhabilitarIntegrantedeunGrupoComponent1750258525151 {
+export class InhabilitarIntegrantedeunGrupoComponent1750268696456 {
   pageTitle        = 'Inhabilitar Integrante de Grupo';
   description      = `Método para inhabilitar un integrante de un grupo de crédito.`;
-  pubName          = 'Inhabilitar Integrante de Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.InhabilitarIntegranteGrupo';
+  programa   = 'RBTPG436';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDocumentoDigitalComponent1750258525498 {
+export class ActualizarDocumentoDigitalComponent1750268697918 {
   pageTitle        = 'Actualizar Documento Digital';
   description      = `Método para actualizar el documento digital de un préstamo.`;
-  pubName          = 'Actualizar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ActualizarDocumentoDigital';
+  programa   = 'RBTPG173';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011. 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVersionesComponent1750258525253 {
+export class ObtenerVersionesComponent1750268696846 {
   pageTitle        = 'Obtener Versiones';
   description      = `Método para retornar las versiones del modelo.`;
-  pubName          = 'Obtener Versiones';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ObtenerVersiones';
+  programa   = 'RBTPNV05';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

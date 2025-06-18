@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarGrupoComponent1750258525138 {
+export class ActualizarGrupoComponent1750268696411 {
   pageTitle        = 'Actualizar Grupo';
   description      = `Método para actualizar la información de un grupo de crédito.`;
-  pubName          = 'Actualizar Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ActualizarGrupo';
+  programa   = 'RBTPG430';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasDestinoHabilitadasComponent1750258524601 {
+export class ObtenerCuentasDestinoHabilitadasComponent1750268693976 {
   pageTitle        = 'Obtener Cuentas Destino Habilitadas';
   description      = `Método para obtener un listado de cuentas habilitadas para acreditar el ahorro.`;
-  pubName          = 'Obtener Cuentas Destino Habilitadas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas';
+  programa   = 'RBTPG112';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

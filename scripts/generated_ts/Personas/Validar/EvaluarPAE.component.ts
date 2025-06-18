@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarPAEComponent1750258525413 {
+export class EvaluarPAEComponent1750268697699 {
   pageTitle        = 'Evaluar PAE';
   description      = `Método para retornar el resultado de evaluar el PAE de una persona.`;
-  pubName          = 'Evaluar PAE';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.EvaluarPAE';
+  programa   = 'RBTPGP50';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

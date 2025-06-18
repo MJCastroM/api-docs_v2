@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasdeAhorroSaldoContableComponent1750258524779 {
+export class ObtenerCuentasdeAhorroSaldoContableComponent1750268694763 {
   pageTitle        = 'Obtener Cuentas de Ahorro (Saldo Contable)';
   description      = `Método para obtener los productos de cuenta de ahorro que tiene contratado un cliente, junto con su saldo contable.`;
-  pubName          = 'Obtener Cuentas de Ahorro (Saldo Contable)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerCuentasAhorro';
+  programa   = 'RBTPG006';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

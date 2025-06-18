@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarContactoComponent1750258525306 {
+export class AgregarContactoComponent1750268697073 {
   pageTitle        = 'Agregar Contacto';
   description      = `Método para agregar un contacto jurídico a una persona.`;
-  pubName          = 'Agregar Contacto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarContacto';
+  programa   = 'RBTPG308';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

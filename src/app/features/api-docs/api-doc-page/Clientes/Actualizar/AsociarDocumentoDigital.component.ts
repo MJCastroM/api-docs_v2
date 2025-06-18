@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750258524752 {
+export class AsociarDocumentoDigitalComponent1750268694623 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a una cuenta.`;
-  pubName          = 'Asociar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.AsociarDocumentoDigital';
+  programa   = 'RBTPG166';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

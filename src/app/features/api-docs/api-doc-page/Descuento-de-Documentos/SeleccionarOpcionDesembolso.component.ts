@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SeleccionarOpcionDesembolsoComponent1750258525115 {
+export class SeleccionarOpcionDesembolsoComponent1750268696264 {
   pageTitle        = 'Seleccionar Opción Desembolso';
   description      = `Método para seleccionar una opción de desembolso.`;
-  pubName          = 'Seleccionar Opción Desembolso';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDescuentoDocumentos.SeleccionarOpcionDesembolso';
+  programa   = 'RBTPG165';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

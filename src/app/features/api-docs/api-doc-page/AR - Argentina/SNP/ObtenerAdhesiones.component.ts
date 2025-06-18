@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAdhesionesComponent1750258524638 {
+export class ObtenerAdhesionesComponent1750268694091 {
   pageTitle        = 'Obtener Adhesiones';
   description      = `Método para obtener las adhesiones de un cliente a una determinada empresa originante.`;
-  pubName          = 'Obtener Adhesiones';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.ObtenerAdhesiones';
+  programa   = 'RBTPG324';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

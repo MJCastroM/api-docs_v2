@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750258525076 {
+export class AsociarDocumentoDigitalComponent1750268696068 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a un depósito a plazo.`;
-  pubName          = 'Asociar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.AsociarDocumentoDigital';
+  programa   = 'RBTPG564';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011.

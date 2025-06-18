@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearReducidoComponent1750258525327 {
+export class CrearReducidoComponent1750268697245 {
   pageTitle        = 'Crear Reducido';
   description      = `Método para crear una persona de forma reducida.`;
-  pubName          = 'Crear Reducido';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.CrearReducido';
+  programa   = 'RBTPG534';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

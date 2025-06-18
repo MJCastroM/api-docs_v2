@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarCorreoElectronicoComponent1750258525415 {
+export class ValidarCorreoElectronicoComponent1750268697705 {
   pageTitle        = 'Validar Correo electrónico';
   description      = `Método para validar un correo electrónico.`;
-  pubName          = 'Validar Correo electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ValidarCorreoElectronico';
+  programa   = 'RBTPG752';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

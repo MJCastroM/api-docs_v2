@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerContactosComponent1750258525357 {
+export class ObtenerContactosComponent1750268697379 {
   pageTitle        = 'Obtener Contactos';
   description      = `Método para obtener los contactos de una persona.`;
-  pubName          = 'Obtener Contactos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerContactos';
+  programa   = 'RBTPG307';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

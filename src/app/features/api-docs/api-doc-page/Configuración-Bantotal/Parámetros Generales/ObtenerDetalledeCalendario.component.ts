@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendarioComponent1750258524917 {
+export class ObtenerDetalledeCalendarioComponent1750268695175 {
   pageTitle        = 'Obtener Detalle de Calendario';
   description      = `Método para obtener el detalle de los días de un determinado calendario.`;
-  pubName          = 'Obtener Detalle de Calendario';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendario';
+  programa   = 'RBTPG285';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

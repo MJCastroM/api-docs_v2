@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVariablesReglaComponent1750258525606 {
+export class ObtenerVariablesReglaComponent1750268698554 {
   pageTitle        = 'Obtener Variables Regla';
   description      = `Método para obtener las variables de una determinada regla de negocio.`;
-  pubName          = 'Obtener Variables Regla';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTReglasNegocio.ObtenerVariablesRegla';
+  programa   = 'RBTPGR54';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

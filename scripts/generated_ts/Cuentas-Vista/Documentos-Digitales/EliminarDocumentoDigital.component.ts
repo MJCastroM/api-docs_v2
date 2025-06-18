@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoDigitalComponent1750258525023 {
+export class EliminarDocumentoDigitalComponent1750268695772 {
   pageTitle        = 'Eliminar Documento Digital';
   description      = `Método para eliminar un documento digital de una cuenta vista.`;
-  pubName          = 'Eliminar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.EliminarDocumentoDigital';
+  programa   = 'RBTPG177';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

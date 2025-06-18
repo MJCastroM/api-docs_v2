@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarMetadeAhorroComponent1750258524593 {
+export class ModificarMetadeAhorroComponent1750268693949 {
   pageTitle        = 'Modificar Meta de Ahorro';
   description      = `Método para modificar la meta de ahorro.`;
-  pubName          = 'Modificar Meta de Ahorro';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ModificarMetaDeAhorro';
+  programa   = 'RBTPG117';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

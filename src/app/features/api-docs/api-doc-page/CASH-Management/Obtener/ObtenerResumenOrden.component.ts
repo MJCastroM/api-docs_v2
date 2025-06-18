@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumenOrdenComponent1750258524705 {
+export class ObtenerResumenOrdenComponent1750268694404 {
   pageTitle        = 'Obtener Resumen de una Orden';
   description      = `Método para obtener el resumen de la información de la orden recibida.`;
-  pubName          = 'Obtener Resumen de una Orden';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerResumenOrden';
+  programa   = 'RBTPGC24';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

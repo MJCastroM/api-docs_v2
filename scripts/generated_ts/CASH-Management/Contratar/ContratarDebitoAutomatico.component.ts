@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarDebitoAutomaticoComponent1750258524695 {
+export class ContratarDebitoAutomaticoComponent1750268694363 {
   pageTitle        = 'Contratar Débito Automático';
   description      = `Método para contratar la afiliación a un débito automático.`;
-  pubName          = 'Contratar Débito Automático';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ContratarDebitoAutomatico';
+  programa   = 'RBTPGC90';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

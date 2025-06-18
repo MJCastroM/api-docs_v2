@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasVinculadasComponent1750258525391 {
+export class ObtenerPersonasVinculadasComponent1750268697580 {
   pageTitle        = 'Obtener Personas Vinculadas';
   description      = `Método para obtener un listado de los vínculos de la persona.`;
-  pubName          = 'Obtener Personas Vinculadas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerPersonasVinculadas';
+  programa   = 'RBTPG375';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

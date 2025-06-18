@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasTerceroscontipodecambioComponent1750258525064 {
+export class TraspasarEntreCuentasTerceroscontipodecambioComponent1750268695995 {
   pageTitle        = 'Traspasar Entre Cuentas Terceros (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas de diferentes clientes.`;
-  pubName          = 'Traspasar Entre Cuentas Terceros (con tipo de cambio)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarCuentasTercerosConCotizacion';
+  programa   = 'RBTPG264';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:

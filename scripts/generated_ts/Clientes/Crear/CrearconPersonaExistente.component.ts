@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearconPersonaExistenteComponent1750258524765 {
+export class CrearconPersonaExistenteComponent1750268694693 {
   pageTitle        = 'Crear con Persona Existente';
   description      = `Método para crear una cuenta cliente a partir de una persona existente.`;
-  pubName          = 'Crear con Persona Existente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.CrearConPersonaExistente';
+  programa   = 'RBTPG218';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

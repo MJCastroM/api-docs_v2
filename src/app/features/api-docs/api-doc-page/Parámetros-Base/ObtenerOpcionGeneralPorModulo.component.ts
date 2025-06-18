@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneralPorModuloComponent1750258525271 {
+export class ObtenerOpcionGeneralPorModuloComponent1750268696919 {
   pageTitle        = 'Obtener Opción General Por Módulo';
   description      = `Método para obtener los datos de una opción general de un determinado módulo.`;
-  pubName          = 'Obtener Opción General Por Módulo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTParametrosBase.ObtenerOpcionGeneralPorModulo';
+  programa   = 'RBTPG443';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

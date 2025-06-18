@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarChequeraComponent1750258524996 {
+export class EliminarChequeraComponent1750268695597 {
   pageTitle        = 'Eliminar Chequera';
   description      = `Método para eliminar una chequera.`;
-  pubName          = 'Eliminar Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.EliminarChequera';
+  programa   = 'RBTPG243';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

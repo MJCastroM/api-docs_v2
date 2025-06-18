@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerHobbyComponent1750258525372 {
+export class ObtenerHobbyComponent1750268697470 {
   pageTitle        = 'Obtener Hobby';
   description      = `Método para obtener el hobby de una persona.`;
-  pubName          = 'Obtener Hobby';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerHobby';
+  programa   = 'RBTPG510';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequeraComponent1750258524989 {
+export class ObtenerChequeraComponent1750268695541 {
   pageTitle        = 'Obtener Chequera';
   description      = `Método para obtener los datos de una chequera de una cuenta corriente.`;
-  pubName          = 'Obtener Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ObtenerChequera';
+  programa   = 'RBTPG240';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

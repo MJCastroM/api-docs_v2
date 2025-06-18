@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarStopDebitComponent1750258524636 {
+export class EliminarStopDebitComponent1750268694086 {
   pageTitle        = 'Eliminar Stop Debit';
   description      = `Método para eliminar un stop debit.`;
-  pubName          = 'Eliminar Stop Debit';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.EliminarStopDebit';
+  programa   = 'RBTPG344';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

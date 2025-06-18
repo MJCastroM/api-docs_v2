@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaPrestamoCastigadoComponent1750258525525 {
+export class ObtenerDeudaPrestamoCastigadoComponent1750268698098 {
   pageTitle        = 'Obtener Deuda Préstamo Castigado';
   description      = `Método para obtener la deuda de un préstamo castigado.`;
-  pubName          = 'Obtener Deuda Préstamo Castigado';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDeudaPrestamoCastigado';
+  programa   = 'RBTPG080';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

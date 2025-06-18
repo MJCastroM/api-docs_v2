@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGuiaEspecialdeProcesoComponent1750258525269 {
+export class ObtenerGuiaEspecialdeProcesoComponent1750268696905 {
   pageTitle        = 'Obtener Guía Especial de Proceso';
   description      = `Método para obtener los datos de una determinada guía especial de procesos.`;
-  pubName          = 'Obtener Guía Especial de Proceso';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTParametrosBase.ObtenerGuiaEspecialDeProceso';
+  programa   = 'RBTPG052';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

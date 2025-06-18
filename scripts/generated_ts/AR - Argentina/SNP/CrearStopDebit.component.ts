@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitComponent1750258524632 {
+export class CrearStopDebitComponent1750268694072 {
   pageTitle        = 'Crear Stop Debit';
   description      = `Método para crear un stop debit sin importe.`;
-  pubName          = 'Crear Stop Debit';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.CrearStopDebit';
+  programa   = 'RBTPG341';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

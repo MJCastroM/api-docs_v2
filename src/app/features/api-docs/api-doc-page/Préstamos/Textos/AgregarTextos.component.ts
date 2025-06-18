@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextosComponent1750258525597 {
+export class AgregarTextosComponent1750268698514 {
   pageTitle        = 'Agregar Textos';
   description      = `Método para agregar textos de un préstamo.`;
-  pubName          = 'Agregar Textos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.AgregarTextos';
+  programa   = 'RBTPG562';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

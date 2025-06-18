@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCodigosdeDomicilioComponent1750258524951 {
+export class ObtenerCodigosdeDomicilioComponent1750268695251 {
   pageTitle        = 'Obtener Códigos de Domicilio';
   description      = `Método para obtener un listado de los códigos de domicilio ingresados en Bantotal.`;
-  pubName          = 'Obtener Códigos de Domicilio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerCodigosDeDomicilio';
+  programa   = 'RBTPG212';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

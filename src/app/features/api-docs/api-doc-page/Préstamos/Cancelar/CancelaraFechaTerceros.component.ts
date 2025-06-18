@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelaraFechaTercerosComponent1750258525443 {
+export class CancelaraFechaTercerosComponent1750268697871 {
   pageTitle        = 'Cancelar a Fecha Terceros';
   description      = `Método para realizar la cancelación de un préstamo a terceros, a una fecha valor dada.`;
-  pubName          = 'Cancelar a Fecha Terceros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.CancelarAFechaTerceros';
+  programa   = 'RBTPG833';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de Pago, teniendo en cuenta que: 

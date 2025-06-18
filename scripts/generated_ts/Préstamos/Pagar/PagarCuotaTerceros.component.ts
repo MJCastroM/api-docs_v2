@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarCuotaTercerosComponent1750258525559 {
+export class PagarCuotaTercerosComponent1750268698308 {
   pageTitle        = 'Pagar Cuota Terceros';
   description      = `Método para realizar el pago de cuota de un préstamo con una cuenta de cobro de terceros.`;
-  pubName          = 'Pagar Cuota Terceros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.PagarCuotaTerceros';
+  programa   = 'RBTPG831';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de pago, teniendo en cuenta que: 

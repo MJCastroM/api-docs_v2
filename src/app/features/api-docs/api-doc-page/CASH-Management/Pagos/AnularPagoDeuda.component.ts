@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularPagoDeudaComponent1750258524717 {
+export class AnularPagoDeudaComponent1750268694467 {
   pageTitle        = 'Anular Pago Deuda';
   description      = `Método para anular un pago realizado de una factura.`;
-  pubName          = 'Anular Pago Deuda';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.AnularPagoDeuda';
+  programa   = 'RBTPGC63';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

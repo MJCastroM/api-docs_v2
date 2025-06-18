@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTipodePersonaComponent1750258525401 {
+export class ObtenerTipodePersonaComponent1750268697629 {
   pageTitle        = 'Obtener Tipo de Persona';
   description      = `Método para obtener el tipo de una persona (Física o Jurídica).`;
-  pubName          = 'Obtener Tipo de Persona';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTipoDePersona';
+  programa   = 'RBTPG268';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

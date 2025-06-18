@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOcupacionesComponent1750258525386 {
+export class ObtenerOcupacionesComponent1750268697544 {
   pageTitle        = 'Obtener Ocupaciones';
   description      = `Método para obtener un listado de las ocupaciones registradas.`;
-  pubName          = 'Obtener Ocupaciones';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerOcupaciones';
+  programa   = 'RBTPG037';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

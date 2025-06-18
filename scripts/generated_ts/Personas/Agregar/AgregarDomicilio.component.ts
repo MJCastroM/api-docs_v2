@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDomicilioComponent1750258525311 {
+export class AgregarDomicilioComponent1750268697112 {
   pageTitle        = 'Agregar Domicilio';
   description      = `Método para agregar domicilio a una persona.`;
-  pubName          = 'Agregar Domicilio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarDomicilio';
+  programa   = 'RBTPG238';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

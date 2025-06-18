@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerStopDebitsComponent1750258524643 {
+export class ObtenerStopDebitsComponent1750268694116 {
   pageTitle        = 'Obtener Stop Debits';
   description      = `Método para obtener los stop debits asociados a un cliente.`;
-  pubName          = 'Obtener Stop Debits';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.ObtenerStopDebits';
+  programa   = 'RBTPG343';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

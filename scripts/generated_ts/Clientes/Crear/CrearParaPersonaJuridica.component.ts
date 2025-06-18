@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearParaPersonaJuridicaComponent1750258524766 {
+export class CrearParaPersonaJuridicaComponent1750268694700 {
   pageTitle        = 'Crear Para Persona Jurídica';
   description      = `Método para crear una persona jurídica y su cuenta cliente.`;
-  pubName          = 'Crear Para Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.CrearParaPersonaJuridica';
+  programa   = 'RBTPG282';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

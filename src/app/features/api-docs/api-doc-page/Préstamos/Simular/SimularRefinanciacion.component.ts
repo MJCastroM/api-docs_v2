@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionComponent1750258525591 {
+export class SimularRefinanciacionComponent1750268698485 {
   pageTitle        = 'Simular Refinanciación';
   description      = ``;
-  pubName          = 'Simular Refinanciación';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

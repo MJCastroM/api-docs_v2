@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarUsuarioComponent1750258525668 {
+export class EliminarUsuarioComponent1750268698932 {
   pageTitle        = 'Eliminar Usuario';
   description      = `Método para eliminar un usuario.`;
-  pubName          = 'Eliminar Usuario';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.EliminarUsuario';
+  programa   = 'RBTPG390';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

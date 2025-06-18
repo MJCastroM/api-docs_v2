@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarConTipoDeCambioEspecialComponent1750258525054 {
+export class TraspasarConTipoDeCambioEspecialComponent1750268695936 {
   pageTitle        = 'Traspasar con Tipo de Cambio Especial';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda ingresando un tipo de cambio especial.`;
-  pubName          = 'Traspasar con Tipo de Cambio Especial';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarConTipoDeCambioEspecial ';
+  programa   = 'RBTPG569';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de compra-venta, teniendo en cuenta que:

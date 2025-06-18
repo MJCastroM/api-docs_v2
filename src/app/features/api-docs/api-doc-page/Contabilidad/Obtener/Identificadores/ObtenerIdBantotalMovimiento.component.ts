@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalMovimientoComponent1750258524967 {
+export class ObtenerIdBantotalMovimientoComponent1750268695368 {
   pageTitle        = 'Obtener Identificador Bantotal de Movimiento';
   description      = `Método para obtener la clave de identificación Bantotal de un movimiento.`;
-  pubName          = 'Obtener Identificador Bantotal de Movimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIdBantotalMovimiento';
+  programa   = 'RBTPG368';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

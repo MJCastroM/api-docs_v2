@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarEstadoFinancieroComponent1750258525314 {
+export class AgregarEstadoFinancieroComponent1750268697120 {
   pageTitle        = 'Agregar Estado Financiero';
   description      = `Método para agregar los estados financieros a una persona.`;
-  pubName          = 'Agregar Estado Financiero';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarEstadoFinanciero';
+  programa   = 'RBTPG580';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

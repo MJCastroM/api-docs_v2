@@ -139,3 +139,81 @@ var sidebarLines = [
 
 fs.writeFileSync(SIDEBAR_OUT, sidebarLines.join('\n'), 'utf8');
 console.log(`✅  Sidebar actualizado en ${SIDEBAR_OUT}`);
+
+// scripts/generate-routes.js
+var fs = require('fs');
+var path = require('path');
+
+var BASE_DIR    = path.resolve(__dirname, '../src/app/features/api-docs');
+var PAGE_DIR    = path.join(BASE_DIR, 'api-doc-page');
+var MODULE_FILE = path.join(BASE_DIR, 'api-docs.module.ts');
+
+// 1) Recolectar todos los *.component.ts bajo api-doc-page
+function walk(dir) {
+  return fs.readdirSync(dir).flatMap(name => {
+    var full = path.join(dir, name);
+    if (fs.statSync(full).isDirectory()) {
+      return walk(full);
+    }
+    return name.endsWith('.component.ts') &&
+           !name.endsWith('.spec.ts') &&
+           !name.endsWith('-routing.module.ts')
+      ? [full]
+      : [];
+  });
+}
+
+var files = walk(PAGE_DIR);
+
+var entries = files.map(file => {
+  var content = fs.readFileSync(file, 'utf8');
+  var m = content.match(COMPONENT_RE);
+  if (!m) return null;
+  var className = m[2];
+  // Import relativo a api-docs.module.ts
+  var relPath = './api-doc-page/' +
+    path.relative(PAGE_DIR, file).replace(/\\/g, '/').replace(/\.ts$/, '');
+  return { className, importPath: relPath };
+}).filter(Boolean);
+
+// --- Generar bloques para api-docs.module.ts ---
+
+// 1) Imports
+var importLines = entries
+  .map(e => `import { ${e.className} } from '${e.importPath}';`)
+  .join('\n');
+
+// 2) Declarations
+var declLines = entries
+  .map(e => `    ${e.className},`)
+  .join('\n');
+
+// 3) Exports
+var exportLines = entries
+  .map(e => `    ${e.className},`)
+  .join('\n');
+
+// 4) Leer módulo y reemplazar entre marcadores
+let moduleSrc = fs.readFileSync(MODULE_FILE, 'utf8');
+
+// Reemplazar imports
+moduleSrc = moduleSrc.replace(
+  /(\/\/import Page components)[\s\S]*?(\/\/import End page components)/,
+  `$1\n${importLines}\n$2`
+);
+
+// Reemplazar declarations
+moduleSrc = moduleSrc.replace(
+  /(\/\/declarations Page components)[\s\S]*?(\/\/declarations End page components)/,
+  `$1\n${declLines}\n    //declarations End page components`
+);
+
+// Reemplazar exports
+moduleSrc = moduleSrc.replace(
+  /(\/\/exports Page components)[\s\S]*?(\/\/exports End page components)/,
+  `$1\n${exportLines}\n    //exports End page components`
+);
+
+// 5) Guardar
+fs.writeFileSync(MODULE_FILE, moduleSrc, 'utf8');
+console.log(`✅ api-docs.module.ts actualizado con ${entries.length} componentes de página.`);

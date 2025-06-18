@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNaturalezasJuridicasComponent1750258525384 {
+export class ObtenerNaturalezasJuridicasComponent1750268697528 {
   pageTitle        = 'Obtener Naturalezas Jurídicas';
   description      = `Método para obtener un listado de las naturalezas jurídicas ingresadas.`;
-  pubName          = 'Obtener Naturalezas Jurídicas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerNaturalezasJuridicas';
+  programa   = 'RBTPG311';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

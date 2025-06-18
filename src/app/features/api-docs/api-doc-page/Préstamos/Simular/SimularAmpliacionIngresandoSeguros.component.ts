@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularAmpliacionIngresandoSegurosComponent1750258525573 {
+export class SimularAmpliacionIngresandoSegurosComponent1750268698367 {
   pageTitle        = 'Simular Ampliación Ingresando Seguros';
   description      = `Método para simular una ampliación de uno o más préstamos ingresando los seguros a aplicar.`;
-  pubName          = 'Simular Ampliación Ingresando Seguros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularAmpliacionIngresandoSeguros';
+  programa   = 'RBTPG488';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Tiempo de validez de la simulación de una ampliación o refinanciación: 

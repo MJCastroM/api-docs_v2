@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750258525060 {
+export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750268695979 {
   pageTitle        = 'Traspasar Entre Cuentas Propias (diferentes monedas)';
   description      = `Método para realizar un traspaso entre cuentas propias de diferente moneda.`;
-  pubName          = 'Traspasar Entre Cuentas Propias (diferentes monedas)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarCuentasPropiasDiferentesMonedas';
+  programa   = 'RBTPG261';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:

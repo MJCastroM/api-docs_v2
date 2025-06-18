@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionComponent1750258525393 {
+export class ObtenerProfesionComponent1750268697599 {
   pageTitle        = 'Obtener Profesión';
   description      = `Método para obtener la profesión de una persona física.`;
-  pubName          = 'Obtener Profesión';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerProfesion';
+  programa   = 'RBTPG289';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

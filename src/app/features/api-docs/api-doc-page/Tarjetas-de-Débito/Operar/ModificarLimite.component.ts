@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarLimiteComponent1750258525658 {
+export class ModificarLimiteComponent1750268698881 {
   pageTitle        = 'Modificar Límite';
   description      = `Método para modificar el límite de una tarjeta de débito.`;
-  pubName          = 'Modificar Límite';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ModificarLimite';
+  programa   = 'RBTPG148';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

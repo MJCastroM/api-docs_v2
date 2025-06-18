@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750258524798 {
+export class ObtenerLimitesComponent1750268694847 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una cuenta cliente.`;
-  pubName          = 'Obtener Límites';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerLimites';
+  programa   = 'RBTPG160';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

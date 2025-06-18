@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DesbloquearDesdeREDComponent1750258525656 {
+export class DesbloquearDesdeREDComponent1750268698867 {
   pageTitle        = 'Desbloquear Desde RED';
   description      = `Método para desbloquear una tarjeta de débito sin notificar a la RED.`;
-  pubName          = 'Desbloquear Desde RED';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.DesbloquearDesdeRED';
+  programa   = 'RBTPG804';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

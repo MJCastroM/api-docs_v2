@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudIndividualComponent1750258525134 {
+export class CrearSolicitudIndividualComponent1750268696382 {
   pageTitle        = 'Crear Solicitud Individual';
   description      = `Método para crear una solicitud de crédito individual.`;
-  pubName          = 'Crear Solicitud Individual';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.CrearSolicitudIndividual';
+  programa   = 'RBTPG410';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

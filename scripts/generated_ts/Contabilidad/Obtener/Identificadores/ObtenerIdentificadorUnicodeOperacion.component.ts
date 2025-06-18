@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeOperacionComponent1750258524971 {
+export class ObtenerIdentificadorUnicodeOperacionComponent1750268695402 {
   pageTitle        = 'Obtener Identificador Único de Operación';
   description      = `Método para obtener el identificador único de una operación.`;
-  pubName          = 'Obtener Identificador Único de Operación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoOperacion';
+  programa   = 'RBTPG836';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011. 

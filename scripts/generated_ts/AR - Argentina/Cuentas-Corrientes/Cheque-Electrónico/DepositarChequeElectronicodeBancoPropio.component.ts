@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeBancoPropioComponent1750258524619 {
+export class DepositarChequeElectronicodeBancoPropioComponent1750268694030 {
   pageTitle        = 'Depositar Cheque Electrónico de Banco Propio';
   description      = `Método para depositar un cheque electrónico propio.`;
-  pubName          = 'Depositar Cheque Electrónico de Banco Propio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoPropio';
+  programa   = 'RBTPAR34';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

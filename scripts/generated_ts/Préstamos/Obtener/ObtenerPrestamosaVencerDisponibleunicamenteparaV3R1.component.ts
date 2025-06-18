@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750258525542 {
+export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750268698177 {
   pageTitle        = 'Obtener Préstamos a Vencer';
   description      = `Método para obtener los préstamos que están por vencer dentro de determinados días.`;
-  pubName          = 'Obtener Préstamos a Vencer';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerPrestamosAVencer';
+  programa   = 'RBTPG472';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

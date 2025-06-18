@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarInformacionAdicionalComponent1750258525550 {
+export class ActualizarInformacionAdicionalComponent1750268698232 {
   pageTitle        = 'Actualizar Información Adicional';
   description      = `Método para actualizar la información adicional de un préstamo.`;
-  pubName          = 'Actualizar Información Adicional';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ActualizarInformacionAdicional';
+  programa   = 'RBTPG469';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

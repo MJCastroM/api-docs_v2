@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleSimulacionComponent1750258525523 {
+export class ObtenerDetalleSimulacionComponent1750268698085 {
   pageTitle        = 'Obtener Detalle Simulación';
   description      = `Método para obtener el detalle de la simulación de un préstamo.`;
-  pubName          = 'Obtener Detalle Simulación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetalleSimulacion';
+  programa   = 'RBTPG456';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

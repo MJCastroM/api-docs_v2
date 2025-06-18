@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosHabilitadosComponent1750258525099 {
+export class ObtenerPeriodosHabilitadosComponent1750268696172 {
   pageTitle        = 'Obtener Períodos Habilitados';
   description      = `Método para obtener los períodos habilitados de un deposito a plazo.`;
-  pubName          = 'Obtener Períodos Habilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerPeriodosHabilitados';
+  programa   = 'RBTPG492';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

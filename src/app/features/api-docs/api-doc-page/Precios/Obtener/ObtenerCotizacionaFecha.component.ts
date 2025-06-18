@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionaFechaComponent1750258525429 {
+export class ObtenerCotizacionaFechaComponent1750268697785 {
   pageTitle        = 'Obtener Cotización a Fecha';
   description      = `Método para obtener un listado de las cotizaciones de las monedas ingresadas.`;
-  pubName          = 'Obtener Cotización a Fecha';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerCotizacionAFecha';
+  programa   = 'RBTPG251';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

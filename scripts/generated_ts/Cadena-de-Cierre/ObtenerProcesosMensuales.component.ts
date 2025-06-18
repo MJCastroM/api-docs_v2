@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosMensualesComponent1750258524658 {
+export class ObtenerProcesosMensualesComponent1750268694185 {
   pageTitle        = 'Obtener Procesos Mensuales';
   description      = `Método para obtener un listado de los procesos mensuales de la cadena de cierre.`;
-  pubName          = 'Obtener Procesos Mensuales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerProcesosMensuales';
+  programa   = 'RBTPG502';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

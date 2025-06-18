@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionChequeraComponent1750258524992 {
+export class ObtenerComisionChequeraComponent1750268695568 {
   pageTitle        = 'Obtener Comisión Chequera';
   description      = `Método para obtener el importe de comisión que se cobrará para una determinada cuenta y un tipo de chequera.`;
-  pubName          = 'Obtener Comisión Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ObtenerComisionChequera';
+  programa   = 'RBTPG247';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

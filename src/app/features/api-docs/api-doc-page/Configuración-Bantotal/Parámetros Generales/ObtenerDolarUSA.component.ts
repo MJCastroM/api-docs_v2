@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDolarUSAComponent1750258524940 {
+export class ObtenerDolarUSAComponent1750268695188 {
   pageTitle        = 'Obtener Dólar USA';
   description      = `Método para obtener los datos del dólar estadounidense.`;
-  pubName          = 'Obtener Dólar USA';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerDolarUSA';
+  programa   = 'RBTPG154';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

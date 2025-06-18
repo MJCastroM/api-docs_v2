@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarBajadeAdhesionComponent1750258524645 {
+export class SolicitarBajadeAdhesionComponent1750268694129 {
   pageTitle        = 'Solicitar Baja de Adhesión';
   description      = `Método para solicitar la baja de la adhesión.`;
-  pubName          = 'Solicitar Baja de Adhesión';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.SolicitarBajaDeAdhesion';
+  programa   = 'RBTPG326';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

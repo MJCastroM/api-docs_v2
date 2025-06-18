@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutorizarExcepcionComponent1750258525608 {
+export class AutorizarExcepcionComponent1750268698569 {
   pageTitle        = 'Autorizar Excepción';
   description      = `Método para autorizar una excepción.`;
-  pubName          = 'Autorizar Excepción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSeguridad.AutorizarExcepcion';
+  programa   = 'RBTPG088';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

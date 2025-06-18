@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegrantedePersonaJuridicaComponent1750258525347 {
+export class EliminarIntegrantedePersonaJuridicaComponent1750268697329 {
   pageTitle        = 'Eliminar Integrante de Persona Jurídica';
   description      = `Método para eliminar un integrante de una persona jurídica.`;
-  pubName          = 'Eliminar Integrante de Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.EliminarIntegrantePersonaJuridica';
+  programa   = 'RBTPG281';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

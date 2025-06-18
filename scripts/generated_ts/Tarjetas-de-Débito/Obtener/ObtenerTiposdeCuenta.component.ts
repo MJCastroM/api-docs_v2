@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeCuentaComponent1750258525641 {
+export class ObtenerTiposdeCuentaComponent1750268698769 {
   pageTitle        = 'Obtener Tipos de Cuenta';
   description      = `Método para obtener los tipos de cuenta de tarjetas de débito ingresados en el sistema.`;
-  pubName          = 'Obtener Tipos de Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerTiposDeCuenta';
+  programa   = 'RBTPG379';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

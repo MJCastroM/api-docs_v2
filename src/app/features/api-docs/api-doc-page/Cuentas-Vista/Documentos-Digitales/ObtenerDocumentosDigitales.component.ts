@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750258525025 {
+export class ObtenerDocumentosDigitalesComponent1750268695785 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener un listado de los documentos digitales asociados a una cuenta vista.`;
-  pubName          = 'Obtener Documentos Digitales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerDocumentosDigitales';
+  programa   = 'RBTPG199';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Si no se ingresa valor en el parámetro \'sucursalId\', su valor se asume de la cuenta cliente. Si la opción general 3282 está activada se tomará la sucursal del usuario que ejecuta el servicio.

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarReferenciaComponent1750258525297 {
+export class ActualizarReferenciaComponent1750268697019 {
   pageTitle        = 'Actualizar Referencia';
   description      = `Método para actualizar una referencia de una persona.`;
-  pubName          = 'Actualizar Referencia';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarReferencia';
+  programa   = 'RBTPG303';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

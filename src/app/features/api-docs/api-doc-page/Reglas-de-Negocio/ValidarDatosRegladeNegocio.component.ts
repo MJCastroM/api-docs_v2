@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarDatosRegladeNegocioComponent1750258525607 {
+export class ValidarDatosRegladeNegocioComponent1750268698562 {
   pageTitle        = 'Validar Datos Regla de Negocio';
   description      = `Método para validar los datos de una determinada regla de negocio.`;
-  pubName          = 'Validar Datos Regla de Negocio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTReglasNegocio.ValidarDatosReglaNegocio';
+  programa   = 'RBTPGR56';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

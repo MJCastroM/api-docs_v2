@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDestinosCreditoComponent1750258525168 {
+export class ObtenerDestinosCreditoComponent1750268696527 {
   pageTitle        = 'Obtener Destinos Crédito';
   description      = `Método para obtener los destinos posibles para un crédito.`;
-  pubName          = 'Obtener Destinos Crédito';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerDestinosCredito';
+  programa   = 'RBTPG415';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularFechadeVencimientoComponent1750258524661 {
+export class CalcularFechadeVencimientoComponent1750268694208 {
   pageTitle        = 'Calcular Fecha de Vencimiento';
   description      = `Método para calcular la fecha de vencimiento de un plazo a partir de la fecha de inicio.`;
-  pubName          = 'Calcular Fecha de Vencimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCalendarios.CalcularFechaVencimiento';
+  programa   = 'RBTPG340';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

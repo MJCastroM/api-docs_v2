@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoBalloonSinClienteComponent1750258525583 {
+export class SimularIngresandoBalloonSinClienteComponent1750268698426 {
   pageTitle        = 'Simular Ingresando Balloon Sin Cliente';
   description      = `Método para simular un préstamo sin cliente ingresando el balloon.`;
-  pubName          = 'Simular Ingresando Balloon Sin Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularIngresandoBalloonSC';
+  programa   = 'RBTPG466';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

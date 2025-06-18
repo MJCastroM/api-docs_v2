@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechadeSistemaComponent1750258524943 {
+export class ObtenerFechadeSistemaComponent1750268695201 {
   pageTitle        = 'Obtener Fecha de Sistema';
   description      = `Método para obtener la fecha del sistema.`;
-  pubName          = 'Obtener Fecha de Sistema';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerFechaDeSistema';
+  programa   = 'RBTPG099';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

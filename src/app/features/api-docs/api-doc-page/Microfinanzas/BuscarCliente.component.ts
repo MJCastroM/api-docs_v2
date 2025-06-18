@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BuscarClienteComponent1750258525130 {
+export class BuscarClienteComponent1750268696359 {
   pageTitle        = 'Buscar Cliente';
   description      = `Método para buscar una persona y sus cuentas cliente.`;
-  pubName          = 'Buscar Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.BuscarCliente';
+  programa   = 'RBTPG411';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

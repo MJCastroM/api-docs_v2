@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750258525449 {
+export class ContratarComponent1750268697886 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un préstamo amortizable.`;
-  pubName          = 'Contratar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.Contratar';
+  programa   = 'RBTPG077';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta, teniendo en cuenta que: 

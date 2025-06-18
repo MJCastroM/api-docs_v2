@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCalendariosComponent1750258524916 {
+export class ObtenerCalendariosComponent1750268695168 {
   pageTitle        = 'Obtener Calendarios';
   description      = `Método para obtener los calendarios ingresados en el sistema.`;
-  pubName          = 'Obtener Calendarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerCalendarios';
+  programa   = 'RBTPG284';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

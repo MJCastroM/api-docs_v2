@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilesComponent1750258524959 {
+export class ObtenerPerfilesComponent1750268695321 {
   pageTitle        = 'Obtener Perfiles';
   description      = `Método para obtener un listado de los perfiles ingresados en Bantotal.`;
-  pubName          = 'Obtener Perfiles';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerPerfiles';
+  programa   = 'RBTPG126';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

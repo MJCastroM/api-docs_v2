@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosHabilitadosComponent1750258525678 {
+export class ObtenerProcesosHabilitadosComponent1750268698994 {
   pageTitle        = 'Obtener Procesos Habilitados';
   description      = ``;
-  pubName          = 'Obtener Procesos Habilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

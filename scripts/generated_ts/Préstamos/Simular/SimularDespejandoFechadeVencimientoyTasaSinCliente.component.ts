@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoFechadeVencimientoyTasaSinClienteComponent1750258525580 {
+export class SimularDespejandoFechadeVencimientoyTasaSinClienteComponent1750268698412 {
   pageTitle        = 'Simular Despejando Fecha de Vencimiento y Tasa Sin Cliente';
   description      = `Método para simular un préstamo sin cliente despejando fecha de vencimiento y tasa.`;
-  pubName          = 'Simular Despejando Fecha de Vencimiento y Tasa Sin Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularDespejandoFechaVtoTasaSC';
+  programa   = 'RBTPG466';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

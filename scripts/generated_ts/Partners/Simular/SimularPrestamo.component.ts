@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoComponent1750258525259 {
+export class SimularPrestamoComponent1750268696872 {
   pageTitle        = 'Simular Préstamo';
   description      = `Método para simular un préstamo del Partner.`;
-  pubName          = 'Simular Préstamo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.SimularPrestamo';
+  programa   = 'RBTPN010';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

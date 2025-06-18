@@ -176,6 +176,11 @@ function renderComponent(mdPath) {
     '<!-- ABRE DATOS DEL MÉTODO -->',
     '<!-- CIERRA DATOS DEL MÉTODO -->'
   );
+
+  const pub     = meta.match(/\*\*Nombre publicación:\*\*\s*(.+)/)?.[1] || '';
+  const prog    = meta.match(/\*\*Programa:\*\*\s*(.+)/)?.[1] || '';
+  const sc      = meta.match(/\*\*Global\/País:\*\*\s*(.+)/)?.[1] || '';
+  
   const desc = meta.replace(/::: note/, '').split('\n')[0].trim();
 
   // tablas y ejemplos
@@ -213,9 +218,9 @@ import { fadeInOut } from '${routeAnimationsPath}';
 export class ${cls}${ms} {
   pageTitle        = '${esc(key)}';
   description      = \`${esc(desc)}\`;
-  pubName          = '${esc(data.title || '')}';
-  programa         = '${esc(data.programa  || '')}';
-  scope            = '${esc(data.scope     || '')}';
+  pubName    = '${esc(pub)}';
+  programa   = '${esc(prog)}';
+  scope      = '${esc(sc)}';
 
   hasBackendConfig = ${hasConfig};
   backendText      = \`${esc(backendText)}\`;

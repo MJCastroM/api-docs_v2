@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarCorreoElectronicoComponent1750258525307 {
+export class AgregarCorreoElectronicoComponent1750268697085 {
   pageTitle        = 'Agregar Correo Electrónico';
   description      = `Método para agregar un correo electrónico a una persona.`;
-  pubName          = 'Agregar Correo Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarCorreoElectronico';
+  programa   = 'RBTPG722';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

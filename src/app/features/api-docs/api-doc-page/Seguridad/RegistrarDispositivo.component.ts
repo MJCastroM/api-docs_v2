@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarDispositivoComponent1750258525615 {
+export class RegistrarDispositivoComponent1750268698600 {
   pageTitle        = 'Registrar Dispositivo';
   description      = `Método para registrar un dispositivo en el sistema.`;
-  pubName          = 'Registrar Dispositivo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSeguridad.RegistrarDispositivo';
+  programa   = 'RBTPG150';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

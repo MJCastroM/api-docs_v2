@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsignarIdaChequeElectronicoComponent1750258524613 {
+export class AsignarIdaChequeElectronicoComponent1750268694018 {
   pageTitle        = 'Asignar Id a Cheque Electrónico';
   description      = `Método para asignar Id a un cheque electrónico.`;
-  pubName          = 'Asignar Id a Cheque Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.AsignarIdChequeElectronico';
+  programa   = 'RBTPAR35';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

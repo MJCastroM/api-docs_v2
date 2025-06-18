@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class InhabilitarComponent1750258524760 {
+export class InhabilitarComponent1750268694669 {
   pageTitle        = 'Inhabilitar';
   description      = `Método para inhabilitar una cuenta cliente que se encuentra habilitada.`;
-  pubName          = 'Inhabilitar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.Inhabilitar';
+  programa   = 'RBTPG498';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

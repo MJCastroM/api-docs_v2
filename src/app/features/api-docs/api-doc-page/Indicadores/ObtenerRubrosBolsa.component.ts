@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRubrosBolsaComponent1750258525123 {
+export class ObtenerRubrosBolsaComponent1750268696313 {
   pageTitle        = 'Obtener Rubros Bolsa';
   description      = `Método para obtener posibles rubros de bolsa ingresados en el sistema.`;
-  pubName          = 'Obtener Rubros Bolsa';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTIndicadores.ObtenerRubrosBolsa';
+  programa   = 'RBTPG708';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

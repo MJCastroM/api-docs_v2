@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750258525666 {
+export class CrearComponent1750268698920 {
   pageTitle        = 'Crear';
   description      = `Método para crear un usuario.`;
-  pubName          = 'Crear';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.Crear';
+  programa   = 'RBTPG120';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

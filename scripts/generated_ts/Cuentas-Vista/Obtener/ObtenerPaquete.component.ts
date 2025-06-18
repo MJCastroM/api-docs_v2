@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaqueteComponent1750258525036 {
+export class ObtenerPaqueteComponent1750268695831 {
   pageTitle        = 'Obtener Paquete';
   description      = `Método para obtener los datos de un paquete.`;
-  pubName          = 'Obtener Paquete';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerPaquete';
+  programa   = 'RBTPG321';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

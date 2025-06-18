@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearListaChequesComponent1750258525110 {
+export class CrearListaChequesComponent1750268696238 {
   pageTitle        = 'Crear Lista Cheques';
   description      = `Método para crear una lista de cheques a descontar.`;
-  pubName          = 'Crear Lista Cheques';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDescuentoDocumentos.CrearListaCheques';
+  programa   = 'RBTPG162';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

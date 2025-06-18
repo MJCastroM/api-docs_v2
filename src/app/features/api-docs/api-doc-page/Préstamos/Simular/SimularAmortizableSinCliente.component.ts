@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularAmortizableSinClienteComponent1750258525570 {
+export class SimularAmortizableSinClienteComponent1750268698353 {
   pageTitle        = 'Simular Amortizable Sin Cliente';
   description      = `Método para simular el alta de un préstamo amortizable sin cliente.`;
-  pubName          = 'Simular Amortizable Sin Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularAmortizableSinCliente';
+  programa   = 'RBTPG265';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

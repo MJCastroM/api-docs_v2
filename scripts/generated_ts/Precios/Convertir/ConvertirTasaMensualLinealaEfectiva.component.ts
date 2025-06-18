@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConvertirTasaMensualLinealaEfectivaComponent1750258525426 {
+export class ConvertirTasaMensualLinealaEfectivaComponent1750268697770 {
   pageTitle        = 'Convertir Tasa Mensual Lineal a Efectiva';
   description      = `Método para convertir una tasa lineal mensual a tasa efectiva mensual.`;
-  pubName          = 'Convertir Tasa Mensual Lineal a Efectiva';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ConvertirTasaMensualLinealAEfectiva';
+  programa   = 'RBTPG299';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

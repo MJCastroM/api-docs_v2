@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaisesComponent1750258524953 {
+export class ObtenerPaisesComponent1750268695266 {
   pageTitle        = 'Obtener Países';
   description      = `Método para obtener un listado de los países ingresados en Bantotal.`;
-  pubName          = 'Obtener Países';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerPaises';
+  programa   = 'RBTPG040';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

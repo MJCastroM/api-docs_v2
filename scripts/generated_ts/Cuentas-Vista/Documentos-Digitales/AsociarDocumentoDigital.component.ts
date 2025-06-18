@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750258525022 {
+export class AsociarDocumentoDigitalComponent1750268695767 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a una cuenta vista.`;
-  pubName          = 'Asociar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.AsociarDocumentoDigital';
+  programa   = 'RBTPG202';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011.

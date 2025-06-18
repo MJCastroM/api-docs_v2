@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosconAvanceComponent1750258524806 {
+export class ObtenerPlazosFijosconAvanceComponent1750268694888 {
   pageTitle        = 'Obtener Plazos Fijos con Avance';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente, con su correspondiente avance.`;
-  pubName          = 'Obtener Plazos Fijos con Avance';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPlazosFijoConAvance';
+  programa   = 'RBTPG403';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

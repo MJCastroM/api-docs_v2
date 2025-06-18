@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeListasNegrasComponent1750258524954 {
+export class ObtenerTiposdeListasNegrasComponent1750268695273 {
   pageTitle        = 'Obtener Tipos de Listas Negras';
   description      = `Método para obtener un listado de los tipos de listas negras ingresados en Bantotal.`;
-  pubName          = 'Obtener Tipos de Listas Negras';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerTiposListasNegras';
+  programa   = 'RBTPG214';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoDeudaComponent1750258524719 {
+export class RegistrarPagoDeudaComponent1750268694479 {
   pageTitle        = 'Registrar Pago de Deuda';
   description      = `Método para registrar el pago de una factura realizado en canal externo.`;
-  pubName          = 'Registrar Pago de Deuda';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.RegistrarPagoDeuda';
+  programa   = 'RBTPGC62';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

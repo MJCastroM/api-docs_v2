@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750258525331 {
+export class AsociarDocumentoDigitalComponent1750268697262 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a una persona.`;
-  pubName          = 'Asociar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AsociarDocumentoDigital';
+  programa   = 'RBTPG169';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

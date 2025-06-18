@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AdelantarCapitalConReduccionDePlazoComponent1750258525556 {
+export class AdelantarCapitalConReduccionDePlazoComponent1750268698286 {
   pageTitle        = 'Adelantar Capital Con Reducción De Plazo';
   description      = `Método para realizar el pago de cuota de un préstamo con reducción de plazo.`;
-  pubName          = 'Adelantar Capital Con Reducción De Plazo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.AdelantarCapitalConReduccionDePlazo';
+  programa   = 'RBTPG555';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

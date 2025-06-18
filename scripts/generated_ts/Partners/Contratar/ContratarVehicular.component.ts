@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarVehicularComponent1750258525226 {
+export class ContratarVehicularComponent1750268696737 {
   pageTitle        = 'Contratar Vehicular';
   description      = `Método para contratar un préstamo vehicular.`;
-  pubName          = 'Contratar Vehicular';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ContratarVehicular';
+  programa   = 'RBTPNV10';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

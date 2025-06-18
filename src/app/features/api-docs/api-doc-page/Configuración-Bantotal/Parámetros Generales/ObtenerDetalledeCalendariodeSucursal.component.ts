@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendariodeSucursalComponent1750258524936 {
+export class ObtenerDetalledeCalendariodeSucursalComponent1750268695182 {
   pageTitle        = 'Obtener Detalle de Calendario de Sucursal';
   description      = `Método para obtener el detalle de los días del calendario de una determinada sucursal.`;
-  pubName          = 'Obtener Detalle de Calendario de Sucursal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal';
+  programa   = 'RBTPG323';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumendeProductosSaldosContablesComponent1750258524816 {
+export class ObtenerResumendeProductosSaldosContablesComponent1750268694946 {
   pageTitle        = 'Obtener Resumen de Productos (Saldos Contables)';
   description      = `Método para obtener un resumen de los productos de un cliente y su saldo contable correspondiente.`;
-  pubName          = 'Obtener Resumen de Productos (Saldos Contables)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerResumenProductos';
+  programa   = 'RBTPG003';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

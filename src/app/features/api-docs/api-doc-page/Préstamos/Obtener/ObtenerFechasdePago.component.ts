@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechasdePagoComponent1750258525536 {
+export class ObtenerFechasdePagoComponent1750268698124 {
   pageTitle        = 'Obtener Fechas de Pago';
   description      = `Método para obtener fechas de pago de un préstamo.`;
-  pubName          = 'Obtener Fechas de Pago';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerFechasPago';
+  programa   = 'RBTPG137';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

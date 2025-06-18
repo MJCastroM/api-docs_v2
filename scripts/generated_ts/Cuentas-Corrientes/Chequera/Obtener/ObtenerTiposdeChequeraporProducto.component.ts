@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraporProductoComponent1750258524994 {
+export class ObtenerTiposdeChequeraporProductoComponent1750268695591 {
   pageTitle        = 'Obtener Tipos de Chequera por Producto';
   description      = `Método para obtener un listado de las chequeras que se pueden asignar a un determinado producto.`;
-  pubName          = 'Obtener Tipos de Chequera por Producto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto';
+  programa   = 'RBTPG254';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

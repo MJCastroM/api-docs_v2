@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarInformacionAdicionalComponent1750258525554 {
+export class EliminarInformacionAdicionalComponent1750268698267 {
   pageTitle        = 'Eliminar Información Adicional';
   description      = `Método para eliminar la información adicional de un préstamo.`;
-  pubName          = 'Eliminar Información Adicional';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.EliminarInformacionAdicional';
+  programa   = 'RBTPG469';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

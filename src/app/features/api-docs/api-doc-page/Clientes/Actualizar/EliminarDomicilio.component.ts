@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDomicilioComponent1750258524755 {
+export class EliminarDomicilioComponent1750268694638 {
   pageTitle        = 'Eliminar Domicilio';
   description      = `Método para eliminar los datos del domicilio de un cliente.`;
-  pubName          = 'Eliminar Domicilio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.EliminarDomicilio';
+  programa   = 'RBTPG408';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

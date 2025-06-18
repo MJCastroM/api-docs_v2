@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarPerfilComponent1750258525667 {
+export class EliminarPerfilComponent1750268698926 {
   pageTitle        = 'Eliminar Perfil';
   description      = `Método para eliminar un perfil asociado a un usuario.`;
-  pubName          = 'Eliminar Perfil';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.EliminarPerfil';
+  programa   = 'RBTPG123';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

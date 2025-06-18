@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMenusComponent1750258524958 {
+export class ObtenerMenusComponent1750268695312 {
   pageTitle        = 'Obtener Menús';
   description      = `Método para obtener un listado de los menús ingresados en Bantotal.`;
-  pubName          = 'Obtener Menús';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerMenues';
+  programa   = 'RBTPG127';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

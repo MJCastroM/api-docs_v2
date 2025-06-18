@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldosdeOtrosProductosComponent1750258524821 {
+export class ObtenerSaldosdeOtrosProductosComponent1750268694973 {
   pageTitle        = 'Obtener Saldos de Otros Productos';
   description      = `Método para obtener los saldos de los productos de un cliente.`;
-  pubName          = 'Obtener Saldos de Otros Productos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerSaldosProducto';
+  programa   = 'RBTPG260';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

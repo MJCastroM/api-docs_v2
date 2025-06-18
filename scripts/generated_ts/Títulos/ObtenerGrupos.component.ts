@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGruposComponent1750258525661 {
+export class ObtenerGruposComponent1750268698900 {
   pageTitle        = 'Obtener Grupos';
   description      = `Método para obtener los grupos de papeles parametrizados.`;
-  pubName          = 'Obtener Grupos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTitulos.ObtenerGrupos';
+  programa   = 'RBTPG626';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750258524986 {
+export class ObtenerDatosComponent1750268695511 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener los datos de una cuenta bolsillo.`;
-  pubName          = 'Obtener Datos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasBolsillo.ObtenerDatos';
+  programa   = 'RBTPG616';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

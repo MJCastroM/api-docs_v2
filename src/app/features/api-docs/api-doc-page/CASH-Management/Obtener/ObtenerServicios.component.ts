@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerServiciosComponent1750258524706 {
+export class ObtenerServiciosComponent1750268694411 {
   pageTitle        = 'Obtener Servicios';
   description      = `Método para obtener un listado de los servicios de CASH.`;
-  pubName          = 'Obtener Servicios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerServicios';
+  programa   = 'RBTPGC17';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

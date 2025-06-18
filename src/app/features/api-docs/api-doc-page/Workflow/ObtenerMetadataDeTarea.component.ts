@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetadataDeTareaComponent1750258525677 {
+export class ObtenerMetadataDeTareaComponent1750268698985 {
   pageTitle        = 'Obtener Metadata De Tarea';
   description      = ``;
-  pubName          = 'Obtener Metadata De Tarea';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

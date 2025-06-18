@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasClienteComponent1750258525359 {
+export class ObtenerCuentasClienteComponent1750268697396 {
   pageTitle        = 'Obtener Cuentas Cliente';
   description      = `Método para obtener un listado de las cuentas de una persona.`;
-  pubName          = 'Obtener Cuentas Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerCuentasCliente';
+  programa   = 'RBTPG182';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDebitosComponent1750258524640 {
+export class ObtenerDebitosComponent1750268694101 {
   pageTitle        = 'Obtener Débitos';
   description      = `Método para obtener los débitos de una adhesión, dado el estado ingresado.`;
-  pubName          = 'Obtener Débitos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.ConsultarDebitos';
+  programa   = 'RBTPG335';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

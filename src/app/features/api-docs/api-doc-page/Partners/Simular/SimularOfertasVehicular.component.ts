@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularOfertasVehicularComponent1750258525257 {
+export class SimularOfertasVehicularComponent1750268696865 {
   pageTitle        = 'Simular Ofertas Vehicular';
   description      = `Método para simular ofertas de préstamos vehicular.`;
-  pubName          = 'Simular Ofertas Vehicular';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.SimularOfertasVehicular';
+  programa   = 'RBTPNV07';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

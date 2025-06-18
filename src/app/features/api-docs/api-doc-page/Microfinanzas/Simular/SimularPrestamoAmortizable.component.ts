@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoAmortizableComponent1750258525185 {
+export class SimularPrestamoAmortizableComponent1750268696601 {
   pageTitle        = 'Simular Amortizable';
   description      = `Método para simular el alta de un préstamo amortizable para un crédito individual.`;
-  pubName          = 'Simular Amortizable';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.SimularAmortizable';
+  programa   = 'RBTPG422';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiasComponent1750258525061 {
+export class TraspasarEntreCuentasPropiasComponent1750268695986 {
   pageTitle        = 'Traspasar Entre Cuentas Propias';
   description      = `Método para realizar un traspaso entre cuentas propias.`;
-  pubName          = 'Traspasar Entre Cuentas Propias';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarEntreCuentasPropias';
+  programa   = 'RBTPG031';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:

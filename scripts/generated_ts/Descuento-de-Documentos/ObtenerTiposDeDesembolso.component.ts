@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeDesembolsoComponent1750258525114 {
+export class ObtenerTiposDeDesembolsoComponent1750268696255 {
   pageTitle        = 'Obtener Tipos de Desembolso';
   description      = `Método para obtener los tipos de desembolso.`;
-  pubName          = 'Obtener Tipos de Desembolso';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDescuentoDocumentos.ObtenerTiposDeDesembolso';
+  programa   = 'RBTPG578';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

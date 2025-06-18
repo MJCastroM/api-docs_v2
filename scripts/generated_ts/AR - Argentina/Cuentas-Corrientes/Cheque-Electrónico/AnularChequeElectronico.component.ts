@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularChequeElectronicoComponent1750258524611 {
+export class AnularChequeElectronicoComponent1750268694012 {
   pageTitle        = 'Anular Cheque Electrónico';
   description      = `Método para anular un cheque electrónico de una chequera.`;
-  pubName          = 'Anular Cheque Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.AnularChequeElectronico';
+  programa   = 'RBTPAR31';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

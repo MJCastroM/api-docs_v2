@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTextoComponent1750258524912 {
+export class ObtenerTiposdeTextoComponent1750268695155 {
   pageTitle        = 'Obtener Tipos de Texto';
   description      = `Método para obtener un listado de los tipos de texto ingresados en Bantotal.`;
-  pubName          = 'Obtener Tipos de Texto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeTexto';
+  programa   = 'RBTPG312';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

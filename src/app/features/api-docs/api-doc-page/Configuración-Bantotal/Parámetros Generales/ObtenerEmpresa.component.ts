@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresaComponent1750258524942 {
+export class ObtenerEmpresaComponent1750268695196 {
   pageTitle        = 'Obtener Empresa';
   description      = `Método para obtener información de la empresa.`;
-  pubName          = 'Obtener Empresa';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerEmpresa';
+  programa   = 'RBTPG320';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

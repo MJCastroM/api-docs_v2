@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasaParaProductoComponent1750258525437 {
+export class ObtenerTasaParaProductoComponent1750268697833 {
   pageTitle        = 'Obtener Tasa Para Producto';
   description      = `Método para obtener la tasa parametrizada para el producto, junto con la fecha de vigencia.`;
-  pubName          = 'Obtener Tasa Para Producto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerTasaProducto';
+  programa   = 'RBTPG317';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

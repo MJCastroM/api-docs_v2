@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeGrupoComponent1750258525157 {
+export class ObtenerTiposdeGrupoComponent1750268696486 {
   pageTitle        = 'Obtener Tipos de Grupo';
   description      = `Método para obtener los tipos de grupo de crédito.`;
-  pubName          = 'Obtener Tipos de Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerTiposGrupo';
+  programa   = 'RBTPG427';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

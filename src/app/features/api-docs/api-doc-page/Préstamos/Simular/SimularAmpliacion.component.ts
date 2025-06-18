@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularAmpliacionComponent1750258525571 {
+export class SimularAmpliacionComponent1750268698359 {
   pageTitle        = 'Simular Ampliación';
   description      = `Método para simular una ampliación de uno o más préstamos.`;
-  pubName          = 'Simular Ampliación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularAmpliacion';
+  programa   = 'RBTPG232';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Tiempo de validez de la simulación de una ampliación o refinanciación: 

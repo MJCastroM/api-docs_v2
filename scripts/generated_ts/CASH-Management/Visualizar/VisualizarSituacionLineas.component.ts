@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarSituacionLineasComponent1750258524735 {
+export class VisualizarSituacionLineasComponent1750268694536 {
   pageTitle        = 'Visualizar Situación Lineas';
   description      = `Método para visualizar las líneas del archivo con su estado.`;
-  pubName          = 'Visualizar Situación Lineas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.VisualizarSituacionLineas';
+  programa   = 'RBTPGC11';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

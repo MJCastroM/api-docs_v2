@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarFATCAComponent1750258525316 {
+export class AgregarFATCAComponent1750268697140 {
   pageTitle        = 'Agregar FATCA';
   description      = `Método para agregar la información FATCA de una persona.`;
-  pubName          = 'Agregar FATCA';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarFATCA';
+  programa   = 'RBTPCO10';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

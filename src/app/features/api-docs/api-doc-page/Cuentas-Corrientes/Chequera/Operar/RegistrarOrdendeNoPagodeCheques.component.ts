@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarOrdendeNoPagodeChequesComponent1750258524999 {
+export class RegistrarOrdendeNoPagodeChequesComponent1750268695608 {
   pageTitle        = 'Registrar Orden de No Pago de Cheques';
   description      = `Método para registrar una orden de no pago de cheques.`;
-  pubName          = 'Registrar Orden de No Pago de Cheques';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques';
+  programa   = 'RBTPG143';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

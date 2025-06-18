@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOfertaAmortizableComponent1750258525237 {
+export class ObtenerDetalledeOfertaAmortizableComponent1750268696770 {
   pageTitle        = 'Obtener Detalle de Oferta Amortizable';
   description      = `Método para obtener el detalle de la oferta amortizable del Partner.`;
-  pubName          = 'Obtener Detalle de Oferta Amortizable';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ObtenerDetalleOfertaAmortizable';
+  programa   = 'RBTPN012';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

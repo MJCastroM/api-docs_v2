@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ResimularAmortizableComponent1750258525561 {
+export class ResimularAmortizableComponent1750268698317 {
   pageTitle        = 'Resimular Amortizable';
   description      = `Método para resimular un préstamo amortizable.`;
-  pubName          = 'Resimular Amortizable';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ResimularAmortizable';
+  programa   = 'RBTPG574';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

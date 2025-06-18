@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarBeneficiariosComponent1750258525068 {
+export class ActualizarBeneficiariosComponent1750268696018 {
   pageTitle        = 'Actualizar Beneficiarios';
   description      = `Método para actualizar el listado de beneficiarios de un depósito a plazo. Luego de la ejecución, se eliminarán los beneficiarios previamente registrados, y se asociarán los ingresados en el listado.`;
-  pubName          = 'Actualizar Beneficiarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ActualizarBeneficiarios';
+  programa   = 'RBTPG622';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

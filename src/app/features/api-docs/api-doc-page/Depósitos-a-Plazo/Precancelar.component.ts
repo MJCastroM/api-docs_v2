@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PrecancelarComponent1750258525103 {
+export class PrecancelarComponent1750268696202 {
   pageTitle        = 'Precancelar';
   description      = `Método para precancelar una operación de un depósito a plazo.`;
-  pubName          = 'Precancelar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.Precancelar';
+  programa   = 'RBTPG637';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de cancelación teniendo en cuenta que:

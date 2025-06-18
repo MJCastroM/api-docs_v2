@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasdeDebitoComponent1750258525397 {
+export class ObtenerTarjetasdeDebitoComponent1750268697615 {
   pageTitle        = 'Obtener Tarjetas de Débito';
   description      = `Método para obtener las tarjetas de débito de una persona.`;
-  pubName          = 'Obtener Tarjetas de Débito';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTarjetasDeDebito';
+  programa   = 'RBTPG383';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

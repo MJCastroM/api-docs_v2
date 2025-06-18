@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeConsanguinidadComponent1750258525410 {
+export class ObtenerVinculosdeConsanguinidadComponent1750268697684 {
   pageTitle        = 'Obtener Vínculos de Consanguinidad';
   description      = `Método para obtener un listado de los vínculos de consanguinidad registrados.`;
-  pubName          = 'Obtener Vínculos de Consanguinidad';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerVinculosConsanguinidad';
+  programa   = 'RBTPG395';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

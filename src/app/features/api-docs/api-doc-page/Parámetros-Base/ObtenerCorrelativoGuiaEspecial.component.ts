@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorrelativoGuiaEspecialComponent1750258525265 {
+export class ObtenerCorrelativoGuiaEspecialComponent1750268696894 {
   pageTitle        = 'Obtener Correlativo Guía Especial';
   description      = `Método para obtener los datos de un correlativo de una determinada guía especial de procesos.`;
-  pubName          = 'Obtener Correlativo Guía Especial';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTParametrosBase.ObtenerCorrelativoGuiaEspecial';
+  programa   = 'RBTPG051';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

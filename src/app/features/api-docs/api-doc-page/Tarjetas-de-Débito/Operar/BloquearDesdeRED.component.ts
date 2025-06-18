@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BloquearDesdeREDComponent1750258525649 {
+export class BloquearDesdeREDComponent1750268698821 {
   pageTitle        = 'Bloquear Desde RED';
   description      = `Método para bloquear una tarjeta de débito sin notificar a la RED.`;
-  pubName          = 'Bloquear Desde RED';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.BloquearDesdeRED';
+  programa   = 'RBTPG067';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

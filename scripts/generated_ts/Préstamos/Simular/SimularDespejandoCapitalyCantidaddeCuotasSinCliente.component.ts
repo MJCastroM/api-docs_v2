@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoCapitalyCantidaddeCuotasSinClienteComponent1750258525575 {
+export class SimularDespejandoCapitalyCantidaddeCuotasSinClienteComponent1750268698380 {
   pageTitle        = 'Simular Despejando Capital y Cantidad de Cuotas Sin Cliente';
   description      = `Método para simular un préstamo sin cliente despejando capital y cantidad de cuotas.`;
-  pubName          = 'Simular Despejando Capital y Cantidad de Cuotas Sin Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularDespejandoCapitalCantCuotasSC';
+  programa   = 'RBTPG466';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePrestamoCanceladoComponent1750258525520 {
+export class ObtenerDetalledePrestamoCanceladoComponent1750268698060 {
   pageTitle        = 'Obtener Detalle de Préstamo Cancelado';
   description      = `Devuelve el detalle del préstamo cancelado indicado.`;
-  pubName          = 'Obtener Detalle de Préstamo Cancelado';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetallePrestamoCancelado';
+  programa   = 'RBTPG248';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

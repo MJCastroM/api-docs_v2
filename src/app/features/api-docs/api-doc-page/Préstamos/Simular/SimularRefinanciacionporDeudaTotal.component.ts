@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionporDeudaTotalComponent1750258525593 {
+export class SimularRefinanciacionporDeudaTotalComponent1750268698493 {
   pageTitle        = 'Simular Refinanciación por Deuda Total';
   description      = `Método para simular una refinanciación de uno o más préstamos, siendo el capital del nuevo préstamo la suma de la deuda total de los seleccionados.`;
-  pubName          = 'Simular Refinanciación por Deuda Total';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularRefinanciacionDeudaTotal';
+  programa   = 'RBTPG234';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Tiempo de validez de la simulación de una ampliación o refinanciación: 

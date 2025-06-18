@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPuntosdeVentaComponent1750258525250 {
+export class ObtenerPuntosdeVentaComponent1750268696832 {
   pageTitle        = 'Obtener Puntos de Venta';
   description      = `Método para retornar los puntos de venta del Partner.`;
-  pubName          = 'Obtener Puntos de Venta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ObtenerPuntosDeVenta';
+  programa   = 'RBTPN005';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

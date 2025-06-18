@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionCierreComponent1750258525431 {
+export class ObtenerCotizacionCierreComponent1750268697793 {
   pageTitle        = 'Obtener Cotización Cierre';
   description      = `Método para obtener la cotización del cierre.`;
-  pubName          = 'Obtener Cotización Cierre';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerCotizacionCierre';
+  programa   = 'RBTPG841';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

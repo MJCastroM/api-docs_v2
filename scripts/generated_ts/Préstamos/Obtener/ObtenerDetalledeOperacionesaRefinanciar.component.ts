@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOperacionesaRefinanciarComponent1750258525519 {
+export class ObtenerDetalledeOperacionesaRefinanciarComponent1750268698054 {
   pageTitle        = 'Obtener Detalle de Operaciones a Refinanciar';
   description      = ``;
-  pubName          = 'Obtener Detalle de Operaciones a Refinanciar';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

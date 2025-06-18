@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750258525057 {
+export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750268695953 {
   pageTitle        = 'Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas cuyo titular sea la misma persona.`;
-  pubName          = 'Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarMismoTitularConCotizacion';
+  programa   = 'RBTPG273';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneraldeProcesoComponent1750258525270 {
+export class ObtenerOpcionGeneraldeProcesoComponent1750268696912 {
   pageTitle        = 'Obtener Opción General de Proceso';
   description      = `Método para obtener los datos de una determinada opción general de procesos.`;
-  pubName          = 'Obtener Opción General de Proceso';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTParametrosBase.ObtenerOpcionGeneralDeProceso';
+  programa   = 'RBTPG286';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

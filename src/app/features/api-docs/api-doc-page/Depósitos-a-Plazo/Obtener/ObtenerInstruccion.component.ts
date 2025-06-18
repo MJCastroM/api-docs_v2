@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionComponent1750258525093 {
+export class ObtenerInstruccionComponent1750268696156 {
   pageTitle        = 'Obtener Instrucción';
   description      = `Método para obtener una lista de las instrucciones de un depósito.`;
-  pubName          = 'Obtener Instrucción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerInstruccion';
+  programa   = 'RBTPG109';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

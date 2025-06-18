@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumenporProductoaCierreAnoComponent1750258524819 {
+export class ObtenerResumenporProductoaCierreAnoComponent1750268694959 {
   pageTitle        = 'Obtener Resumen por Producto a Cierre Año';
   description      = `Método para obtener un resumen con el detalle de las operaciones de un cliente al cierre del año.`;
-  pubName          = 'Obtener Resumen por Producto a Cierre Año';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerResumenPorProductoACierreAnio';
+  programa   = 'RBTPG271';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

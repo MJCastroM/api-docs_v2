@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonaJuridicaComponent1750258525387 {
+export class ObtenerPersonaJuridicaComponent1750268697554 {
   pageTitle        = 'Obtener Persona Jurídica';
   description      = `Método para obtener la información de una persona jurídica.`;
-  pubName          = 'Obtener Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerPersonaJuridica';
+  programa   = 'RBTPG384';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

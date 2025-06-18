@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosContactoComponent1750258525635 {
+export class ObtenerDatosContactoComponent1750268698705 {
   pageTitle        = 'Obtener Datos de Contacto';
   description      = `Método para obtener los datos de contacto de una tarjeta de débito.`;
-  pubName          = 'Obtener Datos de Contacto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerDatosContacto';
+  programa   = 'RBTPG634';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

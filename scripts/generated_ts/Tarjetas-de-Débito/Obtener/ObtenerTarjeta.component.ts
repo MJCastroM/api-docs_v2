@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaComponent1750258525638 {
+export class ObtenerTarjetaComponent1750268698746 {
   pageTitle        = 'Obtener Tarjeta';
   description      = `Método para obtener la tarjeta encriptada según las normas PCI.`;
-  pubName          = 'Obtener Tarjeta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerTarjeta';
+  programa   = 'RBTPG805';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se debe parametrizar el programa particular que resuelve la encriptación de la tarjeta en la FST900 con programa estándar RBTSTD13.

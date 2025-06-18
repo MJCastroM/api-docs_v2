@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerClientedeunaOperacionComponent1750258524972 {
+export class ObtenerClientedeunaOperacionComponent1750268695417 {
   pageTitle        = 'Obtener Cliente de una Operación';
   description      = `Método para obtener el identificador de cuenta cliente asociado a una operación.`;
-  pubName          = 'Obtener Cliente de una Operación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerClienteDeOperacion';
+  programa   = 'RBTPG298';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

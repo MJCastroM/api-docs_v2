@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosconErrorComponent1750258524653 {
+export class ObtenerProcesosconErrorComponent1750268694160 {
   pageTitle        = 'Obtener Procesos con Error';
   description      = `Método para obtener un listado de los procesos con error en la cadena de cierre para una fecha dada.`;
-  pubName          = 'Obtener Procesos con Error';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerProcesosConError';
+  programa   = 'RBTPG505';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

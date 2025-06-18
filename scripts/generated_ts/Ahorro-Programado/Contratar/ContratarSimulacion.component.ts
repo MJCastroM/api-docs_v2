@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750258524551 {
+export class ContratarSimulacionComponent1750268693784 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un ahorro programado a partir de una simulación.`;
-  pubName          = 'Contratar Simulación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ContratarSimulacion';
+  programa   = 'RBTPG445';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

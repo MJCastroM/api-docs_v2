@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750258524609 {
+export class ObtenerProductosComponent1750268694006 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de ahorro programado habilitados.`;
-  pubName          = 'Obtener Productos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerProductos';
+  programa   = 'RBTPG110';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

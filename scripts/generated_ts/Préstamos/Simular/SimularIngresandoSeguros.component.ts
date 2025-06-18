@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoSegurosComponent1750258525585 {
+export class SimularIngresandoSegurosComponent1750268698433 {
   pageTitle        = 'Simular Ingresando Seguros';
   description      = `Método para simular el alta de un préstamo ingresando los seguros a aplicar.`;
-  pubName          = 'Simular Ingresando Seguros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularIngresandoSeguros';
+  programa   = 'RBTPG509';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeCuotaComponent1750258525540 {
+export class ObtenerPagosdeCuotaComponent1750268698160 {
   pageTitle        = 'Obtener Pagos de Cuota';
   description      = `Método para obtener el detalle de pagos de una cuota de préstamo.`;
-  pubName          = 'Obtener Pagos de Cuota';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerPagosCuota';
+  programa   = 'RBTPG095';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

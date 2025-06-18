@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCondicionesGeneralesComponent1750258525118 {
+export class ObtenerCondicionesGeneralesComponent1750268696284 {
   pageTitle        = 'Obtener Condiciones Generales';
   description      = `Método para obtener las condiciones generales ingresadas en el sistema.`;
-  pubName          = 'Obtener Condiciones Generales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTIndicadores.ObtenerCondicionesGenerales';
+  programa   = 'RBTPG703';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

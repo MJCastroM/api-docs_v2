@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosCivilesComponent1750258525367 {
+export class ObtenerEstadosCivilesComponent1750268697441 {
   pageTitle        = 'Obtener Estados Civiles';
   description      = `Método para obtener un listado de los estados civiles registrados.`;
-  pubName          = 'Obtener Estados Civiles';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerEstadoCiviles';
+  programa   = 'RBTPG038';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

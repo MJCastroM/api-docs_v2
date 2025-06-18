@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPEPComponent1750258525361 {
+export class ObtenerDatosPEPComponent1750268697413 {
   pageTitle        = 'Obtener Datos PEP';
   description      = `Método para obtener los datos de una persona expuesta políticamente.`;
-  pubName          = 'Obtener Datos PEP';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerDatosPEP';
+  programa   = 'RBTPG229';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaquetesComponent1750258524853 {
+export class ObtenerPaquetesComponent1750268695146 {
   pageTitle        = 'Obtener Paquetes';
   description      = `Método para obtener un listado de los paquetes ingresados en Bantotal.`;
-  pubName          = 'Obtener Paquetes';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerPaquetes';
+  programa   = 'RBTPG187';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

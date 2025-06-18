@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasAsociadasPorTipoComponent1750258525631 {
+export class ObtenerCuentasAsociadasPorTipoComponent1750268698683 {
   pageTitle        = 'Obtener Cuentas Asociadas Por Tipo';
   description      = `Método para obtener un listado de las cuentas del tipo ingresado para una tarjeta de débito.`;
-  pubName          = 'Obtener Cuentas Asociadas Por Tipo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerCuentasAsociadasPorTipo';
+  programa   = 'RBTPG448';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

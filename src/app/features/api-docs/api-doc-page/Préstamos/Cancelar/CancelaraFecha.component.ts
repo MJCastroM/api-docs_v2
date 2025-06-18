@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelaraFechaComponent1750258525442 {
+export class CancelaraFechaComponent1750268697864 {
   pageTitle        = 'Cancelar a Fecha';
   description      = `Método para realizar la cancelación de un préstamo a una fecha valor dada.`;
-  pubName          = 'Cancelar a Fecha';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.CancelarAFecha';
+  programa   = 'RBTPG246';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de pago, teniendo en cuenta que: 

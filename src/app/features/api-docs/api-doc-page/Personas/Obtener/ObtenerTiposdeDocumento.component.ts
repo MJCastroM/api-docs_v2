@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeDocumentoComponent1750258525403 {
+export class ObtenerTiposdeDocumentoComponent1750268697637 {
   pageTitle        = 'Obtener Tipos de Documento';
   description      = `Método para obtener un listado de los tipos de documento registrados.`;
-  pubName          = 'Obtener Tipos de Documento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTiposdeDocumento';
+  programa   = 'RBTPG039';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

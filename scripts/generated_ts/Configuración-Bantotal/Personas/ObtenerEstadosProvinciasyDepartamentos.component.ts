@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosProvinciasyDepartamentosComponent1750258524952 {
+export class ObtenerEstadosProvinciasyDepartamentosComponent1750268695258 {
   pageTitle        = 'Obtener Estados, Provincias y Departamentos';
   description      = `Método para obtener un listado de los estados/provincias/departamentos ingresados en Bantotal para un determinado país.`;
-  pubName          = 'Obtener Estados, Provincias y Departamentos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos';
+  programa   = 'RBTPG043';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

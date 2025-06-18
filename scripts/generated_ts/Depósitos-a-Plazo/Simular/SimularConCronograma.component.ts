@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularConCronogramaComponent1750258525106 {
+export class SimularConCronogramaComponent1750268696217 {
   pageTitle        = 'Simular Con Cronograma';
   description      = `Método para simular el alta de un depósito a plazo con cronograma.`;
-  pubName          = 'Simular Con Cronograma';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositoAPlazo.SimularConCronograma';
+  programa   = 'RBTPG454';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 

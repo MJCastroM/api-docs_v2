@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750258525083 {
+export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750268696101 {
   pageTitle        = 'Modificar Cuenta Destino de Acreditación Periódica';
   description      = `Método para modificar la cuenta de destino de la instrucción de acreditación de un depósito con pago periódico de intereses.`;
-  pubName          = 'Modificar Cuenta Destino de Acreditación Periódica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion';
+  programa   = 'RBTPG108';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

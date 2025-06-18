@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesComponent1750258525680 {
+export class ObtenerRolesComponent1750268699003 {
   pageTitle        = 'Obtener Roles';
   description      = ``;
-  pubName          = 'Obtener Roles';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

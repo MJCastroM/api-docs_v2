@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarCuentaAsociadaComponent1750258525657 {
+export class EliminarCuentaAsociadaComponent1750268698873 {
   pageTitle        = 'Eliminar Cuenta Asociada';
   description      = `Método para eliminar una cuenta asociada de una tarjeta de débito.`;
-  pubName          = 'Eliminar Cuenta Asociada';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.EliminarCuentaAsociada';
+  programa   = 'RBTPG378';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoconAltadeFacultadesComponent1750258525011 {
+export class ContratarProductoconAltadeFacultadesComponent1750268695702 {
   pageTitle        = 'Contratar Producto con Alta de Facultades';
   description      = `Método para contratar un producto de cuenta de ahorro dando de alta las facultades.`;
-  pubName          = 'Contratar Producto con Alta de Facultades';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasDeAhorro.ContratarConFacultades';
+  programa   = 'RBTPG100';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

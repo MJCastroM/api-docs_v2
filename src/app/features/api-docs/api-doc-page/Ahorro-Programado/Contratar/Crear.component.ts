@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750258524560 {
+export class CrearComponent1750268693795 {
   pageTitle        = 'Crear';
   description      = `Método para contratar un ahorro programado.`;
-  pubName          = 'Crear';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.Crear';
+  programa   = 'RBTPG118';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarChequeElectronicoComponent1750258524627 {
+export class HabilitarChequeElectronicoComponent1750268694061 {
   pageTitle        = 'Habilitar Cheque Electrónico';
   description      = `Método para habilitar un cheque electrónico de una chequera existente.`;
-  pubName          = 'Habilitar Cheque Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.HabilitarChequeElectronico';
+  programa   = 'RBTPAR30';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

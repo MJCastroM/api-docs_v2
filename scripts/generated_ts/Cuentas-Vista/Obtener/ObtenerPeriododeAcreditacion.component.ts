@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriododeAcreditacionComponent1750258525038 {
+export class ObtenerPeriododeAcreditacionComponent1750268695844 {
   pageTitle        = 'Obtener Período de Acreditación';
   description      = `Método para obtener el período de acreditación de una cuenta vista.`;
-  pubName          = 'Obtener Período de Acreditación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerPeriodoDeAcreditacion';
+  programa   = 'RBTPG366';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
