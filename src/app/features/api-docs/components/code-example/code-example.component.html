@@ -1,34 +1,39 @@
 <mat-accordion>
-  <mat-expansion-panel>
+
+  <!-- Recorremos dos secciones: invocation y response -->
+  <mat-expansion-panel *ngFor="let section of sections">
     <mat-expansion-panel-header>
-      <mat-panel-title>Ejemplo de Invocación</mat-panel-title>
-      
+      <mat-panel-title>
+        {{ section === 'invocation'
+           ? 'Ejemplo de Invocación'
+           : 'Ejemplo de Respuesta' }}
+      </mat-panel-title>
     </mat-expansion-panel-header>
-    
+
     <div class="code-toggle">
       <button
         mat-button
-        [class.active]="view === 'xml'"
-        (click)="switchView('xml')">
+        [class.active]="view[section] === 'xml'"
+        (click)="switchView(section, 'xml')">
         XML
       </button>
       <button
         mat-button
-        [class.active]="view === 'json'"
-        (click)="switchView('json')">
+        [class.active]="view[section] === 'json'"
+        (click)="switchView(section, 'json')">
         JSON
       </button>
-      <button mat-icon-button (click)="copyCode()">
+      <button mat-icon-button (click)="copyCode(section)">
         <mat-icon>content_copy</mat-icon>
       </button>
     </div>
-    
+
     <pre>
       <code
-        #codeBlock
-        [innerHTML]="highlightedCode[view]"
-        class="language-{{ view }}">
+        [innerHTML]="highlightedCode[section][view[section]]"
+        class="language-{{ view[section] }}">
       </code>
     </pre>
   </mat-expansion-panel>
+
 </mat-accordion>

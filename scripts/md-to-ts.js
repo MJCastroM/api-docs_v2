@@ -19,52 +19,66 @@ function walkMd(dir) {
   });
 }
 
+// Quita acentos/diacríticos (se usa solo para generar nombres “seguros”)
 function stripAccents(str) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+// Escapa apóstrofes en literales
+function esc(str) {
+  return String(str).replace(/'/g, "\\'");
 }
 
 function extractBlock(content, start, end) {
   const i = content.indexOf(start);
   const j = content.indexOf(end, i + start.length);
-  return i >= 0 && j > i ? content.slice(i + start.length, j).trim() : '';
+  return i >= 0 && j > i
+    ? content.slice(i + start.length, j).trim()
+    : '';
 }
 
 function parseTable(md) {
   const lines = md.split('\n').map(l => l.trim()).filter(l => l);
   if (lines.length < 2) return [];
-  const headers = lines[0].split('|').map(h => stripAccents(h.trim()));
+  const headers = lines[0].split('|').map(h => h.trim());
   return lines.slice(2).map(line => {
     const cols = line.split('|').map(c => c.trim());
     const obj = {};
-    headers.forEach((h, idx) => obj[h] = stripAccents(cols[idx] || ''));
+    headers.forEach((h, idx) => {
+      obj[h] = cols[idx] || '';
+    });
     return obj;
   });
 }
-// Extrae configuración backend si existe
+
 function extractBackendConfig(content) {
   const block = extractBlock(content,
     '<!-- ABRE CONFIGURACIÓN BACKEND -->',
     '<!-- CIERRA CONFIGURACIÓN BACKEND -->'
   );
   if (!block) return { hasConfig: false, text: '', config: [] };
+
   const infoTag = '::: info Configuración Backend';
   let text = block;
   const idx = block.indexOf(infoTag);
   if (idx >= 0) {
     text = block.slice(idx + infoTag.length).trim();
   }
-  // Extraer líneas numeradas
+
   const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => /^\d+\)/.test(l));
   const config = lines.map(line => {
     const parts = line.replace(/^\d+\)\s*/, '').split(/:\s*/);
     if (parts.length > 1) {
-      return { campo: stripAccents(parts[0].trim()), valor: stripAccents(parts.slice(1).join(':').trim()) };
+      return {
+        campo: parts[0].trim(),
+        valor: parts.slice(1).join(':').trim()
+      };
     }
-    return { campo: stripAccents(line), valor: '' };
+    return { campo: line, valor: '' };
   });
-  return { hasConfig: true, text: stripAccents(text) };
-}
 
+  return { hasConfig: true, text };
+}
 
 function extractSdts(content) {
   const block = extractBlock(content,
@@ -74,24 +88,28 @@ function extractSdts(content) {
   const sdts = [];
   const headerRe = /###\s*([A-Za-z0-9_]+)/g;
   const entries = Array.from(block.matchAll(headerRe));
+
   for (let i = 0; i < entries.length; i++) {
-    const typeName = stripAccents(entries[i][1]);
-    // Search from end of this header
+    const typeName = entries[i][1];
     const startIdx = entries[i].index + entries[i][0].length;
-    // Find center block for this SDT
     const centerMarker = '::: center';
     const centerPos = block.indexOf(centerMarker, startIdx);
     if (centerPos < 0) continue;
+
     const afterCenter = block.slice(centerPos + centerMarker.length);
     const endCenter = afterCenter.indexOf(':::');
-    const centerContent = endCenter >= 0 ? afterCenter.slice(0, endCenter) : afterCenter;
-    // Locate table
+    const centerContent = endCenter >= 0
+      ? afterCenter.slice(0, endCenter)
+      : afterCenter;
+
     const tableStart = centerContent.search(/Nombre\s*\|\s*Tipo\s*\|\s*Comentarios/);
     if (tableStart < 0) continue;
+
     const tableMd = centerContent.slice(tableStart);
     const fields = parseTable(tableMd);
     sdts.push({ typeName, fields });
   }
+
   return sdts;
 }
 
@@ -125,7 +143,9 @@ function extractExamples(content) {
   const code = (blk, lang) => {
     const re = new RegExp('```' + lang + '[\\s\\S]*?```', 'm');
     const mm = blk.match(re);
-    return mm ? mm[0].replace(/```(?:xml|json)/g, '').replace(/```/g, '').trim() : '';
+    return mm
+      ? mm[0].replace(/```(?:xml|json)/g, '').replace(/```/g, '').trim()
+      : '';
   };
   return {
     invocation: { xml: code(inv, 'xml'), json: code(inv, 'json') },
@@ -134,65 +154,80 @@ function extractExamples(content) {
 }
 
 function renderComponent(mdPath) {
-  const txt     = fs.readFileSync(mdPath, 'utf8');
+  const txt  = fs.readFileSync(mdPath, 'utf8');
   const { data, content } = matter(txt);
-  const name    = path.basename(mdPath, '.md');
-  const key     = stripAccents(data.title || name);
-  const cls     = stripAccents(key.replace(/\W/g, '')) + 'Component';
 
-  const meta    = extractBlock(content,
+  const rawName  = path.basename(mdPath, '.md');                    // conserva acentos
+  const safeName = stripAccents(rawName).replace(/\W/g, '');        // solo para nombre de clase/selector/archivo
+
+  const cls      = `${safeName.charAt(0).toUpperCase() + safeName.slice(1)}Component`;
+  const selector = `app-${safeName}`;
+
+  // calcular rutas relativas
+  const relDir = path.relative(MD_DIR, path.dirname(mdPath));
+  const depth  = relDir ? relDir.split(path.sep).length : 0;
+  const baseUps = '../../../';
+  const extraUps = '../'.repeat(depth);
+  const routeAnimationsPath = `${baseUps}${extraUps}route-animations`;
+
+  // metadatos
+  const key  = data.title || rawName;
+  const meta = extractBlock(content,
     '<!-- ABRE DATOS DEL MÉTODO -->',
     '<!-- CIERRA DATOS DEL MÉTODO -->'
   );
-  const pub     = meta.match(/\*\*Nombre publicación:\*\*\s*(.+)/)?.[1] || '';
-  const prog    = meta.match(/\*\*Programa:\*\*\s*(.+)/)?.[1] || '';
-  const sc      = meta.match(/\*\*Global\/País:\*\*\s*(.+)/)?.[1] || '';
-  const desc    = stripAccents(meta.replace(/::: note/, '').split('\n')[0].trim());
+  const desc = meta.replace(/::: note/, '').split('\n')[0].trim();
 
+  // tablas y ejemplos
   const { inTbl, outTbl, errTbl } = extractApiTabs(content);
   const examples = extractExamples(content);
   const sdts     = extractSdts(content);
 
-  const toCols = tbl => `[${tbl.map(r => `\'${r.Nombre}\'`).join(', ')}]`;
-  const toRows = tbl => `[${tbl.map(r => `{ Nombre: \'${r.Nombre}\', Tipo: \'${r.Tipo}\', Comentarios: \'${r.Comentarios}\' }`).join(', ')}]`;
-  const toRowsErr = tbl => `[${tbl.map(r => `{ Codigo: \'${r.Codigo}\', Descripcion: \'${r.Descripcion}\' }`).join(', ')}]`;
+  // literales para filas
+  const toRows = tbl => `[${tbl.map(r =>
+    `{ Nombre: '${esc(r.Nombre)}', Tipo: '${esc(r.Tipo)}', Comentarios: '${esc(r.Comentarios)}' }`
+  ).join(', ')}]`;
+  const toRowsErr = tbl => `[${tbl.map(r =>
+    `{ Codigo: '${esc(r.Codigo||r.Código)}', Descripcion: '${esc(r.Descripción||r.Descripcion)}' }`
+  ).join(', ')}]`;
+  const sdtLit = `[${sdts.map(s =>
+    `{ typeName: '${esc(s.typeName)}', fields: ${toRows(s.fields)} }`
+  ).join(', ')}]`;
 
   const inputData  = toRows(inTbl);
   const outputData = toRows(outTbl);
-  const errors     = toRowsErr(errTbl.map(r => ({ Codigo: r.Codigo || r.Código, Descripcion: r.Descripcion || r.Descripción })));
-  const sdtLit     = `[${sdts.map(s => `{ typeName: \'${s.typeName}\', fields: ${toRows(s.fields)} }`).join(', ')}]`;
+  const errors     = toRowsErr(errTbl);
   const { hasConfig, text: backendText } = extractBackendConfig(content);
+  const ms = Date.now();
 
   return `import { Component } from '@angular/core';
-import { fadeInOut } from '../../../../route-animations';
+import { fadeInOut } from '${routeAnimationsPath}';
 
 @Component({
-  selector: 'app-${name.replace(/\W/g, '')}',
-  templateUrl: './DocTemplate.component.html',
-  styleUrls: ['./DocTemplate.component.scss'],
+  selector: '${selector}',
+  templateUrl: '${extraUps}DocTemplate.component.html',
+  styleUrls: ['${extraUps}DocTemplate.component.scss'],
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ${cls} {
-  pageTitle = '${key}';
-  description = \`${desc}\`;
-  pubName    = '${pub}';
-  programa   = '${prog}';
-  scope      = '${sc}';
+export class ${cls}${ms} {
+  pageTitle        = '${esc(key)}';
+  description      = \`${esc(desc)}\`;
+  pubName          = '${esc(data.title || '')}';
+  programa         = '${esc(data.programa  || '')}';
+  scope            = '${esc(data.scope     || '')}';
 
-  
-
-  hasBackendConfig  = ${hasConfig};
-  backendText       = \`${backendText.replace(/`/g, '\\`')}\`;
-  backendConfig     = [];
+  hasBackendConfig = ${hasConfig};
+  backendText      = \`${esc(backendText)}\`;
+  backendConfig    = [];
 
   inputData  = ${inputData};
   outputData = ${outputData};
   errors     = ${errors};
 
   examples = {
-    invocation: { xml: \`${examples.invocation.xml}\`, json: \`${examples.invocation.json}\` },
-    response:   { xml: \`${examples.response.xml}\`,  json: \`${examples.response.json}\` }
+    invocation: { xml: \`${esc(examples.invocation.xml)}\`, json: \`${esc(examples.invocation.json)}\` },
+    response:   { xml: \`${esc(examples.response.xml)}\`,  json: \`${esc(examples.response.json)}\` }
   };
 
   structuredTypes = ${sdtLit};
@@ -202,11 +237,15 @@ export class ${cls} {
 
 ensureDir(OUT_DIR);
 walkMd(MD_DIR).forEach(mdPath => {
-  const rel   = path.relative(MD_DIR, path.dirname(mdPath));
-  const dir   = path.join(OUT_DIR, rel);
+  const rel     = path.relative(MD_DIR, path.dirname(mdPath));
+  const dir     = path.join(OUT_DIR, rel);
   ensureDir(dir);
-  const file  = path.basename(mdPath, '.md') + '.component.ts';
-  const out   = path.join(dir, file);
-  fs.writeFileSync(out, renderComponent(mdPath), 'utf8');
-  console.log('Generated:', out);
+
+  const rawName  = path.basename(mdPath, '.md');
+  const safeName = stripAccents(rawName).replace(/\W/g, '');
+  const file     = `${safeName}.component.ts`;
+  const outPath  = path.join(dir, file);
+
+  fs.writeFileSync(outPath, renderComponent(mdPath), 'utf8');
+  console.log('Generated:', outPath);
 });
