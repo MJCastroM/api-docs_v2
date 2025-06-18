@@ -19,12 +19,12 @@ export class BTCliObtSldPrdComp {
 
   // Backend config
   hasBackendConfig = true;
-  backendText = 'Esto es un ejemplo de configuración backend:'
-  //opcional
-  backendConfig = [
-    { campo: 'Correlativo 1',    valor: '1000' },
-    { campo: 'Correlativo 2',    valor: 'Valor del segundo parámetro' },
-    { campo: 'Id de Módulo',     valor: 'Identificador del módulo a incluir' }
+  backendText = 'Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores:'
+  backendCols = ['Campo', 'Valor'];
+  backendData = [
+    { Campo: 'Correlativo 1',    Valor: '1000' },
+    { Campo: 'Correlativo 2',    Valor: 'Valor del segundo parámetro' },
+    { Campo: 'Id de Módulo',     Valor: 'Identificador del módulo a incluir' }
   ];
 
   // Pestañas de Input/Output/Errors
