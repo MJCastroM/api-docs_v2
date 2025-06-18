@@ -1,0 +1,27 @@
+<app-page-header [title]="pageTitle"></app-page-header>
+
+<app-info-card
+  [description]="description"
+  [pubName]="pubName"
+  [programa]="programa"
+  [scope]="scope">
+</app-info-card>
+
+<app-backend-config
+  *ngIf="hasBackendConfig"
+  [text]="backendText"
+  [config]="backendConfig">
+</app-backend-config>
+
+<app-api-tabs
+  [inputCols]="['Nombre','Tipo','Comentarios']"
+  [inputData]="inputData"
+  [outputCols]="['Nombre','Tipo','Comentarios']"
+  [outputData]="outputData"
+  [errorCols]="['Codigo', 'Descripcion']"
+  [errors]="errors">
+</app-api-tabs>
+
+<app-code-example [examples]="examples"></app-code-example>
+
+<app-structured-data [types]="structuredTypes"></app-structured-data>
