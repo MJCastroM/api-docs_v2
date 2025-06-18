@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750258525638 {
+export class ObtenerMovimientosComponent1750268698736 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener los movimientos de una tarjeta de débito.`;
-  pubName          = 'Obtener Movimientos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerMovimientos';
+  programa   = 'RBTPG026';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

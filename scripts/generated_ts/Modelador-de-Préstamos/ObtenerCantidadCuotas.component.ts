@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCantidadCuotasComponent1750258525192 {
+export class ObtenerCantidadCuotasComponent1750268696623 {
   pageTitle        = 'Obtener Cantidad Cuotas';
   description      = `Método para obtener la cantidad de cuotas parametrizadas de un producto de préstamo.`;
-  pubName          = 'Obtener Cantidad Cuotas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerCantidadCuotas';
+  programa   = 'RBTPG350';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

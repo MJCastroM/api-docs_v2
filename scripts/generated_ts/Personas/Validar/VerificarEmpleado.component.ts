@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEmpleadoComponent1750258525422 {
+export class VerificarEmpleadoComponent1750268697741 {
   pageTitle        = 'Verificar Empleado';
   description      = `Método para verificar si una persona es empleada de la institución.`;
-  pubName          = 'Verificar Empleado';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.VerificarEmpleado';
+  programa   = 'RBTPG537';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

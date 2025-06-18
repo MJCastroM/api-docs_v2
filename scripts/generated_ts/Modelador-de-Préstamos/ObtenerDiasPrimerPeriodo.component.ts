@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDiasPrimerPeriodoComponent1750258525199 {
+export class ObtenerDiasPrimerPeriodoComponent1750268696655 {
   pageTitle        = 'Obtener Días Primer Período';
   description      = `Método para obtener cantidad mínima y máxima de días para el primer período de un producto de préstamo.`;
-  pubName          = 'Obtener Días Primer Período';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerDiasPrimerPeriodo';
+  programa   = 'RBTPG354';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

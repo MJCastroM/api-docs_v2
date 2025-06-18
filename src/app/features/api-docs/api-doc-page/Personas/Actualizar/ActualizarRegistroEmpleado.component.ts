@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750258525299 {
+export class ActualizarRegistroEmpleadoComponent1750268697027 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si una persona es empleado de la institución, así como la fecha de ingreso si corresponde.`;
-  pubName          = 'Actualizar Registro Empleado';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarRegistroEmpleado';
+  programa   = 'RBTPG536';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPermiteSegurosdelMismoTipoComponent1750258525201 {
+export class ObtenerPermiteSegurosdelMismoTipoComponent1750268696663 {
   pageTitle        = 'Obtener Permite Seguros del Mismo Tipo';
   description      = `Método para obtener si un producto de préstamo permite seguros del mismo tipo.`;
-  pubName          = 'Obtener Permite Seguros del Mismo Tipo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerPermiteSegurosDelMismoTipo';
+  programa   = 'RBTPG353';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

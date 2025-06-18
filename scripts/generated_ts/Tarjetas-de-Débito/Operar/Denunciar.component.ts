@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DenunciarComponent1750258525653 {
+export class DenunciarComponent1750268698844 {
   pageTitle        = 'Denunciar';
   description      = `Método para denunciar una tarjeta de débito y darla de baja.`;
-  pubName          = 'Denunciar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.Denunciar';
+  programa   = 'RBTPG070';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

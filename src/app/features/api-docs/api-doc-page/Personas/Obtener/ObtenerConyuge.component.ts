@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerConyugeComponent1750258525360 {
+export class ObtenerConyugeComponent1750268697405 {
   pageTitle        = 'Obtener Cónyuge';
   description      = `Método para obtener los datos del cónyuge de una persona física.`;
-  pubName          = 'Obtener Cónyuge';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerConyuge';
+  programa   = 'RBTPG290';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

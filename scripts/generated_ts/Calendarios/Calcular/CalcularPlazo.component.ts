@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularPlazoComponent1750258524665 {
+export class CalcularPlazoComponent1750268694222 {
   pageTitle        = 'Calcular Plazo';
   description      = `Método para calcular el plazo entre una fecha de inicio y una fecha de fin dadas.`;
-  pubName          = 'Calcular Plazo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCalendarios.CalcularPlazo';
+  programa   = 'RBTPG338';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

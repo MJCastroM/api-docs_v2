@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudAmpliacionComponent1750258525133 {
+export class CrearSolicitudAmpliacionComponent1750268696376 {
   pageTitle        = 'Crear Solicitud Ampliación';
   description      = `Método para crear una solicitud de ampliación de crédito.`;
-  pubName          = 'Crear Solicitud Ampliación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.CrearSolicitudAmpliacion';
+  programa   = 'RBTPG410';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

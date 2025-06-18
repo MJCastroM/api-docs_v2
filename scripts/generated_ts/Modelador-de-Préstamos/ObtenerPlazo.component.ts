@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazoComponent1750258525204 {
+export class ObtenerPlazoComponent1750268696679 {
   pageTitle        = 'Obtener Plazo';
   description      = `Método para obtener los plazos parametrizados de un producto de préstamo.`;
-  pubName          = 'Obtener Plazo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerPlazo';
+  programa   = 'RBTPG350';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

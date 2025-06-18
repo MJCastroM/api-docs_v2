@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPosicionComponent1750258524807 {
+export class ObtenerPosicionComponent1750268694895 {
   pageTitle        = 'Obtener Posición';
   description      = `Método para obtener las posiciones de los títulos de un cliente.`;
-  pubName          = 'Obtener Posición';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPosicion';
+  programa   = 'RBTPG557';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

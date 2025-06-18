@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750258524791 {
+export class ObtenerFacultadesComponent1750268694815 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una cuenta cliente.`;
-  pubName          = 'Obtener Facultades';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerFacultades';
+  programa   = 'RBTPG452';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDomiciliosComponent1750258524790 {
+export class ObtenerDomiciliosComponent1750268694807 {
   pageTitle        = 'Obtener Domicilios';
   description      = `Método para obtener los datos del domicilio de un cliente.`;
-  pubName          = 'Obtener Domicilios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerDomicilios';
+  programa   = 'RBTPG577';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

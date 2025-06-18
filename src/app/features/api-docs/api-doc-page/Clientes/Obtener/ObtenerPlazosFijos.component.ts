@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosComponent1750258524803 {
+export class ObtenerPlazosFijosComponent1750268694870 {
   pageTitle        = 'Obtener Plazos Fijos';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente.`;
-  pubName          = 'Obtener Plazos Fijos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPlazosFijos';
+  programa   = 'RBTPG013';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

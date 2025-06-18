@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarListaResumenCabezalOrdenComponent1750258524727 {
+export class VisualizarListaResumenCabezalOrdenComponent1750268694503 {
   pageTitle        = 'Visualizar Lista de Órdenes con su Resumen';
   description      = `Método para obtener la lista de órdenes con su resumen de información de un archivo CASH.`;
-  pubName          = 'Visualizar Lista de Órdenes con su Resumen';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.VisualizarListaResumenCabezalOrden';
+  programa   = 'RBTPGC25';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

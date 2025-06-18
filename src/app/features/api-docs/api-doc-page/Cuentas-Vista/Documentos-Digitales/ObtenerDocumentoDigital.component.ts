@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750258525024 {
+export class ObtenerDocumentoDigitalComponent1750268695781 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de una cuenta vista.`;
-  pubName          = 'Obtener Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerDocumentoDigital';
+  programa   = 'RBTPG207';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011.

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarFiadorComponent1750258525137 {
+export class EliminarFiadorComponent1750268696404 {
   pageTitle        = 'Eliminar Fiador';
   description      = `Método para eliminar un fiador de una solicitud de crédito individual.`;
-  pubName          = 'Eliminar Fiador';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.EliminarFiador';
+  programa   = 'RBTPG413';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosdelProximoVencimientoComponent1750258525511 {
+export class ObtenerDatosdelProximoVencimientoComponent1750268698009 {
   pageTitle        = 'Obtener Datos del Próximo Vencimiento';
   description      = `Método para obtener los datos de próximo vencimiento de cuota.`;
-  pubName          = 'Obtener Datos del Próximo Vencimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDatosProxVencimiento';
+  programa   = 'RBTPG526';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechadeUltimoPagoComponent1750258525534 {
+export class ObtenerFechadeUltimoPagoComponent1750268698118 {
   pageTitle        = 'Obtener Fecha de Último Pago';
   description      = `Método para obtener la fecha de último pago de un préstamo.`;
-  pubName          = 'Obtener Fecha de Último Pago';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerFechaUltimoPago';
+  programa   = 'RBTPG136';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

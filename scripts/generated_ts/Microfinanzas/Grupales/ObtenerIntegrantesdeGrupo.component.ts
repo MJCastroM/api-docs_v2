@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesdeGrupoComponent1750258525155 {
+export class ObtenerIntegrantesdeGrupoComponent1750268696478 {
   pageTitle        = 'Obtener Integrantes de Grupo';
   description      = `Método para obtener los integrantes de un grupo de crédito.`;
-  pubName          = 'Obtener Integrantes de Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerIntegrantesGrupo';
+  programa   = 'RBTPG435';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

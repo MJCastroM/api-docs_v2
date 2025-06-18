@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTelefonosComponent1750258524827 {
+export class ObtenerTelefonosComponent1750268695003 {
   pageTitle        = 'Obtener Telefonos';
   description      = `Método para obtener los teléfonos de un cliente.`;
-  pubName          = 'Obtener Telefonos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerTelefonos';
+  programa   = 'RBTPG215';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

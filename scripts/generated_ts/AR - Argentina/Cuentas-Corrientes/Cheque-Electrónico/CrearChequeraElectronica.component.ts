@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearChequeraElectronicaComponent1750258524615 {
+export class CrearChequeraElectronicaComponent1750268694023 {
   pageTitle        = 'Crear Chequera Electrónica';
   description      = `Método para crear una chequera electrónica.`;
-  pubName          = 'Crear Chequera Electrónica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.CrearChequeaElectronica';
+  programa   = 'RBTPAR28';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

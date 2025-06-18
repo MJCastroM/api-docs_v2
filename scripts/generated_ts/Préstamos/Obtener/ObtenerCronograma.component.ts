@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaComponent1750258525504 {
+export class ObtenerCronogramaComponent1750268697955 {
   pageTitle        = 'Obtener Cronograma';
   description      = `Método para obtener el cronograma de un préstamo.`;
-  pubName          = 'Obtener Cronograma';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerCronograma';
+  programa   = 'RBTPG072';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarOperacionesaCancelarComponent1750258525177 {
+export class AgregarOperacionesaCancelarComponent1750268696572 {
   pageTitle        = 'Agregar Operaciones a Cancelar';
   description      = `Método para agregar operaciones a cancelar para una solicitud de créditos.`;
-  pubName          = 'Agregar Operaciones a Cancelar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.AgregarOperacionesACancelar';
+  programa   = 'RBTPG362';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

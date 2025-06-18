@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTextosdeMovimientoComponent1750258524977 {
+export class ObtenerTextosdeMovimientoComponent1750268695457 {
   pageTitle        = 'Obtener Textos de Movimiento';
   description      = `Método para obtener un listado de los textos asociados a un movimiento.`;
-  pubName          = 'Obtener Textos de Movimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerTextosMovimiento';
+  programa   = 'RBTPG097';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

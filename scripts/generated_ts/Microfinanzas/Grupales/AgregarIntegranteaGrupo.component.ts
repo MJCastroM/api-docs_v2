@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteaGrupoComponent1750258525145 {
+export class AgregarIntegranteaGrupoComponent1750268696432 {
   pageTitle        = 'Agregar Integrante a Grupo';
   description      = `Método para agregar un integrante a un grupo de crédito.`;
-  pubName          = 'Agregar Integrante a Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.AgregarIntegranteAGrupo';
+  programa   = 'RBTPG433';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

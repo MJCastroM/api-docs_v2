@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesdeOperacionComponent1750258524976 {
+export class ObtenerIntegrantesdeOperacionComponent1750268695451 {
   pageTitle        = 'Obtener Integrantes de Operación';
   description      = `Método para obtener los integrantes de una operación.`;
-  pubName          = 'Obtener Integrantes de Operación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIntegrantesOperacion';
+  programa   = 'RBTPG330';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

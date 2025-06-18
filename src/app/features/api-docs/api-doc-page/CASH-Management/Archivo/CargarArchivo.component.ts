@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarArchivoComponent1750258524682 {
+export class CargarArchivoComponent1750268694299 {
   pageTitle        = 'Cargar Archivo';
   description      = `Método para realizar la carga de un archivo.`;
-  pubName          = 'Cargar Archivo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.CargarArchivo';
+  programa   = 'RBTPG360';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

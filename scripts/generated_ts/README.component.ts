@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class READMEComponent1750258525602 {
+export class READMEComponent1750268698534 {
   pageTitle        = 'Novedades Release Mayo 2025';
   description      = ``;
-  pubName          = 'Novedades Release Mayo 2025';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

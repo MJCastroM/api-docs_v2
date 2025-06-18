@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMontodeCancelacionComponent1750258525538 {
+export class ObtenerMontodeCancelacionComponent1750268698143 {
   pageTitle        = 'Obtener Monto de Cancelación';
   description      = `Método para obtener el monto de cancelación de una operación.`;
-  pubName          = 'Obtener Monto de Cancelación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerMontoCancelacion';
+  programa   = 'RBTPG224';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

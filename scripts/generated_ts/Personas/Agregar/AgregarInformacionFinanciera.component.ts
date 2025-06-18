@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionFinancieraComponent1750258525318 {
+export class AgregarInformacionFinancieraComponent1750268697157 {
   pageTitle        = 'Agregar Información Financiera';
   description      = `Método para agregar la información financiera de una persona.`;
-  pubName          = 'Agregar Información Financiera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarInformacionFinanciera';
+  programa   = 'RBTPCO01';
+  scope      = 'Colombia';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearConyugeComponent1750258525325 {
+export class CrearConyugeComponent1750268697223 {
   pageTitle        = 'Crear Cónyuge';
   description      = `Método para crear una persona de forma reducida y asociarla en una relación de cónyuge con otra.`;
-  pubName          = 'Crear Cónyuge';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.CrearConyuge';
+  programa   = 'RBTPG396';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

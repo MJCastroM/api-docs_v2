@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSolicitudesdeChequerasComponent1750258524993 {
+export class ObtenerSolicitudesdeChequerasComponent1750268695582 {
   pageTitle        = 'Obtener Solicitudes de Chequeras';
   description      = `Método para obtener todas las chequeras y solicitudes de chequeras asociadas a una operación.`;
-  pubName          = 'Obtener Solicitudes de Chequeras';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ObtenerSolicitudesChequera';
+  programa   = 'RBTPG400';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarArchivoComponent1750258524687 {
+export class RechazarArchivoComponent1750268694319 {
   pageTitle        = 'Rechazar Archivo';
   description      = `Método para rechazar órdenes del archivo.`;
-  pubName          = 'Rechazar Archivo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.RechazarArchivo';
+  programa   = 'RBTPGC03R';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

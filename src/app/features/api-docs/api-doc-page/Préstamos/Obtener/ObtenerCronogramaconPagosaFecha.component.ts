@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaconPagosaFechaComponent1750258525507 {
+export class ObtenerCronogramaconPagosaFechaComponent1750268697972 {
   pageTitle        = 'Obtener Cronograma con Pagos a Fecha';
   description      = `Método para obtener el cronograma de un préstamo teniendo en cuenta solamente los pagos hasta la fecha indicada.`;
-  pubName          = 'Obtener Cronograma con Pagos a Fecha';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerCronogramaConPagosAFecha';
+  programa   = 'RBTPG440';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

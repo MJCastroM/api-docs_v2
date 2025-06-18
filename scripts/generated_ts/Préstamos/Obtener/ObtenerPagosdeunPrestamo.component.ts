@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeunPrestamoComponent1750258525541 {
+export class ObtenerPagosdeunPrestamoComponent1750268698168 {
   pageTitle        = 'Obtener Pagos de un Préstamo';
   description      = `Método para obtener el detalle de pagos de un préstamo.`;
-  pubName          = 'Obtener Pagos de un Préstamo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerPagos';
+  programa   = 'RBTPG096';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

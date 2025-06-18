@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarDocumentoAdicionalComponent1750258525304 {
+export class ModificarDocumentoAdicionalComponent1750268697056 {
   pageTitle        = 'Modificar Documento Adicional';
   description      = `Método para modificar un documento adicional de una persona.`;
-  pubName          = 'Modificar Documento Adicional';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ModificarDocumentoAdicional';
+  programa   = 'RBTPG128';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

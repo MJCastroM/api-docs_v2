@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCiudadesyLocalidadesComponent1750258524950 {
+export class ObtenerCiudadesyLocalidadesComponent1750268695243 {
   pageTitle        = 'Obtener Ciudades y Localidades';
   description      = `Método para obtener un listado de las ciudades/localidades ingresadas en Bantotal para un determinado estado de un país.`;
-  pubName          = 'Obtener Ciudades y Localidades';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerCiudadesLocalidades';
+  programa   = 'RBTPG044';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

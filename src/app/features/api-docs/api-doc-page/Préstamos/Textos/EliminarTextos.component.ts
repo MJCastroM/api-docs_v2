@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarTextosComponent1750258525599 {
+export class EliminarTextosComponent1750268698520 {
   pageTitle        = 'Eliminar Textos';
   description      = `Método para eliminar los textos de un préstamo.`;
-  pubName          = 'Eliminar Textos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.EliminarTextos';
+  programa   = 'RBTPG562';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

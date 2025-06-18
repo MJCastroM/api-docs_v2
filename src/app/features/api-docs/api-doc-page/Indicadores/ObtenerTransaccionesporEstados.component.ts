@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTransaccionesporEstadosComponent1750258525128 {
+export class ObtenerTransaccionesporEstadosComponent1750268696353 {
   pageTitle        = 'Obtener Transacciones por Estados';
   description      = `Método para obtener las transacciones por estado ingresadas en el sistema.`;
-  pubName          = 'Obtener Transacciones por Estados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTIndicadores.ObtenerTransaccionesEstados';
+  programa   = 'RBTPG706';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

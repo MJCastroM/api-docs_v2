@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldoDisponibleComponent1750258525039 {
+export class ObtenerSaldoDisponibleComponent1750268695854 {
   pageTitle        = 'Obtener Saldo Disponible';
   description      = `Método para obtener el total de saldo disponible de una cuenta vista.`;
-  pubName          = 'Obtener Saldo Disponible';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerSaldoDisponible';
+  programa   = 'RBTPG245';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

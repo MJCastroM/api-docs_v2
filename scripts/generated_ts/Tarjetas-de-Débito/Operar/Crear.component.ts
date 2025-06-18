@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750258525650 {
+export class CrearComponent1750268698828 {
   pageTitle        = 'Crear';
   description      = `Método para dar de alta una tarjeta de débito para un cliente.`;
-  pubName          = 'Crear';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.Crear';
+  programa   = 'RBTPG066';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

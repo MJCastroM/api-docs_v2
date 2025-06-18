@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarListasInhabilitadosComponent1750258525421 {
+export class ValidarListasInhabilitadosComponent1750268697736 {
   pageTitle        = 'Validar Listas Inhabilitados';
   description      = `Método para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: país, tipo de documento y número de documento, o primer nombre y primer apellido)`;
-  pubName          = 'Validar Listas Inhabilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ValidarListasInhabilitados';
+  programa   = 'RBTPG313';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

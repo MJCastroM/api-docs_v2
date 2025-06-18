@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarCuentaComponent1750258525645 {
+export class AsociarCuentaComponent1750268698794 {
   pageTitle        = 'Asociar Cuenta';
   description      = `Método para asociar una cuenta vista a una tarjeta de débito dada.`;
-  pubName          = 'Asociar Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.AsociarCuenta';
+  programa   = 'RBTPG377';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

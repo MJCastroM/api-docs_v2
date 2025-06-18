@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudRenovacionComponent1750258525135 {
+export class CrearSolicitudRenovacionComponent1750268696390 {
   pageTitle        = 'Crear Solicitud Renovación';
   description      = `Método para crear una solicitud de renovación de crédito.`;
-  pubName          = 'Crear Solicitud Renovación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.CrearSolicitudRenovacion';
+  programa   = 'RBTPG410';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

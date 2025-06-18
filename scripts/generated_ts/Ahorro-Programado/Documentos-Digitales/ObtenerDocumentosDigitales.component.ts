@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750258524583 {
+export class ObtenerDocumentosDigitalesComponent1750268693920 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener una lista de los documentos digitales asociados a una operación de ahorro programado.`;
-  pubName          = 'Obtener Documentos Digitales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerDocumentosDigitales';
+  programa   = 'RBTPG482';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011.

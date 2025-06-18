@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasdeDebitoComponent1750258524825 {
+export class ObtenerTarjetasdeDebitoComponent1750268694995 {
   pageTitle        = 'Obtener Tarjetas de Débito';
   description      = `Método para obtener los productos de tarjeta de débito que tiene contratado un cliente.`;
-  pubName          = 'Obtener Tarjetas de Débito';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerTarjetasDebito';
+  programa   = 'RBTPG015';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Si la opción general de procesos 20665 se encuentra activada o no se encuentra parametrizada, el servicio devuelve solo las tarjetas preferenciales. De lo contrario, si está parametrizada pero desactivada devolverá tanto las preferenciales como las adicionales. 

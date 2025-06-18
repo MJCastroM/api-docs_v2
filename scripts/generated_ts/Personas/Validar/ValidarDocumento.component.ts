@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarDocumentoComponent1750258525417 {
+export class ValidarDocumentoComponent1750268697712 {
   pageTitle        = 'Validar Documento';
   description      = `Método para validar el documento de una persona.`;
-  pubName          = 'Validar Documento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ValidarDocumento';
+  programa   = 'RBTPG531';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

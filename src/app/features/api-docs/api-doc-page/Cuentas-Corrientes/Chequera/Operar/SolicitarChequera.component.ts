@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarChequeraComponent1750258525001 {
+export class SolicitarChequeraComponent1750268695615 {
   pageTitle        = 'Solicitar Chequera';
   description      = `Método para solicitar una chequera para una cuenta corriente.`;
-  pubName          = 'Solicitar Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.SolicitarChequera';
+  programa   = 'RBTPG242';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

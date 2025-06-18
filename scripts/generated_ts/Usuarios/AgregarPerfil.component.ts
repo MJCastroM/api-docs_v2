@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPerfilComponent1750258525665 {
+export class AgregarPerfilComponent1750268698914 {
   pageTitle        = 'Agregar Perfil';
   description      = `Método para agregar un perfil a un usuario.`;
-  pubName          = 'Agregar Perfil';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.AgregarPerfil';
+  programa   = 'RBTPG122';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

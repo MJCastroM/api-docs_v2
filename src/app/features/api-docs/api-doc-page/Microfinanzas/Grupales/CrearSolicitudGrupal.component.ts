@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudGrupalComponent1750258525148 {
+export class CrearSolicitudGrupalComponent1750268696440 {
   pageTitle        = 'Crear Solicitud Grupal';
   description      = `Método para crear una solicitud de crédito grupal.`;
-  pubName          = 'Crear Solicitud Grupal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.CrearSolicitudGrupal';
+  programa   = 'RBTPG438';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

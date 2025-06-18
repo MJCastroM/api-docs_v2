@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarconPeriodicidadComponent1750258525009 {
+export class ContratarconPeriodicidadComponent1750268695686 {
   pageTitle        = 'Contratar con Periodicidad';
   description      = `Método para contratar un producto de cuenta de ahorro ingresando un período de acreditación.`;
-  pubName          = 'Contratar con Periodicidad';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasDeAhorro.ContratarConPeriodicidad';
+  programa   = 'RBTPG358';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

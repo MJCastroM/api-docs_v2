@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerScoresComponent1750258525221 {
+export class ObtenerScoresComponent1750268696713 {
   pageTitle        = 'Obtener Scores';
   description      = `Método para obtener los scores de los modelos de evaluación.`;
-  pubName          = 'Obtener Scores';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPAE.ObtenerScores';
+  programa   = 'RBTPG511';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

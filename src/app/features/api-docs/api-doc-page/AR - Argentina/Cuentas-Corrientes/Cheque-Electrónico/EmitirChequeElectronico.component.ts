@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EmitirChequeElectronicoComponent1750258524624 {
+export class EmitirChequeElectronicoComponent1750268694049 {
   pageTitle        = 'Emitir Cheque Electrónico';
   description      = `Método para emitir un cheque electrónico de una chequera. Si la chequera no existe, crea una.`;
-  pubName          = 'Emitir Cheque Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.EmitirChequeElectronico';
+  programa   = 'RBTPAR27';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

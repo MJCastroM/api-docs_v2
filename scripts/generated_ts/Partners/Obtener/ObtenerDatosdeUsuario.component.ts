@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosdeUsuarioComponent1750258525233 {
+export class ObtenerDatosdeUsuarioComponent1750268696763 {
   pageTitle        = 'Obtener Datos de Usuario';
   description      = `Método para obtener el Partner, punto de venta e identificador de vendedor de usuario.`;
-  pubName          = 'Obtener Datos de Usuario';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ObtenerDatosUsuario';
+  programa   = 'RBTPN001';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

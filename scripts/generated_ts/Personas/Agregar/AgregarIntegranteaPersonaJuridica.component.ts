@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteaPersonaJuridicaComponent1750258525319 {
+export class AgregarIntegranteaPersonaJuridicaComponent1750268697167 {
   pageTitle        = 'Agregar Integrante a Persona Jurídica';
   description      = `Método para agregar un integrante a una persona jurídica.`;
-  pubName          = 'Agregar Integrante a Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarIntegrantePersonaJuridica';
+  programa   = 'RBTPG280';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

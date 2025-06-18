@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CashInComponent1750258524983 {
+export class CashInComponent1750268695489 {
   pageTitle        = 'Cash In';
   description      = `Método para realizar un depósito en cuenta bolsillo.`;
-  pubName          = 'Cash In';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasBolsillo.CashIn';
+  programa   = 'RBTPG611';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

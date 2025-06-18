@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeOtroBancoComponent1750258524621 {
+export class DepositarChequeElectronicodeOtroBancoComponent1750268694036 {
   pageTitle        = 'Depositar Cheque Electrónico de Otro Banco';
   description      = `Método para depositar un cheque electrónico de otro banco.`;
-  pubName          = 'Depositar Cheque Electrónico de Otro Banco';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco';
+  programa   = 'RBTPAR33';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

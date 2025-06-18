@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarCuotaaFechaComponent1750258525558 {
+export class PagarCuotaaFechaComponent1750268698298 {
   pageTitle        = 'Pagar Cuota a Fecha';
   description      = `Método para realizar el pago de cuota de un préstamo a una fecha valor.`;
-  pubName          = 'Pagar Cuota a Fecha';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.PagarCuotaAFecha';
+  programa   = 'RBTPG225';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de pago, teniendo en cuenta que: 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAsesoresComponent1750258525161 {
+export class ObtenerAsesoresComponent1750268696511 {
   pageTitle        = 'Obtener Asesores';
   description      = `Método para obtener los usuarios asesores.`;
-  pubName          = 'Obtener Asesores';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerAsesores';
+  programa   = 'RBTPG420';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

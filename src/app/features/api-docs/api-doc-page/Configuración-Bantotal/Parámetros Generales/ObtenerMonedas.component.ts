@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasComponent1750258524945 {
+export class ObtenerMonedasComponent1750268695215 {
   pageTitle        = 'Obtener Monedas';
   description      = `Método para obtener un listado de las monedas ingresadas en Bantotal.`;
-  pubName          = 'Obtener Monedas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerMonedas';
+  programa   = 'RBTPG048';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

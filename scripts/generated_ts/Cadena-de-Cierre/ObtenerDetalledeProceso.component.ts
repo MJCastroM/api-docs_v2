@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeProcesoComponent1750258524652 {
+export class ObtenerDetalledeProcesoComponent1750268694152 {
   pageTitle        = 'Obtener Detalle de Proceso';
   description      = `Método para obtener el detalle de un proceso de la cadena de cierre.`;
-  pubName          = 'Obtener Detalle de Proceso';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerDetalleProceso';
+  programa   = 'RBTPG503';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

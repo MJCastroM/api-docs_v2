@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarReferenciaComponent1750258525321 {
+export class AgregarReferenciaComponent1750268697185 {
   pageTitle        = 'Agregar Referencia';
   description      = `Método para agregar una referencia a una persona.`;
-  pubName          = 'Agregar Referencia';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarReferencia';
+  programa   = 'RBTPG302';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

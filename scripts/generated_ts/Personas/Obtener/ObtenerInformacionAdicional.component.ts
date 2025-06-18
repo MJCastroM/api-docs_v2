@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionAdicionalComponent1750258525376 {
+export class ObtenerInformacionAdicionalComponent1750268697497 {
   pageTitle        = 'Obtener Información Adicional';
   description      = `Método para obtener la información adicional de una persona.`;
-  pubName          = 'Obtener Información Adicional';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerInformacionAdicional';
+  programa   = 'RBTPG519';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

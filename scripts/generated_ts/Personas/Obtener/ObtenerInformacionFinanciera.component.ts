@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionFinancieraComponent1750258525377 {
+export class ObtenerInformacionFinancieraComponent1750268697506 {
   pageTitle        = 'Obtener Información Financiera';
   description      = `Método para obtener la información financiera de una persona.`;
-  pubName          = 'Obtener Información Financiera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerInformacionFinanciera';
+  programa   = 'RBTPCO03';
+  scope      = 'Colombia';
 
   hasBackendConfig = false;
   backendText      = ``;

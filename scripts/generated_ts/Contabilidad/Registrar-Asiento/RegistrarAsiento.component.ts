@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoComponent1750258524978 {
+export class RegistrarAsientoComponent1750268695466 {
   pageTitle        = 'Registrar Asiento';
   description      = `Método para registrar en el sistema un movimiento entre dos operaciones genéricas.`;
-  pubName          = 'Registrar Asiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.RegistrarAsiento';
+  programa   = 'RBTPG029';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción a contabilizar, teniendo en cuenta que la operaciónUId1 y el importe1 se almacena en el preformato 1, la operaciónUId2 y el importe2 se almacena en el preformato 2 y así sucesivamente.

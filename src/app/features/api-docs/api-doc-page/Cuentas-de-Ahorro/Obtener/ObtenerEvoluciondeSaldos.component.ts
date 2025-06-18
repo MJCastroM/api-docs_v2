@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEvoluciondeSaldosComponent1750258525017 {
+export class ObtenerEvoluciondeSaldosComponent1750268695729 {
   pageTitle        = 'Obtener Evolución de Saldos';
   description      = `Método para obtener la evolución del saldo de un producto de cuenta de ahorro.`;
-  pubName          = 'Obtener Evolución de Saldos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasDeAhorro.ObtenerEvolucionDeSaldos';
+  programa   = 'RBTPG005';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

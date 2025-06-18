@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerConceptoComponent1750258525355 {
+export class ObtenerConceptoComponent1750268697369 {
   pageTitle        = 'Obtener Concepto';
   description      = `Método para obtener los conceptos de los programas de personas.`;
-  pubName          = 'Obtener Concepto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerConcepto';
+  programa   = 'RBTPG529';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

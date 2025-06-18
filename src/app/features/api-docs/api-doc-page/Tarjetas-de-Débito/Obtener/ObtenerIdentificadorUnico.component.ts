@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750258525636 {
+export class ObtenerIdentificadorUnicoComponent1750268698715 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único de una tarjeta de débito.`;
-  pubName          = 'Obtener Identificador Único';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerIdentificadorUnico';
+  programa   = 'RBTPG800';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

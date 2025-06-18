@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarUsuarioComponent1750258525670 {
+export class HabilitarUsuarioComponent1750268698943 {
   pageTitle        = 'Habilitar Usuario';
   description      = `Método para habilitar un usuario que se encuentra inhabilitado.`;
-  pubName          = 'Habilitar Usuario';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.HabilitarUsuario';
+  programa   = 'RBTPG394';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750258525551 {
+export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750268698239 {
   pageTitle        = 'Actualizar Prestamos con Evento';
   description      = `Método para actualizar préstamos con eventos de la tabla SNG912.`;
-  pubName          = 'Actualizar Prestamos con Evento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ActualizarPrestamosConEvento';
+  programa   = 'RBTPG473';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

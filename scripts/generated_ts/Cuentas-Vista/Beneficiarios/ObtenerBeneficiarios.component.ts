@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiariosComponent1750258525020 {
+export class ObtenerBeneficiariosComponent1750268695752 {
   pageTitle        = 'Obtener Beneficiarios';
   description      = `Método para obtener los beneficiarios de una cuenta vista.`;
-  pubName          = 'Obtener Beneficiarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerBeneficiarios';
+  programa   = 'RBTPG630';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

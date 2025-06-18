@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionesHabilitadosComponent1750258525092 {
+export class ObtenerInstruccionesHabilitadosComponent1750268696147 {
   pageTitle        = 'Obtener Instrucciones Habilitados';
   description      = `Método para obtener un listado de las instrucciones de un producto.`;
-  pubName          = 'Obtener Instrucciones Habilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositoAPlazo.ObtenerInstruccionesHabilitados';
+  programa   = 'RBTPG455';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOperacionesaCancelarComponent1750258525178 {
+export class ObtenerOperacionesaCancelarComponent1750268696581 {
   pageTitle        = 'Obtener Operaciones a Cancelar';
   description      = `Método para obtener las operaciones seleccionadas a cancelar para una solicitud de créditos.`;
-  pubName          = 'Obtener Operaciones a Cancelar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerOperacionesACancelar';
+  programa   = 'RBTPG364';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

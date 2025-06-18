@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalProductoComponent1750258524969 {
+export class ObtenerIdBantotalProductoComponent1750268695385 {
   pageTitle        = 'Obtener Identificador Bantotal de Producto';
   description      = `Método para obtener la clave de identificación Bantotal de un producto.`;
-  pubName          = 'Obtener Identificador Bantotal de Producto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIdBantotalProducto';
+  programa   = 'RBTPG450';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

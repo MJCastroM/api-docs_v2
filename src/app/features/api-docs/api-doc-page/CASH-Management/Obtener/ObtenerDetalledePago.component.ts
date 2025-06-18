@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePagoComponent1750258524699 {
+export class ObtenerDetalledePagoComponent1750268694375 {
   pageTitle        = 'Obtener Detalle de Pago';
   description      = `Método para obtener la información de líneas de detalle de pago.`;
-  pubName          = 'Obtener Detalle de Pago';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDetallePago';
+  programa   = 'RBTPGC22';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

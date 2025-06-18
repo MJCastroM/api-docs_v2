@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasdelaMismaPersonaComponent1750258525056 {
+export class TraspasarEntreCuentasdelaMismaPersonaComponent1750268695945 {
   pageTitle        = 'Traspasar Entre Cuentas de la Misma Persona';
   description      = `Método para realizar un traspaso entre cuentas cuyo titular sea la misma persona.`;
-  pubName          = 'Traspasar Entre Cuentas de la Misma Persona';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarCuentasMismoTitular';
+  programa   = 'RBTPG255';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

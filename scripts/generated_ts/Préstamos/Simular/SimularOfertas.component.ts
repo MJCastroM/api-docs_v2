@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularOfertasComponent1750258525589 {
+export class SimularOfertasComponent1750268698470 {
   pageTitle        = 'Simular Ofertas';
   description      = `Método para simular ofertas de préstamos.`;
-  pubName          = 'Simular Ofertas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularOfertas';
+  programa   = 'RBTPG124';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Si la opción general de procesos 3281 se encuentra activada, el servicio considera la sucursal del usuario de conexión, caso contrario, simula con la sucursal de la cuenta cliente. 

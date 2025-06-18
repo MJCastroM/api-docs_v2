@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoComponent1750258525003 {
+export class ContratarProductoComponent1750268695627 {
   pageTitle        = 'Contratar Producto';
   description      = `Método para contratar un producto de cuenta corriente.`;
-  pubName          = 'Contratar Producto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ContratarProducto';
+  programa   = 'RBTPG032';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Si no se ingresa valor en el parámetro \'sucursalId\', su valor se asume de la cuenta cliente. Si la opción general 3282 está activada se tomará la sucursal del usuario que ejecuta el servicio.

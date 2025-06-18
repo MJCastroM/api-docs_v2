@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProximaFechaHabilComponent1750258524677 {
+export class ObtenerProximaFechaHabilComponent1750268694279 {
   pageTitle        = 'Obtener Próxima Fecha Hábil';
   description      = `Método para obtener la próxima fecha hábil a la fecha ingresada.`;
-  pubName          = 'Obtener Próxima Fecha Hábil';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCalendario.ObtenerProximaFechaHabil';
+  programa   = 'RBTPG331';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

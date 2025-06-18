@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarComponent1750258525672 {
+export class ModificarComponent1750268698955 {
   pageTitle        = 'Modificar';
   description      = `Método para modificar un usuario.`;
-  pubName          = 'Modificar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.Modificar';
+  programa   = 'RBTPG120';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750258525441 {
+export class CancelarComponent1750268697856 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la cancelación de un préstamo.`;
-  pubName          = 'Cancelar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.Cancelar';
+  programa   = 'RBTPG076';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de Pago, teniendo en cuenta que: 

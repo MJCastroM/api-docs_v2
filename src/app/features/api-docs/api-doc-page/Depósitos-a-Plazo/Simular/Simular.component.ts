@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750258525104 {
+export class SimularComponent1750268696209 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un depósito a plazo.`;
-  pubName          = 'Simular';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.Simular';
+  programa   = 'RBTPG074';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 

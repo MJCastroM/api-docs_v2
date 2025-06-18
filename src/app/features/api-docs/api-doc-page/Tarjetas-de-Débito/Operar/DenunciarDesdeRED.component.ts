@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DenunciarDesdeREDComponent1750258525654 {
+export class DenunciarDesdeREDComponent1750268698852 {
   pageTitle        = 'Denunciar Desde RED';
   description      = `Método para denunciar una tarjeta de débito y darla de baja sin notificar a la RED.`;
-  pubName          = 'Denunciar Desde RED';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.DenunciarDesdeRED';
+  programa   = 'RBTPG070';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

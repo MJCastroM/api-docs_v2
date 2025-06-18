@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarInformacionFinancieraComponent1750258525289 {
+export class ActualizarInformacionFinancieraComponent1750268696991 {
   pageTitle        = 'Actualizar Información Financiera';
   description      = `Método para modificar la información financiera de una persona.`;
-  pubName          = 'Actualizar Información Financiera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarInformacionFinanciera';
+  programa   = 'RBTPCO02';
+  scope      = 'Colombia';
 
   hasBackendConfig = false;
   backendText      = ``;

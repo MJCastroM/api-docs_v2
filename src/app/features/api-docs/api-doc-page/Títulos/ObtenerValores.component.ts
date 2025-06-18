@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresComponent1750258525662 {
+export class ObtenerValoresComponent1750268698907 {
   pageTitle        = 'Obtener Valores';
   description      = `Método para obtener los títulos disponibles para un grupo y sus respectivos valores.`;
-  pubName          = 'Obtener Valores';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTitulos.ObtenerValores';
+  programa   = 'RBTPG494';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

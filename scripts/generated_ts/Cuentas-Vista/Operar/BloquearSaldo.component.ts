@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BloquearSaldoComponent1750258525044 {
+export class BloquearSaldoComponent1750268695883 {
   pageTitle        = 'Bloquear Saldo';
   description      = `Método para realizar un bloqueo de saldo.`;
-  pubName          = 'Bloquear Saldo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.BloquearSaldo';
+  programa   = 'RBTPG090';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

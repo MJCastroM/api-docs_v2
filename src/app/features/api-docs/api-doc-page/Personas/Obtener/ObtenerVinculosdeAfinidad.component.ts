@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeAfinidadComponent1750258525410 {
+export class ObtenerVinculosdeAfinidadComponent1750268697678 {
   pageTitle        = 'Obtener Vínculos de Afinidad';
   description      = `Método para obtener un listado de los vínculos de afinidad registrados.`;
-  pubName          = 'Obtener Vínculos de Afinidad';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerVinculosAfinidad';
+  programa   = 'RBTPG395';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

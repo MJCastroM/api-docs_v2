@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilComponent1750258524802 {
+export class ObtenerPerfilComponent1750268694862 {
   pageTitle        = 'Obtener Perfil';
   description      = `Método para obtener los datos de la persona titular de una cuenta cliente.`;
-  pubName          = 'Obtener Perfil';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPerfil';
+  programa   = 'RBTPG002';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarVictimaHechoViolentoComponent1750258525302 {
+export class ActualizarVictimaHechoViolentoComponent1750268697044 {
   pageTitle        = 'Actualizar Víctima Hecho Violento';
   description      = `Método para actualizar la información de una persona víctima de un hecho violento.`;
-  pubName          = 'Actualizar Víctima Hecho Violento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarVictimaHechoViolento';
+  programa   = 'RBTPCO05';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

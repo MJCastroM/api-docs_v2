@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorreosElectronicosComponent1750258525358 {
+export class ObtenerCorreosElectronicosComponent1750268697387 {
   pageTitle        = 'Obtener Correos Electrónicos';
   description      = `Método para obtener un listado de los correos electrónicos de una persona.`;
-  pubName          = 'Obtener Correos Electrónicos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerCorreosElectronicos';
+  programa   = 'RBTPG022';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

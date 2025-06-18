@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ComprarComponent1750258525659 {
+export class ComprarComponent1750268698887 {
   pageTitle        = 'Comprar';
   description      = `Método para comprar un título.`;
-  pubName          = 'Comprar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTitulos.Comprar';
+  programa   = 'RBTPG496';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

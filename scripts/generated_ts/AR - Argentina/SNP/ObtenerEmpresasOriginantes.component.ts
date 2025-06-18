@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresasOriginantesComponent1750258524641 {
+export class ObtenerEmpresasOriginantesComponent1750268694108 {
   pageTitle        = 'Obtener Empresas Originantes';
   description      = `Método para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.`;
-  pubName          = 'Obtener Empresas Originantes';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.ObtenerEmpresasOriginantes';
+  programa   = 'RBTPG325';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

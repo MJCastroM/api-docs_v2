@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerImpuestosComponent1750258524845 {
+export class ObtenerImpuestosComponent1750268695122 {
   pageTitle        = 'Obtener Impuestos';
   description      = `Método para obtener un listado de los impuestos ingresados en Bantotal.`;
-  pubName          = 'Obtener Impuestos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerImpuestos';
+  programa   = 'RBTPG710';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

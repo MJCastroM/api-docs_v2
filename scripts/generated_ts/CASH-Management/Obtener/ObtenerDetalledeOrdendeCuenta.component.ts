@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdendeCuentaComponent1750258524697 {
+export class ObtenerDetalledeOrdendeCuentaComponent1750268694369 {
   pageTitle        = 'Obtener Detalle de Orden de Cuenta';
   description      = `Método para obtener la información de las líneas del detalle de orden de cuenta.`;
-  pubName          = 'Obtener Detalle de Orden de Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDetalleOrdenCuenta';
+  programa   = 'RBTPGC23F';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

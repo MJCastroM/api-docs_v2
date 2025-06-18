@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasOrigenHabilitadasComponent1750258524603 {
+export class ObtenerCuentasOrigenHabilitadasComponent1750268693982 {
   pageTitle        = 'Obtener Cuentas Origen Habilitadas';
   description      = `Método para obtener un listado de cuentas habilitadas para debitar periódicamente.`;
-  pubName          = 'Obtener Cuentas Origen Habilitadas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas';
+  programa   = 'RBTPG111';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

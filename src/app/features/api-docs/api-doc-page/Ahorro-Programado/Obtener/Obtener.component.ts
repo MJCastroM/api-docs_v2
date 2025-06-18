@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComponent1750258524597 {
+export class ObtenerComponent1750268693962 {
   pageTitle        = 'Obtener';
   description      = `Método para obtener los datos de un ahorro programado.`;
-  pubName          = 'Obtener';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.Obtener';
+  programa   = 'RBTPG256';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosDiariosComponent1750258524656 {
+export class ObtenerProcesosDiariosComponent1750268694177 {
   pageTitle        = 'Obtener Procesos Diarios';
   description      = `Método para obtener un listado de los procesos diarios de la cadena de cierre.`;
-  pubName          = 'Obtener Procesos Diarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerProcesosDiarios';
+  programa   = 'RBTPG501';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

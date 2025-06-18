@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DebitarEnCuentaComponent1750258525047 {
+export class DebitarEnCuentaComponent1750268695896 {
   pageTitle        = 'Debitar en Cuenta';
   description      = `Método para realizar un débito de una cuenta vista determinada.`;
-  pubName          = 'Debitar en Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.DebitarEnCuenta ';
+  programa   = 'RBTPG569';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de débito, teniendo en cuenta que:

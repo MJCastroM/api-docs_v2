@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionesComponent1750258525195 {
+export class ObtenerComisionesComponent1750268696640 {
   pageTitle        = 'Obtener Comisiones';
   description      = `Método para obtener las comisiones parametrizadas de un producto de préstamos.`;
-  pubName          = 'Obtener Comisiones';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerComisiones';
+  programa   = 'RBTPG521';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

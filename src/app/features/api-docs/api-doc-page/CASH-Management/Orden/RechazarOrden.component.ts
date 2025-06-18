@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarOrdenComponent1750258524715 {
+export class RechazarOrdenComponent1750268694459 {
   pageTitle        = 'Rechazar Orden';
   description      = `Método para rechazar una orden de pago determinada.`;
-  pubName          = 'Rechazar Orden';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.RechazarOrden';
+  programa   = 'RBTPGC08R';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

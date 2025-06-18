@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNivelesEducativosComponent1750258525385 {
+export class ObtenerNivelesEducativosComponent1750268697536 {
   pageTitle        = 'Obtener Niveles Educativos';
   description      = `Método para obtener un listado de los niveles educativos.`;
-  pubName          = 'Obtener Niveles Educativos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerNivelesEducativos';
+  programa   = 'RBTPG382';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

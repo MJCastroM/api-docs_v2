@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOrdenSegunCampoComponent1750258524701 {
+export class ObtenerDetalleOrdenSegunCampoComponent1750268694382 {
   pageTitle        = 'Obtener Detalle de Orden Según Campo';
   description      = `Método para obtener la información de las líneas del detalle de pago para la orden que coincida con el campo/valor recibido.`;
-  pubName          = 'Obtener Detalle de Orden Según Campo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDetalleOrdenSegunCampo';
+  programa   = 'RBTPGC26';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

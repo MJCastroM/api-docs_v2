@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750258525073 {
+export class ContratarSimulacionComponent1750268696054 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un depósito a plazo fijo a partir de una simulación existente.`;
-  pubName          = 'Contratar Simulación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositoAPlazo.ContratarSimulacion';
+  programa   = 'RBTPG457';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Para configurar los productos válidos, se debe agregar un registro en la guía especial 70101 para cada producto de la siguiente manera: 

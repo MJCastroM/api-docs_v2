@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPartnersComponent1750258525243 {
+export class ObtenerPartnersComponent1750268696800 {
   pageTitle        = 'Obtener Partners';
   description      = `Método para obtener los Partners.`;
-  pubName          = 'Obtener Partners';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartner.ObtenerPartners';
+  programa   = 'RBTPN003';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

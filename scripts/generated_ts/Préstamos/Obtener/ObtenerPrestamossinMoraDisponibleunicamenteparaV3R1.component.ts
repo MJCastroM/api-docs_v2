@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750258525544 {
+export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750268698195 {
   pageTitle        = 'Obtener Préstamos Sin Mora';
   description      = `Método para retornar préstamos sin mora.`;
-  pubName          = 'Obtener Préstamos Sin Mora';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerPrestamosSinMora';
+  programa   = 'RBTPG471';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

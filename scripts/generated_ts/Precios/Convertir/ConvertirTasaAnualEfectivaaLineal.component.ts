@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConvertirTasaAnualEfectivaaLinealComponent1750258525423 {
+export class ConvertirTasaAnualEfectivaaLinealComponent1750268697750 {
   pageTitle        = 'Convertir Tasa Anual Efectiva a Lineal';
   description      = `Método para convertir una tasa efectiva anual a tasa lineal anual.`;
-  pubName          = 'Convertir Tasa Anual Efectiva a Lineal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ConvertirTasaAnualEfectivaALineal';
+  programa   = 'RBTPG299';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

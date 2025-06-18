@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularLibreAmortizacionComponent1750258525587 {
+export class SimularLibreAmortizacionComponent1750268698449 {
   pageTitle        = 'Simular Libre Amortización';
   description      = `Método para simular el alta de un préstamo libre amortización.`;
-  pubName          = 'Simular Libre Amortización';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularLibreAmortizacion';
+  programa   = 'RBTPG231';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosCastigadosComponent1750258524810 {
+export class ObtenerPrestamosCastigadosComponent1750268694920 {
   pageTitle        = 'Obtener Préstamos Castigados';
   description      = `Método para obtener los productos de préstamo castigados de un cliente.`;
-  pubName          = 'Obtener Préstamos Castigados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPrestamosCastigados';
+  programa   = 'RBTPG185';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se debe parametrizar el módulo correspondiente a castigos ingresando en la guía especial 1041 los siguientes valores: 

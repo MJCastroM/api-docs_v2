@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutorizarOrdenComponent1750258524710 {
+export class AutorizarOrdenComponent1750268694433 {
   pageTitle        = 'Autorizar Orden';
   description      = `Método para autorizar una orden determinada.`;
-  pubName          = 'Autorizar Orden';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.AutorizarOrden';
+  programa   = 'RBTPGC08';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

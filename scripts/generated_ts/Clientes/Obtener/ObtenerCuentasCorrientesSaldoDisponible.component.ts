@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasCorrientesSaldoDisponibleComponent1750258524778 {
+export class ObtenerCuentasCorrientesSaldoDisponibleComponent1750268694755 {
   pageTitle        = 'Obtener Cuentas Corrientes (Saldo Disponible)';
   description      = `Método para obtener los productos de cuenta corriente que tiene contratado un cliente, junto con su saldo disponible.`;
-  pubName          = 'Obtener Cuentas Corrientes (Saldo Disponible)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerCuentasCorrientesSD';
+  programa   = 'RBTPG084';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

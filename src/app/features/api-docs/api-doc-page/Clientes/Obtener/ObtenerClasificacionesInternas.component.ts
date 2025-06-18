@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerClasificacionesInternasComponent1750258524774 {
+export class ObtenerClasificacionesInternasComponent1750268694732 {
   pageTitle        = 'Obtener Clasificaciones Internas';
   description      = `Método para obtener un listado de las clasificaciones internas ingresadas en Bantotal.`;
-  pubName          = 'Obtener Clasificaciones Internas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerClasificacionesInternas';
+  programa   = 'RBTPG057';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

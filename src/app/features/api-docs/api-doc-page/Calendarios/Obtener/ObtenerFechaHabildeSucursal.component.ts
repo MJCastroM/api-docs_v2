@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabildeSucursalComponent1750258524674 {
+export class ObtenerFechaHabildeSucursalComponent1750268694257 {
   pageTitle        = 'Obtener Fecha Hábil de Sucursal';
   description      = `Método para obtener si una fecha es hábil en la sucursal ingresada.`;
-  pubName          = 'Obtener Fecha Hábil de Sucursal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCalendario.ObtenerFechaHabilSucursal';
+  programa   = 'RBTPG327';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutenticacionComponent1750258524647 {
+export class AutenticacionComponent1750268694136 {
   pageTitle        = 'Autenticación';
   description      = ``;
-  pubName          = 'Autenticación';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

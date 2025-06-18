@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasIndicesComponent1750258525122 {
+export class ObtenerMonedasIndicesComponent1750268696305 {
   pageTitle        = 'Obtener Monedas Indices';
   description      = `Método para obtener las monedas e índices en funcionamiento.`;
-  pubName          = 'Obtener Monedas Indices';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTIndicadores.ObtenerMonedasIndices';
+  programa   = 'RBTPG704';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

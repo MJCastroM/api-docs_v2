@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AltaAutomaticaContratoComponent1750258524693 {
+export class AltaAutomaticaContratoComponent1750268694347 {
   pageTitle        = 'Alta Automática Contrato';
   description      = `Método para dar de alta un contrato para el cliente.`;
-  pubName          = 'Alta Automática Contrato';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.AltaAutomaticaContrato';
+  programa   = 'RBTPGC30';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

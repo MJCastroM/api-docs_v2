@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750258525059 {
+export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750268695961 {
   pageTitle        = 'Traspasar Entre Cuentas Mismo Titular (diferentes monedas)';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda cuyo titular sea la misma persona.`;
-  pubName          = 'Traspasar Entre Cuentas Mismo Titular (diferentes monedas)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarMismoTitularDiferentesMonedas';
+  programa   = 'RBTPG272';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:

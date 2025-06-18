@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750258525577 {
+export class SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750268698394 {
   pageTitle        = 'Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas Sin Cliente';
   description      = `Método para simular un préstamo sin cliente despejando fecha de vencimiento y cantidad de cuotas.`;
-  pubName          = 'Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas Sin Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC';
+  programa   = 'RBTPG466';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

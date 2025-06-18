@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750258525071 {
+export class ContratarComponent1750268696035 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un depósito a plazo.`;
-  pubName          = 'Contratar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.Contratar';
+  programa   = 'RBTPG094';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta de depósito a plazo, teniendo en cuenta que:

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750258524981 {
+export class CancelarComponent1750268695482 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la liquidación y cierre de una cuenta bolsillo.`;
-  pubName          = 'Cancelar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasBolsillo.Cancelar';
+  programa   = 'RBTPG613';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

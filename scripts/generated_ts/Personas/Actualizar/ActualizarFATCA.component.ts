@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarFATCAComponent1750258525286 {
+export class ActualizarFATCAComponent1750268696974 {
   pageTitle        = 'Actualizar FATCA';
   description      = `Método para modificar la información FATCA de una persona.`;
-  pubName          = 'Actualizar FATCA';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarFATCA';
+  programa   = 'RBTPCO11';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

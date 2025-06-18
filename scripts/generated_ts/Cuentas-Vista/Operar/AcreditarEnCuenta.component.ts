@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AcreditarEnCuentaComponent1750258525042 {
+export class AcreditarEnCuentaComponent1750268695866 {
   pageTitle        = 'Acreditar en Cuenta';
   description      = `Método para realizar una acreditación a una cuenta vista determinada.`;
-  pubName          = 'Acreditar en Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.AcreditarEnCuenta ';
+  programa   = 'RBTPG569';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de compra, teniendo en cuenta que:

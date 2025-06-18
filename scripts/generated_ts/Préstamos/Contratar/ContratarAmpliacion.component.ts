@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarAmpliacionComponent1750258525491 {
+export class ContratarAmpliacionComponent1750268697892 {
   pageTitle        = 'Contratar Ampliación';
   description      = `Método para contratar un préstamo ampliado, cancelando las operaciones indicadas en la simulación.`;
-  pubName          = 'Contratar Ampliación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ContratarAmpliacion';
+  programa   = 'RBTPG235';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta, teniendo en cuenta que: 

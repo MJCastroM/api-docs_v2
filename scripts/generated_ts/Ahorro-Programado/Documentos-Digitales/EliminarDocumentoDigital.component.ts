@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoDigitalComponent1750258524579 {
+export class EliminarDocumentoDigitalComponent1750268693908 {
   pageTitle        = 'Eliminar Documento Digital';
   description      = `Método para eliminar un documento digital de un ahorro programado.`;
-  pubName          = 'Eliminar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.EliminarDocumentoDigital';
+  programa   = 'RBTPG566';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

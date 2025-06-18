@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaComponent1750258525015 {
+export class ObtenerEstadodeCuentaComponent1750268695718 {
   pageTitle        = 'Obtener Estado de Cuenta';
   description      = `Método para obtener el estado de cuenta de un producto de cuenta de ahorro.`;
-  pubName          = 'Obtener Estado de Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasDeAhorro.ObtenerEstadoDeCuenta';
+  programa   = 'RBTPG004';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

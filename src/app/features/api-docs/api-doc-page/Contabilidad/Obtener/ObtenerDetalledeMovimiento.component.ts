@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeMovimientoComponent1750258524974 {
+export class ObtenerDetalledeMovimientoComponent1750268695434 {
   pageTitle        = 'Obtener Detalle de Movimiento';
   description      = `Método para obtener el detalle de un movimiento contable.`;
-  pubName          = 'Obtener Detalle de Movimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerDetalleMovimiento';
+  programa   = 'RBTPG228';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

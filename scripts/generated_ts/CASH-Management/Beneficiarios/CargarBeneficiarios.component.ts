@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarBeneficiariosComponent1750258524688 {
+export class CargarBeneficiariosComponent1750268694325 {
   pageTitle        = 'Cargar Beneficiarios';
   description      = `Método para cargar un archivo con los beneficiarios de los pagos.`;
-  pubName          = 'Cargar Beneficiarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.CargarBeneficiarios';
+  programa   = 'RBTPGC70';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

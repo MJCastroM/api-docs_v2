@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarEnCanalComponent1750258525669 {
+export class HabilitarEnCanalComponent1750268698937 {
   pageTitle        = 'Habilitar en Canal';
   description      = `Método para habilitar un usuario para los servicios de un canal.`;
-  pubName          = 'Habilitar en Canal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.HabilitarEnCanal';
+  programa   = 'RBTPG563';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

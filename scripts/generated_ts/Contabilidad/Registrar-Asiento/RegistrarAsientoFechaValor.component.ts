@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoFechaValorComponent1750258524979 {
+export class RegistrarAsientoFechaValorComponent1750268695473 {
   pageTitle        = 'Registrar Asiento Fecha Valor';
   description      = `Método para registrar en el sistema un asiento a una fecha valor determinada.`;
-  pubName          = 'Registrar Asiento Fecha Valor';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.RegistrarAsientoFechaValor';
+  programa   = 'RBTPG532';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

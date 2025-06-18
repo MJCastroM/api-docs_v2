@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoPlazoFijoComponent1750258525188 {
+export class SimularPrestamoPlazoFijoComponent1750268696607 {
   pageTitle        = 'Simular Plazo Fijo';
   description      = `Método para simular el alta de un préstamo plazo fijo para un crédito individual.`;
-  pubName          = 'Simular Plazo Fijo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.SimularPlazoFijo';
+  programa   = 'RBTPG424';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

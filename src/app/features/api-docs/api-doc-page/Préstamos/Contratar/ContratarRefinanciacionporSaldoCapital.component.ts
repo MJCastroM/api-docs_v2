@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionporSaldoCapitalComponent1750258525495 {
+export class ContratarRefinanciacionporSaldoCapitalComponent1750268697912 {
   pageTitle        = 'Contratar Refinanciación por Saldo Capital';
   description      = `Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.`;
-  pubName          = 'Contratar Refinanciación por Saldo Capital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ContratarRefinanciacionSaldoCapital';
+  programa   = 'RBTPG235';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta, teniendo en cuenta que: 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeDocumentoDigitalComponent1750258524846 {
+export class ObtenerTiposdeDocumentoDigitalComponent1750268695129 {
   pageTitle        = 'Obtener Tipos de Documento Digital';
   description      = `Método para obtener un listado de los tipos de documento digital ingresados en Bantotal.`;
-  pubName          = 'Obtener Tipos de Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales';
+  programa   = 'RBTPG178';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

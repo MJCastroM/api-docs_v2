@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodoEntreCuotasComponent1750258525202 {
+export class ObtenerPeriodoEntreCuotasComponent1750268696671 {
   pageTitle        = 'Obtener Período Entre Cuotas';
   description      = `Método para obtener los períodos entre cuotas parametrizados de un producto de préstamo.`;
-  pubName          = 'Obtener Período Entre Cuotas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerPeriodoEntreCuotas';
+  programa   = 'RBTPG350';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

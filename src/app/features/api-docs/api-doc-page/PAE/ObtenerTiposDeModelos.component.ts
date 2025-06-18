@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeModelosComponent1750258525223 {
+export class ObtenerTiposDeModelosComponent1750268696720 {
   pageTitle        = 'Obtener Tipos De Modelos';
   description      = `Método para obtener los diferentes tipos de modelos de evaluación.`;
-  pubName          = 'Obtener Tipos De Modelos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPAE.ObtenerTiposDeModelos';
+  programa   = 'RBTPG514';
+  scope      = 'Institucional';
 
   hasBackendConfig = false;
   backendText      = ``;

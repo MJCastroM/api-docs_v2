@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarOrdendeArchivoParaCuentaComponent1750258524728 {
+export class VisualizarOrdendeArchivoParaCuentaComponent1750268694510 {
   pageTitle        = 'Visualizar Orden de Archivo Para Cuenta';
   description      = `Método para visualizar las ordenes de un archivo de una cuenta.`;
-  pubName          = 'Visualizar Orden de Archivo Para Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.VisualizarOrdenArchivoCuenta';
+  programa   = 'RBTPGC25F';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

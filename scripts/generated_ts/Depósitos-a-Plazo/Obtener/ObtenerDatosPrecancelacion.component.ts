@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPrecancelacionComponent1750258525089 {
+export class ObtenerDatosPrecancelacionComponent1750268696133 {
   pageTitle        = 'Obtener Datos de Precancelación';
   description      = `Método para obtener la simulación de la precancelación de un depósito a plazo para una fecha dada.`;
-  pubName          = 'Obtener Datos de Precancelación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerDatosPrecancelacion';
+  programa   = 'RBTPG636';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

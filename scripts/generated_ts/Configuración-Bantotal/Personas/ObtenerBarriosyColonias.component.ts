@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBarriosyColoniasComponent1750258524949 {
+export class ObtenerBarriosyColoniasComponent1750268695236 {
   pageTitle        = 'Obtener Barrios y Colonias';
   description      = `Método para obtener un listado de los barrios/colonias ingresados en Bantotal para una determinada ciudad de un país.`;
-  pubName          = 'Obtener Barrios y Colonias';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerBarriosColonias';
+  programa   = 'RBTPG045';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

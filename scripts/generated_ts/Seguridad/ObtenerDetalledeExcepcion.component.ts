@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeExcepcionComponent1750258525609 {
+export class ObtenerDetalledeExcepcionComponent1750268698579 {
   pageTitle        = 'Obtener Detalle de Excepción';
   description      = `Método para obtener el detalle de una excepción.`;
-  pubName          = 'Obtener Detalle de Excepción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSeguridad.ObtenerDetalleExcepcion';
+  programa   = 'RBTPG087';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraEspecialporTransaccionComponent1750258525432 {
+export class ObtenerPizarraEspecialporTransaccionComponent1750268697799 {
   pageTitle        = 'Obtener Pizarra Especial por Transacción';
   description      = `Método para obtener la pizarra especial para una transacción.`;
-  pubName          = 'Obtener Pizarra Especial por Transacción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerPizarraEspecialPorTransaccion';
+  programa   = 'RBTPG355';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

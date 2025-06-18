@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaComponent1750258524704 {
+export class ObtenerDeudaComponent1750268694396 {
   pageTitle        = 'Obtener Deuda';
   description      = `Método para obtener información de la deuda de un identificador para un contrato y servicio.`;
-  pubName          = 'Obtener Deuda';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDeuda';
+  programa   = 'RBTPGC61';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

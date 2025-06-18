@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750258524789 {
+export class ObtenerDocumentosDigitalesComponent1750268694799 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener un listado de los documentos digitales asociados a una cuenta cliente.`;
-  pubName          = 'Obtener Documentos Digitales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerDocumentosDigitales';
+  programa   = 'RBTPG181';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

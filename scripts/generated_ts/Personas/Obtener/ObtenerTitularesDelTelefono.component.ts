@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitularesDelTelefonoComponent1750258525407 {
+export class ObtenerTitularesDelTelefonoComponent1750268697658 {
   pageTitle        = 'Obtener Titulares de Teléfono';
   description      = `Método para obtener los titulares de un teléfono.`;
-  pubName          = 'Obtener Titulares de Teléfono';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTitularesDelTelefono';
+  programa   = 'RBTPG552';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

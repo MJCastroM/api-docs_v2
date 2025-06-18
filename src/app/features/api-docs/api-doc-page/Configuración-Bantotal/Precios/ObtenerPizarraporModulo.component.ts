@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraporModuloComponent1750258524956 {
+export class ObtenerPizarraporModuloComponent1750268695295 {
   pageTitle        = 'Obtener Pizarra por Módulo';
   description      = `Método para obtener la pizarra genérica por módulo.`;
-  pubName          = 'Obtener Pizarra por Módulo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerPizarraPorModulo';
+  programa   = 'RBTPG294';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

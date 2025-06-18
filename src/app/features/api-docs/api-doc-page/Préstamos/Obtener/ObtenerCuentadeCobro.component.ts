@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentadeCobroComponent1750258525510 {
+export class ObtenerCuentadeCobroComponent1750268698000 {
   pageTitle        = 'Obtener Cuentas de Cobro';
   description      = `Método para obtener un listado de las cuentas de cobro de un préstamo.`;
-  pubName          = 'Obtener Cuentas de Cobro';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerCuentasDeCobro';
+  programa   = 'RBTPG134';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBolsillosComponent1750258525026 {
+export class ObtenerBolsillosComponent1750268695791 {
   pageTitle        = 'Obtener Bolsillos';
   description      = `Método para obtener un listado de las cuentas bolsillo asociadas a una cuenta vista.`;
-  pubName          = 'Obtener Bolsillos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerBolsillos';
+  programa   = 'RBTPG614';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

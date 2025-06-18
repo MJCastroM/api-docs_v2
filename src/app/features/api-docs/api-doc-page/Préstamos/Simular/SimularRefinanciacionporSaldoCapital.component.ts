@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionporSaldoCapitalComponent1750258525594 {
+export class SimularRefinanciacionporSaldoCapitalComponent1750268698501 {
   pageTitle        = 'Simular Refinanciación por Saldo Capital';
   description      = `Método para simular una refinanciación de uno o más préstamos, siendo el capital del nuevo préstamo la suma de los saldos capitales de los seleccionados.`;
-  pubName          = 'Simular Refinanciación por Saldo Capital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularRefinanciacionSaldoCapital';
+  programa   = 'RBTPG234';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Tiempo de validez de la simulación de una ampliación o refinanciación: 

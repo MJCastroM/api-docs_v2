@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabilAnteriorComponent1750258524670 {
+export class ObtenerFechaHabilAnteriorComponent1750268694244 {
   pageTitle        = 'Obtener Fecha Hábil Anterior';
   description      = `Método para obtener la fecha hábil anterior a la fecha ingresada.`;
-  pubName          = 'Obtener Fecha Hábil Anterior';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCalendario.ObtenerFechaHabilAnterior';
+  programa   = 'RBTPG331';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

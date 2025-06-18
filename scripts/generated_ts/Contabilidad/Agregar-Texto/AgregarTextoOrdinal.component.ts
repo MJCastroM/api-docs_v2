@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextoOrdinalComponent1750258524961 {
+export class AgregarTextoOrdinalComponent1750268695337 {
   pageTitle        = 'Agregar Texto Ordinal';
   description      = `Método para agregar un texto a un determinado ordinal de un asiento.`;
-  pubName          = 'Agregar Texto Ordinal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.AgregarTextoOrdinal';
+  programa   = 'RBTPG388';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

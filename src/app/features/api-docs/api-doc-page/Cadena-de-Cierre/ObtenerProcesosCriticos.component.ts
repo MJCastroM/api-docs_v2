@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosCriticosComponent1750258524655 {
+export class ObtenerProcesosCriticosComponent1750268694169 {
   pageTitle        = 'Obtener Procesos Críticos';
   description      = `Método para obtener un listado de los procesos críticos de la cadena de cierre.`;
-  pubName          = 'Obtener Procesos Críticos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerProcesosCriticos';
+  programa   = 'RBTPG508';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

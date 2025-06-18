@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarPrestamoComponent1750258525225 {
+export class ContratarPrestamoComponent1750268696729 {
   pageTitle        = 'Contratar Préstamo';
   description      = `Método para contratar un préstamo de Partner.`;
-  pubName          = 'Contratar Préstamo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ContratarPrestamo';
+  programa   = 'RBTPN008';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

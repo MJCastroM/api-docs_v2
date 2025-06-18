@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPerfilTransaccionalComponent1750258525051 {
+export class AgregarPerfilTransaccionalComponent1750268695920 {
   pageTitle        = 'Agregar Perfil Transaccional';
   description      = `Método para agregar un perfil transaccional a una cuenta vista.`;
-  pubName          = 'Agregar Perfil Transaccional';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.AgregarPerfilTransaccional';
+  programa   = 'RBTPG624';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

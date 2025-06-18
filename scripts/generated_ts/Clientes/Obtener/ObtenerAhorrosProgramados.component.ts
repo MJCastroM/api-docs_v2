@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAhorrosProgramadosComponent1750258524771 {
+export class ObtenerAhorrosProgramadosComponent1750268694716 {
   pageTitle        = 'Obtener Ahorros Programados';
   description      = `Método para obtener un listado de los productos de ahorro programado que tiene contratado un cliente.`;
-  pubName          = 'Obtener Ahorros Programados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerAhorrosProgramados';
+  programa   = 'RBTPG278';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

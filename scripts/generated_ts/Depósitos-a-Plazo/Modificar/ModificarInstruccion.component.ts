@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarInstruccionComponent1750258525086 {
+export class ModificarInstruccionComponent1750268696108 {
   pageTitle        = 'Modificar Instrucción';
   description      = `Método para modificar la instrucción al vencimiento de un depósito a plazo.`;
-  pubName          = 'Modificar Instrucción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ModificarInstruccion';
+  programa   = 'RBTPG106';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se debe parametrizar en la guía de procesos 70101 de la siguiente manera: 

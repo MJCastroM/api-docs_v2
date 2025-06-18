@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrecioaFechaComponent1750258525433 {
+export class ObtenerPrecioaFechaComponent1750268697805 {
   pageTitle        = 'Obtener Precio a Fecha';
   description      = `Método para obtener la cotización en moneda nacional de una especie en la fecha recibida.`;
-  pubName          = 'Obtener Precio a Fecha';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerPrecioAFecha';
+  programa   = 'RBTPG049';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

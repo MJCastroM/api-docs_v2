@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarOrdendeNoPagodeChequeraComponent1750258524997 {
+export class RegistrarOrdendeNoPagodeChequeraComponent1750268695602 {
   pageTitle        = 'Registrar Orden de No Pago de Chequera';
   description      = `Método para registrar una orden de no pago de una chequera.`;
-  pubName          = 'Registrar Orden de No Pago de Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera';
+  programa   = 'RBTPG244';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

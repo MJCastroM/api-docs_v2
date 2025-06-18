@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposAvalComponent1750258525175 {
+export class ObtenerTiposAvalComponent1750268696567 {
   pageTitle        = 'Obtener Tipos Aval';
   description      = `Método para obtener una lista de los tipos de aval.`;
-  pubName          = 'Obtener Tipos Aval';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerTiposAval';
+  programa   = 'RBTPG426';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

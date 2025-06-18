@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarResumenCabezalComponent1750258524731 {
+export class VisualizarResumenCabezalComponent1750268694522 {
   pageTitle        = 'Visualizar Resumen Cabezal';
   description      = `Método para visualizar un resumen de información de un archivo CASH.`;
-  pubName          = 'Visualizar Resumen Cabezal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.VisualizarResumenCabezal';
+  programa   = 'RBTPGC21I';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCancelacionTotalComponent1750258525515 {
+export class ObtenerDetalledeCancelacionTotalComponent1750268698032 {
   pageTitle        = 'Obtener Detalle de Cancelación Total';
   description      = `Método para obtener el detalle de la cancelación total de un préstamo.`;
-  pubName          = 'Obtener Detalle de Cancelación Total';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetalleCancelacionTotal';
+  programa   = 'RBTPG539';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

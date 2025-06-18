@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCelularComponent1750258525276 {
+export class ActualizarCelularComponent1750268696938 {
   pageTitle        = 'Actualizar Celular';
   description      = `Método para actualizar el celular de una persona.`;
-  pubName          = 'Actualizar Celular';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarCelular';
+  programa   = 'RBTPG198';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

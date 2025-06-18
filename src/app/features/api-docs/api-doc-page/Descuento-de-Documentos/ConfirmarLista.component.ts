@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConfirmarListaComponent1750258525108 {
+export class ConfirmarListaComponent1750268696223 {
   pageTitle        = 'Confirmar Lista';
   description      = `Método para confirmar y contabilizar una lista de documentos.`;
-  pubName          = 'Confirmar Lista';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDescuentoDocumentos.ConfirmarLista';
+  programa   = 'RBTPG164';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

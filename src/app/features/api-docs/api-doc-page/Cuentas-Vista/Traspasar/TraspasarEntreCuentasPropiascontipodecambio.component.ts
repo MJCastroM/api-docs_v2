@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiascontipodecambioComponent1750258525060 {
+export class TraspasarEntreCuentasPropiascontipodecambioComponent1750268695970 {
   pageTitle        = 'Traspasar Entre Cuentas Propias (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas propias.`;
-  pubName          = 'Traspasar Entre Cuentas Propias (con tipo de cambio)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarCuentasPropiasConCotizacion';
+  programa   = 'RBTPG263';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:

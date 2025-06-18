@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosconAvanceComponent1750258524811 {
+export class ObtenerPrestamosconAvanceComponent1750268694931 {
   pageTitle        = 'Obtener Préstamos con Avance';
   description      = `Método para obtener los productos de préstamo que tiene contratado un cliente, con su correspondiente avance.`;
-  pubName          = 'Obtener Préstamos con Avance';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPrestamosConAvance';
+  programa   = 'RBTPG259';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

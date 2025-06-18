@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresDomicilioComponent1750258524948 {
+export class ObtenerAgrupadoresDomicilioComponent1750268695227 {
   pageTitle        = 'Obtener Agrupadores de Domicilio';
   description      = `Método para obtener los diferentes niveles de agrupadores de domicilios.`;
-  pubName          = 'Obtener Agrupadores de Domicilio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio';
+  programa   = 'RBTPG221';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

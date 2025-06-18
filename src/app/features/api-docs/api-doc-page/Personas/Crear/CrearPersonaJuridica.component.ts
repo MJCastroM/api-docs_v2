@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearPersonaJuridicaComponent1750258525326 {
+export class CrearPersonaJuridicaComponent1750268697235 {
   pageTitle        = 'Crear Persona Jurídica';
   description      = ``;
-  pubName          = 'Crear Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;

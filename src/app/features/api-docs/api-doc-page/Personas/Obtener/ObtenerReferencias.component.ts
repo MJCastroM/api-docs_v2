@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerReferenciasComponent1750258525394 {
+export class ObtenerReferenciasComponent1750268697606 {
   pageTitle        = 'Obtener Referencias';
   description      = `Método para obtener los datos de las referencias de una persona.`;
-  pubName          = 'Obtener Referencias';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerReferencias';
+  programa   = 'RBTPG301';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

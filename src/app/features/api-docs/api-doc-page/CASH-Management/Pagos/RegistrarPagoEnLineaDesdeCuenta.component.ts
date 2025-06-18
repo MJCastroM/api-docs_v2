@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoEnLineaDesdeCuentaComponent1750258524724 {
+export class RegistrarPagoEnLineaDesdeCuentaComponent1750268694491 {
   pageTitle        = 'Registrar Pago En Linea Desde Cuenta';
   description      = `Método para registrar el pago en linea de una factura, debitando desde la cuenta.`;
-  pubName          = 'Registrar Pago En Linea Desde Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta';
+  programa   = 'RBTPGC67';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

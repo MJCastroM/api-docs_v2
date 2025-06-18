@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750258525501 {
+export class ObtenerDocumentoDigitalComponent1750268697938 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de un préstamo.`;
-  pubName          = 'Obtener Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDocumentoDigital';
+  programa   = 'RBTPG191';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011. 

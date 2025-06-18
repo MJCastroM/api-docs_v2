@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCorreoElectronicoComponent1750258525279 {
+export class ActualizarCorreoElectronicoComponent1750268696955 {
   pageTitle        = 'Actualizar Correo Electrónico';
   description      = `Método para actualizar el correo electrónico de una persona.`;
-  pubName          = 'Actualizar Correo Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarCorreoElectronico';
+  programa   = 'RBTPG023';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

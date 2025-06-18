@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicoenCustodiaComponent1750258524622 {
+export class DepositarChequeElectronicoenCustodiaComponent1750268694041 {
   pageTitle        = 'Depositar Cheque Electrónico en Custodia';
   description      = `Método para depositar un cheque electrónico bajo custodia.`;
-  pubName          = 'Depositar Cheque Electrónico en Custodia';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia';
+  programa   = 'RBTPAR32';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;

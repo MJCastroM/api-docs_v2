@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CompletarTareaComponent1750258525131 {
+export class CompletarTareaComponent1750268696368 {
   pageTitle        = 'Completar Tarea';
   description      = `Método para completar la tarea de solicitud de créditos y pasar a la etapa de evaluación.`;
-  pubName          = 'Completar Tarea';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.CompletarTarea';
+  programa   = 'RBTPG418';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

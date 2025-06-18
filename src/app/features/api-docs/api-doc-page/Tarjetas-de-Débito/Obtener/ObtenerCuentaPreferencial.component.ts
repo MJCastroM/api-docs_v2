@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentaPreferencialComponent1750258525626 {
+export class ObtenerCuentaPreferencialComponent1750268698659 {
   pageTitle        = 'Obtener Cuenta Preferencial';
   description      = `Método para obtener la operación de la cuenta preferencial de tarjeta de débito.`;
-  pubName          = 'Obtener Cuenta Preferencial';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerCuentaPreferencial';
+  programa   = 'RBTPG773';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

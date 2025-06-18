@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDocumentoDigitalComponent1750258524740 {
+export class ActualizarDocumentoDigitalComponent1750268694559 {
   pageTitle        = 'Actualizar Documento Digital';
   description      = `Método para actualizar el documento digital de una cuenta cliente.`;
-  pubName          = 'Actualizar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ActualizarDocumentoDigital';
+  programa   = 'RBTPG167';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDatosContactoComponent1750258525644 {
+export class ActualizarDatosContactoComponent1750268698788 {
   pageTitle        = 'Actualizar Datos de Contacto';
   description      = `Método para actualizar los datos de contacto de una tarjeta de débito.`;
-  pubName          = 'Actualizar Datos de Contacto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ActualizarDatosContacto';
+  programa   = 'RBTPG633';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

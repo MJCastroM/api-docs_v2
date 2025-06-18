@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasdeAhorroSaldoDisponibleComponent1750258524781 {
+export class ObtenerCuentasdeAhorroSaldoDisponibleComponent1750268694769 {
   pageTitle        = 'Obtener Cuentas de Ahorro (Saldo Disponible)';
   description      = `Método para obtener los productos de cuenta de ahorro que tiene contratado un cliente, junto con su saldo disponible.`;
-  pubName          = 'Obtener Cuentas de Ahorro (Saldo Disponible)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerCuentasAhorroSD';
+  programa   = 'RBTPG083';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

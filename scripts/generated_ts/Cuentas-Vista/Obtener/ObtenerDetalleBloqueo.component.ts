@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleBloqueoComponent1750258525029 {
+export class ObtenerDetalleBloqueoComponent1750268695807 {
   pageTitle        = 'Obtener Detalle Bloqueo';
   description      = `Método para obtener el detalle de un bloqueo.`;
-  pubName          = 'Obtener Detalle Bloqueo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerDetalleBloqueo';
+  programa   = 'RBTPG140';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

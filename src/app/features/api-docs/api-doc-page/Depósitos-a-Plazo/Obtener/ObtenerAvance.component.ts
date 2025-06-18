@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAvanceComponent1750258525087 {
+export class ObtenerAvanceComponent1750268696118 {
   pageTitle        = 'Obtener Avance';
   description      = `Método para obtener el avance de un depósito a plazo.`;
-  pubName          = 'Obtener Avance';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerAvance';
+  programa   = 'RBTPG402';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

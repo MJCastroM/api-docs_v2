@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarServiciosDisponiblesComponent1750258524694 {
+export class CargarServiciosDisponiblesComponent1750268694355 {
   pageTitle        = 'Cargar Servicios Disponibles';
   description      = `Método para obtener los servicios disponibles para el cliente.`;
-  pubName          = 'Cargar Servicios Disponibles';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.CargarServiciosDisponibles';
+  programa   = 'RBTPGC07';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

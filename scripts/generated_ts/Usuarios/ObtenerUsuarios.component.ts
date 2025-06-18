@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerUsuariosComponent1750258525675 {
+export class ObtenerUsuariosComponent1750268698973 {
   pageTitle        = 'Obtener Usuarios';
   description      = `Método para obtener un listado de los usuarios ingresados en el sistema.`;
-  pubName          = 'Obtener Usuarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.ObtenerUsuarios';
+  programa   = 'RBTPG391';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

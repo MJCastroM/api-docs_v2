@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosCanceladosComponent1750258524805 {
+export class ObtenerPlazosFijosCanceladosComponent1750268694878 {
   pageTitle        = 'Obtener Plazos Fijos Cancelados';
   description      = `Método para obtener los productos de depósito a plazo fijo cancelados de un cliente.`;
-  pubName          = 'Obtener Plazos Fijos Cancelados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPlazosFijosCancelados';
+  programa   = 'RBTPG275';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 

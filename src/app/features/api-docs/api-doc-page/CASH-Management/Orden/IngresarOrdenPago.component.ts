@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class IngresarOrdenPagoComponent1750258524712 {
+export class IngresarOrdenPagoComponent1750268694448 {
   pageTitle        = 'Ingresar Orden Pago';
   description      = `Método para ingresar una orden de pago.`;
-  pubName          = 'Ingresar Orden Pago';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.IngresarOrdenPago';
+  programa   = 'RBTPGC31';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

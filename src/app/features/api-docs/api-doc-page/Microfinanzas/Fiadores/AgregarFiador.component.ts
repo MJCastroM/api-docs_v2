@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarFiadorComponent1750258525136 {
+export class AgregarFiadorComponent1750268696397 {
   pageTitle        = 'Agregar Fiador';
   description      = `Método para agregar un fiador a una solicitud de crédito individual.`;
-  pubName          = 'Agregar Fiador';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.AgregarFiador';
+  programa   = 'RBTPG412';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

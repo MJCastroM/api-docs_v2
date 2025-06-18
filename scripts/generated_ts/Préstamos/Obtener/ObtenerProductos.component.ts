@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750258525545 {
+export class ObtenerProductosComponent1750268698202 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de préstamos.`;
-  pubName          = 'Obtener Productos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerProductos';
+  programa   = 'RBTPG078';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

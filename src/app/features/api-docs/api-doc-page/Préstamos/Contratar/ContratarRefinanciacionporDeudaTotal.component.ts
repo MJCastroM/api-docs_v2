@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionporDeudaTotalComponent1750258525494 {
+export class ContratarRefinanciacionporDeudaTotalComponent1750268697904 {
   pageTitle        = 'Contratar Refinanciación por Deuda Total';
   description      = `Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.`;
-  pubName          = 'Contratar Refinanciación por Deuda Total';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ContratarRefinanciacionDeudaTotal';
+  programa   = 'RBTPG235';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta, teniendo en cuenta que: 

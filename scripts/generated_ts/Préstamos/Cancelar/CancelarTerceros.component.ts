@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarTercerosComponent1750258525445 {
+export class CancelarTercerosComponent1750268697879 {
   pageTitle        = 'Cancelar Terceros';
   description      = `Método para realizar la cancelación de un préstamo con una cuenta de cobro de terceros.`;
-  pubName          = 'Cancelar Terceros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.CancelarTerceros';
+  programa   = 'RBTPG830';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de Pago, teniendo en cuenta que: 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularOfertasComponent1750258525255 {
+export class SimularOfertasComponent1750268696855 {
   pageTitle        = 'Simular Ofertas';
   description      = `Método para simular ofertas del Partner.`;
-  pubName          = 'Simular Ofertas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.SimularOfertas';
+  programa   = 'RBTPN011';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;

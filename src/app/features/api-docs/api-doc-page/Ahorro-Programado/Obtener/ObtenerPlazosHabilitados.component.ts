@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosHabilitadosComponent1750258524608 {
+export class ObtenerPlazosHabilitadosComponent1750268694001 {
   pageTitle        = 'Obtener Plazos Habilitados';
   description      = `Método para obtener un listado de plazos habilitados para los casos que el alta de ahorro programado se realice mediante selección de plazo como lista de valores.`;
-  pubName          = 'Obtener Plazos Habilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerPlazosHabilitados';
+  programa   = 'RBTPG119';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
