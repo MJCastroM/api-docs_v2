@@ -4,7 +4,7 @@ $background-light: #fdfdfe;
 $grey-header:      #e0e0e0;
 $shadow-light:     rgba(0, 0, 0, .15);
 $border-radius:    1rem;
-$margin:           2rem 10rem;
+$margin:           2rem 14rem;
 
 // INFORMACIÓN INICIAL DEL MÉTODO
 .info-card {
@@ -14,9 +14,11 @@ $margin:           2rem 10rem;
   border-radius: $border-radius;
   border-left: 4px solid $primary-color;
   border-right: 4px solid $primary-color;
+  line-height: 2 !important;
 
   .info-card__content {
-    padding: 1rem 1.5rem;
+    padding: .5rem 2rem;
+
     p {
       margin: 0.5rem 0;
       color: $text-main;

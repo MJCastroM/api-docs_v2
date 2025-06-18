@@ -3,20 +3,21 @@ $text-main:       #2c3e50;
 $bg-light:        #f4f4f4;
 $grey-header:     #e0e0e0;
 $shadow-light:    rgba(0,0,0,0.15);
-$border-radius:   8px;
+$border-radius:   1rem;
+$title-underlined: #eaecef;
 
 // TÍTULO DE LA PÁGINA
 * {
   letter-spacing: 0.01em !important;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
   color: $text-main !important;
+  line-height: 1.5 !important;
 }
 
 .page-title {
-  margin: 3rem 10rem 0rem 10rem !important;
+  margin: 2rem 14rem 0rem 14rem !important;
   font-size: 2.5rem;
   font-weight: 700;
   color: $text-main;
-  border-bottom: 2px solid lighten($text-main, 40%) !important;
-  padding-bottom: 1rem !important;
+  border-bottom: 1px solid $title-underlined !important;
 }
