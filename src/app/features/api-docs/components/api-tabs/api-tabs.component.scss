@@ -1,43 +1,65 @@
 // ————— Variables Base —————
 $primary-color:   #c62828;
-$bg-light:        #f4f4f4;
+$background-light: #fdfdfe;
 $grey-header:     #e0e0e0;
-$border-radius:   8px;
+$grey-columns:     #ededed;
+$shadow-light:    rgba(0, 0, 0, .15);
+$border-radius:   1rem;
+$margin:          3rem 14rem;
 
 // Variables de personalización para tabs
 $active-border:   3px solid $primary-color;           // Borde superior de la pestaña activa
-$hover-bg:        lighten($bg-light, 5%);            // Fondo hover en pestañas inactivas
+$hover-bg:        lighten($background-light, 5%);            // Fondo hover en pestañas inactivas
 $label-color:     rgba(0, 0, 0, 0.87);               // Color de texto deseado
 
 // ————— Overrides para <mat-tab-group class="api-tabs"> —————
 
 // 1) MDC-based Tabs (Angular Material 15+)
 .mat-mdc-tab-group.api-tabs {
-  // Quitar divider/borde inferior del header
-  .mdc-tab-bar {
-    border-bottom: none !important;
+  margin: $margin;
+  //padding: 2rem;
+  box-shadow: 15px 15px 15px 10px $shadow-light;
+  border-radius: $border-radius;
+
+  // BARRA QUE CONTIENE LAS PESTAÑAS
+  .mat-mdc-tab-header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: $border-radius $border-radius 0 0;
+    list-style: none;
+    display: flex;
+    background: $grey-header;
   }
 
-  // Pestañas inactivas
+  // PESTAÑAS INACTIVAS
   .mdc-tab {
-    background: $bg-light;
+    background: $grey-header;
     .mdc-tab__content .mdc-tab__text-label {
       color: $label-color !important;
     }
     &:hover {
+      border-radius: $border-radius $border-radius 0 0;
       background: $hover-bg;
     }
   }
 
   // Pestaña activa
   .mdc-tab.mdc-tab--active {
-    background: white;
+    background: $background-light;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     border-top: $active-border;
     .mdc-tab__content .mdc-tab__text-label {
       color: $label-color !important;
     }
+  }
+
+  // CONTENIDO DE LA PESTAÑA ACTIVA
+  .mat-mdc-tab-body-wrapper {
+    padding: 2rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+    box-shadow: none;
   }
 
   // Esconder indicador de tinta inferior
@@ -50,13 +72,13 @@ $label-color:     rgba(0, 0, 0, 0.87);               // Color de texto deseado
 .mat-tab-group.api-tabs {
   // Quitar border-bottom del header
   .mat-tab-header {
-    background-color: $bg-light !important;
+    background-color: $background-light !important;
     border-bottom: none !important;
   }
 
   // Pestañas inactivas
   .mat-tab-label {
-    background: $bg-light !important;
+    background: $background-light !important;
     color: $label-color !important;
     &:hover {
       background: $hover-bg !important;
@@ -79,6 +101,6 @@ $label-color:     rgba(0, 0, 0, 0.87);               // Color de texto deseado
 // 3) Panel de contenido
 .mat-tab-group.api-tabs .mat-tab-body,
 .mat-mdc-tab-group.api-tabs .mat-mdc-tab-body-wrapper {
-  padding: 16px !important;
-  background: white !important;
+  //padding: 16px !important;
+  //background: white !important;
 }

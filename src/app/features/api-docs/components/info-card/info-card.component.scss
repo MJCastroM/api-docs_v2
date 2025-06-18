@@ -1,20 +1,24 @@
-$primary-color:   #c62828;
-$text-main:       #333;
-$bg-light:        #f4f4f4;
-$grey-header:     #e0e0e0;
-$shadow-light:    rgba(0,0,0,0.15);
-$border-radius:   8px;
-// 5) Info Card
+$primary-color:    #c62828;
+$text-main:        #333;
+$background-light: #fdfdfe;
+$grey-header:      #e0e0e0;
+$shadow-light:     rgba(0, 0, 0, .15);
+$border-radius:    1rem;
+$margin:           2rem 14rem;
+
+// INFORMACIÓN INICIAL DEL MÉTODO
 .info-card {
-  margin: 2rem 0;
-  background: white;
-  box-shadow: 0 2px 6px $shadow-light;
+  background: $background-light;
+  margin: $margin;
+  box-shadow: 15px 15px 15px 10px $shadow-light;
   border-radius: $border-radius;
   border-left: 4px solid $primary-color;
   border-right: 4px solid $primary-color;
+  line-height: 2 !important;
 
   .info-card__content {
-    padding: 1rem 1.5rem;
+    padding: .5rem 2rem;
+
     p {
       margin: 0.5rem 0;
       color: $text-main;
@@ -24,3 +28,4 @@ $border-radius:   8px;
     }
   }
 }
+

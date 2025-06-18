@@ -1,43 +1,61 @@
 @import '~prismjs/themes/prism.css';
-$primary-color:   #c62828;
-$text-main:       #333;
-$bg-light:        #f4f4f4;
-$grey-header:     #e0e0e0;
-$shadow-light:    rgba(0,0,0,0.15);
-$border-radius:   8px;
-// 4) Toggle de código
+$primary-color:    #c62828;
+$text-main:        #333;
+$background-light: #fdfdfe;
+$grey-header:      #e0e0e0;
+$shadow-light:     rgba(0,0,0,0.15);
+$border-radius:    1rem;
+$margin:           3rem 14rem;
+
+// ELEMENTO INICIAL
+
 .code-toggle {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 0.5rem;
+  background-color: #c3def3;
+  border-radius: 0.7rem 0.7rem 0 0;
+  height: auto;
+  position: relative;
+  overflow: hidden;
 
-  button[mat-button] {
-    margin-right: 0.5rem;
-      background: white !important;
+  button[mat-button] { // BOTONES DE CÓDIGO
+    padding: 0.4rem 0.75rem; // más angosto vertical
+    background: none;
+    border-radius: 0.7rem 0.7rem 0 0;
     &.active {
-      border-top: 2px solid $primary-color;
-      color: $primary-color;
-    background: $bg-light !important;
+      background-color: #ecf4fa;
     }
   }
 
-  button[mat-icon-button] {
-    color: $grey-header;
+  button[mat-icon-button] { // BOTÓN DE COPIAR
+    margin-left: auto;
+    height: 2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    transition: background-color 0.2s ease;
+
     &:hover {
-      color: $text-main;
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 }
 
 // --- Ahora nuestro override:
-pre[class*="language-"] code {
-  // Opcional: asegurar contraste
-  background: none;  
+pre[class*="language-"] {
+  margin: 0rem !important;
+  background: #ecf4fa;
+  border-radius: 0 0 0.7rem 0.7rem;
+  code {
+    background: none;
+  }
 }
 
 // Cambiamos el color de los números
-:host ::ng-deep .token.number { 
+:hos  t ::ng-deep .token.number {
   color: #025c52 !important;   // verde oscuro
   font-weight: 500;            // opcional, dar énfasis
 }
