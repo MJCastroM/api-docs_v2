@@ -1,9 +1,9 @@
 <!-- backend-config.component.html -->
 <mat-card class="backend-card">
   <div class="icon-text-container">
-    <span class="custom-icon"></span>
+    <mat-icon color="warn">warning</mat-icon>
     <h2>Configuración Backend</h2>
   </div>
   <pre>{{text}}</pre>
-  <app-api-table [columns]="backendCols" [data]="backendData"></app-api-table>
+  <app-api-table [columns]="[]" [data]="config"></app-api-table>
 </mat-card>

@@ -1,41 +1,25 @@
 $primary-color:   #c62828;
 $text-main:       #333;
-$background-light: #fdfdfe;
+$bg-light:        #f4f4f4;
 $grey-header:     #e0e0e0;
-$shadow-light:    rgba(0, 0, 0, .15);
-$border-radius:   1rem;
-$margin:          3rem 14rem;
-
-// CONFIGURACIÓN BACKEND
-
-* {
-  letter-spacing: 0.01em !important;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  color: $text-main !important;
-  line-height: 1.5 !important;
-}
-
+$shadow-light:    rgba(0,0,0,0.15);
+$border-radius:   8px;
+// 3) Backend Config Card
 .backend-card {
-  margin: $margin;
-  padding: 2rem;
-  box-shadow: 15px 15px 15px 10px $shadow-light;
-  background: $background-light;
+  margin: 2rem 0;
+  padding: 1rem;
+  //border-left: 4px solid $primary-color;
+  box-shadow: 0 2px 6px $shadow-light;
+  background: white;
   border-radius: $border-radius;
 
-  .custom-icon {
-    background-image: url(exclamation.svg); // Ruta desde "src"
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 1.5rem;
-    height: 1.5rem;
+  mat-icon {
+    vertical-align: middle;
     margin-right: 0.5rem;
-    display: inline-block;
-    flex-shrink: 0;
+    color: $primary-color;
   }
 
   h2 {
-    font-weight: 600 !important;
     display: inline-block;
     font-size: 1.25rem;
     margin: 0;
@@ -43,14 +27,11 @@ $margin:          3rem 14rem;
   }
 
   pre {
-    background: transparent;
-    font-family: 'Roboto', sans-serif !important;
-    padding: 0;
+    background: lighten($grey-header, 10%);
+    padding: 0.75rem;
     border-radius: $border-radius / 2;
     overflow-x: auto;
+    font-family: 'Source Code Pro', monospace;
     margin: 1rem 0;
-    white-space: normal;       // <-- clave
-    word-wrap: break-word;
-    overflow-wrap: break-word;
   }
 }
