@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750268695825 {
+export class ObtenerFacultadesComponent1750272791185 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerFacultades';
@@ -24,8 +24,12 @@ export class ObtenerFacultadesComponent1750268695825 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente / cuenta de ahorro.' }];
 
   examples = {
-    invocation: { xml: ``, json: `` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    invocation: { xml: `
+`, 
+    json: `
+` },
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerFacultadesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +95,9 @@ export class ObtenerFacultadesComponent1750268695825 {
          </Btoutreq>
       </BTCuentasVista.ObtenerFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,

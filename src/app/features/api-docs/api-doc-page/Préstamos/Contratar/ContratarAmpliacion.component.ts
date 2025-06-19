@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarAmpliacionComponent1750268697892 {
+export class ContratarAmpliacionComponent1750272791674 {
   pageTitle        = 'Contratar Ampliación';
   description      = `Método para contratar un préstamo ampliado, cancelando las operaciones indicadas en la simulación.`;
   pubName    = 'BTPrestamos.ContratarAmpliacion';
@@ -38,7 +38,8 @@ export class ContratarAmpliacionComponent1750268697892 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de ampliación.' }, { Codigo: '30002', Descripcion: 'El identificador de ampliación no es válido.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de oper. de la cuenta vista.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta vista para el identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de oper. de la intrucción de cobro.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30008', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30011', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30012', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30013', Descripcion: 'No se recuperó la operación simulada con identificador.' }, { Codigo: '40001', Descripcion: 'en adelante, errores de contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ContratarAmpliacion>
@@ -55,7 +56,9 @@ export class ContratarAmpliacionComponent1750268697892 {
          <bts:operacionUId_cobro>211</bts:operacionUId_cobro>
       </bts:BTPrestamos.ContratarAmpliacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ContratarAmpliacion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -73,7 +76,8 @@ export class ContratarAmpliacionComponent1750268697892 {
 	"operacionUId_desembolso":"211",
 	"operacionUId_cobro":"211",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ContratarAmpliacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class ContratarAmpliacionComponent1750268697892 {
          </Btoutreq>
       </BTPrestamos.ContratarAmpliacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

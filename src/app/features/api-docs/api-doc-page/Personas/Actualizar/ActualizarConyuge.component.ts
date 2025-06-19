@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarConyugeComponent1750268696962 {
+export class ActualizarConyugeComponent1750272791481 {
   pageTitle        = 'Actualizar Cónyuge';
   description      = `Método para actualizar el cónyuge de una persona.`;
   pubName    = 'BTPersonas.ActualizarConyuge';
@@ -24,7 +24,8 @@ export class ActualizarConyugeComponent1750268696962 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cónyuge de la persona.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '32003', Descripcion: 'Error en identificador del cónyuge de la persona: No existe registro para el identificador único.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarConyuge>
@@ -40,7 +41,9 @@ export class ActualizarConyugeComponent1750268696962 {
          <bts:estadoCivilId>2</bts:estadoCivilId>
       </bts:BTPersonas.ActualizarConyuge>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarConyuge\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ActualizarConyugeComponent1750268696962 {
 	"conyugeUId": "3",
 	"estadoCivilId" : "2"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarConyugeResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class ActualizarConyugeComponent1750268696962 {
          </Btoutreq>
       </BTPersonas.ActualizarConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
 	    "Device": "GP", 
 	    "Usuario": "MINSTALADOR", 

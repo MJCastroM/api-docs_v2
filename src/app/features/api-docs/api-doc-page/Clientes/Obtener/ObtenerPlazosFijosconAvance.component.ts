@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosconAvanceComponent1750268694888 {
+export class ObtenerPlazosFijosconAvanceComponent1750272790930 {
   pageTitle        = 'Obtener Plazos Fijos con Avance';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente, con su correspondiente avance.`;
   pubName    = 'BTClientes.ObtenerPlazosFijoConAvance';
@@ -41,7 +41,8 @@ Valor específico 2 | Tipo de operación a excluir.
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador]' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPlazosFijoConAvance>
@@ -55,7 +56,9 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>10010</bts:clienteUId>
       </bts:BTClientes.ObtenerPlazosFijoConAvance>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPlazosFijoConAvance=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -70,7 +73,8 @@ Valor específico 2 | Tipo de operación a excluir.
 	},
     "clienteUId": "10010",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPlazosFijoConAvanceResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -151,7 +155,9 @@ Valor específico 2 | Tipo de operación a excluir.
          </Btoutreq>
       </BTClientes.ObtenerPlazosFijoConAvanceResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
         "Canal": "BTDIGITAL", 
         "Requerimiento": "", 

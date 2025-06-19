@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750268698715 {
+export class ObtenerIdentificadorUnicoComponent1750272791864 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerIdentificadorUnico';
@@ -24,7 +24,8 @@ export class ObtenerIdentificadorUnicoComponent1750268698715 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió la tarjeta de débito.' }, { Codigo: '30002', Descripcion: 'No se recuperó el identificador para la tarjeta de débito: [Número de Tarjeta].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerIdentificadorUnico>
@@ -38,7 +39,9 @@ export class ObtenerIdentificadorUnicoComponent1750268698715 {
          <bts:nroTarjeta>4517720800000029</bts:nroTarjeta>
       </bts:BTTarjetasDeDebito.ObtenerIdentificadorUnico>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerIdentificadorUnico\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -52,7 +55,8 @@ export class ObtenerIdentificadorUnicoComponent1750268698715 {
     },
     "nroTarjeta": "4517720800000029"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerIdentificadorUnicoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -75,7 +79,9 @@ export class ObtenerIdentificadorUnicoComponent1750268698715 {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerIdentificadorUnicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",

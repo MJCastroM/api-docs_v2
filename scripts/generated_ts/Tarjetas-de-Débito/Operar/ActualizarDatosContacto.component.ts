@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDatosContactoComponent1750268698788 {
+export class ActualizarDatosContactoComponent1750272791878 {
   pageTitle        = 'Actualizar Datos de Contacto';
   description      = `Método para actualizar los datos de contacto de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarDatosContacto';
@@ -24,7 +24,8 @@ export class ActualizarDatosContactoComponent1750268698788 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de tarjeta de débito' }, { Codigo: '30001', Descripcion: 'No se recibió código de domicilio a actualizar.' }, { Codigo: '30001', Descripcion: 'No se recibió correo electrónico a actualizar.' }, { Codigo: '30001', Descripcion: 'No se recibió numero de teléfono a actualizar.' }, { Codigo: '40001', Descripcion: 'El código de domicilio ingresado no es válido.' }, { Codigo: '40002', Descripcion: 'No existe una tarjeta con el identificador ingresado.' }, { Codigo: '40003', Descripcion: 'El tarjeta habiente no tiene un domicilio con el código ingresado.' }, { Codigo: '42005', Descripcion: 'Funcionalidad inexistente TDD025.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ActualizarDatosContacto>
@@ -43,7 +44,9 @@ export class ActualizarDatosContactoComponent1750268698788 {
          </bts:sdtDatosContacto>
       </bts:BTTarjetasDeDebito.ActualizarDatosContacto>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ActualizarDatosContacto\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -63,7 +66,8 @@ export class ActualizarDatosContactoComponent1750268698788 {
       "numeroTelefono": 422306581
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ActualizarDatosContactoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +94,9 @@ export class ActualizarDatosContactoComponent1750268698788 {
          </Btoutreq>
       </BTTarjetasDeDebito.ActualizarDatosContactoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
    "Btinreq": {
         "Device": "AS",
         "Usuario": "INSTALADOR",

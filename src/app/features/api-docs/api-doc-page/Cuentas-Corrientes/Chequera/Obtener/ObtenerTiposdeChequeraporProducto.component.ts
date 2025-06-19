@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraporProductoComponent1750268695591 {
+export class ObtenerTiposdeChequeraporProductoComponent1750272791117 {
   pageTitle        = 'Obtener Tipos de Chequera por Producto';
   description      = `Método para obtener un listado de las chequeras que se pueden asignar a un determinado producto.`;
   pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto';
@@ -24,7 +24,8 @@ export class ObtenerTiposdeChequeraporProductoComponent1750268695591 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de producto.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'El producto no tiene habilitado el manejo de chequeras.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto>
@@ -38,7 +39,9 @@ export class ObtenerTiposdeChequeraporProductoComponent1750268695591 {
          <bts:productoUId>43</bts:productoUId>
       </bts:BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerTiposDeChequeraPorProducto\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerTiposdeChequeraporProductoComponent1750268695591 {
 	},
       "productoUId": "43"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerTiposDeChequeraPorProductoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class ObtenerTiposdeChequeraporProductoComponent1750268695591 {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerTiposDeChequeraPorProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

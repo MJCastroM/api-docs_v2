@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarEstadoFinancieroComponent1750268697120 {
+export class AgregarEstadoFinancieroComponent1750272791524 {
   pageTitle        = 'Agregar Estado Financiero';
   description      = `Método para agregar los estados financieros a una persona.`;
   pubName    = 'BTPersonas.AgregarEstadoFinanciero';
@@ -24,7 +24,8 @@ export class AgregarEstadoFinancieroComponent1750268697120 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió la fecha de elaboración.' }, { Codigo: '30003', Descripcion: 'No se recibió el código de la moneda.' }, { Codigo: '30005', Descripcion: 'Ya existe un Estado Financiero con esa fecha de elaboración.' }, { Codigo: '30006', Descripcion: 'El código de moneda no coincide.' }, { Codigo: '30007', Descripcion: 'El valor de activo no corresponde.' }, { Codigo: '30008', Descripcion: 'La fecha de Elaborado en EEFF no puede ser mayor a la fecha de Hoy.' }, { Codigo: '30009', Descripcion: 'El concepto [Nombre del concepto] tiene valor [valor del concepto] el cual no está parametrizado.' }, { Codigo: '30010', Descripcion: 'El concepto [Identificador del concepto] no está parametrizado.' }, { Codigo: '30011', Descripcion: 'Los "Activos Totales" son diferente al "Total Pasivo + Patrimonio".' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarEstadoFinanciero>
@@ -58,7 +59,9 @@ export class AgregarEstadoFinancieroComponent1750268697120 {
          </bts:sdtConceptosEstadoFinanciero>
       </bts:BTPersonas.AgregarEstadoFinanciero>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarEstadoFinanciero\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -93,7 +96,8 @@ export class AgregarEstadoFinancieroComponent1750268697120 {
           }
         }
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarEstadoFinancieroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -123,7 +127,9 @@ export class AgregarEstadoFinancieroComponent1750268697120 {
          </Btoutreq>
       </BTPersonas.AgregarEstadoFinancieroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

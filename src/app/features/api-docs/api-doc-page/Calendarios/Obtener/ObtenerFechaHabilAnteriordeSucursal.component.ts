@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabilAnteriordeSucursalComponent1750268694251 {
+export class ObtenerFechaHabilAnteriordeSucursalComponent1750272790762 {
   pageTitle        = 'Obtener Fecha Hábil Anterior de Sucursal';
   description      = `Método para obtener la fecha hábil anterior a la fecha ingresada, para la sucursal recibida por parámetro.`;
   pubName    = 'BTCalendario.ObtenerFechaHabilAnteriorSucursal';
@@ -24,7 +24,8 @@ export class ObtenerFechaHabilAnteriordeSucursalComponent1750268694251 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.ObtenerFechaHabilAnteriorSucursal>
@@ -39,7 +40,9 @@ export class ObtenerFechaHabilAnteriordeSucursalComponent1750268694251 {
          <bts:sucursalId>1000</bts:sucursalId>
       </bts:BTCalendarios.ObtenerFechaHabilAnteriorSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerFechaHabilAnteriorSucursal\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerFechaHabilAnteriordeSucursalComponent1750268694251 {
     "fecha": "2021-03-26",
     "sucursalId": "1000"
   },` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.ObtenerFechaHabilAnteriorSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -78,7 +82,9 @@ export class ObtenerFechaHabilAnteriordeSucursalComponent1750268694251 {
          </Btoutreq>
       </BTCalendarios.ObtenerFechaHabilAnteriorSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",

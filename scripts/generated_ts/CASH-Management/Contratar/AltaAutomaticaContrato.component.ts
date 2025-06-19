@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AltaAutomaticaContratoComponent1750268694347 {
+export class AltaAutomaticaContratoComponent1750272790788 {
   pageTitle        = 'Alta Automática Contrato';
   description      = `Método para dar de alta un contrato para el cliente.`;
   pubName    = 'BTCASHManagement.AltaAutomaticaContrato';
@@ -24,7 +24,8 @@ export class AltaAutomaticaContratoComponent1750268694347 {
   errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }, { Codigo: '1030760', Descripcion: 'No se pudo dar de alta el contrato.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.AltaAutomaticaContrato>
@@ -39,7 +40,9 @@ export class AltaAutomaticaContratoComponent1750268694347 {
          <bts:servicioId>10</bts:servicioId>
       </bts:BTCASHManagement.AltaAutomaticaContrato>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?AltaAutomaticaContrato\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: e985ea19-7527-41bc-bc60-fe431d9352b0,dbbd8038-2208-48fc-9395-1dfa11f1a0b1\' \
@@ -56,7 +59,8 @@ export class AltaAutomaticaContratoComponent1750268694347 {
 	"clienteUId":2,
 	"servicioId":10
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.AltaAutomaticaContratoResponse>
          <Btinreq>
@@ -79,7 +83,9 @@ export class AltaAutomaticaContratoComponent1750268694347 {
          </Btoutreq>
       </BTCASHManagement.AltaAutomaticaContratoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

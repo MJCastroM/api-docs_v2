@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerClientedeunaOperacionComponent1750268695417 {
+export class ObtenerClientedeunaOperacionComponent1750272791074 {
   pageTitle        = 'Obtener Cliente de una Operación';
   description      = `Método para obtener el identificador de cuenta cliente asociado a una operación.`;
   pubName    = 'BTContabilidad.ObtenerClienteDeOperacion';
@@ -24,7 +24,8 @@ export class ObtenerClientedeunaOperacionComponent1750268695417 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador único de operación.' }, { Codigo: '30101', Descripcion: 'No se recupero la operación para el identificador recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerClienteDeOperacion>
@@ -38,7 +39,9 @@ export class ObtenerClientedeunaOperacionComponent1750268695417 {
          <bts:operacionUId>787</bts:operacionUId>
       </bts:BTContabilidad.ObtenerClienteDeOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerClienteDeOperacion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerClientedeunaOperacionComponent1750268695417 {
 	},
 	"bts:operacionUId": "787"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerClienteDeOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -76,7 +80,9 @@ export class ObtenerClientedeunaOperacionComponent1750268695417 {
          </Btoutreq>
       </BTContabilidad.ObtenerClienteDeOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
  	"Btinreq": { 
 	  "Device": "AC", 
 	  "Usuario": "BANTOTAL", 

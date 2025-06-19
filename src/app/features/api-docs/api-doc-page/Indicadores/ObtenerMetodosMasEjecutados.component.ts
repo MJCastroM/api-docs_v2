@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetodosMasEjecutadosComponent1750268696299 {
+export class ObtenerMetodosMasEjecutadosComponent1750272791304 {
   pageTitle        = 'Obtener Métodos Más Ejecutados';
   description      = `Método para obtener un listado de los métodos más ejecutados para un servicio dado y sus estadísticas.`;
   pubName    = 'BTIndicadores.ObtenerMetodosMasEjecutados';
@@ -24,7 +24,8 @@ export class ObtenerMetodosMasEjecutadosComponent1750268696299 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerMetodosMasEjecutados>
@@ -38,7 +39,9 @@ export class ObtenerMetodosMasEjecutadosComponent1750268696299 {
          <bts:servicio>BTClientes</bts:servicio>
       </bts:BTIndicadores.ObtenerMetodosMasEjecutados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerMetodosMasEjecutados\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerMetodosMasEjecutadosComponent1750268696299 {
 	},
 	"servicio": "BTClientes"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerMetodosMasEjecutadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -157,7 +161,9 @@ export class ObtenerMetodosMasEjecutadosComponent1750268696299 {
          </Btoutreq>
       </BTIndicadores.ObtenerMetodosMasEjecutadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

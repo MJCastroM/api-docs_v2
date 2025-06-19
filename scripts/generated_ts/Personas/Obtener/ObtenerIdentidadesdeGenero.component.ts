@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentidadesdeGeneroComponent1750268697484 {
+export class ObtenerIdentidadesdeGeneroComponent1750272791582 {
   pageTitle        = 'Obtener Identidades de Género';
   description      = `Método para obtener un listado de las identidades de género ingresadas en el sistema.`;
   pubName    = 'BTPersonas.ObtenerIdentidadesDeGenero';
@@ -24,7 +24,8 @@ export class ObtenerIdentidadesdeGeneroComponent1750268697484 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerIdentidadesDeGenero>
@@ -37,7 +38,9 @@ export class ObtenerIdentidadesdeGeneroComponent1750268697484 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerIdentidadesDeGenero>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `{
+</soapenv:Envelope>`, 
+    json: `
+{
     "Btinreq": {
          "Canal": "BTDIGITAL",
          "Requerimiento": "1",
@@ -46,7 +49,8 @@ export class ObtenerIdentidadesdeGeneroComponent1750268697484 {
          "Device": "AV"
       }
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerIdentidadesDeGeneroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -78,7 +82,9 @@ export class ObtenerIdentidadesdeGeneroComponent1750268697484 {
          </Btoutreq>
       </BTPersonas.ObtenerIdentidadesDeGeneroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "1",

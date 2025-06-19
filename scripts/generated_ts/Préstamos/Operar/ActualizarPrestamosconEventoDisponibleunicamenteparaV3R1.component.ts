@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750268698239 {
+export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750272791764 {
   pageTitle        = 'Actualizar Prestamos con Evento';
   description      = `Método para actualizar préstamos con eventos de la tabla SNG912.`;
   pubName    = 'BTPrestamos.ActualizarPrestamosConEvento';
@@ -24,7 +24,8 @@ export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component17
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ActualizarPrestamosConEvento>
@@ -37,7 +38,9 @@ export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component17
          </bts:Btinreq>
       </bts:BTPrestamos.ActualizarPrestamosConEvento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ActualizarPrestamosConEvento=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component17
       "Token": "ad33e17b1199865B3A2E76CF"
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
         <BTPrestamos.ActualizarPrestamosConEvento xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -73,7 +77,9 @@ export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component17
          </Btoutreq>
       </BTPrestamos.ActualizarPrestamosConEvento>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
     "Requerimiento": 0,
     "Canal": "BTDIGITAL",

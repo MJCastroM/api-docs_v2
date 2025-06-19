@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosInhabilitacionComponent1750268694854 {
+export class ObtenerMotivosInhabilitacionComponent1750272790922 {
   pageTitle        = 'Obtener Motivos Inhabilitación';
   description      = `Método para obtener un listado de los motivos de inhabilitación.`;
   pubName    = 'BTClientes.ObtenerMotivosInhabilitacion';
@@ -24,7 +24,8 @@ export class ObtenerMotivosInhabilitacionComponent1750268694854 {
   errors     = [{ Codigo: '40001', Descripcion: 'No existen motivos de inhabilitación.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerMotivosInhabilitacion>
@@ -37,7 +38,9 @@ export class ObtenerMotivosInhabilitacionComponent1750268694854 {
          </bts:Btinreq>
       </bts:BTClientes.ObtenerMotivosInhabilitacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerMotivosInhabilitacion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerMotivosInhabilitacionComponent1750268694854 {
           "Requerimiento": 0
         }
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <Prueba.ObtenerMotivosInhabilitacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +91,9 @@ export class ObtenerMotivosInhabilitacionComponent1750268694854 {
          </Btoutreq>
       </Prueba.ObtenerMotivosInhabilitacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Device": 2,
           "Usuario": "Instalador",

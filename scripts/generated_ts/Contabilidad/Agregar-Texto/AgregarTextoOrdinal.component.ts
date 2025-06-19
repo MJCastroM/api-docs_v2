@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextoOrdinalComponent1750268695337 {
+export class AgregarTextoOrdinalComponent1750272791054 {
   pageTitle        = 'Agregar Texto Ordinal';
   description      = `Método para agregar un texto a un determinado ordinal de un asiento.`;
   pubName    = 'BTContabilidad.AgregarTextoOrdinal';
@@ -24,7 +24,8 @@ export class AgregarTextoOrdinalComponent1750268695337 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '50001', Descripcion: 'El código de texto ingresado no existe.' }, { Codigo: '50002', Descripcion: 'El ordinal ingresado no existe.' }, { Codigo: '50003', Descripcion: 'Ya existe el texto ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.AgregarTextoOrdinal>
@@ -45,7 +46,9 @@ export class AgregarTextoOrdinalComponent1750268695337 {
          </bts:textoMovimiento>
       </bts:BTContabilidad.AgregarTextoOrdinal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AgregarTextoOrdinal\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -67,7 +70,8 @@ export class AgregarTextoOrdinalComponent1750268695337 {
         "texto": "Prueba",
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.AgregarTextoOrdinalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class AgregarTextoOrdinalComponent1750268695337 {
          </Btoutreq>
       </BTContabilidad.AgregarTextoOrdinalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

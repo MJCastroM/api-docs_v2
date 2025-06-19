@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPerfilTransaccionalComponent1750268695920 {
+export class AgregarPerfilTransaccionalComponent1750272791216 {
   pageTitle        = 'Agregar Perfil Transaccional';
   description      = `Método para agregar un perfil transaccional a una cuenta vista.`;
   pubName    = 'BTCuentasVista.AgregarPerfilTransaccional';
@@ -24,7 +24,8 @@ export class AgregarPerfilTransaccionalComponent1750268695920 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió la cantidad de depósitos en efectivo.' }, { Codigo: '30003', Descripcion: 'No se recibió el monto de depósitos en efectivo.' }, { Codigo: '30004', Descripcion: 'No se recibió la cantidad de retiros en efectivo.' }, { Codigo: '30005', Descripcion: 'No se recibió el monto de retiros en efectivo.' }, { Codigo: '30006', Descripcion: 'No se recibió el origen de los Fondos.' }, { Codigo: '30007', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30021', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Producto a consultar no existe.' }, { Codigo: '40002', Descripcion: 'El identificador de país [Número de identificador] no existe.' }, { Codigo: '40003', Descripcion: 'El identificador de orígenes de fondo [Número de identificador] no existe.' }, { Codigo: '40004', Descripcion: 'El perfil transaccional ya existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.AgregarPerfilTransaccional>
@@ -72,7 +73,9 @@ export class AgregarPerfilTransaccionalComponent1750268695920 {
          </bts:sdtPerfilTransaccional>
       </bts:BTCuentasVista.AgregarPerfilTransaccional>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?AgregarPerfilTransaccional=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -121,7 +124,8 @@ export class AgregarPerfilTransaccionalComponent1750268695920 {
         }
     }
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.AgregarPerfilTransaccionalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -147,7 +151,9 @@ export class AgregarPerfilTransaccionalComponent1750268695920 {
          </Btoutreq>
       </BTCuentasVista.AgregarPerfilTransaccionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

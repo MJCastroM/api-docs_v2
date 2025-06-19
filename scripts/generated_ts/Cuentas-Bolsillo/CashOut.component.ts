@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CashOutComponent1750268695497 {
+export class CashOutComponent1750272791095 {
   pageTitle        = 'Cash Out';
   description      = `Método para realizar un traspaso hacia la cuenta principal.`;
   pubName    = 'BTCuentasBolsillo.CashOut';
@@ -24,7 +24,8 @@ export class CashOutComponent1750268695497 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'La cuenta destino no pertenece al cliente [Número de identificador].' }, { Codigo: '30009', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '30020', Descripcion: 'El estado de la operación origen no permite operar.' }, { Codigo: '30021', Descripcion: 'El estado de la operación destino no permite operar.' }, { Codigo: '30023', Descripcion: 'La cuenta origen y cuenta destino son diferentes.' }, { Codigo: '30024', Descripcion: 'La cuenta bolsillo no pertenece a la operación principal.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasBolsillo.CashOut>
@@ -47,7 +48,9 @@ export class CashOutComponent1750268695497 {
          </bts:sdtTraspaso>
       </bts:BTCuentasBolsillo.CashOut>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashOut\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class CashOutComponent1750268695497 {
         "concepto": "cash out"
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasBolsillo.CashOutResponse xmlns=http://uy.com.dlya.bantotal/BTSOA/>
          <Btinreq>
@@ -100,7 +104,9 @@ export class CashOutComponent1750268695497 {
          </Btoutreq>
       </BTCuentasBolsillo.CashOutResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "1",
         "Usuario": "MINSTALADOR",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaporPeriodoComponent1750268695814 {
+export class ObtenerEstadodeCuentaporPeriodoComponent1750272791182 {
   pageTitle        = 'Obtener Estado de Cuenta por Período';
   description      = `Método para obtener el estado de cuenta y los movimientos realizados para una cuenta vista en determinado rango de fechas.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo';
@@ -24,7 +24,8 @@ export class ObtenerEstadodeCuentaporPeriodoComponent1750268695814 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30005', Descripcion: 'Debe ingresar cantidad de movimientos.' }, { Codigo: '30006', Descripcion: 'Debe ingresar la fecha desde.' }, { Codigo: '30007', Descripcion: 'Debe ingresar la fecha hasta.' }, { Codigo: '30008', Descripcion: 'Fecha desde tiene que ser menor a fecha hasta.' }, { Codigo: '40001', Descripcion: 'No existe una empresa con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'No se pudo resolver la empresa del usuario.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo>
@@ -41,7 +42,9 @@ export class ObtenerEstadodeCuentaporPeriodoComponent1750268695814 {
          <bts:cantidadMovimientos>2</bts:cantidadMovimientos>
       </bts:BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?ObtenerEstadoDeCuentaPorPeriodo \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ObtenerEstadodeCuentaporPeriodoComponent1750268695814 {
       "fechaHasta": "2018-12-10",
       "cantidadMovimientos": "2"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -119,7 +123,9 @@ export class ObtenerEstadodeCuentaporPeriodoComponent1750268695814 {
          </Btoutreq>
       </BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

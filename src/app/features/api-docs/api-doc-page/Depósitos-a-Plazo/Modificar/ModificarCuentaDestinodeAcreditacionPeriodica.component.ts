@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750268696101 {
+export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750272791260 {
   pageTitle        = 'Modificar Cuenta Destino de Acreditación Periódica';
   description      = `Método para modificar la cuenta de destino de la instrucción de acreditación de un depósito con pago periódico de intereses.`;
   pubName    = 'BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion';
@@ -24,7 +24,8 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750268696101
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación del depósito.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación de la cuenta.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del depósito para el identificador: [Número de identificador]' }, { Codigo: '30006', Descripcion: 'La operación asociada al identificador: [Número de identificador] no pertenece a un depósito a plazo.' }, { Codigo: '30007', Descripcion: 'El producto de depósito ingresado no tiene instrucción de acreditación.' }, { Codigo: '30008', Descripcion: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador]' }, { Codigo: '30009', Descripcion: 'No se encontró instrucción de acreditación para el depósito ingresado.' }, { Codigo: '30010', Descripcion: 'El depósito tiene instrucción de renovación automatica, para especificar una cuenta debe modificar la instrucción.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación de la cuenta para el identificador: [Número de identificador]' }, { Codigo: '30012', Descripcion: 'La operación asociada al identificador: [Número de identificador] no pertenece a un cuenta.' }, { Codigo: '30013', Descripcion: 'La cuenta indicada es igual a la de la instrucción.' }, { Codigo: '40002', Descripcion: 'No existe instrucción para operación.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion>
@@ -40,7 +41,9 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750268696101
          <bts:cuentaUId>3</bts:cuentaUId>
       </bts:BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ModificarCuentaDestinoAcreditacion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750268696101
 	"depositoUId": 4,
 	"cuentaUId": 3
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ModificarCuentaDestinoAcreditacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750268696101
          </Btoutreq>
       </BTDepositosAPlazo.ModificarCuentaDestinoAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

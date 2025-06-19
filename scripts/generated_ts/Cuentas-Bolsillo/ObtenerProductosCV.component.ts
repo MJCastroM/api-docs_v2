@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosCVComponent1750268695535 {
+export class ObtenerProductosCVComponent1750272791103 {
   pageTitle        = 'Obtener Productos CV';
   description      = `Método para obtener un listado de los productos de cuenta bolsillo habilitados para una cuenta vista.`;
   pubName    = 'BTCuentasBolsillo.ObtenerProductosCV';
@@ -24,7 +24,8 @@ export class ObtenerProductosCVComponent1750268695535 {
   errors     = [{ Codigo: '30003', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '40001', Descripcion: 'No se pudo determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.' }, { Codigo: '40002', Descripcion: 'No se recuperaron productos habilitados para la cuenta vista.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasBolsillo.ObtenerProductosCV>
@@ -38,7 +39,9 @@ export class ObtenerProductosCVComponent1750268695535 {
          <bts:operacionUId>904</bts:operacionUId>
       </bts:BTCuentasBolsillo.ObtenerProductosCV>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerProductosCV\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerProductosCVComponent1750268695535 {
 	},
     "operacionUId": 904
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasBolsillo.ObtenerProductosCVResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -107,7 +111,9 @@ export class ObtenerProductosCVComponent1750268695535 {
          </Btoutreq>
       </BTCuentasBolsillo.ObtenerProductosCVResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "1",
         "Usuario": "MINSTALADOR",

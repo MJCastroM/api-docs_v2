@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750268694579 {
+export class ActualizarRegistroEmpleadoComponent1750272790851 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si un cliente es empleado de la institución, junto con su fecha de ingreso si es requerido.`;
   pubName    = 'BTClientes.ActualizarRegistroEmpleado';
@@ -24,7 +24,8 @@ export class ActualizarRegistroEmpleadoComponent1750268694579 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió si el cliente es un empleado de la institución o no.' }, { Codigo: '30005', Descripcion: 'El valor de empleado no es correcto.' }, { Codigo: '30013', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40001', Descripcion: 'La cuenta no existe.' }, { Codigo: '40002', Descripcion: 'La integración de la cuenta ingresada no es válida.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ActualizarRegistroEmpleado>
@@ -41,7 +42,9 @@ export class ActualizarRegistroEmpleadoComponent1750268694579 {
          <bts:fechaBaja></bts:fechaBaja>
       </bts:BTClientes.ActualizarRegistroEmpleado>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ActualizarRegistroEmpleado\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ActualizarRegistroEmpleadoComponent1750268694579 {
     "fechaAlta": "2024-01-01",
     "fechaBaja": ""
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ActualizarRegistroEmpleadoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class ActualizarRegistroEmpleadoComponent1750268694579 {
          </Btoutreq>
       </BTClientes.ActualizarRegistroEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

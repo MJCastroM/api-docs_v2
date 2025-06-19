@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegranteComponent1750268694653 {
+export class EliminarIntegranteComponent1750272790869 {
   pageTitle        = 'Eliminar Integrante';
   description      = `Método para eliminar un integrante de una cuenta cliente.`;
   pubName    = 'BTClientes.EliminarIntegrantes';
@@ -24,7 +24,8 @@ export class EliminarIntegranteComponent1750268694653 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30003', Descripcion: 'No existe cuenta para el identificador único: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'No existe persona para el identificador único: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'La persona ingresada no integra la cuenta.' }, { Codigo: '40002', Descripcion: 'No se puede realizar esta acción para este tipo de titular.' }, { Codigo: '40003', Descripcion: 'No se pueden realizar cambios de integrantes cuando la cuenta cliente tiene productos activos.' }, { Codigo: '40004', Descripcion: 'No se puede eliminar el titular representativo.' }, { Codigo: '40005', Descripcion: 'No se puede eliminar el representante legal.' }, { Codigo: '40006', Descripcion: 'Error: La Autorización a sido negada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.EliminarIntegrante>
@@ -39,7 +40,9 @@ export class EliminarIntegranteComponent1750268694653 {
       <bts:clienteUId>1</bts:clienteUId>
       <bts:personaUId>853</bts:personaUId>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?EliminarIntegrante\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class EliminarIntegranteComponent1750268694653 {
     "clienteUId": 1,
     "personaUId": 853
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.EliminarIntegranteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class EliminarIntegranteComponent1750268694653 {
          </Btoutreq>
       </BTClientes.EliminarIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

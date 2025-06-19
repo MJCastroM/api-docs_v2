@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInicioyFindeMesComponent1750268694265 {
+export class ObtenerInicioyFindeMesComponent1750272790766 {
   pageTitle        = 'Obtener Inicio y Fin de Mes';
   description      = `Método para obtener la primer y última fecha hábil para el mes indicado.`;
   pubName    = 'BTCalendario.ObtenerInicioYFinMes';
@@ -24,7 +24,8 @@ export class ObtenerInicioyFindeMesComponent1750268694265 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar mes a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar año a consultar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.ObtenerInicioYFinMes>
@@ -40,7 +41,9 @@ export class ObtenerInicioyFindeMesComponent1750268694265 {
          <bts:anioConsulta>2020</bts:anioConsulta>
       </bts:BTCalendarios.ObtenerInicioYFinMes>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerInicioYFinMes\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ObtenerInicioyFindeMesComponent1750268694265 {
     "mesConsulta": "11",
     "anioConsulta": "2020"
   },` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.ObtenerInicioYFinMesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class ObtenerInicioyFindeMesComponent1750268694265 {
          </Btoutreq>
       </BTCalendarios.ObtenerInicioYFinMesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarGrupoComponent1750268696424 {
+export class AgregarGrupoComponent1750272791332 {
   pageTitle        = 'Agregar Grupo';
   description      = `Método para agregar un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.AgregarGrupo';
@@ -24,7 +24,8 @@ export class AgregarGrupoComponent1750268696424 {
   errors     = [{ Codigo: '40002', Descripcion: 'El tipo de grupo no existe.' }, { Codigo: '40003', Descripcion: 'Debe ingresar nombre de grupo.' }, { Codigo: '40005', Descripcion: 'Fecha de Vigencia Desde debe ser mayor o igual a Fecha de Creación.' }, { Codigo: '40006', Descripcion: 'Debe ingresar Fecha de Vigencia Hasta.' }, { Codigo: '40007', Descripcion: 'Fecha de Vigencia Hasta debe ser mayor a Fecha Vigencia Desde.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.AgregarGrupo>
@@ -54,7 +55,9 @@ export class AgregarGrupoComponent1750268696424 {
          </bts:sdtDetalleGrupo>
       </bts:BTMicrofinanzas.AgregarGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarGrupo=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -85,7 +88,8 @@ export class AgregarGrupoComponent1750268696424 {
 		"agencia": ""
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.AgregarGrupoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -108,7 +112,9 @@ export class AgregarGrupoComponent1750268696424 {
          </Btoutreq>
       </BTMicrofinanzas.AgregarGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarBeneficiariosComponent1750268696018 {
+export class ActualizarBeneficiariosComponent1750272791242 {
   pageTitle        = 'Actualizar Beneficiarios';
   description      = `Método para actualizar el listado de beneficiarios de un depósito a plazo. Luego de la ejecución, se eliminarán los beneficiarios previamente registrados, y se asociarán los ingresados en el listado.`;
   pubName    = 'BTDepositosAPlazo.ActualizarBeneficiarios';
@@ -24,7 +24,8 @@ export class ActualizarBeneficiariosComponent1750268696018 {
   errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador único de la operación.' }, { Codigo: '30003', Descripcion: 'No se recupero la operación para el identificador [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'Se tiene que ingresar al menos un beneficiario.' }, { Codigo: '30005', Descripcion: 'Debe ingresar identificador único de la persona o número de documento completo, pero no ambos.' }, { Codigo: '30006', Descripcion: 'No se recibió el porcentaje de participación para la persona ingresada.' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de parentesco para la persona ingresada.' }, { Codigo: '40001', Descripcion: 'Debe ingresar País del Documento.' }, { Codigo: '40002', Descripcion: 'El País del Documento no existe.' }, { Codigo: '40003', Descripcion: 'El identificador de parentesco [Número de Identificador] no es correcto.' }, { Codigo: '40004', Descripcion: 'El Tipo de Documento no existe.' }, { Codigo: '40005', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '40006', Descripcion: 'La sumatoria de porcentajes de beneficiarios supera el 100%.' }, { Codigo: '40007', Descripcion: 'El porcentaje de participación acumulado difiere del 100%.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ActualizarBeneficiarios>
@@ -55,7 +56,9 @@ export class ActualizarBeneficiariosComponent1750268696018 {
          </bts:sdtBeneficiarios>
       </bts:BTDepositosAPlazo.ActualizarBeneficiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ActualizarBeneficiarios=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -87,7 +90,8 @@ export class ActualizarBeneficiariosComponent1750268696018 {
          }
       }
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ActualizarBeneficiariosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -109,7 +113,9 @@ export class ActualizarBeneficiariosComponent1750268696018 {
          </Btoutreq>
       </BTDepositosAPlazo.ActualizarBeneficiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

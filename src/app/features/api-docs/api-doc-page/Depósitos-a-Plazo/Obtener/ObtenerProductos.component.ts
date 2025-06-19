@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750268696180 {
+export class ObtenerProductosComponent1750272791278 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerProductos';
@@ -36,7 +36,8 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ObtenerProductos>
@@ -49,7 +50,9 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          </bts:Btinreq>
       </bts:BTDepositosAPlazo.ObtenerProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerProductos=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -63,7 +66,8 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ObtenerProductosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -99,7 +103,9 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

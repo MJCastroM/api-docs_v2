@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOfertaAmortizableComponent1750268696770 {
+export class ObtenerDetalledeOfertaAmortizableComponent1750272791422 {
   pageTitle        = 'Obtener Detalle de Oferta Amortizable';
   description      = `Método para obtener el detalle de la oferta amortizable del Partner.`;
   pubName    = 'BTPartners.ObtenerDetalleOfertaAmortizable';
@@ -24,7 +24,8 @@ export class ObtenerDetalledeOfertaAmortizableComponent1750268696770 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de simulación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }, { Codigo: '30008', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30009', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30010', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30011', Descripcion: 'La simulación no está vigente.' }, { Codigo: '30012', Descripcion: 'La simulación no existe.' }, { Codigo: '30019', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30020', Descripcion: 'No se recibió vendedor.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPartners.ObtenerDetalleOfertaAmortizable>
@@ -46,7 +47,9 @@ export class ObtenerDetalledeOfertaAmortizableComponent1750268696770 {
          <bts:destinoCredito>12</bts:destinoCredito>
       </bts:BTPartners.ObtenerDetalleOfertaAmortizable>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerDetalleOfertaAmortizable\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ export class ObtenerDetalledeOfertaAmortizableComponent1750268696770 {
    "cantidadCuotas": 3,
    "destinoCredito": 12
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ObtenerDetalleOfertaAmortizableResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -288,7 +292,9 @@ export class ObtenerDetalledeOfertaAmortizableComponent1750268696770 {
          </Btoutreq>
       </BTPartners.ObtenerDetalleOfertaAmortizableResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",

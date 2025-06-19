@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DenunciarDesdeREDComponent1750268698852 {
+export class DenunciarDesdeREDComponent1750272791892 {
   pageTitle        = 'Denunciar Desde RED';
   description      = `Método para denunciar una tarjeta de débito y darla de baja sin notificar a la RED.`;
   pubName    = 'BTTarjetasDeDebito.DenunciarDesdeRED';
@@ -24,7 +24,8 @@ export class DenunciarDesdeREDComponent1750268698852 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Error interno.' }, { Codigo: '40002', Descripcion: 'No existen tarjetas de débito para los datos ingresados.' }, { Codigo: '40003', Descripcion: 'Error en parámetros de input.' }, { Codigo: '40004', Descripcion: 'No existe la persona (con los datos del titular recibidos).' }, { Codigo: '40005', Descripcion: 'No existe la funcionalidad en TDD025.' }, { Codigo: '40006', Descripcion: 'Motivo de cancelación no valido.' }, { Codigo: '40007', Descripcion: 'Funcionalidad TDD025 inhabilitada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.DenunciarDesdeRED>
@@ -39,7 +40,9 @@ export class DenunciarDesdeREDComponent1750268698852 {
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTTarjetasDeDebito.DenunciarDesdeRED>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?DenunciarDesdeRED\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -54,7 +57,8 @@ export class DenunciarDesdeREDComponent1750268698852 {
 	},
    "tarjetaUId": 3
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.DenunciarDesdeREDResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -76,7 +80,9 @@ export class DenunciarDesdeREDComponent1750268698852 {
          </Btoutreq>
       </BTTarjetasDeDebito.DenunciarDesdeREDResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

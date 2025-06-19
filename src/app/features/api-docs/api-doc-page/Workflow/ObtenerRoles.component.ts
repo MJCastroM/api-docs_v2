@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesComponent1750268699003 {
+export class ObtenerRolesComponent1750272791931 {
   pageTitle        = 'Obtener Roles';
   description      = ``;
   pubName    = '';
@@ -24,7 +24,8 @@ export class ObtenerRolesComponent1750268699003 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
    <soapenv:Header/> 
    <soapenv:Body> 
       <bts:BTWorkflow.ObtenerRoles> 
@@ -37,7 +38,9 @@ export class ObtenerRolesComponent1750268699003 {
          </bts:Btinreq> 
       </bts:BTWorkflow.ObtenerRoles> 
    </soapenv:Body> 
-</soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerRoles \ 
 -H \'cache-control: no-cache\' \ 
 -H \'content-type: application/json\' \ 
@@ -50,7 +53,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
       "Token": "200f0b8b654A8B5C60A82434" 
     }, 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTWorkflow.ObtenerRolesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -290,7 +294,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerRolesResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
    "Btinreq": { 
    "Device": "GP", 
    "Usuario": "INSTALADOR", 

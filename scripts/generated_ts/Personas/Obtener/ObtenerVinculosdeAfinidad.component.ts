@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeAfinidadComponent1750268697678 {
+export class ObtenerVinculosdeAfinidadComponent1750272791618 {
   pageTitle        = 'Obtener Vínculos de Afinidad';
   description      = `Método para obtener un listado de los vínculos de afinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosAfinidad';
@@ -24,7 +24,8 @@ export class ObtenerVinculosdeAfinidadComponent1750268697678 {
   errors     = [{ Codigo: '40001', Descripcion: 'No existen Vínculos ingresados en el sistema.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerVinculosAfinidad>
@@ -37,8 +38,11 @@ export class ObtenerVinculosdeAfinidadComponent1750268697678 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerVinculosAfinidad>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, 
+    json: `
+` },
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerVinculosAfinidadResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -72,7 +76,9 @@ export class ObtenerVinculosdeAfinidadComponent1750268697678 {
          </Btoutreq>
       </BTPersonas.ObtenerVinculosAfinidadResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

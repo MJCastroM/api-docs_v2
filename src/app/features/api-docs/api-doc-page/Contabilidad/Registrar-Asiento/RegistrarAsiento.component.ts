@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoComponent1750268695466 {
+export class RegistrarAsientoComponent1750272791086 {
   pageTitle        = 'Registrar Asiento';
   description      = `Método para registrar en el sistema un movimiento entre dos operaciones genéricas.`;
   pubName    = 'BTContabilidad.RegistrarAsiento';
@@ -28,7 +28,8 @@ export class RegistrarAsientoComponent1750268695466 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos una operación.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador:' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.RegistrarAsiento>
@@ -56,7 +57,9 @@ export class RegistrarAsientoComponent1750268695466 {
             <bts:concepto></bts:concepto>
          </bts:sdtDatosAsiento>
       </bts:BTContabilidad.RegistrarAsiento>
-   </soapenv:Body>`, json: `curl -X POST \ 
+   </soapenv:Body>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?RegistrarAsiento=\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -86,7 +89,8 @@ export class RegistrarAsientoComponent1750268695466 {
 		"concepto": "" 
 	}    
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTContabilidad.RegistrarAsientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -109,7 +113,9 @@ export class RegistrarAsientoComponent1750268695466 {
          </Btoutreq> 
       </BTContabilidad.RegistrarAsientoResponse> 
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 

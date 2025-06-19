@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitparaAdhesionconImporteComponent1750268694081 {
+export class CrearStopDebitparaAdhesionconImporteComponent1750272790717 {
   pageTitle        = 'Crear Stop Debit para Adhesión con Importe';
   description      = `Método para crear un stop debit con importe dada una adhesión.`;
   pubName    = 'BTSNP.CrearStopDebitParaAdhesionConImporte';
@@ -24,7 +24,8 @@ export class CrearStopDebitparaAdhesionconImporteComponent1750268694081 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '40001', Descripcion: 'El código de moneda no es válido.' }, { Codigo: '40002', Descripcion: 'El código de monto máximo de débito es incorrecto.' }, { Codigo: '40003', Descripcion: 'El monto no puede ser nulo.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.CrearStopDebitParaAdhesionConImporte>
@@ -45,7 +46,9 @@ export class CrearStopDebitparaAdhesionconImporteComponent1750268694081 {
          <bts:importe>2000</bts:importe>
       </bts:BTSNP.CrearStopDebitParaAdhesionConImporte>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearStopDebitParaAdhesionConImporte\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -67,7 +70,8 @@ export class CrearStopDebitparaAdhesionconImporteComponent1750268694081 {
     "montoMaximoDebito": "F",
     "importe": 2000
   }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.CrearStopDebitParaAdhesionConImporteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class CrearStopDebitparaAdhesionconImporteComponent1750268694081 {
          </Btoutreq>
       </BTSNP.CrearStopDebitParaAdhesionConImporteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `` }
+</SOAP-ENV:Envelope>`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

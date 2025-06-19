@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarReferenciaComponent1750268697185 {
+export class AgregarReferenciaComponent1750272791536 {
   pageTitle        = 'Agregar Referencia';
   description      = `Método para agregar una referencia a una persona.`;
   pubName    = 'BTPersonas.AgregarReferencia';
@@ -24,7 +24,8 @@ export class AgregarReferenciaComponent1750268697185 {
   errors     = [{ Codigo: '30001', Descripcion: 'Identificador de persona requerido.' }, { Codigo: '30002', Descripcion: 'No existe persona con el identificador ingresada.' }, { Codigo: '40001', Descripcion: 'Correlativo no puede ser vacío.' }, { Codigo: '40002', Descripcion: 'Correlativo ya existe.' }, { Codigo: '40003', Descripcion: 'Tipo Código no puede ser vacío.' }, { Codigo: '40004', Descripcion: 'Tipo Código Incorrecto.' }, { Codigo: '40005', Descripcion: 'Vínculo Código no puede ser vacío.' }, { Codigo: '40006', Descripcion: 'Vínculo Código Incorrecto.' }, { Codigo: '40007', Descripcion: 'Nombre no puede ser vacío.' }, { Codigo: '40008', Descripcion: 'Domicilio1 no puede ser vacío' }, { Codigo: '40009', Descripcion: 'El teléfono no puede estar vacío.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarReferencia>
@@ -50,7 +51,9 @@ export class AgregarReferenciaComponent1750268697185 {
          </bts:sdtReferencia>
       </bts:BTPersonas.AgregarReferencia>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarReferencia\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -77,7 +80,8 @@ export class AgregarReferenciaComponent1750268697185 {
 		"vinculo": ""
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarReferenciaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -99,7 +103,9 @@ export class AgregarReferenciaComponent1750268697185 {
          </Btoutreq>
       </BTPersonas.AgregarReferenciaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -231,8 +231,14 @@ export class ${cls}${ms} {
   errors     = ${errors};
 
   examples = {
-    invocation: { xml: \`${esc(examples.invocation.xml)}\`, json: \`${esc(examples.invocation.json)}\` },
-    response:   { xml: \`${esc(examples.response.xml)}\`,  json: \`${esc(examples.response.json)}\` }
+    invocation: { xml: \`
+${esc(examples.invocation.xml)}\`, 
+    json: \`
+${esc(examples.invocation.json)}\` },
+    response:   { xml: \`
+${esc(examples.response.xml)}\`,  
+    json: \`
+${esc(examples.response.json)}\` }
   };
 
   structuredTypes = ${sdtLit};

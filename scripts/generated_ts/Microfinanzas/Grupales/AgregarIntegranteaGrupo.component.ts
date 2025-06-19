@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteaGrupoComponent1750268696432 {
+export class AgregarIntegranteaGrupoComponent1750272791334 {
   pageTitle        = 'Agregar Integrante a Grupo';
   description      = `Método para agregar un integrante a un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.AgregarIntegranteAGrupo';
@@ -24,7 +24,8 @@ export class AgregarIntegranteaGrupoComponent1750268696432 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de grupo' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado' }, { Codigo: '40005', Descripcion: 'Debe ingresar un tipo de integrante válido para el grupo' }, { Codigo: '40006', Descripcion: 'Excedió la cantidad de integrantes Coordinador permitidos para el tipo de grupo' }, { Codigo: '40008', Descripcion: 'La cuenta ya integra el grupo' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.AgregarIntegranteAGrupo>
@@ -48,7 +49,9 @@ export class AgregarIntegranteaGrupoComponent1750268696432 {
          </bts:sdtIntegranteGrupo>
       </bts:BTMicrofinanzas.AgregarIntegranteAGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarIntegranteAGrupo=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -70,7 +73,8 @@ export class AgregarIntegranteaGrupoComponent1750268696432 {
 		"vigente": "S"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.AgregarIntegranteAGrupoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +96,9 @@ export class AgregarIntegranteaGrupoComponent1750268696432 {
          </Btoutreq>
       </BTMicrofinanzas.AgregarIntegranteAGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

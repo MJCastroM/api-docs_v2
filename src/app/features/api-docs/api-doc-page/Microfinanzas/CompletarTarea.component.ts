@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CompletarTareaComponent1750268696368 {
+export class CompletarTareaComponent1750272791318 {
   pageTitle        = 'Completar Tarea';
   description      = `Método para completar la tarea de solicitud de créditos y pasar a la etapa de evaluación.`;
   pubName    = 'BTMicrofinanzas.CompletarTarea';
@@ -24,7 +24,8 @@ export class CompletarTareaComponent1750268696368 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud' }, { Codigo: '30011', Descripcion: 'No es posible completar la tarea. Se debe validar políticas previamente' }, { Codigo: '30012', Descripcion: 'No es posible completar la tarea. Existen políticas incumplidas' }, { Codigo: '30013', Descripcion: 'No es posible completar la tarea. No se pudo determinar el modelo de evaluación crediticia' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.CompletarTarea>
@@ -38,7 +39,9 @@ export class CompletarTareaComponent1750268696368 {
          <bts:solicitudUId>11109</bts:solicitudUId>
       </bts:BTMicrofinanzas.CompletarTarea>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CompletarTarea \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class CompletarTareaComponent1750268696368 {
    },
    "solicitudUId": "11109"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.CompletarTareaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -75,7 +79,9 @@ export class CompletarTareaComponent1750268696368 {
          </Btoutreq>
       </BTMicrofinanzas.CompletarTareaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "95",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SeleccionarOpcionDesembolsoComponent1750268696264 {
+export class SeleccionarOpcionDesembolsoComponent1750272791296 {
   pageTitle        = 'Seleccionar Opción Desembolso';
   description      = `Método para seleccionar una opción de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.SeleccionarOpcionDesembolso';
@@ -24,7 +24,8 @@ export class SeleccionarOpcionDesembolsoComponent1750268696264 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de lista.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30003', Descripcion: 'No se recibió tipo de desembolso.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>
@@ -40,7 +41,9 @@ export class SeleccionarOpcionDesembolsoComponent1750268696264 {
          <bts:tipoDesembolso>3</bts:tipoDesembolso>
       </bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?SeleccionarOpcionDesembolso=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class SeleccionarOpcionDesembolsoComponent1750268696264 {
 	"operacionUId":12,
    "tipoDesembolso":3
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>
          <Btinreq>
@@ -79,7 +83,9 @@ export class SeleccionarOpcionDesembolsoComponent1750268696264 {
          </Btoutreq>
       </BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

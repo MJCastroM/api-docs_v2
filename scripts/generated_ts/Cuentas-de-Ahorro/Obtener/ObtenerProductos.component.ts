@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750268695737 {
+export class ObtenerProductosComponent1750272791158 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de cuenta de ahorro.`;
   pubName    = 'BTCuentasDeAhorro.ObtenerProductos';
@@ -24,7 +24,8 @@ export class ObtenerProductosComponent1750268695737 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    invocation: { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTCuentasDeAhorro.ObtenerProductos xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -36,7 +37,9 @@ export class ObtenerProductosComponent1750268695737 {
          </Btinreq> 
       </BTCuentasDeAhorro.ObtenerProductos> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`, json: `curl -X POST \ 
+</SOAP-ENV:Envelope>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerProductos=\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -50,7 +53,8 @@ export class ObtenerProductosComponent1750268695737 {
 		"Token": "fa2c02c95a4A8B5C60A82434" 
 	}, 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTCuentasDeAhorro.ObtenerProductosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -99,7 +103,9 @@ export class ObtenerProductosComponent1750268695737 {
          </Btoutreq> 
       </BTCuentasDeAhorro.ObtenerProductosResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 	"Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 

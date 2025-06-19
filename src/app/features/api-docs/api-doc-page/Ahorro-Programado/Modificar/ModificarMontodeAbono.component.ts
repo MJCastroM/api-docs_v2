@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarMontodeAbonoComponent1750268693956 {
+export class ModificarMontodeAbonoComponent1750272790675 {
   pageTitle        = 'Modificar Monto de Abono';
   description      = `Método para modificar el monto del abono para el ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarMontoDeAbono';
@@ -24,7 +24,8 @@ export class ModificarMontodeAbonoComponent1750268693956 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del ahorro.' }, { Codigo: '30003', Descripcion: 'No se recibió el nuevo monto para el abono.' }, { Codigo: '30004', Descripcion: 'El monto indicado no puede ser menor a cero.' }, { Codigo: '30005', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '40006', Descripcion: 'La cuota indicada es menor al mínimo permitido.' }, { Codigo: '40007', Descripcion: 'La cuota indicada es mayor al máximo permitido.' }, { Codigo: '40019', Descripcion: 'La variación del abono por monto indicada es menor al mínimo permitido.' }, { Codigo: '40020', Descripcion: 'La variación del abono por monto indicada es mayor al máximo permitido.' }, { Codigo: '40021', Descripcion: 'La variación del abono por % indicado es menor al mínimo permitido.' }, { Codigo: '40950', Descripcion: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40951', Descripcion: 'No se permite modificar el abono para el producto seleccionado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ModificarMontoDeAbono>
@@ -40,7 +41,9 @@ export class ModificarMontodeAbonoComponent1750268693956 {
          <bts:montoAbono>2000</bts:montoAbono>
       </bts:BTAhorroProgramado.ModificarMontoDeAbono>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ModificarMontoDeAbono\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ModificarMontodeAbonoComponent1750268693956 {
       "ahorroUId": 61,
       "montoAbono": 2500
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ModificarMontoDeAbonoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class ModificarMontodeAbonoComponent1750268693956 {
          </Btoutreq>
       </BTAhorroProgramado.ModificarMontoDeAbonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

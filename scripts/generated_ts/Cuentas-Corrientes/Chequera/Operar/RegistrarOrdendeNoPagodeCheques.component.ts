@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarOrdendeNoPagodeChequesComponent1750268695608 {
+export class RegistrarOrdendeNoPagodeChequesComponent1750272791123 {
   pageTitle        = 'Registrar Orden de No Pago de Cheques';
   description      = `Método para registrar una orden de no pago de cheques.`;
   pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques';
@@ -24,7 +24,8 @@ export class RegistrarOrdendeNoPagodeChequesComponent1750268695608 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió identificador de chequera.' }, { Codigo: '30003', Descripcion: 'Debe ingresar el numero del cheque.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '40001', Descripcion: 'No existe la chequera ingresada.' }, { Codigo: '40002', Descripcion: 'No existe la operación indicada.' }, { Codigo: '40003', Descripcion: 'La chequera no pertenece a la operación.' }, { Codigo: '40004', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40005', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40006', Descripcion: 'Cuenta Cerrada, solo se permite consultas.' }, { Codigo: '40008', Descripcion: 'Los siguientes cheques no pertenecen a la chequera: [Números de cheques].' }, { Codigo: '40013', Descripcion: 'El cheque [Número de cheque] ya está pago.' }, { Codigo: '40014', Descripcion: 'El cheque [Número de cheque] ya tiene O.N.P.' }, { Codigo: '40015', Descripcion: 'El cheque [Número de cheque] está rechazado.' }, { Codigo: '40016', Descripcion: 'El cheque [Número de cheque] esta certificado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques>
@@ -49,7 +50,9 @@ export class RegistrarOrdendeNoPagodeChequesComponent1750268695608 {
          </bts:sdtCheques>
       </bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?RegistrarOrdenDeNoPagoCheques\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -75,7 +78,8 @@ export class RegistrarOrdendeNoPagodeChequesComponent1750268695608 {
 	  }
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +101,9 @@ export class RegistrarOrdendeNoPagodeChequesComponent1750268695608 {
          </Btoutreq>
       </BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasOrigenHabilitadasComponent1750268693982 {
+export class ObtenerCuentasOrigenHabilitadasComponent1750272790683 {
   pageTitle        = 'Obtener Cuentas Origen Habilitadas';
   description      = `Método para obtener un listado de cuentas habilitadas para debitar periódicamente.`;
   pubName    = 'BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas';
@@ -24,7 +24,8 @@ export class ObtenerCuentasOrigenHabilitadasComponent1750268693982 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del producto de ahorro.' }, { Codigo: '30004', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la persona para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'El producto seleccionado no corresponde a un producto de ahorro.' }, { Codigo: '40002', Descripcion: 'La persona seleccionada no integra la cuenta-cliente.' }, { Codigo: '40101', Descripcion: 'El cliente no se encuentra facultado para operar con cuenta vista.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas>
@@ -40,7 +41,9 @@ export class ObtenerCuentasOrigenHabilitadasComponent1750268693982 {
          <bts:productoUId>41</bts:productoUId>
       </bts:BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCuentasOrigenHabilitadas\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ObtenerCuentasOrigenHabilitadasComponent1750268693982 {
 		"clienteUId": 81,
 		"productoUId": 41
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerCuentasOrigenHabilitadasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +101,9 @@ export class ObtenerCuentasOrigenHabilitadasComponent1750268693982 {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerCuentasOrigenHabilitadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
