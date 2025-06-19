@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class READMEComponent1750268698534 {
+export class READMEComponent1750272791830 {
   pageTitle        = 'Novedades Release Mayo 2025';
   description      = ``;
   pubName    = '';
@@ -24,8 +24,14 @@ export class READMEComponent1750268698534 {
   errors     = [];
 
   examples = {
-    invocation: { xml: ``, json: `` },
-    response:   { xml: ``,  json: `` }
+    invocation: { xml: `
+`, 
+    json: `
+` },
+    response:   { xml: `
+`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

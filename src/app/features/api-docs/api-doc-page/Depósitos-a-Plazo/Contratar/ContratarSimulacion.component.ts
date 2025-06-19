@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750268696054 {
+export class ContratarSimulacionComponent1750272791249 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un depósito a plazo fijo a partir de una simulación existente.`;
   pubName    = 'BTDepositoAPlazo.ContratarSimulacion';
@@ -36,7 +36,8 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30003', Descripcion: 'No se recibió la instrucción de acreditación al vencimiento.' }, { Codigo: '30005', Descripcion: 'No se recibió la instrucción de acreditación periódica.' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de cuenta de débito.' }, { Codigo: '30010', Descripcion: 'No se recuperaron datos para el identificador de cliente: [Número de identificador].' }, { Codigo: '30011', Descripcion: 'No se recuperaron datos para el identificador de cuenta de acreditación al vencimiento: [Número de identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperaron datos para el identificador de cuenta de acreditación periódica: [Número de identificador].' }, { Codigo: '30013', Descripcion: 'No se recuperaron datos para el identificador de cuenta de débito: [Número de identificador].' }, { Codigo: '30015', Descripcion: 'La simulación no está disponible para su contratación.' }, { Codigo: '30016', Descripcion: 'La simulación no se encuentra vigente para su contratación.' }, { Codigo: '30017', Descripcion: 'La simulación no corresponde al cliente.' }, { Codigo: '30020', Descripcion: 'Ocurrió un error al generar el Identificador de movimiento.' }, { Codigo: '30021', Descripcion: 'Ocurrió un error al generar el Identificador de operación de depósito.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ContratarSimulacion>
@@ -57,7 +58,9 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
          <bts:sBTDatosExtendidos/>
       </bts:BTDepositosAPlazo.ContratarSimulacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -79,7 +82,8 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
         "cuentaUIdDebito": 10120,
         "sBTDatosExtendidos": ""
       }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ContratarSimulacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -104,7 +108,9 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
          </Btoutreq>
       </BTDepositosAPlazo.ContratarSimulacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,

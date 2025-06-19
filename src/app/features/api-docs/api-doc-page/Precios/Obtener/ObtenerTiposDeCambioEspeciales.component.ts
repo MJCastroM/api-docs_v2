@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeCambioEspecialesComponent1750268697850 {
+export class ObtenerTiposDeCambioEspecialesComponent1750272791662 {
   pageTitle        = 'Obtener Tipos de Cambio Especiales';
   description      = `Método para obtener un listado de los tipos de cambio especiales.`;
   pubName    = 'BTPrecios.ObtenerTiposDeCambioEspeciales ';
@@ -24,7 +24,8 @@ export class ObtenerTiposDeCambioEspecialesComponent1750268697850 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
     <soapenv:Header/>
     <soapenv:Body>
         <bts:BTPrecios.ObtenerTiposDeCambioEspeciales>
@@ -37,7 +38,9 @@ export class ObtenerTiposDeCambioEspecialesComponent1750268697850 {
             </bts:Btinreq>
         </bts:BTPrecios.ObtenerTiposDeCambioEspeciales>
     </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTiposDeCambioEspeciales \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerTiposDeCambioEspecialesComponent1750268697850 {
         "Canal": "BTDIGITAL"
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTPrecios.ObtenerTiposDeCambioEspecialesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -90,7 +94,9 @@ export class ObtenerTiposDeCambioEspecialesComponent1750268697850 {
             </Btoutreq>
         </BTPrecios.ObtenerTiposDeCambioEspecialesResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",

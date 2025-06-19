@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarFATCAComponent1750268696974 {
+export class ActualizarFATCAComponent1750272791485 {
   pageTitle        = 'Actualizar FATCA';
   description      = `Método para modificar la información FATCA de una persona.`;
   pubName    = 'BTPersonas.ActualizarFATCA';
@@ -24,7 +24,8 @@ export class ActualizarFATCAComponent1750268696974 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '30002', Descripcion: 'Error - Datos duplicados.' }, { Codigo: '40001', Descripcion: 'Debe ingresar al menos una Residencia Fiscal.' }, { Codigo: '40002', Descripcion: 'El país [Número de identificador] ingresado no es válido.' }, { Codigo: '40004', Descripcion: 'No se puede ingresar residencias fiscales.' }, { Codigo: '40005', Descripcion: 'No existe el registro.' }, { Codigo: '40006', Descripcion: 'No existe el país indicado.' }, { Codigo: '40007', Descripcion: 'No existe el tipo de documento indicado.' }, { Codigo: '40007', Descripcion: 'No debe ingresar correlativo para residencia.' }, { Codigo: '40007', Descripcion: 'Se ingresó la misma residencia dos veces.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarFATCA>
@@ -54,7 +55,9 @@ export class ActualizarFATCAComponent1750268696974 {
          </bts:sdtInformacionFATCA>
       </bts:BTPersonas.ActualizarFATCA>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarFATCA \
 -H \'cache-control: no-cache\' \
 -H \'content-type: application/json\' \
@@ -80,7 +83,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	  },
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarFATCAResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -103,7 +107,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.ActualizarFATCAResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

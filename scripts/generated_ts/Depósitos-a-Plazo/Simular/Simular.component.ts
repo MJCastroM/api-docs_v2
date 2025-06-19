@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750268696209 {
+export class SimularComponent1750272791284 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Simular';
@@ -36,7 +36,8 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
   errors     = [{ Codigo: '30001', Descripcion: 'El monto es de ingreso obligatorio.' }, { Codigo: '30002', Descripcion: 'El Plazo es de ingreso obligatorio.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la Cuenta.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador del Producto.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.Simular>
@@ -53,7 +54,9 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          <bts:plazo>360</bts:plazo>
       </bts:BTDepositosAPlazo.Simular>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?Simular=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
    "productoUId": 103,
    "plazo": 360
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.SimularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -98,7 +102,9 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          </Btoutreq>
       </BTDepositosAPlazo.SimularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

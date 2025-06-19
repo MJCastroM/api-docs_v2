@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOrdenSegunCampoComponent1750268694382 {
+export class ObtenerDetalleOrdenSegunCampoComponent1750272790798 {
   pageTitle        = 'Obtener Detalle de Orden Según Campo';
   description      = `Método para obtener la información de las líneas del detalle de pago para la orden que coincida con el campo/valor recibido.`;
   pubName    = 'BTCASHManagement.ObtenerDetalleOrdenSegunCampo';
@@ -24,7 +24,8 @@ export class ObtenerDetalleOrdenSegunCampoComponent1750268694382 {
   errors     = [{ Codigo: '1030754', Descripcion: 'El campo de búsqueda no existe en el servicio recibido.' }, { Codigo: '1030755', Descripcion: 'No se encontró la orden para el campo/valor recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
 	<soapenv:Header/>
 	<soapenv:Body>
 		<bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>
@@ -43,7 +44,9 @@ export class ObtenerDetalleOrdenSegunCampoComponent1750268694382 {
 			</bts:sdtValorCampoBusqueda>
 		</bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>
 	</soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetalleOrdenSegunCampo=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -63,7 +66,8 @@ export class ObtenerDetalleOrdenSegunCampoComponent1750268694382 {
          "valor": 2800001
       }
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.ObtenerValoresOrdenSegunCampoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -146,7 +150,9 @@ export class ObtenerDetalleOrdenSegunCampoComponent1750268694382 {
 			</Btoutreq>
 		</BTCASHManagement.ObtenerDetalleOrdenSegunCampoResponse>
 	</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

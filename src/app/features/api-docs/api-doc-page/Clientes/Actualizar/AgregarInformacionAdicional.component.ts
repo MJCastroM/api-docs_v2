@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionAdicionalComponent1750268694600 {
+export class AgregarInformacionAdicionalComponent1750272790857 {
   pageTitle        = 'Agregar Información Adicional';
   description      = `Método para agregar información adicional a un cliente.`;
   pubName    = 'BTClientes.AgregarInformacionAdicional';
@@ -24,7 +24,8 @@ export class AgregarInformacionAdicionalComponent1750268694600 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.AgregarInformacionAdicional>
@@ -44,7 +45,9 @@ export class AgregarInformacionAdicionalComponent1750268694600 {
          </bts:sdtInformacionAdicional>
       </bts:BTClientes.AgregarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTclientes?AgregarInformacionAdicional\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class AgregarInformacionAdicionalComponent1750268694600 {
 	}
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.AgregarInformacionAdicionalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +91,9 @@ export class AgregarInformacionAdicionalComponent1750268694600 {
          </Btoutreq>
       </BTClientes.AgregarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",

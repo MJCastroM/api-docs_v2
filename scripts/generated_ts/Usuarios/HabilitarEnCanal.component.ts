@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarEnCanalComponent1750268698937 {
+export class HabilitarEnCanalComponent1750272791914 {
   pageTitle        = 'Habilitar en Canal';
   description      = `Método para habilitar un usuario para los servicios de un canal.`;
   pubName    = 'BTUsuarios.HabilitarEnCanal';
@@ -24,7 +24,8 @@ export class HabilitarEnCanalComponent1750268698937 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió usuario.' }, { Codigo: '30002', Descripcion: 'No se recibió canal.' }, { Codigo: '40001', Descripcion: 'El canal ingresado mapea usuarios y no se encontró el usuario externo recibido.' }, { Codigo: '40002', Descripcion: 'El usuario ingresado no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.HabilitarEnCanal>
@@ -39,7 +40,9 @@ export class HabilitarEnCanalComponent1750268698937 {
          <bts:canal>BTDIGITAL</bts:canal>
       </bts:BTUsuarios.HabilitarEnCanal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarEnCanal=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class HabilitarEnCanalComponent1750268698937 {
     "usuario": "INSTALADOR",
     "canal": "BTDIGITAL"
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.HabilitarEnCanalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class HabilitarEnCanalComponent1750268698937 {
          </Btoutreq>
       </BTUsuarios.HabilitarEnCanalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

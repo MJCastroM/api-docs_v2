@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeFuncionarioPublicoComponent1750268697645 {
+export class ObtenerTiposDeFuncionarioPublicoComponent1750272791610 {
   pageTitle        = 'Obtener Tipos de Funcionario Público';
   description      = `Método para obtener los tipos de funcionario público.`;
   pubName    = 'BTPersonas.ObtenerTiposDeFuncionarioPublico';
@@ -24,7 +24,8 @@ export class ObtenerTiposDeFuncionarioPublicoComponent1750268697645 {
   errors     = [{ Codigo: '40002', Descripcion: 'La guía 8260 no está parametrizada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTiposDeFuncionarioPublico>
@@ -37,7 +38,9 @@ export class ObtenerTiposDeFuncionarioPublicoComponent1750268697645 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerTiposDeFuncionarioPublico>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTiposDeFuncionarioPublico\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerTiposDeFuncionarioPublicoComponent1750268697645 {
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +87,9 @@ export class ObtenerTiposDeFuncionarioPublicoComponent1750268697645 {
          </Btoutreq>
       </BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

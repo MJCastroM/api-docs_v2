@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProgramaParticularComponent1750268696924 {
+export class ObtenerProgramaParticularComponent1750272791470 {
   pageTitle        = 'Obtener Programa Particular';
   description      = `Método para obtener el programa particular a ejecutar según el programa estándar ingresado.`;
   pubName    = 'BTParametrosBase.ObtenerProgramaParticular';
@@ -24,7 +24,8 @@ export class ObtenerProgramaParticularComponent1750268696924 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de empresa.' }, { Codigo: '30002', Descripcion: 'No se recibió el programa standard.' }, { Codigo: '40001', Descripcion: 'No existe programa particular para el programa standard ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTParametrosBase.ObtenerProgramaParticular>
@@ -38,7 +39,9 @@ export class ObtenerProgramaParticularComponent1750268696924 {
          <bts:programaStandard>BLOCKING1</bts:programaStandard>
       </bts:BTParametrosBase.ObtenerProgramaParticular>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerProgramaParticular \
 -H \'cache-control: no-cache\' \
 -H \'content-type: application/json\' \
@@ -52,7 +55,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
     },
    "programaStandard": "BLOCKING1"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTParametrosBase.ObtenerProgramaParticularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerProgramaParticularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
 	  "Device": "GP",
 	  "Usuario": "INSTALADOR",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaHabienteComponent1750268698755 {
+export class ObtenerTarjetaHabienteComponent1750272791869 {
   pageTitle        = 'Obtener Tarjeta Habiente';
   description      = `Método para obtener el habiente de una tarjeta.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetaHabiente';
@@ -24,7 +24,8 @@ export class ObtenerTarjetaHabienteComponent1750268698755 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de tarjeta.' }, { Codigo: '40001', Descripcion: 'No existe registro para el número de tarjeta.' }, { Codigo: '40002', Descripcion: 'No existe registro de país.' }, { Codigo: '40003', Descripcion: 'No existe registro para el tipo de documento de la persona.' }, { Codigo: '40004', Descripcion: 'No existe registro para el titular de la tarjeta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerTarjetaHabiente>
@@ -38,7 +39,9 @@ export class ObtenerTarjetaHabienteComponent1750268698755 {
          <bts:tarjetaUId>2000001942</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerTarjetaHabiente>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \   
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \   
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjetaHabiente\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -53,7 +56,8 @@ export class ObtenerTarjetaHabienteComponent1750268698755 {
 	},
 	"tarjetaUId": "2000001942",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerTarjetaHabienteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +86,9 @@ export class ObtenerTarjetaHabienteComponent1750268698755 {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTarjetaHabienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

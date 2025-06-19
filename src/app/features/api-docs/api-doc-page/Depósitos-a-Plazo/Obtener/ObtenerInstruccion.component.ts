@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionComponent1750268696156 {
+export class ObtenerInstruccionComponent1750272791271 {
   pageTitle        = 'Obtener Instrucción';
   description      = `Método para obtener una lista de las instrucciones de un depósito.`;
   pubName    = 'BTDepositosAPlazo.ObtenerInstruccion';
@@ -24,7 +24,8 @@ export class ObtenerInstruccionComponent1750268696156 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación del depósito.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación del depósito para el identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'La operación asociada al identificador: ? no pertenece a un depósito a plazo' }, { Codigo: '30006', Descripcion: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'No se encontró instrucción de acreditación para el depósito ingresado' }, { Codigo: '30008', Descripcion: 'No se encontró código de instrucción.' }, { Codigo: '30009', Descripcion: 'No se recuperó la operación de la instrucción para el identificador: [Número de identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperó la sucursal de la cuenta.' }, { Codigo: '30015', Descripcion: 'No se recuperó la sucursal de la cuenta.' }, { Codigo: '30016', Descripcion: 'No se encontró instrucción de acreditación para el depósito ingresado.' }, { Codigo: '30017', Descripcion: 'No se encontró código de instrucción.' }, { Codigo: '30018', Descripcion: 'No se recuperó la operación de la instrucción para el identificador: [Número de identificador].' }, { Codigo: '30021', Descripcion: 'No se recuperó la sucursal de la cuenta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ObtenerInstruccion>
@@ -39,7 +40,9 @@ export class ObtenerInstruccionComponent1750268696156 {
          <bts:depositoUId>4</bts:depositoUId>
       </bts:BTDepositosAPlazo.ObtenerInstruccion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerInstruccion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerInstruccionComponent1750268696156 {
    "clienteUId": 61,
 	"depositoUId": 4
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ObtenerInstruccionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -105,7 +109,9 @@ export class ObtenerInstruccionComponent1750268696156 {
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerInstruccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

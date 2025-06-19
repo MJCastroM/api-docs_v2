@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriododeAcreditacionComponent1750268695844 {
+export class ObtenerPeriododeAcreditacionComponent1750272791191 {
   pageTitle        = 'Obtener Período de Acreditación';
   description      = `Método para obtener el período de acreditación de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerPeriodoDeAcreditacion';
@@ -24,7 +24,8 @@ export class ObtenerPeriododeAcreditacionComponent1750268695844 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de Operacion.' }, { Codigo: '30003', Descripcion: 'No se recuperó la Operacion para el Identificador: [Número de identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>
@@ -38,7 +39,9 @@ export class ObtenerPeriododeAcreditacionComponent1750268695844 {
          <bts:operacionUId>10211</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `{
+</soapenv:Envelope>`, 
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -48,7 +51,8 @@ export class ObtenerPeriododeAcreditacionComponent1750268695844 {
     },
     "operacionUId": 10211
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -74,7 +78,9 @@ export class ObtenerPeriododeAcreditacionComponent1750268695844 {
          </Btoutreq>
       </BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",

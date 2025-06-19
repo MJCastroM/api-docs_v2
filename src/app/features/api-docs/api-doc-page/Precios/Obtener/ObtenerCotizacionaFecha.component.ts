@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionaFechaComponent1750268697785 {
+export class ObtenerCotizacionaFechaComponent1750272791646 {
   pageTitle        = 'Obtener Cotización a Fecha';
   description      = `Método para obtener un listado de las cotizaciones de las monedas ingresadas.`;
   pubName    = 'BTPrecios.ObtenerCotizacionAFecha';
@@ -24,7 +24,8 @@ export class ObtenerCotizacionaFechaComponent1750268697785 {
   errors     = [{ Codigo: '40001', Descripcion: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Codigo: '40002', Descripcion: 'No se recuperó moneda para el identificador ingresado.' }, { Codigo: '40003', Descripcion: 'No se recuperaron monedas.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"><soapenv:Header/>    
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"><soapenv:Header/>    
 	<soapenv:Body>        
 		<bts:BTPrecios.ObtenerCotizacionAFecha>  
 			 <bts:Btinreq>        
@@ -38,7 +39,9 @@ export class ObtenerCotizacionaFechaComponent1750268697785 {
          <bts:fecha></bts:fecha>  
       </bts:BTPrecios.ObtenerCotizacionAFecha> 
    </soapenv:Body> 
-</soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacionAFecha\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -54,7 +57,8 @@ export class ObtenerCotizacionaFechaComponent1750268697785 {
    "monedaId": "", 
 	"fecha": "" 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
 	<SOAP-ENV:Body>       
 		<BTPrecios.ObtenerCotizacionAFechaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">  
 			<Btinreq>      
@@ -108,7 +112,9 @@ export class ObtenerCotizacionaFechaComponent1750268697785 {
 			 </Btoutreq> 
         </BTPrecios.ObtenerCotizacionAFechaResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 	"Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 

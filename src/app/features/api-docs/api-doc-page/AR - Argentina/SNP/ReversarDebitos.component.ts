@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ReversarDebitosComponent1750268694122 {
+export class ReversarDebitosComponent1750272790730 {
   pageTitle        = 'Reversar Débitos';
   description      = `Método para solicitar el reverso de un débito indicado.`;
   pubName    = 'BTSNP.ReversarDebitos';
@@ -24,7 +24,8 @@ export class ReversarDebitosComponent1750268694122 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se recibió la fecha de vencimiento.' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No se puede realizar el reverso debido al tiempo de transcurrido desde la fecha de vencimiento.' }, { Codigo: '40002', Descripcion: 'No se puede reversar el débito el mismo dia de contabilizado.' }, { Codigo: '40003', Descripcion: 'Débito no contabilizado.' }, { Codigo: '40004', Descripcion: 'No existe el débito recibido.' }, { Codigo: '40011', Descripcion: 'Ya existe un reverso en curso' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.ReversarDebito>
@@ -44,7 +45,9 @@ export class ReversarDebitosComponent1750268694122 {
          <bts:referencia>015984900000216</bts:referencia>
       </bts:BTSNP.ReversarDebito>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class ReversarDebitosComponent1750268694122 {
 		"fechaVencimiento": "2019-11-20",
 		"referencia": "015984900000216"
 	}` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.ReversarDebitoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +91,9 @@ export class ReversarDebitosComponent1750268694122 {
          </Btoutreq>
       </BTSNP.ReversarDebitoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `` }
+</SOAP-ENV:Envelope>`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

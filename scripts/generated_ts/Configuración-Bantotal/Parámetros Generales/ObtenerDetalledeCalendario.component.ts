@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendarioComponent1750268695175 {
+export class ObtenerDetalledeCalendarioComponent1750272791010 {
   pageTitle        = 'Obtener Detalle de Calendario';
   description      = `Método para obtener el detalle de los días de un determinado calendario.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendario';
@@ -24,7 +24,8 @@ export class ObtenerDetalledeCalendarioComponent1750268695175 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de calendario.' }, { Codigo: '30002', Descripcion: 'No se recibió fecha de inicio.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha de fin.' }, { Codigo: '40001', Descripcion: 'No existe calendario con el identificador ingresado.' }, { Codigo: '40002', Descripcion: 'No se pudo obtener detalle para los datos ingresados ingresados.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>
@@ -40,7 +41,9 @@ export class ObtenerDetalledeCalendarioComponent1750268695175 {
          <bts:fechaFin>2020-10-31</bts:fechaFin>
       </bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X GET \
+</soapenv:Envelope>`, 
+    json: `
+curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados\' \
    -H \'cache-control: no-cache\' \
    -H \'content-type: application/json\' \
@@ -56,7 +59,8 @@ export class ObtenerDetalledeCalendarioComponent1750268695175 {
 	"calendarioId":"2020-10-01",
 	"calendarioId":"2020-10-31",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +94,9 @@ export class ObtenerDetalledeCalendarioComponent1750268695175 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
 		"Device": "MC",
 		"Usuario": "MINSTALADOR",

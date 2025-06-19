@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionesHabilitadosComponent1750268696147 {
+export class ObtenerInstruccionesHabilitadosComponent1750272791270 {
   pageTitle        = 'Obtener Instrucciones Habilitados';
   description      = `Método para obtener un listado de las instrucciones de un producto.`;
   pubName    = 'BTDepositoAPlazo.ObtenerInstruccionesHabilitados';
@@ -35,7 +35,8 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del Producto.' }, { Codigo: '30006', Descripcion: 'No existe registro para el producto indicado.' }, { Codigo: '40001', Descripcion: 'No existen Instrucciones ingresados en el sistema.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas>
@@ -50,7 +51,9 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
          <bts:tipoProducto></bts:tipoProducto>
       </bts:BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -66,7 +69,8 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
         "productoUId": 132,
         "tipoProducto": ""
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ObtenerInstruccionesHaiblitadasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -138,7 +142,9 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerInstruccionesHaiblitadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,

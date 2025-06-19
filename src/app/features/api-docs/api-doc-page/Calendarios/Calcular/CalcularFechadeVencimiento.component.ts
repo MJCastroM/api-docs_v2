@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularFechadeVencimientoComponent1750268694208 {
+export class CalcularFechadeVencimientoComponent1750272790750 {
   pageTitle        = 'Calcular Fecha de Vencimiento';
   description      = `Método para calcular la fecha de vencimiento de un plazo a partir de la fecha de inicio.`;
   pubName    = 'BTCalendarios.CalcularFechaVencimiento';
@@ -24,7 +24,8 @@ export class CalcularFechadeVencimientoComponent1750268694208 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.CalcularFechaVencimiento>
@@ -41,7 +42,9 @@ export class CalcularFechadeVencimientoComponent1750268694208 {
          <bts:tipoVencimiento>A</bts:tipoVencimiento>
       </bts:BTCalendarios.CalcularFechaVencimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?CalcularFechaVencimiento\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class CalcularFechadeVencimientoComponent1750268694208 {
     "fechaInicio": "2020-02-15",
     "tipoVencimiento": "A"
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.CalcularFechaVencimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +86,9 @@ export class CalcularFechadeVencimientoComponent1750268694208 {
          </Btoutreq>
       </BTCalendarios.CalcularFechaVencimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 

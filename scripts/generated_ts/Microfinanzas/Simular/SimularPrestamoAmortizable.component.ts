@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoAmortizableComponent1750268696601 {
+export class SimularPrestamoAmortizableComponent1750272791377 {
   pageTitle        = 'Simular Amortizable';
   description      = `Método para simular el alta de un préstamo amortizable para un crédito individual.`;
   pubName    = 'BTMicrofinanzas.SimularAmortizable';
@@ -24,7 +24,8 @@ export class SimularPrestamoAmortizableComponent1750268696601 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador [Número de identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.SimularAmortizable>
@@ -50,7 +51,9 @@ export class SimularPrestamoAmortizableComponent1750268696601 {
          </bts:sBTSimulacionAmortizable>
       </bts:BTMicrofinanzas.SimularAmortizable>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularAmortizable \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -79,7 +82,8 @@ export class SimularPrestamoAmortizableComponent1750268696601 {
     }
   }
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.SimularAmortizableResponse>
          <Btinreq>
@@ -140,7 +144,9 @@ export class SimularPrestamoAmortizableComponent1750268696601 {
          </Btoutreq>
       </BTMicrofinanzas.SimularAmortizableResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

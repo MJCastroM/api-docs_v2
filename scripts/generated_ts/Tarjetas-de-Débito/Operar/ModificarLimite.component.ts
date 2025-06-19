@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarLimiteComponent1750268698881 {
+export class ModificarLimiteComponent1750272791898 {
   pageTitle        = 'Modificar Límite';
   description      = `Método para modificar el límite de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ModificarLimite';
@@ -24,7 +24,8 @@ export class ModificarLimiteComponent1750268698881 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recibió código de límite' }, { Codigo: '40001', Descripcion: 'No existe el tipo de límite' }, { Codigo: '40002', Descripcion: 'No existe la tarjeta' }, { Codigo: '40014', Descripcion: 'No se pudo confirmar la funcionalidad.' }, { Codigo: '40001', Descripcion: 'No existe la tarjeta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ModificarLimite>
@@ -39,7 +40,9 @@ export class ModificarLimiteComponent1750268698881 {
          <bts:codigoDeLimiteId>1</bts:codigoDeLimiteId>
       </bts:BTTarjetasDeDebito.ModificarLimite>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ModificarLimite\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ModificarLimiteComponent1750268698881 {
 	"bts:tarjetaUId": "2000002050",
 	"bts:codigoDeLimiteId": "1"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ModificarLimiteResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class ModificarLimiteComponent1750268698881 {
          </Btoutreq>
       </BTTarjetasDeDebito.ModificarLimiteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

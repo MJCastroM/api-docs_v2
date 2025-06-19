@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeProductoComponent1750268695408 {
+export class ObtenerIdentificadorUnicodeProductoComponent1750272791072 {
   pageTitle        = 'Obtener Identificador Único de Producto';
   description      = `Método para obtener el identificador único de un producto.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoProducto';
@@ -24,7 +24,8 @@ export class ObtenerIdentificadorUnicodeProductoComponent1750268695408 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió módulo.' }, { Codigo: '30002', Descripcion: 'No se recibió tipo de operación.' }, { Codigo: '30003', Descripcion: 'Moneda no existe.' }, { Codigo: '30004', Descripcion: 'Papel no existe.' }, { Codigo: '30005', Descripcion: 'No se recibió empresa.' }, { Codigo: '30006', Descripcion: 'Producto no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdentificadorUnicoProducto>
@@ -42,7 +43,9 @@ export class ObtenerIdentificadorUnicodeProductoComponent1750268695408 {
          <bts:papelId>0</bts:papelId>
       </bts:BTContabilidad.ObtenerIdentificadorUnicoProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoProducto\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -60,7 +63,8 @@ export class ObtenerIdentificadorUnicodeProductoComponent1750268695408 {
     "monedaId": "80",
     "papelId": "0"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdentificadorUnicoProductoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +87,9 @@ export class ObtenerIdentificadorUnicodeProductoComponent1750268695408 {
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
         "Device": "bms", 
         "Usuario": "MINSTALADOR", 

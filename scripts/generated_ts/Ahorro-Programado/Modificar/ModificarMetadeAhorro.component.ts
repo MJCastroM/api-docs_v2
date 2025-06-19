@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarMetadeAhorroComponent1750268693949 {
+export class ModificarMetadeAhorroComponent1750272790672 {
   pageTitle        = 'Modificar Meta de Ahorro';
   description      = `Método para modificar la meta de ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarMetaDeAhorro';
@@ -24,7 +24,8 @@ export class ModificarMetadeAhorroComponent1750268693949 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del ahorro.' }, { Codigo: '30003', Descripcion: 'El monto indicado no puede ser menor que cero.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente.' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No existe la operación de ahorro seleccionada.' }, { Codigo: '40002', Descripcion: 'El producto seleccionado no es un producto con meta de ahorro.' }, { Codigo: '40003', Descripcion: 'La fecha seleccionada como meta de ahorro no puede ser inferior a la del día.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ModificarMetaDeAhorro>
@@ -42,7 +43,9 @@ export class ModificarMetadeAhorroComponent1750268693949 {
          <bts:fechaMetaAhorro></bts:fechaMetaAhorro>
       </bts:BTAhorroProgramado.ModificarMetaDeAhorro>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ModificarMetaDeAhorro\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -61,7 +64,8 @@ export class ModificarMetadeAhorroComponent1750268693949 {
       "montoMetaAhorro": 15000,  
       "fechaMetaAhorro": "0001-01-01"
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ModificarMetaDeAhorroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +87,9 @@ export class ModificarMetadeAhorroComponent1750268693949 {
          </Btoutreq>
       </BTAhorroProgramado.ModificarMetaDeAhorroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

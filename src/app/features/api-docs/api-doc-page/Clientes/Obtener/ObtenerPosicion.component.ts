@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPosicionComponent1750268694895 {
+export class ObtenerPosicionComponent1750272790932 {
   pageTitle        = 'Obtener Posición';
   description      = `Método para obtener las posiciones de los títulos de un cliente.`;
   pubName    = 'BTClientes.ObtenerPosicion';
@@ -24,7 +24,8 @@ export class ObtenerPosicionComponent1750268694895 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar la fecha.' }, { Codigo: '30013', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40001', Descripcion: 'El Portafolio A no está definido.' }, { Codigo: '40002', Descripcion: 'El Portafolio A no está habilitado.' }, { Codigo: '40003', Descripcion: 'Error: Cuenta inexistente.' }, { Codigo: '40004', Descripcion: 'En la generación de la información se han encontrado inconsistencias subsanadas automáticamente. Favor de contactar a soporte indicando cuenta y números de sesión.' }, { Codigo: '40005', Descripcion: 'Error: No tiene autorización para consultar la cuenta ingresada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPosicion>
@@ -40,7 +41,9 @@ export class ObtenerPosicionComponent1750268694895 {
          <bts:fecha>2020-08-06</bts:fecha>
       </bts:BTClientes.ObtenerPosicion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPosicion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ObtenerPosicionComponent1750268694895 {
     "monedaId": 2222,
     "fecha": "2020-08-06"
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPosicionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -102,7 +106,9 @@ export class ObtenerPosicionComponent1750268694895 {
          </Btoutreq>
       </BTClientes.ObtenerPosicionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

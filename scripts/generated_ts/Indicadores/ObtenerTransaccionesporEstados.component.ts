@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTransaccionesporEstadosComponent1750268696353 {
+export class ObtenerTransaccionesporEstadosComponent1750272791315 {
   pageTitle        = 'Obtener Transacciones por Estados';
   description      = `Método para obtener las transacciones por estado ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerTransaccionesEstados';
@@ -24,7 +24,8 @@ export class ObtenerTransaccionesporEstadosComponent1750268696353 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerTransaccionesEstados>
@@ -37,7 +38,9 @@ export class ObtenerTransaccionesporEstadosComponent1750268696353 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerTransaccionesEstados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerTransaccionesEstados\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerTransaccionesporEstadosComponent1750268696353 {
       "Requerimiento": "?"
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerTransaccionesEstadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +95,9 @@ export class ObtenerTransaccionesporEstadosComponent1750268696353 {
          </Btoutreq>
       </BTIndicadores.ObtenerTransaccionesEstadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",

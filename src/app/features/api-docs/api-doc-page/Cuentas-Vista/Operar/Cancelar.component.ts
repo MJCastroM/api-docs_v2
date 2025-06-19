@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750268695890 {
+export class CancelarComponent1750272791208 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la liquidación de una cuenta vista.`;
   pubName    = 'BTCuentasVista.Cancelar';
@@ -24,7 +24,8 @@ export class CancelarComponent1750268695890 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'La cuenta indicada no existe.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30004', Descripcion: 'La cuenta indicada no existe.' }, { Codigo: '30005', Descripcion: 'La cuenta a liquidar y la cuenta de acreditación no pueden ser la misma.' }, { Codigo: '30007', Descripcion: 'La cuenta indicada no pertenece al cliente.' }, { Codigo: '30006', Descripcion: 'La cuenta de cobro indicada no existe.' }, { Codigo: '30008', Descripcion: 'Las monedas de la cuenta a liquidar y la cuenta de acreditación deben ser la misma.' }, { Codigo: '30009', Descripcion: 'No se pudo obtener el identificador para el movimiento realizado.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }, { Codigo: '40001', Descripcion: 'Operativa fuera de horario' }, { Codigo: '40003', Descripcion: 'Producto cancelado.' }, { Codigo: '40004', Descripcion: 'No se definió transacción a ejecutar.' }, { Codigo: '40006', Descripcion: 'La Operación tiene Bloqueos; no puede ser liquidada.' }, { Codigo: '40007', Descripcion: 'El producto se encuentra sobregirado, no es posible realizar la liquidación.' }, { Codigo: '40008', Descripcion: 'La cuenta tiene Tarjeta de débito asociada; no puede ser liquidada.' }, { Codigo: '40009', Descripcion: 'El producto paga la comisión del paquete, debe modificarse la instrucción.' }, { Codigo: '40010', Descripcion: 'NO SE DEFINIÓ LA CARPETA EN LA QUE SE GUARDARÁ EL ARCHIVO.' }, { Codigo: '40013', Descripcion: 'Usuario no autorizado a consultar esta Cuenta.' }, { Codigo: '40014', Descripcion: 'Usuario no autorizado a consultar esta Cuenta.' }, { Codigo: '40015', Descripcion: 'No es posible realizar la liquidación.' }, { Codigo: '40016', Descripcion: 'El titular de la cuenta no es una persona física.' }, { Codigo: '40017', Descripcion: 'No es posible operar con una cuenta conjunta.' }, { Codigo: '40018', Descripcion: 'La operación no permite operar.' }, { Codigo: '40019', Descripcion: 'La operación de acreditación no permite operar.' }, { Codigo: '40020', Descripcion: 'No se indicó cuenta de cobro/acreditación.' }, { Codigo: '40021', Descripcion: 'La operación a liquidar no puede ser CTS.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.Cancelar>
@@ -40,7 +41,9 @@ export class CancelarComponent1750268695890 {
          <bts:cuentaAcreditacionUId>311</bts:cuentaAcreditacionUId>
       </bts:BTCuentasVista.Cancelar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \   
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \   
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Cancelar\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -57,7 +60,8 @@ export class CancelarComponent1750268695890 {
 	"cuentaLiquidacionUId": "310",
 	"cuentaAcreditacionUId": "311",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.CancelarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class CancelarComponent1750268695890 {
          </Btoutreq>
       </BTCuentasVista.CancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

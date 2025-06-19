@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosComponent1750268695135 {
+export class ObtenerEstadosComponent1750272790996 {
   pageTitle        = 'Obtener Estados';
   description      = `Método para obtener un listado de los estados de producto ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstados';
@@ -24,7 +24,8 @@ export class ObtenerEstadosComponent1750268695135 {
   errors     = [{ Codigo: '30001', Descripcion: 'No hay estados parametrizados.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerEstados>
@@ -37,7 +38,9 @@ export class ObtenerEstadosComponent1750268695135 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerEstados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X GET \
+</soapenv:Envelope>`, 
+    json: `
+curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados\' \
    -H \'cache-control: no-cache\' \
    -H \'content-type: application/json\' \
@@ -50,7 +53,8 @@ export class ObtenerEstadosComponent1750268695135 {
         "Token": "faa36bd33f4A8B5C60A82434"
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerEstadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -129,7 +133,9 @@ export class ObtenerEstadosComponent1750268695135 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEstadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",

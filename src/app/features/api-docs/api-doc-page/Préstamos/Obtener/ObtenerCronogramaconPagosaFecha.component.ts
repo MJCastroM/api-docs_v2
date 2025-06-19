@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaconPagosaFechaComponent1750268697972 {
+export class ObtenerCronogramaconPagosaFechaComponent1750272791695 {
   pageTitle        = 'Obtener Cronograma con Pagos a Fecha';
   description      = `Método para obtener el cronograma de un préstamo teniendo en cuenta solamente los pagos hasta la fecha indicada.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaConPagosAFecha';
@@ -24,7 +24,8 @@ export class ObtenerCronogramaconPagosaFechaComponent1750268697972 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha para consulta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerCronogramaConPagosAFecha>
@@ -39,7 +40,9 @@ export class ObtenerCronogramaconPagosaFechaComponent1750268697972 {
          <bts:fecha>2022-11-16</bts:fecha>
       </bts:BTPrestamos.ObtenerCronogramaConPagosAFecha>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerCronogramaConPagosAFecha=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerCronogramaconPagosaFechaComponent1750268697972 {
     "operacionUId" : 8892,
     "fecha" : "2022-11-16"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerCronogramaConPagosAFechaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
         <Btinreq>
@@ -119,7 +123,9 @@ export class ObtenerCronogramaconPagosaFechaComponent1750268697972 {
         </Btoutreq>
       </BTPrestamos.ObtenerCronogramaConPagosAFechaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeMovimientoComponent1750268695395 {
+export class ObtenerIdentificadorUnicodeMovimientoComponent1750272791068 {
   pageTitle        = 'Obtener Identificador Único de Movimiento';
   description      = `Método para obtener el identificador único de un movimiento contable.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoMovimiento';
@@ -24,7 +24,8 @@ export class ObtenerIdentificadorUnicodeMovimientoComponent1750268695395 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió empresa.' }, { Codigo: '30002', Descripcion: 'No se recibió sucursal.' }, { Codigo: '30003', Descripcion: 'No se recibió módulo.' }, { Codigo: '30004', Descripcion: 'No se recibió transacción.' }, { Codigo: '30005', Descripcion: 'No se recibió relación.' }, { Codigo: '30006', Descripcion: 'No se recibió fecha de contabilización.' }, { Codigo: '30007', Descripcion: 'Movimiento no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdentificadorUnicoMovimiento>
@@ -43,7 +44,9 @@ export class ObtenerIdentificadorUnicodeMovimientoComponent1750268695395 {
          <bts:fechaContabilizacion>2013-01-02</bts:fechaContabilizacion>
       </bts:BTContabilidad.ObtenerIdentificadorUnicoMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoMovimiento\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -62,7 +65,8 @@ export class ObtenerIdentificadorUnicodeMovimientoComponent1750268695395 {
     "relacion": "1",
     "fechaContabilizacion": "2013-01-02"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdentificadorUnicoMovimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class ObtenerIdentificadorUnicodeMovimientoComponent1750268695395 {
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
         "Device": "bms", 
         "Usuario": "MINSTALADOR", 

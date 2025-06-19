@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegrantedePersonaJuridicaComponent1750268697329 {
+export class EliminarIntegrantedePersonaJuridicaComponent1750272791561 {
   pageTitle        = 'Eliminar Integrante de Persona Jurídica';
   description      = `Método para eliminar un integrante de una persona jurídica.`;
   pubName    = 'BTPersonas.EliminarIntegrantePersonaJuridica';
@@ -24,7 +24,8 @@ export class EliminarIntegrantedePersonaJuridicaComponent1750268697329 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.EliminarIntegrantePersonaJuridica>
@@ -39,7 +40,9 @@ export class EliminarIntegrantedePersonaJuridicaComponent1750268697329 {
          <bts:personaIntegranteUId>1</bts:personaIntegranteUId>
       </bts:BTPersonas.EliminarIntegrantePersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarIntegrantePersonaJuridica\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class EliminarIntegrantedePersonaJuridicaComponent1750268697329 {
 	 "personaJuridicaUId": "2",
 	 "personaIntegranteUId": "1"
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.EliminarIntegrantePersonaJuridicaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class EliminarIntegrantedePersonaJuridicaComponent1750268697329 {
          </Btoutreq>
       </BTPersonas.EliminarIntegrantePersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
 	 "Btinreq": { 
 		"Canal": "BTDIGITAL", 
 		"Requerimiento": "1", 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750268697886 {
+export class ContratarComponent1750272791671 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un préstamo amortizable.`;
   pubName    = 'BTPrestamos.Contratar';
@@ -38,7 +38,8 @@ export class ContratarComponent1750268697886 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de operación de Acreditación.' }, { Codigo: '30004', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '51001', Descripcion: 'No se recibió número de cliente.' }, { Codigo: '51002', Descripcion: 'La operación no existe.' }, { Codigo: '51003', Descripcion: 'La operación de cobro no existe.' }, { Codigo: '51005', Descripcion: 'Atención: No se pudo obtener el numerador para la transacción.' }, { Codigo: '51006', Descripcion: 'La operación esta cancelada.' }, { Codigo: '51007', Descripcion: 'La operación ya existe.' }, { Codigo: '51013', Descripcion: 'La operación de cobro esta cancelada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.Contratar>
@@ -55,7 +56,9 @@ export class ContratarComponent1750268697886 {
          <bts:operacionUId_cobro>281</bts:operacionUId_cobro>
       </bts:BTPrestamos.Contratar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?Contratar=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -73,7 +76,8 @@ export class ContratarComponent1750268697886 {
     "operacionUId_desembolso": 281,
     "operacionUId_cobro": 281
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ContratarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -96,7 +100,9 @@ export class ContratarComponent1750268697886 {
          </Btoutreq>
       </BTPrestamos.ContratarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

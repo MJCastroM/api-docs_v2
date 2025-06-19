@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesdeOperacionComponent1750268695451 {
+export class ObtenerIntegrantesdeOperacionComponent1750272791083 {
   pageTitle        = 'Obtener Integrantes de Operación';
   description      = `Método para obtener los integrantes de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIntegrantesOperacion';
@@ -24,7 +24,8 @@ export class ObtenerIntegrantesdeOperacionComponent1750268695451 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador de operación: [Número de identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIntegrantesOperacion>
@@ -38,7 +39,9 @@ export class ObtenerIntegrantesdeOperacionComponent1750268695451 {
          <bts:operacionUId>21</bts:operacionUId>
       </bts:BTContabilidad.ObtenerIntegrantesOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIntegrantesOperacion=\' \
+</soapenv:Envelope>`, 
+    json: `
+\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIntegrantesOperacion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
   -H \'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379\' \
@@ -52,7 +55,8 @@ export class ObtenerIntegrantesdeOperacionComponent1750268695451 {
 	},
 	"operacionUId": "21",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIntegrantesOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +92,9 @@ export class ObtenerIntegrantesdeOperacionComponent1750268695451 {
          </Btoutreq>
       </BTContabilidad.ObtenerIntegrantesOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConvertirTasaAnualLinealaEfectivaComponent1750268697758 {
+export class ConvertirTasaAnualLinealaEfectivaComponent1750272791637 {
   pageTitle        = 'Convertir Tasa Anual Lineal a Efectiva';
   description      = `Método para convertir una tasa lineal anual a tasa efectiva anual.`;
   pubName    = 'BTPrecios.ConvertirTasaAnualLinealAEfectiva';
@@ -24,7 +24,8 @@ export class ConvertirTasaAnualLinealaEfectivaComponent1750268697758 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar la tasa a convertir.' }, { Codigo: '30002', Descripcion: 'Debe ingresar un tipo de año válido [1 - Comercial / 2 - Calendario].' }, { Codigo: '30003', Descripcion: 'Debe ingresar un plazo.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ConvertirTasaAnualLinealAEfectiva>
@@ -40,7 +41,9 @@ export class ConvertirTasaAnualLinealaEfectivaComponent1750268697758 {
          <bts:plazo>30</bts:plazo>
       </bts:BTPrecios.ConvertirTasaAnualLinealAEfectiva>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ConvertirTasaAnualLinealAEfectiva=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ConvertirTasaAnualLinealaEfectivaComponent1750268697758 {
 	"bts:tipoAño": "2",
 	"bts:plazo": "30"
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ConvertirTasaAnualLinealAEfectivaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ConvertirTasaAnualLinealaEfectivaComponent1750268697758 {
          </Btoutreq>
       </BTPrecios.ConvertirTasaAnualLinealAEfectivaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

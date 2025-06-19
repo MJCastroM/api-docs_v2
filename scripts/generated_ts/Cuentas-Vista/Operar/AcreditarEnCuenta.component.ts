@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AcreditarEnCuentaComponent1750268695866 {
+export class AcreditarEnCuentaComponent1750272791199 {
   pageTitle        = 'Acreditar en Cuenta';
   description      = `Método para realizar una acreditación a una cuenta vista determinada.`;
   pubName    = 'BTCuentasVista.AcreditarEnCuenta ';
@@ -38,7 +38,8 @@ export class AcreditarEnCuentaComponent1750268695866 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar una operación.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: X.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta cliente origen para el Identificador: X.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.AcreditarEnCuenta>
@@ -62,7 +63,9 @@ export class AcreditarEnCuentaComponent1750268695866 {
             <bts:concepto4></bts:concepto4>
          </bts:sdtDatosAcreditar>
       </bts:BTCuentasVista.AcreditarEnCuenta>
-   </soapenv:Body>`, json: `curl -X POST \ 
+   </soapenv:Body>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?AcreditarEnCuenta=\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -118,7 +121,8 @@ curl -X POST \
 		"concepto4": ""
 	}    
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTCuentasVista.AcreditarEnCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -141,7 +145,9 @@ curl -X POST \
             </Btoutreq>
         </BTCuentasVista.AcreditarEnCuentaResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",

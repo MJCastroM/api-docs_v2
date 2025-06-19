@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAdhesionesComponent1750268694091 {
+export class ObtenerAdhesionesComponent1750272790720 {
   pageTitle        = 'Obtener Adhesiones';
   description      = `Método para obtener las adhesiones de un cliente a una determinada empresa originante.`;
   pubName    = 'BTSNP.ObtenerAdhesiones';
@@ -24,7 +24,8 @@ export class ObtenerAdhesionesComponent1750268694091 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió empresa originante.' }, { Codigo: '40001', Descripcion: 'No existe la empresa originante.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.ObtenerAdhesiones>
@@ -39,7 +40,9 @@ export class ObtenerAdhesionesComponent1750268694091 {
          <bts:empresaOriginante>3050001626</bts:empresaOriginante>
       </bts:BTSNP.ObtenerAdhesiones>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerAdhesionesComponent1750268694091 {
 		"clienteUId": 4,
 		"empresaOriginante": "3050001626"
 	}` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.ObtenerAdhesionesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -94,7 +98,9 @@ export class ObtenerAdhesionesComponent1750268694091 {
          </Btoutreq>
       </BTSNP.ObtenerAdhesionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",

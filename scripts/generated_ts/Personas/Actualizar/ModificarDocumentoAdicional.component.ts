@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarDocumentoAdicionalComponent1750268697056 {
+export class ModificarDocumentoAdicionalComponent1750272791504 {
   pageTitle        = 'Modificar Documento Adicional';
   description      = `Método para modificar un documento adicional de una persona.`;
   pubName    = 'BTPersonas.ModificarDocumentoAdicional';
@@ -24,7 +24,8 @@ export class ModificarDocumentoAdicionalComponent1750268697056 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30011', Descripcion: 'El país del documento adicional no es válido.' }, { Codigo: '30012', Descripcion: 'El tipo de documento adicional no es válido.' }, { Codigo: '30013', Descripcion: 'Número de Documento incorrecto.' }, { Codigo: '30014', Descripcion: 'La fecha de emisión del documento no puede ser anterior a hoy.' }, { Codigo: '30015', Descripcion: 'No se recibió fecha de vencimiento del documento' }, { Codigo: '30016', Descripcion: 'La fecha de vencimiento del documento no puede ser anterior a hoy' }, { Codigo: '30018', Descripcion: 'La persona no posee ese documento adicional.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ModificarDocumentoAdicional>
@@ -47,7 +48,9 @@ export class ModificarDocumentoAdicionalComponent1750268697056 {
          </bts:sdtDocumentoAdicional>
       </bts:BTPersonas.ModificarDocumentoAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ModificarDocumentoAdicional=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class ModificarDocumentoAdicionalComponent1750268697056 {
       "paisDocumento": "63"
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ModificarDocumentoAdicionalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +97,9 @@ export class ModificarDocumentoAdicionalComponent1750268697056 {
          </Btoutreq>
       </BTPersonas.ModificarDocumentoAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

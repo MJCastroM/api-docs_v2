@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeunPrestamoComponent1750268698168 {
+export class ObtenerPagosdeunPrestamoComponent1750272791744 {
   pageTitle        = 'Obtener Pagos de un Préstamo';
   description      = `Método para obtener el detalle de pagos de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerPagos';
@@ -41,7 +41,8 @@ Valor específico 2 | Tipo de operación a excluir.
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación para el identificador recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerPagos>
@@ -57,7 +58,9 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:fechaDesde>2019-03-05</bts:fechaDesde>
       </bts:BTPrestamos.ObtenerPagos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPagos=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -74,7 +77,8 @@ Valor específico 2 | Tipo de operación a excluir.
 	 "fechaHasta": "2020-03-05",
 	 "fechaDesde": "2019-03-05"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerPagosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -126,7 +130,9 @@ Valor específico 2 | Tipo de operación a excluir.
          </Btoutreq>
       </BTPrestamos.ObtenerPagosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

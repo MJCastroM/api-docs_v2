@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudIndividualComponent1750268696382 {
+export class CrearSolicitudIndividualComponent1750272791321 {
   pageTitle        = 'Crear Solicitud Individual';
   description      = `Método para crear una solicitud de crédito individual.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudIndividual';
@@ -24,7 +24,8 @@ export class CrearSolicitudIndividualComponent1750268696382 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente.' }, { Codigo: '30011', Descripcion: 'No existe FSD008 para la cuenta [Número de cuenta].' }, { Codigo: '30012', Descripcion: 'No se obtuvo el titular representativo de la cuenta [Número de cuenta].' }, { Codigo: '30013', Descripcion: 'No se pudo determinar la sucursal de la solicitud.' }, { Codigo: '30014', Descripcion: 'No se pudo determinar el asesor de la solicitud.' }, { Codigo: '30015', Descripcion: 'El código de campaña no existe.' }, { Codigo: '30016', Descripcion: 'El código de origen de captación no existe.' }, { Codigo: '30020 en adelante', Descripcion: 'Controles de regla de negocio.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.CrearSolicitudIndividual>
@@ -48,7 +49,9 @@ export class CrearSolicitudIndividualComponent1750268696382 {
          </bts:datosSolicitud>
       </bts:BTMicrofinanzas.CrearSolicitudIndividual>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudIndividual \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -72,7 +75,8 @@ export class CrearSolicitudIndividualComponent1750268696382 {
         "comentario": "SOLICITUD DESDE API",
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.CrearSolicitudIndividualResponse>
          <Btinreq>
@@ -95,7 +99,9 @@ export class CrearSolicitudIndividualComponent1750268696382 {
          </Btoutreq>
       </BTMicrofinanzas.CrearSolicitudIndividualResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

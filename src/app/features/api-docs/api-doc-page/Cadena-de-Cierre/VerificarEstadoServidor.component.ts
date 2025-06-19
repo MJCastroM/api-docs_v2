@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEstadoServidorComponent1750268694201 {
+export class VerificarEstadoServidorComponent1750272790748 {
   pageTitle        = 'Verificar Estado del Servidor';
   description      = `Método para verificar el estado del servidor de procesos.`;
   pubName    = 'BTCadenaCierre.VerificarEstadoServidor';
@@ -24,7 +24,8 @@ export class VerificarEstadoServidorComponent1750268694201 {
   errors     = [{ Codigo: '30002', Descripcion: 'No hay ningún servidor disponible para ejecutar la tarea.' }, { Codigo: '30004', Descripcion: 'No hay ningún servidor disponible para ejecutar la tarea (con la capacidad Default).' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCadenaCierre.VerificarEstadoServidor>
@@ -37,7 +38,9 @@ export class VerificarEstadoServidorComponent1750268694201 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.VerificarEstadoServidor>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?VerificarEstadoServidor\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class VerificarEstadoServidorComponent1750268694201 {
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCadenaCierre.VerificarEstadoServidorResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -73,7 +77,9 @@ export class VerificarEstadoServidorComponent1750268694201 {
          </Btoutreq>
       </BTCadenaCierre.VerificarEstadoServidorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

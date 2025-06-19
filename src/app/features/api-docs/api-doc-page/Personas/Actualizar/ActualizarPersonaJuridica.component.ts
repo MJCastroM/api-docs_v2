@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPersonaJuridicaComponent1750268697005 {
+export class ActualizarPersonaJuridicaComponent1750272791494 {
   pageTitle        = 'Actualizar Persona Jurídica';
   description      = `Método para actualizar una persona jurídica.`;
   pubName    = 'BTPersonas.ActualizarPersonaJuridica';
@@ -24,7 +24,8 @@ export class ActualizarPersonaJuridicaComponent1750268697005 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'No existe persona con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'Debe ingresar país.' }, { Codigo: '40003', Descripcion: 'El país ingresado no existe.' }, { Codigo: '40004', Descripcion: 'Debe ingresar tipo de documento.' }, { Codigo: '40005', Descripcion: 'El tipo de documento ingresado no existe.' }, { Codigo: '40006', Descripcion: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Codigo: '40007', Descripcion: 'Debe ingresar número de documento.' }, { Codigo: '40008', Descripcion: 'Número de documento incorrecto.' }, { Codigo: '40009', Descripcion: 'Debe ingresar razón social.' }, { Codigo: '40010', Descripcion: 'Caracteres incorrectos en razón social.' }, { Codigo: '40011', Descripcion: 'Caracteres incorrectos en nombre reducido.' }, { Codigo: '40012', Descripcion: 'Debe ingresar naturaleza jurídica.' }, { Codigo: '40013', Descripcion: 'La naturaleza jurídica ingresada no existe.' }, { Codigo: '40014', Descripcion: 'Debe ingresar la fecha de constitución.' }, { Codigo: '40015', Descripcion: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Codigo: '40016', Descripcion: 'Debe ingresar tipo de actividad.' }, { Codigo: '40017', Descripcion: 'El tipo de actividad ingresado no existe.' }, { Codigo: '40018', Descripcion: 'Debe ingresar actividad.' }, { Codigo: '40019', Descripcion: 'La actividad ingresada no existe.' }, { Codigo: '40020', Descripcion: 'Debe ingresar país del domicilio.' }, { Codigo: '40021', Descripcion: 'El país del domicilio no existe.' }, { Codigo: '40022', Descripcion: 'Debe ingresar departamento.' }, { Codigo: '40023', Descripcion: 'El departamento no existe.' }, { Codigo: '40024', Descripcion: 'Debe ingresar localidad.' }, { Codigo: '40025', Descripcion: 'La localidad no existe.' }, { Codigo: '40026', Descripcion: 'El barrio no existe.' }, { Codigo: '40027', Descripcion: 'Correo electrónico no valido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarPersonaJuridica>
@@ -71,7 +72,9 @@ export class ActualizarPersonaJuridicaComponent1750268697005 {
          </bts:sdtPersonaJuridica>
       </bts:BTPersonas.ActualizarPersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarPersonaJuridica\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -119,7 +122,8 @@ export class ActualizarPersonaJuridicaComponent1750268697005 {
         "piso": "123"
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarPersonaJuridicaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -141,7 +145,9 @@ export class ActualizarPersonaJuridicaComponent1750268697005 {
          </Btoutreq>
       </BTPersonas.ActualizarPersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
 	 "Btinreq": { 
 		"Device": "MC", 
 		"Usuario": "INSTALADOR", 

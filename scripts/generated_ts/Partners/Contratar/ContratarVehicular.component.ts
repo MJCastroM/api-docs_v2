@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarVehicularComponent1750268696737 {
+export class ContratarVehicularComponent1750272791414 {
   pageTitle        = 'Contratar Vehicular';
   description      = `Método para contratar un préstamo vehicular.`;
   pubName    = 'BTPartners.ContratarVehicular';
@@ -24,7 +24,8 @@ export class ContratarVehicularComponent1750268696737 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30007', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30009', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30010', Descripcion: 'No se obtuvo la persona para el identificador [Número de Identificador].' }, { Codigo: '30012', Descripcion: 'No se obtuvo el fiador para el identificador [Número de Identificador].' }, { Codigo: '30017', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30018', Descripcion: 'No se recibió vendedor.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPartners.ContratarVehicular>
@@ -61,7 +62,9 @@ export class ContratarVehicularComponent1750268696737 {
          </bts:sdtDatosVehiculo>
       </bts:BTPartners.ContratarVehicular>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ContratarVehicular\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -99,7 +102,8 @@ export class ContratarVehicularComponent1750268696737 {
           "anioConstruccion": 2003
         }
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ContratarVehicularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -121,7 +125,9 @@ export class ContratarVehicularComponent1750268696737 {
          </Btoutreq>
       </BTPartners.ContratarVehicularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

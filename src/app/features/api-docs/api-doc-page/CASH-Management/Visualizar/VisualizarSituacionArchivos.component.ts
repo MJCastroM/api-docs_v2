@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarSituacionArchivosComponent1750268694529 {
+export class VisualizarSituacionArchivosComponent1750272790838 {
   pageTitle        = 'Visualizar Situación Archivos';
   description      = `Método para visualizar la situación de los archivos subidos por el cliente.`;
   pubName    = 'BTCASHManagement.VisualizarSituacionArchivos';
@@ -24,7 +24,8 @@ export class VisualizarSituacionArchivosComponent1750268694529 {
   errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030708', Descripcion: 'Estado de archivo desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }, { Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la informacion.' }, { Codigo: '1030714', Descripcion: 'El contrato consultado no corresponde al servicio recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.VisualizarSituacionArchivos>
@@ -43,7 +44,9 @@ export class VisualizarSituacionArchivosComponent1750268694529 {
          <bts:fechaHastaF></bts:fechaHastaF>
       </bts:BTCASHManagement.VisualizarSituacionArchivos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarSituacionArchivos=\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: 8ae78366-8aaf-484e-9e0c-d6438a3b88c5,993b6845-9245-4afc-9048-660c34300f13\' \
@@ -63,7 +66,8 @@ export class VisualizarSituacionArchivosComponent1750268694529 {
     "fechaDesdeF": "2018-01-01",
     "fechaHastaF": ""
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.VisualizarSituacionArchivosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -135,7 +139,9 @@ export class VisualizarSituacionArchivosComponent1750268694529 {
          </Btoutreq>
       </BTCASHManagement.VisualizarSituacionArchivosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",
