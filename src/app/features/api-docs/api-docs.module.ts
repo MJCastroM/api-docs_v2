@@ -21,6 +21,7 @@ import { ApiTabsComponent }        from './components/api-tabs/api-tabs.componen
 import { ApiTableComponent }       from './components/api-table/api-table.component';
 import { CodeExampleComponent }    from './components/code-example/code-example.component';
 import { StructuredDataComponent } from './components/structured-data/structured-data.component';
+import { FooterSpaceComponent } from './components/footer-space/footer-space.component';
 
 import { SharedModule } from '../../shared/shared.module';
 
@@ -1397,6 +1398,7 @@ import { ObtenerTareasdeProcesoComponent1750272791935 } from './api-doc-page/Wor
     ObtenerRolesdeTareaComponent1750272791933,
     ObtenerTareasdeProcesoComponent1750272791935,
     //declarations End page components
+    FooterSpaceComponent,
     CodeExampleComponent,
     SidebarComponent,
     PageHeaderComponent,
@@ -1404,7 +1406,6 @@ import { ObtenerTareasdeProcesoComponent1750272791935 } from './api-doc-page/Wor
     BackendConfigComponent,
     ApiTabsComponent,
     ApiTableComponent,
-    CodeExampleComponent,
     PrismHighlightDirective,
     StructuredDataComponent    
   ],
