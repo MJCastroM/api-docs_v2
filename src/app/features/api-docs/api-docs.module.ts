@@ -22,6 +22,8 @@ import { ApiTableComponent }       from './components/api-table/api-table.compon
 import { CodeExampleComponent }    from './components/code-example/code-example.component';
 import { StructuredDataComponent } from './components/structured-data/structured-data.component';
 import { FooterSpaceComponent } from './components/footer-space/footer-space.component';
+import { FormsModule }    from '@angular/forms';            // ← importa FormsModule
+import { ChatPopupComponent } from './components/chat-popup/chat-popup.component';
 
 import { SharedModule } from '../../shared/shared.module';
 
@@ -713,6 +715,7 @@ import { ObtenerTareasdeProcesoComponent1750272791935 } from './api-doc-page/Wor
 
 @NgModule({
   declarations: [
+    ChatPopupComponent,
     //declarations Page components
     ContratarSimulacionComponent1750272790640,
     CrearComponent1750272790647,
@@ -1398,6 +1401,7 @@ import { ObtenerTareasdeProcesoComponent1750272791935 } from './api-doc-page/Wor
     ObtenerRolesdeTareaComponent1750272791933,
     ObtenerTareasdeProcesoComponent1750272791935,
     //declarations End page components
+    ChatPopupComponent,
     FooterSpaceComponent,
     CodeExampleComponent,
     SidebarComponent,
@@ -1410,6 +1414,7 @@ import { ObtenerTareasdeProcesoComponent1750272791935 } from './api-doc-page/Wor
     StructuredDataComponent    
   ],
   imports: [
+    FormsModule,
     SharedModule,
     CommonModule,
     ApiDocsRoutingModule,
@@ -1423,6 +1428,7 @@ import { ObtenerTareasdeProcesoComponent1750272791935 } from './api-doc-page/Wor
     MatButtonModule
   ],
   exports: [
+    ChatPopupComponent,
     //exports Page components
     ContratarSimulacionComponent1750272790640,
     CrearComponent1750272790647,
