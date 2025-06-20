@@ -53,10 +53,10 @@ body {
   color: $text-main;
 }
 
-.mat-accordion { // ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
+.mat-accordion-BT { 
   margin: 2rem 0;
 
-  .mat-expansion-panel {
+  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
     margin: $margin;
     background: $background-light;
     border-radius: $border-radius !important;

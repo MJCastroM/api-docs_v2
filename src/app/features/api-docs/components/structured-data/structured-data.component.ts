@@ -1,51 +1,59 @@
-import {
-  Component,
-  Input,
-  ViewChildren,
-  QueryList,
-  ElementRef
-} from '@angular/core';
-import { MatExpansionPanel } from '@angular/material/expansion';
-import { ViewportScroller }   from '@angular/common';
+import { Component, Input, HostListener } from '@angular/core';
+import { ViewportScroller }              from '@angular/common';
+
+interface StructuredType {
+  typeName: string;
+  fields: any[];
+  children?: StructuredType[];
+}
 
 @Component({
   selector: 'app-structured-data',
   templateUrl: './structured-data.component.html'
 })
 export class StructuredDataComponent {
-  @Input() types: any[] = [];
+  @Input() types: StructuredType[] = [];
 
-  // Capturamos las instancias de MatExpansionPanel…
-  @ViewChildren('panel')
-  panelComponents!: QueryList<MatExpansionPanel>;
-
-  // …y sus elementos nativos
-  @ViewChildren('panel', { read: ElementRef })
-  panelEls!: QueryList<ElementRef<HTMLElement>>;
+  /** Guarda qué panel (por id lowercase) está abierto */
+  expandedMap: Record<string, boolean> = {};
 
   constructor(private viewport: ViewportScroller) {}
 
-  onContainerClick(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
-      event.preventDefault();
+  /**
+   * Atiende clicks en enlaces <a href="#fragment">:
+   *   • Abre ese panel sin cerrar los demás
+   *   • Después de la animación (~250ms), hace scroll
+   */
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const anchor = (event.target as HTMLElement)
+      .closest('a[href^="#"]') as HTMLAnchorElement | null;
+    if (!anchor) return;
+    event.preventDefault();
 
-      const fragment = target.getAttribute('href')!.slice(1);
-      const panels = this.panelComponents.toArray();
-      const panelEls = this.panelEls.toArray();
+    const raw = anchor.getAttribute('href')!.slice(1);
+    const fragment = raw.toLowerCase();
 
-      // Abrir/cerrar cada panel según el id del host
-      panels.forEach((panel, idx) => {
-        const hostEl = panelEls[idx].nativeElement;
-        if (hostEl.id === fragment) {
-          panel.open();
-        } else {
-          panel.close();
-        }
-      });
+    // Sólo abrimos este panel, dejamos los demás como estaban
+    this.expandedMap[fragment] = true;
 
-      // Scroll suave al panel
+    // Scroll suave justo después de la animación de Material
+    setTimeout(() => {
       this.viewport.scrollToAnchor(fragment);
+    }, 250);
+  }
+
+  /**
+   * Sincroniza expandedMap si el usuario abre/cierra manualmente un panel
+   * y hace scroll si acaba de abrirlo.
+   */
+  onExpansionChange(expanded: boolean, typeName: string) {
+    const id = typeName.toLowerCase();
+    this.expandedMap[id] = expanded;
+    if (expanded) {
+      setTimeout(() => {
+        this.viewport.scrollToAnchor(id);
+      }, 250);
     }
   }
 }
