@@ -1,0 +1,16 @@
+
+<div class="chat-logo" (click)="toggleChat()"></div>
+<div class="chat-popup" *ngIf="showChat">
+  <button class="clear-history-button" (click)="clearChatHistory()" title="Borrar historial"></button>
+  <div class="chat-messages">
+    <div *ngFor="let m of messages" [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }">
+      <div [innerHTML]="m.text"></div>
+    </div>
+    <div *ngIf="typingIndicator" class="typing-indicator">Escribiendo...</div>
+  </div>
+  <div class="chat-input">
+    <input #inputRef [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" [disabled]="loading" placeholder="Escribe un mensaje...">
+    <button (click)="sendMessage()" [disabled]="loading">Enviar</button>
+  </div>
+  <div id="loader" [class.loading]="loading">Loading...</div>
+</div>
