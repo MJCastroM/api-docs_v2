@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiascontipodecambioComponent1750272791229 {
+export class TraspasarEntreCuentasPropiascontipodecambioComponent1750446218555 {
   pageTitle        = 'Traspasar Entre Cuentas Propias (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas propias.`;
   pubName    = 'BTCuentasVista.TraspasarCuentasPropiasConCotizacion';

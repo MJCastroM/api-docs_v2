@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerServiciosMasEjecutadosComponent1750272791311 {
+export class ObtenerServiciosMasEjecutadosComponent1750446218603 {
   pageTitle        = 'Obtener Servicios Más Ejecutados';
   description      = `Método para obtener un listado de los servicios más ejecutados y sus estadísticas.`;
   pubName    = 'BTIndicadores.ObtenerServiciosMasEjecutados';

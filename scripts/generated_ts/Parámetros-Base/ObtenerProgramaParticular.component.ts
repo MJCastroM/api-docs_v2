@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProgramaParticularComponent1750272791470 {
+export class ObtenerProgramaParticularComponent1750446218696 {
   pageTitle        = 'Obtener Programa Particular';
   description      = `Método para obtener el programa particular a ejecutar según el programa estándar ingresado.`;
   pubName    = 'BTParametrosBase.ObtenerProgramaParticular';

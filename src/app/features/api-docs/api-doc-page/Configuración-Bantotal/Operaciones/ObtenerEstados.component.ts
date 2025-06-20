@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosComponent1750272790996 {
+export class ObtenerEstadosComponent1750446218354 {
   pageTitle        = 'Obtener Estados';
   description      = `Método para obtener un listado de los estados de producto ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstados';

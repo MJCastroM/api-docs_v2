@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosAPagarComponent1750272791850 {
+export class ObtenerSegurosAPagarComponent1750446218977 {
   pageTitle        = 'Obtener Seguros a Pagar';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener un listado de los seguros a pagar.`;
+  pubName    = 'BTSegurosVoluntarios.ObtenerSegurosAPagar';
+  programa   = 'RBTPG543';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
+  outputData = [{ Nombre: 'sdtSegurosAPagar', Tipo: '[sBTProductosSeguro](#sbtproductosseguro)', Comentarios: 'Listado de seguros a pagar.' }];
+  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador de cuenta cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `

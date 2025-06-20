@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalOperacionComponent1750272791065 {
+export class ObtenerIdBantotalOperacionComponent1750446218415 {
   pageTitle        = 'Obtener Identificador Bantotal de Operación';
   description      = `Método para obtener la clave de identificación Bantotal de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIdBantotalOperacion';

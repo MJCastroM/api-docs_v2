@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosCanceladosComponent1750272790935 {
+export class ObtenerPrestamosCanceladosComponent1750446218285 {
   pageTitle        = 'Obtener Préstamos Cancelados';
   description      = `Método para obtener los préstamos cancelados de un cliente.`;
   pubName    = 'BTClientes.ObtenerPrestamosCancelados';

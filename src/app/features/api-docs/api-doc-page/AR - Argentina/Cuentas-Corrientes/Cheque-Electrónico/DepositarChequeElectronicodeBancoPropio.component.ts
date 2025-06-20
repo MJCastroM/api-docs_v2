@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeBancoPropioComponent1750272790700 {
+export class DepositarChequeElectronicodeBancoPropioComponent1750446218080 {
   pageTitle        = 'Depositar Cheque Electrónico de Banco Propio';
   description      = `Método para depositar un cheque electrónico propio.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoPropio';

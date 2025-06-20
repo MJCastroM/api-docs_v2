@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitulosComponent1750272790967 {
+export class ObtenerTitulosComponent1750446218326 {
   pageTitle        = 'Obtener Títulos';
   description      = `Método para obtener los títulos de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerTitulos';

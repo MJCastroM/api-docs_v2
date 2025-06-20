@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSesionesPorUsuarioComponent1750272791312 {
+export class ObtenerSesionesPorUsuarioComponent1750446218604 {
   pageTitle        = 'Obtener Sesiones Por Usuario';
   description      = `Método para obtener la cantidad de sesiones abiertas por usuario.`;
   pubName    = 'BTIndicadores.ObtenerSesionesPorUsuario';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeViviendaComponent1750272791043 {
+export class ObtenerTiposdeViviendaComponent1750446218397 {
   pageTitle        = 'Obtener Tipos de Vivienda';
   description      = `Método para obtener un listado de los tipos de vivienda ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeVivienda';

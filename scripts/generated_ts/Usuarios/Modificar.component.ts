@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarComponent1750272791918 {
+export class ModificarComponent1750446219030 {
   pageTitle        = 'Modificar';
   description      = `Método para modificar un usuario.`;
   pubName    = 'BTUsuarios.Modificar';

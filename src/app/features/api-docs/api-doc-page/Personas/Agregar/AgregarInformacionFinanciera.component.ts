@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionFinancieraComponent1750272791531 {
+export class AgregarInformacionFinancieraComponent1750446218727 {
   pageTitle        = 'Agregar Información Financiera';
   description      = `Método para agregar la información financiera de una persona.`;
   pubName    = 'BTPersonas.AgregarInformacionFinanciera';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoComponent1750272791086 {
+export class RegistrarAsientoComponent1750446218429 {
   pageTitle        = 'Registrar Asiento';
   description      = `Método para registrar en el sistema un movimiento entre dos operaciones genéricas.`;
   pubName    = 'BTContabilidad.RegistrarAsiento';

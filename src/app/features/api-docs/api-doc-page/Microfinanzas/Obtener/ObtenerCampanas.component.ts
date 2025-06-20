@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCampanasComponent1750272791355 {
+export class ObtenerCampanasComponent1750446218629 {
   pageTitle        = 'Obtener Campañas';
   description      = `Método para obtener las campañas de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerCampanias';

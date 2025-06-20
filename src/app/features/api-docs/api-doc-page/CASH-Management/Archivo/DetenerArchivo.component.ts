@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DetenerArchivoComponent1750272790779 {
+export class DetenerArchivoComponent1750446218138 {
   pageTitle        = 'Detener Archivo';
   description      = `Método para detener la ejecución de pagos o transferencias ya autorizados.`;
   pubName    = 'BTCASHManagement.DetenerArchivo';

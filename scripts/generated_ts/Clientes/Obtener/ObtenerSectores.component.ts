@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSectoresComponent1750272790954 {
+export class ObtenerSectoresComponent1750446218302 {
   pageTitle        = 'Obtener Sectores';
   description      = `Método para obtener un listado de los sectores ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerSectores';

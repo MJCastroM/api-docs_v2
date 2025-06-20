@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldosdeOtrosProductosComponent1750272790952 {
+export class ObtenerSaldosdeOtrosProductosComponent1750446218300 {
   pageTitle        = 'Obtener Saldos de Otros Productos';
   description      = `Método para obtener los saldos de los productos de un cliente.`;
   pubName    = 'BTClientes.ObtenerSaldosProducto';

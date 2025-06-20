@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarInformacionAdicionalComponent1750272791487 {
+export class ActualizarInformacionAdicionalComponent1750446218705 {
   pageTitle        = 'Actualizar Información Adicional';
   description      = `Método para actualizar la información adicional de una persona.`;
   pubName    = 'BTPersonas.ActualizarInformacionAdicional';

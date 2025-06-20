@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerServiciosComponent1750272790805 {
+export class ObtenerServiciosComponent1750446218159 {
   pageTitle        = 'Obtener Servicios';
   description      = `Método para obtener un listado de los servicios de CASH.`;
   pubName    = 'BTCASHManagement.ObtenerServicios';

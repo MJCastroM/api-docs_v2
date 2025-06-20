@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgenciasBancoComponent1750272790972 {
+export class ObtenerAgenciasBancoComponent1750446218332 {
   pageTitle        = 'Obtener Agencias Banco';
   description      = `Método para obtener un listado de las agencias de un banco.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerAgenciasBanco';

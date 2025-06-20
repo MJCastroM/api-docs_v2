@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiariosComponent1750272791244 {
+export class ObtenerBeneficiariosComponent1750446218561 {
   pageTitle        = 'Obtener Beneficiarios';
   description      = `Método para obtener los beneficiarios de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerBeneficiarios';

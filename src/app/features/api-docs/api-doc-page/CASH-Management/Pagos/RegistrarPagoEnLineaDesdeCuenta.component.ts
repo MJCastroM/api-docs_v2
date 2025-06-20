@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoEnLineaDesdeCuentaComponent1750272790827 {
+export class RegistrarPagoEnLineaDesdeCuentaComponent1750446218175 {
   pageTitle        = 'Registrar Pago En Linea Desde Cuenta';
   description      = `Método para registrar el pago en linea de una factura, debitando desde la cuenta.`;
   pubName    = 'BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta';

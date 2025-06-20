@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDatosContactoComponent1750272791878 {
+export class ActualizarDatosContactoComponent1750446218999 {
   pageTitle        = 'Actualizar Datos de Contacto';
   description      = `Método para actualizar los datos de contacto de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarDatosContacto';

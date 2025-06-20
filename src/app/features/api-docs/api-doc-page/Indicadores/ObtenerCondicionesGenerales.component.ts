@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCondicionesGeneralesComponent1750272791300 {
+export class ObtenerCondicionesGeneralesComponent1750446218597 {
   pageTitle        = 'Obtener Condiciones Generales';
   description      = `Método para obtener las condiciones generales ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerCondicionesGenerales';

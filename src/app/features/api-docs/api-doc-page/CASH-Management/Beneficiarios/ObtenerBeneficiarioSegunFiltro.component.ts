@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiarioSegunFiltroComponent1750272790786 {
+export class ObtenerBeneficiarioSegunFiltroComponent1750446218143 {
   pageTitle        = 'Obtener Beneficiario Según Filtro';
   description      = `Método para obtener el beneficiario según el filtro.`;
   pubName    = 'BTCASHManagement.ObtenerBeneficiarioSegunFiltro';

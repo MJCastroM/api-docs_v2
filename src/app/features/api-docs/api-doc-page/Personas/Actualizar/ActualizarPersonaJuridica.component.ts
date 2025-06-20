@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPersonaJuridicaComponent1750272791494 {
+export class ActualizarPersonaJuridicaComponent1750446218709 {
   pageTitle        = 'Actualizar Persona Jurídica';
   description      = `Método para actualizar una persona jurídica.`;
   pubName    = 'BTPersonas.ActualizarPersonaJuridica';

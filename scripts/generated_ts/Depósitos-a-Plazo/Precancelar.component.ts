@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PrecancelarComponent1750272791282 {
+export class PrecancelarComponent1750446218586 {
   pageTitle        = 'Precancelar';
   description      = `Método para precancelar una operación de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Precancelar';

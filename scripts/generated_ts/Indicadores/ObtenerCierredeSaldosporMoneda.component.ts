@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCierredeSaldosporMonedaComponent1750272791299 {
+export class ObtenerCierredeSaldosporMonedaComponent1750446218596 {
   pageTitle        = 'Obtener Cierre de Saldos por Moneda';
   description      = `Método para obtener el cierre de saldos por moneda.`;
   pubName    = 'BTIndicadores.ObtenerCierreSaldosPorMoneda';

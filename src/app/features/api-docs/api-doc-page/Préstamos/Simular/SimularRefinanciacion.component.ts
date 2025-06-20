@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionComponent1750272791817 {
+export class SimularRefinanciacionComponent1750446218957 {
   pageTitle        = 'Simular Refinanciación';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para simular la refinanciación de un préstamo.`;
+  pubName    = 'BTPrestamos.SimularRefinanciacion';
+  programa   = 'RBTPG548';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'sdtSimulacionRefinanciacion', Tipo: '[sBTSimulacionRefinanciacion](#sbtsimulacionrefinanciacion)', Comentarios: 'Datos para simular la refinanciación.' }, { Nombre: 'modoIngreso', Tipo: 'Byte', Comentarios: '[Hidden: Valor fijo \'0\' para este método].' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo vacío para este método].' }];
+  outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }, { Nombre: 'montoPerdon', Tipo: 'Double', Comentarios: 'Monto de perdón.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30004', Descripcion: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'El cliente ingresado no coincide con el de la simulación.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'La simulación no retornó nº de operación.' }];
 
   examples = {
     invocation: { xml: `

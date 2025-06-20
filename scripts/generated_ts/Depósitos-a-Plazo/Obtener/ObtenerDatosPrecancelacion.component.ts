@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPrecancelacionComponent1750272791266 {
+export class ObtenerDatosPrecancelacionComponent1750446218576 {
   pageTitle        = 'Obtener Datos de Precancelación';
   description      = `Método para obtener la simulación de la precancelación de un depósito a plazo para una fecha dada.`;
   pubName    = 'BTDepositosAPlazo.ObtenerDatosPrecancelacion';

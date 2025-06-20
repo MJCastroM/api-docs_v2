@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarListasInhabilitadosComponent1750272791632 {
+export class ValidarListasInhabilitadosComponent1750446218811 {
   pageTitle        = 'Validar Listas Inhabilitados';
   description      = `Método para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: país, tipo de documento y número de documento, o primer nombre y primer apellido)`;
   pubName    = 'BTPersonas.ValidarListasInhabilitados';

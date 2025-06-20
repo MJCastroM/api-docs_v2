@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeFuncionarioPublicoComponent1750272791610 {
+export class ObtenerTiposDeFuncionarioPublicoComponent1750446218795 {
   pageTitle        = 'Obtener Tipos de Funcionario Público';
   description      = `Método para obtener los tipos de funcionario público.`;
   pubName    = 'BTPersonas.ObtenerTiposDeFuncionarioPublico';

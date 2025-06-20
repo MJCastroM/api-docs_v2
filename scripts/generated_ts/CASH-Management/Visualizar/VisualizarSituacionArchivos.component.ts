@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarSituacionArchivosComponent1750272790838 {
+export class VisualizarSituacionArchivosComponent1750446218188 {
   pageTitle        = 'Visualizar Situación Archivos';
   description      = `Método para visualizar la situación de los archivos subidos por el cliente.`;
   pubName    = 'BTCASHManagement.VisualizarSituacionArchivos';

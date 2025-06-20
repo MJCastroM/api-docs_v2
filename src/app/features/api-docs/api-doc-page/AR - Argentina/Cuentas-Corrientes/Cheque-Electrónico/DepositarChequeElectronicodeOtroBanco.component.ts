@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeOtroBancoComponent1750272790702 {
+export class DepositarChequeElectronicodeOtroBancoComponent1750446218081 {
   pageTitle        = 'Depositar Cheque Electrónico de Otro Banco';
   description      = `Método para depositar un cheque electrónico de otro banco.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco';

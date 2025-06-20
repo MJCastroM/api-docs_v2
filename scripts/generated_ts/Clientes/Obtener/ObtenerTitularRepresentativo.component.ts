@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitularRepresentativoComponent1750272790965 {
+export class ObtenerTitularRepresentativoComponent1750446218323 {
   pageTitle        = 'Obtener Titular Representativo';
   description      = `Método para obtener el identificador del titular representativo de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerTitularRepresentativo';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAdhesionesComponent1750272790720 {
+export class ObtenerAdhesionesComponent1750446218096 {
   pageTitle        = 'Obtener Adhesiones';
   description      = `Método para obtener las adhesiones de un cliente a una determinada empresa originante.`;
   pubName    = 'BTSNP.ObtenerAdhesiones';

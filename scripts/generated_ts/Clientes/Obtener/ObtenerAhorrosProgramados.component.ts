@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAhorrosProgramadosComponent1750272790884 {
+export class ObtenerAhorrosProgramadosComponent1750446218233 {
   pageTitle        = 'Obtener Ahorros Programados';
   description      = `Método para obtener un listado de los productos de ahorro programado que tiene contratado un cliente.`;
   pubName    = 'BTClientes.ObtenerAhorrosProgramados';

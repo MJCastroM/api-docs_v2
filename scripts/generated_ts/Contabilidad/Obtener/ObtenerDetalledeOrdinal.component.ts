@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdinalComponent1750272791081 {
+export class ObtenerDetalledeOrdinalComponent1750446218426 {
   pageTitle        = 'Obtener Detalle de Ordinal';
   description      = `Método para obtener el detalle de un determinado ordinal de un movimiento.`;
   pubName    = 'BTContabilidad.ObtenerDetalleOrdinal';

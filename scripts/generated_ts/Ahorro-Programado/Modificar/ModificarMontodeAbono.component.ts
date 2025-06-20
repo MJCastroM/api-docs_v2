@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarMontodeAbonoComponent1750272790675 {
+export class ModificarMontodeAbonoComponent1750446218059 {
   pageTitle        = 'Modificar Monto de Abono';
   description      = `Método para modificar el monto del abono para el ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarMontoDeAbono';

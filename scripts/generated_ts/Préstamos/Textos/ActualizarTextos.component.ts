@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarTextosComponent1750272791823 {
+export class ActualizarTextosComponent1750446218960 {
   pageTitle        = 'Actualizar Textos';
   description      = `Método para actualizar los textos de un préstamo.`;
   pubName    = 'BTPrestamos.ActualizarTextos';

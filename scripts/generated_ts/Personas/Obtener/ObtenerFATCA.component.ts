@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFATCAComponent1750272791578 {
+export class ObtenerFATCAComponent1750446218765 {
   pageTitle        = 'Obtener FATCA';
   description      = `Método para obtener la información FATCA de una persona.`;
   pubName    = 'BTPersonas.ObtenerFATCA';

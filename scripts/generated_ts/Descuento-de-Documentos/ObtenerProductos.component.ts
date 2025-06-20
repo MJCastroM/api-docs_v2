@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750272791294 {
+export class ObtenerProductosComponent1750446218593 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de descuento de documentos.`;
   pubName    = 'BTDescuentoDocumentos.ObtenerProductos';

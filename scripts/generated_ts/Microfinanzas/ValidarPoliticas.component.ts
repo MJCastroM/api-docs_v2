@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarPoliticasComponent1750272791381 {
+export class ValidarPoliticasComponent1750446218649 {
   pageTitle        = 'Validar Políticas';
   description      = `Método para validar las políticas crediticias de una determinada etapa del proceso de otorgamiento de créditos.`;
   pubName    = 'BTMicrofinanzas.ValidarPoliticas';

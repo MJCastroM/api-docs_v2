@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoAdicionalComponent1750272791558 {
+export class EliminarDocumentoAdicionalComponent1750446218748 {
   pageTitle        = 'Eliminar Documento Adicional';
   description      = `Método para eliminar un documento adicional de una persona.`;
   pubName    = 'BTPersonas.EliminarDocumentoAdicional';

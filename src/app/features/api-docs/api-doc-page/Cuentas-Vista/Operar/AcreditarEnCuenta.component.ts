@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AcreditarEnCuentaComponent1750272791199 {
+export class AcreditarEnCuentaComponent1750446218541 {
   pageTitle        = 'Acreditar en Cuenta';
   description      = `Método para realizar una acreditación a una cuenta vista determinada.`;
   pubName    = 'BTCuentasVista.AcreditarEnCuenta ';

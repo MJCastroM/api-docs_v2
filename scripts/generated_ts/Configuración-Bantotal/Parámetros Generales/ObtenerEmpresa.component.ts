@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresaComponent1750272791016 {
+export class ObtenerEmpresaComponent1750446218373 {
   pageTitle        = 'Obtener Empresa';
   description      = `Método para obtener información de la empresa.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEmpresa';

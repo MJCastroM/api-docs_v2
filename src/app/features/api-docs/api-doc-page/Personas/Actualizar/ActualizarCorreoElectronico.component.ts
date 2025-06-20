@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCorreoElectronicoComponent1750272791479 {
+export class ActualizarCorreoElectronicoComponent1750446218700 {
   pageTitle        = 'Actualizar Correo Electrónico';
   description      = `Método para actualizar el correo electrónico de una persona.`;
   pubName    = 'BTPersonas.ActualizarCorreoElectronico';

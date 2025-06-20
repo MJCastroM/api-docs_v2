@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaComponent1750272791138 {
+export class ObtenerEstadodeCuentaComponent1750446218500 {
   pageTitle        = 'Obtener Estado de Cuenta';
   description      = `Método para obtener el estado de cuenta de un producto de cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerEstadoDeCuenta';

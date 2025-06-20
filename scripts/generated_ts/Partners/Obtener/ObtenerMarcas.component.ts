@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMarcasComponent1750272791428 {
+export class ObtenerMarcasComponent1750446218678 {
   pageTitle        = 'Obtener Marcas';
   description      = `Método para retornar las marcas de los vehículos.`;
   pubName    = 'BTPartners.ObtenerMarcas';

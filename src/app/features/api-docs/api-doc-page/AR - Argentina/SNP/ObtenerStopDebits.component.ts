@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerStopDebitsComponent1750272790728 {
+export class ObtenerStopDebitsComponent1750446218100 {
   pageTitle        = 'Obtener Stop Debits';
   description      = `Método para obtener los stop debits asociados a un cliente.`;
   pubName    = 'BTSNP.ObtenerStopDebits';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularLibreAmortizacionComponent1750272791375 {
+export class SimularLibreAmortizacionComponent1750446218645 {
   pageTitle        = 'Simular Libre Amortización';
   description      = `Método para simular el alta de un préstamo libre amortización para un crédito individual.`;
   pubName    = 'BTMicrofinanzas.SimularLibreAmortizacion';

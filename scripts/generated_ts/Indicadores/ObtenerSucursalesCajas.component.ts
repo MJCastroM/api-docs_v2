@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesCajasComponent1750272791314 {
+export class ObtenerSucursalesCajasComponent1750446218604 {
   pageTitle        = 'Obtener Sucursales Cajas';
   description      = `Método para obtener porcentajes y listados de sucursales y cajas del sistema.`;
   pubName    = 'BTIndicadores.ObtenerSucursalesCajas';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosComponent1750272790926 {
+export class ObtenerPlazosFijosComponent1750446218277 {
   pageTitle        = 'Obtener Plazos Fijos';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente.`;
   pubName    = 'BTClientes.ObtenerPlazosFijos';

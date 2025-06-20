@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaComponent1750272791868 {
+export class ObtenerTarjetaComponent1750446218993 {
   pageTitle        = 'Obtener Tarjeta';
   description      = `Método para obtener la tarjeta encriptada según las normas PCI.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjeta';

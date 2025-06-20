@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarResultadoProcesamientoComponent1750272790834 {
+export class VisualizarResultadoProcesamientoComponent1750446218183 {
   pageTitle        = 'Visualizar Resultado Procesamiento';
   description      = `Método para visualizar el resultado del procesamiento de un archivo.`;
   pubName    = 'BTCASHManagement.VisualizarResultadoProcesamiento';

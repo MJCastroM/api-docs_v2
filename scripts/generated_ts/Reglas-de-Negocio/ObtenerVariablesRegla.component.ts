@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVariablesReglaComponent1750272791834 {
+export class ObtenerVariablesReglaComponent1750446218966 {
   pageTitle        = 'Obtener Variables Regla';
   description      = `Método para obtener las variables de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ObtenerVariablesRegla';

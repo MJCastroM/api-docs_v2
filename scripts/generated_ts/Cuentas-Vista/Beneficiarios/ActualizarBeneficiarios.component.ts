@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarBeneficiariosComponent1750272791160 {
+export class ActualizarBeneficiariosComponent1750446218521 {
   pageTitle        = 'Actualizar Beneficiarios';
   description      = `Método para actualizar el listado de beneficiarios de una cuenta vista. Luego de la ejecución, se eliminarán los beneficiarios previamente registrados, y se asociarán los ingresados en el listado.`;
   pubName    = 'BTCuentasVista.ActualizarBeneficiarios';

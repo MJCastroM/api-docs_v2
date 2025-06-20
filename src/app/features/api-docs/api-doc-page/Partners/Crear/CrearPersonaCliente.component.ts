@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearPersonaClienteComponent1750272791417 {
+export class CrearPersonaClienteComponent1750446218673 {
   pageTitle        = 'Crear Persona Cliente';
   description      = `Método para crear persona de Partner.`;
   pubName    = 'BTPartners.CrearPersonaCliente';

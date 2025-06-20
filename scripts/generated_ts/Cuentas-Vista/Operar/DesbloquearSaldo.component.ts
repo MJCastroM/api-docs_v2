@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DesbloquearSaldoComponent1750272791212 {
+export class DesbloquearSaldoComponent1750446218546 {
   pageTitle        = 'Desbloquear Saldo';
   description      = `Método para realizar la baja de un bloqueo de saldo.`;
   pubName    = 'BTCuentasVista.DesbloquearSaldo';

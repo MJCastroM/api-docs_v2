@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOrdenSegunCampoComponent1750272790798 {
+export class ObtenerDetalleOrdenSegunCampoComponent1750446218152 {
   pageTitle        = 'Obtener Detalle de Orden Según Campo';
   description      = `Método para obtener la información de las líneas del detalle de pago para la orden que coincida con el campo/valor recibido.`;
   pubName    = 'BTCASHManagement.ObtenerDetalleOrdenSegunCampo';

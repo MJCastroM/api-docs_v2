@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasComponent1750272791595 {
+export class ObtenerPersonasComponent1750446218783 {
   pageTitle        = 'Obtener Personas';
   description      = `Método para obtener los datos de la/s persona/s con el nombre ingresado.`;
   pubName    = 'BTPersonas.ObtenerPersonas';

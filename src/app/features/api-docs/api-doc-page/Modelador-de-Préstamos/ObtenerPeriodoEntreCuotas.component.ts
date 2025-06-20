@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodoEntreCuotasComponent1750272791396 {
+export class ObtenerPeriodoEntreCuotasComponent1750446218660 {
   pageTitle        = 'Obtener Período Entre Cuotas';
   description      = `Método para obtener los períodos entre cuotas parametrizados de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerPeriodoEntreCuotas';

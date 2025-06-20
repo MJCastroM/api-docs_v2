@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionComponent1750272791643 {
+export class ObtenerCotizacionComponent1750446218818 {
   pageTitle        = 'Obtener Cotización';
   description      = `Método para obtener la cotización del día.`;
   pubName    = 'BTPrecios.ObtenerCotizacion';

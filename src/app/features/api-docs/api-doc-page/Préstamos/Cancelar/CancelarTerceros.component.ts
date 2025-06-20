@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarTercerosComponent1750272791669 {
+export class CancelarTercerosComponent1750446218836 {
   pageTitle        = 'Cancelar Terceros';
   description      = `Método para realizar la cancelación de un préstamo con una cuenta de cobro de terceros.`;
   pubName    = 'BTPrestamos.CancelarTerceros';

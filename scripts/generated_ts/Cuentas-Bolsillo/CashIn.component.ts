@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CashInComponent1750272791093 {
+export class CashInComponent1750446218432 {
   pageTitle        = 'Cash In';
   description      = `Método para realizar un depósito en cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.CashIn';

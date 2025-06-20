@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionAdicionalComponent1750272791766 {
+export class AgregarInformacionAdicionalComponent1750446218914 {
   pageTitle        = 'Agregar Información Adicional';
   description      = `Método para agregar la información adicional de un préstamo.`;
   pubName    = 'BTPrestamos.AgregarInformacionAdicional';

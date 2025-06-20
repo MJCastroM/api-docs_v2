@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTelefonosComponent1750272790961 {
+export class ObtenerTelefonosComponent1750446218308 {
   pageTitle        = 'Obtener Telefonos';
   description      = `Método para obtener los teléfonos de un cliente.`;
   pubName    = 'BTClientes.ObtenerTelefonos';

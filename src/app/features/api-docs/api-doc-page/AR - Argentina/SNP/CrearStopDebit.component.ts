@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitComponent1750272790715 {
+export class CrearStopDebitComponent1750446218091 {
   pageTitle        = 'Crear Stop Debit';
   description      = `Método para crear un stop debit sin importe.`;
   pubName    = 'BTSNP.CrearStopDebit';

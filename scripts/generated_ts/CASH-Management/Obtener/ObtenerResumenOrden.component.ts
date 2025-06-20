@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumenOrdenComponent1750272790803 {
+export class ObtenerResumenOrdenComponent1750446218157 {
   pageTitle        = 'Obtener Resumen de una Orden';
   description      = `Método para obtener el resumen de la información de la orden recibida.`;
   pubName    = 'BTCASHManagement.ObtenerResumenOrden';

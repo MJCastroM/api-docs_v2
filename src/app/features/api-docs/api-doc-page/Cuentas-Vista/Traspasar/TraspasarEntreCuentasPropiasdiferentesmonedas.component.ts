@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750272791230 {
+export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750446218556 {
   pageTitle        = 'Traspasar Entre Cuentas Propias (diferentes monedas)';
   description      = `Método para realizar un traspaso entre cuentas propias de diferente moneda.`;
   pubName    = 'BTCuentasVista.TraspasarCuentasPropiasDiferentesMonedas';

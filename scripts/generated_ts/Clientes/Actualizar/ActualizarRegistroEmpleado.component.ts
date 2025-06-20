@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750272790851 {
+export class ActualizarRegistroEmpleadoComponent1750446218204 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si un cliente es empleado de la institución, junto con su fecha de ingreso si es requerido.`;
   pubName    = 'BTClientes.ActualizarRegistroEmpleado';

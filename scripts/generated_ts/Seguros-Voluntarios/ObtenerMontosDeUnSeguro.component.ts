@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMontosDeUnSeguroComponent1750272791847 {
+export class ObtenerMontosDeUnSeguroComponent1750446218975 {
   pageTitle        = 'Obtener Montos de Seguro';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener los montos de un seguro.`;
+  pubName    = 'BTSegurosVoluntarios.ObtenerMontosDeUnSeguro';
+  programa   = 'RBTPG544';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'seguroUId', Tipo: 'Long', Comentarios: 'Identificador único del seguro.' }];
+  outputData = [{ Nombre: 'montoAdeudado', Tipo: 'Double', Comentarios: 'Monto adeudado.' }, { Nombre: 'montoMinimo', Tipo: 'Double', Comentarios: 'Monto mínimo.' }, { Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelación.' }];
+  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador de operación del seguro.' }, { Codigo: '30003', Descripcion: 'No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `

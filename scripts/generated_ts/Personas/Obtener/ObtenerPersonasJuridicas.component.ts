@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasJuridicasComponent1750272791596 {
+export class ObtenerPersonasJuridicasComponent1750446218783 {
   pageTitle        = 'Obtener Personas Jurídicas';
   description      = `Método para obtener un listado de personas jurídicas (10 máximo), dada una razón social.`;
   pubName    = 'BTPersonas.ObtenerPersonasJuridicas';

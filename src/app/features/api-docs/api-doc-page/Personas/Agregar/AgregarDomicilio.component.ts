@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDomicilioComponent1750272791520 {
+export class AgregarDomicilioComponent1750446218723 {
   pageTitle        = 'Agregar Domicilio';
   description      = `Método para agregar domicilio a una persona.`;
   pubName    = 'BTPersonas.AgregarDomicilio';

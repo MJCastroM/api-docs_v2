@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750272790640 {
+export class ContratarSimulacionComponent1750446218029 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un ahorro programado a partir de una simulación.`;
   pubName    = 'BTAhorroProgramado.ContratarSimulacion';

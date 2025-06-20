@@ -8,19 +8,19 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosComponent1750272791849 {
+export class ObtenerSegurosComponent1750446218976 {
   pageTitle        = 'Obtener Seguros';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener un listado de los seguros.`;
+  pubName    = 'BTSegurosVoluntarios.ObtenerSeguros';
+  programa   = 'RBTPG541';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
   inputData  = [];
-  outputData = [];
+  outputData = [{ Nombre: 'sdtSeguros', Tipo: '[sBTSeguro](#sbtseguro)', Comentarios: 'Listado de seguros.' }];
   errors     = [];
 
   examples = {

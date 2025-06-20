@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrecioEspecieComponent1750272791652 {
+export class ObtenerPrecioEspecieComponent1750446218824 {
   pageTitle        = 'Obtener Precio Especie';
   description      = `Método para obtener la cotización de una especie en moneda nacional.`;
   pubName    = 'BTPrecios.ObtenerPrecioEspecie';

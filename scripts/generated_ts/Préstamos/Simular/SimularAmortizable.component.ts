@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularAmortizableComponent1750272791788 {
+export class SimularAmortizableComponent1750446218937 {
   pageTitle        = 'Simular Amortizable';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para simular un préstamo amortizable.`;
+  pubName    = 'BTPrestamos.SimularAmortizable';
+  programa   = 'RBTPG523';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: '[Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores](#valores).]' }, { Nombre: 'sdtSimulacionInput', Tipo: '[sBTSimulacionInput](#sbtsimulacioninput)', Comentarios: 'Datos necesarios para la simulación.' }];
+  outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de producto ni operación.' }, { Codigo: '30002', Descripcion: 'No se puede indicar producto y operación al mismo tiempo.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'La cuenta para el Identificador [Número de Identificador] no coincide con el de la operación.' }, { Codigo: '40001', Descripcion: 'La fecha valor no puede ser anterior a la de apertura.' }, { Codigo: '40002', Descripcion: 'No se puede indicar capital y valor cuota en una simulación.' }];
 
   examples = {
     invocation: { xml: `

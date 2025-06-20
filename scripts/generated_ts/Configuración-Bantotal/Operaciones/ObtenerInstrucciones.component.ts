@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionesComponent1750272790998 {
+export class ObtenerInstruccionesComponent1750446218357 {
   pageTitle        = 'Obtener Instrucciones';
   description      = `Método para obtener un listado de las instrucciones ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerInstrucciones';

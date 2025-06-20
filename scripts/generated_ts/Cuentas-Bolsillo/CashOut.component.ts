@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CashOutComponent1750272791095 {
+export class CashOutComponent1750446218432 {
   pageTitle        = 'Cash Out';
   description      = `Método para realizar un traspaso hacia la cuenta principal.`;
   pubName    = 'BTCuentasBolsillo.CashOut';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeMovimientoComponent1750272791068 {
+export class ObtenerIdentificadorUnicodeMovimientoComponent1750446218418 {
   pageTitle        = 'Obtener Identificador Único de Movimiento';
   description      = `Método para obtener el identificador único de un movimiento contable.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoMovimiento';

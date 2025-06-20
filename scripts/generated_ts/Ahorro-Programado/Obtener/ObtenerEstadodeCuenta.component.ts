@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaComponent1750272790685 {
+export class ObtenerEstadodeCuentaComponent1750446218066 {
   pageTitle        = 'Obtener Estado de Cuenta';
   description      = `Método para obtener el estado de cuenta del ahorro.`;
   pubName    = 'BTAhorroProgramado.ObtenerEstadoDeCuenta';

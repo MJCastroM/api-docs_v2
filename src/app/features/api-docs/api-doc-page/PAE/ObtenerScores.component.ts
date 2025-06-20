@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerScoresComponent1750272791407 {
+export class ObtenerScoresComponent1750446218665 {
   pageTitle        = 'Obtener Scores';
   description      = `Método para obtener los scores de los modelos de evaluación.`;
   pubName    = 'BTPAE.ObtenerScores';

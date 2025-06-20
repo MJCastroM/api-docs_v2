@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosJuridicosComponent1750272791621 {
+export class ObtenerVinculosJuridicosComponent1750446218804 {
   pageTitle        = 'Obtener Vínculos Juridicos';
   description      = `Método para obtener un listado de los vínculos jurídicos registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosJuridicos';

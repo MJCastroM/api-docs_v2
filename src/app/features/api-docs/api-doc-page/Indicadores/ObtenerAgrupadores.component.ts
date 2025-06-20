@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresComponent1750272791298 {
+export class ObtenerAgrupadoresComponent1750446218595 {
   pageTitle        = 'Obtener Agrupadores';
   description      = `Método para obtener los agrupadores de indicadores ingresados en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerAgrupadores';

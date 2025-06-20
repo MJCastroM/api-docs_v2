@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarChequeraComponent1750272791126 {
+export class SolicitarChequeraComponent1750446218453 {
   pageTitle        = 'Solicitar Chequera';
   description      = `Método para solicitar una chequera para una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.SolicitarChequera';
