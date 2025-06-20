@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosconAvanceComponent1750272790930 {
+export class ObtenerPlazosFijosconAvanceComponent1750446218280 {
   pageTitle        = 'Obtener Plazos Fijos con Avance';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente, con su correspondiente avance.`;
   pubName    = 'BTClientes.ObtenerPlazosFijoConAvance';

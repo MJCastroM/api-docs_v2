@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBancosComponent1750272790975 {
+export class ObtenerBancosComponent1750446218333 {
   pageTitle        = 'Obtener Bancos';
   description      = `Método para obtener un listado de los bancos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerBancos';

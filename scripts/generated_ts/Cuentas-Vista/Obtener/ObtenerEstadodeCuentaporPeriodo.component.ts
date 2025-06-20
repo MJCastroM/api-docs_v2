@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaporPeriodoComponent1750272791182 {
+export class ObtenerEstadodeCuentaporPeriodoComponent1750446218532 {
   pageTitle        = 'Obtener Estado de Cuenta por Período';
   description      = `Método para obtener el estado de cuenta y los movimientos realizados para una cuenta vista en determinado rango de fechas.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo';

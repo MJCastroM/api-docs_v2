@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosPAEComponent1750272791405 {
+export class ObtenerModelosPAEComponent1750446218664 {
   pageTitle        = 'Obtener Modelos PAE';
   description      = `Método para obtener los modelos PAE.`;
   pubName    = 'BTPAE.ObtenerModelosPAE';

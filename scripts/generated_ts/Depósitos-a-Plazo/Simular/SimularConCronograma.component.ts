@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularConCronogramaComponent1750272791286 {
+export class SimularConCronogramaComponent1750446218589 {
   pageTitle        = 'Simular Con Cronograma';
   description      = `Método para simular el alta de un depósito a plazo con cronograma.`;
   pubName    = 'BTDepositoAPlazo.SimularConCronograma';

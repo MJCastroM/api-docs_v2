@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadoCompraComponent1750272791900 {
+export class ObtenerEstadoCompraComponent1750446219017 {
   pageTitle        = 'Obtener Estado de Compra';
   description      = `Método para obtener el estado de la compra de un título.`;
   pubName    = 'BTTitulos.ObtenerEstadoCompra';

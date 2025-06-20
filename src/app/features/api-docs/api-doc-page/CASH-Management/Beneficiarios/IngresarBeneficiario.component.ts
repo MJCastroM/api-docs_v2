@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class IngresarBeneficiarioComponent1750272790785 {
+export class IngresarBeneficiarioComponent1750446218142 {
   pageTitle        = 'Ingresar Beneficiario';
   description      = `Método para ingresar un beneficiario a la agenda.`;
   pubName    = 'BTCASHManagement.IngresarBeneficiario';

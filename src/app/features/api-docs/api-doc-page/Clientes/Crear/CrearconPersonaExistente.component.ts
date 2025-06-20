@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearconPersonaExistenteComponent1750272790879 {
+export class CrearconPersonaExistenteComponent1750446218228 {
   pageTitle        = 'Crear con Persona Existente';
   description      = `Método para crear una cuenta cliente a partir de una persona existente.`;
   pubName    = 'BTClientes.CrearConPersonaExistente';

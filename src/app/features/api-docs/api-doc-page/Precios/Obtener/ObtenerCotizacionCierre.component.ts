@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionCierreComponent1750272791647 {
+export class ObtenerCotizacionCierreComponent1750446218821 {
   pageTitle        = 'Obtener Cotización Cierre';
   description      = `Método para obtener la cotización del cierre.`;
   pubName    = 'BTPrecios.ObtenerCotizacionCierre';

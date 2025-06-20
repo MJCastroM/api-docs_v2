@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearParaPersonaJuridicaComponent1750272790881 {
+export class CrearParaPersonaJuridicaComponent1750446218230 {
   pageTitle        = 'Crear Para Persona Jurídica';
   description      = `Método para crear una persona jurídica y su cuenta cliente.`;
   pubName    = 'BTClientes.CrearParaPersonaJuridica';

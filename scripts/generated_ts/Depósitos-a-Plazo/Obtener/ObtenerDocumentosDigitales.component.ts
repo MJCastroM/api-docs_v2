@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750272791268 {
+export class ObtenerDocumentosDigitalesComponent1750446218576 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener un listado de los documentos digitales asociados a una operación de depósitos a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerDocumentosDigitales';

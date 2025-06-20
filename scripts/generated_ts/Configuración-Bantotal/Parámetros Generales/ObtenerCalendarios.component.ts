@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCalendariosComponent1750272791007 {
+export class ObtenerCalendariosComponent1750446218364 {
   pageTitle        = 'Obtener Calendarios';
   description      = `Método para obtener los calendarios ingresados en el sistema.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCalendarios';

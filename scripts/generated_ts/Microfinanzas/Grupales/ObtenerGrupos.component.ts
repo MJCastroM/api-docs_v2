@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGruposComponent1750272791343 {
+export class ObtenerGruposComponent1750446218621 {
   pageTitle        = 'Obtener Grupos';
   description      = `Método para obtener los grupos de crédito existentes.`;
   pubName    = 'BTMicrofinanzas.ObtenerGrupos';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAcuerdosComponent1750272791133 {
+export class ObtenerAcuerdosComponent1750446218498 {
   pageTitle        = 'Obtener Acuerdos';
   description      = `Método para obtener los acuerdos de sobregiro de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerAcuerdos';

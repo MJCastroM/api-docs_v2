@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegranteComponent1750272790869 {
+export class EliminarIntegranteComponent1750446218218 {
   pageTitle        = 'Eliminar Integrante';
   description      = `Método para eliminar un integrante de una cuenta cliente.`;
   pubName    = 'BTClientes.EliminarIntegrantes';

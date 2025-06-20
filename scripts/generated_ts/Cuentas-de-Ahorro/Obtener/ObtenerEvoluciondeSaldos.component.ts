@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEvoluciondeSaldosComponent1750272791155 {
+export class ObtenerEvoluciondeSaldosComponent1750446218517 {
   pageTitle        = 'Obtener Evolución de Saldos';
   description      = `Método para obtener la evolución del saldo de un producto de cuenta de ahorro.`;
   pubName    = 'BTCuentasDeAhorro.ObtenerEvolucionDeSaldos';

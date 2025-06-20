@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicoenCustodiaComponent1750272790704 {
+export class DepositarChequeElectronicoenCustodiaComponent1750446218082 {
   pageTitle        = 'Depositar Cheque Electrónico en Custodia';
   description      = `Método para depositar un cheque electrónico bajo custodia.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia';

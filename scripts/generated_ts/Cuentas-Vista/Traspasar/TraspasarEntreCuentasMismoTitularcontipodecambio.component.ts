@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750272791225 {
+export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750446218551 {
   pageTitle        = 'Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas cuyo titular sea la misma persona.`;
   pubName    = 'BTCuentasVista.TraspasarMismoTitularConCotizacion';

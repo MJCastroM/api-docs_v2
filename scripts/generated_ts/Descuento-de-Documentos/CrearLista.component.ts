@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearListaComponent1750272791290 {
+export class CrearListaComponent1750446218591 {
   pageTitle        = 'Crear Lista';
   description      = `Método para crear una lista de documentos a descontar.`;
   pubName    = 'BTDescuentoDocumentos.CrearLista';

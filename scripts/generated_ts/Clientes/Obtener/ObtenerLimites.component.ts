@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750272790919 {
+export class ObtenerLimitesComponent1750446218271 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerLimites';

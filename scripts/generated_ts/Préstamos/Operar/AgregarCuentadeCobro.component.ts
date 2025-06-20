@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarCuentadeCobroComponent1750272791765 {
+export class AgregarCuentadeCobroComponent1750446218913 {
   pageTitle        = 'Agregar Cuenta de Cobro';
   description      = `Método para agregar una cuenta de cobro de un préstamo.`;
   pubName    = 'BTPrestamos.AgregarCuentaDeCobro';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarConTipoDeCambioEspecialComponent1750272791220 {
+export class TraspasarConTipoDeCambioEspecialComponent1750446218549 {
   pageTitle        = 'Traspasar con Tipo de Cambio Especial';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda ingresando un tipo de cambio especial.`;
   pubName    = 'BTCuentasVista.TraspasarConTipoDeCambioEspecial ';

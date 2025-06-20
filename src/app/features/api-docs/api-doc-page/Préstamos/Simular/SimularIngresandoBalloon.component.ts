@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoBalloonComponent1750272791804 {
+export class SimularIngresandoBalloonComponent1750446218948 {
   pageTitle        = 'Simular Ingresando Balloon';
   description      = `Método para simular un préstamo ingresando el balloon.`;
   pubName    = 'BTPrestamos.SimularIngresandoBalloon';

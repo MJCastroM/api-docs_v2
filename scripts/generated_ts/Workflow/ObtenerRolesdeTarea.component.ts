@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesdeTareaComponent1750272791933 {
+export class ObtenerRolesdeTareaComponent1750446219041 {
   pageTitle        = 'Obtener Roles de Tarea';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener los roles de una determinada tarea de Workflow.`;
+  pubName    = 'BTWorkflow.ObtenerRolesDeTarea';
+  programa   = 'RBTPG465';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'procesoId', Tipo: 'Int', Comentarios: 'Identificador de proceso Workflow.' }, { Nombre: 'tareaId', Tipo: 'Int', Comentarios: 'Identificador de tarea Workflow.' }];
+  outputData = [{ Nombre: 'sdtRoles', Tipo: '[sBTRolWF](#sbtrolwf)', Comentarios: 'Listado de roles de Workflow.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '40001', Descripcion: 'El proceso ingresado no existe.' }, { Codigo: '40002', Descripcion: 'La tarea ingresada no existe para el proceso.' }, { Codigo: '40003', Descripcion: 'No existen roles en el sistema para la tarea ingresada.' }];
 
   examples = {
     invocation: { xml: `

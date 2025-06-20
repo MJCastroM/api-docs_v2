@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750272791764 {
+export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750446218912 {
   pageTitle        = 'Actualizar Prestamos con Evento';
   description      = `Método para actualizar préstamos con eventos de la tabla SNG912.`;
   pubName    = 'BTPrestamos.ActualizarPrestamosConEvento';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneralPorModuloComponent1750272791468 {
+export class ObtenerOpcionGeneralPorModuloComponent1750446218696 {
   pageTitle        = 'Obtener Opción General Por Módulo';
   description      = `Método para obtener los datos de una opción general de un determinado módulo.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralPorModulo';

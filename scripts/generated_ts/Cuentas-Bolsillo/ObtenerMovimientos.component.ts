@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750272791100 {
+export class ObtenerMovimientosComponent1750446218438 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener los movimientos de una cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.ObtenerMovimientos';

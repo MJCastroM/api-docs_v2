@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ComprarComponent1750272791899 {
+export class ComprarComponent1750446219016 {
   pageTitle        = 'Comprar';
   description      = `Método para comprar un título.`;
   pubName    = 'BTTitulos.Comprar';

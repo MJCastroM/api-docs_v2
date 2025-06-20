@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750272790661 {
+export class ObtenerDocumentoDigitalComponent1750446218047 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.ObtenerDocumentoDigital';

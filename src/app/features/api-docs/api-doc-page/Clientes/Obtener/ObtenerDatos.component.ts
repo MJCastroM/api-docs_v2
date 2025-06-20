@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750272790900 {
+export class ObtenerDatosComponent1750446218258 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener datos de un cliente.`;
   pubName    = 'BTClientes.ObtenerDatos';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerActividadesComponent1750272790981 {
+export class ObtenerActividadesComponent1750446218340 {
   pageTitle        = 'Obtener Actividades';
   description      = `Método para obtener un listado de las actividades ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerActividades';

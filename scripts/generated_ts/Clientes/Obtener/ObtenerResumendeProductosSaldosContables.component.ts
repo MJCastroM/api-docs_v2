@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumendeProductosSaldosContablesComponent1750272790945 {
+export class ObtenerResumendeProductosSaldosContablesComponent1750446218294 {
   pageTitle        = 'Obtener Resumen de Productos (Saldos Contables)';
   description      = `Método para obtener un resumen de los productos de un cliente y su saldo contable correspondiente.`;
   pubName    = 'BTClientes.ObtenerResumenProductos';

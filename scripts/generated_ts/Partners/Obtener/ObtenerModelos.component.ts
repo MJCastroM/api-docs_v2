@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosComponent1750272791429 {
+export class ObtenerModelosComponent1750446218678 {
   pageTitle        = 'Obtener Modelos';
   description      = `Método para retornar los modelos de una marca.`;
   pubName    = 'BTPartners.ObtenerModelos';

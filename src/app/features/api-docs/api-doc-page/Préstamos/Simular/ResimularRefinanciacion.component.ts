@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ResimularRefinanciacionComponent1750272791785 {
+export class ResimularRefinanciacionComponent1750446218933 {
   pageTitle        = 'Resimular Refinanciación';
   description      = `Método para resimular la refinanciación de un préstamo.`;
   pubName    = 'BTPrestamos.ResimularRefinanciacion';

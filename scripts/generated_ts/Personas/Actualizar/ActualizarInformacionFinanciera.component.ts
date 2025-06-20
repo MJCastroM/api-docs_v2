@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarInformacionFinancieraComponent1750272791489 {
+export class ActualizarInformacionFinancieraComponent1750446218707 {
   pageTitle        = 'Actualizar Información Financiera';
   description      = `Método para modificar la información financiera de una persona.`;
   pubName    = 'BTPersonas.ActualizarInformacionFinanciera';

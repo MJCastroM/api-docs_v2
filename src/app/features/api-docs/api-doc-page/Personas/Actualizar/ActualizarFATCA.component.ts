@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarFATCAComponent1750272791485 {
+export class ActualizarFATCAComponent1750446218704 {
   pageTitle        = 'Actualizar FATCA';
   description      = `Método para modificar la información FATCA de una persona.`;
   pubName    = 'BTPersonas.ActualizarFATCA';

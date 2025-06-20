@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750272791577 {
+export class ObtenerFacultadesComponent1750446218764 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una persona.`;
   pubName    = 'BTPersonas.ObtenerFacultades';

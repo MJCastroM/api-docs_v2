@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarIntegrantedeGrupoComponent1750272791331 {
+export class ActualizarIntegrantedeGrupoComponent1750446218613 {
   pageTitle        = 'Actualizar Integrante de Grupo';
   description      = `Método para actualizar un integrante de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ActualizarIntegranteGrupo';

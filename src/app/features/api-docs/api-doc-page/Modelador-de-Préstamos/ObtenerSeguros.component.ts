@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosComponent1750272791401 {
+export class ObtenerSegurosComponent1750446218662 {
   pageTitle        = 'Obtener Seguros';
   description      = `Método para obtener los seguros disponibles de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerSeguros';

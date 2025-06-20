@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarPrecancelacionComponent1750272791770 {
+export class SolicitarPrecancelacionComponent1750446218918 {
   pageTitle        = 'Solicitar Precancelación';
   description      = `Método para solicitar la precancelación de un préstamo.`;
   pubName    = 'BTPrestamos.SolicitarPrecancelacion';

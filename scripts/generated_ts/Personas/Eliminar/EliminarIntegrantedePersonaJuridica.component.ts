@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegrantedePersonaJuridicaComponent1750272791561 {
+export class EliminarIntegrantedePersonaJuridicaComponent1750446218750 {
   pageTitle        = 'Eliminar Integrante de Persona Jurídica';
   description      = `Método para eliminar un integrante de una persona jurídica.`;
   pubName    = 'BTPersonas.EliminarIntegrantePersonaJuridica';

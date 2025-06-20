@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextoAsientoComponent1750272791053 {
+export class AgregarTextoAsientoComponent1750446218405 {
   pageTitle        = 'Agregar Texto Asiento';
   description      = `Método para agregar un texto a un asiento.`;
   pubName    = 'BTContabilidad.AgregarTextoAsiento';

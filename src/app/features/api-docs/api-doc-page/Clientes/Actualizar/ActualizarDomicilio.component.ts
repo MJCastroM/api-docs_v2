@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDomicilioComponent1750272790848 {
+export class ActualizarDomicilioComponent1750446218199 {
   pageTitle        = 'Actualizar Domicilio';
   description      = `Método para actualizar los datos del domicilio de un cliente.`;
   pubName    = 'BTClientes.ActualizarDomicilio';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEjecutivosComponent1750272790985 {
+export class ObtenerEjecutivosComponent1750446218344 {
   pageTitle        = 'Obtener Ejecutivos';
   description      = `Método para obtener un listado de los ejecutivos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEjecutivos';

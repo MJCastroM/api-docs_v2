@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarCuentadeCobroComponent1750272791768 {
+export class EliminarCuentadeCobroComponent1750446218915 {
   pageTitle        = 'Eliminar Cuenta de Cobro';
   description      = `Método para eliminar una cuenta de cobro de un préstamo.`;
   pubName    = 'BTPrestamos.EliminarCuentaDeCobro';

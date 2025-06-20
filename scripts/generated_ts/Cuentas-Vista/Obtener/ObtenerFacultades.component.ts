@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750272791185 {
+export class ObtenerFacultadesComponent1750446218535 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerFacultades';

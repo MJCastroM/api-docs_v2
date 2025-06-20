@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeCuotaComponent1750272791743 {
+export class ObtenerPagosdeCuotaComponent1750446218896 {
   pageTitle        = 'Obtener Pagos de Cuota';
   description      = `Método para obtener el detalle de pagos de una cuota de préstamo.`;
   pubName    = 'BTPrestamos.ObtenerPagosCuota';

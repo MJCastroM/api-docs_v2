@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarChequeElectronicoComponent1750272790711 {
+export class HabilitarChequeElectronicoComponent1750446218087 {
   pageTitle        = 'Habilitar Cheque Electrónico';
   description      = `Método para habilitar un cheque electrónico de una chequera existente.`;
   pubName    = 'BTCuentasCorrientes.HabilitarChequeElectronico';

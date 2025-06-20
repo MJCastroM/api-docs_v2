@@ -8,19 +8,19 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosHabilitadosComponent1750272791929 {
+export class ObtenerProcesosHabilitadosComponent1750446219038 {
   pageTitle        = 'Obtener Procesos Habilitados';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener un listado de los procesos habilitados de Workflow.`;
+  pubName    = 'BTWorkflow.ObtenerProcesosHabilitados';
+  programa   = 'RBTPG515 ';
+  scope      = 'Global ';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
   inputData  = [];
-  outputData = [];
+  outputData = [{ Nombre: 'sdtProcesos', Tipo: '[sBTProcesoWF](#sbtprocesowf)', Comentarios: 'Listado de procesos habilitados.' }];
   errors     = [];
 
   examples = {

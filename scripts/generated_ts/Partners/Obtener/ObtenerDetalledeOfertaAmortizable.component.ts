@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOfertaAmortizableComponent1750272791422 {
+export class ObtenerDetalledeOfertaAmortizableComponent1750446218676 {
   pageTitle        = 'Obtener Detalle de Oferta Amortizable';
   description      = `Método para obtener el detalle de la oferta amortizable del Partner.`;
   pubName    = 'BTPartners.ObtenerDetalleOfertaAmortizable';

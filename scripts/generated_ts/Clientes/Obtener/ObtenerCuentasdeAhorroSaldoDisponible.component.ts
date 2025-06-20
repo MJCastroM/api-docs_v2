@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasdeAhorroSaldoDisponibleComponent1750272790898 {
+export class ObtenerCuentasdeAhorroSaldoDisponibleComponent1750446218254 {
   pageTitle        = 'Obtener Cuentas de Ahorro (Saldo Disponible)';
   description      = `Método para obtener los productos de cuenta de ahorro que tiene contratado un cliente, junto con su saldo disponible.`;
   pubName    = 'BTClientes.ObtenerCuentasAhorroSD';

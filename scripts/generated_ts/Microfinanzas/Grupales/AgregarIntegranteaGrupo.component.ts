@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteaGrupoComponent1750272791334 {
+export class AgregarIntegranteaGrupoComponent1750446218614 {
   pageTitle        = 'Agregar Integrante a Grupo';
   description      = `Método para agregar un integrante a un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.AgregarIntegranteAGrupo';

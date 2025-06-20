@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPEPComponent1750272791571 {
+export class ObtenerDatosPEPComponent1750446218761 {
   pageTitle        = 'Obtener Datos PEP';
   description      = `Método para obtener los datos de una persona expuesta políticamente.`;
   pubName    = 'BTPersonas.ObtenerDatosPEP';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresOrdenComponent1750272790807 {
+export class ObtenerValoresOrdenComponent1750446218160 {
   pageTitle        = 'Obtener Valores Orden';
   description      = `Método para obtener los valores de los campos CASH recibidos como parámetros.`;
   pubName    = 'BTCASHManagement.ObtenerValoresOrden';

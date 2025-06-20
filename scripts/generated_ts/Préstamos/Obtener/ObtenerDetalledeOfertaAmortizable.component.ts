@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOfertaAmortizableComponent1750272791713 {
+export class ObtenerDetalledeOfertaAmortizableComponent1750446218871 {
   pageTitle        = 'Obtener Detalle de Oferta Amortizable';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener el detalle de la oferta amortizable de un préstamo simulado.`;
+  pubName    = 'BTPrestamos.ObtenerDetalleOfertaAmortizable';
+  programa   = 'RBTPG525';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'destinoCredito', Tipo: 'Long', Comentarios: 'Código de destino del crédito.' }];
+  outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de la simulación.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de simulación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }, { Codigo: '30011', Descripcion: 'La simulación con identificador [Número de Identificador] no está vigente.' }, { Codigo: '30012', Descripcion: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `

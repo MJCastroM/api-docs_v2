@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearPersonaJuridicaComponent1750272791547 {
+export class CrearPersonaJuridicaComponent1750446218740 {
   pageTitle        = 'Crear Persona Jurídica';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para crear una persona jurídica.`;
+  pubName    = 'BTPersonas.CrearPersonaJuridica';
+  programa   = 'RBTPG274';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'sdtPersonaJuridica', Tipo: '[sBTPersonaJuridica1](#sbtpersonajuridica1)', Comentarios: 'Datos de la persona jurídica.' }, { Nombre: 'sdtIntegrantesJuridicosAlta', Tipo: '[sBTIntegranteJuridicoAlta](#sbtintegrantejuridicoalta)', Comentarios: 'Listado de personas físicas integrantes de la persona jurídica.' }];
+  outputData = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos un integrante.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de vínculo.' }, { Codigo: '30003', Descripcion: 'No se pudo obtener identificador único de la persona.' }, { Codigo: '30011', Descripcion: 'La sumatoria de porcentajes asociados a los integrantes de la persona jurídica es mayor a 100%.' }, { Codigo: '30016', Descripcion: 'La sumatoria de porcentajes de participación supera el 100%.' }, { Codigo: '40001', Descripcion: 'Ya existe persona con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'Debe ingresar país.' }, { Codigo: '40003', Descripcion: 'El país ingresado no existe.' }, { Codigo: '40004', Descripcion: 'Debe ingresar tipo de documento.' }, { Codigo: '40005', Descripcion: 'El tipo de documento ingresado no existe.' }, { Codigo: '40006', Descripcion: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Codigo: '40007', Descripcion: 'Debe ingresar número de documento.' }, { Codigo: '40008', Descripcion: 'Número de documento incorrecto.' }, { Codigo: '40009', Descripcion: 'Debe ingresar razón social.' }, { Codigo: '40010', Descripcion: 'Caracteres incorrectos en razón social.' }, { Codigo: '40011', Descripcion: 'Caracteres incorrectos en nombre reducido.' }, { Codigo: '40012', Descripcion: 'Debe ingresar naturaleza jurídica.' }, { Codigo: '40013', Descripcion: 'La naturaleza jurídica ingresada no existe.' }, { Codigo: '40014', Descripcion: 'Debe ingresar la fecha de constitución.' }, { Codigo: '40015', Descripcion: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Codigo: '40016', Descripcion: 'Debe ingresar tipo de actividad.' }, { Codigo: '40017', Descripcion: 'El tipo de actividad ingresado no existe.' }, { Codigo: '40018', Descripcion: 'Debe ingresar actividad.' }, { Codigo: '40019', Descripcion: 'La actividad ingresada no existe.' }, { Codigo: '40020', Descripcion: 'Debe ingresar país del domicilio.' }, { Codigo: '40021', Descripcion: 'El país del domicilio no existe.' }, { Codigo: '40022', Descripcion: 'Debe ingresar departamento.' }, { Codigo: '40023', Descripcion: 'El departamento no existe.' }, { Codigo: '40024', Descripcion: 'Debe ingresar localidad.' }, { Codigo: '40025', Descripcion: 'La localidad no existe.' }, { Codigo: '40026', Descripcion: 'El barrio no existe.' }];
 
   examples = {
     invocation: { xml: `

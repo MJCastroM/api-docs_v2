@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoFechadeVencimientoyTasaComponent1750272791802 {
+export class SimularDespejandoFechadeVencimientoyTasaComponent1750446218946 {
   pageTitle        = 'Simular Despejando Fecha de Vencimiento y Tasa';
   description      = `Método para simular un préstamo despejando fecha de vencimiento y tasa.`;
   pubName    = 'BTPrestamos.SimularDespejandoFechaVtoTasa';

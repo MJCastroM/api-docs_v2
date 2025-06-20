@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGruposComponent1750272791902 {
+export class ObtenerGruposComponent1750446219020 {
   pageTitle        = 'Obtener Grupos';
   description      = `Método para obtener los grupos de papeles parametrizados.`;
   pubName    = 'BTTitulos.ObtenerGrupos';

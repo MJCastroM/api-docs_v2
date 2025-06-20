@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerHobbiesComponent1750272791579 {
+export class ObtenerHobbiesComponent1750446218765 {
   pageTitle        = 'Obtener Hobbies';
   description      = `Método para obtener un listado de los hobbies ingresados en el sistema.`;
   pubName    = 'BTPersonas.ObtenerHobbies';

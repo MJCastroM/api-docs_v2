@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750272791260 {
+export class ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750446218570 {
   pageTitle        = 'Modificar Cuenta Destino de Acreditación Periódica';
   description      = `Método para modificar la cuenta de destino de la instrucción de acreditación de un depósito con pago periódico de intereses.`;
   pubName    = 'BTDepositosAPlazo.ModificarCuentaDestinoAcreditacion';

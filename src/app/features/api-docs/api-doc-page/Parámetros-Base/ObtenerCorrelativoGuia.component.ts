@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorrelativoGuiaComponent1750272791456 {
+export class ObtenerCorrelativoGuiaComponent1750446218692 {
   pageTitle        = 'Obtener Correlativo Guía';
   description      = `Método para obtener los datos de un correlativo de una determinada guía de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerCorrelativoGuia';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraporModuloComponent1750272791045 {
+export class ObtenerPizarraporModuloComponent1750446218399 {
   pageTitle        = 'Obtener Pizarra por Módulo';
   description      = `Método para obtener la pizarra genérica por módulo.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPizarraPorModulo';

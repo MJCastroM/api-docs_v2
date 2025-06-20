@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosconAvanceComponent1750272790940 {
+export class ObtenerPrestamosconAvanceComponent1750446218290 {
   pageTitle        = 'Obtener Préstamos con Avance';
   description      = `Método para obtener los productos de préstamo que tiene contratado un cliente, con su correspondiente avance.`;
   pubName    = 'BTClientes.ObtenerPrestamosConAvance';

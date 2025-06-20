@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarVictimaHechoViolentoComponent1750272791541 {
+export class AgregarVictimaHechoViolentoComponent1750446218731 {
   pageTitle        = 'Agregar Víctima Hecho Violento';
   description      = `Método para agregar la información de una persona víctima de un hecho violento.`;
   pubName    = 'BTPersonas.AgregarVictimaHechoViolento';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750272791748 {
+export class ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750446218899 {
   pageTitle        = 'Obtener Préstamos por Rango Mora';
   description      = `Método para obtener los préstamos que estén dentro del rango de mora ingresado.`;
   pubName    = 'BTPrestamos.ObtenerPrestamosPorRangoMora';

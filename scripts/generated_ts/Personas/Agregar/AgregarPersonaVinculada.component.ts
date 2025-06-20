@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPersonaVinculadaComponent1750272791535 {
+export class AgregarPersonaVinculadaComponent1750446218729 {
   pageTitle        = 'Agregar Persona Vinculada';
   description      = `Método para agregar un vínculo de afinidad a una persona.`;
   pubName    = 'BTPersonas.AgregarPersonaVinculada';

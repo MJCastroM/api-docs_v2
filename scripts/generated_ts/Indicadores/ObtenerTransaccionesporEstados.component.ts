@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTransaccionesporEstadosComponent1750272791315 {
+export class ObtenerTransaccionesporEstadosComponent1750446218605 {
   pageTitle        = 'Obtener Transacciones por Estados';
   description      = `Método para obtener las transacciones por estado ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerTransaccionesEstados';

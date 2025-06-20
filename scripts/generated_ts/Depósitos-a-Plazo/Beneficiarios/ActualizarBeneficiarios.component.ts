@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarBeneficiariosComponent1750272791242 {
+export class ActualizarBeneficiariosComponent1750446218560 {
   pageTitle        = 'Actualizar Beneficiarios';
   description      = `Método para actualizar el listado de beneficiarios de un depósito a plazo. Luego de la ejecución, se eliminarán los beneficiarios previamente registrados, y se asociarán los ingresados en el listado.`;
   pubName    = 'BTDepositosAPlazo.ActualizarBeneficiarios';

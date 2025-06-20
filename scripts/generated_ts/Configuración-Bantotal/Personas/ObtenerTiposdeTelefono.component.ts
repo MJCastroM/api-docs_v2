@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTelefonoComponent1750272791041 {
+export class ObtenerTiposdeTelefonoComponent1750446218396 {
   pageTitle        = 'Obtener Tipos de Telefono';
   description      = `Método para obtener un listado de los tipos de teléfono ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeTelefono';

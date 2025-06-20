@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaHabienteComponent1750272791869 {
+export class ObtenerTarjetaHabienteComponent1750446218994 {
   pageTitle        = 'Obtener Tarjeta Habiente';
   description      = `Método para obtener el habiente de una tarjeta.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetaHabiente';

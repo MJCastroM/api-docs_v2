@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsignarIdaChequeElectronicoComponent1750272790697 {
+export class AsignarIdaChequeElectronicoComponent1750446218076 {
   pageTitle        = 'Asignar Id a Cheque Electrónico';
   description      = `Método para asignar Id a un cheque electrónico.`;
   pubName    = 'BTCuentasCorrientes.AsignarIdChequeElectronico';

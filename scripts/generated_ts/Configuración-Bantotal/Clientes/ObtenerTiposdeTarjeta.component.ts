@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTarjetaComponent1750272790988 {
+export class ObtenerTiposdeTarjetaComponent1750446218347 {
   pageTitle        = 'Obtener Tipos de Tarjeta';
   description      = `Método para obtener un listado de los tipos de tarjeta ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposTarjeta';

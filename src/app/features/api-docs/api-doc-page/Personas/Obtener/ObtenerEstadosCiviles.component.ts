@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosCivilesComponent1750272791575 {
+export class ObtenerEstadosCivilesComponent1750446218763 {
   pageTitle        = 'Obtener Estados Civiles';
   description      = `Método para obtener un listado de los estados civiles registrados.`;
   pubName    = 'BTPersonas.ObtenerEstadoCiviles';

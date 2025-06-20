@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CHATComponent1750272790843 {
+export class CHATComponent1750446218194 {
   pageTitle        = 'CHAT';
   description      = ``;
   pubName    = '';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosDiariosComponent1750272790743 {
+export class ObtenerProcesosDiariosComponent1750446218112 {
   pageTitle        = 'Obtener Procesos Diarios';
   description      = `Método para obtener un listado de los procesos diarios de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosDiarios';

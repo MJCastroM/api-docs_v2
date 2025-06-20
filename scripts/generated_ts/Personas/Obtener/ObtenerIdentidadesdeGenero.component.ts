@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentidadesdeGeneroComponent1750272791582 {
+export class ObtenerIdentidadesdeGeneroComponent1750446218771 {
   pageTitle        = 'Obtener Identidades de Género';
   description      = `Método para obtener un listado de las identidades de género ingresadas en el sistema.`;
   pubName    = 'BTPersonas.ObtenerIdentidadesDeGenero';

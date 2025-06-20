@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750272791587 {
+export class ObtenerLimitesComponent1750446218778 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una persona.`;
   pubName    = 'BTPersonas.ObtenerLimites';

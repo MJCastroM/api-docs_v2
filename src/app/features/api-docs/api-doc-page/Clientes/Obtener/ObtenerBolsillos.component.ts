@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBolsillosComponent1750272790886 {
+export class ObtenerBolsillosComponent1750446218239 {
   pageTitle        = 'Obtener Bolsillos';
   description      = `Método para obtener las cuentas bolsillo de un cliente.`;
   pubName    = 'BTClientes.ObtenerBolsillos';

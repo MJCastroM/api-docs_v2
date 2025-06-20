@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionComponent1750272791271 {
+export class ObtenerInstruccionComponent1750446218579 {
   pageTitle        = 'Obtener Instrucción';
   description      = `Método para obtener una lista de las instrucciones de un depósito.`;
   pubName    = 'BTDepositosAPlazo.ObtenerInstruccion';

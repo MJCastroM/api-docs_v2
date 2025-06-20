@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasdeDebitoComponent1750272790959 {
+export class ObtenerTarjetasdeDebitoComponent1750446218306 {
   pageTitle        = 'Obtener Tarjetas de Débito';
   description      = `Método para obtener los productos de tarjeta de débito que tiene contratado un cliente.`;
   pubName    = 'BTClientes.ObtenerTarjetasDebito';

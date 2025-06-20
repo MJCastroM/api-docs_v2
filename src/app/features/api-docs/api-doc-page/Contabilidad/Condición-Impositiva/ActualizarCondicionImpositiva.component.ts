@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCondicionImpositivaComponent1750272791059 {
+export class ActualizarCondicionImpositivaComponent1750446218411 {
   pageTitle        = 'Actualizar Condición Impositiva';
   description      = `Método para actualizar una condición impositiva para una persona.`;
   pubName    = 'BTContabilidad.ActualizarCondicionImpositiva';

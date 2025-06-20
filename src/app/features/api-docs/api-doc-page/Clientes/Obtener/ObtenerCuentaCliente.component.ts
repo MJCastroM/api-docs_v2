@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentaClienteComponent1750272790891 {
+export class ObtenerCuentaClienteComponent1750446218244 {
   pageTitle        = 'Obtener Cuenta Cliente';
   description      = `Método para obtener la empresa y número de cuenta de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerCuentaCliente';

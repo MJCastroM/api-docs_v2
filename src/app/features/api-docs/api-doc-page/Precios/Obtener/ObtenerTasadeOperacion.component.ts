@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasadeOperacionComponent1750272791654 {
+export class ObtenerTasadeOperacionComponent1750446218825 {
   pageTitle        = 'Obtener Tasa de Operación';
   description      = `Método para obtener la tasa de la operación junto con la fecha de vigencia.`;
   pubName    = 'BTPrecios.ObtenerTasaOperacion';

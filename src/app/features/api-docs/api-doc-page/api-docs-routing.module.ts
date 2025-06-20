@@ -1,1374 +1,1374 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ContratarSimulacionComponent1750272790640 } from './Ahorro-Programado/Contratar/ContratarSimulacion.component';
-import { CrearComponent1750272790647 } from './Ahorro-Programado/Contratar/Crear.component';
-import { SimularComponent1750272790650 } from './Ahorro-Programado/Contratar/Simular.component';
-import { ActualizarDocumentoDigitalComponent1750272790653 } from './Ahorro-Programado/Documentos-Digitales/ActualizarDocumentoDigital.component';
-import { AsociarDocumentoDigitalComponent1750272790656 } from './Ahorro-Programado/Documentos-Digitales/AsociarDocumentoDigital.component';
-import { EliminarDocumentoDigitalComponent1750272790659 } from './Ahorro-Programado/Documentos-Digitales/EliminarDocumentoDigital.component';
-import { ObtenerDocumentoDigitalComponent1750272790661 } from './Ahorro-Programado/Documentos-Digitales/ObtenerDocumentoDigital.component';
-import { ObtenerDocumentosDigitalesComponent1750272790664 } from './Ahorro-Programado/Documentos-Digitales/ObtenerDocumentosDigitales.component';
-import { ModificarCuentaDestinoComponent1750272790666 } from './Ahorro-Programado/Modificar/ModificarCuentaDestino.component';
-import { ModificarCuentaOrigenComponent1750272790668 } from './Ahorro-Programado/Modificar/ModificarCuentaOrigen.component';
-import { ModificarFechadeAbonoComponent1750272790670 } from './Ahorro-Programado/Modificar/ModificarFechadeAbono.component';
-import { ModificarMetadeAhorroComponent1750272790672 } from './Ahorro-Programado/Modificar/ModificarMetadeAhorro.component';
-import { ModificarMontodeAbonoComponent1750272790675 } from './Ahorro-Programado/Modificar/ModificarMontodeAbono.component';
-import { ObtenerComponent1750272790677 } from './Ahorro-Programado/Obtener/Obtener.component';
-import { ObtenerCronogramaAbonosComponent1750272790680 } from './Ahorro-Programado/Obtener/ObtenerCronogramaAbonos.component';
-import { ObtenerCuentasDestinoHabilitadasComponent1750272790682 } from './Ahorro-Programado/Obtener/ObtenerCuentasDestinoHabilitadas.component';
-import { ObtenerCuentasOrigenHabilitadasComponent1750272790683 } from './Ahorro-Programado/Obtener/ObtenerCuentasOrigenHabilitadas.component';
-import { ObtenerEstadodeCuentaComponent1750272790685 } from './Ahorro-Programado/Obtener/ObtenerEstadodeCuenta.component';
-import { ObtenerPeriodosHabilitadosComponent1750272790687 } from './Ahorro-Programado/Obtener/ObtenerPeriodosHabilitados.component';
-import { ObtenerPlazosHabilitadosComponent1750272790689 } from './Ahorro-Programado/Obtener/ObtenerPlazosHabilitados.component';
-import { ObtenerProductosComponent1750272790691 } from './Ahorro-Programado/Obtener/ObtenerProductos.component';
-import { AnularChequeElectronicoComponent1750272790694 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AnularChequeElectronico.component';
-import { AsignarIdaChequeElectronicoComponent1750272790697 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AsignarIdaChequeElectronico.component';
-import { CrearChequeraElectronicaComponent1750272790699 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/CrearChequeraElectronica.component';
-import { DepositarChequeElectronicodeBancoPropioComponent1750272790700 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeBancoPropio.component';
-import { DepositarChequeElectronicodeOtroBancoComponent1750272790702 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeOtroBanco.component';
-import { DepositarChequeElectronicoenCustodiaComponent1750272790704 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicoenCustodia.component';
-import { EmitirChequeElectronicoComponent1750272790706 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronico.component';
-import { EmitirChequeElectronicodeChequeraComponent1750272790709 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronicodeChequera.component';
-import { HabilitarChequeElectronicoComponent1750272790711 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/HabilitarChequeElectronico.component';
-import { CrearAdhesionComponent1750272790713 } from './AR - Argentina/SNP/CrearAdhesion.component';
-import { CrearStopDebitComponent1750272790715 } from './AR - Argentina/SNP/CrearStopDebit.component';
-import { CrearStopDebitparaAdhesionconImporteComponent1750272790717 } from './AR - Argentina/SNP/CrearStopDebitparaAdhesionconImporte.component';
-import { EliminarStopDebitComponent1750272790719 } from './AR - Argentina/SNP/EliminarStopDebit.component';
-import { ObtenerAdhesionesComponent1750272790720 } from './AR - Argentina/SNP/ObtenerAdhesiones.component';
-import { ObtenerDebitosComponent1750272790722 } from './AR - Argentina/SNP/ObtenerDebitos.component';
-import { ObtenerEmpresasOriginantesComponent1750272790726 } from './AR - Argentina/SNP/ObtenerEmpresasOriginantes.component';
-import { ObtenerStopDebitsComponent1750272790728 } from './AR - Argentina/SNP/ObtenerStopDebits.component';
-import { ReversarDebitosComponent1750272790730 } from './AR - Argentina/SNP/ReversarDebitos.component';
-import { SolicitarBajadeAdhesionComponent1750272790732 } from './AR - Argentina/SNP/SolicitarBajadeAdhesion.component';
-import { AutenticacionComponent1750272790733 } from './Autenticación/Autenticacion.component';
-import { ObtenerDetalledeEjecucionComponent1750272790735 } from './Cadena-de-Cierre/ObtenerDetalledeEjecucion.component';
-import { ObtenerDetalledeProcesoComponent1750272790737 } from './Cadena-de-Cierre/ObtenerDetalledeProceso.component';
-import { ObtenerProcesosconErrorComponent1750272790739 } from './Cadena-de-Cierre/ObtenerProcesosconError.component';
-import { ObtenerProcesosCriticosComponent1750272790741 } from './Cadena-de-Cierre/ObtenerProcesosCriticos.component';
-import { ObtenerProcesosDiariosComponent1750272790743 } from './Cadena-de-Cierre/ObtenerProcesosDiarios.component';
-import { ObtenerProcesosMensualesComponent1750272790745 } from './Cadena-de-Cierre/ObtenerProcesosMensuales.component';
-import { ObtenerProcesosReprocesablesComponent1750272790747 } from './Cadena-de-Cierre/ObtenerProcesosReprocesables.component';
-import { VerificarEstadoServidorComponent1750272790748 } from './Cadena-de-Cierre/VerificarEstadoServidor.component';
-import { CalcularFechadeVencimientoComponent1750272790750 } from './Calendarios/Calcular/CalcularFechadeVencimiento.component';
-import { CalcularFechadeVencimientoenDiasHabilesComponent1750272790752 } from './Calendarios/Calcular/CalcularFechadeVencimientoenDiasHabiles.component';
-import { CalcularPlazoComponent1750272790754 } from './Calendarios/Calcular/CalcularPlazo.component';
-import { CalcularPlazoenDiasHabilesComponent1750272790756 } from './Calendarios/Calcular/CalcularPlazoenDiasHabiles.component';
-import { ObtenerFechaHabilComponent1750272790758 } from './Calendarios/Obtener/ObtenerFechaHabil.component';
-import { ObtenerFechaHabilAnteriorComponent1750272790761 } from './Calendarios/Obtener/ObtenerFechaHabilAnterior.component';
-import { ObtenerFechaHabilAnteriordeSucursalComponent1750272790762 } from './Calendarios/Obtener/ObtenerFechaHabilAnteriordeSucursal.component';
-import { ObtenerFechaHabildeSucursalComponent1750272790764 } from './Calendarios/Obtener/ObtenerFechaHabildeSucursal.component';
-import { ObtenerInicioyFindeMesComponent1750272790766 } from './Calendarios/Obtener/ObtenerInicioyFindeMes.component';
-import { ObtenerInicioyFindeMesdeSucursalComponent1750272790767 } from './Calendarios/Obtener/ObtenerInicioyFindeMesdeSucursal.component';
-import { ObtenerProximaFechaHabilComponent1750272790769 } from './Calendarios/Obtener/ObtenerProximaFechaHabil.component';
-import { ObtenerProximaFechaHabildeSucursalComponent1750272790771 } from './Calendarios/Obtener/ObtenerProximaFechaHabildeSucursal.component';
-import { AutorizarArchivoComponent1750272790773 } from './CASH-Management/Archivo/AutorizarArchivo.component';
-import { CargarArchivoComponent1750272790775 } from './CASH-Management/Archivo/CargarArchivo.component';
-import { CargarArchivoRecibidoComoDatoComponent1750272790777 } from './CASH-Management/Archivo/CargarArchivoRecibidoComoDato.component';
-import { DetenerArchivoComponent1750272790779 } from './CASH-Management/Archivo/DetenerArchivo.component';
-import { RechazarArchivoComponent1750272790781 } from './CASH-Management/Archivo/RechazarArchivo.component';
-import { CargarBeneficiariosComponent1750272790783 } from './CASH-Management/Beneficiarios/CargarBeneficiarios.component';
-import { IngresarBeneficiarioComponent1750272790785 } from './CASH-Management/Beneficiarios/IngresarBeneficiario.component';
-import { ObtenerBeneficiarioSegunFiltroComponent1750272790786 } from './CASH-Management/Beneficiarios/ObtenerBeneficiarioSegunFiltro.component';
-import { AltaAutomaticaContratoComponent1750272790788 } from './CASH-Management/Contratar/AltaAutomaticaContrato.component';
-import { CargarServiciosDisponiblesComponent1750272790791 } from './CASH-Management/Contratar/CargarServiciosDisponibles.component';
-import { ContratarDebitoAutomaticoComponent1750272790793 } from './CASH-Management/Contratar/ContratarDebitoAutomatico.component';
-import { ObtenerDetalledeOrdendeCuentaComponent1750272790795 } from './CASH-Management/Obtener/ObtenerDetalledeOrdendeCuenta.component';
-import { ObtenerDetalledePagoComponent1750272790796 } from './CASH-Management/Obtener/ObtenerDetalledePago.component';
-import { ObtenerDetalleOrdenSegunCampoComponent1750272790798 } from './CASH-Management/Obtener/ObtenerDetalleOrdenSegunCampo.component';
-import { ObtenerDetallePagoOrdenComponent1750272790799 } from './CASH-Management/Obtener/ObtenerDetallePagoOrden.component';
-import { ObtenerDeudaComponent1750272790801 } from './CASH-Management/Obtener/ObtenerDeuda.component';
-import { ObtenerResumenOrdenComponent1750272790803 } from './CASH-Management/Obtener/ObtenerResumenOrden.component';
-import { ObtenerServiciosComponent1750272790805 } from './CASH-Management/Obtener/ObtenerServicios.component';
-import { ObtenerValoresOrdenComponent1750272790807 } from './CASH-Management/Obtener/ObtenerValoresOrden.component';
-import { ObtenerValoresOrdenSegunCampoComponent1750272790809 } from './CASH-Management/Obtener/ObtenerValoresOrdenSegunCampo.component';
-import { AutorizarOrdenComponent1750272790811 } from './CASH-Management/Orden/AutorizarOrden.component';
-import { DetenerOrdenComponent1750272790813 } from './CASH-Management/Orden/DetenerOrden.component';
-import { IngresarOrdenPagoComponent1750272790814 } from './CASH-Management/Orden/IngresarOrdenPago.component';
-import { ProcesarOrdenComponent1750272790816 } from './CASH-Management/Orden/ProcesarOrden.component';
-import { RechazarOrdenComponent1750272790817 } from './CASH-Management/Orden/RechazarOrden.component';
-import { AnularPagoDeudaComponent1750272790819 } from './CASH-Management/Pagos/AnularPagoDeuda.component';
-import { PagarDeudaDesdeCuentaComponent1750272790820 } from './CASH-Management/Pagos/PagarDeudaDesdeCuenta.component';
-import { RegistrarPagoDeudaComponent1750272790822 } from './CASH-Management/Pagos/RegistrarPagoDeuda.component';
-import { RegistrarPagoEnLineaComponent1750272790825 } from './CASH-Management/Pagos/RegistrarPagoEnLinea.component';
-import { RegistrarPagoEnLineaDesdeCuentaComponent1750272790827 } from './CASH-Management/Pagos/RegistrarPagoEnLineaDesdeCuenta.component';
-import { VisualizarListaResumenCabezalComponent1750272790829 } from './CASH-Management/Visualizar/VisualizarListaResumenCabezal.component';
-import { VisualizarListaResumenCabezalOrdenComponent1750272790831 } from './CASH-Management/Visualizar/VisualizarListaResumenCabezalOrden.component';
-import { VisualizarOrdendeArchivoParaCuentaComponent1750272790832 } from './CASH-Management/Visualizar/VisualizarOrdendeArchivoParaCuenta.component';
-import { VisualizarResultadoProcesamientoComponent1750272790834 } from './CASH-Management/Visualizar/VisualizarResultadoProcesamiento.component';
-import { VisualizarResumenCabezalComponent1750272790836 } from './CASH-Management/Visualizar/VisualizarResumenCabezal.component';
-import { VisualizarSituacionArchivosComponent1750272790838 } from './CASH-Management/Visualizar/VisualizarSituacionArchivos.component';
-import { VisualizarSituacionLineasComponent1750272790841 } from './CASH-Management/Visualizar/VisualizarSituacionLineas.component';
-import { CHATComponent1750272790843 } from './CHAT/CHAT.component';
-import { ActualizarComponent1750272790845 } from './Clientes/Actualizar/Actualizar.component';
-import { ActualizarDocumentoDigitalComponent1750272790846 } from './Clientes/Actualizar/ActualizarDocumentoDigital.component';
-import { ActualizarDomicilioComponent1750272790848 } from './Clientes/Actualizar/ActualizarDomicilio.component';
-import { ActualizarInformacionAdicionalComponent1750272790850 } from './Clientes/Actualizar/ActualizarInformacionAdicional.component';
-import { ActualizarRegistroEmpleadoComponent1750272790851 } from './Clientes/Actualizar/ActualizarRegistroEmpleado.component';
-import { ActualizarTelefonoComponent1750272790853 } from './Clientes/Actualizar/ActualizarTelefono.component';
-import { AgregarDomicilioComponent1750272790854 } from './Clientes/Actualizar/AgregarDomicilio.component';
-import { AgregarInformacionAdicionalComponent1750272790857 } from './Clientes/Actualizar/AgregarInformacionAdicional.component';
-import { AgregarIntegranteComponent1750272790859 } from './Clientes/Actualizar/AgregarIntegrante.component';
-import { AgregarTelefonoComponent1750272790861 } from './Clientes/Actualizar/AgregarTelefono.component';
-import { AsociarDocumentoDigitalComponent1750272790863 } from './Clientes/Actualizar/AsociarDocumentoDigital.component';
-import { EliminarDocumentoDigitalComponent1750272790864 } from './Clientes/Actualizar/EliminarDocumentoDigital.component';
-import { EliminarDomicilioComponent1750272790866 } from './Clientes/Actualizar/EliminarDomicilio.component';
-import { EliminarInformacionAdicionalComponent1750272790867 } from './Clientes/Actualizar/EliminarInformacionAdicional.component';
-import { EliminarIntegranteComponent1750272790869 } from './Clientes/Actualizar/EliminarIntegrante.component';
-import { HabilitarComponent1750272790871 } from './Clientes/Actualizar/Habilitar.component';
-import { InhabilitarComponent1750272790872 } from './Clientes/Actualizar/Inhabilitar.component';
-import { ModificarEjecutivoComponent1750272790875 } from './Clientes/Actualizar/ModificarEjecutivo.component';
-import { CrearComponent1750272790877 } from './Clientes/Crear/Crear.component';
-import { CrearconPersonaExistenteComponent1750272790879 } from './Clientes/Crear/CrearconPersonaExistente.component';
-import { CrearParaPersonaJuridicaComponent1750272790881 } from './Clientes/Crear/CrearParaPersonaJuridica.component';
-import { ObtenerComponent1750272790883 } from './Clientes/Obtener/Obtener.component';
-import { ObtenerAhorrosProgramadosComponent1750272790884 } from './Clientes/Obtener/ObtenerAhorrosProgramados.component';
-import { ObtenerBolsillosComponent1750272790886 } from './Clientes/Obtener/ObtenerBolsillos.component';
-import { ObtenerClasificacionesInternasComponent1750272790889 } from './Clientes/Obtener/ObtenerClasificacionesInternas.component';
-import { ObtenerCuentaClienteComponent1750272790891 } from './Clientes/Obtener/ObtenerCuentaCliente.component';
-import { ObtenerCuentasCorrientesSaldoContableComponent1750272790893 } from './Clientes/Obtener/ObtenerCuentasCorrientesSaldoContable.component';
-import { ObtenerCuentasCorrientesSaldoDisponibleComponent1750272790895 } from './Clientes/Obtener/ObtenerCuentasCorrientesSaldoDisponible.component';
-import { ObtenerCuentasdeAhorroSaldoContableComponent1750272790897 } from './Clientes/Obtener/ObtenerCuentasdeAhorroSaldoContable.component';
-import { ObtenerCuentasdeAhorroSaldoDisponibleComponent1750272790898 } from './Clientes/Obtener/ObtenerCuentasdeAhorroSaldoDisponible.component';
-import { ObtenerDatosComponent1750272790900 } from './Clientes/Obtener/ObtenerDatos.component';
-import { ObtenerDetallePosicionComponent1750272790902 } from './Clientes/Obtener/ObtenerDetallePosicion.component';
-import { ObtenerDocumentoDigitalComponent1750272790905 } from './Clientes/Obtener/ObtenerDocumentoDigital.component';
-import { ObtenerDocumentosDigitalesComponent1750272790908 } from './Clientes/Obtener/ObtenerDocumentosDigitales.component';
-import { ObtenerDomiciliosComponent1750272790910 } from './Clientes/Obtener/ObtenerDomicilios.component';
-import { ObtenerFacultadesComponent1750272790912 } from './Clientes/Obtener/ObtenerFacultades.component';
-import { ObtenerIdentificadorUnicoComponent1750272790914 } from './Clientes/Obtener/ObtenerIdentificadorUnico.component';
-import { ObtenerInformacionAdicionalComponent1750272790916 } from './Clientes/Obtener/ObtenerInformacionAdicional.component';
-import { ObtenerIntegrantesComponent1750272790917 } from './Clientes/Obtener/ObtenerIntegrantes.component';
-import { ObtenerLimitesComponent1750272790919 } from './Clientes/Obtener/ObtenerLimites.component';
-import { ObtenerMotivosInhabilitacionComponent1750272790922 } from './Clientes/Obtener/ObtenerMotivosInhabilitacion.component';
-import { ObtenerPerfilComponent1750272790924 } from './Clientes/Obtener/ObtenerPerfil.component';
-import { ObtenerPlazosFijosComponent1750272790926 } from './Clientes/Obtener/ObtenerPlazosFijos.component';
-import { ObtenerPlazosFijosCanceladosComponent1750272790928 } from './Clientes/Obtener/ObtenerPlazosFijosCancelados.component';
-import { ObtenerPlazosFijosconAvanceComponent1750272790930 } from './Clientes/Obtener/ObtenerPlazosFijosconAvance.component';
-import { ObtenerPosicionComponent1750272790932 } from './Clientes/Obtener/ObtenerPosicion.component';
-import { ObtenerPrestamosComponent1750272790934 } from './Clientes/Obtener/ObtenerPrestamos.component';
-import { ObtenerPrestamosCanceladosComponent1750272790935 } from './Clientes/Obtener/ObtenerPrestamosCancelados.component';
-import { ObtenerPrestamosCastigadosComponent1750272790937 } from './Clientes/Obtener/ObtenerPrestamosCastigados.component';
-import { ObtenerPrestamosconAvanceComponent1750272790940 } from './Clientes/Obtener/ObtenerPrestamosconAvance.component';
-import { ObtenerResumendeProductosCierredeanoComponent1750272790943 } from './Clientes/Obtener/ObtenerResumendeProductosCierredeano.component';
-import { ObtenerResumendeProductosSaldosContablesComponent1750272790945 } from './Clientes/Obtener/ObtenerResumendeProductosSaldosContables.component';
-import { ObtenerResumendeProductosSaldosDisponiblesComponent1750272790947 } from './Clientes/Obtener/ObtenerResumendeProductosSaldosDisponibles.component';
-import { ObtenerResumenporProductoaCierreAnoComponent1750272790949 } from './Clientes/Obtener/ObtenerResumenporProductoaCierreAno.component';
-import { ObtenerRiesgodeCreditoComponent1750272790950 } from './Clientes/Obtener/ObtenerRiesgodeCredito.component';
-import { ObtenerSaldosdeOtrosProductosComponent1750272790952 } from './Clientes/Obtener/ObtenerSaldosdeOtrosProductos.component';
-import { ObtenerSectoresComponent1750272790954 } from './Clientes/Obtener/ObtenerSectores.component';
-import { ObtenerSegmentosComponent1750272790956 } from './Clientes/Obtener/ObtenerSegmentos.component';
-import { ObtenerTarjetasdeDebitoComponent1750272790959 } from './Clientes/Obtener/ObtenerTarjetasdeDebito.component';
-import { ObtenerTelefonosComponent1750272790961 } from './Clientes/Obtener/ObtenerTelefonos.component';
-import { ObtenerTiposdeIntegracionComponent1750272790963 } from './Clientes/Obtener/ObtenerTiposdeIntegracion.component';
-import { ObtenerTitularRepresentativoComponent1750272790965 } from './Clientes/Obtener/ObtenerTitularRepresentativo.component';
-import { ObtenerTitulosComponent1750272790967 } from './Clientes/Obtener/ObtenerTitulos.component';
-import { ValidarExistenciaComponent1750272790968 } from './Clientes/Validar/ValidarExistencia.component';
-import { VerificarEmpleadoComponent1750272790970 } from './Clientes/Validar/VerificarEmpleado.component';
-import { ObtenerAgenciasBancoComponent1750272790972 } from './Configuración-Bantotal/Bancos/ObtenerAgenciasBanco.component';
-import { ObtenerBancosComponent1750272790975 } from './Configuración-Bantotal/Bancos/ObtenerBancos.component';
-import { ObtenerDetalleSucursalComponent1750272790977 } from './Configuración-Bantotal/Bancos/ObtenerDetalleSucursal.component';
-import { ObtenerSucursalesPrincipalesComponent1750272790979 } from './Configuración-Bantotal/Bancos/ObtenerSucursalesPrincipales.component';
-import { ObtenerActividadesComponent1750272790981 } from './Configuración-Bantotal/Clientes/ObtenerActividades.component';
-import { ObtenerActividadesporTipoComponent1750272790983 } from './Configuración-Bantotal/Clientes/ObtenerActividadesporTipo.component';
-import { ObtenerEjecutivosComponent1750272790985 } from './Configuración-Bantotal/Clientes/ObtenerEjecutivos.component';
-import { ObtenerTiposdeActividadComponent1750272790986 } from './Configuración-Bantotal/Clientes/ObtenerTiposdeActividad.component';
-import { ObtenerTiposdeTarjetaComponent1750272790988 } from './Configuración-Bantotal/Clientes/ObtenerTiposdeTarjeta.component';
-import { ObtenerImpuestosComponent1750272790991 } from './Configuración-Bantotal/ObtenerImpuestos.component';
-import { ObtenerTiposdeDocumentoDigitalComponent1750272790994 } from './Configuración-Bantotal/ObtenerTiposdeDocumentoDigital.component';
-import { ObtenerEstadosComponent1750272790996 } from './Configuración-Bantotal/Operaciones/ObtenerEstados.component';
-import { ObtenerInstruccionesComponent1750272790998 } from './Configuración-Bantotal/Operaciones/ObtenerInstrucciones.component';
-import { ObtenerPaquetesComponent1750272791001 } from './Configuración-Bantotal/Operaciones/ObtenerPaquetes.component';
-import { ObtenerTiposdeTextoComponent1750272791003 } from './Configuración-Bantotal/Operaciones/ObtenerTiposdeTexto.component';
-import { ObtenerCalendariodeSucursalComponent1750272791005 } from './Configuración-Bantotal/Parámetros Generales/ObtenerCalendariodeSucursal.component';
-import { ObtenerCalendariosComponent1750272791007 } from './Configuración-Bantotal/Parámetros Generales/ObtenerCalendarios.component';
-import { ObtenerDetalledeCalendarioComponent1750272791010 } from './Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendario.component';
-import { ObtenerDetalledeCalendariodeSucursalComponent1750272791012 } from './Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendariodeSucursal.component';
-import { ObtenerDolarUSAComponent1750272791014 } from './Configuración-Bantotal/Parámetros Generales/ObtenerDolarUSA.component';
-import { ObtenerEmpresaComponent1750272791016 } from './Configuración-Bantotal/Parámetros Generales/ObtenerEmpresa.component';
-import { ObtenerFechadeSistemaComponent1750272791017 } from './Configuración-Bantotal/Parámetros Generales/ObtenerFechadeSistema.component';
-import { ObtenerMonedaNacionalComponent1750272791019 } from './Configuración-Bantotal/Parámetros Generales/ObtenerMonedaNacional.component';
-import { ObtenerMonedasComponent1750272791021 } from './Configuración-Bantotal/Parámetros Generales/ObtenerMonedas.component';
-import { ObtenerSucursalesComponent1750272791024 } from './Configuración-Bantotal/Parámetros Generales/ObtenerSucursales.component';
-import { ObtenerAgrupadoresDomicilioComponent1750272791026 } from './Configuración-Bantotal/Personas/ObtenerAgrupadoresDomicilio.component';
-import { ObtenerBarriosyColoniasComponent1750272791029 } from './Configuración-Bantotal/Personas/ObtenerBarriosyColonias.component';
-import { ObtenerCiudadesyLocalidadesComponent1750272791031 } from './Configuración-Bantotal/Personas/ObtenerCiudadesyLocalidades.component';
-import { ObtenerCodigosdeDomicilioComponent1750272791033 } from './Configuración-Bantotal/Personas/ObtenerCodigosdeDomicilio.component';
-import { ObtenerEstadosProvinciasyDepartamentosComponent1750272791035 } from './Configuración-Bantotal/Personas/ObtenerEstadosProvinciasyDepartamentos.component';
-import { ObtenerPaisesComponent1750272791037 } from './Configuración-Bantotal/Personas/ObtenerPaises.component';
-import { ObtenerTiposdeListasNegrasComponent1750272791039 } from './Configuración-Bantotal/Personas/ObtenerTiposdeListasNegras.component';
-import { ObtenerTiposdeTelefonoComponent1750272791041 } from './Configuración-Bantotal/Personas/ObtenerTiposdeTelefono.component';
-import { ObtenerTiposdeViviendaComponent1750272791043 } from './Configuración-Bantotal/Personas/ObtenerTiposdeVivienda.component';
-import { ObtenerPizarraporModuloComponent1750272791045 } from './Configuración-Bantotal/Precios/ObtenerPizarraporModulo.component';
-import { ObtenerPizarrasComponent1750272791047 } from './Configuración-Bantotal/Precios/ObtenerPizarras.component';
-import { ObtenerMenusComponent1750272791049 } from './Configuración-Bantotal/Seguridad/ObtenerMenus.component';
-import { ObtenerPerfilesComponent1750272791050 } from './Configuración-Bantotal/Seguridad/ObtenerPerfiles.component';
-import { AgregarTextoAsientoComponent1750272791053 } from './Contabilidad/Agregar-Texto/AgregarTextoAsiento.component';
-import { AgregarTextoOrdinalComponent1750272791054 } from './Contabilidad/Agregar-Texto/AgregarTextoOrdinal.component';
-import { AnularMovimientoComponent1750272791057 } from './Contabilidad/AnularMovimiento.component';
-import { ActualizarCondicionImpositivaComponent1750272791059 } from './Contabilidad/Condición-Impositiva/ActualizarCondicionImpositiva.component';
-import { CrearCondicionImpositivaComponent1750272791061 } from './Contabilidad/Condición-Impositiva/CrearCondicionImpositiva.component';
-import { ObtenerIdBantotalMovimientoComponent1750272791063 } from './Contabilidad/Obtener/Identificadores/ObtenerIdBantotalMovimiento.component';
-import { ObtenerIdBantotalOperacionComponent1750272791065 } from './Contabilidad/Obtener/Identificadores/ObtenerIdBantotalOperacion.component';
-import { ObtenerIdBantotalProductoComponent1750272791066 } from './Contabilidad/Obtener/Identificadores/ObtenerIdBantotalProducto.component';
-import { ObtenerIdentificadorUnicodeMovimientoComponent1750272791068 } from './Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeMovimiento.component';
-import { ObtenerIdentificadorUnicodeOperacionComponent1750272791070 } from './Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeOperacion.component';
-import { ObtenerIdentificadorUnicodeProductoComponent1750272791072 } from './Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeProducto.component';
-import { ObtenerClientedeunaOperacionComponent1750272791074 } from './Contabilidad/Obtener/ObtenerClientedeunaOperacion.component';
-import { ObtenerCondicionImpositivaComponent1750272791077 } from './Contabilidad/Obtener/ObtenerCondicionImpositiva.component';
-import { ObtenerDetalledeMovimientoComponent1750272791079 } from './Contabilidad/Obtener/ObtenerDetalledeMovimiento.component';
-import { ObtenerDetalledeOrdinalComponent1750272791081 } from './Contabilidad/Obtener/ObtenerDetalledeOrdinal.component';
-import { ObtenerIntegrantesdeOperacionComponent1750272791083 } from './Contabilidad/Obtener/ObtenerIntegrantesdeOperacion.component';
-import { ObtenerTextosdeMovimientoComponent1750272791084 } from './Contabilidad/Obtener/ObtenerTextosdeMovimiento.component';
-import { RegistrarAsientoComponent1750272791086 } from './Contabilidad/Registrar-Asiento/RegistrarAsiento.component';
-import { RegistrarAsientoFechaValorComponent1750272791088 } from './Contabilidad/Registrar-Asiento/RegistrarAsientoFechaValor.component';
-import { CancelarComponent1750272791091 } from './Cuentas-Bolsillo/Cancelar.component';
-import { CashInComponent1750272791093 } from './Cuentas-Bolsillo/CashIn.component';
-import { CashOutComponent1750272791095 } from './Cuentas-Bolsillo/CashOut.component';
-import { ContratarComponent1750272791097 } from './Cuentas-Bolsillo/Contratar.component';
-import { ObtenerDatosComponent1750272791098 } from './Cuentas-Bolsillo/ObtenerDatos.component';
-import { ObtenerMovimientosComponent1750272791100 } from './Cuentas-Bolsillo/ObtenerMovimientos.component';
-import { ObtenerProductosComponent1750272791101 } from './Cuentas-Bolsillo/ObtenerProductos.component';
-import { ObtenerProductosCVComponent1750272791103 } from './Cuentas-Bolsillo/ObtenerProductosCV.component';
-import { ObtenerChequeraComponent1750272791105 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerChequera.component';
-import { ObtenerChequerasComponent1750272791107 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerChequeras.component';
-import { ObtenerChequesdeChequeraComponent1750272791109 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerChequesdeChequera.component';
-import { ObtenerComisionChequeraComponent1750272791111 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerComisionChequera.component';
-import { ObtenerEstadodeChequeraComponent1750272791112 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerEstadodeChequera.component';
-import { ObtenerSolicitudesdeChequerasComponent1750272791114 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerSolicitudesdeChequeras.component';
-import { ObtenerTiposdeChequeraComponent1750272791116 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequera.component';
-import { ObtenerTiposdeChequeraporProductoComponent1750272791117 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequeraporProducto.component';
-import { EliminarChequeraComponent1750272791119 } from './Cuentas-Corrientes/Chequera/Operar/EliminarChequera.component';
-import { RegistrarOrdendeNoPagodeChequeraComponent1750272791121 } from './Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeChequera.component';
-import { RegistrarOrdendeNoPagodeChequesComponent1750272791123 } from './Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeCheques.component';
-import { SolicitarChequeraComponent1750272791126 } from './Cuentas-Corrientes/Chequera/Operar/SolicitarChequera.component';
-import { ContratarconPeriodicidadComponent1750272791128 } from './Cuentas-Corrientes/Contratar/ContratarconPeriodicidad.component';
-import { ContratarProductoComponent1750272791130 } from './Cuentas-Corrientes/Contratar/ContratarProducto.component';
-import { ContratarProductoconAltadeFacultadesComponent1750272791132 } from './Cuentas-Corrientes/Contratar/ContratarProductoconAltadeFacultades.component';
-import { ObtenerAcuerdosComponent1750272791133 } from './Cuentas-Corrientes/Obtener/ObtenerAcuerdos.component';
-import { ObtenerDatosComponent1750272791136 } from './Cuentas-Corrientes/Obtener/ObtenerDatos.component';
-import { ObtenerEstadodeCuentaComponent1750272791138 } from './Cuentas-Corrientes/Obtener/ObtenerEstadodeCuenta.component';
-import { ObtenerEvoluciondeSaldosComponent1750272791140 } from './Cuentas-Corrientes/Obtener/ObtenerEvoluciondeSaldos.component';
-import { ObtenerProductosComponent1750272791143 } from './Cuentas-Corrientes/Obtener/ObtenerProductos.component';
-import { ContratarconPeriodicidadComponent1750272791145 } from './Cuentas-de-Ahorro/Contratar/ContratarconPeriodicidad.component';
-import { ContratarProductoComponent1750272791147 } from './Cuentas-de-Ahorro/Contratar/ContratarProducto.component';
-import { ContratarProductoconAltadeFacultadesComponent1750272791149 } from './Cuentas-de-Ahorro/Contratar/ContratarProductoconAltadeFacultades.component';
-import { ObtenerDatosComponent1750272791151 } from './Cuentas-de-Ahorro/Obtener/ObtenerDatos.component';
-import { ObtenerEstadodeCuentaComponent1750272791153 } from './Cuentas-de-Ahorro/Obtener/ObtenerEstadodeCuenta.component';
-import { ObtenerEvoluciondeSaldosComponent1750272791155 } from './Cuentas-de-Ahorro/Obtener/ObtenerEvoluciondeSaldos.component';
-import { ObtenerProductosComponent1750272791158 } from './Cuentas-de-Ahorro/Obtener/ObtenerProductos.component';
-import { ActualizarBeneficiariosComponent1750272791160 } from './Cuentas-Vista/Beneficiarios/ActualizarBeneficiarios.component';
-import { ObtenerBeneficiariosComponent1750272791162 } from './Cuentas-Vista/Beneficiarios/ObtenerBeneficiarios.component';
-import { ActualizarDocumentoDigitalComponent1750272791164 } from './Cuentas-Vista/Documentos-Digitales/ActualizarDocumentoDigital.component';
-import { AsociarDocumentoDigitalComponent1750272791166 } from './Cuentas-Vista/Documentos-Digitales/AsociarDocumentoDigital.component';
-import { EliminarDocumentoDigitalComponent1750272791168 } from './Cuentas-Vista/Documentos-Digitales/EliminarDocumentoDigital.component';
-import { ObtenerDocumentoDigitalComponent1750272791169 } from './Cuentas-Vista/Documentos-Digitales/ObtenerDocumentoDigital.component';
-import { ObtenerDocumentosDigitalesComponent1750272791171 } from './Cuentas-Vista/Documentos-Digitales/ObtenerDocumentosDigitales.component';
-import { ObtenerBolsillosComponent1750272791174 } from './Cuentas-Vista/Obtener/ObtenerBolsillos.component';
-import { ObtenerCBUdeCuentaVistaComponent1750272791176 } from './Cuentas-Vista/Obtener/ObtenerCBUdeCuentaVista.component';
-import { ObtenerCuentaVistadeCBUComponent1750272791178 } from './Cuentas-Vista/Obtener/ObtenerCuentaVistadeCBU.component';
-import { ObtenerDetalleBloqueoComponent1750272791180 } from './Cuentas-Vista/Obtener/ObtenerDetalleBloqueo.component';
-import { ObtenerEstadodeCuentaporPeriodoComponent1750272791182 } from './Cuentas-Vista/Obtener/ObtenerEstadodeCuentaporPeriodo.component';
-import { ObtenerEstadoDeOperacionComponent1750272791183 } from './Cuentas-Vista/Obtener/ObtenerEstadoDeOperacion.component';
-import { ObtenerFacultadesComponent1750272791185 } from './Cuentas-Vista/Obtener/ObtenerFacultades.component';
-import { ObtenerPaqueteComponent1750272791187 } from './Cuentas-Vista/Obtener/ObtenerPaquete.component';
-import { ObtenerPeriododeAcreditacionComponent1750272791191 } from './Cuentas-Vista/Obtener/ObtenerPeriododeAcreditacion.component';
-import { ObtenerPeriodosdeAcreditacionComponent1750272791189 } from './Cuentas-Vista/Obtener/ObtenerPeriodosdeAcreditacion.component';
-import { ObtenerSaldoBloqueadoComponent1750272791194 } from './Cuentas-Vista/Obtener/ObtenerSaldoBloqueado.component';
-import { ObtenerSaldoDisponibleComponent1750272791196 } from './Cuentas-Vista/Obtener/ObtenerSaldoDisponible.component';
-import { ObtenerSaldosBloqueadosComponent1750272791198 } from './Cuentas-Vista/Obtener/ObtenerSaldosBloqueados.component';
-import { AcreditarEnCuentaComponent1750272791199 } from './Cuentas-Vista/Operar/AcreditarEnCuenta.component';
-import { ActivarComponent1750272791202 } from './Cuentas-Vista/Operar/Activar.component';
-import { ActualizarPeriododeAcreditacionComponent1750272791204 } from './Cuentas-Vista/Operar/ActualizarPeriododeAcreditacion.component';
-import { BloquearSaldoComponent1750272791206 } from './Cuentas-Vista/Operar/BloquearSaldo.component';
-import { CancelarComponent1750272791208 } from './Cuentas-Vista/Operar/Cancelar.component';
-import { DebitarEnCuentaComponent1750272791210 } from './Cuentas-Vista/Operar/DebitarEnCuenta.component';
-import { DesbloquearSaldoComponent1750272791212 } from './Cuentas-Vista/Operar/DesbloquearSaldo.component';
-import { ActualizarPerfilTransaccionalComponent1750272791214 } from './Cuentas-Vista/Perfil-Transaccional/ActualizarPerfilTransaccional.component';
-import { AgregarPerfilTransaccionalComponent1750272791216 } from './Cuentas-Vista/Perfil-Transaccional/AgregarPerfilTransaccional.component';
-import { ObtenerPerfilTransaccionalComponent1750272791218 } from './Cuentas-Vista/Perfil-Transaccional/ObtenerPerfilTransaccional.component';
-import { TraspasarConTipoDeCambioEspecialComponent1750272791220 } from './Cuentas-Vista/Traspasar/TraspasarConTipoDeCambioEspecial.component';
-import { TraspasarEntreCuentasdelaMismaPersonaComponent1750272791222 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasdelaMismaPersona.component';
-import { TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750272791225 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitularcontipodecambio.component';
-import { TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750272791227 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitulardiferentesmonedas.component';
-import { TraspasarEntreCuentasPropiasComponent1750272791233 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropias.component';
-import { TraspasarEntreCuentasPropiascontipodecambioComponent1750272791229 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiascontipodecambio.component';
-import { TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750272791230 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiasdiferentesmonedas.component';
-import { TraspasarEntreCuentasTercerosComponent1750272791239 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceros.component';
-import { TraspasarEntreCuentasTerceroscontipodecambioComponent1750272791235 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceroscontipodecambio.component';
-import { TraspasarEntreCuentasTercerosdiferentesmonedasComponent1750272791237 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasTercerosdiferentesmonedas.component';
-import { ActualizarBeneficiariosComponent1750272791242 } from './Depósitos-a-Plazo/Beneficiarios/ActualizarBeneficiarios.component';
-import { ObtenerBeneficiariosComponent1750272791244 } from './Depósitos-a-Plazo/Beneficiarios/ObtenerBeneficiarios.component';
-import { ContratarComponent1750272791245 } from './Depósitos-a-Plazo/Contratar/Contratar.component';
-import { ContratarConFacultadesComponent1750272791247 } from './Depósitos-a-Plazo/Contratar/ContratarConFacultades.component';
-import { ContratarSimulacionComponent1750272791249 } from './Depósitos-a-Plazo/Contratar/ContratarSimulacion.component';
-import { ActualizarDocumentoDigitalComponent1750272791250 } from './Depósitos-a-Plazo/Documentos-Digitales/ActualizarDocumentoDigital.component';
-import { AsociarDocumentoDigitalComponent1750272791252 } from './Depósitos-a-Plazo/Documentos-Digitales/AsociarDocumentoDigital.component';
-import { EliminarDocumentoDigitalComponent1750272791254 } from './Depósitos-a-Plazo/Documentos-Digitales/EliminarDocumentoDigital.component';
-import { ObtenerDocumentoDigitalComponent1750272791255 } from './Depósitos-a-Plazo/Documentos-Digitales/ObtenerDocumentoDigital.component';
-import { ModificarCuentaDestinoalVencimientoComponent1750272791258 } from './Depósitos-a-Plazo/Modificar/ModificarCuentaDestinoalVencimiento.component';
-import { ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750272791260 } from './Depósitos-a-Plazo/Modificar/ModificarCuentaDestinodeAcreditacionPeriodica.component';
-import { ModificarInstruccionComponent1750272791261 } from './Depósitos-a-Plazo/Modificar/ModificarInstruccion.component';
-import { ObtenerAvanceComponent1750272791263 } from './Depósitos-a-Plazo/Obtener/ObtenerAvance.component';
-import { ObtenerDatosComponent1750272791264 } from './Depósitos-a-Plazo/Obtener/ObtenerDatos.component';
-import { ObtenerDatosPrecancelacionComponent1750272791266 } from './Depósitos-a-Plazo/Obtener/ObtenerDatosPrecancelacion.component';
-import { ObtenerDocumentosDigitalesComponent1750272791268 } from './Depósitos-a-Plazo/Obtener/ObtenerDocumentosDigitales.component';
-import { ObtenerInstruccionComponent1750272791271 } from './Depósitos-a-Plazo/Obtener/ObtenerInstruccion.component';
-import { ObtenerInstruccionesHabilitadosComponent1750272791270 } from './Depósitos-a-Plazo/Obtener/ObtenerInstruccionesHabilitados.component';
-import { ObtenerMovimientosComponent1750272791275 } from './Depósitos-a-Plazo/Obtener/ObtenerMovimientos.component';
-import { ObtenerPeriodosHabilitadosComponent1750272791276 } from './Depósitos-a-Plazo/Obtener/ObtenerPeriodosHabilitados.component';
-import { ObtenerProductosComponent1750272791278 } from './Depósitos-a-Plazo/Obtener/ObtenerProductos.component';
-import { ObtenerProductosHabilitadosComponent1750272791280 } from './Depósitos-a-Plazo/Obtener/ObtenerProductosHabilitados.component';
-import { ObtenerTasadePrecancelacionComponent1750272791281 } from './Depósitos-a-Plazo/Obtener/ObtenerTasadePrecancelacion.component';
-import { PrecancelarComponent1750272791282 } from './Depósitos-a-Plazo/Precancelar.component';
-import { SimularComponent1750272791284 } from './Depósitos-a-Plazo/Simular/Simular.component';
-import { SimularConCronogramaComponent1750272791286 } from './Depósitos-a-Plazo/Simular/SimularConCronograma.component';
-import { ConfirmarListaComponent1750272791287 } from './Descuento-de-Documentos/ConfirmarLista.component';
-import { CrearListaComponent1750272791290 } from './Descuento-de-Documentos/CrearLista.component';
-import { CrearListaChequesComponent1750272791292 } from './Descuento-de-Documentos/CrearListaCheques.component';
-import { ObtenerProductosComponent1750272791294 } from './Descuento-de-Documentos/ObtenerProductos.component';
-import { ObtenerTiposDeDesembolsoComponent1750272791295 } from './Descuento-de-Documentos/ObtenerTiposDeDesembolso.component';
-import { SeleccionarOpcionDesembolsoComponent1750272791296 } from './Descuento-de-Documentos/SeleccionarOpcionDesembolso.component';
-import { ObtenerAgrupadoresComponent1750272791298 } from './Indicadores/ObtenerAgrupadores.component';
-import { ObtenerCierredeSaldosporMonedaComponent1750272791299 } from './Indicadores/ObtenerCierredeSaldosporMoneda.component';
-import { ObtenerCondicionesGeneralesComponent1750272791300 } from './Indicadores/ObtenerCondicionesGenerales.component';
-import { ObtenerIndicadoresComponent1750272791302 } from './Indicadores/ObtenerIndicadores.component';
-import { ObtenerMetodosMasEjecutadosComponent1750272791304 } from './Indicadores/ObtenerMetodosMasEjecutados.component';
-import { ObtenerMonedasIndicesComponent1750272791305 } from './Indicadores/ObtenerMonedasIndices.component';
-import { ObtenerRubrosBolsaComponent1750272791308 } from './Indicadores/ObtenerRubrosBolsa.component';
-import { ObtenerServiciosMasEjecutadosComponent1750272791311 } from './Indicadores/ObtenerServiciosMasEjecutados.component';
-import { ObtenerSesionesPorUsuarioComponent1750272791312 } from './Indicadores/ObtenerSesionesPorUsuario.component';
-import { ObtenerSucursalesCajasComponent1750272791314 } from './Indicadores/ObtenerSucursalesCajas.component';
-import { ObtenerTransaccionesporEstadosComponent1750272791315 } from './Indicadores/ObtenerTransaccionesporEstados.component';
-import { BuscarClienteComponent1750272791317 } from './Microfinanzas/BuscarCliente.component';
-import { CompletarTareaComponent1750272791318 } from './Microfinanzas/CompletarTarea.component';
-import { CrearSolicitudAmpliacionComponent1750272791320 } from './Microfinanzas/Crear-Solicitud/CrearSolicitudAmpliacion.component';
-import { CrearSolicitudIndividualComponent1750272791321 } from './Microfinanzas/Crear-Solicitud/CrearSolicitudIndividual.component';
-import { CrearSolicitudRenovacionComponent1750272791324 } from './Microfinanzas/Crear-Solicitud/CrearSolicitudRenovacion.component';
-import { AgregarFiadorComponent1750272791325 } from './Microfinanzas/Fiadores/AgregarFiador.component';
-import { EliminarFiadorComponent1750272791327 } from './Microfinanzas/Fiadores/EliminarFiador.component';
-import { ActualizarGrupoComponent1750272791329 } from './Microfinanzas/Grupales/ActualizarGrupo.component';
-import { ActualizarIntegrantedeGrupoComponent1750272791331 } from './Microfinanzas/Grupales/ActualizarIntegrantedeGrupo.component';
-import { AgregarGrupoComponent1750272791332 } from './Microfinanzas/Grupales/AgregarGrupo.component';
-import { AgregarIntegranteaGrupoComponent1750272791334 } from './Microfinanzas/Grupales/AgregarIntegranteaGrupo.component';
-import { CrearSolicitudGrupalComponent1750272791335 } from './Microfinanzas/Grupales/CrearSolicitudGrupal.component';
-import { HabilitarIntegrantedeunGrupoComponent1750272791337 } from './Microfinanzas/Grupales/HabilitarIntegrantedeunGrupo.component';
-import { InhabilitarIntegrantedeunGrupoComponent1750272791339 } from './Microfinanzas/Grupales/InhabilitarIntegrantedeunGrupo.component';
-import { ObtenerDetalleGrupoComponent1750272791341 } from './Microfinanzas/Grupales/ObtenerDetalleGrupo.component';
-import { ObtenerGruposComponent1750272791343 } from './Microfinanzas/Grupales/ObtenerGrupos.component';
-import { ObtenerIntegrantesdeGrupoComponent1750272791345 } from './Microfinanzas/Grupales/ObtenerIntegrantesdeGrupo.component';
-import { ObtenerTiposdeGrupoComponent1750272791346 } from './Microfinanzas/Grupales/ObtenerTiposdeGrupo.component';
-import { ObtenerTiposdeIntegranteComponent1750272791348 } from './Microfinanzas/Grupales/ObtenerTiposdeIntegrante.component';
-import { SimularPrestamoAmortizableGrupalComponent1750272791350 } from './Microfinanzas/Grupales/SimularPrestamoAmortizableGrupal.component';
-import { ObtenerAsesoresComponent1750272791352 } from './Microfinanzas/Obtener/ObtenerAsesores.component';
-import { ObtenerCampanasComponent1750272791355 } from './Microfinanzas/Obtener/ObtenerCampanas.component';
-import { ObtenerDestinosCreditoComponent1750272791357 } from './Microfinanzas/Obtener/ObtenerDestinosCredito.component';
-import { ObtenerOperacionesClienteComponent1750272791359 } from './Microfinanzas/Obtener/ObtenerOperacionesCliente.component';
-import { ObtenerOrigenesdeCaptacionComponent1750272791361 } from './Microfinanzas/Obtener/ObtenerOrigenesdeCaptacion.component';
-import { ObtenerProductosComponent1750272791363 } from './Microfinanzas/Obtener/ObtenerProductos.component';
-import { ObtenerSolicitudesClienteComponent1750272791365 } from './Microfinanzas/Obtener/ObtenerSolicitudesCliente.component';
-import { ObtenerTiposAvalComponent1750272791366 } from './Microfinanzas/Obtener/ObtenerTiposAval.component';
-import { AgregarOperacionesaCancelarComponent1750272791368 } from './Microfinanzas/Operaciones-a-Cancelar/AgregarOperacionesaCancelar.component';
-import { ObtenerOperacionesaCancelarComponent1750272791370 } from './Microfinanzas/Operaciones-a-Cancelar/ObtenerOperacionesaCancelar.component';
-import { QuitarOperacionesaCancelarComponent1750272791372 } from './Microfinanzas/Operaciones-a-Cancelar/QuitarOperacionesaCancelar.component';
-import { SimularLibreAmortizacionComponent1750272791375 } from './Microfinanzas/Simular/SimularLibreAmortizacion.component';
-import { SimularPrestamoAmortizableComponent1750272791377 } from './Microfinanzas/Simular/SimularPrestamoAmortizable.component';
-import { SimularPrestamoPlazoFijoComponent1750272791379 } from './Microfinanzas/Simular/SimularPrestamoPlazoFijo.component';
-import { ValidarPoliticasComponent1750272791381 } from './Microfinanzas/ValidarPoliticas.component';
-import { ObtenerCantidadCuotasComponent1750272791383 } from './Modelador-de-Préstamos/ObtenerCantidadCuotas.component';
-import { ObtenerCapitalComponent1750272791384 } from './Modelador-de-Préstamos/ObtenerCapital.component';
-import { ObtenerComisionesComponent1750272791386 } from './Modelador-de-Préstamos/ObtenerComisiones.component';
-import { ObtenerComisionesporCuotaComponent1750272791388 } from './Modelador-de-Préstamos/ObtenerComisionesporCuota.component';
-import { ObtenerDiasPrimerPeriodoComponent1750272791391 } from './Modelador-de-Préstamos/ObtenerDiasPrimerPeriodo.component';
-import { ObtenerPeriodoEntreCuotasComponent1750272791396 } from './Modelador-de-Préstamos/ObtenerPeriodoEntreCuotas.component';
-import { ObtenerPermiteSegurosdelMismoTipoComponent1750272791394 } from './Modelador-de-Préstamos/ObtenerPermiteSegurosdelMismoTipo.component';
-import { ObtenerPlazoComponent1750272791397 } from './Modelador-de-Préstamos/ObtenerPlazo.component';
-import { ObtenerRequiereSegurodeVidaObligatorioComponent1750272791399 } from './Modelador-de-Préstamos/ObtenerRequiereSegurodeVidaObligatorio.component';
-import { ObtenerSegurosComponent1750272791401 } from './Modelador-de-Préstamos/ObtenerSeguros.component';
-import { ObtenerItemsModeloComponent1750272791403 } from './PAE/ObtenerItemsModelo.component';
-import { ObtenerModelosPAEComponent1750272791405 } from './PAE/ObtenerModelosPAE.component';
-import { ObtenerScoresComponent1750272791407 } from './PAE/ObtenerScores.component';
-import { ObtenerTiposDeModelosComponent1750272791410 } from './PAE/ObtenerTiposDeModelos.component';
-import { ContratarPrestamoComponent1750272791412 } from './Partners/Contratar/ContratarPrestamo.component';
-import { ContratarVehicularComponent1750272791414 } from './Partners/Contratar/ContratarVehicular.component';
-import { CrearClienteComponent1750272791416 } from './Partners/Crear/CrearCliente.component';
-import { CrearPersonaClienteComponent1750272791417 } from './Partners/Crear/CrearPersonaCliente.component';
-import { ObtenerDatosdeUsuarioComponent1750272791420 } from './Partners/Obtener/ObtenerDatosdeUsuario.component';
-import { ObtenerDetalledeOfertaAmortizableComponent1750272791422 } from './Partners/Obtener/ObtenerDetalledeOfertaAmortizable.component';
-import { ObtenerDetalleOfertaVehicularComponent1750272791425 } from './Partners/Obtener/ObtenerDetalleOfertaVehicular.component';
-import { ObtenerMarcasComponent1750272791428 } from './Partners/Obtener/ObtenerMarcas.component';
-import { ObtenerModelosComponent1750272791429 } from './Partners/Obtener/ObtenerModelos.component';
-import { ObtenerPartnersComponent1750272791431 } from './Partners/Obtener/ObtenerPartners.component';
-import { ObtenerPrestamosdeClienteComponent1750272791437 } from './Partners/Obtener/ObtenerPrestamosdeCliente.component';
-import { ObtenerProductosComponent1750272791434 } from './Partners/Obtener/ObtenerProductos.component';
-import { ObtenerProductosdelPartnerComponent1750272791435 } from './Partners/Obtener/ObtenerProductosdelPartner.component';
-import { ObtenerPuntosdeVentaComponent1750272791440 } from './Partners/Obtener/ObtenerPuntosdeVenta.component';
-import { ObtenerVendedoresComponent1750272791443 } from './Partners/Obtener/ObtenerVendedores.component';
-import { ObtenerVersionesComponent1750272791445 } from './Partners/Obtener/ObtenerVersiones.component';
-import { SimularOfertasComponent1750272791447 } from './Partners/Simular/SimularOfertas.component';
-import { SimularOfertasVehicularComponent1750272791449 } from './Partners/Simular/SimularOfertasVehicular.component';
-import { SimularPrestamoComponent1750272791451 } from './Partners/Simular/SimularPrestamo.component';
-import { SimularVehicularComponent1750272791454 } from './Partners/Simular/SimularVehicular.component';
-import { ObtenerCorrelativoGuiaComponent1750272791456 } from './Parámetros-Base/ObtenerCorrelativoGuia.component';
-import { ObtenerCorrelativoGuiaEspecialComponent1750272791459 } from './Parámetros-Base/ObtenerCorrelativoGuiaEspecial.component';
-import { ObtenerGuiadeProcesoComponent1750272791462 } from './Parámetros-Base/ObtenerGuiadeProceso.component';
-import { ObtenerGuiaEspecialdeProcesoComponent1750272791464 } from './Parámetros-Base/ObtenerGuiaEspecialdeProceso.component';
-import { ObtenerOpcionGeneraldeProcesoComponent1750272791467 } from './Parámetros-Base/ObtenerOpcionGeneraldeProceso.component';
-import { ObtenerOpcionGeneralPorModuloComponent1750272791468 } from './Parámetros-Base/ObtenerOpcionGeneralPorModulo.component';
-import { ObtenerProgramaParticularComponent1750272791470 } from './Parámetros-Base/ObtenerProgramaParticular.component';
-import { ActualizarComponent1750272791473 } from './Personas/Actualizar/Actualizar.component';
-import { ActualizarCelularComponent1750272791475 } from './Personas/Actualizar/ActualizarCelular.component';
-import { ActualizarContactoComponent1750272791478 } from './Personas/Actualizar/ActualizarContacto.component';
-import { ActualizarConyugeComponent1750272791481 } from './Personas/Actualizar/ActualizarConyuge.component';
-import { ActualizarCorreoElectronicoComponent1750272791479 } from './Personas/Actualizar/ActualizarCorreoElectronico.component';
-import { ActualizarDomicilioComponent1750272791483 } from './Personas/Actualizar/ActualizarDomicilio.component';
-import { ActualizarFATCAComponent1750272791485 } from './Personas/Actualizar/ActualizarFATCA.component';
-import { ActualizarInformacionAdicionalComponent1750272791487 } from './Personas/Actualizar/ActualizarInformacionAdicional.component';
-import { ActualizarInformacionFinancieraComponent1750272791489 } from './Personas/Actualizar/ActualizarInformacionFinanciera.component';
-import { ActualizarIntegrantedePersonaJuridicaComponent1750272791491 } from './Personas/Actualizar/ActualizarIntegrantedePersonaJuridica.component';
-import { ActualizarPersonaJuridicaComponent1750272791494 } from './Personas/Actualizar/ActualizarPersonaJuridica.component';
-import { ActualizarProfesionComponent1750272791495 } from './Personas/Actualizar/ActualizarProfesion.component';
-import { ActualizarReferenciaComponent1750272791497 } from './Personas/Actualizar/ActualizarReferencia.component';
-import { ActualizarRegistroEmpleadoComponent1750272791498 } from './Personas/Actualizar/ActualizarRegistroEmpleado.component';
-import { ActualizarTelefonoComponent1750272791500 } from './Personas/Actualizar/ActualizarTelefono.component';
-import { ActualizarVictimaHechoViolentoComponent1750272791502 } from './Personas/Actualizar/ActualizarVictimaHechoViolento.component';
-import { ModificarDocumentoAdicionalComponent1750272791504 } from './Personas/Actualizar/ModificarDocumentoAdicional.component';
-import { AgregaraListaNegraComponent1750272791505 } from './Personas/Agregar/AgregaraListaNegra.component';
-import { AgregarContactoComponent1750272791508 } from './Personas/Agregar/AgregarContacto.component';
-import { AgregarCorreoElectronicoComponent1750272791511 } from './Personas/Agregar/AgregarCorreoElectronico.component';
-import { AgregarDatosPEPComponent1750272791514 } from './Personas/Agregar/AgregarDatosPEP.component';
-import { AgregarDocumentoAdicionalComponent1750272791516 } from './Personas/Agregar/AgregarDocumentoAdicional.component';
-import { AgregarDomicilioComponent1750272791520 } from './Personas/Agregar/AgregarDomicilio.component';
-import { AgregarEstadoFinancieroComponent1750272791524 } from './Personas/Agregar/AgregarEstadoFinanciero.component';
-import { AgregarFATCAComponent1750272791526 } from './Personas/Agregar/AgregarFATCA.component';
-import { AgregarInformacionAdicionalComponent1750272791529 } from './Personas/Agregar/AgregarInformacionAdicional.component';
-import { AgregarInformacionFinancieraComponent1750272791531 } from './Personas/Agregar/AgregarInformacionFinanciera.component';
-import { AgregarIntegranteaPersonaJuridicaComponent1750272791533 } from './Personas/Agregar/AgregarIntegranteaPersonaJuridica.component';
-import { AgregarPersonaVinculadaComponent1750272791535 } from './Personas/Agregar/AgregarPersonaVinculada.component';
-import { AgregarReferenciaComponent1750272791536 } from './Personas/Agregar/AgregarReferencia.component';
-import { AgregarTelefonoComponent1750272791538 } from './Personas/Agregar/AgregarTelefono.component';
-import { AgregarVictimaHechoViolentoComponent1750272791541 } from './Personas/Agregar/AgregarVictimaHechoViolento.component';
-import { CrearComponent1750272791543 } from './Personas/Crear/Crear.component';
-import { CrearConyugeComponent1750272791545 } from './Personas/Crear/CrearConyuge.component';
-import { CrearPersonaJuridicaComponent1750272791547 } from './Personas/Crear/CrearPersonaJuridica.component';
-import { CrearReducidoComponent1750272791548 } from './Personas/Crear/CrearReducido.component';
-import { ActualizarDocumentoDigitalComponent1750272791550 } from './Personas/Documentos-Digitales/ActualizarDocumentoDigital.component';
-import { AsociarDocumentoDigitalComponent1750272791551 } from './Personas/Documentos-Digitales/AsociarDocumentoDigital.component';
-import { EliminarDocumentoDigitalComponent1750272791552 } from './Personas/Documentos-Digitales/EliminarDocumentoDigital.component';
-import { ObtenerDocumentoDigitalComponent1750272791553 } from './Personas/Documentos-Digitales/ObtenerDocumentoDigital.component';
-import { ObtenerDocumentosDigitalesComponent1750272791554 } from './Personas/Documentos-Digitales/ObtenerDocumentosDigitales.component';
-import { EliminarConyugeComponent1750272791556 } from './Personas/Eliminar/EliminarConyuge.component';
-import { EliminarDocumentoAdicionalComponent1750272791558 } from './Personas/Eliminar/EliminarDocumentoAdicional.component';
-import { EliminarDomicilioComponent1750272791559 } from './Personas/Eliminar/EliminarDomicilio.component';
-import { EliminarInformacionAdicionalComponent1750272791560 } from './Personas/Eliminar/EliminarInformacionAdicional.component';
-import { EliminarIntegrantedePersonaJuridicaComponent1750272791561 } from './Personas/Eliminar/EliminarIntegrantedePersonaJuridica.component';
-import { EliminarPersonaVinculadaComponent1750272791562 } from './Personas/Eliminar/EliminarPersonaVinculada.component';
-import { EliminarProfesionComponent1750272791563 } from './Personas/Eliminar/EliminarProfesion.component';
-import { ObtenerComponent1750272791564 } from './Personas/Obtener/Obtener.component';
-import { ObtenerConceptoComponent1750272791565 } from './Personas/Obtener/ObtenerConcepto.component';
-import { ObtenerContactosComponent1750272791566 } from './Personas/Obtener/ObtenerContactos.component';
-import { ObtenerConyugeComponent1750272791570 } from './Personas/Obtener/ObtenerConyuge.component';
-import { ObtenerCorreosElectronicosComponent1750272791567 } from './Personas/Obtener/ObtenerCorreosElectronicos.component';
-import { ObtenerCuentasClienteComponent1750272791569 } from './Personas/Obtener/ObtenerCuentasCliente.component';
-import { ObtenerDatosPEPComponent1750272791571 } from './Personas/Obtener/ObtenerDatosPEP.component';
-import { ObtenerDocumentosAdicionalesComponent1750272791572 } from './Personas/Obtener/ObtenerDocumentosAdicionales.component';
-import { ObtenerDomiciliosComponent1750272791574 } from './Personas/Obtener/ObtenerDomicilios.component';
-import { ObtenerEstadosCivilesComponent1750272791575 } from './Personas/Obtener/ObtenerEstadosCiviles.component';
-import { ObtenerFacultadesComponent1750272791577 } from './Personas/Obtener/ObtenerFacultades.component';
-import { ObtenerFATCAComponent1750272791578 } from './Personas/Obtener/ObtenerFATCA.component';
-import { ObtenerHobbiesComponent1750272791579 } from './Personas/Obtener/ObtenerHobbies.component';
-import { ObtenerHobbyComponent1750272791580 } from './Personas/Obtener/ObtenerHobby.component';
-import { ObtenerIdBantotalComponent1750272791581 } from './Personas/Obtener/ObtenerIdBantotal.component';
-import { ObtenerIdentidadesdeGeneroComponent1750272791582 } from './Personas/Obtener/ObtenerIdentidadesdeGenero.component';
-import { ObtenerIdentificadorUnicoComponent1750272791583 } from './Personas/Obtener/ObtenerIdentificadorUnico.component';
-import { ObtenerInformacionAdicionalComponent1750272791584 } from './Personas/Obtener/ObtenerInformacionAdicional.component';
-import { ObtenerInformacionFinancieraComponent1750272791585 } from './Personas/Obtener/ObtenerInformacionFinanciera.component';
-import { ObtenerIntegrantesPersonaJuridicaComponent1750272791586 } from './Personas/Obtener/ObtenerIntegrantesPersonaJuridica.component';
-import { ObtenerLimitesComponent1750272791587 } from './Personas/Obtener/ObtenerLimites.component';
-import { ObtenerNaturalezasJuridicasComponent1750272791588 } from './Personas/Obtener/ObtenerNaturalezasJuridicas.component';
-import { ObtenerNivelesEducativosComponent1750272791590 } from './Personas/Obtener/ObtenerNivelesEducativos.component';
-import { ObtenerOcupacionesComponent1750272791592 } from './Personas/Obtener/ObtenerOcupaciones.component';
-import { ObtenerPersonaJuridicaComponent1750272791593 } from './Personas/Obtener/ObtenerPersonaJuridica.component';
-import { ObtenerPersonasComponent1750272791595 } from './Personas/Obtener/ObtenerPersonas.component';
-import { ObtenerPersonasJuridicasComponent1750272791596 } from './Personas/Obtener/ObtenerPersonasJuridicas.component';
-import { ObtenerPersonasVinculadasComponent1750272791597 } from './Personas/Obtener/ObtenerPersonasVinculadas.component';
-import { ObtenerProfesionComponent1750272791600 } from './Personas/Obtener/ObtenerProfesion.component';
-import { ObtenerProfesionesComponent1750272791598 } from './Personas/Obtener/ObtenerProfesiones.component';
-import { ObtenerReferenciasComponent1750272791601 } from './Personas/Obtener/ObtenerReferencias.component';
-import { ObtenerTarjetasdeDebitoComponent1750272791602 } from './Personas/Obtener/ObtenerTarjetasdeDebito.component';
-import { ObtenerTelefonosComponent1750272791604 } from './Personas/Obtener/ObtenerTelefonos.component';
-import { ObtenerTipodePersonaComponent1750272791605 } from './Personas/Obtener/ObtenerTipodePersona.component';
-import { ObtenerTiposdeDocumentoComponent1750272791608 } from './Personas/Obtener/ObtenerTiposdeDocumento.component';
-import { ObtenerTiposDeFuncionarioPublicoComponent1750272791610 } from './Personas/Obtener/ObtenerTiposDeFuncionarioPublico.component';
-import { ObtenerTiposDePEPComponent1750272791612 } from './Personas/Obtener/ObtenerTiposDePEP.component';
-import { ObtenerTitularesDelTelefonoComponent1750272791613 } from './Personas/Obtener/ObtenerTitularesDelTelefono.component';
-import { ObtenerVictimaHechoViolentoComponent1750272791615 } from './Personas/Obtener/ObtenerVictimaHechoViolento.component';
-import { ObtenerVinculosComponent1750272791616 } from './Personas/Obtener/ObtenerVinculos.component';
-import { ObtenerVinculosdeAfinidadComponent1750272791618 } from './Personas/Obtener/ObtenerVinculosdeAfinidad.component';
-import { ObtenerVinculosdeConsanguinidadComponent1750272791619 } from './Personas/Obtener/ObtenerVinculosdeConsanguinidad.component';
-import { ObtenerVinculosJuridicosComponent1750272791621 } from './Personas/Obtener/ObtenerVinculosJuridicos.component';
-import { EvaluarPAEComponent1750272791624 } from './Personas/Validar/EvaluarPAE.component';
-import { ValidarCorreoElectronicoComponent1750272791626 } from './Personas/Validar/ValidarCorreoElectronico.component';
-import { ValidarDocumentoComponent1750272791628 } from './Personas/Validar/ValidarDocumento.component';
-import { ValidarenListasNegrasComponent1750272791630 } from './Personas/Validar/ValidarenListasNegras.component';
-import { ValidarExistenciaComponent1750272791631 } from './Personas/Validar/ValidarExistencia.component';
-import { ValidarListasInhabilitadosComponent1750272791632 } from './Personas/Validar/ValidarListasInhabilitados.component';
-import { VerificarEmpleadoComponent1750272791634 } from './Personas/Validar/VerificarEmpleado.component';
-import { ConvertirTasaAnualEfectivaaLinealComponent1750272791635 } from './Precios/Convertir/ConvertirTasaAnualEfectivaaLineal.component';
-import { ConvertirTasaAnualLinealaEfectivaComponent1750272791637 } from './Precios/Convertir/ConvertirTasaAnualLinealaEfectiva.component';
-import { ConvertirTasaMensualEfectivaaLinealComponent1750272791639 } from './Precios/Convertir/ConvertirTasaMensualEfectivaaLineal.component';
-import { ConvertirTasaMensualLinealaEfectivaComponent1750272791641 } from './Precios/Convertir/ConvertirTasaMensualLinealaEfectiva.component';
-import { ObtenerCotizacionComponent1750272791643 } from './Precios/Obtener/ObtenerCotizacion.component';
-import { ObtenerCotizacionaFechaComponent1750272791646 } from './Precios/Obtener/ObtenerCotizacionaFecha.component';
-import { ObtenerCotizacionCierreComponent1750272791647 } from './Precios/Obtener/ObtenerCotizacionCierre.component';
-import { ObtenerPizarraEspecialporTransaccionComponent1750272791649 } from './Precios/Obtener/ObtenerPizarraEspecialporTransaccion.component';
-import { ObtenerPrecioaFechaComponent1750272791650 } from './Precios/Obtener/ObtenerPrecioaFecha.component';
-import { ObtenerPrecioEspecieComponent1750272791652 } from './Precios/Obtener/ObtenerPrecioEspecie.component';
-import { ObtenerTasadeOperacionComponent1750272791654 } from './Precios/Obtener/ObtenerTasadeOperacion.component';
-import { ObtenerTasaParaClienteComponent1750272791656 } from './Precios/Obtener/ObtenerTasaParaCliente.component';
-import { ObtenerTasaParaProductoComponent1750272791659 } from './Precios/Obtener/ObtenerTasaParaProducto.component';
-import { ObtenerTipodeCambioComponent1750272791660 } from './Precios/Obtener/ObtenerTipodeCambio.component';
-import { ObtenerTiposDeCambioEspecialesComponent1750272791662 } from './Precios/Obtener/ObtenerTiposDeCambioEspeciales.component';
-import { CancelarComponent1750272791664 } from './Préstamos/Cancelar/Cancelar.component';
-import { CancelaraFechaComponent1750272791665 } from './Préstamos/Cancelar/CancelaraFecha.component';
-import { CancelaraFechaTercerosComponent1750272791667 } from './Préstamos/Cancelar/CancelaraFechaTerceros.component';
-import { CancelarTercerosComponent1750272791669 } from './Préstamos/Cancelar/CancelarTerceros.component';
-import { ContratarComponent1750272791671 } from './Préstamos/Contratar/Contratar.component';
-import { ContratarAmpliacionComponent1750272791674 } from './Préstamos/Contratar/ContratarAmpliacion.component';
-import { ContratarRefinanciacionComponent1750272791676 } from './Préstamos/Contratar/ContratarRefinanciacion.component';
-import { ContratarRefinanciacionporDeudaTotalComponent1750272791678 } from './Préstamos/Contratar/ContratarRefinanciacionporDeudaTotal.component';
-import { ContratarRefinanciacionporSaldoCapitalComponent1750272791680 } from './Préstamos/Contratar/ContratarRefinanciacionporSaldoCapital.component';
-import { ActualizarDocumentoDigitalComponent1750272791681 } from './Préstamos/Documentos-Digitales/ActualizarDocumentoDigital.component';
-import { AsociarDocumentoDigitalComponent1750272791683 } from './Préstamos/Documentos-Digitales/AsociarDocumentoDigital.component';
-import { EliminarDocumentoDigitalComponent1750272791685 } from './Préstamos/Documentos-Digitales/EliminarDocumentoDigital.component';
-import { ObtenerDocumentoDigitalComponent1750272791686 } from './Préstamos/Documentos-Digitales/ObtenerDocumentoDigital.component';
-import { ObtenerDocumentosDigitalesComponent1750272791688 } from './Préstamos/Documentos-Digitales/ObtenerDocumentosDigitales.component';
-import { ObtenerCronogramaComponent1750272791691 } from './Préstamos/Obtener/ObtenerCronograma.component';
-import { ObtenerCronogramaaFechaComponent1750272791694 } from './Préstamos/Obtener/ObtenerCronogramaaFecha.component';
-import { ObtenerCronogramaconPagosaFechaComponent1750272791695 } from './Préstamos/Obtener/ObtenerCronogramaconPagosaFecha.component';
-import { ObtenerCronogramaenEspecieComponent1750272791697 } from './Préstamos/Obtener/ObtenerCronogramaenEspecie.component';
-import { ObtenerCronogramaOriginalComponent1750272791699 } from './Préstamos/Obtener/ObtenerCronogramaOriginal.component';
-import { ObtenerCuentadeCobroComponent1750272791700 } from './Préstamos/Obtener/ObtenerCuentadeCobro.component';
-import { ObtenerDatosdelProximoVencimientoComponent1750272791702 } from './Préstamos/Obtener/ObtenerDatosdelProximoVencimiento.component';
-import { ObtenerDetalleComponent1750272791704 } from './Préstamos/Obtener/ObtenerDetalle.component';
-import { ObtenerDetalleaFechaComponent1750272791707 } from './Préstamos/Obtener/ObtenerDetalleaFecha.component';
-import { ObtenerDetalledeCancelacionTotalComponent1750272791709 } from './Préstamos/Obtener/ObtenerDetalledeCancelacionTotal.component';
-import { ObtenerDetalledeOfertaComponent1750272791711 } from './Préstamos/Obtener/ObtenerDetalledeOferta.component';
-import { ObtenerDetalledeOfertaAmortizableComponent1750272791713 } from './Préstamos/Obtener/ObtenerDetalledeOfertaAmortizable.component';
-import { ObtenerDetalledeOperacionesaRefinanciarComponent1750272791715 } from './Préstamos/Obtener/ObtenerDetalledeOperacionesaRefinanciar.component';
-import { ObtenerDetalledePrestamoCanceladoComponent1750272791716 } from './Préstamos/Obtener/ObtenerDetalledePrestamoCancelado.component';
-import { ObtenerDetallePagoPrestamoComponent1750272791718 } from './Préstamos/Obtener/ObtenerDetallePagoPrestamo.component';
-import { ObtenerDetalleReducidoComponent1750272791720 } from './Préstamos/Obtener/ObtenerDetalleReducido.component';
-import { ObtenerDetalleSimulacionComponent1750272791722 } from './Préstamos/Obtener/ObtenerDetalleSimulacion.component';
-import { ObtenerDeudaComponent1750272791725 } from './Préstamos/Obtener/ObtenerDeuda.component';
-import { ObtenerDeudaPrestamoCastigadoComponent1750272791727 } from './Préstamos/Obtener/ObtenerDeudaPrestamoCastigado.component';
-import { ObtenerDeudaVencidaComponent1750272791728 } from './Préstamos/Obtener/ObtenerDeudaVencida.component';
-import { ObtenerFechadeIncumplimientoComponent1750272791730 } from './Préstamos/Obtener/ObtenerFechadeIncumplimiento.component';
-import { ObtenerFechadeUltimoPagoComponent1750272791732 } from './Préstamos/Obtener/ObtenerFechadeUltimoPago.component';
-import { ObtenerFechasdePagoComponent1750272791734 } from './Préstamos/Obtener/ObtenerFechasdePago.component';
-import { ObtenerInformacionAdicionalComponent1750272791736 } from './Préstamos/Obtener/ObtenerInformacionAdicional.component';
-import { ObtenerMontodeCancelacionComponent1750272791737 } from './Préstamos/Obtener/ObtenerMontodeCancelacion.component';
-import { ObtenerMotivosPrecancelacionComponent1750272791740 } from './Préstamos/Obtener/ObtenerMotivosPrecancelacion.component';
-import { ObtenerPagosdeCuotaComponent1750272791743 } from './Préstamos/Obtener/ObtenerPagosdeCuota.component';
-import { ObtenerPagosdeunPrestamoComponent1750272791744 } from './Préstamos/Obtener/ObtenerPagosdeunPrestamo.component';
-import { ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750272791746 } from './Préstamos/Obtener/ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1.component';
-import { ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750272791748 } from './Préstamos/Obtener/ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1.component';
-import { ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750272791751 } from './Préstamos/Obtener/ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1.component';
-import { ObtenerProductosComponent1750272791753 } from './Préstamos/Obtener/ObtenerProductos.component';
-import { ObtenerProductosRefinanciacionComponent1750272791756 } from './Préstamos/Obtener/ObtenerProductosRefinanciacion.component';
-import { ObtenerRefinanciacionSimuladaComponent1750272791759 } from './Préstamos/Obtener/ObtenerRefinanciacionSimulada.component';
-import { AbonaraCuentaComponent1750272791761 } from './Préstamos/Operar/AbonaraCuenta.component';
-import { ActualizarInformacionAdicionalComponent1750272791762 } from './Préstamos/Operar/ActualizarInformacionAdicional.component';
-import { ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750272791764 } from './Préstamos/Operar/ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1.component';
-import { AgregarCuentadeCobroComponent1750272791765 } from './Préstamos/Operar/AgregarCuentadeCobro.component';
-import { AgregarInformacionAdicionalComponent1750272791766 } from './Préstamos/Operar/AgregarInformacionAdicional.component';
-import { EliminarCuentadeCobroComponent1750272791768 } from './Préstamos/Operar/EliminarCuentadeCobro.component';
-import { EliminarInformacionAdicionalComponent1750272791769 } from './Préstamos/Operar/EliminarInformacionAdicional.component';
-import { SolicitarPrecancelacionComponent1750272791770 } from './Préstamos/Operar/SolicitarPrecancelacion.component';
-import { AdelantarCapitalConReduccionDeCuotaComponent1750272791772 } from './Préstamos/Pagar/AdelantarCapitalConReduccionDeCuota.component';
-import { AdelantarCapitalConReduccionDePlazoComponent1750272791774 } from './Préstamos/Pagar/AdelantarCapitalConReduccionDePlazo.component';
-import { PagarCuotaComponent1750272791775 } from './Préstamos/Pagar/PagarCuota.component';
-import { PagarCuotaaFechaComponent1750272791776 } from './Préstamos/Pagar/PagarCuotaaFecha.component';
-import { PagarCuotaaFechaTercerosComponent1750272791778 } from './Préstamos/Pagar/PagarCuotaaFechaTerceros.component';
-import { PagarCuotaTercerosComponent1750272791779 } from './Préstamos/Pagar/PagarCuotaTerceros.component';
-import { ResimularAmortizableComponent1750272791781 } from './Préstamos/Simular/ResimularAmortizable.component';
-import { ResimularAmpliacionComponent1750272791783 } from './Préstamos/Simular/ResimularAmpliacion.component';
-import { ResimularRefinanciacionComponent1750272791785 } from './Préstamos/Simular/ResimularRefinanciacion.component';
-import { SimularComponent1750272791787 } from './Préstamos/Simular/Simular.component';
-import { SimularAmortizableComponent1750272791788 } from './Préstamos/Simular/SimularAmortizable.component';
-import { SimularAmortizableSinClienteComponent1750272791792 } from './Préstamos/Simular/SimularAmortizableSinCliente.component';
-import { SimularAmpliacionComponent1750272791794 } from './Préstamos/Simular/SimularAmpliacion.component';
-import { SimularAmpliacionIngresandoSegurosComponent1750272791795 } from './Préstamos/Simular/SimularAmpliacionIngresandoSeguros.component';
-import { SimularDespejandoCapitalyCantidaddeCuotasComponent1750272791796 } from './Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotas.component';
-import { SimularDespejandoCapitalyCantidaddeCuotasSinClienteComponent1750272791797 } from './Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotasSinCliente.component';
-import { SimularDespejandoFechadeVencimientoyCantidaddeCuotasComponent1750272791799 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotas.component';
-import { SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750272791800 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinCliente.component';
-import { SimularDespejandoFechadeVencimientoyTasaComponent1750272791802 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasa.component';
-import { SimularDespejandoFechadeVencimientoyTasaSinClienteComponent1750272791803 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasaSinCliente.component';
-import { SimularIngresandoBalloonComponent1750272791804 } from './Préstamos/Simular/SimularIngresandoBalloon.component';
-import { SimularIngresandoBalloonSinClienteComponent1750272791806 } from './Préstamos/Simular/SimularIngresandoBalloonSinCliente.component';
-import { SimularIngresandoSegurosComponent1750272791809 } from './Préstamos/Simular/SimularIngresandoSeguros.component';
-import { SimularIngresandoSegurosSinClienteComponent1750272791810 } from './Préstamos/Simular/SimularIngresandoSegurosSinCliente.component';
-import { SimularLibreAmortizacionComponent1750272791812 } from './Préstamos/Simular/SimularLibreAmortizacion.component';
-import { SimularLibreAmortizacionSinClienteComponent1750272791813 } from './Préstamos/Simular/SimularLibreAmortizacionSinCliente.component';
-import { SimularOfertasComponent1750272791815 } from './Préstamos/Simular/SimularOfertas.component';
-import { SimularPlazoFijoComponent1750272791816 } from './Préstamos/Simular/SimularPlazoFijo.component';
-import { SimularRefinanciacionComponent1750272791817 } from './Préstamos/Simular/SimularRefinanciacion.component';
-import { SimularRefinanciacionporDeudaTotalComponent1750272791819 } from './Préstamos/Simular/SimularRefinanciacionporDeudaTotal.component';
-import { SimularRefinanciacionporSaldoCapitalComponent1750272791820 } from './Préstamos/Simular/SimularRefinanciacionporSaldoCapital.component';
-import { ActualizarTextosComponent1750272791823 } from './Préstamos/Textos/ActualizarTextos.component';
-import { AgregarTextosComponent1750272791825 } from './Préstamos/Textos/AgregarTextos.component';
-import { EliminarTextosComponent1750272791827 } from './Préstamos/Textos/EliminarTextos.component';
-import { ObtenerTextosComponent1750272791828 } from './Préstamos/Textos/ObtenerTextos.component';
-import { EvaluarRegladeNegocioComponent1750272791831 } from './Reglas-de-Negocio/EvaluarRegladeNegocio.component';
-import { ObtenerReglasdeNegocioComponent1750272791833 } from './Reglas-de-Negocio/ObtenerReglasdeNegocio.component';
-import { ObtenerVariablesReglaComponent1750272791834 } from './Reglas-de-Negocio/ObtenerVariablesRegla.component';
-import { ValidarDatosRegladeNegocioComponent1750272791835 } from './Reglas-de-Negocio/ValidarDatosRegladeNegocio.component';
-import { AutorizarExcepcionComponent1750272791837 } from './Seguridad/AutorizarExcepcion.component';
-import { ObtenerDetalledeExcepcionComponent1750272791838 } from './Seguridad/ObtenerDetalledeExcepcion.component';
-import { ObtenerExcepcionesComponent1750272791841 } from './Seguridad/ObtenerExcepciones.component';
-import { RechazarExcepcionComponent1750272791843 } from './Seguridad/RechazarExcepcion.component';
-import { RegistrarDispositivoComponent1750272791845 } from './Seguridad/RegistrarDispositivo.component';
-import { ContratarSeguroComponent1750272791846 } from './Seguros-Voluntarios/ContratarSeguro.component';
-import { ObtenerMontosDeUnSeguroComponent1750272791847 } from './Seguros-Voluntarios/ObtenerMontosDeUnSeguro.component';
-import { ObtenerSegurosComponent1750272791849 } from './Seguros-Voluntarios/ObtenerSeguros.component';
-import { ObtenerSegurosAPagarComponent1750272791850 } from './Seguros-Voluntarios/ObtenerSegurosAPagar.component';
-import { PagarSeguroComponent1750272791851 } from './Seguros-Voluntarios/PagarSeguro.component';
-import { ObtenerCodigosdeLimitesComponent1750272791860 } from './Tarjetas-de-Débito/Obtener/ObtenerCodigosdeLimites.component';
-import { ObtenerCuentaPreferencialComponent1750272791853 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentaPreferencial.component';
-import { ObtenerCuentasaAsociarComponent1750272791854 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentasaAsociar.component';
-import { ObtenerCuentasAsociadasComponent1750272791856 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadas.component';
-import { ObtenerCuentasAsociadasPorTipoComponent1750272791859 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadasPorTipo.component';
-import { ObtenerDatosComponent1750272791862 } from './Tarjetas-de-Débito/Obtener/ObtenerDatos.component';
-import { ObtenerDatosContactoComponent1750272791863 } from './Tarjetas-de-Débito/Obtener/ObtenerDatosContacto.component';
-import { ObtenerIdentificadorUnicoComponent1750272791864 } from './Tarjetas-de-Débito/Obtener/ObtenerIdentificadorUnico.component';
-import { ObtenerLimitesComponent1750272791865 } from './Tarjetas-de-Débito/Obtener/ObtenerLimites.component';
-import { ObtenerMovimientosComponent1750272791867 } from './Tarjetas-de-Débito/Obtener/ObtenerMovimientos.component';
-import { ObtenerTarjetaComponent1750272791868 } from './Tarjetas-de-Débito/Obtener/ObtenerTarjeta.component';
-import { ObtenerTarjetaHabienteComponent1750272791869 } from './Tarjetas-de-Débito/Obtener/ObtenerTarjetaHabiente.component';
-import { ObtenerTarjetasAdicionalesComponent1750272791870 } from './Tarjetas-de-Débito/Obtener/ObtenerTarjetasAdicionales.component';
-import { ObtenerTiposdeCuentaComponent1750272791872 } from './Tarjetas-de-Débito/Obtener/ObtenerTiposdeCuenta.component';
-import { ActivarComponent1750272791875 } from './Tarjetas-de-Débito/Operar/Activar.component';
-import { ActualizarCuentaPreferencialComponent1750272791877 } from './Tarjetas-de-Débito/Operar/ActualizarCuentaPreferencial.component';
-import { ActualizarDatosContactoComponent1750272791878 } from './Tarjetas-de-Débito/Operar/ActualizarDatosContacto.component';
-import { AsociarCuentaComponent1750272791879 } from './Tarjetas-de-Débito/Operar/AsociarCuenta.component';
-import { BlanquearPinComponent1750272791881 } from './Tarjetas-de-Débito/Operar/BlanquearPin.component';
-import { BloquearComponent1750272791883 } from './Tarjetas-de-Débito/Operar/Bloquear.component';
-import { BloquearDesdeREDComponent1750272791884 } from './Tarjetas-de-Débito/Operar/BloquearDesdeRED.component';
-import { CrearComponent1750272791885 } from './Tarjetas-de-Débito/Operar/Crear.component';
-import { CrearConCuentasAsociadasComponent1750272791886 } from './Tarjetas-de-Débito/Operar/CrearConCuentasAsociadas.component';
-import { DenunciarComponent1750272791888 } from './Tarjetas-de-Débito/Operar/Denunciar.component';
-import { DenunciarDesdeREDComponent1750272791892 } from './Tarjetas-de-Débito/Operar/DenunciarDesdeRED.component';
-import { DesbloquearComponent1750272791894 } from './Tarjetas-de-Débito/Operar/Desbloquear.component';
-import { DesbloquearDesdeREDComponent1750272791895 } from './Tarjetas-de-Débito/Operar/DesbloquearDesdeRED.component';
-import { EliminarCuentaAsociadaComponent1750272791897 } from './Tarjetas-de-Débito/Operar/EliminarCuentaAsociada.component';
-import { ModificarLimiteComponent1750272791898 } from './Tarjetas-de-Débito/Operar/ModificarLimite.component';
-import { ComprarComponent1750272791899 } from './Títulos/Comprar.component';
-import { ObtenerEstadoCompraComponent1750272791900 } from './Títulos/ObtenerEstadoCompra.component';
-import { ObtenerGruposComponent1750272791902 } from './Títulos/ObtenerGrupos.component';
-import { ObtenerValoresComponent1750272791904 } from './Títulos/ObtenerValores.component';
-import { AgregarPerfilComponent1750272791906 } from './Usuarios/AgregarPerfil.component';
-import { CrearComponent1750272791909 } from './Usuarios/Crear.component';
-import { EliminarPerfilComponent1750272791911 } from './Usuarios/EliminarPerfil.component';
-import { EliminarUsuarioComponent1750272791912 } from './Usuarios/EliminarUsuario.component';
-import { HabilitarEnCanalComponent1750272791914 } from './Usuarios/HabilitarEnCanal.component';
-import { HabilitarUsuarioComponent1750272791916 } from './Usuarios/HabilitarUsuario.component';
-import { InhabilitarUsuarioComponent1750272791917 } from './Usuarios/InhabilitarUsuario.component';
-import { ModificarComponent1750272791918 } from './Usuarios/Modificar.component';
-import { ObtenerComponent1750272791919 } from './Usuarios/Obtener.component';
-import { ObtenerPerfilesComponent1750272791921 } from './Usuarios/ObtenerPerfiles.component';
-import { ObtenerUsuariosComponent1750272791924 } from './Usuarios/ObtenerUsuarios.component';
-import { ObtenerUsuariosParaPerfilComponent1750272791926 } from './Usuarios/ObtenerUsuariosParaPerfil.component';
-import { ObtenerMetadataDeTareaComponent1750272791928 } from './Workflow/ObtenerMetadataDeTarea.component';
-import { ObtenerProcesosHabilitadosComponent1750272791929 } from './Workflow/ObtenerProcesosHabilitados.component';
-import { ObtenerRolesComponent1750272791931 } from './Workflow/ObtenerRoles.component';
-import { ObtenerRolesdeTareaComponent1750272791933 } from './Workflow/ObtenerRolesdeTarea.component';
-import { ObtenerTareasdeProcesoComponent1750272791935 } from './Workflow/ObtenerTareasdeProceso.component';
+import { ContratarSimulacionComponent1750446218029 } from './Ahorro-Programado/Contratar/ContratarSimulacion.component';
+import { CrearComponent1750446218037 } from './Ahorro-Programado/Contratar/Crear.component';
+import { SimularComponent1750446218041 } from './Ahorro-Programado/Contratar/Simular.component';
+import { ActualizarDocumentoDigitalComponent1750446218043 } from './Ahorro-Programado/Documentos-Digitales/ActualizarDocumentoDigital.component';
+import { AsociarDocumentoDigitalComponent1750446218045 } from './Ahorro-Programado/Documentos-Digitales/AsociarDocumentoDigital.component';
+import { EliminarDocumentoDigitalComponent1750446218046 } from './Ahorro-Programado/Documentos-Digitales/EliminarDocumentoDigital.component';
+import { ObtenerDocumentoDigitalComponent1750446218047 } from './Ahorro-Programado/Documentos-Digitales/ObtenerDocumentoDigital.component';
+import { ObtenerDocumentosDigitalesComponent1750446218048 } from './Ahorro-Programado/Documentos-Digitales/ObtenerDocumentosDigitales.component';
+import { ModificarCuentaDestinoComponent1750446218050 } from './Ahorro-Programado/Modificar/ModificarCuentaDestino.component';
+import { ModificarCuentaOrigenComponent1750446218052 } from './Ahorro-Programado/Modificar/ModificarCuentaOrigen.component';
+import { ModificarFechadeAbonoComponent1750446218054 } from './Ahorro-Programado/Modificar/ModificarFechadeAbono.component';
+import { ModificarMetadeAhorroComponent1750446218056 } from './Ahorro-Programado/Modificar/ModificarMetadeAhorro.component';
+import { ModificarMontodeAbonoComponent1750446218059 } from './Ahorro-Programado/Modificar/ModificarMontodeAbono.component';
+import { ObtenerComponent1750446218060 } from './Ahorro-Programado/Obtener/Obtener.component';
+import { ObtenerCronogramaAbonosComponent1750446218062 } from './Ahorro-Programado/Obtener/ObtenerCronogramaAbonos.component';
+import { ObtenerCuentasDestinoHabilitadasComponent1750446218063 } from './Ahorro-Programado/Obtener/ObtenerCuentasDestinoHabilitadas.component';
+import { ObtenerCuentasOrigenHabilitadasComponent1750446218064 } from './Ahorro-Programado/Obtener/ObtenerCuentasOrigenHabilitadas.component';
+import { ObtenerEstadodeCuentaComponent1750446218066 } from './Ahorro-Programado/Obtener/ObtenerEstadodeCuenta.component';
+import { ObtenerPeriodosHabilitadosComponent1750446218067 } from './Ahorro-Programado/Obtener/ObtenerPeriodosHabilitados.component';
+import { ObtenerPlazosHabilitadosComponent1750446218069 } from './Ahorro-Programado/Obtener/ObtenerPlazosHabilitados.component';
+import { ObtenerProductosComponent1750446218072 } from './Ahorro-Programado/Obtener/ObtenerProductos.component';
+import { AnularChequeElectronicoComponent1750446218074 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AnularChequeElectronico.component';
+import { AsignarIdaChequeElectronicoComponent1750446218076 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AsignarIdaChequeElectronico.component';
+import { CrearChequeraElectronicaComponent1750446218078 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/CrearChequeraElectronica.component';
+import { DepositarChequeElectronicodeBancoPropioComponent1750446218080 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeBancoPropio.component';
+import { DepositarChequeElectronicodeOtroBancoComponent1750446218081 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeOtroBanco.component';
+import { DepositarChequeElectronicoenCustodiaComponent1750446218082 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicoenCustodia.component';
+import { EmitirChequeElectronicoComponent1750446218083 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronico.component';
+import { EmitirChequeElectronicodeChequeraComponent1750446218085 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronicodeChequera.component';
+import { HabilitarChequeElectronicoComponent1750446218087 } from './AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/HabilitarChequeElectronico.component';
+import { CrearAdhesionComponent1750446218089 } from './AR - Argentina/SNP/CrearAdhesion.component';
+import { CrearStopDebitComponent1750446218091 } from './AR - Argentina/SNP/CrearStopDebit.component';
+import { CrearStopDebitparaAdhesionconImporteComponent1750446218093 } from './AR - Argentina/SNP/CrearStopDebitparaAdhesionconImporte.component';
+import { EliminarStopDebitComponent1750446218095 } from './AR - Argentina/SNP/EliminarStopDebit.component';
+import { ObtenerAdhesionesComponent1750446218096 } from './AR - Argentina/SNP/ObtenerAdhesiones.component';
+import { ObtenerDebitosComponent1750446218097 } from './AR - Argentina/SNP/ObtenerDebitos.component';
+import { ObtenerEmpresasOriginantesComponent1750446218098 } from './AR - Argentina/SNP/ObtenerEmpresasOriginantes.component';
+import { ObtenerStopDebitsComponent1750446218100 } from './AR - Argentina/SNP/ObtenerStopDebits.component';
+import { ReversarDebitosComponent1750446218101 } from './AR - Argentina/SNP/ReversarDebitos.component';
+import { SolicitarBajadeAdhesionComponent1750446218103 } from './AR - Argentina/SNP/SolicitarBajadeAdhesion.component';
+import { AutenticacionComponent1750446218105 } from './Autenticación/Autenticacion.component';
+import { ObtenerDetalledeEjecucionComponent1750446218107 } from './Cadena-de-Cierre/ObtenerDetalledeEjecucion.component';
+import { ObtenerDetalledeProcesoComponent1750446218109 } from './Cadena-de-Cierre/ObtenerDetalledeProceso.component';
+import { ObtenerProcesosconErrorComponent1750446218110 } from './Cadena-de-Cierre/ObtenerProcesosconError.component';
+import { ObtenerProcesosCriticosComponent1750446218111 } from './Cadena-de-Cierre/ObtenerProcesosCriticos.component';
+import { ObtenerProcesosDiariosComponent1750446218112 } from './Cadena-de-Cierre/ObtenerProcesosDiarios.component';
+import { ObtenerProcesosMensualesComponent1750446218113 } from './Cadena-de-Cierre/ObtenerProcesosMensuales.component';
+import { ObtenerProcesosReprocesablesComponent1750446218114 } from './Cadena-de-Cierre/ObtenerProcesosReprocesables.component';
+import { VerificarEstadoServidorComponent1750446218115 } from './Cadena-de-Cierre/VerificarEstadoServidor.component';
+import { CalcularFechadeVencimientoComponent1750446218117 } from './Calendarios/Calcular/CalcularFechadeVencimiento.component';
+import { CalcularFechadeVencimientoenDiasHabilesComponent1750446218118 } from './Calendarios/Calcular/CalcularFechadeVencimientoenDiasHabiles.component';
+import { CalcularPlazoComponent1750446218120 } from './Calendarios/Calcular/CalcularPlazo.component';
+import { CalcularPlazoenDiasHabilesComponent1750446218122 } from './Calendarios/Calcular/CalcularPlazoenDiasHabiles.component';
+import { ObtenerFechaHabilComponent1750446218123 } from './Calendarios/Obtener/ObtenerFechaHabil.component';
+import { ObtenerFechaHabilAnteriorComponent1750446218126 } from './Calendarios/Obtener/ObtenerFechaHabilAnterior.component';
+import { ObtenerFechaHabilAnteriordeSucursalComponent1750446218127 } from './Calendarios/Obtener/ObtenerFechaHabilAnteriordeSucursal.component';
+import { ObtenerFechaHabildeSucursalComponent1750446218128 } from './Calendarios/Obtener/ObtenerFechaHabildeSucursal.component';
+import { ObtenerInicioyFindeMesComponent1750446218129 } from './Calendarios/Obtener/ObtenerInicioyFindeMes.component';
+import { ObtenerInicioyFindeMesdeSucursalComponent1750446218130 } from './Calendarios/Obtener/ObtenerInicioyFindeMesdeSucursal.component';
+import { ObtenerProximaFechaHabilComponent1750446218131 } from './Calendarios/Obtener/ObtenerProximaFechaHabil.component';
+import { ObtenerProximaFechaHabildeSucursalComponent1750446218132 } from './Calendarios/Obtener/ObtenerProximaFechaHabildeSucursal.component';
+import { AutorizarArchivoComponent1750446218133 } from './CASH-Management/Archivo/AutorizarArchivo.component';
+import { CargarArchivoComponent1750446218135 } from './CASH-Management/Archivo/CargarArchivo.component';
+import { CargarArchivoRecibidoComoDatoComponent1750446218137 } from './CASH-Management/Archivo/CargarArchivoRecibidoComoDato.component';
+import { DetenerArchivoComponent1750446218138 } from './CASH-Management/Archivo/DetenerArchivo.component';
+import { RechazarArchivoComponent1750446218139 } from './CASH-Management/Archivo/RechazarArchivo.component';
+import { CargarBeneficiariosComponent1750446218141 } from './CASH-Management/Beneficiarios/CargarBeneficiarios.component';
+import { IngresarBeneficiarioComponent1750446218142 } from './CASH-Management/Beneficiarios/IngresarBeneficiario.component';
+import { ObtenerBeneficiarioSegunFiltroComponent1750446218143 } from './CASH-Management/Beneficiarios/ObtenerBeneficiarioSegunFiltro.component';
+import { AltaAutomaticaContratoComponent1750446218144 } from './CASH-Management/Contratar/AltaAutomaticaContrato.component';
+import { CargarServiciosDisponiblesComponent1750446218146 } from './CASH-Management/Contratar/CargarServiciosDisponibles.component';
+import { ContratarDebitoAutomaticoComponent1750446218147 } from './CASH-Management/Contratar/ContratarDebitoAutomatico.component';
+import { ObtenerDetalledeOrdendeCuentaComponent1750446218148 } from './CASH-Management/Obtener/ObtenerDetalledeOrdendeCuenta.component';
+import { ObtenerDetalledePagoComponent1750446218150 } from './CASH-Management/Obtener/ObtenerDetalledePago.component';
+import { ObtenerDetalleOrdenSegunCampoComponent1750446218152 } from './CASH-Management/Obtener/ObtenerDetalleOrdenSegunCampo.component';
+import { ObtenerDetallePagoOrdenComponent1750446218154 } from './CASH-Management/Obtener/ObtenerDetallePagoOrden.component';
+import { ObtenerDeudaComponent1750446218156 } from './CASH-Management/Obtener/ObtenerDeuda.component';
+import { ObtenerResumenOrdenComponent1750446218157 } from './CASH-Management/Obtener/ObtenerResumenOrden.component';
+import { ObtenerServiciosComponent1750446218159 } from './CASH-Management/Obtener/ObtenerServicios.component';
+import { ObtenerValoresOrdenComponent1750446218160 } from './CASH-Management/Obtener/ObtenerValoresOrden.component';
+import { ObtenerValoresOrdenSegunCampoComponent1750446218161 } from './CASH-Management/Obtener/ObtenerValoresOrdenSegunCampo.component';
+import { AutorizarOrdenComponent1750446218162 } from './CASH-Management/Orden/AutorizarOrden.component';
+import { DetenerOrdenComponent1750446218163 } from './CASH-Management/Orden/DetenerOrden.component';
+import { IngresarOrdenPagoComponent1750446218164 } from './CASH-Management/Orden/IngresarOrdenPago.component';
+import { ProcesarOrdenComponent1750446218165 } from './CASH-Management/Orden/ProcesarOrden.component';
+import { RechazarOrdenComponent1750446218166 } from './CASH-Management/Orden/RechazarOrden.component';
+import { AnularPagoDeudaComponent1750446218167 } from './CASH-Management/Pagos/AnularPagoDeuda.component';
+import { PagarDeudaDesdeCuentaComponent1750446218169 } from './CASH-Management/Pagos/PagarDeudaDesdeCuenta.component';
+import { RegistrarPagoDeudaComponent1750446218171 } from './CASH-Management/Pagos/RegistrarPagoDeuda.component';
+import { RegistrarPagoEnLineaComponent1750446218173 } from './CASH-Management/Pagos/RegistrarPagoEnLinea.component';
+import { RegistrarPagoEnLineaDesdeCuentaComponent1750446218175 } from './CASH-Management/Pagos/RegistrarPagoEnLineaDesdeCuenta.component';
+import { VisualizarListaResumenCabezalComponent1750446218178 } from './CASH-Management/Visualizar/VisualizarListaResumenCabezal.component';
+import { VisualizarListaResumenCabezalOrdenComponent1750446218180 } from './CASH-Management/Visualizar/VisualizarListaResumenCabezalOrden.component';
+import { VisualizarOrdendeArchivoParaCuentaComponent1750446218181 } from './CASH-Management/Visualizar/VisualizarOrdendeArchivoParaCuenta.component';
+import { VisualizarResultadoProcesamientoComponent1750446218183 } from './CASH-Management/Visualizar/VisualizarResultadoProcesamiento.component';
+import { VisualizarResumenCabezalComponent1750446218185 } from './CASH-Management/Visualizar/VisualizarResumenCabezal.component';
+import { VisualizarSituacionArchivosComponent1750446218188 } from './CASH-Management/Visualizar/VisualizarSituacionArchivos.component';
+import { VisualizarSituacionLineasComponent1750446218191 } from './CASH-Management/Visualizar/VisualizarSituacionLineas.component';
+import { CHATComponent1750446218194 } from './CHAT/CHAT.component';
+import { ActualizarComponent1750446218196 } from './Clientes/Actualizar/Actualizar.component';
+import { ActualizarDocumentoDigitalComponent1750446218198 } from './Clientes/Actualizar/ActualizarDocumentoDigital.component';
+import { ActualizarDomicilioComponent1750446218199 } from './Clientes/Actualizar/ActualizarDomicilio.component';
+import { ActualizarInformacionAdicionalComponent1750446218202 } from './Clientes/Actualizar/ActualizarInformacionAdicional.component';
+import { ActualizarRegistroEmpleadoComponent1750446218204 } from './Clientes/Actualizar/ActualizarRegistroEmpleado.component';
+import { ActualizarTelefonoComponent1750446218207 } from './Clientes/Actualizar/ActualizarTelefono.component';
+import { AgregarDomicilioComponent1750446218208 } from './Clientes/Actualizar/AgregarDomicilio.component';
+import { AgregarInformacionAdicionalComponent1750446218209 } from './Clientes/Actualizar/AgregarInformacionAdicional.component';
+import { AgregarIntegranteComponent1750446218210 } from './Clientes/Actualizar/AgregarIntegrante.component';
+import { AgregarTelefonoComponent1750446218212 } from './Clientes/Actualizar/AgregarTelefono.component';
+import { AsociarDocumentoDigitalComponent1750446218213 } from './Clientes/Actualizar/AsociarDocumentoDigital.component';
+import { EliminarDocumentoDigitalComponent1750446218214 } from './Clientes/Actualizar/EliminarDocumentoDigital.component';
+import { EliminarDomicilioComponent1750446218215 } from './Clientes/Actualizar/EliminarDomicilio.component';
+import { EliminarInformacionAdicionalComponent1750446218216 } from './Clientes/Actualizar/EliminarInformacionAdicional.component';
+import { EliminarIntegranteComponent1750446218218 } from './Clientes/Actualizar/EliminarIntegrante.component';
+import { HabilitarComponent1750446218221 } from './Clientes/Actualizar/Habilitar.component';
+import { InhabilitarComponent1750446218223 } from './Clientes/Actualizar/Inhabilitar.component';
+import { ModificarEjecutivoComponent1750446218224 } from './Clientes/Actualizar/ModificarEjecutivo.component';
+import { CrearComponent1750446218226 } from './Clientes/Crear/Crear.component';
+import { CrearconPersonaExistenteComponent1750446218228 } from './Clientes/Crear/CrearconPersonaExistente.component';
+import { CrearParaPersonaJuridicaComponent1750446218230 } from './Clientes/Crear/CrearParaPersonaJuridica.component';
+import { ObtenerComponent1750446218232 } from './Clientes/Obtener/Obtener.component';
+import { ObtenerAhorrosProgramadosComponent1750446218233 } from './Clientes/Obtener/ObtenerAhorrosProgramados.component';
+import { ObtenerBolsillosComponent1750446218239 } from './Clientes/Obtener/ObtenerBolsillos.component';
+import { ObtenerClasificacionesInternasComponent1750446218242 } from './Clientes/Obtener/ObtenerClasificacionesInternas.component';
+import { ObtenerCuentaClienteComponent1750446218244 } from './Clientes/Obtener/ObtenerCuentaCliente.component';
+import { ObtenerCuentasCorrientesSaldoContableComponent1750446218246 } from './Clientes/Obtener/ObtenerCuentasCorrientesSaldoContable.component';
+import { ObtenerCuentasCorrientesSaldoDisponibleComponent1750446218248 } from './Clientes/Obtener/ObtenerCuentasCorrientesSaldoDisponible.component';
+import { ObtenerCuentasdeAhorroSaldoContableComponent1750446218250 } from './Clientes/Obtener/ObtenerCuentasdeAhorroSaldoContable.component';
+import { ObtenerCuentasdeAhorroSaldoDisponibleComponent1750446218254 } from './Clientes/Obtener/ObtenerCuentasdeAhorroSaldoDisponible.component';
+import { ObtenerDatosComponent1750446218258 } from './Clientes/Obtener/ObtenerDatos.component';
+import { ObtenerDetallePosicionComponent1750446218259 } from './Clientes/Obtener/ObtenerDetallePosicion.component';
+import { ObtenerDocumentoDigitalComponent1750446218261 } from './Clientes/Obtener/ObtenerDocumentoDigital.component';
+import { ObtenerDocumentosDigitalesComponent1750446218262 } from './Clientes/Obtener/ObtenerDocumentosDigitales.component';
+import { ObtenerDomiciliosComponent1750446218263 } from './Clientes/Obtener/ObtenerDomicilios.component';
+import { ObtenerFacultadesComponent1750446218264 } from './Clientes/Obtener/ObtenerFacultades.component';
+import { ObtenerIdentificadorUnicoComponent1750446218266 } from './Clientes/Obtener/ObtenerIdentificadorUnico.component';
+import { ObtenerInformacionAdicionalComponent1750446218267 } from './Clientes/Obtener/ObtenerInformacionAdicional.component';
+import { ObtenerIntegrantesComponent1750446218269 } from './Clientes/Obtener/ObtenerIntegrantes.component';
+import { ObtenerLimitesComponent1750446218271 } from './Clientes/Obtener/ObtenerLimites.component';
+import { ObtenerMotivosInhabilitacionComponent1750446218272 } from './Clientes/Obtener/ObtenerMotivosInhabilitacion.component';
+import { ObtenerPerfilComponent1750446218274 } from './Clientes/Obtener/ObtenerPerfil.component';
+import { ObtenerPlazosFijosComponent1750446218277 } from './Clientes/Obtener/ObtenerPlazosFijos.component';
+import { ObtenerPlazosFijosCanceladosComponent1750446218278 } from './Clientes/Obtener/ObtenerPlazosFijosCancelados.component';
+import { ObtenerPlazosFijosconAvanceComponent1750446218280 } from './Clientes/Obtener/ObtenerPlazosFijosconAvance.component';
+import { ObtenerPosicionComponent1750446218282 } from './Clientes/Obtener/ObtenerPosicion.component';
+import { ObtenerPrestamosComponent1750446218283 } from './Clientes/Obtener/ObtenerPrestamos.component';
+import { ObtenerPrestamosCanceladosComponent1750446218285 } from './Clientes/Obtener/ObtenerPrestamosCancelados.component';
+import { ObtenerPrestamosCastigadosComponent1750446218288 } from './Clientes/Obtener/ObtenerPrestamosCastigados.component';
+import { ObtenerPrestamosconAvanceComponent1750446218290 } from './Clientes/Obtener/ObtenerPrestamosconAvance.component';
+import { ObtenerResumendeProductosCierredeanoComponent1750446218292 } from './Clientes/Obtener/ObtenerResumendeProductosCierredeano.component';
+import { ObtenerResumendeProductosSaldosContablesComponent1750446218294 } from './Clientes/Obtener/ObtenerResumendeProductosSaldosContables.component';
+import { ObtenerResumendeProductosSaldosDisponiblesComponent1750446218295 } from './Clientes/Obtener/ObtenerResumendeProductosSaldosDisponibles.component';
+import { ObtenerResumenporProductoaCierreAnoComponent1750446218297 } from './Clientes/Obtener/ObtenerResumenporProductoaCierreAno.component';
+import { ObtenerRiesgodeCreditoComponent1750446218298 } from './Clientes/Obtener/ObtenerRiesgodeCredito.component';
+import { ObtenerSaldosdeOtrosProductosComponent1750446218300 } from './Clientes/Obtener/ObtenerSaldosdeOtrosProductos.component';
+import { ObtenerSectoresComponent1750446218302 } from './Clientes/Obtener/ObtenerSectores.component';
+import { ObtenerSegmentosComponent1750446218304 } from './Clientes/Obtener/ObtenerSegmentos.component';
+import { ObtenerTarjetasdeDebitoComponent1750446218306 } from './Clientes/Obtener/ObtenerTarjetasdeDebito.component';
+import { ObtenerTelefonosComponent1750446218308 } from './Clientes/Obtener/ObtenerTelefonos.component';
+import { ObtenerTiposdeIntegracionComponent1750446218311 } from './Clientes/Obtener/ObtenerTiposdeIntegracion.component';
+import { ObtenerTitularRepresentativoComponent1750446218323 } from './Clientes/Obtener/ObtenerTitularRepresentativo.component';
+import { ObtenerTitulosComponent1750446218326 } from './Clientes/Obtener/ObtenerTitulos.component';
+import { ValidarExistenciaComponent1750446218328 } from './Clientes/Validar/ValidarExistencia.component';
+import { VerificarEmpleadoComponent1750446218330 } from './Clientes/Validar/VerificarEmpleado.component';
+import { ObtenerAgenciasBancoComponent1750446218332 } from './Configuración-Bantotal/Bancos/ObtenerAgenciasBanco.component';
+import { ObtenerBancosComponent1750446218333 } from './Configuración-Bantotal/Bancos/ObtenerBancos.component';
+import { ObtenerDetalleSucursalComponent1750446218336 } from './Configuración-Bantotal/Bancos/ObtenerDetalleSucursal.component';
+import { ObtenerSucursalesPrincipalesComponent1750446218338 } from './Configuración-Bantotal/Bancos/ObtenerSucursalesPrincipales.component';
+import { ObtenerActividadesComponent1750446218340 } from './Configuración-Bantotal/Clientes/ObtenerActividades.component';
+import { ObtenerActividadesporTipoComponent1750446218342 } from './Configuración-Bantotal/Clientes/ObtenerActividadesporTipo.component';
+import { ObtenerEjecutivosComponent1750446218344 } from './Configuración-Bantotal/Clientes/ObtenerEjecutivos.component';
+import { ObtenerTiposdeActividadComponent1750446218345 } from './Configuración-Bantotal/Clientes/ObtenerTiposdeActividad.component';
+import { ObtenerTiposdeTarjetaComponent1750446218347 } from './Configuración-Bantotal/Clientes/ObtenerTiposdeTarjeta.component';
+import { ObtenerImpuestosComponent1750446218348 } from './Configuración-Bantotal/ObtenerImpuestos.component';
+import { ObtenerTiposdeDocumentoDigitalComponent1750446218350 } from './Configuración-Bantotal/ObtenerTiposdeDocumentoDigital.component';
+import { ObtenerEstadosComponent1750446218354 } from './Configuración-Bantotal/Operaciones/ObtenerEstados.component';
+import { ObtenerInstruccionesComponent1750446218357 } from './Configuración-Bantotal/Operaciones/ObtenerInstrucciones.component';
+import { ObtenerPaquetesComponent1750446218359 } from './Configuración-Bantotal/Operaciones/ObtenerPaquetes.component';
+import { ObtenerTiposdeTextoComponent1750446218360 } from './Configuración-Bantotal/Operaciones/ObtenerTiposdeTexto.component';
+import { ObtenerCalendariodeSucursalComponent1750446218362 } from './Configuración-Bantotal/Parámetros Generales/ObtenerCalendariodeSucursal.component';
+import { ObtenerCalendariosComponent1750446218364 } from './Configuración-Bantotal/Parámetros Generales/ObtenerCalendarios.component';
+import { ObtenerDetalledeCalendarioComponent1750446218366 } from './Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendario.component';
+import { ObtenerDetalledeCalendariodeSucursalComponent1750446218368 } from './Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendariodeSucursal.component';
+import { ObtenerDolarUSAComponent1750446218371 } from './Configuración-Bantotal/Parámetros Generales/ObtenerDolarUSA.component';
+import { ObtenerEmpresaComponent1750446218373 } from './Configuración-Bantotal/Parámetros Generales/ObtenerEmpresa.component';
+import { ObtenerFechadeSistemaComponent1750446218374 } from './Configuración-Bantotal/Parámetros Generales/ObtenerFechadeSistema.component';
+import { ObtenerMonedaNacionalComponent1750446218376 } from './Configuración-Bantotal/Parámetros Generales/ObtenerMonedaNacional.component';
+import { ObtenerMonedasComponent1750446218378 } from './Configuración-Bantotal/Parámetros Generales/ObtenerMonedas.component';
+import { ObtenerSucursalesComponent1750446218380 } from './Configuración-Bantotal/Parámetros Generales/ObtenerSucursales.component';
+import { ObtenerAgrupadoresDomicilioComponent1750446218381 } from './Configuración-Bantotal/Personas/ObtenerAgrupadoresDomicilio.component';
+import { ObtenerBarriosyColoniasComponent1750446218383 } from './Configuración-Bantotal/Personas/ObtenerBarriosyColonias.component';
+import { ObtenerCiudadesyLocalidadesComponent1750446218384 } from './Configuración-Bantotal/Personas/ObtenerCiudadesyLocalidades.component';
+import { ObtenerCodigosdeDomicilioComponent1750446218388 } from './Configuración-Bantotal/Personas/ObtenerCodigosdeDomicilio.component';
+import { ObtenerEstadosProvinciasyDepartamentosComponent1750446218390 } from './Configuración-Bantotal/Personas/ObtenerEstadosProvinciasyDepartamentos.component';
+import { ObtenerPaisesComponent1750446218392 } from './Configuración-Bantotal/Personas/ObtenerPaises.component';
+import { ObtenerTiposdeListasNegrasComponent1750446218394 } from './Configuración-Bantotal/Personas/ObtenerTiposdeListasNegras.component';
+import { ObtenerTiposdeTelefonoComponent1750446218396 } from './Configuración-Bantotal/Personas/ObtenerTiposdeTelefono.component';
+import { ObtenerTiposdeViviendaComponent1750446218397 } from './Configuración-Bantotal/Personas/ObtenerTiposdeVivienda.component';
+import { ObtenerPizarraporModuloComponent1750446218399 } from './Configuración-Bantotal/Precios/ObtenerPizarraporModulo.component';
+import { ObtenerPizarrasComponent1750446218400 } from './Configuración-Bantotal/Precios/ObtenerPizarras.component';
+import { ObtenerMenusComponent1750446218402 } from './Configuración-Bantotal/Seguridad/ObtenerMenus.component';
+import { ObtenerPerfilesComponent1750446218404 } from './Configuración-Bantotal/Seguridad/ObtenerPerfiles.component';
+import { AgregarTextoAsientoComponent1750446218405 } from './Contabilidad/Agregar-Texto/AgregarTextoAsiento.component';
+import { AgregarTextoOrdinalComponent1750446218407 } from './Contabilidad/Agregar-Texto/AgregarTextoOrdinal.component';
+import { AnularMovimientoComponent1750446218409 } from './Contabilidad/AnularMovimiento.component';
+import { ActualizarCondicionImpositivaComponent1750446218411 } from './Contabilidad/Condición-Impositiva/ActualizarCondicionImpositiva.component';
+import { CrearCondicionImpositivaComponent1750446218412 } from './Contabilidad/Condición-Impositiva/CrearCondicionImpositiva.component';
+import { ObtenerIdBantotalMovimientoComponent1750446218413 } from './Contabilidad/Obtener/Identificadores/ObtenerIdBantotalMovimiento.component';
+import { ObtenerIdBantotalOperacionComponent1750446218415 } from './Contabilidad/Obtener/Identificadores/ObtenerIdBantotalOperacion.component';
+import { ObtenerIdBantotalProductoComponent1750446218416 } from './Contabilidad/Obtener/Identificadores/ObtenerIdBantotalProducto.component';
+import { ObtenerIdentificadorUnicodeMovimientoComponent1750446218418 } from './Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeMovimiento.component';
+import { ObtenerIdentificadorUnicodeOperacionComponent1750446218419 } from './Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeOperacion.component';
+import { ObtenerIdentificadorUnicodeProductoComponent1750446218421 } from './Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeProducto.component';
+import { ObtenerClientedeunaOperacionComponent1750446218422 } from './Contabilidad/Obtener/ObtenerClientedeunaOperacion.component';
+import { ObtenerCondicionImpositivaComponent1750446218424 } from './Contabilidad/Obtener/ObtenerCondicionImpositiva.component';
+import { ObtenerDetalledeMovimientoComponent1750446218426 } from './Contabilidad/Obtener/ObtenerDetalledeMovimiento.component';
+import { ObtenerDetalledeOrdinalComponent1750446218426 } from './Contabilidad/Obtener/ObtenerDetalledeOrdinal.component';
+import { ObtenerIntegrantesdeOperacionComponent1750446218427 } from './Contabilidad/Obtener/ObtenerIntegrantesdeOperacion.component';
+import { ObtenerTextosdeMovimientoComponent1750446218428 } from './Contabilidad/Obtener/ObtenerTextosdeMovimiento.component';
+import { RegistrarAsientoComponent1750446218429 } from './Contabilidad/Registrar-Asiento/RegistrarAsiento.component';
+import { RegistrarAsientoFechaValorComponent1750446218430 } from './Contabilidad/Registrar-Asiento/RegistrarAsientoFechaValor.component';
+import { CancelarComponent1750446218431 } from './Cuentas-Bolsillo/Cancelar.component';
+import { CashInComponent1750446218432 } from './Cuentas-Bolsillo/CashIn.component';
+import { CashOutComponent1750446218432 } from './Cuentas-Bolsillo/CashOut.component';
+import { ContratarComponent1750446218433 } from './Cuentas-Bolsillo/Contratar.component';
+import { ObtenerDatosComponent1750446218436 } from './Cuentas-Bolsillo/ObtenerDatos.component';
+import { ObtenerMovimientosComponent1750446218438 } from './Cuentas-Bolsillo/ObtenerMovimientos.component';
+import { ObtenerProductosComponent1750446218440 } from './Cuentas-Bolsillo/ObtenerProductos.component';
+import { ObtenerProductosCVComponent1750446218441 } from './Cuentas-Bolsillo/ObtenerProductosCV.component';
+import { ObtenerChequeraComponent1750446218442 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerChequera.component';
+import { ObtenerChequerasComponent1750446218443 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerChequeras.component';
+import { ObtenerChequesdeChequeraComponent1750446218444 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerChequesdeChequera.component';
+import { ObtenerComisionChequeraComponent1750446218445 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerComisionChequera.component';
+import { ObtenerEstadodeChequeraComponent1750446218445 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerEstadodeChequera.component';
+import { ObtenerSolicitudesdeChequerasComponent1750446218446 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerSolicitudesdeChequeras.component';
+import { ObtenerTiposdeChequeraComponent1750446218447 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequera.component';
+import { ObtenerTiposdeChequeraporProductoComponent1750446218448 } from './Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequeraporProducto.component';
+import { EliminarChequeraComponent1750446218449 } from './Cuentas-Corrientes/Chequera/Operar/EliminarChequera.component';
+import { RegistrarOrdendeNoPagodeChequeraComponent1750446218450 } from './Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeChequera.component';
+import { RegistrarOrdendeNoPagodeChequesComponent1750446218452 } from './Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeCheques.component';
+import { SolicitarChequeraComponent1750446218453 } from './Cuentas-Corrientes/Chequera/Operar/SolicitarChequera.component';
+import { ContratarconPeriodicidadComponent1750446218454 } from './Cuentas-Corrientes/Contratar/ContratarconPeriodicidad.component';
+import { ContratarProductoComponent1750446218495 } from './Cuentas-Corrientes/Contratar/ContratarProducto.component';
+import { ContratarProductoconAltadeFacultadesComponent1750446218496 } from './Cuentas-Corrientes/Contratar/ContratarProductoconAltadeFacultades.component';
+import { ObtenerAcuerdosComponent1750446218498 } from './Cuentas-Corrientes/Obtener/ObtenerAcuerdos.component';
+import { ObtenerDatosComponent1750446218499 } from './Cuentas-Corrientes/Obtener/ObtenerDatos.component';
+import { ObtenerEstadodeCuentaComponent1750446218500 } from './Cuentas-Corrientes/Obtener/ObtenerEstadodeCuenta.component';
+import { ObtenerEvoluciondeSaldosComponent1750446218509 } from './Cuentas-Corrientes/Obtener/ObtenerEvoluciondeSaldos.component';
+import { ObtenerProductosComponent1750446218511 } from './Cuentas-Corrientes/Obtener/ObtenerProductos.component';
+import { ContratarconPeriodicidadComponent1750446218512 } from './Cuentas-de-Ahorro/Contratar/ContratarconPeriodicidad.component';
+import { ContratarProductoComponent1750446218513 } from './Cuentas-de-Ahorro/Contratar/ContratarProducto.component';
+import { ContratarProductoconAltadeFacultadesComponent1750446218514 } from './Cuentas-de-Ahorro/Contratar/ContratarProductoconAltadeFacultades.component';
+import { ObtenerDatosComponent1750446218515 } from './Cuentas-de-Ahorro/Obtener/ObtenerDatos.component';
+import { ObtenerEstadodeCuentaComponent1750446218516 } from './Cuentas-de-Ahorro/Obtener/ObtenerEstadodeCuenta.component';
+import { ObtenerEvoluciondeSaldosComponent1750446218517 } from './Cuentas-de-Ahorro/Obtener/ObtenerEvoluciondeSaldos.component';
+import { ObtenerProductosComponent1750446218520 } from './Cuentas-de-Ahorro/Obtener/ObtenerProductos.component';
+import { ActualizarBeneficiariosComponent1750446218521 } from './Cuentas-Vista/Beneficiarios/ActualizarBeneficiarios.component';
+import { ObtenerBeneficiariosComponent1750446218523 } from './Cuentas-Vista/Beneficiarios/ObtenerBeneficiarios.component';
+import { ActualizarDocumentoDigitalComponent1750446218524 } from './Cuentas-Vista/Documentos-Digitales/ActualizarDocumentoDigital.component';
+import { AsociarDocumentoDigitalComponent1750446218524 } from './Cuentas-Vista/Documentos-Digitales/AsociarDocumentoDigital.component';
+import { EliminarDocumentoDigitalComponent1750446218525 } from './Cuentas-Vista/Documentos-Digitales/EliminarDocumentoDigital.component';
+import { ObtenerDocumentoDigitalComponent1750446218526 } from './Cuentas-Vista/Documentos-Digitales/ObtenerDocumentoDigital.component';
+import { ObtenerDocumentosDigitalesComponent1750446218527 } from './Cuentas-Vista/Documentos-Digitales/ObtenerDocumentosDigitales.component';
+import { ObtenerBolsillosComponent1750446218528 } from './Cuentas-Vista/Obtener/ObtenerBolsillos.component';
+import { ObtenerCBUdeCuentaVistaComponent1750446218529 } from './Cuentas-Vista/Obtener/ObtenerCBUdeCuentaVista.component';
+import { ObtenerCuentaVistadeCBUComponent1750446218530 } from './Cuentas-Vista/Obtener/ObtenerCuentaVistadeCBU.component';
+import { ObtenerDetalleBloqueoComponent1750446218531 } from './Cuentas-Vista/Obtener/ObtenerDetalleBloqueo.component';
+import { ObtenerEstadodeCuentaporPeriodoComponent1750446218532 } from './Cuentas-Vista/Obtener/ObtenerEstadodeCuentaporPeriodo.component';
+import { ObtenerEstadoDeOperacionComponent1750446218533 } from './Cuentas-Vista/Obtener/ObtenerEstadoDeOperacion.component';
+import { ObtenerFacultadesComponent1750446218535 } from './Cuentas-Vista/Obtener/ObtenerFacultades.component';
+import { ObtenerPaqueteComponent1750446218537 } from './Cuentas-Vista/Obtener/ObtenerPaquete.component';
+import { ObtenerPeriododeAcreditacionComponent1750446218539 } from './Cuentas-Vista/Obtener/ObtenerPeriododeAcreditacion.component';
+import { ObtenerPeriodosdeAcreditacionComponent1750446218538 } from './Cuentas-Vista/Obtener/ObtenerPeriodosdeAcreditacion.component';
+import { ObtenerSaldoBloqueadoComponent1750446218539 } from './Cuentas-Vista/Obtener/ObtenerSaldoBloqueado.component';
+import { ObtenerSaldoDisponibleComponent1750446218540 } from './Cuentas-Vista/Obtener/ObtenerSaldoDisponible.component';
+import { ObtenerSaldosBloqueadosComponent1750446218541 } from './Cuentas-Vista/Obtener/ObtenerSaldosBloqueados.component';
+import { AcreditarEnCuentaComponent1750446218541 } from './Cuentas-Vista/Operar/AcreditarEnCuenta.component';
+import { ActivarComponent1750446218542 } from './Cuentas-Vista/Operar/Activar.component';
+import { ActualizarPeriododeAcreditacionComponent1750446218543 } from './Cuentas-Vista/Operar/ActualizarPeriododeAcreditacion.component';
+import { BloquearSaldoComponent1750446218544 } from './Cuentas-Vista/Operar/BloquearSaldo.component';
+import { CancelarComponent1750446218544 } from './Cuentas-Vista/Operar/Cancelar.component';
+import { DebitarEnCuentaComponent1750446218545 } from './Cuentas-Vista/Operar/DebitarEnCuenta.component';
+import { DesbloquearSaldoComponent1750446218546 } from './Cuentas-Vista/Operar/DesbloquearSaldo.component';
+import { ActualizarPerfilTransaccionalComponent1750446218547 } from './Cuentas-Vista/Perfil-Transaccional/ActualizarPerfilTransaccional.component';
+import { AgregarPerfilTransaccionalComponent1750446218547 } from './Cuentas-Vista/Perfil-Transaccional/AgregarPerfilTransaccional.component';
+import { ObtenerPerfilTransaccionalComponent1750446218548 } from './Cuentas-Vista/Perfil-Transaccional/ObtenerPerfilTransaccional.component';
+import { TraspasarConTipoDeCambioEspecialComponent1750446218549 } from './Cuentas-Vista/Traspasar/TraspasarConTipoDeCambioEspecial.component';
+import { TraspasarEntreCuentasdelaMismaPersonaComponent1750446218550 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasdelaMismaPersona.component';
+import { TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750446218551 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitularcontipodecambio.component';
+import { TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750446218554 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitulardiferentesmonedas.component';
+import { TraspasarEntreCuentasPropiasComponent1750446218557 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropias.component';
+import { TraspasarEntreCuentasPropiascontipodecambioComponent1750446218555 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiascontipodecambio.component';
+import { TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750446218556 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiasdiferentesmonedas.component';
+import { TraspasarEntreCuentasTercerosComponent1750446218559 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceros.component';
+import { TraspasarEntreCuentasTerceroscontipodecambioComponent1750446218558 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceroscontipodecambio.component';
+import { TraspasarEntreCuentasTercerosdiferentesmonedasComponent1750446218559 } from './Cuentas-Vista/Traspasar/TraspasarEntreCuentasTercerosdiferentesmonedas.component';
+import { ActualizarBeneficiariosComponent1750446218560 } from './Depósitos-a-Plazo/Beneficiarios/ActualizarBeneficiarios.component';
+import { ObtenerBeneficiariosComponent1750446218561 } from './Depósitos-a-Plazo/Beneficiarios/ObtenerBeneficiarios.component';
+import { ContratarComponent1750446218562 } from './Depósitos-a-Plazo/Contratar/Contratar.component';
+import { ContratarConFacultadesComponent1750446218563 } from './Depósitos-a-Plazo/Contratar/ContratarConFacultades.component';
+import { ContratarSimulacionComponent1750446218564 } from './Depósitos-a-Plazo/Contratar/ContratarSimulacion.component';
+import { ActualizarDocumentoDigitalComponent1750446218564 } from './Depósitos-a-Plazo/Documentos-Digitales/ActualizarDocumentoDigital.component';
+import { AsociarDocumentoDigitalComponent1750446218565 } from './Depósitos-a-Plazo/Documentos-Digitales/AsociarDocumentoDigital.component';
+import { EliminarDocumentoDigitalComponent1750446218566 } from './Depósitos-a-Plazo/Documentos-Digitales/EliminarDocumentoDigital.component';
+import { ObtenerDocumentoDigitalComponent1750446218567 } from './Depósitos-a-Plazo/Documentos-Digitales/ObtenerDocumentoDigital.component';
+import { ModificarCuentaDestinoalVencimientoComponent1750446218569 } from './Depósitos-a-Plazo/Modificar/ModificarCuentaDestinoalVencimiento.component';
+import { ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750446218570 } from './Depósitos-a-Plazo/Modificar/ModificarCuentaDestinodeAcreditacionPeriodica.component';
+import { ModificarInstruccionComponent1750446218572 } from './Depósitos-a-Plazo/Modificar/ModificarInstruccion.component';
+import { ObtenerAvanceComponent1750446218573 } from './Depósitos-a-Plazo/Obtener/ObtenerAvance.component';
+import { ObtenerDatosComponent1750446218575 } from './Depósitos-a-Plazo/Obtener/ObtenerDatos.component';
+import { ObtenerDatosPrecancelacionComponent1750446218576 } from './Depósitos-a-Plazo/Obtener/ObtenerDatosPrecancelacion.component';
+import { ObtenerDocumentosDigitalesComponent1750446218576 } from './Depósitos-a-Plazo/Obtener/ObtenerDocumentosDigitales.component';
+import { ObtenerInstruccionComponent1750446218579 } from './Depósitos-a-Plazo/Obtener/ObtenerInstruccion.component';
+import { ObtenerInstruccionesHabilitadosComponent1750446218578 } from './Depósitos-a-Plazo/Obtener/ObtenerInstruccionesHabilitados.component';
+import { ObtenerMovimientosComponent1750446218580 } from './Depósitos-a-Plazo/Obtener/ObtenerMovimientos.component';
+import { ObtenerPeriodosHabilitadosComponent1750446218581 } from './Depósitos-a-Plazo/Obtener/ObtenerPeriodosHabilitados.component';
+import { ObtenerProductosComponent1750446218582 } from './Depósitos-a-Plazo/Obtener/ObtenerProductos.component';
+import { ObtenerProductosHabilitadosComponent1750446218583 } from './Depósitos-a-Plazo/Obtener/ObtenerProductosHabilitados.component';
+import { ObtenerTasadePrecancelacionComponent1750446218584 } from './Depósitos-a-Plazo/Obtener/ObtenerTasadePrecancelacion.component';
+import { PrecancelarComponent1750446218586 } from './Depósitos-a-Plazo/Precancelar.component';
+import { SimularComponent1750446218587 } from './Depósitos-a-Plazo/Simular/Simular.component';
+import { SimularConCronogramaComponent1750446218589 } from './Depósitos-a-Plazo/Simular/SimularConCronograma.component';
+import { ConfirmarListaComponent1750446218590 } from './Descuento-de-Documentos/ConfirmarLista.component';
+import { CrearListaComponent1750446218591 } from './Descuento-de-Documentos/CrearLista.component';
+import { CrearListaChequesComponent1750446218592 } from './Descuento-de-Documentos/CrearListaCheques.component';
+import { ObtenerProductosComponent1750446218593 } from './Descuento-de-Documentos/ObtenerProductos.component';
+import { ObtenerTiposDeDesembolsoComponent1750446218593 } from './Descuento-de-Documentos/ObtenerTiposDeDesembolso.component';
+import { SeleccionarOpcionDesembolsoComponent1750446218594 } from './Descuento-de-Documentos/SeleccionarOpcionDesembolso.component';
+import { ObtenerAgrupadoresComponent1750446218595 } from './Indicadores/ObtenerAgrupadores.component';
+import { ObtenerCierredeSaldosporMonedaComponent1750446218596 } from './Indicadores/ObtenerCierredeSaldosporMoneda.component';
+import { ObtenerCondicionesGeneralesComponent1750446218597 } from './Indicadores/ObtenerCondicionesGenerales.component';
+import { ObtenerIndicadoresComponent1750446218598 } from './Indicadores/ObtenerIndicadores.component';
+import { ObtenerMetodosMasEjecutadosComponent1750446218599 } from './Indicadores/ObtenerMetodosMasEjecutados.component';
+import { ObtenerMonedasIndicesComponent1750446218600 } from './Indicadores/ObtenerMonedasIndices.component';
+import { ObtenerRubrosBolsaComponent1750446218601 } from './Indicadores/ObtenerRubrosBolsa.component';
+import { ObtenerServiciosMasEjecutadosComponent1750446218603 } from './Indicadores/ObtenerServiciosMasEjecutados.component';
+import { ObtenerSesionesPorUsuarioComponent1750446218604 } from './Indicadores/ObtenerSesionesPorUsuario.component';
+import { ObtenerSucursalesCajasComponent1750446218604 } from './Indicadores/ObtenerSucursalesCajas.component';
+import { ObtenerTransaccionesporEstadosComponent1750446218605 } from './Indicadores/ObtenerTransaccionesporEstados.component';
+import { BuscarClienteComponent1750446218606 } from './Microfinanzas/BuscarCliente.component';
+import { CompletarTareaComponent1750446218607 } from './Microfinanzas/CompletarTarea.component';
+import { CrearSolicitudAmpliacionComponent1750446218608 } from './Microfinanzas/Crear-Solicitud/CrearSolicitudAmpliacion.component';
+import { CrearSolicitudIndividualComponent1750446218609 } from './Microfinanzas/Crear-Solicitud/CrearSolicitudIndividual.component';
+import { CrearSolicitudRenovacionComponent1750446218609 } from './Microfinanzas/Crear-Solicitud/CrearSolicitudRenovacion.component';
+import { AgregarFiadorComponent1750446218610 } from './Microfinanzas/Fiadores/AgregarFiador.component';
+import { EliminarFiadorComponent1750446218611 } from './Microfinanzas/Fiadores/EliminarFiador.component';
+import { ActualizarGrupoComponent1750446218612 } from './Microfinanzas/Grupales/ActualizarGrupo.component';
+import { ActualizarIntegrantedeGrupoComponent1750446218613 } from './Microfinanzas/Grupales/ActualizarIntegrantedeGrupo.component';
+import { AgregarGrupoComponent1750446218613 } from './Microfinanzas/Grupales/AgregarGrupo.component';
+import { AgregarIntegranteaGrupoComponent1750446218614 } from './Microfinanzas/Grupales/AgregarIntegranteaGrupo.component';
+import { CrearSolicitudGrupalComponent1750446218615 } from './Microfinanzas/Grupales/CrearSolicitudGrupal.component';
+import { HabilitarIntegrantedeunGrupoComponent1750446218616 } from './Microfinanzas/Grupales/HabilitarIntegrantedeunGrupo.component';
+import { InhabilitarIntegrantedeunGrupoComponent1750446218616 } from './Microfinanzas/Grupales/InhabilitarIntegrantedeunGrupo.component';
+import { ObtenerDetalleGrupoComponent1750446218618 } from './Microfinanzas/Grupales/ObtenerDetalleGrupo.component';
+import { ObtenerGruposComponent1750446218621 } from './Microfinanzas/Grupales/ObtenerGrupos.component';
+import { ObtenerIntegrantesdeGrupoComponent1750446218622 } from './Microfinanzas/Grupales/ObtenerIntegrantesdeGrupo.component';
+import { ObtenerTiposdeGrupoComponent1750446218623 } from './Microfinanzas/Grupales/ObtenerTiposdeGrupo.component';
+import { ObtenerTiposdeIntegranteComponent1750446218625 } from './Microfinanzas/Grupales/ObtenerTiposdeIntegrante.component';
+import { SimularPrestamoAmortizableGrupalComponent1750446218626 } from './Microfinanzas/Grupales/SimularPrestamoAmortizableGrupal.component';
+import { ObtenerAsesoresComponent1750446218628 } from './Microfinanzas/Obtener/ObtenerAsesores.component';
+import { ObtenerCampanasComponent1750446218629 } from './Microfinanzas/Obtener/ObtenerCampanas.component';
+import { ObtenerDestinosCreditoComponent1750446218630 } from './Microfinanzas/Obtener/ObtenerDestinosCredito.component';
+import { ObtenerOperacionesClienteComponent1750446218631 } from './Microfinanzas/Obtener/ObtenerOperacionesCliente.component';
+import { ObtenerOrigenesdeCaptacionComponent1750446218633 } from './Microfinanzas/Obtener/ObtenerOrigenesdeCaptacion.component';
+import { ObtenerProductosComponent1750446218636 } from './Microfinanzas/Obtener/ObtenerProductos.component';
+import { ObtenerSolicitudesClienteComponent1750446218638 } from './Microfinanzas/Obtener/ObtenerSolicitudesCliente.component';
+import { ObtenerTiposAvalComponent1750446218639 } from './Microfinanzas/Obtener/ObtenerTiposAval.component';
+import { AgregarOperacionesaCancelarComponent1750446218640 } from './Microfinanzas/Operaciones-a-Cancelar/AgregarOperacionesaCancelar.component';
+import { ObtenerOperacionesaCancelarComponent1750446218642 } from './Microfinanzas/Operaciones-a-Cancelar/ObtenerOperacionesaCancelar.component';
+import { QuitarOperacionesaCancelarComponent1750446218643 } from './Microfinanzas/Operaciones-a-Cancelar/QuitarOperacionesaCancelar.component';
+import { SimularLibreAmortizacionComponent1750446218645 } from './Microfinanzas/Simular/SimularLibreAmortizacion.component';
+import { SimularPrestamoAmortizableComponent1750446218646 } from './Microfinanzas/Simular/SimularPrestamoAmortizable.component';
+import { SimularPrestamoPlazoFijoComponent1750446218648 } from './Microfinanzas/Simular/SimularPrestamoPlazoFijo.component';
+import { ValidarPoliticasComponent1750446218649 } from './Microfinanzas/ValidarPoliticas.component';
+import { ObtenerCantidadCuotasComponent1750446218650 } from './Modelador-de-Préstamos/ObtenerCantidadCuotas.component';
+import { ObtenerCapitalComponent1750446218653 } from './Modelador-de-Préstamos/ObtenerCapital.component';
+import { ObtenerComisionesComponent1750446218655 } from './Modelador-de-Préstamos/ObtenerComisiones.component';
+import { ObtenerComisionesporCuotaComponent1750446218656 } from './Modelador-de-Préstamos/ObtenerComisionesporCuota.component';
+import { ObtenerDiasPrimerPeriodoComponent1750446218658 } from './Modelador-de-Préstamos/ObtenerDiasPrimerPeriodo.component';
+import { ObtenerPeriodoEntreCuotasComponent1750446218660 } from './Modelador-de-Préstamos/ObtenerPeriodoEntreCuotas.component';
+import { ObtenerPermiteSegurosdelMismoTipoComponent1750446218659 } from './Modelador-de-Préstamos/ObtenerPermiteSegurosdelMismoTipo.component';
+import { ObtenerPlazoComponent1750446218661 } from './Modelador-de-Préstamos/ObtenerPlazo.component';
+import { ObtenerRequiereSegurodeVidaObligatorioComponent1750446218662 } from './Modelador-de-Préstamos/ObtenerRequiereSegurodeVidaObligatorio.component';
+import { ObtenerSegurosComponent1750446218662 } from './Modelador-de-Préstamos/ObtenerSeguros.component';
+import { ObtenerItemsModeloComponent1750446218663 } from './PAE/ObtenerItemsModelo.component';
+import { ObtenerModelosPAEComponent1750446218664 } from './PAE/ObtenerModelosPAE.component';
+import { ObtenerScoresComponent1750446218665 } from './PAE/ObtenerScores.component';
+import { ObtenerTiposDeModelosComponent1750446218666 } from './PAE/ObtenerTiposDeModelos.component';
+import { ContratarPrestamoComponent1750446218667 } from './Partners/Contratar/ContratarPrestamo.component';
+import { ContratarVehicularComponent1750446218670 } from './Partners/Contratar/ContratarVehicular.component';
+import { CrearClienteComponent1750446218671 } from './Partners/Crear/CrearCliente.component';
+import { CrearPersonaClienteComponent1750446218673 } from './Partners/Crear/CrearPersonaCliente.component';
+import { ObtenerDatosdeUsuarioComponent1750446218674 } from './Partners/Obtener/ObtenerDatosdeUsuario.component';
+import { ObtenerDetalledeOfertaAmortizableComponent1750446218676 } from './Partners/Obtener/ObtenerDetalledeOfertaAmortizable.component';
+import { ObtenerDetalleOfertaVehicularComponent1750446218677 } from './Partners/Obtener/ObtenerDetalleOfertaVehicular.component';
+import { ObtenerMarcasComponent1750446218678 } from './Partners/Obtener/ObtenerMarcas.component';
+import { ObtenerModelosComponent1750446218678 } from './Partners/Obtener/ObtenerModelos.component';
+import { ObtenerPartnersComponent1750446218679 } from './Partners/Obtener/ObtenerPartners.component';
+import { ObtenerPrestamosdeClienteComponent1750446218682 } from './Partners/Obtener/ObtenerPrestamosdeCliente.component';
+import { ObtenerProductosComponent1750446218680 } from './Partners/Obtener/ObtenerProductos.component';
+import { ObtenerProductosdelPartnerComponent1750446218681 } from './Partners/Obtener/ObtenerProductosdelPartner.component';
+import { ObtenerPuntosdeVentaComponent1750446218683 } from './Partners/Obtener/ObtenerPuntosdeVenta.component';
+import { ObtenerVendedoresComponent1750446218683 } from './Partners/Obtener/ObtenerVendedores.component';
+import { ObtenerVersionesComponent1750446218686 } from './Partners/Obtener/ObtenerVersiones.component';
+import { SimularOfertasComponent1750446218687 } from './Partners/Simular/SimularOfertas.component';
+import { SimularOfertasVehicularComponent1750446218688 } from './Partners/Simular/SimularOfertasVehicular.component';
+import { SimularPrestamoComponent1750446218689 } from './Partners/Simular/SimularPrestamo.component';
+import { SimularVehicularComponent1750446218690 } from './Partners/Simular/SimularVehicular.component';
+import { ObtenerCorrelativoGuiaComponent1750446218692 } from './Parámetros-Base/ObtenerCorrelativoGuia.component';
+import { ObtenerCorrelativoGuiaEspecialComponent1750446218692 } from './Parámetros-Base/ObtenerCorrelativoGuiaEspecial.component';
+import { ObtenerGuiadeProcesoComponent1750446218693 } from './Parámetros-Base/ObtenerGuiadeProceso.component';
+import { ObtenerGuiaEspecialdeProcesoComponent1750446218694 } from './Parámetros-Base/ObtenerGuiaEspecialdeProceso.component';
+import { ObtenerOpcionGeneraldeProcesoComponent1750446218695 } from './Parámetros-Base/ObtenerOpcionGeneraldeProceso.component';
+import { ObtenerOpcionGeneralPorModuloComponent1750446218696 } from './Parámetros-Base/ObtenerOpcionGeneralPorModulo.component';
+import { ObtenerProgramaParticularComponent1750446218696 } from './Parámetros-Base/ObtenerProgramaParticular.component';
+import { ActualizarComponent1750446218697 } from './Personas/Actualizar/Actualizar.component';
+import { ActualizarCelularComponent1750446218698 } from './Personas/Actualizar/ActualizarCelular.component';
+import { ActualizarContactoComponent1750446218699 } from './Personas/Actualizar/ActualizarContacto.component';
+import { ActualizarConyugeComponent1750446218701 } from './Personas/Actualizar/ActualizarConyuge.component';
+import { ActualizarCorreoElectronicoComponent1750446218700 } from './Personas/Actualizar/ActualizarCorreoElectronico.component';
+import { ActualizarDomicilioComponent1750446218703 } from './Personas/Actualizar/ActualizarDomicilio.component';
+import { ActualizarFATCAComponent1750446218704 } from './Personas/Actualizar/ActualizarFATCA.component';
+import { ActualizarInformacionAdicionalComponent1750446218705 } from './Personas/Actualizar/ActualizarInformacionAdicional.component';
+import { ActualizarInformacionFinancieraComponent1750446218707 } from './Personas/Actualizar/ActualizarInformacionFinanciera.component';
+import { ActualizarIntegrantedePersonaJuridicaComponent1750446218708 } from './Personas/Actualizar/ActualizarIntegrantedePersonaJuridica.component';
+import { ActualizarPersonaJuridicaComponent1750446218709 } from './Personas/Actualizar/ActualizarPersonaJuridica.component';
+import { ActualizarProfesionComponent1750446218710 } from './Personas/Actualizar/ActualizarProfesion.component';
+import { ActualizarReferenciaComponent1750446218712 } from './Personas/Actualizar/ActualizarReferencia.component';
+import { ActualizarRegistroEmpleadoComponent1750446218712 } from './Personas/Actualizar/ActualizarRegistroEmpleado.component';
+import { ActualizarTelefonoComponent1750446218713 } from './Personas/Actualizar/ActualizarTelefono.component';
+import { ActualizarVictimaHechoViolentoComponent1750446218714 } from './Personas/Actualizar/ActualizarVictimaHechoViolento.component';
+import { ModificarDocumentoAdicionalComponent1750446218715 } from './Personas/Actualizar/ModificarDocumentoAdicional.component';
+import { AgregaraListaNegraComponent1750446218716 } from './Personas/Agregar/AgregaraListaNegra.component';
+import { AgregarContactoComponent1750446218717 } from './Personas/Agregar/AgregarContacto.component';
+import { AgregarCorreoElectronicoComponent1750446218719 } from './Personas/Agregar/AgregarCorreoElectronico.component';
+import { AgregarDatosPEPComponent1750446218720 } from './Personas/Agregar/AgregarDatosPEP.component';
+import { AgregarDocumentoAdicionalComponent1750446218721 } from './Personas/Agregar/AgregarDocumentoAdicional.component';
+import { AgregarDomicilioComponent1750446218723 } from './Personas/Agregar/AgregarDomicilio.component';
+import { AgregarEstadoFinancieroComponent1750446218724 } from './Personas/Agregar/AgregarEstadoFinanciero.component';
+import { AgregarFATCAComponent1750446218725 } from './Personas/Agregar/AgregarFATCA.component';
+import { AgregarInformacionAdicionalComponent1750446218726 } from './Personas/Agregar/AgregarInformacionAdicional.component';
+import { AgregarInformacionFinancieraComponent1750446218727 } from './Personas/Agregar/AgregarInformacionFinanciera.component';
+import { AgregarIntegranteaPersonaJuridicaComponent1750446218728 } from './Personas/Agregar/AgregarIntegranteaPersonaJuridica.component';
+import { AgregarPersonaVinculadaComponent1750446218729 } from './Personas/Agregar/AgregarPersonaVinculada.component';
+import { AgregarReferenciaComponent1750446218730 } from './Personas/Agregar/AgregarReferencia.component';
+import { AgregarTelefonoComponent1750446218730 } from './Personas/Agregar/AgregarTelefono.component';
+import { AgregarVictimaHechoViolentoComponent1750446218731 } from './Personas/Agregar/AgregarVictimaHechoViolento.component';
+import { CrearComponent1750446218733 } from './Personas/Crear/Crear.component';
+import { CrearConyugeComponent1750446218736 } from './Personas/Crear/CrearConyuge.component';
+import { CrearPersonaJuridicaComponent1750446218740 } from './Personas/Crear/CrearPersonaJuridica.component';
+import { CrearReducidoComponent1750446218742 } from './Personas/Crear/CrearReducido.component';
+import { ActualizarDocumentoDigitalComponent1750446218743 } from './Personas/Documentos-Digitales/ActualizarDocumentoDigital.component';
+import { AsociarDocumentoDigitalComponent1750446218744 } from './Personas/Documentos-Digitales/AsociarDocumentoDigital.component';
+import { EliminarDocumentoDigitalComponent1750446218745 } from './Personas/Documentos-Digitales/EliminarDocumentoDigital.component';
+import { ObtenerDocumentoDigitalComponent1750446218745 } from './Personas/Documentos-Digitales/ObtenerDocumentoDigital.component';
+import { ObtenerDocumentosDigitalesComponent1750446218746 } from './Personas/Documentos-Digitales/ObtenerDocumentosDigitales.component';
+import { EliminarConyugeComponent1750446218747 } from './Personas/Eliminar/EliminarConyuge.component';
+import { EliminarDocumentoAdicionalComponent1750446218748 } from './Personas/Eliminar/EliminarDocumentoAdicional.component';
+import { EliminarDomicilioComponent1750446218748 } from './Personas/Eliminar/EliminarDomicilio.component';
+import { EliminarInformacionAdicionalComponent1750446218749 } from './Personas/Eliminar/EliminarInformacionAdicional.component';
+import { EliminarIntegrantedePersonaJuridicaComponent1750446218750 } from './Personas/Eliminar/EliminarIntegrantedePersonaJuridica.component';
+import { EliminarPersonaVinculadaComponent1750446218751 } from './Personas/Eliminar/EliminarPersonaVinculada.component';
+import { EliminarProfesionComponent1750446218753 } from './Personas/Eliminar/EliminarProfesion.component';
+import { ObtenerComponent1750446218755 } from './Personas/Obtener/Obtener.component';
+import { ObtenerConceptoComponent1750446218756 } from './Personas/Obtener/ObtenerConcepto.component';
+import { ObtenerContactosComponent1750446218757 } from './Personas/Obtener/ObtenerContactos.component';
+import { ObtenerConyugeComponent1750446218760 } from './Personas/Obtener/ObtenerConyuge.component';
+import { ObtenerCorreosElectronicosComponent1750446218758 } from './Personas/Obtener/ObtenerCorreosElectronicos.component';
+import { ObtenerCuentasClienteComponent1750446218759 } from './Personas/Obtener/ObtenerCuentasCliente.component';
+import { ObtenerDatosPEPComponent1750446218761 } from './Personas/Obtener/ObtenerDatosPEP.component';
+import { ObtenerDocumentosAdicionalesComponent1750446218762 } from './Personas/Obtener/ObtenerDocumentosAdicionales.component';
+import { ObtenerDomiciliosComponent1750446218762 } from './Personas/Obtener/ObtenerDomicilios.component';
+import { ObtenerEstadosCivilesComponent1750446218763 } from './Personas/Obtener/ObtenerEstadosCiviles.component';
+import { ObtenerFacultadesComponent1750446218764 } from './Personas/Obtener/ObtenerFacultades.component';
+import { ObtenerFATCAComponent1750446218765 } from './Personas/Obtener/ObtenerFATCA.component';
+import { ObtenerHobbiesComponent1750446218765 } from './Personas/Obtener/ObtenerHobbies.component';
+import { ObtenerHobbyComponent1750446218766 } from './Personas/Obtener/ObtenerHobby.component';
+import { ObtenerIdBantotalComponent1750446218767 } from './Personas/Obtener/ObtenerIdBantotal.component';
+import { ObtenerIdentidadesdeGeneroComponent1750446218771 } from './Personas/Obtener/ObtenerIdentidadesdeGenero.component';
+import { ObtenerIdentificadorUnicoComponent1750446218772 } from './Personas/Obtener/ObtenerIdentificadorUnico.component';
+import { ObtenerInformacionAdicionalComponent1750446218773 } from './Personas/Obtener/ObtenerInformacionAdicional.component';
+import { ObtenerInformacionFinancieraComponent1750446218775 } from './Personas/Obtener/ObtenerInformacionFinanciera.component';
+import { ObtenerIntegrantesPersonaJuridicaComponent1750446218777 } from './Personas/Obtener/ObtenerIntegrantesPersonaJuridica.component';
+import { ObtenerLimitesComponent1750446218778 } from './Personas/Obtener/ObtenerLimites.component';
+import { ObtenerNaturalezasJuridicasComponent1750446218779 } from './Personas/Obtener/ObtenerNaturalezasJuridicas.component';
+import { ObtenerNivelesEducativosComponent1750446218780 } from './Personas/Obtener/ObtenerNivelesEducativos.component';
+import { ObtenerOcupacionesComponent1750446218781 } from './Personas/Obtener/ObtenerOcupaciones.component';
+import { ObtenerPersonaJuridicaComponent1750446218782 } from './Personas/Obtener/ObtenerPersonaJuridica.component';
+import { ObtenerPersonasComponent1750446218783 } from './Personas/Obtener/ObtenerPersonas.component';
+import { ObtenerPersonasJuridicasComponent1750446218783 } from './Personas/Obtener/ObtenerPersonasJuridicas.component';
+import { ObtenerPersonasVinculadasComponent1750446218786 } from './Personas/Obtener/ObtenerPersonasVinculadas.component';
+import { ObtenerProfesionComponent1750446218789 } from './Personas/Obtener/ObtenerProfesion.component';
+import { ObtenerProfesionesComponent1750446218788 } from './Personas/Obtener/ObtenerProfesiones.component';
+import { ObtenerReferenciasComponent1750446218790 } from './Personas/Obtener/ObtenerReferencias.component';
+import { ObtenerTarjetasdeDebitoComponent1750446218792 } from './Personas/Obtener/ObtenerTarjetasdeDebito.component';
+import { ObtenerTelefonosComponent1750446218793 } from './Personas/Obtener/ObtenerTelefonos.component';
+import { ObtenerTipodePersonaComponent1750446218793 } from './Personas/Obtener/ObtenerTipodePersona.component';
+import { ObtenerTiposdeDocumentoComponent1750446218794 } from './Personas/Obtener/ObtenerTiposdeDocumento.component';
+import { ObtenerTiposDeFuncionarioPublicoComponent1750446218795 } from './Personas/Obtener/ObtenerTiposDeFuncionarioPublico.component';
+import { ObtenerTiposDePEPComponent1750446218796 } from './Personas/Obtener/ObtenerTiposDePEP.component';
+import { ObtenerTitularesDelTelefonoComponent1750446218797 } from './Personas/Obtener/ObtenerTitularesDelTelefono.component';
+import { ObtenerVictimaHechoViolentoComponent1750446218798 } from './Personas/Obtener/ObtenerVictimaHechoViolento.component';
+import { ObtenerVinculosComponent1750446218799 } from './Personas/Obtener/ObtenerVinculos.component';
+import { ObtenerVinculosdeAfinidadComponent1750446218800 } from './Personas/Obtener/ObtenerVinculosdeAfinidad.component';
+import { ObtenerVinculosdeConsanguinidadComponent1750446218803 } from './Personas/Obtener/ObtenerVinculosdeConsanguinidad.component';
+import { ObtenerVinculosJuridicosComponent1750446218804 } from './Personas/Obtener/ObtenerVinculosJuridicos.component';
+import { EvaluarPAEComponent1750446218806 } from './Personas/Validar/EvaluarPAE.component';
+import { ValidarCorreoElectronicoComponent1750446218806 } from './Personas/Validar/ValidarCorreoElectronico.component';
+import { ValidarDocumentoComponent1750446218807 } from './Personas/Validar/ValidarDocumento.component';
+import { ValidarenListasNegrasComponent1750446218808 } from './Personas/Validar/ValidarenListasNegras.component';
+import { ValidarExistenciaComponent1750446218809 } from './Personas/Validar/ValidarExistencia.component';
+import { ValidarListasInhabilitadosComponent1750446218811 } from './Personas/Validar/ValidarListasInhabilitados.component';
+import { VerificarEmpleadoComponent1750446218811 } from './Personas/Validar/VerificarEmpleado.component';
+import { ConvertirTasaAnualEfectivaaLinealComponent1750446218813 } from './Precios/Convertir/ConvertirTasaAnualEfectivaaLineal.component';
+import { ConvertirTasaAnualLinealaEfectivaComponent1750446218814 } from './Precios/Convertir/ConvertirTasaAnualLinealaEfectiva.component';
+import { ConvertirTasaMensualEfectivaaLinealComponent1750446218815 } from './Precios/Convertir/ConvertirTasaMensualEfectivaaLineal.component';
+import { ConvertirTasaMensualLinealaEfectivaComponent1750446218816 } from './Precios/Convertir/ConvertirTasaMensualLinealaEfectiva.component';
+import { ObtenerCotizacionComponent1750446218818 } from './Precios/Obtener/ObtenerCotizacion.component';
+import { ObtenerCotizacionaFechaComponent1750446218820 } from './Precios/Obtener/ObtenerCotizacionaFecha.component';
+import { ObtenerCotizacionCierreComponent1750446218821 } from './Precios/Obtener/ObtenerCotizacionCierre.component';
+import { ObtenerPizarraEspecialporTransaccionComponent1750446218822 } from './Precios/Obtener/ObtenerPizarraEspecialporTransaccion.component';
+import { ObtenerPrecioaFechaComponent1750446218823 } from './Precios/Obtener/ObtenerPrecioaFecha.component';
+import { ObtenerPrecioEspecieComponent1750446218824 } from './Precios/Obtener/ObtenerPrecioEspecie.component';
+import { ObtenerTasadeOperacionComponent1750446218825 } from './Precios/Obtener/ObtenerTasadeOperacion.component';
+import { ObtenerTasaParaClienteComponent1750446218826 } from './Precios/Obtener/ObtenerTasaParaCliente.component';
+import { ObtenerTasaParaProductoComponent1750446218827 } from './Precios/Obtener/ObtenerTasaParaProducto.component';
+import { ObtenerTipodeCambioComponent1750446218828 } from './Precios/Obtener/ObtenerTipodeCambio.component';
+import { ObtenerTiposDeCambioEspecialesComponent1750446218829 } from './Precios/Obtener/ObtenerTiposDeCambioEspeciales.component';
+import { CancelarComponent1750446218830 } from './Préstamos/Cancelar/Cancelar.component';
+import { CancelaraFechaComponent1750446218831 } from './Préstamos/Cancelar/CancelaraFecha.component';
+import { CancelaraFechaTercerosComponent1750446218833 } from './Préstamos/Cancelar/CancelaraFechaTerceros.component';
+import { CancelarTercerosComponent1750446218836 } from './Préstamos/Cancelar/CancelarTerceros.component';
+import { ContratarComponent1750446218838 } from './Préstamos/Contratar/Contratar.component';
+import { ContratarAmpliacionComponent1750446218839 } from './Préstamos/Contratar/ContratarAmpliacion.component';
+import { ContratarRefinanciacionComponent1750446218841 } from './Préstamos/Contratar/ContratarRefinanciacion.component';
+import { ContratarRefinanciacionporDeudaTotalComponent1750446218842 } from './Préstamos/Contratar/ContratarRefinanciacionporDeudaTotal.component';
+import { ContratarRefinanciacionporSaldoCapitalComponent1750446218844 } from './Préstamos/Contratar/ContratarRefinanciacionporSaldoCapital.component';
+import { ActualizarDocumentoDigitalComponent1750446218846 } from './Préstamos/Documentos-Digitales/ActualizarDocumentoDigital.component';
+import { AsociarDocumentoDigitalComponent1750446218847 } from './Préstamos/Documentos-Digitales/AsociarDocumentoDigital.component';
+import { EliminarDocumentoDigitalComponent1750446218848 } from './Préstamos/Documentos-Digitales/EliminarDocumentoDigital.component';
+import { ObtenerDocumentoDigitalComponent1750446218850 } from './Préstamos/Documentos-Digitales/ObtenerDocumentoDigital.component';
+import { ObtenerDocumentosDigitalesComponent1750446218852 } from './Préstamos/Documentos-Digitales/ObtenerDocumentosDigitales.component';
+import { ObtenerCronogramaComponent1750446218854 } from './Préstamos/Obtener/ObtenerCronograma.component';
+import { ObtenerCronogramaaFechaComponent1750446218856 } from './Préstamos/Obtener/ObtenerCronogramaaFecha.component';
+import { ObtenerCronogramaconPagosaFechaComponent1750446218858 } from './Préstamos/Obtener/ObtenerCronogramaconPagosaFecha.component';
+import { ObtenerCronogramaenEspecieComponent1750446218859 } from './Préstamos/Obtener/ObtenerCronogramaenEspecie.component';
+import { ObtenerCronogramaOriginalComponent1750446218861 } from './Préstamos/Obtener/ObtenerCronogramaOriginal.component';
+import { ObtenerCuentadeCobroComponent1750446218862 } from './Préstamos/Obtener/ObtenerCuentadeCobro.component';
+import { ObtenerDatosdelProximoVencimientoComponent1750446218863 } from './Préstamos/Obtener/ObtenerDatosdelProximoVencimiento.component';
+import { ObtenerDetalleComponent1750446218864 } from './Préstamos/Obtener/ObtenerDetalle.component';
+import { ObtenerDetalleaFechaComponent1750446218865 } from './Préstamos/Obtener/ObtenerDetalleaFecha.component';
+import { ObtenerDetalledeCancelacionTotalComponent1750446218866 } from './Préstamos/Obtener/ObtenerDetalledeCancelacionTotal.component';
+import { ObtenerDetalledeOfertaComponent1750446218869 } from './Préstamos/Obtener/ObtenerDetalledeOferta.component';
+import { ObtenerDetalledeOfertaAmortizableComponent1750446218871 } from './Préstamos/Obtener/ObtenerDetalledeOfertaAmortizable.component';
+import { ObtenerDetalledeOperacionesaRefinanciarComponent1750446218874 } from './Préstamos/Obtener/ObtenerDetalledeOperacionesaRefinanciar.component';
+import { ObtenerDetalledePrestamoCanceladoComponent1750446218875 } from './Préstamos/Obtener/ObtenerDetalledePrestamoCancelado.component';
+import { ObtenerDetallePagoPrestamoComponent1750446218877 } from './Préstamos/Obtener/ObtenerDetallePagoPrestamo.component';
+import { ObtenerDetalleReducidoComponent1750446218878 } from './Préstamos/Obtener/ObtenerDetalleReducido.component';
+import { ObtenerDetalleSimulacionComponent1750446218880 } from './Préstamos/Obtener/ObtenerDetalleSimulacion.component';
+import { ObtenerDeudaComponent1750446218881 } from './Préstamos/Obtener/ObtenerDeuda.component';
+import { ObtenerDeudaPrestamoCastigadoComponent1750446218882 } from './Préstamos/Obtener/ObtenerDeudaPrestamoCastigado.component';
+import { ObtenerDeudaVencidaComponent1750446218883 } from './Préstamos/Obtener/ObtenerDeudaVencida.component';
+import { ObtenerFechadeIncumplimientoComponent1750446218888 } from './Préstamos/Obtener/ObtenerFechadeIncumplimiento.component';
+import { ObtenerFechadeUltimoPagoComponent1750446218890 } from './Préstamos/Obtener/ObtenerFechadeUltimoPago.component';
+import { ObtenerFechasdePagoComponent1750446218891 } from './Préstamos/Obtener/ObtenerFechasdePago.component';
+import { ObtenerInformacionAdicionalComponent1750446218893 } from './Préstamos/Obtener/ObtenerInformacionAdicional.component';
+import { ObtenerMontodeCancelacionComponent1750446218894 } from './Préstamos/Obtener/ObtenerMontodeCancelacion.component';
+import { ObtenerMotivosPrecancelacionComponent1750446218895 } from './Préstamos/Obtener/ObtenerMotivosPrecancelacion.component';
+import { ObtenerPagosdeCuotaComponent1750446218896 } from './Préstamos/Obtener/ObtenerPagosdeCuota.component';
+import { ObtenerPagosdeunPrestamoComponent1750446218897 } from './Préstamos/Obtener/ObtenerPagosdeunPrestamo.component';
+import { ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750446218898 } from './Préstamos/Obtener/ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1.component';
+import { ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750446218899 } from './Préstamos/Obtener/ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1.component';
+import { ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750446218900 } from './Préstamos/Obtener/ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1.component';
+import { ObtenerProductosComponent1750446218903 } from './Préstamos/Obtener/ObtenerProductos.component';
+import { ObtenerProductosRefinanciacionComponent1750446218905 } from './Préstamos/Obtener/ObtenerProductosRefinanciacion.component';
+import { ObtenerRefinanciacionSimuladaComponent1750446218907 } from './Préstamos/Obtener/ObtenerRefinanciacionSimulada.component';
+import { AbonaraCuentaComponent1750446218909 } from './Préstamos/Operar/AbonaraCuenta.component';
+import { ActualizarInformacionAdicionalComponent1750446218910 } from './Préstamos/Operar/ActualizarInformacionAdicional.component';
+import { ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750446218912 } from './Préstamos/Operar/ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1.component';
+import { AgregarCuentadeCobroComponent1750446218913 } from './Préstamos/Operar/AgregarCuentadeCobro.component';
+import { AgregarInformacionAdicionalComponent1750446218914 } from './Préstamos/Operar/AgregarInformacionAdicional.component';
+import { EliminarCuentadeCobroComponent1750446218915 } from './Préstamos/Operar/EliminarCuentadeCobro.component';
+import { EliminarInformacionAdicionalComponent1750446218916 } from './Préstamos/Operar/EliminarInformacionAdicional.component';
+import { SolicitarPrecancelacionComponent1750446218918 } from './Préstamos/Operar/SolicitarPrecancelacion.component';
+import { AdelantarCapitalConReduccionDeCuotaComponent1750446218921 } from './Préstamos/Pagar/AdelantarCapitalConReduccionDeCuota.component';
+import { AdelantarCapitalConReduccionDePlazoComponent1750446218922 } from './Préstamos/Pagar/AdelantarCapitalConReduccionDePlazo.component';
+import { PagarCuotaComponent1750446218924 } from './Préstamos/Pagar/PagarCuota.component';
+import { PagarCuotaaFechaComponent1750446218925 } from './Préstamos/Pagar/PagarCuotaaFecha.component';
+import { PagarCuotaaFechaTercerosComponent1750446218926 } from './Préstamos/Pagar/PagarCuotaaFechaTerceros.component';
+import { PagarCuotaTercerosComponent1750446218928 } from './Préstamos/Pagar/PagarCuotaTerceros.component';
+import { ResimularAmortizableComponent1750446218930 } from './Préstamos/Simular/ResimularAmortizable.component';
+import { ResimularAmpliacionComponent1750446218932 } from './Préstamos/Simular/ResimularAmpliacion.component';
+import { ResimularRefinanciacionComponent1750446218933 } from './Préstamos/Simular/ResimularRefinanciacion.component';
+import { SimularComponent1750446218936 } from './Préstamos/Simular/Simular.component';
+import { SimularAmortizableComponent1750446218937 } from './Préstamos/Simular/SimularAmortizable.component';
+import { SimularAmortizableSinClienteComponent1750446218939 } from './Préstamos/Simular/SimularAmortizableSinCliente.component';
+import { SimularAmpliacionComponent1750446218940 } from './Préstamos/Simular/SimularAmpliacion.component';
+import { SimularAmpliacionIngresandoSegurosComponent1750446218941 } from './Préstamos/Simular/SimularAmpliacionIngresandoSeguros.component';
+import { SimularDespejandoCapitalyCantidaddeCuotasComponent1750446218941 } from './Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotas.component';
+import { SimularDespejandoCapitalyCantidaddeCuotasSinClienteComponent1750446218942 } from './Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotasSinCliente.component';
+import { SimularDespejandoFechadeVencimientoyCantidaddeCuotasComponent1750446218944 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotas.component';
+import { SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750446218945 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinCliente.component';
+import { SimularDespejandoFechadeVencimientoyTasaComponent1750446218946 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasa.component';
+import { SimularDespejandoFechadeVencimientoyTasaSinClienteComponent1750446218947 } from './Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasaSinCliente.component';
+import { SimularIngresandoBalloonComponent1750446218948 } from './Préstamos/Simular/SimularIngresandoBalloon.component';
+import { SimularIngresandoBalloonSinClienteComponent1750446218949 } from './Préstamos/Simular/SimularIngresandoBalloonSinCliente.component';
+import { SimularIngresandoSegurosComponent1750446218950 } from './Préstamos/Simular/SimularIngresandoSeguros.component';
+import { SimularIngresandoSegurosSinClienteComponent1750446218952 } from './Préstamos/Simular/SimularIngresandoSegurosSinCliente.component';
+import { SimularLibreAmortizacionComponent1750446218953 } from './Préstamos/Simular/SimularLibreAmortizacion.component';
+import { SimularLibreAmortizacionSinClienteComponent1750446218954 } from './Préstamos/Simular/SimularLibreAmortizacionSinCliente.component';
+import { SimularOfertasComponent1750446218955 } from './Préstamos/Simular/SimularOfertas.component';
+import { SimularPlazoFijoComponent1750446218956 } from './Préstamos/Simular/SimularPlazoFijo.component';
+import { SimularRefinanciacionComponent1750446218957 } from './Préstamos/Simular/SimularRefinanciacion.component';
+import { SimularRefinanciacionporDeudaTotalComponent1750446218958 } from './Préstamos/Simular/SimularRefinanciacionporDeudaTotal.component';
+import { SimularRefinanciacionporSaldoCapitalComponent1750446218959 } from './Préstamos/Simular/SimularRefinanciacionporSaldoCapital.component';
+import { ActualizarTextosComponent1750446218960 } from './Préstamos/Textos/ActualizarTextos.component';
+import { AgregarTextosComponent1750446218960 } from './Préstamos/Textos/AgregarTextos.component';
+import { EliminarTextosComponent1750446218961 } from './Préstamos/Textos/EliminarTextos.component';
+import { ObtenerTextosComponent1750446218962 } from './Préstamos/Textos/ObtenerTextos.component';
+import { EvaluarRegladeNegocioComponent1750446218964 } from './Reglas-de-Negocio/EvaluarRegladeNegocio.component';
+import { ObtenerReglasdeNegocioComponent1750446218965 } from './Reglas-de-Negocio/ObtenerReglasdeNegocio.component';
+import { ObtenerVariablesReglaComponent1750446218966 } from './Reglas-de-Negocio/ObtenerVariablesRegla.component';
+import { ValidarDatosRegladeNegocioComponent1750446218966 } from './Reglas-de-Negocio/ValidarDatosRegladeNegocio.component';
+import { AutorizarExcepcionComponent1750446218968 } from './Seguridad/AutorizarExcepcion.component';
+import { ObtenerDetalledeExcepcionComponent1750446218969 } from './Seguridad/ObtenerDetalledeExcepcion.component';
+import { ObtenerExcepcionesComponent1750446218970 } from './Seguridad/ObtenerExcepciones.component';
+import { RechazarExcepcionComponent1750446218971 } from './Seguridad/RechazarExcepcion.component';
+import { RegistrarDispositivoComponent1750446218973 } from './Seguridad/RegistrarDispositivo.component';
+import { ContratarSeguroComponent1750446218974 } from './Seguros-Voluntarios/ContratarSeguro.component';
+import { ObtenerMontosDeUnSeguroComponent1750446218975 } from './Seguros-Voluntarios/ObtenerMontosDeUnSeguro.component';
+import { ObtenerSegurosComponent1750446218976 } from './Seguros-Voluntarios/ObtenerSeguros.component';
+import { ObtenerSegurosAPagarComponent1750446218977 } from './Seguros-Voluntarios/ObtenerSegurosAPagar.component';
+import { PagarSeguroComponent1750446218978 } from './Seguros-Voluntarios/PagarSeguro.component';
+import { ObtenerCodigosdeLimitesComponent1750446218983 } from './Tarjetas-de-Débito/Obtener/ObtenerCodigosdeLimites.component';
+import { ObtenerCuentaPreferencialComponent1750446218979 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentaPreferencial.component';
+import { ObtenerCuentasaAsociarComponent1750446218980 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentasaAsociar.component';
+import { ObtenerCuentasAsociadasComponent1750446218981 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadas.component';
+import { ObtenerCuentasAsociadasPorTipoComponent1750446218982 } from './Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadasPorTipo.component';
+import { ObtenerDatosComponent1750446218987 } from './Tarjetas-de-Débito/Obtener/ObtenerDatos.component';
+import { ObtenerDatosContactoComponent1750446218989 } from './Tarjetas-de-Débito/Obtener/ObtenerDatosContacto.component';
+import { ObtenerIdentificadorUnicoComponent1750446218990 } from './Tarjetas-de-Débito/Obtener/ObtenerIdentificadorUnico.component';
+import { ObtenerLimitesComponent1750446218991 } from './Tarjetas-de-Débito/Obtener/ObtenerLimites.component';
+import { ObtenerMovimientosComponent1750446218992 } from './Tarjetas-de-Débito/Obtener/ObtenerMovimientos.component';
+import { ObtenerTarjetaComponent1750446218993 } from './Tarjetas-de-Débito/Obtener/ObtenerTarjeta.component';
+import { ObtenerTarjetaHabienteComponent1750446218994 } from './Tarjetas-de-Débito/Obtener/ObtenerTarjetaHabiente.component';
+import { ObtenerTarjetasAdicionalesComponent1750446218995 } from './Tarjetas-de-Débito/Obtener/ObtenerTarjetasAdicionales.component';
+import { ObtenerTiposdeCuentaComponent1750446218996 } from './Tarjetas-de-Débito/Obtener/ObtenerTiposdeCuenta.component';
+import { ActivarComponent1750446218997 } from './Tarjetas-de-Débito/Operar/Activar.component';
+import { ActualizarCuentaPreferencialComponent1750446218998 } from './Tarjetas-de-Débito/Operar/ActualizarCuentaPreferencial.component';
+import { ActualizarDatosContactoComponent1750446218999 } from './Tarjetas-de-Débito/Operar/ActualizarDatosContacto.component';
+import { AsociarCuentaComponent1750446219000 } from './Tarjetas-de-Débito/Operar/AsociarCuenta.component';
+import { BlanquearPinComponent1750446219001 } from './Tarjetas-de-Débito/Operar/BlanquearPin.component';
+import { BloquearComponent1750446219004 } from './Tarjetas-de-Débito/Operar/Bloquear.component';
+import { BloquearDesdeREDComponent1750446219005 } from './Tarjetas-de-Débito/Operar/BloquearDesdeRED.component';
+import { CrearComponent1750446219006 } from './Tarjetas-de-Débito/Operar/Crear.component';
+import { CrearConCuentasAsociadasComponent1750446219008 } from './Tarjetas-de-Débito/Operar/CrearConCuentasAsociadas.component';
+import { DenunciarComponent1750446219010 } from './Tarjetas-de-Débito/Operar/Denunciar.component';
+import { DenunciarDesdeREDComponent1750446219011 } from './Tarjetas-de-Débito/Operar/DenunciarDesdeRED.component';
+import { DesbloquearComponent1750446219012 } from './Tarjetas-de-Débito/Operar/Desbloquear.component';
+import { DesbloquearDesdeREDComponent1750446219013 } from './Tarjetas-de-Débito/Operar/DesbloquearDesdeRED.component';
+import { EliminarCuentaAsociadaComponent1750446219014 } from './Tarjetas-de-Débito/Operar/EliminarCuentaAsociada.component';
+import { ModificarLimiteComponent1750446219015 } from './Tarjetas-de-Débito/Operar/ModificarLimite.component';
+import { ComprarComponent1750446219016 } from './Títulos/Comprar.component';
+import { ObtenerEstadoCompraComponent1750446219017 } from './Títulos/ObtenerEstadoCompra.component';
+import { ObtenerGruposComponent1750446219020 } from './Títulos/ObtenerGrupos.component';
+import { ObtenerValoresComponent1750446219022 } from './Títulos/ObtenerValores.component';
+import { AgregarPerfilComponent1750446219023 } from './Usuarios/AgregarPerfil.component';
+import { CrearComponent1750446219024 } from './Usuarios/Crear.component';
+import { EliminarPerfilComponent1750446219025 } from './Usuarios/EliminarPerfil.component';
+import { EliminarUsuarioComponent1750446219026 } from './Usuarios/EliminarUsuario.component';
+import { HabilitarEnCanalComponent1750446219027 } from './Usuarios/HabilitarEnCanal.component';
+import { HabilitarUsuarioComponent1750446219028 } from './Usuarios/HabilitarUsuario.component';
+import { InhabilitarUsuarioComponent1750446219029 } from './Usuarios/InhabilitarUsuario.component';
+import { ModificarComponent1750446219030 } from './Usuarios/Modificar.component';
+import { ObtenerComponent1750446219030 } from './Usuarios/Obtener.component';
+import { ObtenerPerfilesComponent1750446219031 } from './Usuarios/ObtenerPerfiles.component';
+import { ObtenerUsuariosComponent1750446219032 } from './Usuarios/ObtenerUsuarios.component';
+import { ObtenerUsuariosParaPerfilComponent1750446219033 } from './Usuarios/ObtenerUsuariosParaPerfil.component';
+import { ObtenerMetadataDeTareaComponent1750446219036 } from './Workflow/ObtenerMetadataDeTarea.component';
+import { ObtenerProcesosHabilitadosComponent1750446219038 } from './Workflow/ObtenerProcesosHabilitados.component';
+import { ObtenerRolesComponent1750446219040 } from './Workflow/ObtenerRoles.component';
+import { ObtenerRolesdeTareaComponent1750446219041 } from './Workflow/ObtenerRolesdeTarea.component';
+import { ObtenerTareasdeProcesoComponent1750446219042 } from './Workflow/ObtenerTareasdeProceso.component';
 
 var routes: Routes = [
-  { path: 'Ahorro-Programado/Contratar/ContratarSimulacion', component: ContratarSimulacionComponent1750272790640 },
-  { path: 'Ahorro-Programado/Contratar/Crear', component: CrearComponent1750272790647 },
-  { path: 'Ahorro-Programado/Contratar/Simular', component: SimularComponent1750272790650 },
-  { path: 'Ahorro-Programado/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750272790653 },
-  { path: 'Ahorro-Programado/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750272790656 },
-  { path: 'Ahorro-Programado/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750272790659 },
-  { path: 'Ahorro-Programado/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750272790661 },
-  { path: 'Ahorro-Programado/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750272790664 },
-  { path: 'Ahorro-Programado/Modificar/ModificarCuentaDestino', component: ModificarCuentaDestinoComponent1750272790666 },
-  { path: 'Ahorro-Programado/Modificar/ModificarCuentaOrigen', component: ModificarCuentaOrigenComponent1750272790668 },
-  { path: 'Ahorro-Programado/Modificar/ModificarFechadeAbono', component: ModificarFechadeAbonoComponent1750272790670 },
-  { path: 'Ahorro-Programado/Modificar/ModificarMetadeAhorro', component: ModificarMetadeAhorroComponent1750272790672 },
-  { path: 'Ahorro-Programado/Modificar/ModificarMontodeAbono', component: ModificarMontodeAbonoComponent1750272790675 },
-  { path: 'Ahorro-Programado/Obtener/Obtener', component: ObtenerComponent1750272790677 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerCronogramaAbonos', component: ObtenerCronogramaAbonosComponent1750272790680 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerCuentasDestinoHabilitadas', component: ObtenerCuentasDestinoHabilitadasComponent1750272790682 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerCuentasOrigenHabilitadas', component: ObtenerCuentasOrigenHabilitadasComponent1750272790683 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerEstadodeCuenta', component: ObtenerEstadodeCuentaComponent1750272790685 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerPeriodosHabilitados', component: ObtenerPeriodosHabilitadosComponent1750272790687 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerPlazosHabilitados', component: ObtenerPlazosHabilitadosComponent1750272790689 },
-  { path: 'Ahorro-Programado/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272790691 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AnularChequeElectronico', component: AnularChequeElectronicoComponent1750272790694 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AsignarIdaChequeElectronico', component: AsignarIdaChequeElectronicoComponent1750272790697 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/CrearChequeraElectronica', component: CrearChequeraElectronicaComponent1750272790699 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeBancoPropio', component: DepositarChequeElectronicodeBancoPropioComponent1750272790700 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeOtroBanco', component: DepositarChequeElectronicodeOtroBancoComponent1750272790702 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicoenCustodia', component: DepositarChequeElectronicoenCustodiaComponent1750272790704 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronico', component: EmitirChequeElectronicoComponent1750272790706 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronicodeChequera', component: EmitirChequeElectronicodeChequeraComponent1750272790709 },
-  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/HabilitarChequeElectronico', component: HabilitarChequeElectronicoComponent1750272790711 },
-  { path: 'AR - Argentina/SNP/CrearAdhesion', component: CrearAdhesionComponent1750272790713 },
-  { path: 'AR - Argentina/SNP/CrearStopDebit', component: CrearStopDebitComponent1750272790715 },
-  { path: 'AR - Argentina/SNP/CrearStopDebitparaAdhesionconImporte', component: CrearStopDebitparaAdhesionconImporteComponent1750272790717 },
-  { path: 'AR - Argentina/SNP/EliminarStopDebit', component: EliminarStopDebitComponent1750272790719 },
-  { path: 'AR - Argentina/SNP/ObtenerAdhesiones', component: ObtenerAdhesionesComponent1750272790720 },
-  { path: 'AR - Argentina/SNP/ObtenerDebitos', component: ObtenerDebitosComponent1750272790722 },
-  { path: 'AR - Argentina/SNP/ObtenerEmpresasOriginantes', component: ObtenerEmpresasOriginantesComponent1750272790726 },
-  { path: 'AR - Argentina/SNP/ObtenerStopDebits', component: ObtenerStopDebitsComponent1750272790728 },
-  { path: 'AR - Argentina/SNP/ReversarDebitos', component: ReversarDebitosComponent1750272790730 },
-  { path: 'AR - Argentina/SNP/SolicitarBajadeAdhesion', component: SolicitarBajadeAdhesionComponent1750272790732 },
-  { path: 'Autenticación/Autenticacion', component: AutenticacionComponent1750272790733 },
-  { path: 'Cadena-de-Cierre/ObtenerDetalledeEjecucion', component: ObtenerDetalledeEjecucionComponent1750272790735 },
-  { path: 'Cadena-de-Cierre/ObtenerDetalledeProceso', component: ObtenerDetalledeProcesoComponent1750272790737 },
-  { path: 'Cadena-de-Cierre/ObtenerProcesosconError', component: ObtenerProcesosconErrorComponent1750272790739 },
-  { path: 'Cadena-de-Cierre/ObtenerProcesosCriticos', component: ObtenerProcesosCriticosComponent1750272790741 },
-  { path: 'Cadena-de-Cierre/ObtenerProcesosDiarios', component: ObtenerProcesosDiariosComponent1750272790743 },
-  { path: 'Cadena-de-Cierre/ObtenerProcesosMensuales', component: ObtenerProcesosMensualesComponent1750272790745 },
-  { path: 'Cadena-de-Cierre/ObtenerProcesosReprocesables', component: ObtenerProcesosReprocesablesComponent1750272790747 },
-  { path: 'Cadena-de-Cierre/VerificarEstadoServidor', component: VerificarEstadoServidorComponent1750272790748 },
-  { path: 'Calendarios/Calcular/CalcularFechadeVencimiento', component: CalcularFechadeVencimientoComponent1750272790750 },
-  { path: 'Calendarios/Calcular/CalcularFechadeVencimientoenDiasHabiles', component: CalcularFechadeVencimientoenDiasHabilesComponent1750272790752 },
-  { path: 'Calendarios/Calcular/CalcularPlazo', component: CalcularPlazoComponent1750272790754 },
-  { path: 'Calendarios/Calcular/CalcularPlazoenDiasHabiles', component: CalcularPlazoenDiasHabilesComponent1750272790756 },
-  { path: 'Calendarios/Obtener/ObtenerFechaHabil', component: ObtenerFechaHabilComponent1750272790758 },
-  { path: 'Calendarios/Obtener/ObtenerFechaHabilAnterior', component: ObtenerFechaHabilAnteriorComponent1750272790761 },
-  { path: 'Calendarios/Obtener/ObtenerFechaHabilAnteriordeSucursal', component: ObtenerFechaHabilAnteriordeSucursalComponent1750272790762 },
-  { path: 'Calendarios/Obtener/ObtenerFechaHabildeSucursal', component: ObtenerFechaHabildeSucursalComponent1750272790764 },
-  { path: 'Calendarios/Obtener/ObtenerInicioyFindeMes', component: ObtenerInicioyFindeMesComponent1750272790766 },
-  { path: 'Calendarios/Obtener/ObtenerInicioyFindeMesdeSucursal', component: ObtenerInicioyFindeMesdeSucursalComponent1750272790767 },
-  { path: 'Calendarios/Obtener/ObtenerProximaFechaHabil', component: ObtenerProximaFechaHabilComponent1750272790769 },
-  { path: 'Calendarios/Obtener/ObtenerProximaFechaHabildeSucursal', component: ObtenerProximaFechaHabildeSucursalComponent1750272790771 },
-  { path: 'CASH-Management/Archivo/AutorizarArchivo', component: AutorizarArchivoComponent1750272790773 },
-  { path: 'CASH-Management/Archivo/CargarArchivo', component: CargarArchivoComponent1750272790775 },
-  { path: 'CASH-Management/Archivo/CargarArchivoRecibidoComoDato', component: CargarArchivoRecibidoComoDatoComponent1750272790777 },
-  { path: 'CASH-Management/Archivo/DetenerArchivo', component: DetenerArchivoComponent1750272790779 },
-  { path: 'CASH-Management/Archivo/RechazarArchivo', component: RechazarArchivoComponent1750272790781 },
-  { path: 'CASH-Management/Beneficiarios/CargarBeneficiarios', component: CargarBeneficiariosComponent1750272790783 },
-  { path: 'CASH-Management/Beneficiarios/IngresarBeneficiario', component: IngresarBeneficiarioComponent1750272790785 },
-  { path: 'CASH-Management/Beneficiarios/ObtenerBeneficiarioSegunFiltro', component: ObtenerBeneficiarioSegunFiltroComponent1750272790786 },
-  { path: 'CASH-Management/Contratar/AltaAutomaticaContrato', component: AltaAutomaticaContratoComponent1750272790788 },
-  { path: 'CASH-Management/Contratar/CargarServiciosDisponibles', component: CargarServiciosDisponiblesComponent1750272790791 },
-  { path: 'CASH-Management/Contratar/ContratarDebitoAutomatico', component: ContratarDebitoAutomaticoComponent1750272790793 },
-  { path: 'CASH-Management/Obtener/ObtenerDetalledeOrdendeCuenta', component: ObtenerDetalledeOrdendeCuentaComponent1750272790795 },
-  { path: 'CASH-Management/Obtener/ObtenerDetalledePago', component: ObtenerDetalledePagoComponent1750272790796 },
-  { path: 'CASH-Management/Obtener/ObtenerDetalleOrdenSegunCampo', component: ObtenerDetalleOrdenSegunCampoComponent1750272790798 },
-  { path: 'CASH-Management/Obtener/ObtenerDetallePagoOrden', component: ObtenerDetallePagoOrdenComponent1750272790799 },
-  { path: 'CASH-Management/Obtener/ObtenerDeuda', component: ObtenerDeudaComponent1750272790801 },
-  { path: 'CASH-Management/Obtener/ObtenerResumenOrden', component: ObtenerResumenOrdenComponent1750272790803 },
-  { path: 'CASH-Management/Obtener/ObtenerServicios', component: ObtenerServiciosComponent1750272790805 },
-  { path: 'CASH-Management/Obtener/ObtenerValoresOrden', component: ObtenerValoresOrdenComponent1750272790807 },
-  { path: 'CASH-Management/Obtener/ObtenerValoresOrdenSegunCampo', component: ObtenerValoresOrdenSegunCampoComponent1750272790809 },
-  { path: 'CASH-Management/Orden/AutorizarOrden', component: AutorizarOrdenComponent1750272790811 },
-  { path: 'CASH-Management/Orden/DetenerOrden', component: DetenerOrdenComponent1750272790813 },
-  { path: 'CASH-Management/Orden/IngresarOrdenPago', component: IngresarOrdenPagoComponent1750272790814 },
-  { path: 'CASH-Management/Orden/ProcesarOrden', component: ProcesarOrdenComponent1750272790816 },
-  { path: 'CASH-Management/Orden/RechazarOrden', component: RechazarOrdenComponent1750272790817 },
-  { path: 'CASH-Management/Pagos/AnularPagoDeuda', component: AnularPagoDeudaComponent1750272790819 },
-  { path: 'CASH-Management/Pagos/PagarDeudaDesdeCuenta', component: PagarDeudaDesdeCuentaComponent1750272790820 },
-  { path: 'CASH-Management/Pagos/RegistrarPagoDeuda', component: RegistrarPagoDeudaComponent1750272790822 },
-  { path: 'CASH-Management/Pagos/RegistrarPagoEnLinea', component: RegistrarPagoEnLineaComponent1750272790825 },
-  { path: 'CASH-Management/Pagos/RegistrarPagoEnLineaDesdeCuenta', component: RegistrarPagoEnLineaDesdeCuentaComponent1750272790827 },
-  { path: 'CASH-Management/Visualizar/VisualizarListaResumenCabezal', component: VisualizarListaResumenCabezalComponent1750272790829 },
-  { path: 'CASH-Management/Visualizar/VisualizarListaResumenCabezalOrden', component: VisualizarListaResumenCabezalOrdenComponent1750272790831 },
-  { path: 'CASH-Management/Visualizar/VisualizarOrdendeArchivoParaCuenta', component: VisualizarOrdendeArchivoParaCuentaComponent1750272790832 },
-  { path: 'CASH-Management/Visualizar/VisualizarResultadoProcesamiento', component: VisualizarResultadoProcesamientoComponent1750272790834 },
-  { path: 'CASH-Management/Visualizar/VisualizarResumenCabezal', component: VisualizarResumenCabezalComponent1750272790836 },
-  { path: 'CASH-Management/Visualizar/VisualizarSituacionArchivos', component: VisualizarSituacionArchivosComponent1750272790838 },
-  { path: 'CASH-Management/Visualizar/VisualizarSituacionLineas', component: VisualizarSituacionLineasComponent1750272790841 },
-  { path: 'CHAT/CHAT', component: CHATComponent1750272790843 },
-  { path: 'Clientes/Actualizar/Actualizar', component: ActualizarComponent1750272790845 },
-  { path: 'Clientes/Actualizar/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750272790846 },
-  { path: 'Clientes/Actualizar/ActualizarDomicilio', component: ActualizarDomicilioComponent1750272790848 },
-  { path: 'Clientes/Actualizar/ActualizarInformacionAdicional', component: ActualizarInformacionAdicionalComponent1750272790850 },
-  { path: 'Clientes/Actualizar/ActualizarRegistroEmpleado', component: ActualizarRegistroEmpleadoComponent1750272790851 },
-  { path: 'Clientes/Actualizar/ActualizarTelefono', component: ActualizarTelefonoComponent1750272790853 },
-  { path: 'Clientes/Actualizar/AgregarDomicilio', component: AgregarDomicilioComponent1750272790854 },
-  { path: 'Clientes/Actualizar/AgregarInformacionAdicional', component: AgregarInformacionAdicionalComponent1750272790857 },
-  { path: 'Clientes/Actualizar/AgregarIntegrante', component: AgregarIntegranteComponent1750272790859 },
-  { path: 'Clientes/Actualizar/AgregarTelefono', component: AgregarTelefonoComponent1750272790861 },
-  { path: 'Clientes/Actualizar/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750272790863 },
-  { path: 'Clientes/Actualizar/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750272790864 },
-  { path: 'Clientes/Actualizar/EliminarDomicilio', component: EliminarDomicilioComponent1750272790866 },
-  { path: 'Clientes/Actualizar/EliminarInformacionAdicional', component: EliminarInformacionAdicionalComponent1750272790867 },
-  { path: 'Clientes/Actualizar/EliminarIntegrante', component: EliminarIntegranteComponent1750272790869 },
-  { path: 'Clientes/Actualizar/Habilitar', component: HabilitarComponent1750272790871 },
-  { path: 'Clientes/Actualizar/Inhabilitar', component: InhabilitarComponent1750272790872 },
-  { path: 'Clientes/Actualizar/ModificarEjecutivo', component: ModificarEjecutivoComponent1750272790875 },
-  { path: 'Clientes/Crear/Crear', component: CrearComponent1750272790877 },
-  { path: 'Clientes/Crear/CrearconPersonaExistente', component: CrearconPersonaExistenteComponent1750272790879 },
-  { path: 'Clientes/Crear/CrearParaPersonaJuridica', component: CrearParaPersonaJuridicaComponent1750272790881 },
-  { path: 'Clientes/Obtener/Obtener', component: ObtenerComponent1750272790883 },
-  { path: 'Clientes/Obtener/ObtenerAhorrosProgramados', component: ObtenerAhorrosProgramadosComponent1750272790884 },
-  { path: 'Clientes/Obtener/ObtenerBolsillos', component: ObtenerBolsillosComponent1750272790886 },
-  { path: 'Clientes/Obtener/ObtenerClasificacionesInternas', component: ObtenerClasificacionesInternasComponent1750272790889 },
-  { path: 'Clientes/Obtener/ObtenerCuentaCliente', component: ObtenerCuentaClienteComponent1750272790891 },
-  { path: 'Clientes/Obtener/ObtenerCuentasCorrientesSaldoContable', component: ObtenerCuentasCorrientesSaldoContableComponent1750272790893 },
-  { path: 'Clientes/Obtener/ObtenerCuentasCorrientesSaldoDisponible', component: ObtenerCuentasCorrientesSaldoDisponibleComponent1750272790895 },
-  { path: 'Clientes/Obtener/ObtenerCuentasdeAhorroSaldoContable', component: ObtenerCuentasdeAhorroSaldoContableComponent1750272790897 },
-  { path: 'Clientes/Obtener/ObtenerCuentasdeAhorroSaldoDisponible', component: ObtenerCuentasdeAhorroSaldoDisponibleComponent1750272790898 },
-  { path: 'Clientes/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750272790900 },
-  { path: 'Clientes/Obtener/ObtenerDetallePosicion', component: ObtenerDetallePosicionComponent1750272790902 },
-  { path: 'Clientes/Obtener/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750272790905 },
-  { path: 'Clientes/Obtener/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750272790908 },
-  { path: 'Clientes/Obtener/ObtenerDomicilios', component: ObtenerDomiciliosComponent1750272790910 },
-  { path: 'Clientes/Obtener/ObtenerFacultades', component: ObtenerFacultadesComponent1750272790912 },
-  { path: 'Clientes/Obtener/ObtenerIdentificadorUnico', component: ObtenerIdentificadorUnicoComponent1750272790914 },
-  { path: 'Clientes/Obtener/ObtenerInformacionAdicional', component: ObtenerInformacionAdicionalComponent1750272790916 },
-  { path: 'Clientes/Obtener/ObtenerIntegrantes', component: ObtenerIntegrantesComponent1750272790917 },
-  { path: 'Clientes/Obtener/ObtenerLimites', component: ObtenerLimitesComponent1750272790919 },
-  { path: 'Clientes/Obtener/ObtenerMotivosInhabilitacion', component: ObtenerMotivosInhabilitacionComponent1750272790922 },
-  { path: 'Clientes/Obtener/ObtenerPerfil', component: ObtenerPerfilComponent1750272790924 },
-  { path: 'Clientes/Obtener/ObtenerPlazosFijos', component: ObtenerPlazosFijosComponent1750272790926 },
-  { path: 'Clientes/Obtener/ObtenerPlazosFijosCancelados', component: ObtenerPlazosFijosCanceladosComponent1750272790928 },
-  { path: 'Clientes/Obtener/ObtenerPlazosFijosconAvance', component: ObtenerPlazosFijosconAvanceComponent1750272790930 },
-  { path: 'Clientes/Obtener/ObtenerPosicion', component: ObtenerPosicionComponent1750272790932 },
-  { path: 'Clientes/Obtener/ObtenerPrestamos', component: ObtenerPrestamosComponent1750272790934 },
-  { path: 'Clientes/Obtener/ObtenerPrestamosCancelados', component: ObtenerPrestamosCanceladosComponent1750272790935 },
-  { path: 'Clientes/Obtener/ObtenerPrestamosCastigados', component: ObtenerPrestamosCastigadosComponent1750272790937 },
-  { path: 'Clientes/Obtener/ObtenerPrestamosconAvance', component: ObtenerPrestamosconAvanceComponent1750272790940 },
-  { path: 'Clientes/Obtener/ObtenerResumendeProductosCierredeano', component: ObtenerResumendeProductosCierredeanoComponent1750272790943 },
-  { path: 'Clientes/Obtener/ObtenerResumendeProductosSaldosContables', component: ObtenerResumendeProductosSaldosContablesComponent1750272790945 },
-  { path: 'Clientes/Obtener/ObtenerResumendeProductosSaldosDisponibles', component: ObtenerResumendeProductosSaldosDisponiblesComponent1750272790947 },
-  { path: 'Clientes/Obtener/ObtenerResumenporProductoaCierreAno', component: ObtenerResumenporProductoaCierreAnoComponent1750272790949 },
-  { path: 'Clientes/Obtener/ObtenerRiesgodeCredito', component: ObtenerRiesgodeCreditoComponent1750272790950 },
-  { path: 'Clientes/Obtener/ObtenerSaldosdeOtrosProductos', component: ObtenerSaldosdeOtrosProductosComponent1750272790952 },
-  { path: 'Clientes/Obtener/ObtenerSectores', component: ObtenerSectoresComponent1750272790954 },
-  { path: 'Clientes/Obtener/ObtenerSegmentos', component: ObtenerSegmentosComponent1750272790956 },
-  { path: 'Clientes/Obtener/ObtenerTarjetasdeDebito', component: ObtenerTarjetasdeDebitoComponent1750272790959 },
-  { path: 'Clientes/Obtener/ObtenerTelefonos', component: ObtenerTelefonosComponent1750272790961 },
-  { path: 'Clientes/Obtener/ObtenerTiposdeIntegracion', component: ObtenerTiposdeIntegracionComponent1750272790963 },
-  { path: 'Clientes/Obtener/ObtenerTitularRepresentativo', component: ObtenerTitularRepresentativoComponent1750272790965 },
-  { path: 'Clientes/Obtener/ObtenerTitulos', component: ObtenerTitulosComponent1750272790967 },
-  { path: 'Clientes/Validar/ValidarExistencia', component: ValidarExistenciaComponent1750272790968 },
-  { path: 'Clientes/Validar/VerificarEmpleado', component: VerificarEmpleadoComponent1750272790970 },
-  { path: 'Configuración-Bantotal/Bancos/ObtenerAgenciasBanco', component: ObtenerAgenciasBancoComponent1750272790972 },
-  { path: 'Configuración-Bantotal/Bancos/ObtenerBancos', component: ObtenerBancosComponent1750272790975 },
-  { path: 'Configuración-Bantotal/Bancos/ObtenerDetalleSucursal', component: ObtenerDetalleSucursalComponent1750272790977 },
-  { path: 'Configuración-Bantotal/Bancos/ObtenerSucursalesPrincipales', component: ObtenerSucursalesPrincipalesComponent1750272790979 },
-  { path: 'Configuración-Bantotal/Clientes/ObtenerActividades', component: ObtenerActividadesComponent1750272790981 },
-  { path: 'Configuración-Bantotal/Clientes/ObtenerActividadesporTipo', component: ObtenerActividadesporTipoComponent1750272790983 },
-  { path: 'Configuración-Bantotal/Clientes/ObtenerEjecutivos', component: ObtenerEjecutivosComponent1750272790985 },
-  { path: 'Configuración-Bantotal/Clientes/ObtenerTiposdeActividad', component: ObtenerTiposdeActividadComponent1750272790986 },
-  { path: 'Configuración-Bantotal/Clientes/ObtenerTiposdeTarjeta', component: ObtenerTiposdeTarjetaComponent1750272790988 },
-  { path: 'Configuración-Bantotal/ObtenerImpuestos', component: ObtenerImpuestosComponent1750272790991 },
-  { path: 'Configuración-Bantotal/ObtenerTiposdeDocumentoDigital', component: ObtenerTiposdeDocumentoDigitalComponent1750272790994 },
-  { path: 'Configuración-Bantotal/Operaciones/ObtenerEstados', component: ObtenerEstadosComponent1750272790996 },
-  { path: 'Configuración-Bantotal/Operaciones/ObtenerInstrucciones', component: ObtenerInstruccionesComponent1750272790998 },
-  { path: 'Configuración-Bantotal/Operaciones/ObtenerPaquetes', component: ObtenerPaquetesComponent1750272791001 },
-  { path: 'Configuración-Bantotal/Operaciones/ObtenerTiposdeTexto', component: ObtenerTiposdeTextoComponent1750272791003 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerCalendariodeSucursal', component: ObtenerCalendariodeSucursalComponent1750272791005 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerCalendarios', component: ObtenerCalendariosComponent1750272791007 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendario', component: ObtenerDetalledeCalendarioComponent1750272791010 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendariodeSucursal', component: ObtenerDetalledeCalendariodeSucursalComponent1750272791012 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerDolarUSA', component: ObtenerDolarUSAComponent1750272791014 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerEmpresa', component: ObtenerEmpresaComponent1750272791016 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerFechadeSistema', component: ObtenerFechadeSistemaComponent1750272791017 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerMonedaNacional', component: ObtenerMonedaNacionalComponent1750272791019 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerMonedas', component: ObtenerMonedasComponent1750272791021 },
-  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerSucursales', component: ObtenerSucursalesComponent1750272791024 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerAgrupadoresDomicilio', component: ObtenerAgrupadoresDomicilioComponent1750272791026 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerBarriosyColonias', component: ObtenerBarriosyColoniasComponent1750272791029 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerCiudadesyLocalidades', component: ObtenerCiudadesyLocalidadesComponent1750272791031 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerCodigosdeDomicilio', component: ObtenerCodigosdeDomicilioComponent1750272791033 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerEstadosProvinciasyDepartamentos', component: ObtenerEstadosProvinciasyDepartamentosComponent1750272791035 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerPaises', component: ObtenerPaisesComponent1750272791037 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerTiposdeListasNegras', component: ObtenerTiposdeListasNegrasComponent1750272791039 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerTiposdeTelefono', component: ObtenerTiposdeTelefonoComponent1750272791041 },
-  { path: 'Configuración-Bantotal/Personas/ObtenerTiposdeVivienda', component: ObtenerTiposdeViviendaComponent1750272791043 },
-  { path: 'Configuración-Bantotal/Precios/ObtenerPizarraporModulo', component: ObtenerPizarraporModuloComponent1750272791045 },
-  { path: 'Configuración-Bantotal/Precios/ObtenerPizarras', component: ObtenerPizarrasComponent1750272791047 },
-  { path: 'Configuración-Bantotal/Seguridad/ObtenerMenus', component: ObtenerMenusComponent1750272791049 },
-  { path: 'Configuración-Bantotal/Seguridad/ObtenerPerfiles', component: ObtenerPerfilesComponent1750272791050 },
-  { path: 'Contabilidad/Agregar-Texto/AgregarTextoAsiento', component: AgregarTextoAsientoComponent1750272791053 },
-  { path: 'Contabilidad/Agregar-Texto/AgregarTextoOrdinal', component: AgregarTextoOrdinalComponent1750272791054 },
-  { path: 'Contabilidad/AnularMovimiento', component: AnularMovimientoComponent1750272791057 },
-  { path: 'Contabilidad/Condición-Impositiva/ActualizarCondicionImpositiva', component: ActualizarCondicionImpositivaComponent1750272791059 },
-  { path: 'Contabilidad/Condición-Impositiva/CrearCondicionImpositiva', component: CrearCondicionImpositivaComponent1750272791061 },
-  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdBantotalMovimiento', component: ObtenerIdBantotalMovimientoComponent1750272791063 },
-  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdBantotalOperacion', component: ObtenerIdBantotalOperacionComponent1750272791065 },
-  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdBantotalProducto', component: ObtenerIdBantotalProductoComponent1750272791066 },
-  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeMovimiento', component: ObtenerIdentificadorUnicodeMovimientoComponent1750272791068 },
-  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeOperacion', component: ObtenerIdentificadorUnicodeOperacionComponent1750272791070 },
-  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeProducto', component: ObtenerIdentificadorUnicodeProductoComponent1750272791072 },
-  { path: 'Contabilidad/Obtener/ObtenerClientedeunaOperacion', component: ObtenerClientedeunaOperacionComponent1750272791074 },
-  { path: 'Contabilidad/Obtener/ObtenerCondicionImpositiva', component: ObtenerCondicionImpositivaComponent1750272791077 },
-  { path: 'Contabilidad/Obtener/ObtenerDetalledeMovimiento', component: ObtenerDetalledeMovimientoComponent1750272791079 },
-  { path: 'Contabilidad/Obtener/ObtenerDetalledeOrdinal', component: ObtenerDetalledeOrdinalComponent1750272791081 },
-  { path: 'Contabilidad/Obtener/ObtenerIntegrantesdeOperacion', component: ObtenerIntegrantesdeOperacionComponent1750272791083 },
-  { path: 'Contabilidad/Obtener/ObtenerTextosdeMovimiento', component: ObtenerTextosdeMovimientoComponent1750272791084 },
-  { path: 'Contabilidad/Registrar-Asiento/RegistrarAsiento', component: RegistrarAsientoComponent1750272791086 },
-  { path: 'Contabilidad/Registrar-Asiento/RegistrarAsientoFechaValor', component: RegistrarAsientoFechaValorComponent1750272791088 },
-  { path: 'Cuentas-Bolsillo/Cancelar', component: CancelarComponent1750272791091 },
-  { path: 'Cuentas-Bolsillo/CashIn', component: CashInComponent1750272791093 },
-  { path: 'Cuentas-Bolsillo/CashOut', component: CashOutComponent1750272791095 },
-  { path: 'Cuentas-Bolsillo/Contratar', component: ContratarComponent1750272791097 },
-  { path: 'Cuentas-Bolsillo/ObtenerDatos', component: ObtenerDatosComponent1750272791098 },
-  { path: 'Cuentas-Bolsillo/ObtenerMovimientos', component: ObtenerMovimientosComponent1750272791100 },
-  { path: 'Cuentas-Bolsillo/ObtenerProductos', component: ObtenerProductosComponent1750272791101 },
-  { path: 'Cuentas-Bolsillo/ObtenerProductosCV', component: ObtenerProductosCVComponent1750272791103 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerChequera', component: ObtenerChequeraComponent1750272791105 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerChequeras', component: ObtenerChequerasComponent1750272791107 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerChequesdeChequera', component: ObtenerChequesdeChequeraComponent1750272791109 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerComisionChequera', component: ObtenerComisionChequeraComponent1750272791111 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerEstadodeChequera', component: ObtenerEstadodeChequeraComponent1750272791112 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerSolicitudesdeChequeras', component: ObtenerSolicitudesdeChequerasComponent1750272791114 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequera', component: ObtenerTiposdeChequeraComponent1750272791116 },
-  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequeraporProducto', component: ObtenerTiposdeChequeraporProductoComponent1750272791117 },
-  { path: 'Cuentas-Corrientes/Chequera/Operar/EliminarChequera', component: EliminarChequeraComponent1750272791119 },
-  { path: 'Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeChequera', component: RegistrarOrdendeNoPagodeChequeraComponent1750272791121 },
-  { path: 'Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeCheques', component: RegistrarOrdendeNoPagodeChequesComponent1750272791123 },
-  { path: 'Cuentas-Corrientes/Chequera/Operar/SolicitarChequera', component: SolicitarChequeraComponent1750272791126 },
-  { path: 'Cuentas-Corrientes/Contratar/ContratarconPeriodicidad', component: ContratarconPeriodicidadComponent1750272791128 },
-  { path: 'Cuentas-Corrientes/Contratar/ContratarProducto', component: ContratarProductoComponent1750272791130 },
-  { path: 'Cuentas-Corrientes/Contratar/ContratarProductoconAltadeFacultades', component: ContratarProductoconAltadeFacultadesComponent1750272791132 },
-  { path: 'Cuentas-Corrientes/Obtener/ObtenerAcuerdos', component: ObtenerAcuerdosComponent1750272791133 },
-  { path: 'Cuentas-Corrientes/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750272791136 },
-  { path: 'Cuentas-Corrientes/Obtener/ObtenerEstadodeCuenta', component: ObtenerEstadodeCuentaComponent1750272791138 },
-  { path: 'Cuentas-Corrientes/Obtener/ObtenerEvoluciondeSaldos', component: ObtenerEvoluciondeSaldosComponent1750272791140 },
-  { path: 'Cuentas-Corrientes/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272791143 },
-  { path: 'Cuentas-de-Ahorro/Contratar/ContratarconPeriodicidad', component: ContratarconPeriodicidadComponent1750272791145 },
-  { path: 'Cuentas-de-Ahorro/Contratar/ContratarProducto', component: ContratarProductoComponent1750272791147 },
-  { path: 'Cuentas-de-Ahorro/Contratar/ContratarProductoconAltadeFacultades', component: ContratarProductoconAltadeFacultadesComponent1750272791149 },
-  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750272791151 },
-  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerEstadodeCuenta', component: ObtenerEstadodeCuentaComponent1750272791153 },
-  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerEvoluciondeSaldos', component: ObtenerEvoluciondeSaldosComponent1750272791155 },
-  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272791158 },
-  { path: 'Cuentas-Vista/Beneficiarios/ActualizarBeneficiarios', component: ActualizarBeneficiariosComponent1750272791160 },
-  { path: 'Cuentas-Vista/Beneficiarios/ObtenerBeneficiarios', component: ObtenerBeneficiariosComponent1750272791162 },
-  { path: 'Cuentas-Vista/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750272791164 },
-  { path: 'Cuentas-Vista/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750272791166 },
-  { path: 'Cuentas-Vista/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750272791168 },
-  { path: 'Cuentas-Vista/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750272791169 },
-  { path: 'Cuentas-Vista/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750272791171 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerBolsillos', component: ObtenerBolsillosComponent1750272791174 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerCBUdeCuentaVista', component: ObtenerCBUdeCuentaVistaComponent1750272791176 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerCuentaVistadeCBU', component: ObtenerCuentaVistadeCBUComponent1750272791178 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerDetalleBloqueo', component: ObtenerDetalleBloqueoComponent1750272791180 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerEstadodeCuentaporPeriodo', component: ObtenerEstadodeCuentaporPeriodoComponent1750272791182 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerEstadoDeOperacion', component: ObtenerEstadoDeOperacionComponent1750272791183 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerFacultades', component: ObtenerFacultadesComponent1750272791185 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerPaquete', component: ObtenerPaqueteComponent1750272791187 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerPeriododeAcreditacion', component: ObtenerPeriododeAcreditacionComponent1750272791191 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerPeriodosdeAcreditacion', component: ObtenerPeriodosdeAcreditacionComponent1750272791189 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerSaldoBloqueado', component: ObtenerSaldoBloqueadoComponent1750272791194 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerSaldoDisponible', component: ObtenerSaldoDisponibleComponent1750272791196 },
-  { path: 'Cuentas-Vista/Obtener/ObtenerSaldosBloqueados', component: ObtenerSaldosBloqueadosComponent1750272791198 },
-  { path: 'Cuentas-Vista/Operar/AcreditarEnCuenta', component: AcreditarEnCuentaComponent1750272791199 },
-  { path: 'Cuentas-Vista/Operar/Activar', component: ActivarComponent1750272791202 },
-  { path: 'Cuentas-Vista/Operar/ActualizarPeriododeAcreditacion', component: ActualizarPeriododeAcreditacionComponent1750272791204 },
-  { path: 'Cuentas-Vista/Operar/BloquearSaldo', component: BloquearSaldoComponent1750272791206 },
-  { path: 'Cuentas-Vista/Operar/Cancelar', component: CancelarComponent1750272791208 },
-  { path: 'Cuentas-Vista/Operar/DebitarEnCuenta', component: DebitarEnCuentaComponent1750272791210 },
-  { path: 'Cuentas-Vista/Operar/DesbloquearSaldo', component: DesbloquearSaldoComponent1750272791212 },
-  { path: 'Cuentas-Vista/Perfil-Transaccional/ActualizarPerfilTransaccional', component: ActualizarPerfilTransaccionalComponent1750272791214 },
-  { path: 'Cuentas-Vista/Perfil-Transaccional/AgregarPerfilTransaccional', component: AgregarPerfilTransaccionalComponent1750272791216 },
-  { path: 'Cuentas-Vista/Perfil-Transaccional/ObtenerPerfilTransaccional', component: ObtenerPerfilTransaccionalComponent1750272791218 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarConTipoDeCambioEspecial', component: TraspasarConTipoDeCambioEspecialComponent1750272791220 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasdelaMismaPersona', component: TraspasarEntreCuentasdelaMismaPersonaComponent1750272791222 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitularcontipodecambio', component: TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750272791225 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitulardiferentesmonedas', component: TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750272791227 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropias', component: TraspasarEntreCuentasPropiasComponent1750272791233 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiascontipodecambio', component: TraspasarEntreCuentasPropiascontipodecambioComponent1750272791229 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiasdiferentesmonedas', component: TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750272791230 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceros', component: TraspasarEntreCuentasTercerosComponent1750272791239 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceroscontipodecambio', component: TraspasarEntreCuentasTerceroscontipodecambioComponent1750272791235 },
-  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasTercerosdiferentesmonedas', component: TraspasarEntreCuentasTercerosdiferentesmonedasComponent1750272791237 },
-  { path: 'Depósitos-a-Plazo/Beneficiarios/ActualizarBeneficiarios', component: ActualizarBeneficiariosComponent1750272791242 },
-  { path: 'Depósitos-a-Plazo/Beneficiarios/ObtenerBeneficiarios', component: ObtenerBeneficiariosComponent1750272791244 },
-  { path: 'Depósitos-a-Plazo/Contratar/Contratar', component: ContratarComponent1750272791245 },
-  { path: 'Depósitos-a-Plazo/Contratar/ContratarConFacultades', component: ContratarConFacultadesComponent1750272791247 },
-  { path: 'Depósitos-a-Plazo/Contratar/ContratarSimulacion', component: ContratarSimulacionComponent1750272791249 },
-  { path: 'Depósitos-a-Plazo/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750272791250 },
-  { path: 'Depósitos-a-Plazo/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750272791252 },
-  { path: 'Depósitos-a-Plazo/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750272791254 },
-  { path: 'Depósitos-a-Plazo/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750272791255 },
-  { path: 'Depósitos-a-Plazo/Modificar/ModificarCuentaDestinoalVencimiento', component: ModificarCuentaDestinoalVencimientoComponent1750272791258 },
-  { path: 'Depósitos-a-Plazo/Modificar/ModificarCuentaDestinodeAcreditacionPeriodica', component: ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750272791260 },
-  { path: 'Depósitos-a-Plazo/Modificar/ModificarInstruccion', component: ModificarInstruccionComponent1750272791261 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerAvance', component: ObtenerAvanceComponent1750272791263 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750272791264 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerDatosPrecancelacion', component: ObtenerDatosPrecancelacionComponent1750272791266 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750272791268 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerInstruccion', component: ObtenerInstruccionComponent1750272791271 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerInstruccionesHabilitados', component: ObtenerInstruccionesHabilitadosComponent1750272791270 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerMovimientos', component: ObtenerMovimientosComponent1750272791275 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerPeriodosHabilitados', component: ObtenerPeriodosHabilitadosComponent1750272791276 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272791278 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerProductosHabilitados', component: ObtenerProductosHabilitadosComponent1750272791280 },
-  { path: 'Depósitos-a-Plazo/Obtener/ObtenerTasadePrecancelacion', component: ObtenerTasadePrecancelacionComponent1750272791281 },
-  { path: 'Depósitos-a-Plazo/Precancelar', component: PrecancelarComponent1750272791282 },
-  { path: 'Depósitos-a-Plazo/Simular/Simular', component: SimularComponent1750272791284 },
-  { path: 'Depósitos-a-Plazo/Simular/SimularConCronograma', component: SimularConCronogramaComponent1750272791286 },
-  { path: 'Descuento-de-Documentos/ConfirmarLista', component: ConfirmarListaComponent1750272791287 },
-  { path: 'Descuento-de-Documentos/CrearLista', component: CrearListaComponent1750272791290 },
-  { path: 'Descuento-de-Documentos/CrearListaCheques', component: CrearListaChequesComponent1750272791292 },
-  { path: 'Descuento-de-Documentos/ObtenerProductos', component: ObtenerProductosComponent1750272791294 },
-  { path: 'Descuento-de-Documentos/ObtenerTiposDeDesembolso', component: ObtenerTiposDeDesembolsoComponent1750272791295 },
-  { path: 'Descuento-de-Documentos/SeleccionarOpcionDesembolso', component: SeleccionarOpcionDesembolsoComponent1750272791296 },
-  { path: 'Indicadores/ObtenerAgrupadores', component: ObtenerAgrupadoresComponent1750272791298 },
-  { path: 'Indicadores/ObtenerCierredeSaldosporMoneda', component: ObtenerCierredeSaldosporMonedaComponent1750272791299 },
-  { path: 'Indicadores/ObtenerCondicionesGenerales', component: ObtenerCondicionesGeneralesComponent1750272791300 },
-  { path: 'Indicadores/ObtenerIndicadores', component: ObtenerIndicadoresComponent1750272791302 },
-  { path: 'Indicadores/ObtenerMetodosMasEjecutados', component: ObtenerMetodosMasEjecutadosComponent1750272791304 },
-  { path: 'Indicadores/ObtenerMonedasIndices', component: ObtenerMonedasIndicesComponent1750272791305 },
-  { path: 'Indicadores/ObtenerRubrosBolsa', component: ObtenerRubrosBolsaComponent1750272791308 },
-  { path: 'Indicadores/ObtenerServiciosMasEjecutados', component: ObtenerServiciosMasEjecutadosComponent1750272791311 },
-  { path: 'Indicadores/ObtenerSesionesPorUsuario', component: ObtenerSesionesPorUsuarioComponent1750272791312 },
-  { path: 'Indicadores/ObtenerSucursalesCajas', component: ObtenerSucursalesCajasComponent1750272791314 },
-  { path: 'Indicadores/ObtenerTransaccionesporEstados', component: ObtenerTransaccionesporEstadosComponent1750272791315 },
-  { path: 'Microfinanzas/BuscarCliente', component: BuscarClienteComponent1750272791317 },
-  { path: 'Microfinanzas/CompletarTarea', component: CompletarTareaComponent1750272791318 },
-  { path: 'Microfinanzas/Crear-Solicitud/CrearSolicitudAmpliacion', component: CrearSolicitudAmpliacionComponent1750272791320 },
-  { path: 'Microfinanzas/Crear-Solicitud/CrearSolicitudIndividual', component: CrearSolicitudIndividualComponent1750272791321 },
-  { path: 'Microfinanzas/Crear-Solicitud/CrearSolicitudRenovacion', component: CrearSolicitudRenovacionComponent1750272791324 },
-  { path: 'Microfinanzas/Fiadores/AgregarFiador', component: AgregarFiadorComponent1750272791325 },
-  { path: 'Microfinanzas/Fiadores/EliminarFiador', component: EliminarFiadorComponent1750272791327 },
-  { path: 'Microfinanzas/Grupales/ActualizarGrupo', component: ActualizarGrupoComponent1750272791329 },
-  { path: 'Microfinanzas/Grupales/ActualizarIntegrantedeGrupo', component: ActualizarIntegrantedeGrupoComponent1750272791331 },
-  { path: 'Microfinanzas/Grupales/AgregarGrupo', component: AgregarGrupoComponent1750272791332 },
-  { path: 'Microfinanzas/Grupales/AgregarIntegranteaGrupo', component: AgregarIntegranteaGrupoComponent1750272791334 },
-  { path: 'Microfinanzas/Grupales/CrearSolicitudGrupal', component: CrearSolicitudGrupalComponent1750272791335 },
-  { path: 'Microfinanzas/Grupales/HabilitarIntegrantedeunGrupo', component: HabilitarIntegrantedeunGrupoComponent1750272791337 },
-  { path: 'Microfinanzas/Grupales/InhabilitarIntegrantedeunGrupo', component: InhabilitarIntegrantedeunGrupoComponent1750272791339 },
-  { path: 'Microfinanzas/Grupales/ObtenerDetalleGrupo', component: ObtenerDetalleGrupoComponent1750272791341 },
-  { path: 'Microfinanzas/Grupales/ObtenerGrupos', component: ObtenerGruposComponent1750272791343 },
-  { path: 'Microfinanzas/Grupales/ObtenerIntegrantesdeGrupo', component: ObtenerIntegrantesdeGrupoComponent1750272791345 },
-  { path: 'Microfinanzas/Grupales/ObtenerTiposdeGrupo', component: ObtenerTiposdeGrupoComponent1750272791346 },
-  { path: 'Microfinanzas/Grupales/ObtenerTiposdeIntegrante', component: ObtenerTiposdeIntegranteComponent1750272791348 },
-  { path: 'Microfinanzas/Grupales/SimularPrestamoAmortizableGrupal', component: SimularPrestamoAmortizableGrupalComponent1750272791350 },
-  { path: 'Microfinanzas/Obtener/ObtenerAsesores', component: ObtenerAsesoresComponent1750272791352 },
-  { path: 'Microfinanzas/Obtener/ObtenerCampanas', component: ObtenerCampanasComponent1750272791355 },
-  { path: 'Microfinanzas/Obtener/ObtenerDestinosCredito', component: ObtenerDestinosCreditoComponent1750272791357 },
-  { path: 'Microfinanzas/Obtener/ObtenerOperacionesCliente', component: ObtenerOperacionesClienteComponent1750272791359 },
-  { path: 'Microfinanzas/Obtener/ObtenerOrigenesdeCaptacion', component: ObtenerOrigenesdeCaptacionComponent1750272791361 },
-  { path: 'Microfinanzas/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272791363 },
-  { path: 'Microfinanzas/Obtener/ObtenerSolicitudesCliente', component: ObtenerSolicitudesClienteComponent1750272791365 },
-  { path: 'Microfinanzas/Obtener/ObtenerTiposAval', component: ObtenerTiposAvalComponent1750272791366 },
-  { path: 'Microfinanzas/Operaciones-a-Cancelar/AgregarOperacionesaCancelar', component: AgregarOperacionesaCancelarComponent1750272791368 },
-  { path: 'Microfinanzas/Operaciones-a-Cancelar/ObtenerOperacionesaCancelar', component: ObtenerOperacionesaCancelarComponent1750272791370 },
-  { path: 'Microfinanzas/Operaciones-a-Cancelar/QuitarOperacionesaCancelar', component: QuitarOperacionesaCancelarComponent1750272791372 },
-  { path: 'Microfinanzas/Simular/SimularLibreAmortizacion', component: SimularLibreAmortizacionComponent1750272791375 },
-  { path: 'Microfinanzas/Simular/SimularPrestamoAmortizable', component: SimularPrestamoAmortizableComponent1750272791377 },
-  { path: 'Microfinanzas/Simular/SimularPrestamoPlazoFijo', component: SimularPrestamoPlazoFijoComponent1750272791379 },
-  { path: 'Microfinanzas/ValidarPoliticas', component: ValidarPoliticasComponent1750272791381 },
-  { path: 'Modelador-de-Préstamos/ObtenerCantidadCuotas', component: ObtenerCantidadCuotasComponent1750272791383 },
-  { path: 'Modelador-de-Préstamos/ObtenerCapital', component: ObtenerCapitalComponent1750272791384 },
-  { path: 'Modelador-de-Préstamos/ObtenerComisiones', component: ObtenerComisionesComponent1750272791386 },
-  { path: 'Modelador-de-Préstamos/ObtenerComisionesporCuota', component: ObtenerComisionesporCuotaComponent1750272791388 },
-  { path: 'Modelador-de-Préstamos/ObtenerDiasPrimerPeriodo', component: ObtenerDiasPrimerPeriodoComponent1750272791391 },
-  { path: 'Modelador-de-Préstamos/ObtenerPeriodoEntreCuotas', component: ObtenerPeriodoEntreCuotasComponent1750272791396 },
-  { path: 'Modelador-de-Préstamos/ObtenerPermiteSegurosdelMismoTipo', component: ObtenerPermiteSegurosdelMismoTipoComponent1750272791394 },
-  { path: 'Modelador-de-Préstamos/ObtenerPlazo', component: ObtenerPlazoComponent1750272791397 },
-  { path: 'Modelador-de-Préstamos/ObtenerRequiereSegurodeVidaObligatorio', component: ObtenerRequiereSegurodeVidaObligatorioComponent1750272791399 },
-  { path: 'Modelador-de-Préstamos/ObtenerSeguros', component: ObtenerSegurosComponent1750272791401 },
-  { path: 'PAE/ObtenerItemsModelo', component: ObtenerItemsModeloComponent1750272791403 },
-  { path: 'PAE/ObtenerModelosPAE', component: ObtenerModelosPAEComponent1750272791405 },
-  { path: 'PAE/ObtenerScores', component: ObtenerScoresComponent1750272791407 },
-  { path: 'PAE/ObtenerTiposDeModelos', component: ObtenerTiposDeModelosComponent1750272791410 },
-  { path: 'Partners/Contratar/ContratarPrestamo', component: ContratarPrestamoComponent1750272791412 },
-  { path: 'Partners/Contratar/ContratarVehicular', component: ContratarVehicularComponent1750272791414 },
-  { path: 'Partners/Crear/CrearCliente', component: CrearClienteComponent1750272791416 },
-  { path: 'Partners/Crear/CrearPersonaCliente', component: CrearPersonaClienteComponent1750272791417 },
-  { path: 'Partners/Obtener/ObtenerDatosdeUsuario', component: ObtenerDatosdeUsuarioComponent1750272791420 },
-  { path: 'Partners/Obtener/ObtenerDetalledeOfertaAmortizable', component: ObtenerDetalledeOfertaAmortizableComponent1750272791422 },
-  { path: 'Partners/Obtener/ObtenerDetalleOfertaVehicular', component: ObtenerDetalleOfertaVehicularComponent1750272791425 },
-  { path: 'Partners/Obtener/ObtenerMarcas', component: ObtenerMarcasComponent1750272791428 },
-  { path: 'Partners/Obtener/ObtenerModelos', component: ObtenerModelosComponent1750272791429 },
-  { path: 'Partners/Obtener/ObtenerPartners', component: ObtenerPartnersComponent1750272791431 },
-  { path: 'Partners/Obtener/ObtenerPrestamosdeCliente', component: ObtenerPrestamosdeClienteComponent1750272791437 },
-  { path: 'Partners/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272791434 },
-  { path: 'Partners/Obtener/ObtenerProductosdelPartner', component: ObtenerProductosdelPartnerComponent1750272791435 },
-  { path: 'Partners/Obtener/ObtenerPuntosdeVenta', component: ObtenerPuntosdeVentaComponent1750272791440 },
-  { path: 'Partners/Obtener/ObtenerVendedores', component: ObtenerVendedoresComponent1750272791443 },
-  { path: 'Partners/Obtener/ObtenerVersiones', component: ObtenerVersionesComponent1750272791445 },
-  { path: 'Partners/Simular/SimularOfertas', component: SimularOfertasComponent1750272791447 },
-  { path: 'Partners/Simular/SimularOfertasVehicular', component: SimularOfertasVehicularComponent1750272791449 },
-  { path: 'Partners/Simular/SimularPrestamo', component: SimularPrestamoComponent1750272791451 },
-  { path: 'Partners/Simular/SimularVehicular', component: SimularVehicularComponent1750272791454 },
-  { path: 'Parámetros-Base/ObtenerCorrelativoGuia', component: ObtenerCorrelativoGuiaComponent1750272791456 },
-  { path: 'Parámetros-Base/ObtenerCorrelativoGuiaEspecial', component: ObtenerCorrelativoGuiaEspecialComponent1750272791459 },
-  { path: 'Parámetros-Base/ObtenerGuiadeProceso', component: ObtenerGuiadeProcesoComponent1750272791462 },
-  { path: 'Parámetros-Base/ObtenerGuiaEspecialdeProceso', component: ObtenerGuiaEspecialdeProcesoComponent1750272791464 },
-  { path: 'Parámetros-Base/ObtenerOpcionGeneraldeProceso', component: ObtenerOpcionGeneraldeProcesoComponent1750272791467 },
-  { path: 'Parámetros-Base/ObtenerOpcionGeneralPorModulo', component: ObtenerOpcionGeneralPorModuloComponent1750272791468 },
-  { path: 'Parámetros-Base/ObtenerProgramaParticular', component: ObtenerProgramaParticularComponent1750272791470 },
-  { path: 'Personas/Actualizar/Actualizar', component: ActualizarComponent1750272791473 },
-  { path: 'Personas/Actualizar/ActualizarCelular', component: ActualizarCelularComponent1750272791475 },
-  { path: 'Personas/Actualizar/ActualizarContacto', component: ActualizarContactoComponent1750272791478 },
-  { path: 'Personas/Actualizar/ActualizarConyuge', component: ActualizarConyugeComponent1750272791481 },
-  { path: 'Personas/Actualizar/ActualizarCorreoElectronico', component: ActualizarCorreoElectronicoComponent1750272791479 },
-  { path: 'Personas/Actualizar/ActualizarDomicilio', component: ActualizarDomicilioComponent1750272791483 },
-  { path: 'Personas/Actualizar/ActualizarFATCA', component: ActualizarFATCAComponent1750272791485 },
-  { path: 'Personas/Actualizar/ActualizarInformacionAdicional', component: ActualizarInformacionAdicionalComponent1750272791487 },
-  { path: 'Personas/Actualizar/ActualizarInformacionFinanciera', component: ActualizarInformacionFinancieraComponent1750272791489 },
-  { path: 'Personas/Actualizar/ActualizarIntegrantedePersonaJuridica', component: ActualizarIntegrantedePersonaJuridicaComponent1750272791491 },
-  { path: 'Personas/Actualizar/ActualizarPersonaJuridica', component: ActualizarPersonaJuridicaComponent1750272791494 },
-  { path: 'Personas/Actualizar/ActualizarProfesion', component: ActualizarProfesionComponent1750272791495 },
-  { path: 'Personas/Actualizar/ActualizarReferencia', component: ActualizarReferenciaComponent1750272791497 },
-  { path: 'Personas/Actualizar/ActualizarRegistroEmpleado', component: ActualizarRegistroEmpleadoComponent1750272791498 },
-  { path: 'Personas/Actualizar/ActualizarTelefono', component: ActualizarTelefonoComponent1750272791500 },
-  { path: 'Personas/Actualizar/ActualizarVictimaHechoViolento', component: ActualizarVictimaHechoViolentoComponent1750272791502 },
-  { path: 'Personas/Actualizar/ModificarDocumentoAdicional', component: ModificarDocumentoAdicionalComponent1750272791504 },
-  { path: 'Personas/Agregar/AgregaraListaNegra', component: AgregaraListaNegraComponent1750272791505 },
-  { path: 'Personas/Agregar/AgregarContacto', component: AgregarContactoComponent1750272791508 },
-  { path: 'Personas/Agregar/AgregarCorreoElectronico', component: AgregarCorreoElectronicoComponent1750272791511 },
-  { path: 'Personas/Agregar/AgregarDatosPEP', component: AgregarDatosPEPComponent1750272791514 },
-  { path: 'Personas/Agregar/AgregarDocumentoAdicional', component: AgregarDocumentoAdicionalComponent1750272791516 },
-  { path: 'Personas/Agregar/AgregarDomicilio', component: AgregarDomicilioComponent1750272791520 },
-  { path: 'Personas/Agregar/AgregarEstadoFinanciero', component: AgregarEstadoFinancieroComponent1750272791524 },
-  { path: 'Personas/Agregar/AgregarFATCA', component: AgregarFATCAComponent1750272791526 },
-  { path: 'Personas/Agregar/AgregarInformacionAdicional', component: AgregarInformacionAdicionalComponent1750272791529 },
-  { path: 'Personas/Agregar/AgregarInformacionFinanciera', component: AgregarInformacionFinancieraComponent1750272791531 },
-  { path: 'Personas/Agregar/AgregarIntegranteaPersonaJuridica', component: AgregarIntegranteaPersonaJuridicaComponent1750272791533 },
-  { path: 'Personas/Agregar/AgregarPersonaVinculada', component: AgregarPersonaVinculadaComponent1750272791535 },
-  { path: 'Personas/Agregar/AgregarReferencia', component: AgregarReferenciaComponent1750272791536 },
-  { path: 'Personas/Agregar/AgregarTelefono', component: AgregarTelefonoComponent1750272791538 },
-  { path: 'Personas/Agregar/AgregarVictimaHechoViolento', component: AgregarVictimaHechoViolentoComponent1750272791541 },
-  { path: 'Personas/Crear/Crear', component: CrearComponent1750272791543 },
-  { path: 'Personas/Crear/CrearConyuge', component: CrearConyugeComponent1750272791545 },
-  { path: 'Personas/Crear/CrearPersonaJuridica', component: CrearPersonaJuridicaComponent1750272791547 },
-  { path: 'Personas/Crear/CrearReducido', component: CrearReducidoComponent1750272791548 },
-  { path: 'Personas/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750272791550 },
-  { path: 'Personas/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750272791551 },
-  { path: 'Personas/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750272791552 },
-  { path: 'Personas/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750272791553 },
-  { path: 'Personas/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750272791554 },
-  { path: 'Personas/Eliminar/EliminarConyuge', component: EliminarConyugeComponent1750272791556 },
-  { path: 'Personas/Eliminar/EliminarDocumentoAdicional', component: EliminarDocumentoAdicionalComponent1750272791558 },
-  { path: 'Personas/Eliminar/EliminarDomicilio', component: EliminarDomicilioComponent1750272791559 },
-  { path: 'Personas/Eliminar/EliminarInformacionAdicional', component: EliminarInformacionAdicionalComponent1750272791560 },
-  { path: 'Personas/Eliminar/EliminarIntegrantedePersonaJuridica', component: EliminarIntegrantedePersonaJuridicaComponent1750272791561 },
-  { path: 'Personas/Eliminar/EliminarPersonaVinculada', component: EliminarPersonaVinculadaComponent1750272791562 },
-  { path: 'Personas/Eliminar/EliminarProfesion', component: EliminarProfesionComponent1750272791563 },
-  { path: 'Personas/Obtener/Obtener', component: ObtenerComponent1750272791564 },
-  { path: 'Personas/Obtener/ObtenerConcepto', component: ObtenerConceptoComponent1750272791565 },
-  { path: 'Personas/Obtener/ObtenerContactos', component: ObtenerContactosComponent1750272791566 },
-  { path: 'Personas/Obtener/ObtenerConyuge', component: ObtenerConyugeComponent1750272791570 },
-  { path: 'Personas/Obtener/ObtenerCorreosElectronicos', component: ObtenerCorreosElectronicosComponent1750272791567 },
-  { path: 'Personas/Obtener/ObtenerCuentasCliente', component: ObtenerCuentasClienteComponent1750272791569 },
-  { path: 'Personas/Obtener/ObtenerDatosPEP', component: ObtenerDatosPEPComponent1750272791571 },
-  { path: 'Personas/Obtener/ObtenerDocumentosAdicionales', component: ObtenerDocumentosAdicionalesComponent1750272791572 },
-  { path: 'Personas/Obtener/ObtenerDomicilios', component: ObtenerDomiciliosComponent1750272791574 },
-  { path: 'Personas/Obtener/ObtenerEstadosCiviles', component: ObtenerEstadosCivilesComponent1750272791575 },
-  { path: 'Personas/Obtener/ObtenerFacultades', component: ObtenerFacultadesComponent1750272791577 },
-  { path: 'Personas/Obtener/ObtenerFATCA', component: ObtenerFATCAComponent1750272791578 },
-  { path: 'Personas/Obtener/ObtenerHobbies', component: ObtenerHobbiesComponent1750272791579 },
-  { path: 'Personas/Obtener/ObtenerHobby', component: ObtenerHobbyComponent1750272791580 },
-  { path: 'Personas/Obtener/ObtenerIdBantotal', component: ObtenerIdBantotalComponent1750272791581 },
-  { path: 'Personas/Obtener/ObtenerIdentidadesdeGenero', component: ObtenerIdentidadesdeGeneroComponent1750272791582 },
-  { path: 'Personas/Obtener/ObtenerIdentificadorUnico', component: ObtenerIdentificadorUnicoComponent1750272791583 },
-  { path: 'Personas/Obtener/ObtenerInformacionAdicional', component: ObtenerInformacionAdicionalComponent1750272791584 },
-  { path: 'Personas/Obtener/ObtenerInformacionFinanciera', component: ObtenerInformacionFinancieraComponent1750272791585 },
-  { path: 'Personas/Obtener/ObtenerIntegrantesPersonaJuridica', component: ObtenerIntegrantesPersonaJuridicaComponent1750272791586 },
-  { path: 'Personas/Obtener/ObtenerLimites', component: ObtenerLimitesComponent1750272791587 },
-  { path: 'Personas/Obtener/ObtenerNaturalezasJuridicas', component: ObtenerNaturalezasJuridicasComponent1750272791588 },
-  { path: 'Personas/Obtener/ObtenerNivelesEducativos', component: ObtenerNivelesEducativosComponent1750272791590 },
-  { path: 'Personas/Obtener/ObtenerOcupaciones', component: ObtenerOcupacionesComponent1750272791592 },
-  { path: 'Personas/Obtener/ObtenerPersonaJuridica', component: ObtenerPersonaJuridicaComponent1750272791593 },
-  { path: 'Personas/Obtener/ObtenerPersonas', component: ObtenerPersonasComponent1750272791595 },
-  { path: 'Personas/Obtener/ObtenerPersonasJuridicas', component: ObtenerPersonasJuridicasComponent1750272791596 },
-  { path: 'Personas/Obtener/ObtenerPersonasVinculadas', component: ObtenerPersonasVinculadasComponent1750272791597 },
-  { path: 'Personas/Obtener/ObtenerProfesion', component: ObtenerProfesionComponent1750272791600 },
-  { path: 'Personas/Obtener/ObtenerProfesiones', component: ObtenerProfesionesComponent1750272791598 },
-  { path: 'Personas/Obtener/ObtenerReferencias', component: ObtenerReferenciasComponent1750272791601 },
-  { path: 'Personas/Obtener/ObtenerTarjetasdeDebito', component: ObtenerTarjetasdeDebitoComponent1750272791602 },
-  { path: 'Personas/Obtener/ObtenerTelefonos', component: ObtenerTelefonosComponent1750272791604 },
-  { path: 'Personas/Obtener/ObtenerTipodePersona', component: ObtenerTipodePersonaComponent1750272791605 },
-  { path: 'Personas/Obtener/ObtenerTiposdeDocumento', component: ObtenerTiposdeDocumentoComponent1750272791608 },
-  { path: 'Personas/Obtener/ObtenerTiposDeFuncionarioPublico', component: ObtenerTiposDeFuncionarioPublicoComponent1750272791610 },
-  { path: 'Personas/Obtener/ObtenerTiposDePEP', component: ObtenerTiposDePEPComponent1750272791612 },
-  { path: 'Personas/Obtener/ObtenerTitularesDelTelefono', component: ObtenerTitularesDelTelefonoComponent1750272791613 },
-  { path: 'Personas/Obtener/ObtenerVictimaHechoViolento', component: ObtenerVictimaHechoViolentoComponent1750272791615 },
-  { path: 'Personas/Obtener/ObtenerVinculos', component: ObtenerVinculosComponent1750272791616 },
-  { path: 'Personas/Obtener/ObtenerVinculosdeAfinidad', component: ObtenerVinculosdeAfinidadComponent1750272791618 },
-  { path: 'Personas/Obtener/ObtenerVinculosdeConsanguinidad', component: ObtenerVinculosdeConsanguinidadComponent1750272791619 },
-  { path: 'Personas/Obtener/ObtenerVinculosJuridicos', component: ObtenerVinculosJuridicosComponent1750272791621 },
-  { path: 'Personas/Validar/EvaluarPAE', component: EvaluarPAEComponent1750272791624 },
-  { path: 'Personas/Validar/ValidarCorreoElectronico', component: ValidarCorreoElectronicoComponent1750272791626 },
-  { path: 'Personas/Validar/ValidarDocumento', component: ValidarDocumentoComponent1750272791628 },
-  { path: 'Personas/Validar/ValidarenListasNegras', component: ValidarenListasNegrasComponent1750272791630 },
-  { path: 'Personas/Validar/ValidarExistencia', component: ValidarExistenciaComponent1750272791631 },
-  { path: 'Personas/Validar/ValidarListasInhabilitados', component: ValidarListasInhabilitadosComponent1750272791632 },
-  { path: 'Personas/Validar/VerificarEmpleado', component: VerificarEmpleadoComponent1750272791634 },
-  { path: 'Precios/Convertir/ConvertirTasaAnualEfectivaaLineal', component: ConvertirTasaAnualEfectivaaLinealComponent1750272791635 },
-  { path: 'Precios/Convertir/ConvertirTasaAnualLinealaEfectiva', component: ConvertirTasaAnualLinealaEfectivaComponent1750272791637 },
-  { path: 'Precios/Convertir/ConvertirTasaMensualEfectivaaLineal', component: ConvertirTasaMensualEfectivaaLinealComponent1750272791639 },
-  { path: 'Precios/Convertir/ConvertirTasaMensualLinealaEfectiva', component: ConvertirTasaMensualLinealaEfectivaComponent1750272791641 },
-  { path: 'Precios/Obtener/ObtenerCotizacion', component: ObtenerCotizacionComponent1750272791643 },
-  { path: 'Precios/Obtener/ObtenerCotizacionaFecha', component: ObtenerCotizacionaFechaComponent1750272791646 },
-  { path: 'Precios/Obtener/ObtenerCotizacionCierre', component: ObtenerCotizacionCierreComponent1750272791647 },
-  { path: 'Precios/Obtener/ObtenerPizarraEspecialporTransaccion', component: ObtenerPizarraEspecialporTransaccionComponent1750272791649 },
-  { path: 'Precios/Obtener/ObtenerPrecioaFecha', component: ObtenerPrecioaFechaComponent1750272791650 },
-  { path: 'Precios/Obtener/ObtenerPrecioEspecie', component: ObtenerPrecioEspecieComponent1750272791652 },
-  { path: 'Precios/Obtener/ObtenerTasadeOperacion', component: ObtenerTasadeOperacionComponent1750272791654 },
-  { path: 'Precios/Obtener/ObtenerTasaParaCliente', component: ObtenerTasaParaClienteComponent1750272791656 },
-  { path: 'Precios/Obtener/ObtenerTasaParaProducto', component: ObtenerTasaParaProductoComponent1750272791659 },
-  { path: 'Precios/Obtener/ObtenerTipodeCambio', component: ObtenerTipodeCambioComponent1750272791660 },
-  { path: 'Precios/Obtener/ObtenerTiposDeCambioEspeciales', component: ObtenerTiposDeCambioEspecialesComponent1750272791662 },
-  { path: 'Préstamos/Cancelar/Cancelar', component: CancelarComponent1750272791664 },
-  { path: 'Préstamos/Cancelar/CancelaraFecha', component: CancelaraFechaComponent1750272791665 },
-  { path: 'Préstamos/Cancelar/CancelaraFechaTerceros', component: CancelaraFechaTercerosComponent1750272791667 },
-  { path: 'Préstamos/Cancelar/CancelarTerceros', component: CancelarTercerosComponent1750272791669 },
-  { path: 'Préstamos/Contratar/Contratar', component: ContratarComponent1750272791671 },
-  { path: 'Préstamos/Contratar/ContratarAmpliacion', component: ContratarAmpliacionComponent1750272791674 },
-  { path: 'Préstamos/Contratar/ContratarRefinanciacion', component: ContratarRefinanciacionComponent1750272791676 },
-  { path: 'Préstamos/Contratar/ContratarRefinanciacionporDeudaTotal', component: ContratarRefinanciacionporDeudaTotalComponent1750272791678 },
-  { path: 'Préstamos/Contratar/ContratarRefinanciacionporSaldoCapital', component: ContratarRefinanciacionporSaldoCapitalComponent1750272791680 },
-  { path: 'Préstamos/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750272791681 },
-  { path: 'Préstamos/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750272791683 },
-  { path: 'Préstamos/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750272791685 },
-  { path: 'Préstamos/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750272791686 },
-  { path: 'Préstamos/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750272791688 },
-  { path: 'Préstamos/Obtener/ObtenerCronograma', component: ObtenerCronogramaComponent1750272791691 },
-  { path: 'Préstamos/Obtener/ObtenerCronogramaaFecha', component: ObtenerCronogramaaFechaComponent1750272791694 },
-  { path: 'Préstamos/Obtener/ObtenerCronogramaconPagosaFecha', component: ObtenerCronogramaconPagosaFechaComponent1750272791695 },
-  { path: 'Préstamos/Obtener/ObtenerCronogramaenEspecie', component: ObtenerCronogramaenEspecieComponent1750272791697 },
-  { path: 'Préstamos/Obtener/ObtenerCronogramaOriginal', component: ObtenerCronogramaOriginalComponent1750272791699 },
-  { path: 'Préstamos/Obtener/ObtenerCuentadeCobro', component: ObtenerCuentadeCobroComponent1750272791700 },
-  { path: 'Préstamos/Obtener/ObtenerDatosdelProximoVencimiento', component: ObtenerDatosdelProximoVencimientoComponent1750272791702 },
-  { path: 'Préstamos/Obtener/ObtenerDetalle', component: ObtenerDetalleComponent1750272791704 },
-  { path: 'Préstamos/Obtener/ObtenerDetalleaFecha', component: ObtenerDetalleaFechaComponent1750272791707 },
-  { path: 'Préstamos/Obtener/ObtenerDetalledeCancelacionTotal', component: ObtenerDetalledeCancelacionTotalComponent1750272791709 },
-  { path: 'Préstamos/Obtener/ObtenerDetalledeOferta', component: ObtenerDetalledeOfertaComponent1750272791711 },
-  { path: 'Préstamos/Obtener/ObtenerDetalledeOfertaAmortizable', component: ObtenerDetalledeOfertaAmortizableComponent1750272791713 },
-  { path: 'Préstamos/Obtener/ObtenerDetalledeOperacionesaRefinanciar', component: ObtenerDetalledeOperacionesaRefinanciarComponent1750272791715 },
-  { path: 'Préstamos/Obtener/ObtenerDetalledePrestamoCancelado', component: ObtenerDetalledePrestamoCanceladoComponent1750272791716 },
-  { path: 'Préstamos/Obtener/ObtenerDetallePagoPrestamo', component: ObtenerDetallePagoPrestamoComponent1750272791718 },
-  { path: 'Préstamos/Obtener/ObtenerDetalleReducido', component: ObtenerDetalleReducidoComponent1750272791720 },
-  { path: 'Préstamos/Obtener/ObtenerDetalleSimulacion', component: ObtenerDetalleSimulacionComponent1750272791722 },
-  { path: 'Préstamos/Obtener/ObtenerDeuda', component: ObtenerDeudaComponent1750272791725 },
-  { path: 'Préstamos/Obtener/ObtenerDeudaPrestamoCastigado', component: ObtenerDeudaPrestamoCastigadoComponent1750272791727 },
-  { path: 'Préstamos/Obtener/ObtenerDeudaVencida', component: ObtenerDeudaVencidaComponent1750272791728 },
-  { path: 'Préstamos/Obtener/ObtenerFechadeIncumplimiento', component: ObtenerFechadeIncumplimientoComponent1750272791730 },
-  { path: 'Préstamos/Obtener/ObtenerFechadeUltimoPago', component: ObtenerFechadeUltimoPagoComponent1750272791732 },
-  { path: 'Préstamos/Obtener/ObtenerFechasdePago', component: ObtenerFechasdePagoComponent1750272791734 },
-  { path: 'Préstamos/Obtener/ObtenerInformacionAdicional', component: ObtenerInformacionAdicionalComponent1750272791736 },
-  { path: 'Préstamos/Obtener/ObtenerMontodeCancelacion', component: ObtenerMontodeCancelacionComponent1750272791737 },
-  { path: 'Préstamos/Obtener/ObtenerMotivosPrecancelacion', component: ObtenerMotivosPrecancelacionComponent1750272791740 },
-  { path: 'Préstamos/Obtener/ObtenerPagosdeCuota', component: ObtenerPagosdeCuotaComponent1750272791743 },
-  { path: 'Préstamos/Obtener/ObtenerPagosdeunPrestamo', component: ObtenerPagosdeunPrestamoComponent1750272791744 },
-  { path: 'Préstamos/Obtener/ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1', component: ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750272791746 },
-  { path: 'Préstamos/Obtener/ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1', component: ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750272791748 },
-  { path: 'Préstamos/Obtener/ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1', component: ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750272791751 },
-  { path: 'Préstamos/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750272791753 },
-  { path: 'Préstamos/Obtener/ObtenerProductosRefinanciacion', component: ObtenerProductosRefinanciacionComponent1750272791756 },
-  { path: 'Préstamos/Obtener/ObtenerRefinanciacionSimulada', component: ObtenerRefinanciacionSimuladaComponent1750272791759 },
-  { path: 'Préstamos/Operar/AbonaraCuenta', component: AbonaraCuentaComponent1750272791761 },
-  { path: 'Préstamos/Operar/ActualizarInformacionAdicional', component: ActualizarInformacionAdicionalComponent1750272791762 },
-  { path: 'Préstamos/Operar/ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1', component: ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750272791764 },
-  { path: 'Préstamos/Operar/AgregarCuentadeCobro', component: AgregarCuentadeCobroComponent1750272791765 },
-  { path: 'Préstamos/Operar/AgregarInformacionAdicional', component: AgregarInformacionAdicionalComponent1750272791766 },
-  { path: 'Préstamos/Operar/EliminarCuentadeCobro', component: EliminarCuentadeCobroComponent1750272791768 },
-  { path: 'Préstamos/Operar/EliminarInformacionAdicional', component: EliminarInformacionAdicionalComponent1750272791769 },
-  { path: 'Préstamos/Operar/SolicitarPrecancelacion', component: SolicitarPrecancelacionComponent1750272791770 },
-  { path: 'Préstamos/Pagar/AdelantarCapitalConReduccionDeCuota', component: AdelantarCapitalConReduccionDeCuotaComponent1750272791772 },
-  { path: 'Préstamos/Pagar/AdelantarCapitalConReduccionDePlazo', component: AdelantarCapitalConReduccionDePlazoComponent1750272791774 },
-  { path: 'Préstamos/Pagar/PagarCuota', component: PagarCuotaComponent1750272791775 },
-  { path: 'Préstamos/Pagar/PagarCuotaaFecha', component: PagarCuotaaFechaComponent1750272791776 },
-  { path: 'Préstamos/Pagar/PagarCuotaaFechaTerceros', component: PagarCuotaaFechaTercerosComponent1750272791778 },
-  { path: 'Préstamos/Pagar/PagarCuotaTerceros', component: PagarCuotaTercerosComponent1750272791779 },
-  { path: 'Préstamos/Simular/ResimularAmortizable', component: ResimularAmortizableComponent1750272791781 },
-  { path: 'Préstamos/Simular/ResimularAmpliacion', component: ResimularAmpliacionComponent1750272791783 },
-  { path: 'Préstamos/Simular/ResimularRefinanciacion', component: ResimularRefinanciacionComponent1750272791785 },
-  { path: 'Préstamos/Simular/Simular', component: SimularComponent1750272791787 },
-  { path: 'Préstamos/Simular/SimularAmortizable', component: SimularAmortizableComponent1750272791788 },
-  { path: 'Préstamos/Simular/SimularAmortizableSinCliente', component: SimularAmortizableSinClienteComponent1750272791792 },
-  { path: 'Préstamos/Simular/SimularAmpliacion', component: SimularAmpliacionComponent1750272791794 },
-  { path: 'Préstamos/Simular/SimularAmpliacionIngresandoSeguros', component: SimularAmpliacionIngresandoSegurosComponent1750272791795 },
-  { path: 'Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotas', component: SimularDespejandoCapitalyCantidaddeCuotasComponent1750272791796 },
-  { path: 'Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotasSinCliente', component: SimularDespejandoCapitalyCantidaddeCuotasSinClienteComponent1750272791797 },
-  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotas', component: SimularDespejandoFechadeVencimientoyCantidaddeCuotasComponent1750272791799 },
-  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinCliente', component: SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750272791800 },
-  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasa', component: SimularDespejandoFechadeVencimientoyTasaComponent1750272791802 },
-  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasaSinCliente', component: SimularDespejandoFechadeVencimientoyTasaSinClienteComponent1750272791803 },
-  { path: 'Préstamos/Simular/SimularIngresandoBalloon', component: SimularIngresandoBalloonComponent1750272791804 },
-  { path: 'Préstamos/Simular/SimularIngresandoBalloonSinCliente', component: SimularIngresandoBalloonSinClienteComponent1750272791806 },
-  { path: 'Préstamos/Simular/SimularIngresandoSeguros', component: SimularIngresandoSegurosComponent1750272791809 },
-  { path: 'Préstamos/Simular/SimularIngresandoSegurosSinCliente', component: SimularIngresandoSegurosSinClienteComponent1750272791810 },
-  { path: 'Préstamos/Simular/SimularLibreAmortizacion', component: SimularLibreAmortizacionComponent1750272791812 },
-  { path: 'Préstamos/Simular/SimularLibreAmortizacionSinCliente', component: SimularLibreAmortizacionSinClienteComponent1750272791813 },
-  { path: 'Préstamos/Simular/SimularOfertas', component: SimularOfertasComponent1750272791815 },
-  { path: 'Préstamos/Simular/SimularPlazoFijo', component: SimularPlazoFijoComponent1750272791816 },
-  { path: 'Préstamos/Simular/SimularRefinanciacion', component: SimularRefinanciacionComponent1750272791817 },
-  { path: 'Préstamos/Simular/SimularRefinanciacionporDeudaTotal', component: SimularRefinanciacionporDeudaTotalComponent1750272791819 },
-  { path: 'Préstamos/Simular/SimularRefinanciacionporSaldoCapital', component: SimularRefinanciacionporSaldoCapitalComponent1750272791820 },
-  { path: 'Préstamos/Textos/ActualizarTextos', component: ActualizarTextosComponent1750272791823 },
-  { path: 'Préstamos/Textos/AgregarTextos', component: AgregarTextosComponent1750272791825 },
-  { path: 'Préstamos/Textos/EliminarTextos', component: EliminarTextosComponent1750272791827 },
-  { path: 'Préstamos/Textos/ObtenerTextos', component: ObtenerTextosComponent1750272791828 },
-  { path: 'Reglas-de-Negocio/EvaluarRegladeNegocio', component: EvaluarRegladeNegocioComponent1750272791831 },
-  { path: 'Reglas-de-Negocio/ObtenerReglasdeNegocio', component: ObtenerReglasdeNegocioComponent1750272791833 },
-  { path: 'Reglas-de-Negocio/ObtenerVariablesRegla', component: ObtenerVariablesReglaComponent1750272791834 },
-  { path: 'Reglas-de-Negocio/ValidarDatosRegladeNegocio', component: ValidarDatosRegladeNegocioComponent1750272791835 },
-  { path: 'Seguridad/AutorizarExcepcion', component: AutorizarExcepcionComponent1750272791837 },
-  { path: 'Seguridad/ObtenerDetalledeExcepcion', component: ObtenerDetalledeExcepcionComponent1750272791838 },
-  { path: 'Seguridad/ObtenerExcepciones', component: ObtenerExcepcionesComponent1750272791841 },
-  { path: 'Seguridad/RechazarExcepcion', component: RechazarExcepcionComponent1750272791843 },
-  { path: 'Seguridad/RegistrarDispositivo', component: RegistrarDispositivoComponent1750272791845 },
-  { path: 'Seguros-Voluntarios/ContratarSeguro', component: ContratarSeguroComponent1750272791846 },
-  { path: 'Seguros-Voluntarios/ObtenerMontosDeUnSeguro', component: ObtenerMontosDeUnSeguroComponent1750272791847 },
-  { path: 'Seguros-Voluntarios/ObtenerSeguros', component: ObtenerSegurosComponent1750272791849 },
-  { path: 'Seguros-Voluntarios/ObtenerSegurosAPagar', component: ObtenerSegurosAPagarComponent1750272791850 },
-  { path: 'Seguros-Voluntarios/PagarSeguro', component: PagarSeguroComponent1750272791851 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCodigosdeLimites', component: ObtenerCodigosdeLimitesComponent1750272791860 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentaPreferencial', component: ObtenerCuentaPreferencialComponent1750272791853 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentasaAsociar', component: ObtenerCuentasaAsociarComponent1750272791854 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadas', component: ObtenerCuentasAsociadasComponent1750272791856 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadasPorTipo', component: ObtenerCuentasAsociadasPorTipoComponent1750272791859 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750272791862 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerDatosContacto', component: ObtenerDatosContactoComponent1750272791863 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerIdentificadorUnico', component: ObtenerIdentificadorUnicoComponent1750272791864 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerLimites', component: ObtenerLimitesComponent1750272791865 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerMovimientos', component: ObtenerMovimientosComponent1750272791867 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTarjeta', component: ObtenerTarjetaComponent1750272791868 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTarjetaHabiente', component: ObtenerTarjetaHabienteComponent1750272791869 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTarjetasAdicionales', component: ObtenerTarjetasAdicionalesComponent1750272791870 },
-  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTiposdeCuenta', component: ObtenerTiposdeCuentaComponent1750272791872 },
-  { path: 'Tarjetas-de-Débito/Operar/Activar', component: ActivarComponent1750272791875 },
-  { path: 'Tarjetas-de-Débito/Operar/ActualizarCuentaPreferencial', component: ActualizarCuentaPreferencialComponent1750272791877 },
-  { path: 'Tarjetas-de-Débito/Operar/ActualizarDatosContacto', component: ActualizarDatosContactoComponent1750272791878 },
-  { path: 'Tarjetas-de-Débito/Operar/AsociarCuenta', component: AsociarCuentaComponent1750272791879 },
-  { path: 'Tarjetas-de-Débito/Operar/BlanquearPin', component: BlanquearPinComponent1750272791881 },
-  { path: 'Tarjetas-de-Débito/Operar/Bloquear', component: BloquearComponent1750272791883 },
-  { path: 'Tarjetas-de-Débito/Operar/BloquearDesdeRED', component: BloquearDesdeREDComponent1750272791884 },
-  { path: 'Tarjetas-de-Débito/Operar/Crear', component: CrearComponent1750272791885 },
-  { path: 'Tarjetas-de-Débito/Operar/CrearConCuentasAsociadas', component: CrearConCuentasAsociadasComponent1750272791886 },
-  { path: 'Tarjetas-de-Débito/Operar/Denunciar', component: DenunciarComponent1750272791888 },
-  { path: 'Tarjetas-de-Débito/Operar/DenunciarDesdeRED', component: DenunciarDesdeREDComponent1750272791892 },
-  { path: 'Tarjetas-de-Débito/Operar/Desbloquear', component: DesbloquearComponent1750272791894 },
-  { path: 'Tarjetas-de-Débito/Operar/DesbloquearDesdeRED', component: DesbloquearDesdeREDComponent1750272791895 },
-  { path: 'Tarjetas-de-Débito/Operar/EliminarCuentaAsociada', component: EliminarCuentaAsociadaComponent1750272791897 },
-  { path: 'Tarjetas-de-Débito/Operar/ModificarLimite', component: ModificarLimiteComponent1750272791898 },
-  { path: 'Títulos/Comprar', component: ComprarComponent1750272791899 },
-  { path: 'Títulos/ObtenerEstadoCompra', component: ObtenerEstadoCompraComponent1750272791900 },
-  { path: 'Títulos/ObtenerGrupos', component: ObtenerGruposComponent1750272791902 },
-  { path: 'Títulos/ObtenerValores', component: ObtenerValoresComponent1750272791904 },
-  { path: 'Usuarios/AgregarPerfil', component: AgregarPerfilComponent1750272791906 },
-  { path: 'Usuarios/Crear', component: CrearComponent1750272791909 },
-  { path: 'Usuarios/EliminarPerfil', component: EliminarPerfilComponent1750272791911 },
-  { path: 'Usuarios/EliminarUsuario', component: EliminarUsuarioComponent1750272791912 },
-  { path: 'Usuarios/HabilitarEnCanal', component: HabilitarEnCanalComponent1750272791914 },
-  { path: 'Usuarios/HabilitarUsuario', component: HabilitarUsuarioComponent1750272791916 },
-  { path: 'Usuarios/InhabilitarUsuario', component: InhabilitarUsuarioComponent1750272791917 },
-  { path: 'Usuarios/Modificar', component: ModificarComponent1750272791918 },
-  { path: 'Usuarios/Obtener', component: ObtenerComponent1750272791919 },
-  { path: 'Usuarios/ObtenerPerfiles', component: ObtenerPerfilesComponent1750272791921 },
-  { path: 'Usuarios/ObtenerUsuarios', component: ObtenerUsuariosComponent1750272791924 },
-  { path: 'Usuarios/ObtenerUsuariosParaPerfil', component: ObtenerUsuariosParaPerfilComponent1750272791926 },
-  { path: 'Workflow/ObtenerMetadataDeTarea', component: ObtenerMetadataDeTareaComponent1750272791928 },
-  { path: 'Workflow/ObtenerProcesosHabilitados', component: ObtenerProcesosHabilitadosComponent1750272791929 },
-  { path: 'Workflow/ObtenerRoles', component: ObtenerRolesComponent1750272791931 },
-  { path: 'Workflow/ObtenerRolesdeTarea', component: ObtenerRolesdeTareaComponent1750272791933 },
-  { path: 'Workflow/ObtenerTareasdeProceso', component: ObtenerTareasdeProcesoComponent1750272791935 }
+  { path: 'Ahorro-Programado/Contratar/ContratarSimulacion', component: ContratarSimulacionComponent1750446218029 },
+  { path: 'Ahorro-Programado/Contratar/Crear', component: CrearComponent1750446218037 },
+  { path: 'Ahorro-Programado/Contratar/Simular', component: SimularComponent1750446218041 },
+  { path: 'Ahorro-Programado/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750446218043 },
+  { path: 'Ahorro-Programado/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750446218045 },
+  { path: 'Ahorro-Programado/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750446218046 },
+  { path: 'Ahorro-Programado/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750446218047 },
+  { path: 'Ahorro-Programado/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750446218048 },
+  { path: 'Ahorro-Programado/Modificar/ModificarCuentaDestino', component: ModificarCuentaDestinoComponent1750446218050 },
+  { path: 'Ahorro-Programado/Modificar/ModificarCuentaOrigen', component: ModificarCuentaOrigenComponent1750446218052 },
+  { path: 'Ahorro-Programado/Modificar/ModificarFechadeAbono', component: ModificarFechadeAbonoComponent1750446218054 },
+  { path: 'Ahorro-Programado/Modificar/ModificarMetadeAhorro', component: ModificarMetadeAhorroComponent1750446218056 },
+  { path: 'Ahorro-Programado/Modificar/ModificarMontodeAbono', component: ModificarMontodeAbonoComponent1750446218059 },
+  { path: 'Ahorro-Programado/Obtener/Obtener', component: ObtenerComponent1750446218060 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerCronogramaAbonos', component: ObtenerCronogramaAbonosComponent1750446218062 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerCuentasDestinoHabilitadas', component: ObtenerCuentasDestinoHabilitadasComponent1750446218063 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerCuentasOrigenHabilitadas', component: ObtenerCuentasOrigenHabilitadasComponent1750446218064 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerEstadodeCuenta', component: ObtenerEstadodeCuentaComponent1750446218066 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerPeriodosHabilitados', component: ObtenerPeriodosHabilitadosComponent1750446218067 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerPlazosHabilitados', component: ObtenerPlazosHabilitadosComponent1750446218069 },
+  { path: 'Ahorro-Programado/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218072 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AnularChequeElectronico', component: AnularChequeElectronicoComponent1750446218074 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AsignarIdaChequeElectronico', component: AsignarIdaChequeElectronicoComponent1750446218076 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/CrearChequeraElectronica', component: CrearChequeraElectronicaComponent1750446218078 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeBancoPropio', component: DepositarChequeElectronicodeBancoPropioComponent1750446218080 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeOtroBanco', component: DepositarChequeElectronicodeOtroBancoComponent1750446218081 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicoenCustodia', component: DepositarChequeElectronicoenCustodiaComponent1750446218082 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronico', component: EmitirChequeElectronicoComponent1750446218083 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronicodeChequera', component: EmitirChequeElectronicodeChequeraComponent1750446218085 },
+  { path: 'AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/HabilitarChequeElectronico', component: HabilitarChequeElectronicoComponent1750446218087 },
+  { path: 'AR - Argentina/SNP/CrearAdhesion', component: CrearAdhesionComponent1750446218089 },
+  { path: 'AR - Argentina/SNP/CrearStopDebit', component: CrearStopDebitComponent1750446218091 },
+  { path: 'AR - Argentina/SNP/CrearStopDebitparaAdhesionconImporte', component: CrearStopDebitparaAdhesionconImporteComponent1750446218093 },
+  { path: 'AR - Argentina/SNP/EliminarStopDebit', component: EliminarStopDebitComponent1750446218095 },
+  { path: 'AR - Argentina/SNP/ObtenerAdhesiones', component: ObtenerAdhesionesComponent1750446218096 },
+  { path: 'AR - Argentina/SNP/ObtenerDebitos', component: ObtenerDebitosComponent1750446218097 },
+  { path: 'AR - Argentina/SNP/ObtenerEmpresasOriginantes', component: ObtenerEmpresasOriginantesComponent1750446218098 },
+  { path: 'AR - Argentina/SNP/ObtenerStopDebits', component: ObtenerStopDebitsComponent1750446218100 },
+  { path: 'AR - Argentina/SNP/ReversarDebitos', component: ReversarDebitosComponent1750446218101 },
+  { path: 'AR - Argentina/SNP/SolicitarBajadeAdhesion', component: SolicitarBajadeAdhesionComponent1750446218103 },
+  { path: 'Autenticación/Autenticacion', component: AutenticacionComponent1750446218105 },
+  { path: 'Cadena-de-Cierre/ObtenerDetalledeEjecucion', component: ObtenerDetalledeEjecucionComponent1750446218107 },
+  { path: 'Cadena-de-Cierre/ObtenerDetalledeProceso', component: ObtenerDetalledeProcesoComponent1750446218109 },
+  { path: 'Cadena-de-Cierre/ObtenerProcesosconError', component: ObtenerProcesosconErrorComponent1750446218110 },
+  { path: 'Cadena-de-Cierre/ObtenerProcesosCriticos', component: ObtenerProcesosCriticosComponent1750446218111 },
+  { path: 'Cadena-de-Cierre/ObtenerProcesosDiarios', component: ObtenerProcesosDiariosComponent1750446218112 },
+  { path: 'Cadena-de-Cierre/ObtenerProcesosMensuales', component: ObtenerProcesosMensualesComponent1750446218113 },
+  { path: 'Cadena-de-Cierre/ObtenerProcesosReprocesables', component: ObtenerProcesosReprocesablesComponent1750446218114 },
+  { path: 'Cadena-de-Cierre/VerificarEstadoServidor', component: VerificarEstadoServidorComponent1750446218115 },
+  { path: 'Calendarios/Calcular/CalcularFechadeVencimiento', component: CalcularFechadeVencimientoComponent1750446218117 },
+  { path: 'Calendarios/Calcular/CalcularFechadeVencimientoenDiasHabiles', component: CalcularFechadeVencimientoenDiasHabilesComponent1750446218118 },
+  { path: 'Calendarios/Calcular/CalcularPlazo', component: CalcularPlazoComponent1750446218120 },
+  { path: 'Calendarios/Calcular/CalcularPlazoenDiasHabiles', component: CalcularPlazoenDiasHabilesComponent1750446218122 },
+  { path: 'Calendarios/Obtener/ObtenerFechaHabil', component: ObtenerFechaHabilComponent1750446218123 },
+  { path: 'Calendarios/Obtener/ObtenerFechaHabilAnterior', component: ObtenerFechaHabilAnteriorComponent1750446218126 },
+  { path: 'Calendarios/Obtener/ObtenerFechaHabilAnteriordeSucursal', component: ObtenerFechaHabilAnteriordeSucursalComponent1750446218127 },
+  { path: 'Calendarios/Obtener/ObtenerFechaHabildeSucursal', component: ObtenerFechaHabildeSucursalComponent1750446218128 },
+  { path: 'Calendarios/Obtener/ObtenerInicioyFindeMes', component: ObtenerInicioyFindeMesComponent1750446218129 },
+  { path: 'Calendarios/Obtener/ObtenerInicioyFindeMesdeSucursal', component: ObtenerInicioyFindeMesdeSucursalComponent1750446218130 },
+  { path: 'Calendarios/Obtener/ObtenerProximaFechaHabil', component: ObtenerProximaFechaHabilComponent1750446218131 },
+  { path: 'Calendarios/Obtener/ObtenerProximaFechaHabildeSucursal', component: ObtenerProximaFechaHabildeSucursalComponent1750446218132 },
+  { path: 'CASH-Management/Archivo/AutorizarArchivo', component: AutorizarArchivoComponent1750446218133 },
+  { path: 'CASH-Management/Archivo/CargarArchivo', component: CargarArchivoComponent1750446218135 },
+  { path: 'CASH-Management/Archivo/CargarArchivoRecibidoComoDato', component: CargarArchivoRecibidoComoDatoComponent1750446218137 },
+  { path: 'CASH-Management/Archivo/DetenerArchivo', component: DetenerArchivoComponent1750446218138 },
+  { path: 'CASH-Management/Archivo/RechazarArchivo', component: RechazarArchivoComponent1750446218139 },
+  { path: 'CASH-Management/Beneficiarios/CargarBeneficiarios', component: CargarBeneficiariosComponent1750446218141 },
+  { path: 'CASH-Management/Beneficiarios/IngresarBeneficiario', component: IngresarBeneficiarioComponent1750446218142 },
+  { path: 'CASH-Management/Beneficiarios/ObtenerBeneficiarioSegunFiltro', component: ObtenerBeneficiarioSegunFiltroComponent1750446218143 },
+  { path: 'CASH-Management/Contratar/AltaAutomaticaContrato', component: AltaAutomaticaContratoComponent1750446218144 },
+  { path: 'CASH-Management/Contratar/CargarServiciosDisponibles', component: CargarServiciosDisponiblesComponent1750446218146 },
+  { path: 'CASH-Management/Contratar/ContratarDebitoAutomatico', component: ContratarDebitoAutomaticoComponent1750446218147 },
+  { path: 'CASH-Management/Obtener/ObtenerDetalledeOrdendeCuenta', component: ObtenerDetalledeOrdendeCuentaComponent1750446218148 },
+  { path: 'CASH-Management/Obtener/ObtenerDetalledePago', component: ObtenerDetalledePagoComponent1750446218150 },
+  { path: 'CASH-Management/Obtener/ObtenerDetalleOrdenSegunCampo', component: ObtenerDetalleOrdenSegunCampoComponent1750446218152 },
+  { path: 'CASH-Management/Obtener/ObtenerDetallePagoOrden', component: ObtenerDetallePagoOrdenComponent1750446218154 },
+  { path: 'CASH-Management/Obtener/ObtenerDeuda', component: ObtenerDeudaComponent1750446218156 },
+  { path: 'CASH-Management/Obtener/ObtenerResumenOrden', component: ObtenerResumenOrdenComponent1750446218157 },
+  { path: 'CASH-Management/Obtener/ObtenerServicios', component: ObtenerServiciosComponent1750446218159 },
+  { path: 'CASH-Management/Obtener/ObtenerValoresOrden', component: ObtenerValoresOrdenComponent1750446218160 },
+  { path: 'CASH-Management/Obtener/ObtenerValoresOrdenSegunCampo', component: ObtenerValoresOrdenSegunCampoComponent1750446218161 },
+  { path: 'CASH-Management/Orden/AutorizarOrden', component: AutorizarOrdenComponent1750446218162 },
+  { path: 'CASH-Management/Orden/DetenerOrden', component: DetenerOrdenComponent1750446218163 },
+  { path: 'CASH-Management/Orden/IngresarOrdenPago', component: IngresarOrdenPagoComponent1750446218164 },
+  { path: 'CASH-Management/Orden/ProcesarOrden', component: ProcesarOrdenComponent1750446218165 },
+  { path: 'CASH-Management/Orden/RechazarOrden', component: RechazarOrdenComponent1750446218166 },
+  { path: 'CASH-Management/Pagos/AnularPagoDeuda', component: AnularPagoDeudaComponent1750446218167 },
+  { path: 'CASH-Management/Pagos/PagarDeudaDesdeCuenta', component: PagarDeudaDesdeCuentaComponent1750446218169 },
+  { path: 'CASH-Management/Pagos/RegistrarPagoDeuda', component: RegistrarPagoDeudaComponent1750446218171 },
+  { path: 'CASH-Management/Pagos/RegistrarPagoEnLinea', component: RegistrarPagoEnLineaComponent1750446218173 },
+  { path: 'CASH-Management/Pagos/RegistrarPagoEnLineaDesdeCuenta', component: RegistrarPagoEnLineaDesdeCuentaComponent1750446218175 },
+  { path: 'CASH-Management/Visualizar/VisualizarListaResumenCabezal', component: VisualizarListaResumenCabezalComponent1750446218178 },
+  { path: 'CASH-Management/Visualizar/VisualizarListaResumenCabezalOrden', component: VisualizarListaResumenCabezalOrdenComponent1750446218180 },
+  { path: 'CASH-Management/Visualizar/VisualizarOrdendeArchivoParaCuenta', component: VisualizarOrdendeArchivoParaCuentaComponent1750446218181 },
+  { path: 'CASH-Management/Visualizar/VisualizarResultadoProcesamiento', component: VisualizarResultadoProcesamientoComponent1750446218183 },
+  { path: 'CASH-Management/Visualizar/VisualizarResumenCabezal', component: VisualizarResumenCabezalComponent1750446218185 },
+  { path: 'CASH-Management/Visualizar/VisualizarSituacionArchivos', component: VisualizarSituacionArchivosComponent1750446218188 },
+  { path: 'CASH-Management/Visualizar/VisualizarSituacionLineas', component: VisualizarSituacionLineasComponent1750446218191 },
+  { path: 'CHAT/CHAT', component: CHATComponent1750446218194 },
+  { path: 'Clientes/Actualizar/Actualizar', component: ActualizarComponent1750446218196 },
+  { path: 'Clientes/Actualizar/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750446218198 },
+  { path: 'Clientes/Actualizar/ActualizarDomicilio', component: ActualizarDomicilioComponent1750446218199 },
+  { path: 'Clientes/Actualizar/ActualizarInformacionAdicional', component: ActualizarInformacionAdicionalComponent1750446218202 },
+  { path: 'Clientes/Actualizar/ActualizarRegistroEmpleado', component: ActualizarRegistroEmpleadoComponent1750446218204 },
+  { path: 'Clientes/Actualizar/ActualizarTelefono', component: ActualizarTelefonoComponent1750446218207 },
+  { path: 'Clientes/Actualizar/AgregarDomicilio', component: AgregarDomicilioComponent1750446218208 },
+  { path: 'Clientes/Actualizar/AgregarInformacionAdicional', component: AgregarInformacionAdicionalComponent1750446218209 },
+  { path: 'Clientes/Actualizar/AgregarIntegrante', component: AgregarIntegranteComponent1750446218210 },
+  { path: 'Clientes/Actualizar/AgregarTelefono', component: AgregarTelefonoComponent1750446218212 },
+  { path: 'Clientes/Actualizar/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750446218213 },
+  { path: 'Clientes/Actualizar/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750446218214 },
+  { path: 'Clientes/Actualizar/EliminarDomicilio', component: EliminarDomicilioComponent1750446218215 },
+  { path: 'Clientes/Actualizar/EliminarInformacionAdicional', component: EliminarInformacionAdicionalComponent1750446218216 },
+  { path: 'Clientes/Actualizar/EliminarIntegrante', component: EliminarIntegranteComponent1750446218218 },
+  { path: 'Clientes/Actualizar/Habilitar', component: HabilitarComponent1750446218221 },
+  { path: 'Clientes/Actualizar/Inhabilitar', component: InhabilitarComponent1750446218223 },
+  { path: 'Clientes/Actualizar/ModificarEjecutivo', component: ModificarEjecutivoComponent1750446218224 },
+  { path: 'Clientes/Crear/Crear', component: CrearComponent1750446218226 },
+  { path: 'Clientes/Crear/CrearconPersonaExistente', component: CrearconPersonaExistenteComponent1750446218228 },
+  { path: 'Clientes/Crear/CrearParaPersonaJuridica', component: CrearParaPersonaJuridicaComponent1750446218230 },
+  { path: 'Clientes/Obtener/Obtener', component: ObtenerComponent1750446218232 },
+  { path: 'Clientes/Obtener/ObtenerAhorrosProgramados', component: ObtenerAhorrosProgramadosComponent1750446218233 },
+  { path: 'Clientes/Obtener/ObtenerBolsillos', component: ObtenerBolsillosComponent1750446218239 },
+  { path: 'Clientes/Obtener/ObtenerClasificacionesInternas', component: ObtenerClasificacionesInternasComponent1750446218242 },
+  { path: 'Clientes/Obtener/ObtenerCuentaCliente', component: ObtenerCuentaClienteComponent1750446218244 },
+  { path: 'Clientes/Obtener/ObtenerCuentasCorrientesSaldoContable', component: ObtenerCuentasCorrientesSaldoContableComponent1750446218246 },
+  { path: 'Clientes/Obtener/ObtenerCuentasCorrientesSaldoDisponible', component: ObtenerCuentasCorrientesSaldoDisponibleComponent1750446218248 },
+  { path: 'Clientes/Obtener/ObtenerCuentasdeAhorroSaldoContable', component: ObtenerCuentasdeAhorroSaldoContableComponent1750446218250 },
+  { path: 'Clientes/Obtener/ObtenerCuentasdeAhorroSaldoDisponible', component: ObtenerCuentasdeAhorroSaldoDisponibleComponent1750446218254 },
+  { path: 'Clientes/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750446218258 },
+  { path: 'Clientes/Obtener/ObtenerDetallePosicion', component: ObtenerDetallePosicionComponent1750446218259 },
+  { path: 'Clientes/Obtener/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750446218261 },
+  { path: 'Clientes/Obtener/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750446218262 },
+  { path: 'Clientes/Obtener/ObtenerDomicilios', component: ObtenerDomiciliosComponent1750446218263 },
+  { path: 'Clientes/Obtener/ObtenerFacultades', component: ObtenerFacultadesComponent1750446218264 },
+  { path: 'Clientes/Obtener/ObtenerIdentificadorUnico', component: ObtenerIdentificadorUnicoComponent1750446218266 },
+  { path: 'Clientes/Obtener/ObtenerInformacionAdicional', component: ObtenerInformacionAdicionalComponent1750446218267 },
+  { path: 'Clientes/Obtener/ObtenerIntegrantes', component: ObtenerIntegrantesComponent1750446218269 },
+  { path: 'Clientes/Obtener/ObtenerLimites', component: ObtenerLimitesComponent1750446218271 },
+  { path: 'Clientes/Obtener/ObtenerMotivosInhabilitacion', component: ObtenerMotivosInhabilitacionComponent1750446218272 },
+  { path: 'Clientes/Obtener/ObtenerPerfil', component: ObtenerPerfilComponent1750446218274 },
+  { path: 'Clientes/Obtener/ObtenerPlazosFijos', component: ObtenerPlazosFijosComponent1750446218277 },
+  { path: 'Clientes/Obtener/ObtenerPlazosFijosCancelados', component: ObtenerPlazosFijosCanceladosComponent1750446218278 },
+  { path: 'Clientes/Obtener/ObtenerPlazosFijosconAvance', component: ObtenerPlazosFijosconAvanceComponent1750446218280 },
+  { path: 'Clientes/Obtener/ObtenerPosicion', component: ObtenerPosicionComponent1750446218282 },
+  { path: 'Clientes/Obtener/ObtenerPrestamos', component: ObtenerPrestamosComponent1750446218283 },
+  { path: 'Clientes/Obtener/ObtenerPrestamosCancelados', component: ObtenerPrestamosCanceladosComponent1750446218285 },
+  { path: 'Clientes/Obtener/ObtenerPrestamosCastigados', component: ObtenerPrestamosCastigadosComponent1750446218288 },
+  { path: 'Clientes/Obtener/ObtenerPrestamosconAvance', component: ObtenerPrestamosconAvanceComponent1750446218290 },
+  { path: 'Clientes/Obtener/ObtenerResumendeProductosCierredeano', component: ObtenerResumendeProductosCierredeanoComponent1750446218292 },
+  { path: 'Clientes/Obtener/ObtenerResumendeProductosSaldosContables', component: ObtenerResumendeProductosSaldosContablesComponent1750446218294 },
+  { path: 'Clientes/Obtener/ObtenerResumendeProductosSaldosDisponibles', component: ObtenerResumendeProductosSaldosDisponiblesComponent1750446218295 },
+  { path: 'Clientes/Obtener/ObtenerResumenporProductoaCierreAno', component: ObtenerResumenporProductoaCierreAnoComponent1750446218297 },
+  { path: 'Clientes/Obtener/ObtenerRiesgodeCredito', component: ObtenerRiesgodeCreditoComponent1750446218298 },
+  { path: 'Clientes/Obtener/ObtenerSaldosdeOtrosProductos', component: ObtenerSaldosdeOtrosProductosComponent1750446218300 },
+  { path: 'Clientes/Obtener/ObtenerSectores', component: ObtenerSectoresComponent1750446218302 },
+  { path: 'Clientes/Obtener/ObtenerSegmentos', component: ObtenerSegmentosComponent1750446218304 },
+  { path: 'Clientes/Obtener/ObtenerTarjetasdeDebito', component: ObtenerTarjetasdeDebitoComponent1750446218306 },
+  { path: 'Clientes/Obtener/ObtenerTelefonos', component: ObtenerTelefonosComponent1750446218308 },
+  { path: 'Clientes/Obtener/ObtenerTiposdeIntegracion', component: ObtenerTiposdeIntegracionComponent1750446218311 },
+  { path: 'Clientes/Obtener/ObtenerTitularRepresentativo', component: ObtenerTitularRepresentativoComponent1750446218323 },
+  { path: 'Clientes/Obtener/ObtenerTitulos', component: ObtenerTitulosComponent1750446218326 },
+  { path: 'Clientes/Validar/ValidarExistencia', component: ValidarExistenciaComponent1750446218328 },
+  { path: 'Clientes/Validar/VerificarEmpleado', component: VerificarEmpleadoComponent1750446218330 },
+  { path: 'Configuración-Bantotal/Bancos/ObtenerAgenciasBanco', component: ObtenerAgenciasBancoComponent1750446218332 },
+  { path: 'Configuración-Bantotal/Bancos/ObtenerBancos', component: ObtenerBancosComponent1750446218333 },
+  { path: 'Configuración-Bantotal/Bancos/ObtenerDetalleSucursal', component: ObtenerDetalleSucursalComponent1750446218336 },
+  { path: 'Configuración-Bantotal/Bancos/ObtenerSucursalesPrincipales', component: ObtenerSucursalesPrincipalesComponent1750446218338 },
+  { path: 'Configuración-Bantotal/Clientes/ObtenerActividades', component: ObtenerActividadesComponent1750446218340 },
+  { path: 'Configuración-Bantotal/Clientes/ObtenerActividadesporTipo', component: ObtenerActividadesporTipoComponent1750446218342 },
+  { path: 'Configuración-Bantotal/Clientes/ObtenerEjecutivos', component: ObtenerEjecutivosComponent1750446218344 },
+  { path: 'Configuración-Bantotal/Clientes/ObtenerTiposdeActividad', component: ObtenerTiposdeActividadComponent1750446218345 },
+  { path: 'Configuración-Bantotal/Clientes/ObtenerTiposdeTarjeta', component: ObtenerTiposdeTarjetaComponent1750446218347 },
+  { path: 'Configuración-Bantotal/ObtenerImpuestos', component: ObtenerImpuestosComponent1750446218348 },
+  { path: 'Configuración-Bantotal/ObtenerTiposdeDocumentoDigital', component: ObtenerTiposdeDocumentoDigitalComponent1750446218350 },
+  { path: 'Configuración-Bantotal/Operaciones/ObtenerEstados', component: ObtenerEstadosComponent1750446218354 },
+  { path: 'Configuración-Bantotal/Operaciones/ObtenerInstrucciones', component: ObtenerInstruccionesComponent1750446218357 },
+  { path: 'Configuración-Bantotal/Operaciones/ObtenerPaquetes', component: ObtenerPaquetesComponent1750446218359 },
+  { path: 'Configuración-Bantotal/Operaciones/ObtenerTiposdeTexto', component: ObtenerTiposdeTextoComponent1750446218360 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerCalendariodeSucursal', component: ObtenerCalendariodeSucursalComponent1750446218362 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerCalendarios', component: ObtenerCalendariosComponent1750446218364 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendario', component: ObtenerDetalledeCalendarioComponent1750446218366 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendariodeSucursal', component: ObtenerDetalledeCalendariodeSucursalComponent1750446218368 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerDolarUSA', component: ObtenerDolarUSAComponent1750446218371 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerEmpresa', component: ObtenerEmpresaComponent1750446218373 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerFechadeSistema', component: ObtenerFechadeSistemaComponent1750446218374 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerMonedaNacional', component: ObtenerMonedaNacionalComponent1750446218376 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerMonedas', component: ObtenerMonedasComponent1750446218378 },
+  { path: 'Configuración-Bantotal/Parámetros Generales/ObtenerSucursales', component: ObtenerSucursalesComponent1750446218380 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerAgrupadoresDomicilio', component: ObtenerAgrupadoresDomicilioComponent1750446218381 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerBarriosyColonias', component: ObtenerBarriosyColoniasComponent1750446218383 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerCiudadesyLocalidades', component: ObtenerCiudadesyLocalidadesComponent1750446218384 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerCodigosdeDomicilio', component: ObtenerCodigosdeDomicilioComponent1750446218388 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerEstadosProvinciasyDepartamentos', component: ObtenerEstadosProvinciasyDepartamentosComponent1750446218390 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerPaises', component: ObtenerPaisesComponent1750446218392 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerTiposdeListasNegras', component: ObtenerTiposdeListasNegrasComponent1750446218394 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerTiposdeTelefono', component: ObtenerTiposdeTelefonoComponent1750446218396 },
+  { path: 'Configuración-Bantotal/Personas/ObtenerTiposdeVivienda', component: ObtenerTiposdeViviendaComponent1750446218397 },
+  { path: 'Configuración-Bantotal/Precios/ObtenerPizarraporModulo', component: ObtenerPizarraporModuloComponent1750446218399 },
+  { path: 'Configuración-Bantotal/Precios/ObtenerPizarras', component: ObtenerPizarrasComponent1750446218400 },
+  { path: 'Configuración-Bantotal/Seguridad/ObtenerMenus', component: ObtenerMenusComponent1750446218402 },
+  { path: 'Configuración-Bantotal/Seguridad/ObtenerPerfiles', component: ObtenerPerfilesComponent1750446218404 },
+  { path: 'Contabilidad/Agregar-Texto/AgregarTextoAsiento', component: AgregarTextoAsientoComponent1750446218405 },
+  { path: 'Contabilidad/Agregar-Texto/AgregarTextoOrdinal', component: AgregarTextoOrdinalComponent1750446218407 },
+  { path: 'Contabilidad/AnularMovimiento', component: AnularMovimientoComponent1750446218409 },
+  { path: 'Contabilidad/Condición-Impositiva/ActualizarCondicionImpositiva', component: ActualizarCondicionImpositivaComponent1750446218411 },
+  { path: 'Contabilidad/Condición-Impositiva/CrearCondicionImpositiva', component: CrearCondicionImpositivaComponent1750446218412 },
+  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdBantotalMovimiento', component: ObtenerIdBantotalMovimientoComponent1750446218413 },
+  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdBantotalOperacion', component: ObtenerIdBantotalOperacionComponent1750446218415 },
+  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdBantotalProducto', component: ObtenerIdBantotalProductoComponent1750446218416 },
+  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeMovimiento', component: ObtenerIdentificadorUnicodeMovimientoComponent1750446218418 },
+  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeOperacion', component: ObtenerIdentificadorUnicodeOperacionComponent1750446218419 },
+  { path: 'Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeProducto', component: ObtenerIdentificadorUnicodeProductoComponent1750446218421 },
+  { path: 'Contabilidad/Obtener/ObtenerClientedeunaOperacion', component: ObtenerClientedeunaOperacionComponent1750446218422 },
+  { path: 'Contabilidad/Obtener/ObtenerCondicionImpositiva', component: ObtenerCondicionImpositivaComponent1750446218424 },
+  { path: 'Contabilidad/Obtener/ObtenerDetalledeMovimiento', component: ObtenerDetalledeMovimientoComponent1750446218426 },
+  { path: 'Contabilidad/Obtener/ObtenerDetalledeOrdinal', component: ObtenerDetalledeOrdinalComponent1750446218426 },
+  { path: 'Contabilidad/Obtener/ObtenerIntegrantesdeOperacion', component: ObtenerIntegrantesdeOperacionComponent1750446218427 },
+  { path: 'Contabilidad/Obtener/ObtenerTextosdeMovimiento', component: ObtenerTextosdeMovimientoComponent1750446218428 },
+  { path: 'Contabilidad/Registrar-Asiento/RegistrarAsiento', component: RegistrarAsientoComponent1750446218429 },
+  { path: 'Contabilidad/Registrar-Asiento/RegistrarAsientoFechaValor', component: RegistrarAsientoFechaValorComponent1750446218430 },
+  { path: 'Cuentas-Bolsillo/Cancelar', component: CancelarComponent1750446218431 },
+  { path: 'Cuentas-Bolsillo/CashIn', component: CashInComponent1750446218432 },
+  { path: 'Cuentas-Bolsillo/CashOut', component: CashOutComponent1750446218432 },
+  { path: 'Cuentas-Bolsillo/Contratar', component: ContratarComponent1750446218433 },
+  { path: 'Cuentas-Bolsillo/ObtenerDatos', component: ObtenerDatosComponent1750446218436 },
+  { path: 'Cuentas-Bolsillo/ObtenerMovimientos', component: ObtenerMovimientosComponent1750446218438 },
+  { path: 'Cuentas-Bolsillo/ObtenerProductos', component: ObtenerProductosComponent1750446218440 },
+  { path: 'Cuentas-Bolsillo/ObtenerProductosCV', component: ObtenerProductosCVComponent1750446218441 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerChequera', component: ObtenerChequeraComponent1750446218442 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerChequeras', component: ObtenerChequerasComponent1750446218443 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerChequesdeChequera', component: ObtenerChequesdeChequeraComponent1750446218444 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerComisionChequera', component: ObtenerComisionChequeraComponent1750446218445 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerEstadodeChequera', component: ObtenerEstadodeChequeraComponent1750446218445 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerSolicitudesdeChequeras', component: ObtenerSolicitudesdeChequerasComponent1750446218446 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequera', component: ObtenerTiposdeChequeraComponent1750446218447 },
+  { path: 'Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequeraporProducto', component: ObtenerTiposdeChequeraporProductoComponent1750446218448 },
+  { path: 'Cuentas-Corrientes/Chequera/Operar/EliminarChequera', component: EliminarChequeraComponent1750446218449 },
+  { path: 'Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeChequera', component: RegistrarOrdendeNoPagodeChequeraComponent1750446218450 },
+  { path: 'Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeCheques', component: RegistrarOrdendeNoPagodeChequesComponent1750446218452 },
+  { path: 'Cuentas-Corrientes/Chequera/Operar/SolicitarChequera', component: SolicitarChequeraComponent1750446218453 },
+  { path: 'Cuentas-Corrientes/Contratar/ContratarconPeriodicidad', component: ContratarconPeriodicidadComponent1750446218454 },
+  { path: 'Cuentas-Corrientes/Contratar/ContratarProducto', component: ContratarProductoComponent1750446218495 },
+  { path: 'Cuentas-Corrientes/Contratar/ContratarProductoconAltadeFacultades', component: ContratarProductoconAltadeFacultadesComponent1750446218496 },
+  { path: 'Cuentas-Corrientes/Obtener/ObtenerAcuerdos', component: ObtenerAcuerdosComponent1750446218498 },
+  { path: 'Cuentas-Corrientes/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750446218499 },
+  { path: 'Cuentas-Corrientes/Obtener/ObtenerEstadodeCuenta', component: ObtenerEstadodeCuentaComponent1750446218500 },
+  { path: 'Cuentas-Corrientes/Obtener/ObtenerEvoluciondeSaldos', component: ObtenerEvoluciondeSaldosComponent1750446218509 },
+  { path: 'Cuentas-Corrientes/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218511 },
+  { path: 'Cuentas-de-Ahorro/Contratar/ContratarconPeriodicidad', component: ContratarconPeriodicidadComponent1750446218512 },
+  { path: 'Cuentas-de-Ahorro/Contratar/ContratarProducto', component: ContratarProductoComponent1750446218513 },
+  { path: 'Cuentas-de-Ahorro/Contratar/ContratarProductoconAltadeFacultades', component: ContratarProductoconAltadeFacultadesComponent1750446218514 },
+  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750446218515 },
+  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerEstadodeCuenta', component: ObtenerEstadodeCuentaComponent1750446218516 },
+  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerEvoluciondeSaldos', component: ObtenerEvoluciondeSaldosComponent1750446218517 },
+  { path: 'Cuentas-de-Ahorro/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218520 },
+  { path: 'Cuentas-Vista/Beneficiarios/ActualizarBeneficiarios', component: ActualizarBeneficiariosComponent1750446218521 },
+  { path: 'Cuentas-Vista/Beneficiarios/ObtenerBeneficiarios', component: ObtenerBeneficiariosComponent1750446218523 },
+  { path: 'Cuentas-Vista/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750446218524 },
+  { path: 'Cuentas-Vista/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750446218524 },
+  { path: 'Cuentas-Vista/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750446218525 },
+  { path: 'Cuentas-Vista/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750446218526 },
+  { path: 'Cuentas-Vista/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750446218527 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerBolsillos', component: ObtenerBolsillosComponent1750446218528 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerCBUdeCuentaVista', component: ObtenerCBUdeCuentaVistaComponent1750446218529 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerCuentaVistadeCBU', component: ObtenerCuentaVistadeCBUComponent1750446218530 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerDetalleBloqueo', component: ObtenerDetalleBloqueoComponent1750446218531 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerEstadodeCuentaporPeriodo', component: ObtenerEstadodeCuentaporPeriodoComponent1750446218532 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerEstadoDeOperacion', component: ObtenerEstadoDeOperacionComponent1750446218533 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerFacultades', component: ObtenerFacultadesComponent1750446218535 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerPaquete', component: ObtenerPaqueteComponent1750446218537 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerPeriododeAcreditacion', component: ObtenerPeriododeAcreditacionComponent1750446218539 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerPeriodosdeAcreditacion', component: ObtenerPeriodosdeAcreditacionComponent1750446218538 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerSaldoBloqueado', component: ObtenerSaldoBloqueadoComponent1750446218539 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerSaldoDisponible', component: ObtenerSaldoDisponibleComponent1750446218540 },
+  { path: 'Cuentas-Vista/Obtener/ObtenerSaldosBloqueados', component: ObtenerSaldosBloqueadosComponent1750446218541 },
+  { path: 'Cuentas-Vista/Operar/AcreditarEnCuenta', component: AcreditarEnCuentaComponent1750446218541 },
+  { path: 'Cuentas-Vista/Operar/Activar', component: ActivarComponent1750446218542 },
+  { path: 'Cuentas-Vista/Operar/ActualizarPeriododeAcreditacion', component: ActualizarPeriododeAcreditacionComponent1750446218543 },
+  { path: 'Cuentas-Vista/Operar/BloquearSaldo', component: BloquearSaldoComponent1750446218544 },
+  { path: 'Cuentas-Vista/Operar/Cancelar', component: CancelarComponent1750446218544 },
+  { path: 'Cuentas-Vista/Operar/DebitarEnCuenta', component: DebitarEnCuentaComponent1750446218545 },
+  { path: 'Cuentas-Vista/Operar/DesbloquearSaldo', component: DesbloquearSaldoComponent1750446218546 },
+  { path: 'Cuentas-Vista/Perfil-Transaccional/ActualizarPerfilTransaccional', component: ActualizarPerfilTransaccionalComponent1750446218547 },
+  { path: 'Cuentas-Vista/Perfil-Transaccional/AgregarPerfilTransaccional', component: AgregarPerfilTransaccionalComponent1750446218547 },
+  { path: 'Cuentas-Vista/Perfil-Transaccional/ObtenerPerfilTransaccional', component: ObtenerPerfilTransaccionalComponent1750446218548 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarConTipoDeCambioEspecial', component: TraspasarConTipoDeCambioEspecialComponent1750446218549 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasdelaMismaPersona', component: TraspasarEntreCuentasdelaMismaPersonaComponent1750446218550 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitularcontipodecambio', component: TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750446218551 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitulardiferentesmonedas', component: TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750446218554 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropias', component: TraspasarEntreCuentasPropiasComponent1750446218557 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiascontipodecambio', component: TraspasarEntreCuentasPropiascontipodecambioComponent1750446218555 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiasdiferentesmonedas', component: TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750446218556 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceros', component: TraspasarEntreCuentasTercerosComponent1750446218559 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceroscontipodecambio', component: TraspasarEntreCuentasTerceroscontipodecambioComponent1750446218558 },
+  { path: 'Cuentas-Vista/Traspasar/TraspasarEntreCuentasTercerosdiferentesmonedas', component: TraspasarEntreCuentasTercerosdiferentesmonedasComponent1750446218559 },
+  { path: 'Depósitos-a-Plazo/Beneficiarios/ActualizarBeneficiarios', component: ActualizarBeneficiariosComponent1750446218560 },
+  { path: 'Depósitos-a-Plazo/Beneficiarios/ObtenerBeneficiarios', component: ObtenerBeneficiariosComponent1750446218561 },
+  { path: 'Depósitos-a-Plazo/Contratar/Contratar', component: ContratarComponent1750446218562 },
+  { path: 'Depósitos-a-Plazo/Contratar/ContratarConFacultades', component: ContratarConFacultadesComponent1750446218563 },
+  { path: 'Depósitos-a-Plazo/Contratar/ContratarSimulacion', component: ContratarSimulacionComponent1750446218564 },
+  { path: 'Depósitos-a-Plazo/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750446218564 },
+  { path: 'Depósitos-a-Plazo/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750446218565 },
+  { path: 'Depósitos-a-Plazo/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750446218566 },
+  { path: 'Depósitos-a-Plazo/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750446218567 },
+  { path: 'Depósitos-a-Plazo/Modificar/ModificarCuentaDestinoalVencimiento', component: ModificarCuentaDestinoalVencimientoComponent1750446218569 },
+  { path: 'Depósitos-a-Plazo/Modificar/ModificarCuentaDestinodeAcreditacionPeriodica', component: ModificarCuentaDestinodeAcreditacionPeriodicaComponent1750446218570 },
+  { path: 'Depósitos-a-Plazo/Modificar/ModificarInstruccion', component: ModificarInstruccionComponent1750446218572 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerAvance', component: ObtenerAvanceComponent1750446218573 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750446218575 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerDatosPrecancelacion', component: ObtenerDatosPrecancelacionComponent1750446218576 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750446218576 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerInstruccion', component: ObtenerInstruccionComponent1750446218579 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerInstruccionesHabilitados', component: ObtenerInstruccionesHabilitadosComponent1750446218578 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerMovimientos', component: ObtenerMovimientosComponent1750446218580 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerPeriodosHabilitados', component: ObtenerPeriodosHabilitadosComponent1750446218581 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218582 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerProductosHabilitados', component: ObtenerProductosHabilitadosComponent1750446218583 },
+  { path: 'Depósitos-a-Plazo/Obtener/ObtenerTasadePrecancelacion', component: ObtenerTasadePrecancelacionComponent1750446218584 },
+  { path: 'Depósitos-a-Plazo/Precancelar', component: PrecancelarComponent1750446218586 },
+  { path: 'Depósitos-a-Plazo/Simular/Simular', component: SimularComponent1750446218587 },
+  { path: 'Depósitos-a-Plazo/Simular/SimularConCronograma', component: SimularConCronogramaComponent1750446218589 },
+  { path: 'Descuento-de-Documentos/ConfirmarLista', component: ConfirmarListaComponent1750446218590 },
+  { path: 'Descuento-de-Documentos/CrearLista', component: CrearListaComponent1750446218591 },
+  { path: 'Descuento-de-Documentos/CrearListaCheques', component: CrearListaChequesComponent1750446218592 },
+  { path: 'Descuento-de-Documentos/ObtenerProductos', component: ObtenerProductosComponent1750446218593 },
+  { path: 'Descuento-de-Documentos/ObtenerTiposDeDesembolso', component: ObtenerTiposDeDesembolsoComponent1750446218593 },
+  { path: 'Descuento-de-Documentos/SeleccionarOpcionDesembolso', component: SeleccionarOpcionDesembolsoComponent1750446218594 },
+  { path: 'Indicadores/ObtenerAgrupadores', component: ObtenerAgrupadoresComponent1750446218595 },
+  { path: 'Indicadores/ObtenerCierredeSaldosporMoneda', component: ObtenerCierredeSaldosporMonedaComponent1750446218596 },
+  { path: 'Indicadores/ObtenerCondicionesGenerales', component: ObtenerCondicionesGeneralesComponent1750446218597 },
+  { path: 'Indicadores/ObtenerIndicadores', component: ObtenerIndicadoresComponent1750446218598 },
+  { path: 'Indicadores/ObtenerMetodosMasEjecutados', component: ObtenerMetodosMasEjecutadosComponent1750446218599 },
+  { path: 'Indicadores/ObtenerMonedasIndices', component: ObtenerMonedasIndicesComponent1750446218600 },
+  { path: 'Indicadores/ObtenerRubrosBolsa', component: ObtenerRubrosBolsaComponent1750446218601 },
+  { path: 'Indicadores/ObtenerServiciosMasEjecutados', component: ObtenerServiciosMasEjecutadosComponent1750446218603 },
+  { path: 'Indicadores/ObtenerSesionesPorUsuario', component: ObtenerSesionesPorUsuarioComponent1750446218604 },
+  { path: 'Indicadores/ObtenerSucursalesCajas', component: ObtenerSucursalesCajasComponent1750446218604 },
+  { path: 'Indicadores/ObtenerTransaccionesporEstados', component: ObtenerTransaccionesporEstadosComponent1750446218605 },
+  { path: 'Microfinanzas/BuscarCliente', component: BuscarClienteComponent1750446218606 },
+  { path: 'Microfinanzas/CompletarTarea', component: CompletarTareaComponent1750446218607 },
+  { path: 'Microfinanzas/Crear-Solicitud/CrearSolicitudAmpliacion', component: CrearSolicitudAmpliacionComponent1750446218608 },
+  { path: 'Microfinanzas/Crear-Solicitud/CrearSolicitudIndividual', component: CrearSolicitudIndividualComponent1750446218609 },
+  { path: 'Microfinanzas/Crear-Solicitud/CrearSolicitudRenovacion', component: CrearSolicitudRenovacionComponent1750446218609 },
+  { path: 'Microfinanzas/Fiadores/AgregarFiador', component: AgregarFiadorComponent1750446218610 },
+  { path: 'Microfinanzas/Fiadores/EliminarFiador', component: EliminarFiadorComponent1750446218611 },
+  { path: 'Microfinanzas/Grupales/ActualizarGrupo', component: ActualizarGrupoComponent1750446218612 },
+  { path: 'Microfinanzas/Grupales/ActualizarIntegrantedeGrupo', component: ActualizarIntegrantedeGrupoComponent1750446218613 },
+  { path: 'Microfinanzas/Grupales/AgregarGrupo', component: AgregarGrupoComponent1750446218613 },
+  { path: 'Microfinanzas/Grupales/AgregarIntegranteaGrupo', component: AgregarIntegranteaGrupoComponent1750446218614 },
+  { path: 'Microfinanzas/Grupales/CrearSolicitudGrupal', component: CrearSolicitudGrupalComponent1750446218615 },
+  { path: 'Microfinanzas/Grupales/HabilitarIntegrantedeunGrupo', component: HabilitarIntegrantedeunGrupoComponent1750446218616 },
+  { path: 'Microfinanzas/Grupales/InhabilitarIntegrantedeunGrupo', component: InhabilitarIntegrantedeunGrupoComponent1750446218616 },
+  { path: 'Microfinanzas/Grupales/ObtenerDetalleGrupo', component: ObtenerDetalleGrupoComponent1750446218618 },
+  { path: 'Microfinanzas/Grupales/ObtenerGrupos', component: ObtenerGruposComponent1750446218621 },
+  { path: 'Microfinanzas/Grupales/ObtenerIntegrantesdeGrupo', component: ObtenerIntegrantesdeGrupoComponent1750446218622 },
+  { path: 'Microfinanzas/Grupales/ObtenerTiposdeGrupo', component: ObtenerTiposdeGrupoComponent1750446218623 },
+  { path: 'Microfinanzas/Grupales/ObtenerTiposdeIntegrante', component: ObtenerTiposdeIntegranteComponent1750446218625 },
+  { path: 'Microfinanzas/Grupales/SimularPrestamoAmortizableGrupal', component: SimularPrestamoAmortizableGrupalComponent1750446218626 },
+  { path: 'Microfinanzas/Obtener/ObtenerAsesores', component: ObtenerAsesoresComponent1750446218628 },
+  { path: 'Microfinanzas/Obtener/ObtenerCampanas', component: ObtenerCampanasComponent1750446218629 },
+  { path: 'Microfinanzas/Obtener/ObtenerDestinosCredito', component: ObtenerDestinosCreditoComponent1750446218630 },
+  { path: 'Microfinanzas/Obtener/ObtenerOperacionesCliente', component: ObtenerOperacionesClienteComponent1750446218631 },
+  { path: 'Microfinanzas/Obtener/ObtenerOrigenesdeCaptacion', component: ObtenerOrigenesdeCaptacionComponent1750446218633 },
+  { path: 'Microfinanzas/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218636 },
+  { path: 'Microfinanzas/Obtener/ObtenerSolicitudesCliente', component: ObtenerSolicitudesClienteComponent1750446218638 },
+  { path: 'Microfinanzas/Obtener/ObtenerTiposAval', component: ObtenerTiposAvalComponent1750446218639 },
+  { path: 'Microfinanzas/Operaciones-a-Cancelar/AgregarOperacionesaCancelar', component: AgregarOperacionesaCancelarComponent1750446218640 },
+  { path: 'Microfinanzas/Operaciones-a-Cancelar/ObtenerOperacionesaCancelar', component: ObtenerOperacionesaCancelarComponent1750446218642 },
+  { path: 'Microfinanzas/Operaciones-a-Cancelar/QuitarOperacionesaCancelar', component: QuitarOperacionesaCancelarComponent1750446218643 },
+  { path: 'Microfinanzas/Simular/SimularLibreAmortizacion', component: SimularLibreAmortizacionComponent1750446218645 },
+  { path: 'Microfinanzas/Simular/SimularPrestamoAmortizable', component: SimularPrestamoAmortizableComponent1750446218646 },
+  { path: 'Microfinanzas/Simular/SimularPrestamoPlazoFijo', component: SimularPrestamoPlazoFijoComponent1750446218648 },
+  { path: 'Microfinanzas/ValidarPoliticas', component: ValidarPoliticasComponent1750446218649 },
+  { path: 'Modelador-de-Préstamos/ObtenerCantidadCuotas', component: ObtenerCantidadCuotasComponent1750446218650 },
+  { path: 'Modelador-de-Préstamos/ObtenerCapital', component: ObtenerCapitalComponent1750446218653 },
+  { path: 'Modelador-de-Préstamos/ObtenerComisiones', component: ObtenerComisionesComponent1750446218655 },
+  { path: 'Modelador-de-Préstamos/ObtenerComisionesporCuota', component: ObtenerComisionesporCuotaComponent1750446218656 },
+  { path: 'Modelador-de-Préstamos/ObtenerDiasPrimerPeriodo', component: ObtenerDiasPrimerPeriodoComponent1750446218658 },
+  { path: 'Modelador-de-Préstamos/ObtenerPeriodoEntreCuotas', component: ObtenerPeriodoEntreCuotasComponent1750446218660 },
+  { path: 'Modelador-de-Préstamos/ObtenerPermiteSegurosdelMismoTipo', component: ObtenerPermiteSegurosdelMismoTipoComponent1750446218659 },
+  { path: 'Modelador-de-Préstamos/ObtenerPlazo', component: ObtenerPlazoComponent1750446218661 },
+  { path: 'Modelador-de-Préstamos/ObtenerRequiereSegurodeVidaObligatorio', component: ObtenerRequiereSegurodeVidaObligatorioComponent1750446218662 },
+  { path: 'Modelador-de-Préstamos/ObtenerSeguros', component: ObtenerSegurosComponent1750446218662 },
+  { path: 'PAE/ObtenerItemsModelo', component: ObtenerItemsModeloComponent1750446218663 },
+  { path: 'PAE/ObtenerModelosPAE', component: ObtenerModelosPAEComponent1750446218664 },
+  { path: 'PAE/ObtenerScores', component: ObtenerScoresComponent1750446218665 },
+  { path: 'PAE/ObtenerTiposDeModelos', component: ObtenerTiposDeModelosComponent1750446218666 },
+  { path: 'Partners/Contratar/ContratarPrestamo', component: ContratarPrestamoComponent1750446218667 },
+  { path: 'Partners/Contratar/ContratarVehicular', component: ContratarVehicularComponent1750446218670 },
+  { path: 'Partners/Crear/CrearCliente', component: CrearClienteComponent1750446218671 },
+  { path: 'Partners/Crear/CrearPersonaCliente', component: CrearPersonaClienteComponent1750446218673 },
+  { path: 'Partners/Obtener/ObtenerDatosdeUsuario', component: ObtenerDatosdeUsuarioComponent1750446218674 },
+  { path: 'Partners/Obtener/ObtenerDetalledeOfertaAmortizable', component: ObtenerDetalledeOfertaAmortizableComponent1750446218676 },
+  { path: 'Partners/Obtener/ObtenerDetalleOfertaVehicular', component: ObtenerDetalleOfertaVehicularComponent1750446218677 },
+  { path: 'Partners/Obtener/ObtenerMarcas', component: ObtenerMarcasComponent1750446218678 },
+  { path: 'Partners/Obtener/ObtenerModelos', component: ObtenerModelosComponent1750446218678 },
+  { path: 'Partners/Obtener/ObtenerPartners', component: ObtenerPartnersComponent1750446218679 },
+  { path: 'Partners/Obtener/ObtenerPrestamosdeCliente', component: ObtenerPrestamosdeClienteComponent1750446218682 },
+  { path: 'Partners/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218680 },
+  { path: 'Partners/Obtener/ObtenerProductosdelPartner', component: ObtenerProductosdelPartnerComponent1750446218681 },
+  { path: 'Partners/Obtener/ObtenerPuntosdeVenta', component: ObtenerPuntosdeVentaComponent1750446218683 },
+  { path: 'Partners/Obtener/ObtenerVendedores', component: ObtenerVendedoresComponent1750446218683 },
+  { path: 'Partners/Obtener/ObtenerVersiones', component: ObtenerVersionesComponent1750446218686 },
+  { path: 'Partners/Simular/SimularOfertas', component: SimularOfertasComponent1750446218687 },
+  { path: 'Partners/Simular/SimularOfertasVehicular', component: SimularOfertasVehicularComponent1750446218688 },
+  { path: 'Partners/Simular/SimularPrestamo', component: SimularPrestamoComponent1750446218689 },
+  { path: 'Partners/Simular/SimularVehicular', component: SimularVehicularComponent1750446218690 },
+  { path: 'Parámetros-Base/ObtenerCorrelativoGuia', component: ObtenerCorrelativoGuiaComponent1750446218692 },
+  { path: 'Parámetros-Base/ObtenerCorrelativoGuiaEspecial', component: ObtenerCorrelativoGuiaEspecialComponent1750446218692 },
+  { path: 'Parámetros-Base/ObtenerGuiadeProceso', component: ObtenerGuiadeProcesoComponent1750446218693 },
+  { path: 'Parámetros-Base/ObtenerGuiaEspecialdeProceso', component: ObtenerGuiaEspecialdeProcesoComponent1750446218694 },
+  { path: 'Parámetros-Base/ObtenerOpcionGeneraldeProceso', component: ObtenerOpcionGeneraldeProcesoComponent1750446218695 },
+  { path: 'Parámetros-Base/ObtenerOpcionGeneralPorModulo', component: ObtenerOpcionGeneralPorModuloComponent1750446218696 },
+  { path: 'Parámetros-Base/ObtenerProgramaParticular', component: ObtenerProgramaParticularComponent1750446218696 },
+  { path: 'Personas/Actualizar/Actualizar', component: ActualizarComponent1750446218697 },
+  { path: 'Personas/Actualizar/ActualizarCelular', component: ActualizarCelularComponent1750446218698 },
+  { path: 'Personas/Actualizar/ActualizarContacto', component: ActualizarContactoComponent1750446218699 },
+  { path: 'Personas/Actualizar/ActualizarConyuge', component: ActualizarConyugeComponent1750446218701 },
+  { path: 'Personas/Actualizar/ActualizarCorreoElectronico', component: ActualizarCorreoElectronicoComponent1750446218700 },
+  { path: 'Personas/Actualizar/ActualizarDomicilio', component: ActualizarDomicilioComponent1750446218703 },
+  { path: 'Personas/Actualizar/ActualizarFATCA', component: ActualizarFATCAComponent1750446218704 },
+  { path: 'Personas/Actualizar/ActualizarInformacionAdicional', component: ActualizarInformacionAdicionalComponent1750446218705 },
+  { path: 'Personas/Actualizar/ActualizarInformacionFinanciera', component: ActualizarInformacionFinancieraComponent1750446218707 },
+  { path: 'Personas/Actualizar/ActualizarIntegrantedePersonaJuridica', component: ActualizarIntegrantedePersonaJuridicaComponent1750446218708 },
+  { path: 'Personas/Actualizar/ActualizarPersonaJuridica', component: ActualizarPersonaJuridicaComponent1750446218709 },
+  { path: 'Personas/Actualizar/ActualizarProfesion', component: ActualizarProfesionComponent1750446218710 },
+  { path: 'Personas/Actualizar/ActualizarReferencia', component: ActualizarReferenciaComponent1750446218712 },
+  { path: 'Personas/Actualizar/ActualizarRegistroEmpleado', component: ActualizarRegistroEmpleadoComponent1750446218712 },
+  { path: 'Personas/Actualizar/ActualizarTelefono', component: ActualizarTelefonoComponent1750446218713 },
+  { path: 'Personas/Actualizar/ActualizarVictimaHechoViolento', component: ActualizarVictimaHechoViolentoComponent1750446218714 },
+  { path: 'Personas/Actualizar/ModificarDocumentoAdicional', component: ModificarDocumentoAdicionalComponent1750446218715 },
+  { path: 'Personas/Agregar/AgregaraListaNegra', component: AgregaraListaNegraComponent1750446218716 },
+  { path: 'Personas/Agregar/AgregarContacto', component: AgregarContactoComponent1750446218717 },
+  { path: 'Personas/Agregar/AgregarCorreoElectronico', component: AgregarCorreoElectronicoComponent1750446218719 },
+  { path: 'Personas/Agregar/AgregarDatosPEP', component: AgregarDatosPEPComponent1750446218720 },
+  { path: 'Personas/Agregar/AgregarDocumentoAdicional', component: AgregarDocumentoAdicionalComponent1750446218721 },
+  { path: 'Personas/Agregar/AgregarDomicilio', component: AgregarDomicilioComponent1750446218723 },
+  { path: 'Personas/Agregar/AgregarEstadoFinanciero', component: AgregarEstadoFinancieroComponent1750446218724 },
+  { path: 'Personas/Agregar/AgregarFATCA', component: AgregarFATCAComponent1750446218725 },
+  { path: 'Personas/Agregar/AgregarInformacionAdicional', component: AgregarInformacionAdicionalComponent1750446218726 },
+  { path: 'Personas/Agregar/AgregarInformacionFinanciera', component: AgregarInformacionFinancieraComponent1750446218727 },
+  { path: 'Personas/Agregar/AgregarIntegranteaPersonaJuridica', component: AgregarIntegranteaPersonaJuridicaComponent1750446218728 },
+  { path: 'Personas/Agregar/AgregarPersonaVinculada', component: AgregarPersonaVinculadaComponent1750446218729 },
+  { path: 'Personas/Agregar/AgregarReferencia', component: AgregarReferenciaComponent1750446218730 },
+  { path: 'Personas/Agregar/AgregarTelefono', component: AgregarTelefonoComponent1750446218730 },
+  { path: 'Personas/Agregar/AgregarVictimaHechoViolento', component: AgregarVictimaHechoViolentoComponent1750446218731 },
+  { path: 'Personas/Crear/Crear', component: CrearComponent1750446218733 },
+  { path: 'Personas/Crear/CrearConyuge', component: CrearConyugeComponent1750446218736 },
+  { path: 'Personas/Crear/CrearPersonaJuridica', component: CrearPersonaJuridicaComponent1750446218740 },
+  { path: 'Personas/Crear/CrearReducido', component: CrearReducidoComponent1750446218742 },
+  { path: 'Personas/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750446218743 },
+  { path: 'Personas/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750446218744 },
+  { path: 'Personas/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750446218745 },
+  { path: 'Personas/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750446218745 },
+  { path: 'Personas/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750446218746 },
+  { path: 'Personas/Eliminar/EliminarConyuge', component: EliminarConyugeComponent1750446218747 },
+  { path: 'Personas/Eliminar/EliminarDocumentoAdicional', component: EliminarDocumentoAdicionalComponent1750446218748 },
+  { path: 'Personas/Eliminar/EliminarDomicilio', component: EliminarDomicilioComponent1750446218748 },
+  { path: 'Personas/Eliminar/EliminarInformacionAdicional', component: EliminarInformacionAdicionalComponent1750446218749 },
+  { path: 'Personas/Eliminar/EliminarIntegrantedePersonaJuridica', component: EliminarIntegrantedePersonaJuridicaComponent1750446218750 },
+  { path: 'Personas/Eliminar/EliminarPersonaVinculada', component: EliminarPersonaVinculadaComponent1750446218751 },
+  { path: 'Personas/Eliminar/EliminarProfesion', component: EliminarProfesionComponent1750446218753 },
+  { path: 'Personas/Obtener/Obtener', component: ObtenerComponent1750446218755 },
+  { path: 'Personas/Obtener/ObtenerConcepto', component: ObtenerConceptoComponent1750446218756 },
+  { path: 'Personas/Obtener/ObtenerContactos', component: ObtenerContactosComponent1750446218757 },
+  { path: 'Personas/Obtener/ObtenerConyuge', component: ObtenerConyugeComponent1750446218760 },
+  { path: 'Personas/Obtener/ObtenerCorreosElectronicos', component: ObtenerCorreosElectronicosComponent1750446218758 },
+  { path: 'Personas/Obtener/ObtenerCuentasCliente', component: ObtenerCuentasClienteComponent1750446218759 },
+  { path: 'Personas/Obtener/ObtenerDatosPEP', component: ObtenerDatosPEPComponent1750446218761 },
+  { path: 'Personas/Obtener/ObtenerDocumentosAdicionales', component: ObtenerDocumentosAdicionalesComponent1750446218762 },
+  { path: 'Personas/Obtener/ObtenerDomicilios', component: ObtenerDomiciliosComponent1750446218762 },
+  { path: 'Personas/Obtener/ObtenerEstadosCiviles', component: ObtenerEstadosCivilesComponent1750446218763 },
+  { path: 'Personas/Obtener/ObtenerFacultades', component: ObtenerFacultadesComponent1750446218764 },
+  { path: 'Personas/Obtener/ObtenerFATCA', component: ObtenerFATCAComponent1750446218765 },
+  { path: 'Personas/Obtener/ObtenerHobbies', component: ObtenerHobbiesComponent1750446218765 },
+  { path: 'Personas/Obtener/ObtenerHobby', component: ObtenerHobbyComponent1750446218766 },
+  { path: 'Personas/Obtener/ObtenerIdBantotal', component: ObtenerIdBantotalComponent1750446218767 },
+  { path: 'Personas/Obtener/ObtenerIdentidadesdeGenero', component: ObtenerIdentidadesdeGeneroComponent1750446218771 },
+  { path: 'Personas/Obtener/ObtenerIdentificadorUnico', component: ObtenerIdentificadorUnicoComponent1750446218772 },
+  { path: 'Personas/Obtener/ObtenerInformacionAdicional', component: ObtenerInformacionAdicionalComponent1750446218773 },
+  { path: 'Personas/Obtener/ObtenerInformacionFinanciera', component: ObtenerInformacionFinancieraComponent1750446218775 },
+  { path: 'Personas/Obtener/ObtenerIntegrantesPersonaJuridica', component: ObtenerIntegrantesPersonaJuridicaComponent1750446218777 },
+  { path: 'Personas/Obtener/ObtenerLimites', component: ObtenerLimitesComponent1750446218778 },
+  { path: 'Personas/Obtener/ObtenerNaturalezasJuridicas', component: ObtenerNaturalezasJuridicasComponent1750446218779 },
+  { path: 'Personas/Obtener/ObtenerNivelesEducativos', component: ObtenerNivelesEducativosComponent1750446218780 },
+  { path: 'Personas/Obtener/ObtenerOcupaciones', component: ObtenerOcupacionesComponent1750446218781 },
+  { path: 'Personas/Obtener/ObtenerPersonaJuridica', component: ObtenerPersonaJuridicaComponent1750446218782 },
+  { path: 'Personas/Obtener/ObtenerPersonas', component: ObtenerPersonasComponent1750446218783 },
+  { path: 'Personas/Obtener/ObtenerPersonasJuridicas', component: ObtenerPersonasJuridicasComponent1750446218783 },
+  { path: 'Personas/Obtener/ObtenerPersonasVinculadas', component: ObtenerPersonasVinculadasComponent1750446218786 },
+  { path: 'Personas/Obtener/ObtenerProfesion', component: ObtenerProfesionComponent1750446218789 },
+  { path: 'Personas/Obtener/ObtenerProfesiones', component: ObtenerProfesionesComponent1750446218788 },
+  { path: 'Personas/Obtener/ObtenerReferencias', component: ObtenerReferenciasComponent1750446218790 },
+  { path: 'Personas/Obtener/ObtenerTarjetasdeDebito', component: ObtenerTarjetasdeDebitoComponent1750446218792 },
+  { path: 'Personas/Obtener/ObtenerTelefonos', component: ObtenerTelefonosComponent1750446218793 },
+  { path: 'Personas/Obtener/ObtenerTipodePersona', component: ObtenerTipodePersonaComponent1750446218793 },
+  { path: 'Personas/Obtener/ObtenerTiposdeDocumento', component: ObtenerTiposdeDocumentoComponent1750446218794 },
+  { path: 'Personas/Obtener/ObtenerTiposDeFuncionarioPublico', component: ObtenerTiposDeFuncionarioPublicoComponent1750446218795 },
+  { path: 'Personas/Obtener/ObtenerTiposDePEP', component: ObtenerTiposDePEPComponent1750446218796 },
+  { path: 'Personas/Obtener/ObtenerTitularesDelTelefono', component: ObtenerTitularesDelTelefonoComponent1750446218797 },
+  { path: 'Personas/Obtener/ObtenerVictimaHechoViolento', component: ObtenerVictimaHechoViolentoComponent1750446218798 },
+  { path: 'Personas/Obtener/ObtenerVinculos', component: ObtenerVinculosComponent1750446218799 },
+  { path: 'Personas/Obtener/ObtenerVinculosdeAfinidad', component: ObtenerVinculosdeAfinidadComponent1750446218800 },
+  { path: 'Personas/Obtener/ObtenerVinculosdeConsanguinidad', component: ObtenerVinculosdeConsanguinidadComponent1750446218803 },
+  { path: 'Personas/Obtener/ObtenerVinculosJuridicos', component: ObtenerVinculosJuridicosComponent1750446218804 },
+  { path: 'Personas/Validar/EvaluarPAE', component: EvaluarPAEComponent1750446218806 },
+  { path: 'Personas/Validar/ValidarCorreoElectronico', component: ValidarCorreoElectronicoComponent1750446218806 },
+  { path: 'Personas/Validar/ValidarDocumento', component: ValidarDocumentoComponent1750446218807 },
+  { path: 'Personas/Validar/ValidarenListasNegras', component: ValidarenListasNegrasComponent1750446218808 },
+  { path: 'Personas/Validar/ValidarExistencia', component: ValidarExistenciaComponent1750446218809 },
+  { path: 'Personas/Validar/ValidarListasInhabilitados', component: ValidarListasInhabilitadosComponent1750446218811 },
+  { path: 'Personas/Validar/VerificarEmpleado', component: VerificarEmpleadoComponent1750446218811 },
+  { path: 'Precios/Convertir/ConvertirTasaAnualEfectivaaLineal', component: ConvertirTasaAnualEfectivaaLinealComponent1750446218813 },
+  { path: 'Precios/Convertir/ConvertirTasaAnualLinealaEfectiva', component: ConvertirTasaAnualLinealaEfectivaComponent1750446218814 },
+  { path: 'Precios/Convertir/ConvertirTasaMensualEfectivaaLineal', component: ConvertirTasaMensualEfectivaaLinealComponent1750446218815 },
+  { path: 'Precios/Convertir/ConvertirTasaMensualLinealaEfectiva', component: ConvertirTasaMensualLinealaEfectivaComponent1750446218816 },
+  { path: 'Precios/Obtener/ObtenerCotizacion', component: ObtenerCotizacionComponent1750446218818 },
+  { path: 'Precios/Obtener/ObtenerCotizacionaFecha', component: ObtenerCotizacionaFechaComponent1750446218820 },
+  { path: 'Precios/Obtener/ObtenerCotizacionCierre', component: ObtenerCotizacionCierreComponent1750446218821 },
+  { path: 'Precios/Obtener/ObtenerPizarraEspecialporTransaccion', component: ObtenerPizarraEspecialporTransaccionComponent1750446218822 },
+  { path: 'Precios/Obtener/ObtenerPrecioaFecha', component: ObtenerPrecioaFechaComponent1750446218823 },
+  { path: 'Precios/Obtener/ObtenerPrecioEspecie', component: ObtenerPrecioEspecieComponent1750446218824 },
+  { path: 'Precios/Obtener/ObtenerTasadeOperacion', component: ObtenerTasadeOperacionComponent1750446218825 },
+  { path: 'Precios/Obtener/ObtenerTasaParaCliente', component: ObtenerTasaParaClienteComponent1750446218826 },
+  { path: 'Precios/Obtener/ObtenerTasaParaProducto', component: ObtenerTasaParaProductoComponent1750446218827 },
+  { path: 'Precios/Obtener/ObtenerTipodeCambio', component: ObtenerTipodeCambioComponent1750446218828 },
+  { path: 'Precios/Obtener/ObtenerTiposDeCambioEspeciales', component: ObtenerTiposDeCambioEspecialesComponent1750446218829 },
+  { path: 'Préstamos/Cancelar/Cancelar', component: CancelarComponent1750446218830 },
+  { path: 'Préstamos/Cancelar/CancelaraFecha', component: CancelaraFechaComponent1750446218831 },
+  { path: 'Préstamos/Cancelar/CancelaraFechaTerceros', component: CancelaraFechaTercerosComponent1750446218833 },
+  { path: 'Préstamos/Cancelar/CancelarTerceros', component: CancelarTercerosComponent1750446218836 },
+  { path: 'Préstamos/Contratar/Contratar', component: ContratarComponent1750446218838 },
+  { path: 'Préstamos/Contratar/ContratarAmpliacion', component: ContratarAmpliacionComponent1750446218839 },
+  { path: 'Préstamos/Contratar/ContratarRefinanciacion', component: ContratarRefinanciacionComponent1750446218841 },
+  { path: 'Préstamos/Contratar/ContratarRefinanciacionporDeudaTotal', component: ContratarRefinanciacionporDeudaTotalComponent1750446218842 },
+  { path: 'Préstamos/Contratar/ContratarRefinanciacionporSaldoCapital', component: ContratarRefinanciacionporSaldoCapitalComponent1750446218844 },
+  { path: 'Préstamos/Documentos-Digitales/ActualizarDocumentoDigital', component: ActualizarDocumentoDigitalComponent1750446218846 },
+  { path: 'Préstamos/Documentos-Digitales/AsociarDocumentoDigital', component: AsociarDocumentoDigitalComponent1750446218847 },
+  { path: 'Préstamos/Documentos-Digitales/EliminarDocumentoDigital', component: EliminarDocumentoDigitalComponent1750446218848 },
+  { path: 'Préstamos/Documentos-Digitales/ObtenerDocumentoDigital', component: ObtenerDocumentoDigitalComponent1750446218850 },
+  { path: 'Préstamos/Documentos-Digitales/ObtenerDocumentosDigitales', component: ObtenerDocumentosDigitalesComponent1750446218852 },
+  { path: 'Préstamos/Obtener/ObtenerCronograma', component: ObtenerCronogramaComponent1750446218854 },
+  { path: 'Préstamos/Obtener/ObtenerCronogramaaFecha', component: ObtenerCronogramaaFechaComponent1750446218856 },
+  { path: 'Préstamos/Obtener/ObtenerCronogramaconPagosaFecha', component: ObtenerCronogramaconPagosaFechaComponent1750446218858 },
+  { path: 'Préstamos/Obtener/ObtenerCronogramaenEspecie', component: ObtenerCronogramaenEspecieComponent1750446218859 },
+  { path: 'Préstamos/Obtener/ObtenerCronogramaOriginal', component: ObtenerCronogramaOriginalComponent1750446218861 },
+  { path: 'Préstamos/Obtener/ObtenerCuentadeCobro', component: ObtenerCuentadeCobroComponent1750446218862 },
+  { path: 'Préstamos/Obtener/ObtenerDatosdelProximoVencimiento', component: ObtenerDatosdelProximoVencimientoComponent1750446218863 },
+  { path: 'Préstamos/Obtener/ObtenerDetalle', component: ObtenerDetalleComponent1750446218864 },
+  { path: 'Préstamos/Obtener/ObtenerDetalleaFecha', component: ObtenerDetalleaFechaComponent1750446218865 },
+  { path: 'Préstamos/Obtener/ObtenerDetalledeCancelacionTotal', component: ObtenerDetalledeCancelacionTotalComponent1750446218866 },
+  { path: 'Préstamos/Obtener/ObtenerDetalledeOferta', component: ObtenerDetalledeOfertaComponent1750446218869 },
+  { path: 'Préstamos/Obtener/ObtenerDetalledeOfertaAmortizable', component: ObtenerDetalledeOfertaAmortizableComponent1750446218871 },
+  { path: 'Préstamos/Obtener/ObtenerDetalledeOperacionesaRefinanciar', component: ObtenerDetalledeOperacionesaRefinanciarComponent1750446218874 },
+  { path: 'Préstamos/Obtener/ObtenerDetalledePrestamoCancelado', component: ObtenerDetalledePrestamoCanceladoComponent1750446218875 },
+  { path: 'Préstamos/Obtener/ObtenerDetallePagoPrestamo', component: ObtenerDetallePagoPrestamoComponent1750446218877 },
+  { path: 'Préstamos/Obtener/ObtenerDetalleReducido', component: ObtenerDetalleReducidoComponent1750446218878 },
+  { path: 'Préstamos/Obtener/ObtenerDetalleSimulacion', component: ObtenerDetalleSimulacionComponent1750446218880 },
+  { path: 'Préstamos/Obtener/ObtenerDeuda', component: ObtenerDeudaComponent1750446218881 },
+  { path: 'Préstamos/Obtener/ObtenerDeudaPrestamoCastigado', component: ObtenerDeudaPrestamoCastigadoComponent1750446218882 },
+  { path: 'Préstamos/Obtener/ObtenerDeudaVencida', component: ObtenerDeudaVencidaComponent1750446218883 },
+  { path: 'Préstamos/Obtener/ObtenerFechadeIncumplimiento', component: ObtenerFechadeIncumplimientoComponent1750446218888 },
+  { path: 'Préstamos/Obtener/ObtenerFechadeUltimoPago', component: ObtenerFechadeUltimoPagoComponent1750446218890 },
+  { path: 'Préstamos/Obtener/ObtenerFechasdePago', component: ObtenerFechasdePagoComponent1750446218891 },
+  { path: 'Préstamos/Obtener/ObtenerInformacionAdicional', component: ObtenerInformacionAdicionalComponent1750446218893 },
+  { path: 'Préstamos/Obtener/ObtenerMontodeCancelacion', component: ObtenerMontodeCancelacionComponent1750446218894 },
+  { path: 'Préstamos/Obtener/ObtenerMotivosPrecancelacion', component: ObtenerMotivosPrecancelacionComponent1750446218895 },
+  { path: 'Préstamos/Obtener/ObtenerPagosdeCuota', component: ObtenerPagosdeCuotaComponent1750446218896 },
+  { path: 'Préstamos/Obtener/ObtenerPagosdeunPrestamo', component: ObtenerPagosdeunPrestamoComponent1750446218897 },
+  { path: 'Préstamos/Obtener/ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1', component: ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750446218898 },
+  { path: 'Préstamos/Obtener/ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1', component: ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750446218899 },
+  { path: 'Préstamos/Obtener/ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1', component: ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750446218900 },
+  { path: 'Préstamos/Obtener/ObtenerProductos', component: ObtenerProductosComponent1750446218903 },
+  { path: 'Préstamos/Obtener/ObtenerProductosRefinanciacion', component: ObtenerProductosRefinanciacionComponent1750446218905 },
+  { path: 'Préstamos/Obtener/ObtenerRefinanciacionSimulada', component: ObtenerRefinanciacionSimuladaComponent1750446218907 },
+  { path: 'Préstamos/Operar/AbonaraCuenta', component: AbonaraCuentaComponent1750446218909 },
+  { path: 'Préstamos/Operar/ActualizarInformacionAdicional', component: ActualizarInformacionAdicionalComponent1750446218910 },
+  { path: 'Préstamos/Operar/ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1', component: ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750446218912 },
+  { path: 'Préstamos/Operar/AgregarCuentadeCobro', component: AgregarCuentadeCobroComponent1750446218913 },
+  { path: 'Préstamos/Operar/AgregarInformacionAdicional', component: AgregarInformacionAdicionalComponent1750446218914 },
+  { path: 'Préstamos/Operar/EliminarCuentadeCobro', component: EliminarCuentadeCobroComponent1750446218915 },
+  { path: 'Préstamos/Operar/EliminarInformacionAdicional', component: EliminarInformacionAdicionalComponent1750446218916 },
+  { path: 'Préstamos/Operar/SolicitarPrecancelacion', component: SolicitarPrecancelacionComponent1750446218918 },
+  { path: 'Préstamos/Pagar/AdelantarCapitalConReduccionDeCuota', component: AdelantarCapitalConReduccionDeCuotaComponent1750446218921 },
+  { path: 'Préstamos/Pagar/AdelantarCapitalConReduccionDePlazo', component: AdelantarCapitalConReduccionDePlazoComponent1750446218922 },
+  { path: 'Préstamos/Pagar/PagarCuota', component: PagarCuotaComponent1750446218924 },
+  { path: 'Préstamos/Pagar/PagarCuotaaFecha', component: PagarCuotaaFechaComponent1750446218925 },
+  { path: 'Préstamos/Pagar/PagarCuotaaFechaTerceros', component: PagarCuotaaFechaTercerosComponent1750446218926 },
+  { path: 'Préstamos/Pagar/PagarCuotaTerceros', component: PagarCuotaTercerosComponent1750446218928 },
+  { path: 'Préstamos/Simular/ResimularAmortizable', component: ResimularAmortizableComponent1750446218930 },
+  { path: 'Préstamos/Simular/ResimularAmpliacion', component: ResimularAmpliacionComponent1750446218932 },
+  { path: 'Préstamos/Simular/ResimularRefinanciacion', component: ResimularRefinanciacionComponent1750446218933 },
+  { path: 'Préstamos/Simular/Simular', component: SimularComponent1750446218936 },
+  { path: 'Préstamos/Simular/SimularAmortizable', component: SimularAmortizableComponent1750446218937 },
+  { path: 'Préstamos/Simular/SimularAmortizableSinCliente', component: SimularAmortizableSinClienteComponent1750446218939 },
+  { path: 'Préstamos/Simular/SimularAmpliacion', component: SimularAmpliacionComponent1750446218940 },
+  { path: 'Préstamos/Simular/SimularAmpliacionIngresandoSeguros', component: SimularAmpliacionIngresandoSegurosComponent1750446218941 },
+  { path: 'Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotas', component: SimularDespejandoCapitalyCantidaddeCuotasComponent1750446218941 },
+  { path: 'Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotasSinCliente', component: SimularDespejandoCapitalyCantidaddeCuotasSinClienteComponent1750446218942 },
+  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotas', component: SimularDespejandoFechadeVencimientoyCantidaddeCuotasComponent1750446218944 },
+  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinCliente', component: SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750446218945 },
+  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasa', component: SimularDespejandoFechadeVencimientoyTasaComponent1750446218946 },
+  { path: 'Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasaSinCliente', component: SimularDespejandoFechadeVencimientoyTasaSinClienteComponent1750446218947 },
+  { path: 'Préstamos/Simular/SimularIngresandoBalloon', component: SimularIngresandoBalloonComponent1750446218948 },
+  { path: 'Préstamos/Simular/SimularIngresandoBalloonSinCliente', component: SimularIngresandoBalloonSinClienteComponent1750446218949 },
+  { path: 'Préstamos/Simular/SimularIngresandoSeguros', component: SimularIngresandoSegurosComponent1750446218950 },
+  { path: 'Préstamos/Simular/SimularIngresandoSegurosSinCliente', component: SimularIngresandoSegurosSinClienteComponent1750446218952 },
+  { path: 'Préstamos/Simular/SimularLibreAmortizacion', component: SimularLibreAmortizacionComponent1750446218953 },
+  { path: 'Préstamos/Simular/SimularLibreAmortizacionSinCliente', component: SimularLibreAmortizacionSinClienteComponent1750446218954 },
+  { path: 'Préstamos/Simular/SimularOfertas', component: SimularOfertasComponent1750446218955 },
+  { path: 'Préstamos/Simular/SimularPlazoFijo', component: SimularPlazoFijoComponent1750446218956 },
+  { path: 'Préstamos/Simular/SimularRefinanciacion', component: SimularRefinanciacionComponent1750446218957 },
+  { path: 'Préstamos/Simular/SimularRefinanciacionporDeudaTotal', component: SimularRefinanciacionporDeudaTotalComponent1750446218958 },
+  { path: 'Préstamos/Simular/SimularRefinanciacionporSaldoCapital', component: SimularRefinanciacionporSaldoCapitalComponent1750446218959 },
+  { path: 'Préstamos/Textos/ActualizarTextos', component: ActualizarTextosComponent1750446218960 },
+  { path: 'Préstamos/Textos/AgregarTextos', component: AgregarTextosComponent1750446218960 },
+  { path: 'Préstamos/Textos/EliminarTextos', component: EliminarTextosComponent1750446218961 },
+  { path: 'Préstamos/Textos/ObtenerTextos', component: ObtenerTextosComponent1750446218962 },
+  { path: 'Reglas-de-Negocio/EvaluarRegladeNegocio', component: EvaluarRegladeNegocioComponent1750446218964 },
+  { path: 'Reglas-de-Negocio/ObtenerReglasdeNegocio', component: ObtenerReglasdeNegocioComponent1750446218965 },
+  { path: 'Reglas-de-Negocio/ObtenerVariablesRegla', component: ObtenerVariablesReglaComponent1750446218966 },
+  { path: 'Reglas-de-Negocio/ValidarDatosRegladeNegocio', component: ValidarDatosRegladeNegocioComponent1750446218966 },
+  { path: 'Seguridad/AutorizarExcepcion', component: AutorizarExcepcionComponent1750446218968 },
+  { path: 'Seguridad/ObtenerDetalledeExcepcion', component: ObtenerDetalledeExcepcionComponent1750446218969 },
+  { path: 'Seguridad/ObtenerExcepciones', component: ObtenerExcepcionesComponent1750446218970 },
+  { path: 'Seguridad/RechazarExcepcion', component: RechazarExcepcionComponent1750446218971 },
+  { path: 'Seguridad/RegistrarDispositivo', component: RegistrarDispositivoComponent1750446218973 },
+  { path: 'Seguros-Voluntarios/ContratarSeguro', component: ContratarSeguroComponent1750446218974 },
+  { path: 'Seguros-Voluntarios/ObtenerMontosDeUnSeguro', component: ObtenerMontosDeUnSeguroComponent1750446218975 },
+  { path: 'Seguros-Voluntarios/ObtenerSeguros', component: ObtenerSegurosComponent1750446218976 },
+  { path: 'Seguros-Voluntarios/ObtenerSegurosAPagar', component: ObtenerSegurosAPagarComponent1750446218977 },
+  { path: 'Seguros-Voluntarios/PagarSeguro', component: PagarSeguroComponent1750446218978 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCodigosdeLimites', component: ObtenerCodigosdeLimitesComponent1750446218983 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentaPreferencial', component: ObtenerCuentaPreferencialComponent1750446218979 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentasaAsociar', component: ObtenerCuentasaAsociarComponent1750446218980 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadas', component: ObtenerCuentasAsociadasComponent1750446218981 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadasPorTipo', component: ObtenerCuentasAsociadasPorTipoComponent1750446218982 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerDatos', component: ObtenerDatosComponent1750446218987 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerDatosContacto', component: ObtenerDatosContactoComponent1750446218989 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerIdentificadorUnico', component: ObtenerIdentificadorUnicoComponent1750446218990 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerLimites', component: ObtenerLimitesComponent1750446218991 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerMovimientos', component: ObtenerMovimientosComponent1750446218992 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTarjeta', component: ObtenerTarjetaComponent1750446218993 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTarjetaHabiente', component: ObtenerTarjetaHabienteComponent1750446218994 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTarjetasAdicionales', component: ObtenerTarjetasAdicionalesComponent1750446218995 },
+  { path: 'Tarjetas-de-Débito/Obtener/ObtenerTiposdeCuenta', component: ObtenerTiposdeCuentaComponent1750446218996 },
+  { path: 'Tarjetas-de-Débito/Operar/Activar', component: ActivarComponent1750446218997 },
+  { path: 'Tarjetas-de-Débito/Operar/ActualizarCuentaPreferencial', component: ActualizarCuentaPreferencialComponent1750446218998 },
+  { path: 'Tarjetas-de-Débito/Operar/ActualizarDatosContacto', component: ActualizarDatosContactoComponent1750446218999 },
+  { path: 'Tarjetas-de-Débito/Operar/AsociarCuenta', component: AsociarCuentaComponent1750446219000 },
+  { path: 'Tarjetas-de-Débito/Operar/BlanquearPin', component: BlanquearPinComponent1750446219001 },
+  { path: 'Tarjetas-de-Débito/Operar/Bloquear', component: BloquearComponent1750446219004 },
+  { path: 'Tarjetas-de-Débito/Operar/BloquearDesdeRED', component: BloquearDesdeREDComponent1750446219005 },
+  { path: 'Tarjetas-de-Débito/Operar/Crear', component: CrearComponent1750446219006 },
+  { path: 'Tarjetas-de-Débito/Operar/CrearConCuentasAsociadas', component: CrearConCuentasAsociadasComponent1750446219008 },
+  { path: 'Tarjetas-de-Débito/Operar/Denunciar', component: DenunciarComponent1750446219010 },
+  { path: 'Tarjetas-de-Débito/Operar/DenunciarDesdeRED', component: DenunciarDesdeREDComponent1750446219011 },
+  { path: 'Tarjetas-de-Débito/Operar/Desbloquear', component: DesbloquearComponent1750446219012 },
+  { path: 'Tarjetas-de-Débito/Operar/DesbloquearDesdeRED', component: DesbloquearDesdeREDComponent1750446219013 },
+  { path: 'Tarjetas-de-Débito/Operar/EliminarCuentaAsociada', component: EliminarCuentaAsociadaComponent1750446219014 },
+  { path: 'Tarjetas-de-Débito/Operar/ModificarLimite', component: ModificarLimiteComponent1750446219015 },
+  { path: 'Títulos/Comprar', component: ComprarComponent1750446219016 },
+  { path: 'Títulos/ObtenerEstadoCompra', component: ObtenerEstadoCompraComponent1750446219017 },
+  { path: 'Títulos/ObtenerGrupos', component: ObtenerGruposComponent1750446219020 },
+  { path: 'Títulos/ObtenerValores', component: ObtenerValoresComponent1750446219022 },
+  { path: 'Usuarios/AgregarPerfil', component: AgregarPerfilComponent1750446219023 },
+  { path: 'Usuarios/Crear', component: CrearComponent1750446219024 },
+  { path: 'Usuarios/EliminarPerfil', component: EliminarPerfilComponent1750446219025 },
+  { path: 'Usuarios/EliminarUsuario', component: EliminarUsuarioComponent1750446219026 },
+  { path: 'Usuarios/HabilitarEnCanal', component: HabilitarEnCanalComponent1750446219027 },
+  { path: 'Usuarios/HabilitarUsuario', component: HabilitarUsuarioComponent1750446219028 },
+  { path: 'Usuarios/InhabilitarUsuario', component: InhabilitarUsuarioComponent1750446219029 },
+  { path: 'Usuarios/Modificar', component: ModificarComponent1750446219030 },
+  { path: 'Usuarios/Obtener', component: ObtenerComponent1750446219030 },
+  { path: 'Usuarios/ObtenerPerfiles', component: ObtenerPerfilesComponent1750446219031 },
+  { path: 'Usuarios/ObtenerUsuarios', component: ObtenerUsuariosComponent1750446219032 },
+  { path: 'Usuarios/ObtenerUsuariosParaPerfil', component: ObtenerUsuariosParaPerfilComponent1750446219033 },
+  { path: 'Workflow/ObtenerMetadataDeTarea', component: ObtenerMetadataDeTareaComponent1750446219036 },
+  { path: 'Workflow/ObtenerProcesosHabilitados', component: ObtenerProcesosHabilitadosComponent1750446219038 },
+  { path: 'Workflow/ObtenerRoles', component: ObtenerRolesComponent1750446219040 },
+  { path: 'Workflow/ObtenerRolesdeTarea', component: ObtenerRolesdeTareaComponent1750446219041 },
+  { path: 'Workflow/ObtenerTareasdeProceso', component: ObtenerTareasdeProcesoComponent1750446219042 }
 ];
 
 @NgModule({

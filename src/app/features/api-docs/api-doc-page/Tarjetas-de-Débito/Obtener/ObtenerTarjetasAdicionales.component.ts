@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasAdicionalesComponent1750272791870 {
+export class ObtenerTarjetasAdicionalesComponent1750446218995 {
   pageTitle        = 'Obtener Tarjetas Adicionales';
   description      = `Método para obtener las tarjetas adicionales que están asociadas a una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetasAdicionales';

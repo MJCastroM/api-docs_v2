@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesComponent1750272790917 {
+export class ObtenerIntegrantesComponent1750446218269 {
   pageTitle        = 'Obtener Integrantes';
   description      = `Método para obtener los integrantes de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerIntegrantes';

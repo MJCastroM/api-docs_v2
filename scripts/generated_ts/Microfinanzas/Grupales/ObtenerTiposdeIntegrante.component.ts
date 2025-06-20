@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeIntegranteComponent1750272791348 {
+export class ObtenerTiposdeIntegranteComponent1750446218625 {
   pageTitle        = 'Obtener Tipos de Integrante';
   description      = `Método para obtener los tipos de integrante correspondientes a un tipo de grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposDeIntegrante';

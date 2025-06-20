@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleaFechaComponent1750272791707 {
+export class ObtenerDetalleaFechaComponent1750446218865 {
   pageTitle        = 'Obtener Detalle a Fecha';
   description      = `Método para obtener los datos de un préstamo a una fecha especifica.`;
   pubName    = 'BTPrestamos.ObtenerDetalleAFecha';

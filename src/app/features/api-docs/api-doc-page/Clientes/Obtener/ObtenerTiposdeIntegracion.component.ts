@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeIntegracionComponent1750272790963 {
+export class ObtenerTiposdeIntegracionComponent1750446218311 {
   pageTitle        = 'Obtener Tipos de Integración';
   description      = `Método para obtener un listado de los tipos de integración ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerTiposDeIntegracion';

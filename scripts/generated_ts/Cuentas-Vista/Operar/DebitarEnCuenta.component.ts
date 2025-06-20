@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DebitarEnCuentaComponent1750272791210 {
+export class DebitarEnCuentaComponent1750446218545 {
   pageTitle        = 'Debitar en Cuenta';
   description      = `Método para realizar un débito de una cuenta vista determinada.`;
   pubName    = 'BTCuentasVista.DebitarEnCuenta ';

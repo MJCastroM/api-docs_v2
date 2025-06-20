@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInicioyFindeMesdeSucursalComponent1750272790767 {
+export class ObtenerInicioyFindeMesdeSucursalComponent1750446218130 {
   pageTitle        = 'Obtener Inicio y Fin de Mes de Sucursal';
   description      = `Método para obtener la primer y última fecha hábil para el mes indicado, para la sucursal recibida por parámetro.`;
   pubName    = 'BTCalendario.ObtenerInicioYFinMesSucursal';

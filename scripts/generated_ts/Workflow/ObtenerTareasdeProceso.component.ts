@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTareasdeProcesoComponent1750272791935 {
+export class ObtenerTareasdeProcesoComponent1750446219042 {
   pageTitle        = 'Obtener Tareas de Proceso';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener las tareas de un determinado proceso de Workflow.`;
+  pubName    = 'BTWorkflow.ObtenerTareasDeProceso';
+  programa   = 'RBTPG462';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'procesoId', Tipo: 'Int', Comentarios: 'Identificador de proceso Workflow.' }];
+  outputData = [{ Nombre: 'sdtTareas', Tipo: '[sBTTareaWF](#sbttareawf)', Comentarios: 'Listado de tareas Workflow.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '40001', Descripcion: 'El proceso ingresado no existe.' }, { Codigo: '40002', Descripcion: 'No se encontraron tareas para el proceso ingresado.' }];
 
   examples = {
     invocation: { xml: `

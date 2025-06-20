@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosReprocesablesComponent1750272790747 {
+export class ObtenerProcesosReprocesablesComponent1750446218114 {
   pageTitle        = 'Obtener Procesos Reprocesables';
   description      = `Método para obtener un listado de los procesos reprocesables de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosReprocesables';

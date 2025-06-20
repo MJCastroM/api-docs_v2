@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoSegurosSinClienteComponent1750272791810 {
+export class SimularIngresandoSegurosSinClienteComponent1750446218952 {
   pageTitle        = 'Simular Ingresando Seguros Sin Cliente';
   description      = `Método para simular el alta de un préstamo sin cliente ingresando los seguros a aplicar.`;
   pubName    = 'BTPrestamos.SimularIngresandoSegurosSC';

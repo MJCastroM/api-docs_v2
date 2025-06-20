@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdendeCuentaComponent1750272790795 {
+export class ObtenerDetalledeOrdendeCuentaComponent1750446218148 {
   pageTitle        = 'Obtener Detalle de Orden de Cuenta';
   description      = `Método para obtener la información de las líneas del detalle de orden de cuenta.`;
   pubName    = 'BTCASHManagement.ObtenerDetalleOrdenCuenta';

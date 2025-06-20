@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSolicitudesClienteComponent1750272791365 {
+export class ObtenerSolicitudesClienteComponent1750446218638 {
   pageTitle        = 'Obtener Solicitudes Cliente';
   description      = `Método para obtener un listado de las solicitudes activas de préstamos de un cliente.`;
   pubName    = 'BTMicrofinanzas.ObtenerSolicitudesCliente';

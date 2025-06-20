@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosdeAcreditacionComponent1750272791189 {
+export class ObtenerPeriodosdeAcreditacionComponent1750446218538 {
   pageTitle        = 'Obtener Períodos de Acreditación';
   description      = `Método para obtener los períodos de acreditación cargados en el sistema.`;
   pubName    = 'BTCuentasVista.ObtenerPeriodosDeAcreditacion';

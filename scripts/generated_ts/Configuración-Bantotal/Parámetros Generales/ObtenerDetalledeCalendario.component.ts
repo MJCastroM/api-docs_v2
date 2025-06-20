@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendarioComponent1750272791010 {
+export class ObtenerDetalledeCalendarioComponent1750446218366 {
   pageTitle        = 'Obtener Detalle de Calendario';
   description      = `Método para obtener el detalle de los días de un determinado calendario.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendario';

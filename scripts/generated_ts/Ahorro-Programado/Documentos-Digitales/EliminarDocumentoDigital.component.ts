@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoDigitalComponent1750272790659 {
+export class EliminarDocumentoDigitalComponent1750446218046 {
   pageTitle        = 'Eliminar Documento Digital';
   description      = `Método para eliminar un documento digital de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.EliminarDocumentoDigital';

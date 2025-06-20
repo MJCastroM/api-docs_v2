@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750272790650 {
+export class SimularComponent1750446218041 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.Simular';

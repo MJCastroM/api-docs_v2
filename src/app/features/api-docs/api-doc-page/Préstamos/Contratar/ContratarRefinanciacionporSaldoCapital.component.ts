@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionporSaldoCapitalComponent1750272791680 {
+export class ContratarRefinanciacionporSaldoCapitalComponent1750446218844 {
   pageTitle        = 'Contratar Refinanciación por Saldo Capital';
   description      = `Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.`;
   pubName    = 'BTPrestamos.ContratarRefinanciacionSaldoCapital';
