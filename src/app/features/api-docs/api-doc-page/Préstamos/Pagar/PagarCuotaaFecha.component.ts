@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarCuotaaFechaComponent1750272791776 {
+export class PagarCuotaaFechaComponent1750446218925 {
   pageTitle        = 'Pagar Cuota a Fecha';
   description      = `Método para realizar el pago de cuota de un préstamo a una fecha valor.`;
   pubName    = 'BTPrestamos.PagarCuotaAFecha';

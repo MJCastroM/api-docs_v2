@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DesbloquearComponent1750272791894 {
+export class DesbloquearComponent1750446219012 {
   pageTitle        = 'Desbloquear';
   description      = `Método para desbloquear una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.Desbloquear';

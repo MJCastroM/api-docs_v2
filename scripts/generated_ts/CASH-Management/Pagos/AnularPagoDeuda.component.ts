@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularPagoDeudaComponent1750272790819 {
+export class AnularPagoDeudaComponent1750446218167 {
   pageTitle        = 'Anular Pago Deuda';
   description      = `Método para anular un pago realizado de una factura.`;
   pubName    = 'BTCASHManagement.AnularPagoDeuda';

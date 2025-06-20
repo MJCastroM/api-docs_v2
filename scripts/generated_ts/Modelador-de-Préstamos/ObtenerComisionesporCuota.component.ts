@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionesporCuotaComponent1750272791388 {
+export class ObtenerComisionesporCuotaComponent1750446218656 {
   pageTitle        = 'Obtener Comisiones por Cuota';
   description      = `Método para obtener las comisiones parametrizadas por cuota para un producto de préstamos.`;
   pubName    = 'BTModeladorPrestamos.ObtenerComisionesCuota';

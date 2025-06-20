@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionporDeudaTotalComponent1750272791819 {
+export class SimularRefinanciacionporDeudaTotalComponent1750446218958 {
   pageTitle        = 'Simular Refinanciación por Deuda Total';
   description      = `Método para simular una refinanciación de uno o más préstamos, siendo el capital del nuevo préstamo la suma de la deuda total de los seleccionados.`;
   pubName    = 'BTPrestamos.SimularRefinanciacionDeudaTotal';

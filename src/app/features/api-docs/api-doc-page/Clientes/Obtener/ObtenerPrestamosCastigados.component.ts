@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosCastigadosComponent1750272790937 {
+export class ObtenerPrestamosCastigadosComponent1750446218288 {
   pageTitle        = 'Obtener Préstamos Castigados';
   description      = `Método para obtener los productos de préstamo castigados de un cliente.`;
   pubName    = 'BTClientes.ObtenerPrestamosCastigados';

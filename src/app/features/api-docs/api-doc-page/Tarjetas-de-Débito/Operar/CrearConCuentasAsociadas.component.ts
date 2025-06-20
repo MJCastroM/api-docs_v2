@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearConCuentasAsociadasComponent1750272791886 {
+export class CrearConCuentasAsociadasComponent1750446219008 {
   pageTitle        = 'Crear Con Cuentas Asociadas';
   description      = `Método para dar de alta una tarjeta con cuentas asociadas.`;
   pubName    = 'BTTarjetasDeDebito.CrearConCuentasAsociadas';

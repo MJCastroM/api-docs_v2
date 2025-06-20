@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaAbonosComponent1750272790680 {
+export class ObtenerCronogramaAbonosComponent1750446218062 {
   pageTitle        = 'Obtener Cronograma de Abonos';
   description      = `Método para obtener el cronograma de abonos de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.ObtenerCronogramaDeAbonos';

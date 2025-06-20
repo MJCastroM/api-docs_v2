@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarOrdendeArchivoParaCuentaComponent1750272790832 {
+export class VisualizarOrdendeArchivoParaCuentaComponent1750446218181 {
   pageTitle        = 'Visualizar Orden de Archivo Para Cuenta';
   description      = `Método para visualizar las ordenes de un archivo de una cuenta.`;
   pubName    = 'BTCASHManagement.VisualizarOrdenArchivoCuenta';

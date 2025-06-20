@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionComponent1750272791676 {
+export class ContratarRefinanciacionComponent1750446218841 {
   pageTitle        = 'Contratar Refinanciación';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para contratar la refinanciación de un préstamo.`;
+  pubName    = 'BTPrestamos.ContratarRefinanciacion';
+  programa   = 'RBTPG549';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: '[Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores](#valores)].' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }, { Nombre: 'operacionUIdIns', Tipo: 'Long', Comentarios: '[Hidden: Valor fijo vacío para este método].' }];
+  outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación a contratar.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación a contratar para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30006', Descripcion: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'El cliente ingresado no coincide con el de la operación.' }, { Codigo: '30008', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'No se recuperó la operación de cobro para el identificador: [Número de Identificador].' }, { Codigo: '30010', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30011', Descripcion: 'No se recibió identificador de la operación de cuenta vista.' }, { Codigo: '30012', Descripcion: 'No se recibió identificador de la operación de instrucción de cobro.' }];
 
   examples = {
     invocation: { xml: `

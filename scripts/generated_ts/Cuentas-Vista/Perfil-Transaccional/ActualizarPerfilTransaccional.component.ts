@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPerfilTransaccionalComponent1750272791214 {
+export class ActualizarPerfilTransaccionalComponent1750446218547 {
   pageTitle        = 'Actualizar Perfil Transaccional';
   description      = `Método para actualizar el perfil transaccional de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ActualizarPerfilTransaccional';

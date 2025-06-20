@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSeguroComponent1750272791846 {
+export class ContratarSeguroComponent1750446218974 {
   pageTitle        = 'Contratar Seguro';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para contratar un seguro.`;
+  pubName    = 'BTSegurosVoluntarios.ContratarSeguro';
+  programa   = 'RBTPG542';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'seguroUId', Tipo: 'Int', Comentarios: 'Identificador único del seguro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'numeroAfiliacion', Tipo: 'Int', Comentarios: 'Número de afiliación.' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }, { Nombre: 'stringAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo vacío para este método].' }];
+  outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó código de seguro.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'El importe ingresado no puede ser nulo.' }, { Codigo: '30004', Descripcion: 'El importe ingresado no puede ser negativo.' }, { Codigo: '30005', Descripcion: 'La cantidad de Cuotas es menor a la indicada.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador]' }, { Codigo: '40044', Descripcion: 'Error de configuración: No se definió transacción a ejecutar.' }, { Codigo: '60001', Descripcion: 'El código del seguro no es válido para la contratación.' }, { Codigo: '60008', Descripcion: 'La cantidad de Cuotas debe ser menor a la indicada.' }, { Codigo: '60009', Descripcion: 'El código de moneda ingresado no existe.' }];
 
   examples = {
     invocation: { xml: `

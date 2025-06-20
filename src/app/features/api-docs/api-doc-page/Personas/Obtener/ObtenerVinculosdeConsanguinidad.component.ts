@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeConsanguinidadComponent1750272791619 {
+export class ObtenerVinculosdeConsanguinidadComponent1750446218803 {
   pageTitle        = 'Obtener Vínculos de Consanguinidad';
   description      = `Método para obtener un listado de los vínculos de consanguinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosConsanguinidad';

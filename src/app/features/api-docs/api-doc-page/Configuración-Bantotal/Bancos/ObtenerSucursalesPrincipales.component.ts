@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesPrincipalesComponent1750272790979 {
+export class ObtenerSucursalesPrincipalesComponent1750446218338 {
   pageTitle        = 'Obtener Sucursales Principales';
   description      = `Método para obtener un listado de las sucursales principales.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerSucursalesPrincipales';

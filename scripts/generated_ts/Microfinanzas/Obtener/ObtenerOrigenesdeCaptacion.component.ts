@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOrigenesdeCaptacionComponent1750272791361 {
+export class ObtenerOrigenesdeCaptacionComponent1750446218633 {
   pageTitle        = 'Obtener Orígenes de Captación';
   description      = `Método para obtener los orígenes de captación.`;
   pubName    = 'BTMicrofinanzas.ObtenerOrigenesCaptacion';

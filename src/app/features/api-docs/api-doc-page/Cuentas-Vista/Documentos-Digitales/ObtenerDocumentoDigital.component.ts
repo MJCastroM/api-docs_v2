@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750272791169 {
+export class ObtenerDocumentoDigitalComponent1750446218526 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerDocumentoDigital';

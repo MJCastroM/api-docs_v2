@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesPersonaJuridicaComponent1750272791586 {
+export class ObtenerIntegrantesPersonaJuridicaComponent1750446218777 {
   pageTitle        = 'Obtener Integrantes Persona Jurídica';
   description      = `Método para obtener un listado de los integrantes de una persona jurídica.`;
   pubName    = 'BTPersonas.ObtenerIntegrantesPersonaJuridica';

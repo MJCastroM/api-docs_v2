@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeAfinidadComponent1750272791618 {
+export class ObtenerVinculosdeAfinidadComponent1750446218800 {
   pageTitle        = 'Obtener Vínculos de Afinidad';
   description      = `Método para obtener un listado de los vínculos de afinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosAfinidad';

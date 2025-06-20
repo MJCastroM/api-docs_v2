@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearChequeraElectronicaComponent1750272790699 {
+export class CrearChequeraElectronicaComponent1750446218078 {
   pageTitle        = 'Crear Chequera Electrónica';
   description      = `Método para crear una chequera electrónica.`;
   pubName    = 'BTCuentasCorrientes.CrearChequeaElectronica';

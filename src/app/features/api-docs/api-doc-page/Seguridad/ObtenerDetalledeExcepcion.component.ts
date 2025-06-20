@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeExcepcionComponent1750272791838 {
+export class ObtenerDetalledeExcepcionComponent1750446218969 {
   pageTitle        = 'Obtener Detalle de Excepción';
   description      = `Método para obtener el detalle de una excepción.`;
   pubName    = 'BTSeguridad.ObtenerDetalleExcepcion';

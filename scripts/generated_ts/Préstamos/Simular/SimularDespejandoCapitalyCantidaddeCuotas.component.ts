@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoCapitalyCantidaddeCuotasComponent1750272791796 {
+export class SimularDespejandoCapitalyCantidaddeCuotasComponent1750446218941 {
   pageTitle        = 'Simular Despejando Capital y Cantidad de Cuotas';
   description      = `Método para simular un préstamo despejando capital y cantidad de cuotas.`;
   pubName    = 'BTPrestamos.SimularDespejandoCapitalCantCuotas';

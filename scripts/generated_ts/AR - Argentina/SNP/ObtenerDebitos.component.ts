@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDebitosComponent1750272790722 {
+export class ObtenerDebitosComponent1750446218097 {
   pageTitle        = 'Obtener Débitos';
   description      = `Método para obtener los débitos de una adhesión, dado el estado ingresado.`;
   pubName    = 'BTSNP.ConsultarDebitos';

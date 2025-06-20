@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumenporProductoaCierreAnoComponent1750272790949 {
+export class ObtenerResumenporProductoaCierreAnoComponent1750446218297 {
   pageTitle        = 'Obtener Resumen por Producto a Cierre Año';
   description      = `Método para obtener un resumen con el detalle de las operaciones de un cliente al cierre del año.`;
   pubName    = 'BTClientes.ObtenerResumenPorProductoACierreAnio';

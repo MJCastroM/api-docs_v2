@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresOrdenSegunCampoComponent1750272790809 {
+export class ObtenerValoresOrdenSegunCampoComponent1750446218161 {
   pageTitle        = 'Obtener Valores de Orden Según Campo';
   description      = `Método para obtener los valores de los campos CASH recibidos para la orden que pertenezca al campo/valor recibido.`;
   pubName    = 'BTCASHManagement.ObtenerValoresOrdenSegunCampo';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOfertaVehicularComponent1750272791425 {
+export class ObtenerDetalleOfertaVehicularComponent1750446218677 {
   pageTitle        = 'Obtener Detalle de Oferta Vehicular';
   description      = `Método para obtener el detalle de una oferta vehicular.`;
   pubName    = 'BTPartners.ObtenerDetalleOfertaVehicular';

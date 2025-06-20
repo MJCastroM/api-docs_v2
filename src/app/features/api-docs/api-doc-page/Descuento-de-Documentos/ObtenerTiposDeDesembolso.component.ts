@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeDesembolsoComponent1750272791295 {
+export class ObtenerTiposDeDesembolsoComponent1750446218593 {
   pageTitle        = 'Obtener Tipos de Desembolso';
   description      = `Método para obtener los tipos de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.ObtenerTiposDeDesembolso';

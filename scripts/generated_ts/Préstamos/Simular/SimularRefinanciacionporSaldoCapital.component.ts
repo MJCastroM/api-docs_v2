@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionporSaldoCapitalComponent1750272791820 {
+export class SimularRefinanciacionporSaldoCapitalComponent1750446218959 {
   pageTitle        = 'Simular Refinanciación por Saldo Capital';
   description      = `Método para simular una refinanciación de uno o más préstamos, siendo el capital del nuevo préstamo la suma de los saldos capitales de los seleccionados.`;
   pubName    = 'BTPrestamos.SimularRefinanciacionSaldoCapital';

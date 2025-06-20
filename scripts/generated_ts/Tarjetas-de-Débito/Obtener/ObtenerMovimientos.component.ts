@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750272791867 {
+export class ObtenerMovimientosComponent1750446218992 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener los movimientos de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerMovimientos';

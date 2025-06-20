@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresasOriginantesComponent1750272790726 {
+export class ObtenerEmpresasOriginantesComponent1750446218098 {
   pageTitle        = 'Obtener Empresas Originantes';
   description      = `Método para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.`;
   pubName    = 'BTSNP.ObtenerEmpresasOriginantes';

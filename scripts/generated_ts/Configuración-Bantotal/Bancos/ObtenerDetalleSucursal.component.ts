@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleSucursalComponent1750272790977 {
+export class ObtenerDetalleSucursalComponent1750446218336 {
   pageTitle        = 'Obtener Detalle de Sucursal';
   description      = `Método para obtener el detalle de una sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleSucursal';

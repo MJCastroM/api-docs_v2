@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionesHabilitadosComponent1750272791270 {
+export class ObtenerInstruccionesHabilitadosComponent1750446218578 {
   pageTitle        = 'Obtener Instrucciones Habilitados';
   description      = `Método para obtener un listado de las instrucciones de un producto.`;
   pubName    = 'BTDepositoAPlazo.ObtenerInstruccionesHabilitados';

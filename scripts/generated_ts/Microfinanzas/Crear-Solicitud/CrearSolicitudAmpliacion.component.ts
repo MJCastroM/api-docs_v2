@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudAmpliacionComponent1750272791320 {
+export class CrearSolicitudAmpliacionComponent1750446218608 {
   pageTitle        = 'Crear Solicitud Ampliación';
   description      = `Método para crear una solicitud de ampliación de crédito.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudAmpliacion';

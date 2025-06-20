@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadoDeOperacionComponent1750272791183 {
+export class ObtenerEstadoDeOperacionComponent1750446218533 {
   pageTitle        = 'Obtener Estado De Operación';
   description      = `Método para obtener el estado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeOperacion';

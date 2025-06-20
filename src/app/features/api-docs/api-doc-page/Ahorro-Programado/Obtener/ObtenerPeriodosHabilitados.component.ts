@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosHabilitadosComponent1750272790687 {
+export class ObtenerPeriodosHabilitadosComponent1750446218067 {
   pageTitle        = 'Obtener Períodos Habilitados';
   description      = `Método para obtener un listado de períodos habilitados para los casos que el alta de ahorro programado se realice mediante selección de período como lista de valores.`;
   pubName    = 'BTAhorroProgramado.ObtenerPeriodosHabilitados';

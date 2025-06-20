@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarResumenCabezalComponent1750272790836 {
+export class VisualizarResumenCabezalComponent1750446218185 {
   pageTitle        = 'Visualizar Resumen Cabezal';
   description      = `Método para visualizar un resumen de información de un archivo CASH.`;
   pubName    = 'BTCASHManagement.VisualizarResumenCabezal';

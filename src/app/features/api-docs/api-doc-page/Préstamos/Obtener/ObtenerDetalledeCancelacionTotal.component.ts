@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCancelacionTotalComponent1750272791709 {
+export class ObtenerDetalledeCancelacionTotalComponent1750446218866 {
   pageTitle        = 'Obtener Detalle de Cancelación Total';
   description      = `Método para obtener el detalle de la cancelación total de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerDetalleCancelacionTotal';

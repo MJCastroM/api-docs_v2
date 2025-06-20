@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraComponent1750272791116 {
+export class ObtenerTiposdeChequeraComponent1750446218447 {
   pageTitle        = 'Obtener Tipos de Chequera';
   description      = `Método para obtener un listado de los tipos de chequeras.`;
   pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequera';

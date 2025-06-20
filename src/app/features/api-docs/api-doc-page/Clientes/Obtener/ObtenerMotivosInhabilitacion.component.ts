@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosInhabilitacionComponent1750272790922 {
+export class ObtenerMotivosInhabilitacionComponent1750446218272 {
   pageTitle        = 'Obtener Motivos Inhabilitación';
   description      = `Método para obtener un listado de los motivos de inhabilitación.`;
   pubName    = 'BTClientes.ObtenerMotivosInhabilitacion';

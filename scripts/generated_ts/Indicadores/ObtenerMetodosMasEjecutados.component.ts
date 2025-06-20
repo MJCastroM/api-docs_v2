@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetodosMasEjecutadosComponent1750272791304 {
+export class ObtenerMetodosMasEjecutadosComponent1750446218599 {
   pageTitle        = 'Obtener Métodos Más Ejecutados';
   description      = `Método para obtener un listado de los métodos más ejecutados para un servicio dado y sus estadísticas.`;
   pubName    = 'BTIndicadores.ObtenerMetodosMasEjecutados';

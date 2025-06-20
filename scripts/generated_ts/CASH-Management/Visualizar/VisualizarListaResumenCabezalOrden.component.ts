@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarListaResumenCabezalOrdenComponent1750272790831 {
+export class VisualizarListaResumenCabezalOrdenComponent1750446218180 {
   pageTitle        = 'Visualizar Lista de Órdenes con su Resumen';
   description      = `Método para obtener la lista de órdenes con su resumen de información de un archivo CASH.`;
   pubName    = 'BTCASHManagement.VisualizarListaResumenCabezalOrden';

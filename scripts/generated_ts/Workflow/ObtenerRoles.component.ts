@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesComponent1750272791931 {
+export class ObtenerRolesComponent1750446219040 {
   pageTitle        = 'Obtener Roles';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener un listado de los roles de Workflow.`;
+  pubName    = 'BTWorkflow.ObtenerRoles ';
+  programa   = 'RBTPG464 ';
+  scope      = 'Global ';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
   inputData  = [];
-  outputData = [];
-  errors     = [];
+  outputData = [{ Nombre: 'sdtRoles', Tipo: '[sBTRolWF](#sbtrolwf)', Comentarios: 'Listado de roles de Workflow.' }];
+  errors     = [{ Codigo: '40001', Descripcion: 'No existen roles ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `

@@ -52,10 +52,16 @@ function parseTable(md) {
 }
 
 function extractBackendConfig(content) {
-  const block = extractBlock(content,
+  var block = extractBlock(content,
     '<!-- ABRE CONFIGURACIÓN BACKEND -->',
     '<!-- CIERRA CONFIGURACIÓN BACKEND -->'
   );
+  if (!block){
+    block = extractBlock(content,
+    '<!-- ABRE LA CONFIGURACIÓN BACKEND -->',
+    '<!-- CIERRA LA CONFIGURACIÓN BACKEND -->'
+    );
+  }
   if (!block) return { hasConfig: false, text: '', config: [] };
 
   const infoTag = '::: info Configuración Backend';
@@ -81,10 +87,16 @@ function extractBackendConfig(content) {
 }
 
 function extractSdts(content) {
-  const block = extractBlock(content,
+  var block = extractBlock(content,
     '<!-- ABRE SDT -->',
     '<!-- CIERRA SDT -->'
   );
+  if (!block){
+    block = extractBlock(content,
+    '<!-- ABRE EL SDT -->',
+    '<!-- CIERRA EL SDT -->'
+    );
+  }
   const sdts = [];
   const headerRe = /###\s*([A-Za-z0-9_]+)/g;
   const entries = Array.from(block.matchAll(headerRe));
@@ -114,10 +126,16 @@ function extractSdts(content) {
 }
 
 function extractApiTabs(content) {
-  const block = extractBlock(content,
+  var block = extractBlock(content,
     '<!-- ABRE TABLA DE DATOS -->',
     '<!-- CIERRA TABLA DE DATOS -->'
   );
+  if (!block){
+    block = extractBlock(content,
+    '<!-- ABRE LA TABLA DE DATOS -->',
+    '<!-- CIERRA LA TABLA DE DATOS -->'
+    );
+  }
   const sections = {};
   const tabRe = /@tab\s*([^\n]+)\n([\s\S]*?)(?=(?:@tab|:::|$))/g;
   let m;
@@ -132,14 +150,26 @@ function extractApiTabs(content) {
 }
 
 function extractExamples(content) {
-  const inv = extractBlock(content,
+  var inv = extractBlock(content,
     '<!-- ABRE EJEMPLO DE INVOCACIÓN -->',
     '<!-- CIERRA EJEMPLO DE INVOCACIÓN -->'
   );
-  const resp = extractBlock(content,
+  if (!inv){
+    inv = extractBlock(content,
+    '<!-- ABRE EL EJEMPLO DE INVOCACIÓN -->',
+    '<!-- CIERRA EL EJEMPLO DE INVOCACIÓN -->'
+    );
+  }
+  var resp = extractBlock(content,
     '<!-- ABRE EJEMPLO DE RESPUESTA -->',
     '<!-- CIERRA EJEMPLO DE RESPUESTA -->'
   );
+  if (!resp){
+    resp = extractBlock(content,
+    '<!-- ABRE EL EJEMPLO DE RESPUESTA -->',
+    '<!-- CIERRA EL EJEMPLO DE RESPUESTA -->'
+    );
+  }
   const code = (blk, lang) => {
     const re = new RegExp('```' + lang + '[\\s\\S]*?```', 'm');
     const mm = blk.match(re);
@@ -172,10 +202,16 @@ function renderComponent(mdPath) {
 
   // metadatos
   const key  = data.title || rawName;
-  const meta = extractBlock(content,
+  var meta = extractBlock(content,
     '<!-- ABRE DATOS DEL MÉTODO -->',
     '<!-- CIERRA DATOS DEL MÉTODO -->'
   );
+  if (!meta){
+    meta = extractBlock(content,
+    '<!-- ABRE LOS DATOS DEL MÉTODO -->',
+    '<!-- CIERRA LOS DATOS DEL MÉTODO -->'
+    );
+  }
 
   const pub     = meta.match(/\*\*Nombre publicación:\*\*\s*(.+)/)?.[1] || '';
   const prog    = meta.match(/\*\*Programa:\*\*\s*(.+)/)?.[1] || '';

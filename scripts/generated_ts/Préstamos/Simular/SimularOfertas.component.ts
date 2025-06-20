@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularOfertasComponent1750272791815 {
+export class SimularOfertasComponent1750446218955 {
   pageTitle        = 'Simular Ofertas';
   description      = `Método para simular ofertas de préstamos.`;
   pubName    = 'BTPrestamos.SimularOfertas';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaOriginalComponent1750272791699 {
+export class ObtenerCronogramaOriginalComponent1750446218861 {
   pageTitle        = 'Obtener Cronograma Original';
   description      = `Método que devuelve el cronograma original de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaOriginal';

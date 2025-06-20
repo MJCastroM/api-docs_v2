@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTextoComponent1750272791003 {
+export class ObtenerTiposdeTextoComponent1750446218360 {
   pageTitle        = 'Obtener Tipos de Texto';
   description      = `Método para obtener un listado de los tipos de texto ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeTexto';

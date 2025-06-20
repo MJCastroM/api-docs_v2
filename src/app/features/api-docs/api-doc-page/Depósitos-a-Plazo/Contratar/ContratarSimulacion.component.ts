@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750272791249 {
+export class ContratarSimulacionComponent1750446218564 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un depósito a plazo fijo a partir de una simulación existente.`;
   pubName    = 'BTDepositoAPlazo.ContratarSimulacion';

@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOperacionesaRefinanciarComponent1750272791715 {
+export class ObtenerDetalledeOperacionesaRefinanciarComponent1750446218874 {
   pageTitle        = 'Obtener Detalle de Operaciones a Refinanciar';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener detalle de las operaciones a refinanciar.`;
+  pubName    = 'BTPrestamos.ObtenerDetalleOperacionesARefinanciar';
+  programa   = 'RBTPG547';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'sdtOperacionesARefinanciar', Tipo: '[sBTPrestamos](#sbtprestamos)', Comentarios: 'Datos de las operaciones a refinanciar.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único del producto.' }];
+  outputData = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'sdtPrestamosACancelar', Tipo: '[sBTPrestamoACancelar](#sbtprestamoacancelar)', Comentarios: 'Listado de préstamos a cancelar.' }, { Nombre: 'sdtConceptosPrestamo', Tipo: '[sBTConceptosPrestamo](#sbtconceptosprestamo)', Comentarios: 'Conceptos del préstamo.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'No se recuperó el producto para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se indicaron operaciones a refinanciar.' }, { Codigo: '30013', Descripcion: 'El producto indicado es incorrecto' }];
 
   examples = {
     invocation: { xml: `

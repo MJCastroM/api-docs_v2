@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasIndicesComponent1750272791305 {
+export class ObtenerMonedasIndicesComponent1750446218600 {
   pageTitle        = 'Obtener Monedas Indices';
   description      = `Método para obtener las monedas e índices en funcionamiento.`;
   pubName    = 'BTIndicadores.ObtenerMonedasIndices';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosCVComponent1750272791103 {
+export class ObtenerProductosCVComponent1750446218441 {
   pageTitle        = 'Obtener Productos CV';
   description      = `Método para obtener un listado de los productos de cuenta bolsillo habilitados para una cuenta vista.`;
   pubName    = 'BTCuentasBolsillo.ObtenerProductosCV';

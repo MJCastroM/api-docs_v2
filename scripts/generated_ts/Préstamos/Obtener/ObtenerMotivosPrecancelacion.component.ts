@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosPrecancelacionComponent1750272791740 {
+export class ObtenerMotivosPrecancelacionComponent1750446218895 {
   pageTitle        = 'Obtener Motivos de Precancelación';
   description      = `Método para obtener los motivos de precancelación.`;
   pubName    = 'BTPrestamos.ObtenerMotivosPrecancelacion';

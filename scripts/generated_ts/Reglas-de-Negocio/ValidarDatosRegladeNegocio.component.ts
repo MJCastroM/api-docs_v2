@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarDatosRegladeNegocioComponent1750272791835 {
+export class ValidarDatosRegladeNegocioComponent1750446218966 {
   pageTitle        = 'Validar Datos Regla de Negocio';
   description      = `Método para validar los datos de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ValidarDatosReglaNegocio';

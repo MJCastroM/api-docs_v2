@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerReglasdeNegocioComponent1750272791833 {
+export class ObtenerReglasdeNegocioComponent1750446218965 {
   pageTitle        = 'Obtener Reglas de Negocio';
   description      = `Método para obtener un listado de las reglas de negocio.`;
   pubName    = 'BTReglasNegocio.ObtenerReglasNegocio';

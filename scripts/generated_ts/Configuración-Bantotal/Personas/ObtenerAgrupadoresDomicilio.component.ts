@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresDomicilioComponent1750272791026 {
+export class ObtenerAgrupadoresDomicilioComponent1750446218381 {
   pageTitle        = 'Obtener Agrupadores de Domicilio';
   description      = `Método para obtener los diferentes niveles de agrupadores de domicilios.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio';

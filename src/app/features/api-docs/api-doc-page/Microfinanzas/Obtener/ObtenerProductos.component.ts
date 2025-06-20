@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750272791363 {
+export class ObtenerProductosComponent1750446218636 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener una lista de los productos de préstamos.`;
   pubName    = 'BTMicrofinanzas.ObtenerProductos';

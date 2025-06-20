@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaenEspecieComponent1750272791697 {
+export class ObtenerCronogramaenEspecieComponent1750446218859 {
   pageTitle        = 'Obtener Cronograma en Especie';
   description      = `Método para obtener el cronograma de un préstamo expresado en especie.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaEnEspecie';

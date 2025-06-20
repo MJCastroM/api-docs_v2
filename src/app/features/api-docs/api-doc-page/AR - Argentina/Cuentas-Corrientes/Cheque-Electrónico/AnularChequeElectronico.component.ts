@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularChequeElectronicoComponent1750272790694 {
+export class AnularChequeElectronicoComponent1750446218074 {
   pageTitle        = 'Anular Cheque Electrónico';
   description      = `Método para anular un cheque electrónico de una chequera.`;
   pubName    = 'BTCuentasCorrientes.AnularChequeElectronico';

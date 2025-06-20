@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarUsuarioComponent1750272791912 {
+export class EliminarUsuarioComponent1750446219026 {
   pageTitle        = 'Eliminar Usuario';
   description      = `Método para eliminar un usuario.`;
   pubName    = 'BTUsuarios.EliminarUsuario';

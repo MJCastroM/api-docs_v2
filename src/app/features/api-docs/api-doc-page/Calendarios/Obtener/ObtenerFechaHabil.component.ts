@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabilComponent1750272790758 {
+export class ObtenerFechaHabilComponent1750446218123 {
   pageTitle        = 'Obtener Fecha Hábil';
   description      = `Método para obtener si la fecha ingresada es una fecha hábil.`;
   pubName    = 'BTCalendarios.ObtenerFechaHabil';

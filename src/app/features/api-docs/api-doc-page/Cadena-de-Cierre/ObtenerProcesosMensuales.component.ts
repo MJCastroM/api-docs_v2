@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosMensualesComponent1750272790745 {
+export class ObtenerProcesosMensualesComponent1750446218113 {
   pageTitle        = 'Obtener Procesos Mensuales';
   description      = `Método para obtener un listado de los procesos mensuales de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosMensuales';

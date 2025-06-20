@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGuiadeProcesoComponent1750272791462 {
+export class ObtenerGuiadeProcesoComponent1750446218693 {
   pageTitle        = 'Obtener Guía de Proceso';
   description      = `Método para obtener los datos de una determinada guía de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerGuiaDeProceso';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAsesoresComponent1750272791352 {
+export class ObtenerAsesoresComponent1750446218628 {
   pageTitle        = 'Obtener Asesores';
   description      = `Método para obtener los usuarios asesores.`;
   pubName    = 'BTMicrofinanzas.ObtenerAsesores';

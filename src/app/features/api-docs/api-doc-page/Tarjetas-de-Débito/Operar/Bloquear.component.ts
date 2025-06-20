@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BloquearComponent1750272791883 {
+export class BloquearComponent1750446219004 {
   pageTitle        = 'Bloquear';
   description      = `Método para bloquear una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.Bloquear';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BuscarClienteComponent1750272791317 {
+export class BuscarClienteComponent1750446218606 {
   pageTitle        = 'Buscar Cliente';
   description      = `Método para buscar una persona y sus cuentas cliente.`;
   pubName    = 'BTMicrofinanzas.BuscarCliente';

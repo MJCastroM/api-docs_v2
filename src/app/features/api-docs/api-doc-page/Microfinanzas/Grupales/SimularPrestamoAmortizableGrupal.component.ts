@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoAmortizableGrupalComponent1750272791350 {
+export class SimularPrestamoAmortizableGrupalComponent1750446218626 {
   pageTitle        = 'Simular Amortizable Grupal';
   description      = `Método para simular la solicitud de un préstamo amortizable grupal.`;
   pubName    = 'BTMicrofinanzas.SimularAmortizableGrupal';

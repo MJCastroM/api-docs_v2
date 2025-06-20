@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarFATCAComponent1750272791526 {
+export class AgregarFATCAComponent1750446218725 {
   pageTitle        = 'Agregar FATCA';
   description      = `Método para agregar la información FATCA de una persona.`;
   pubName    = 'BTPersonas.AgregarFATCA';

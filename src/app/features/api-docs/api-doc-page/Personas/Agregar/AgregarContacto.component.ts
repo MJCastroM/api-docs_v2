@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarContactoComponent1750272791508 {
+export class AgregarContactoComponent1750446218717 {
   pageTitle        = 'Agregar Contacto';
   description      = `Método para agregar un contacto jurídico a una persona.`;
   pubName    = 'BTPersonas.AgregarContacto';

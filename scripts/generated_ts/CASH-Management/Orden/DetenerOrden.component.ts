@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DetenerOrdenComponent1750272790813 {
+export class DetenerOrdenComponent1750446218163 {
   pageTitle        = 'Detener Orden';
   description      = `Método para detener el procesamiento de una orden CASH autorizada.`;
   pubName    = 'BTCASHManagement.DetenerOrden';

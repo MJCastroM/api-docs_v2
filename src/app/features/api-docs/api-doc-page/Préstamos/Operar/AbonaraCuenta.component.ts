@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AbonaraCuentaComponent1750272791761 {
+export class AbonaraCuentaComponent1750446218909 {
   pageTitle        = 'Abonar a Cuenta';
   description      = `Método para recibir un pago a un préstamo en el que por alguna condición no se pudiere operar en ese momento. El pago se realiza a un pasivo transitorio u otro rubro a definir, el cual luego deberá ser volcado al préstamo.`;
   pubName    = 'BTPrestamos.AbonarACuenta';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetallePagoPrestamoComponent1750272791718 {
+export class ObtenerDetallePagoPrestamoComponent1750446218877 {
   pageTitle        = 'Obtener Detalle Pago Préstamo';
   description      = `Método para obtener el detalle de un pago de préstamo a partir del movimiento.`;
   pubName    = 'BTPrestamos.ObtenerDetallePagoPrestamo';

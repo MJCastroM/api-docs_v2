@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarenListasNegrasComponent1750272791630 {
+export class ValidarenListasNegrasComponent1750446218808 {
   pageTitle        = 'Validar en Listas Negras';
   description      = `Método para validar si una persona pertenece a alguna lista negra.`;
   pubName    = 'BTPersonas.ValidarEnListasNegras';

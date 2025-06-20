@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionComponent1750272791600 {
+export class ObtenerProfesionComponent1750446218789 {
   pageTitle        = 'Obtener Profesión';
   description      = `Método para obtener la profesión de una persona física.`;
   pubName    = 'BTPersonas.ObtenerProfesion';

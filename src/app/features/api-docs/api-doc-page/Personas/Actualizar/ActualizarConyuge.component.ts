@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarConyugeComponent1750272791481 {
+export class ActualizarConyugeComponent1750446218701 {
   pageTitle        = 'Actualizar Cónyuge';
   description      = `Método para actualizar el cónyuge de una persona.`;
   pubName    = 'BTPersonas.ActualizarConyuge';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosAdicionalesComponent1750272791572 {
+export class ObtenerDocumentosAdicionalesComponent1750446218762 {
   pageTitle        = 'Obtener Documentos Adicionales';
   description      = `Método para obtener un listado de los documentos adicionales de una persona.`;
   pubName    = 'BTPersonas.ObtenerDocumentosAdicionales';

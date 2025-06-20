@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPuntosdeVentaComponent1750272791440 {
+export class ObtenerPuntosdeVentaComponent1750446218683 {
   pageTitle        = 'Obtener Puntos de Venta';
   description      = `Método para retornar los puntos de venta del Partner.`;
   pubName    = 'BTPartners.ObtenerPuntosDeVenta';

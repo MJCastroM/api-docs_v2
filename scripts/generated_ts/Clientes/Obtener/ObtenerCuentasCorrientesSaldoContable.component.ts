@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasCorrientesSaldoContableComponent1750272790893 {
+export class ObtenerCuentasCorrientesSaldoContableComponent1750446218246 {
   pageTitle        = 'Obtener Cuentas Corrientes (Saldo Contable)';
   description      = `Método para obtener los productos de cuenta corriente que tiene contratado un cliente, junto con su saldo contable.`;
   pubName    = 'BTClientes.ObtenerCuentasCorrientes';

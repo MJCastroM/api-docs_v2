@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750272791227 {
+export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750446218554 {
   pageTitle        = 'Traspasar Entre Cuentas Mismo Titular (diferentes monedas)';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda cuyo titular sea la misma persona.`;
   pubName    = 'BTCuentasVista.TraspasarMismoTitularDiferentesMonedas';

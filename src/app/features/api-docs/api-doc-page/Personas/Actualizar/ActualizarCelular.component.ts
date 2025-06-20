@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCelularComponent1750272791475 {
+export class ActualizarCelularComponent1750446218698 {
   pageTitle        = 'Actualizar Celular';
   description      = `Método para actualizar el celular de una persona.`;
   pubName    = 'BTPersonas.ActualizarCelular';

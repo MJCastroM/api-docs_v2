@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoAmortizableComponent1750272791377 {
+export class SimularPrestamoAmortizableComponent1750446218646 {
   pageTitle        = 'Simular Amortizable';
   description      = `Método para simular el alta de un préstamo amortizable para un crédito individual.`;
   pubName    = 'BTMicrofinanzas.SimularAmortizable';

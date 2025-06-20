@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetadataDeTareaComponent1750272791928 {
+export class ObtenerMetadataDeTareaComponent1750446219036 {
   pageTitle        = 'Obtener Metadata De Tarea';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener la metadata de una determinada tarea de Workflow.`;
+  pubName    = 'BTWorkflow.ObtenerMetadataDeTarea';
+  programa   = 'RBTPG463 ';
+  scope      = 'Global ';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'procesoId', Tipo: 'Int', Comentarios: 'Identificador de proceso Workflow.' }, { Nombre: 'tareaId', Tipo: 'Int', Comentarios: 'Identificador de tarea Workflow.' }];
+  outputData = [{ Nombre: 'sdtMetadatas', Tipo: '[sBTMetadataWF](#sbtmetadatawf)', Comentarios: 'Listado de datos de metadata Workflow.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '40001', Descripcion: 'El proceso ingresado no existe.' }, { Codigo: '40002', Descripcion: 'La tarea ingresada no existe para el proceso.' }, { Codigo: '40003', Descripcion: 'No existe metadata para la tarea ingresada.' }];
 
   examples = {
     invocation: { xml: `

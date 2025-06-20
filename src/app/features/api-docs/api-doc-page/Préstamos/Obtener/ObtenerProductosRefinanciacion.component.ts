@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosRefinanciacionComponent1750272791756 {
+export class ObtenerProductosRefinanciacionComponent1750446218905 {
   pageTitle        = 'Obtener Productos Refinanciación';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para obtener los productos de refinanciación.`;
+  pubName    = 'BTPrestamos.ObtenerProductosRefinanciacion';
+  programa   = 'RBTPG546';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'sdtOperacionesARefinanciar', Tipo: '[sBTPrestamos](#sBTPrestamos)', Comentarios: 'Datos de las operaciones a refinanciar.' }];
+  outputData = [{ Nombre: 'sdtProductos', Tipo: '[sBTProducto](#sBTProducto)', Comentarios: 'Listados de los datos de producto.' }];
+  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se indicaron operaciones a refinanciar.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasDestinoHabilitadasComponent1750272790682 {
+export class ObtenerCuentasDestinoHabilitadasComponent1750446218063 {
   pageTitle        = 'Obtener Cuentas Destino Habilitadas';
   description      = `Método para obtener un listado de cuentas habilitadas para acreditar el ahorro.`;
   pubName    = 'BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas';

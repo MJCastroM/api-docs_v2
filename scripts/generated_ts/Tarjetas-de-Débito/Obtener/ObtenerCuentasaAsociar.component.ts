@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasaAsociarComponent1750272791854 {
+export class ObtenerCuentasaAsociarComponent1750446218980 {
   pageTitle        = 'Obtener Cuentas a Asociar';
   description      = `Método para obtener un listado de las posibles cuentas a asociar para una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCuentasAAsociar';

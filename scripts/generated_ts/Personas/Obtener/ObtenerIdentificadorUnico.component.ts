@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750272791583 {
+export class ObtenerIdentificadorUnicoComponent1750446218772 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único de una persona.`;
   pubName    = 'BTPersonas.ObtenerIdentificadorUnico';

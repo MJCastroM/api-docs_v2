@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDomicilioComponent1750272790854 {
+export class AgregarDomicilioComponent1750446218208 {
   pageTitle        = 'Agregar Domicilio';
   description      = `Método para agregar un domicilio a un cliente.`;
   pubName    = 'BTClientes.AgregarDomicilio';

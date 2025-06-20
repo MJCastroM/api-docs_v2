@@ -8,20 +8,20 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarSeguroComponent1750272791851 {
+export class PagarSeguroComponent1750446218978 {
   pageTitle        = 'Pagar Seguro';
-  description      = ``;
-  pubName    = '';
-  programa   = '';
-  scope      = '';
+  description      = `Método para pagar un seguro.`;
+  pubName    = 'BTSegurosVoluntarios.PagarSeguro';
+  programa   = 'RBTPG545';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
   backendConfig    = [];
 
-  inputData  = [];
-  outputData = [];
-  errors     = [];
+  inputData  = [{ Nombre: 'seguroUId', Tipo: 'Long', Comentarios: 'Identificador único del seguro.' }, { Nombre: 'montoPago', Tipo: 'Double', Comentarios: 'Monto a pagar.' }, { Nombre: 'operacionUIdCobro', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }];
+  outputData = [{ Nombre: 'movimientoUId', Tipo: 'long', Comentarios: 'Identificador único del movimiento.' }];
+  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador de operación del seguro.' }, { Codigo: '30003', Descripcion: 'Se debe ingresar un monto.' }, { Codigo: '30004', Descripcion: 'No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la clave de operación de cobro para el identificador: [Número de Identificador].' }, { Codigo: '50002', Descripcion: 'La operación no existe.' }, { Codigo: '50003', Descripcion: 'La operación de cobro no existe.' }, { Codigo: '50005', Descripcion: 'Atención: No se pudo obtener el numerador para la transacción.' }, { Codigo: '50006', Descripcion: 'La operación esta cancelada.' }, { Codigo: '50008', Descripcion: 'La operación de cobro esta cancelada.' }, { Codigo: '50010', Descripcion: 'El monto ingresado supera al monto total de la deuda.' }];
 
   examples = {
     invocation: { xml: `

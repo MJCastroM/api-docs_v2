@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeChequeraComponent1750272791112 {
+export class ObtenerEstadodeChequeraComponent1750446218445 {
   pageTitle        = 'Obtener Estado de Chequera';
   description      = `Método para obtener el estado de una chequera.`;
   pubName    = 'BTCuentasCorrientes.ObtenerEstadoDeCheque';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeCambioEspecialesComponent1750272791662 {
+export class ObtenerTiposDeCambioEspecialesComponent1750446218829 {
   pageTitle        = 'Obtener Tipos de Cambio Especiales';
   description      = `Método para obtener un listado de los tipos de cambio especiales.`;
   pubName    = 'BTPrecios.ObtenerTiposDeCambioEspeciales ';

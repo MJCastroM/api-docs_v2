@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDolarUSAComponent1750272791014 {
+export class ObtenerDolarUSAComponent1750446218371 {
   pageTitle        = 'Obtener Dólar USA';
   description      = `Método para obtener los datos del dólar estadounidense.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDolarUSA';
