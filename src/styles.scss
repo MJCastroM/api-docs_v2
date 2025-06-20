@@ -48,10 +48,10 @@ body {
 // CIERRE - PROPIEDADES GLOBALES
 
 
-.mat-accordion { // ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
+.mat-accordion-BT {
   margin: 2rem 0;
 
-  .mat-expansion-panel { // CABEZAL DEL ELEMENTO DESPLEGABLE
+  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
     margin: $margin;
     background: $background-light;
     border-radius: $border-radius !important;
