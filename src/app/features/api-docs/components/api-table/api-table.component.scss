@@ -1,11 +1,8 @@
-// variables.scss (asegúrate de importarlas donde uses estos estilos)
-$primary-color:   #c62828;
-$text-main:       #333;
-$bg-light:        #f4f4f4;
-$grey-header:     #e0e0e0;
-$grey-columns:     #f1f1f1;
-$shadow-light:    rgba(0,0,0,0.15);
-$border-radius:   1rem;
+@import 'variables';
+
+* {
+  color: $text-main !important;
+}
 
 // 1) Tablas genéricas
 table {
@@ -15,7 +12,7 @@ table {
   overflow: hidden;
 
   thead {
-    background: $grey-header;
+    background: $table-grey-header;
     th {
       padding: 0.75rem 1rem;
       text-align: left;
@@ -29,12 +26,9 @@ table {
       &:nth-child(even) {
         background: #f1f1f1;
       }
-      &:hover {
-        background: lighten($primary-color, 45%);
-      }
     }
     td, th {
-      background: $grey-columns;
+      background: $table-grey-columns;
       padding: 0.6rem 1rem;
       border: none;
       color: $text-main;
@@ -46,6 +40,11 @@ table {
     padding: 1rem;
     text-align: center;
     font-style: italic;
-    color: darken($grey-header, 20%);
+  }
+
+  .link {
+    color: $red-1;
+    cursor: pointer;
+    text-decoration: underline;
   }
 }

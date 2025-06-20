@@ -1,30 +1,15 @@
-$primary-color:    #c62828;
-$text-main:        #333;
-$background-light: #fdfdfe;
-$grey-header:      #e0e0e0;
-$shadow-light:     rgba(0, 0, 0, .15);
-$border-radius:    1rem;
-$margin:           2rem 14rem;
+@import 'variables';
 
 // INFORMACIÓN INICIAL DEL MÉTODO
 .info-card {
+  padding: 1.4rem 2rem 0.6rem;
   background: $background-light;
-  margin: $margin;
-  box-shadow: 15px 15px 15px 10px $shadow-light;
+  margin: $margin-info;
+  box-shadow: $box-shadow;
   border-radius: $border-radius;
-  border-left: 4px solid $primary-color;
-  border-right: 4px solid $primary-color;
-  line-height: 2 !important;
-
-  .info-card__content {
-    padding: .5rem 2rem;
-
-    p {
-      margin: 0.5rem 0;
-      color: $text-main;
-      strong {
-        color: $text-main;
-      }
-    }
-  }
+  border-left: $red-border;
+  border-right: $red-border;
+  line-height: $line-height !important;
+  color: $text-main;
+  font-family: $font-family;
 }

@@ -37,8 +37,6 @@
               "src/app/generated-pages"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "node_modules/prismjs/themes/prism-solarizedlight.css",
               "src/styles.scss"
             ],
             "scripts": [

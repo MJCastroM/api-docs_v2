@@ -8,6 +8,12 @@ import { AppComponent }               from './app.component';
 import { AppRoutingModule }           from './app-routing.module'; // si lo usas
 import { ApiDocsModule }              from './features/api-docs/api-docs.module';
 
+import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions } from '@angular/material/core';
+
+const globalRippleConfig: RippleGlobalOptions = {
+  disabled: true,
+};
+
 
 @NgModule({
   declarations: [ AppComponent ],
@@ -19,6 +25,9 @@ import { ApiDocsModule }              from './features/api-docs/api-docs.module'
     AppRoutingModule,  // opcional
     ApiDocsModule
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [
+    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig }
+  ]
 })
 export class AppModule {}
