@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarUsuarioComponent1750258525670 {
+export class HabilitarUsuarioComponent1750272791916 {
   pageTitle        = 'Habilitar Usuario';
   description      = `Método para habilitar un usuario que se encuentra inhabilitado.`;
-  pubName          = 'Habilitar Usuario';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.HabilitarUsuario';
+  programa   = 'RBTPG394';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class HabilitarUsuarioComponent1750258525670 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar usuario a habilitar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar fecha desde.' }, { Codigo: '40003', Descripcion: 'No se puede eliminar. Registro no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.HabilitarUsuario>
@@ -39,7 +40,9 @@ export class HabilitarUsuarioComponent1750258525670 {
          <bts:fechaDesde>2022-01-01</bts:fechaDesde>
       </bts:BTUsuarios.HabilitarUsuario>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarUsuario\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class HabilitarUsuarioComponent1750258525670 {
    "Usuario": "GPONTES",
    "fechaDesde": "2022-01-01"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.HabilitarUsuarioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class HabilitarUsuarioComponent1750258525670 {
          </Btoutreq>
       </BTUsuarios.HabilitarUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

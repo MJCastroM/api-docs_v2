@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarIntegrantedeGrupoComponent1750258525140 {
+export class ActualizarIntegrantedeGrupoComponent1750272791331 {
   pageTitle        = 'Actualizar Integrante de Grupo';
   description      = `Método para actualizar un integrante de un grupo de crédito.`;
-  pubName          = 'Actualizar Integrante de Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ActualizarIntegranteGrupo';
+  programa   = 'RBTPG434';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActualizarIntegrantedeGrupoComponent1750258525140 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de grupo' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado' }, { Codigo: '40005', Descripcion: 'Debe ingresar un tipo de integrante válido para el grupo' }, { Codigo: '40006', Descripcion: 'Excedió la cantidad de integrantes Coordinador permitidos para el tipo de grupo' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ActualizarIntegranteGrupo>
@@ -48,7 +49,9 @@ export class ActualizarIntegrantedeGrupoComponent1750258525140 {
          </bts:sdtIntegranteGrupo>
       </bts:BTMicrofinanzas.ActualizarIntegranteGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ActualizarIntegranteGrupo=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ export class ActualizarIntegrantedeGrupoComponent1750258525140 {
 		"vigente": "S"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ActualizarIntegranteGrupoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +95,9 @@ export class ActualizarIntegrantedeGrupoComponent1750258525140 {
          </Btoutreq>
       </BTMicrofinanzas.ActualizarIntegranteGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750258525382 {
+export class ObtenerLimitesComponent1750272791587 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una persona.`;
-  pubName          = 'Obtener Límites';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerLimites';
+  programa   = 'RBTPG560';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerLimitesComponent1750258525382 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recuperó la persona para el identificador ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerLimites>
@@ -38,7 +39,9 @@ export class ObtenerLimitesComponent1750258525382 {
          <bts:personaUId>161</bts:personaUId>
       </bts:BTPersonas.ObtenerLimites>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerLimites\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerLimitesComponent1750258525382 {
         },
         "personaUId": 150
       }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerLimitesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -141,7 +145,9 @@ export class ObtenerLimitesComponent1750258525382 {
          </Btoutreq>
       </BTPersonas.ObtenerLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
         "Device": 1,
         "Usuario": "INSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdinalComponent1750258524975 {
+export class ObtenerDetalledeOrdinalComponent1750272791081 {
   pageTitle        = 'Obtener Detalle de Ordinal';
   description      = `Método para obtener el detalle de un determinado ordinal de un movimiento.`;
-  pubName          = 'Obtener Detalle de Ordinal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerDetalleOrdinal';
+  programa   = 'RBTPG337';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalledeOrdinalComponent1750258524975 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '30103', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'No existe el asiento.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerDetalleOrdinal>
@@ -40,7 +41,9 @@ export class ObtenerDetalledeOrdinalComponent1750258524975 {
          <bts:subOrdinal>1</bts:subOrdinal>
       </bts:BTContabilidad.ObtenerDetalleOrdinal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleOrdinal\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ObtenerDetalledeOrdinalComponent1750258524975 {
 	 "ordinal":1,
 	 "subOrdinal":1
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerDetalleOrdinalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +95,9 @@ export class ObtenerDetalledeOrdinalComponent1750258524975 {
          </Btoutreq>
       </BTContabilidad.ObtenerDetalleOrdinalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
    "Btinreq": { 
       "Canal": "BTDIGITAL", 
       "Requerimiento": "1", 

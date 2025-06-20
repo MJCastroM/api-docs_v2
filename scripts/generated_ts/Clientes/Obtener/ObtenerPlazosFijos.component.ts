@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosComponent1750258524803 {
+export class ObtenerPlazosFijosComponent1750272790926 {
   pageTitle        = 'Obtener Plazos Fijos';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente.`;
-  pubName          = 'Obtener Plazos Fijos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPlazosFijos';
+  programa   = 'RBTPG013';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
@@ -40,7 +40,8 @@ Valor específico 2 | Tipo de operación a excluir.
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPlazosFijos>
@@ -54,7 +55,9 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTClientes.ObtenerPlazosFijos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPlazosFijos=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ Valor específico 2 | Tipo de operación a excluir.
 	},
     "clienteUId": 4
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPlazosFijosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -157,7 +161,9 @@ Valor específico 2 | Tipo de operación a excluir.
          </Btoutreq>
       </BTClientes.ObtenerPlazosFijosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

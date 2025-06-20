@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDatosPEPComponent1750258525309 {
+export class AgregarDatosPEPComponent1750272791514 {
   pageTitle        = 'Agregar Datos PEP';
   description      = `Método para agregar los datos de una persona expuesta políticamente.`;
-  pubName          = 'Agregar Datos PEP';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarDatosPEP';
+  programa   = 'RBTPG146';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AgregarDatosPEPComponent1750258525309 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió si la persona es políticamente expuesta.' }, { Codigo: '30003', Descripcion: 'No se pudo determinar si la persona es políticamente expuesta. (¿Es PEP? S / N).' }, { Codigo: '50001', Descripcion: 'Fecha Inicio cargo PEP es de ingreso obligatorio.' }, { Codigo: '50002', Descripcion: 'Entidad es de ingreso obligatorio.' }, { Codigo: '50003', Descripcion: 'Cargo y Relación es de ingreso obligatorio.' }, { Codigo: '50004', Descripcion: 'Fecha Salida cargo PEP debe de ser mayor a Fecha Inicio cargo PEP.' }, { Codigo: '50005', Descripcion: 'Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarDatosPEP>
@@ -51,7 +52,9 @@ export class AgregarDatosPEPComponent1750258525309 {
          </sdtDatosPEP>
 	   </bts:BTPersonas.AgregarDatosPEP>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarDatosPEP\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -79,7 +82,8 @@ export class AgregarDatosPEPComponent1750258525309 {
       "tipoFuncionarioPublico": "",
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarDatosPEPResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
 		  <Btinreq>
@@ -101,7 +105,9 @@ export class AgregarDatosPEPComponent1750258525309 {
 		   </Btoutreq>
       </BTPersonas.AgregarDatosPEPResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "INSTALADOR", 

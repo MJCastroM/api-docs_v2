@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarIntegrantedePersonaJuridicaComponent1750258525291 {
+export class ActualizarIntegrantedePersonaJuridicaComponent1750272791491 {
   pageTitle        = 'Actualizar Integrante de Persona Jurídica';
   description      = `Método para actualizar un integrante de una persona jurídica.`;
-  pubName          = 'Actualizar Integrante de Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarIntegrantePersonaJuridica';
+  programa   = 'RBTPG280';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActualizarIntegrantedePersonaJuridicaComponent1750258525291 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador único de persona jurídica.' }, { Codigo: '30002', Descripcion: 'No se recibió identificador único de integrante de persona jurídica.' }, { Codigo: '30003', Descripcion: 'No se recibió identificador de vínculo del integrante de persona jurídica.' }, { Codigo: '40001', Descripcion: 'La sumatoria de porcentajes asociados a los integrantes de la persona jurídica es mayor a 100%.' }, { Codigo: '40003', Descripcion: 'Debe ingresar el % de participación del accionista.' }, { Codigo: '40004', Descripcion: 'El % de Participación no puede ser mayor al 100%.' }, { Codigo: '40005', Descripcion: 'Si la persona no es Accionista tiene que haber sido ingresado con Alta Normal para poder integrar a la persona.' }, { Codigo: '40006', Descripcion: 'Debe ingresar al menos un Representante Legal.' }, { Codigo: '40007', Descripcion: 'No se puede cambiar el vínculo, ya que es el único Representante Legal.' }, { Codigo: '40008', Descripcion: 'La persona a vincular no puede ser la misma.' }, { Codigo: '40009', Descripcion: 'No puede asociar una persona jurídica como representante legal.' }, { Codigo: '40010', Descripcion: 'No existe el identificador de vínculo ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarIntegrantePersonaJuridica>
@@ -43,7 +44,9 @@ export class ActualizarIntegrantedePersonaJuridicaComponent1750258525291 {
          </bts:sdtIntegranteAlta>
       </bts:BTPersonas.ActualizarIntegrantePersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarIntegrantePersonaJuridica\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -63,7 +66,8 @@ export class ActualizarIntegrantedePersonaJuridicaComponent1750258525291 {
 		 "participacion": "50",
 	 }
    }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarIntegrantePersonaJuridicaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class ActualizarIntegrantedePersonaJuridicaComponent1750258525291 {
          </Btoutreq>
       </BTPersonas.ActualizarIntegrantePersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
 	"Btinreq": {
 		"Canal": "BTDIGITAL",
 		"Requerimiento": "1",

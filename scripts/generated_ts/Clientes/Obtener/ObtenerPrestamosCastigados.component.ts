@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosCastigadosComponent1750258524810 {
+export class ObtenerPrestamosCastigadosComponent1750272790937 {
   pageTitle        = 'Obtener Préstamos Castigados';
   description      = `Método para obtener los productos de préstamo castigados de un cliente.`;
-  pubName          = 'Obtener Préstamos Castigados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPrestamosCastigados';
+  programa   = 'RBTPG185';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se debe parametrizar el módulo correspondiente a castigos ingresando en la guía especial 1041 los siguientes valores: 
@@ -33,7 +33,8 @@ Valor específico 2 | 67 (Estado de operación castigada).
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPrestamosCastigados>
@@ -47,7 +48,9 @@ Valor específico 2 | 67 (Estado de operación castigada).
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTClientes.ObtenerPrestamosCastigados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPrestamosCastigados=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -62,7 +65,8 @@ Valor específico 2 | 67 (Estado de operación castigada).
 	},
     "clienteUId": 4
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPrestamosCastigadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +104,9 @@ Valor específico 2 | 67 (Estado de operación castigada).
          </Btoutreq>
       </BTClientes.ObtenerPrestamosCastigadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

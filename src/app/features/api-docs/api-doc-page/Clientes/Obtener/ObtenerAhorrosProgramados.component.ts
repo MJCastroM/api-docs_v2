@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAhorrosProgramadosComponent1750258524771 {
+export class ObtenerAhorrosProgramadosComponent1750272790884 {
   pageTitle        = 'Obtener Ahorros Programados';
   description      = `Método para obtener un listado de los productos de ahorro programado que tiene contratado un cliente.`;
-  pubName          = 'Obtener Ahorros Programados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerAhorrosProgramados';
+  programa   = 'RBTPG278';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
@@ -41,7 +41,8 @@ Valor específico 2 | Tipo de operación a excluir.
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }, { Codigo: '40001', Descripcion: 'No existe la cuenta consultada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerAhorrosProgramados>
@@ -55,7 +56,9 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTClientes.ObtenerAhorrosProgramados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerAhorrosProgramados=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -70,7 +73,8 @@ Valor específico 2 | Tipo de operación a excluir.
 	},
     "clienteUId": 4
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerAhorrosProgramadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -126,7 +130,9 @@ Valor específico 2 | Tipo de operación a excluir.
          </Btoutreq>
       </BTClientes.ObtenerAhorrosProgramadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarCuentaComponent1750258525645 {
+export class AsociarCuentaComponent1750272791879 {
   pageTitle        = 'Asociar Cuenta';
   description      = `Método para asociar una cuenta vista a una tarjeta de débito dada.`;
-  pubName          = 'Asociar Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.AsociarCuenta';
+  programa   = 'RBTPG377';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AsociarCuentaComponent1750258525645 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de tarjeta de débito.' }, { Codigo: '30002', Descripcion: 'No se recibió el Identificador de operación a asociar.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de cuenta a asociar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.AsociarCuenta>
@@ -40,7 +41,9 @@ export class AsociarCuentaComponent1750258525645 {
          <bts:tarjetaUId>1</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.AsociarCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `{
+</soapenv:Envelope>`, 
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -53,7 +56,8 @@ export class AsociarCuentaComponent1750258525645 {
     "tipoDeCuenta":"1",
     "tarjetaUId"  :"1"
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.AsociarCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -75,7 +79,9 @@ export class AsociarCuentaComponent1750258525645 {
          </Btoutreq>
       </BTTarjetasDeDebito.AsociarCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",

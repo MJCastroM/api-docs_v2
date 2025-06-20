@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTextosdeMovimientoComponent1750258524977 {
+export class ObtenerTextosdeMovimientoComponent1750272791084 {
   pageTitle        = 'Obtener Textos de Movimiento';
   description      = `Método para obtener un listado de los textos asociados a un movimiento.`;
-  pubName          = 'Obtener Textos de Movimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerTextosMovimiento';
+  programa   = 'RBTPG097';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTextosdeMovimientoComponent1750258524977 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '40003', Descripcion: 'No existe registro para el identificador único.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerTextosMovimiento>
@@ -38,7 +39,9 @@ export class ObtenerTextosdeMovimientoComponent1750258524977 {
          <bts:movimientoUId>1</bts:movimientoUId>
       </bts:BTContabilidad.ObtenerTextosMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerTextosMovimiento\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerTextosdeMovimientoComponent1750258524977 {
 	 },
 	 "movimientoUId": "1"
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerTextosMovimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +87,9 @@ export class ObtenerTextosdeMovimientoComponent1750258524977 {
          </Btoutreq>
       </BTContabilidad.ObtenerTextosMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",

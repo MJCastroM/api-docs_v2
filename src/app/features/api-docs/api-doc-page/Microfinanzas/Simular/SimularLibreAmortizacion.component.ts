@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularLibreAmortizacionComponent1750258525182 {
+export class SimularLibreAmortizacionComponent1750272791375 {
   pageTitle        = 'Simular Libre Amortización';
   description      = `Método para simular el alta de un préstamo libre amortización para un crédito individual.`;
-  pubName          = 'Simular Libre Amortización';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.SimularLibreAmortizacion';
+  programa   = 'RBTPG423';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class SimularLibreAmortizacionComponent1750258525182 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador.' }, { Codigo: '30005', Descripcion: 'Debe ingresar el monto del préstamo.' }, { Codigo: '30006', Descripcion: 'No se recibió la lista de cuotas de capital.' }, { Codigo: '30007', Descripcion: 'No se recibió la lista de cuotas de interés.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.SimularLibreAmortizacion>
@@ -59,7 +60,9 @@ export class SimularLibreAmortizacionComponent1750258525182 {
          </bts:sBTSimulacionLibreAmortizacion>
       </bts:BTMicrofinanzas.SimularLibreAmortizacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularLibreAmortizacion \
 -H \'cache-control: no-cache\' \
 -H \'content-type: application/json\' \
@@ -94,7 +97,8 @@ export class SimularLibreAmortizacionComponent1750258525182 {
         }
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.SimularLibreAmortizacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -185,7 +189,9 @@ export class SimularLibreAmortizacionComponent1750258525182 {
          </Btoutreq>
       </BTMicrofinanzas.SimularLibreAmortizacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "95",

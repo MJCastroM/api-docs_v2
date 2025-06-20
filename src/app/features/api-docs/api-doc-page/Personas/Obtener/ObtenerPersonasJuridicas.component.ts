@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasJuridicasComponent1750258525389 {
+export class ObtenerPersonasJuridicasComponent1750272791596 {
   pageTitle        = 'Obtener Personas Jurídicas';
   description      = `Método para obtener un listado de personas jurídicas (10 máximo), dada una razón social.`;
-  pubName          = 'Obtener Personas Jurídicas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerPersonasJuridicas';
+  programa   = 'RBTPG159';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPersonasJuridicasComponent1750258525389 {
   errors     = [{ Codigo: '30001', Descripcion: 'Campo Razón Social requerido.' }, { Codigo: '40001', Descripcion: 'No se encontró ninguna persona jurídica con el patrón de búsqueda ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerPersonasJuridicas>
@@ -38,7 +39,9 @@ export class ObtenerPersonasJuridicasComponent1750258525389 {
          <bts:razonSocial>BANCO</bts:razonSocial>
       </bts:BTPersonas.ObtenerPersonasJuridicas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasJuridicas\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerPersonasJuridicasComponent1750258525389 {
 	},
    "razonSocial": "BANCO"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerPersonasJuridicasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +101,9 @@ export class ObtenerPersonasJuridicasComponent1750258525389 {
          </Btoutreq>
       </BTPersonas.ObtenerPersonasJuridicasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarArchivoRecibidoComoDatoComponent1750258524684 {
+export class CargarArchivoRecibidoComoDatoComponent1750272790777 {
   pageTitle        = 'Cargar Archivo Recibido Como Dato';
   description      = `Método para cargar un archivo recibido como dato.`;
-  pubName          = 'Cargar Archivo Recibido Como Dato';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.CargarArchivoDato';
+  programa   = 'RBTPG360D';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CargarArchivoRecibidoComoDatoComponent1750258524684 {
   errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030702', Descripcion: 'El archivo esta vacio.' }, { Codigo: '1030703', Descripcion: 'No hay informacion en el archivo.' }, { Codigo: '1030710', Descripcion: 'Error interno al procesar.' }, { Codigo: '1030715', Descripcion: 'No se procesa, este archivo ya fue recibido y procesado.' }, { Codigo: '1030720', Descripcion: 'Error procesando el archivo. Ver detalle.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.CargarArchivoDato>
@@ -41,7 +42,9 @@ export class CargarArchivoRecibidoComoDatoComponent1750258524684 {
          <bts:archivoDato>SDtQUk9WRUVEMTsxMDE7MjU7MzAvMDUvMjAxOTsyMDAwNTE4NDgxOzsyOwpEOzI7NDQ2Njg4NTUxMTsgREFOSUVMIFNBUlJ</bts:archivoDato>
       </bts:BTCASHManagement.CargarArchivoDato>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?CargarArchivoDato \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -58,7 +61,8 @@ export class CargarArchivoRecibidoComoDatoComponent1750258524684 {
 		"archivo" : "Proveedores201910",
 		"archivoDato" : "SDtQUk9WRUVEMTsxMDE7MjU7MzAvMDUvMjAxOTsyMDAwNTE4NDgxOzsyOwpEOzI7NDQ2Njg4NTUxMTsgREFOSUVMIFNBUlJ"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.CargarArchivoDatoResponse>
          <Btinreq>
@@ -83,7 +87,9 @@ export class CargarArchivoRecibidoComoDatoComponent1750258524684 {
          </Btoutreq>
       </BTCASHManagement.CargarArchivoDatoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

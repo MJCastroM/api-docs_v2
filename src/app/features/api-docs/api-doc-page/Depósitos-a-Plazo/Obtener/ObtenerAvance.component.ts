@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAvanceComponent1750258525087 {
+export class ObtenerAvanceComponent1750272791263 {
   pageTitle        = 'Obtener Avance';
   description      = `Método para obtener el avance de un depósito a plazo.`;
-  pubName          = 'Obtener Avance';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerAvance';
+  programa   = 'RBTPG402';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerAvanceComponent1750258525087 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la Cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del depósito.' }, { Codigo: '30003', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '30005', Descripcion: 'La operación de depósito no pertenece al cliente ingresado.' }, { Codigo: '40001', Descripcion: 'La operación de depósito ingresada no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositoAPlazo.ObtenerAvance>
@@ -39,7 +40,9 @@ export class ObtenerAvanceComponent1750258525087 {
          <bts:depositoUId>10121</bts:depositoUId>
       </bts:BTDepositoAPlazo.ObtenerAvance>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositoAPlazo_v1?ObtenerAvance \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerAvanceComponent1750258525087 {
    "clienteUId": "10003",
    "depositoUId": "10121"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositoAPlazo.ObtenerAvanceResponse>
          <Btinreq>
@@ -82,7 +86,9 @@ export class ObtenerAvanceComponent1750258525087 {
          </Btoutreq>
       </BTDepositoAPlazo.ObtenerAvanceResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

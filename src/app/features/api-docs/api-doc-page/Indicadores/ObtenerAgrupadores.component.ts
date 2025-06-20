@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresComponent1750258525116 {
+export class ObtenerAgrupadoresComponent1750272791298 {
   pageTitle        = 'Obtener Agrupadores';
   description      = `Método para obtener los agrupadores de indicadores ingresados en el sistema.`;
-  pubName          = 'Obtener Agrupadores';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTIndicadores.ObtenerAgrupadores';
+  programa   = 'RBTPG700';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerAgrupadoresComponent1750258525116 {
   errors     = [{ Codigo: '40001', Descripcion: 'No existen Agrupadores.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerAgrupadores>
@@ -37,7 +38,9 @@ export class ObtenerAgrupadoresComponent1750258525116 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerAgrupadores>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerAgrupadores\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerAgrupadoresComponent1750258525116 {
       "Requerimiento": "1"
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerAgrupadoresResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +91,9 @@ export class ObtenerAgrupadoresComponent1750258525116 {
          </Btoutreq>
       </BTIndicadores.ObtenerAgrupadoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",

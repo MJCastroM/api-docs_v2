@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrecioaFechaComponent1750258525433 {
+export class ObtenerPrecioaFechaComponent1750272791650 {
   pageTitle        = 'Obtener Precio a Fecha';
   description      = `Método para obtener la cotización en moneda nacional de una especie en la fecha recibida.`;
-  pubName          = 'Obtener Precio a Fecha';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerPrecioAFecha';
+  programa   = 'RBTPG049';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPrecioaFechaComponent1750258525433 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió una especie.' }, { Codigo: '40001', Descripcion: 'La especie no es un índice.' }, { Codigo: '40002', Descripcion: 'La especie no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerPrecioAFecha>
@@ -39,7 +40,9 @@ export class ObtenerPrecioaFechaComponent1750258525433 {
          <bts:fecha>2017-11-11</bts:fecha>
       </bts:BTPrecios.ObtenerPrecioAFecha>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerPrecioAFecha=\' \
   -H \'cache-control: no-cache,no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerPrecioaFechaComponent1750258525433 {
    "especie": "500",
    "fecha": "2017-11-11"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerPrecioAFechaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -78,7 +82,9 @@ export class ObtenerPrecioaFechaComponent1750258525433 {
          </Btoutreq>
       </BTPrecios.ObtenerPrecioAFechaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

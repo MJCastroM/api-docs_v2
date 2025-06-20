@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTipodePersonaComponent1750258525401 {
+export class ObtenerTipodePersonaComponent1750272791605 {
   pageTitle        = 'Obtener Tipo de Persona';
   description      = `Método para obtener el tipo de una persona (Física o Jurídica).`;
-  pubName          = 'Obtener Tipo de Persona';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTipoDePersona';
+  programa   = 'RBTPG268';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTipodePersonaComponent1750258525401 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'La persona no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTipoDePersona>
@@ -38,8 +39,11 @@ export class ObtenerTipodePersonaComponent1750258525401 {
          <bts:personaUId>61</bts:personaUId>
       </bts:BTPersonas.ObtenerTipoDePersona>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, 
+    json: `
+` },
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTipoDePersonaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -62,7 +66,9 @@ export class ObtenerTipodePersonaComponent1750258525401 {
          </Btoutreq>
       </BTPersonas.ObtenerTipoDePersonaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `` }
+</SOAP-ENV:Envelope>`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

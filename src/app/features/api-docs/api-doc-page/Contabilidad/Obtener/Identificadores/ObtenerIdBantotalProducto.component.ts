@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalProductoComponent1750258524969 {
+export class ObtenerIdBantotalProductoComponent1750272791066 {
   pageTitle        = 'Obtener Identificador Bantotal de Producto';
   description      = `Método para obtener la clave de identificación Bantotal de un producto.`;
-  pubName          = 'Obtener Identificador Bantotal de Producto';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIdBantotalProducto';
+  programa   = 'RBTPG450';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerIdBantotalProductoComponent1750258524969 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió productoUId.' }, { Codigo: '40001', Descripcion: 'No existe una empresa con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'No se pudo resolver la empresa del usuario.' }, { Codigo: '40003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40004', Descripcion: 'No existe registro para el producto indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdBantotalProducto>
@@ -38,7 +39,9 @@ export class ObtenerIdBantotalProductoComponent1750258524969 {
          <bts:productoUId>187</bts:productoUId>
       </bts:BTContabilidad.ObtenerIdBantotalProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalProducto\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerIdBantotalProductoComponent1750258524969 {
         },
         "productoUId": 187
       }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdBantotalProductoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ObtenerIdBantotalProductoComponent1750258524969 {
          </Btoutreq>
       </BTContabilidad.ObtenerIdBantotalProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
         "Btinreq": {
           "Requerimiento": 0,
           "Device": "papa",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOrigenesdeCaptacionComponent1750258525171 {
+export class ObtenerOrigenesdeCaptacionComponent1750272791361 {
   pageTitle        = 'Obtener Orígenes de Captación';
   description      = `Método para obtener los orígenes de captación.`;
-  pubName          = 'Obtener Orígenes de Captación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerOrigenesCaptacion';
+  programa   = 'RBTPG421';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerOrigenesdeCaptacionComponent1750258525171 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerOrigenesCaptacion>
@@ -37,7 +38,9 @@ export class ObtenerOrigenesdeCaptacionComponent1750258525171 {
          </bts:Btinreq>
       </bts:BTMicrofinanzas.ObtenerOrigenesCaptacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerOrigenesCaptacion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerOrigenesdeCaptacionComponent1750258525171 {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerOrigenesCaptacionResponse>
          <Btinreq>
@@ -107,7 +111,9 @@ export class ObtenerOrigenesdeCaptacionComponent1750258525171 {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerOrigenesCaptacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

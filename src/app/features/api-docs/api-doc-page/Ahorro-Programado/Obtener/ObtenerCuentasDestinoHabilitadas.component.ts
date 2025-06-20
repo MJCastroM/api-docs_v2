@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasDestinoHabilitadasComponent1750258524601 {
+export class ObtenerCuentasDestinoHabilitadasComponent1750272790682 {
   pageTitle        = 'Obtener Cuentas Destino Habilitadas';
   description      = `Método para obtener un listado de cuentas habilitadas para acreditar el ahorro.`;
-  pubName          = 'Obtener Cuentas Destino Habilitadas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas';
+  programa   = 'RBTPG112';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerCuentasDestinoHabilitadasComponent1750258524601 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente destino de fondos.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del producto de ahorro.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de la cuenta de origen del ahorro.' }, { Codigo: '30005', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recuperó la cuenta destino para el identificador de cliente destino de fondos: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'No se recuperó cuenta de origen para el identificador: [Número de identificador].' }, { Codigo: '30009', Descripcion: 'La cuenta de origen no corresponde al cliente.' }, { Codigo: '40001', Descripcion: 'El producto seleccionado no corresponde a un producto de ahorro.' }, { Codigo: '40101', Descripcion: 'El cliente destino debe ser igual al cliente origen.' }, { Codigo: '40999', Descripcion: 'Este producto no se encuentra habilitado para operar por este canal.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas>
@@ -41,7 +42,9 @@ export class ObtenerCuentasDestinoHabilitadasComponent1750258524601 {
          <bts:cuentaOrigenUId>21</bts:cuentaOrigenUId>
       </bts:BTAhorroProgramado.ObtenerCuentasDestinoHabilitadas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCuentasDestinoHabilitadas\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ObtenerCuentasDestinoHabilitadasComponent1750258524601 {
       "productoUId": 41,
       "cuentaOrigenUId": 21
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerCuentasDestinoHabilitadasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -115,7 +119,9 @@ export class ObtenerCuentasDestinoHabilitadasComponent1750258524601 {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerCuentasDestinoHabilitadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

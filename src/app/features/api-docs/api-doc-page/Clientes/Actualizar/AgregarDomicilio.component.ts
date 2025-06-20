@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDomicilioComponent1750258524745 {
+export class AgregarDomicilioComponent1750272790854 {
   pageTitle        = 'Agregar Domicilio';
   description      = `Método para agregar un domicilio a un cliente.`;
-  pubName          = 'Agregar Domicilio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.AgregarDomicilio';
+  programa   = 'RBTPG239';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AgregarDomicilioComponent1750258524745 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30006', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '40001', Descripcion: 'Código de domicilio no válido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.AgregarDomicilio>
@@ -68,7 +69,9 @@ export class AgregarDomicilioComponent1750258524745 {
 		</bts:domicilio>
       </bts:BTClientes.AgregarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?AgregarDomicilio\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -113,7 +116,8 @@ export class AgregarDomicilioComponent1750258524745 {
       "departamentoId": 1
    },	 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.AgregarDomicilioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -135,7 +139,9 @@ export class AgregarDomicilioComponent1750258524745 {
          </Btoutreq>
       </BTClientes.AgregarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

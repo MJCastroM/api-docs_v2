@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOfertaVehicularComponent1750258525239 {
+export class ObtenerDetalleOfertaVehicularComponent1750272791425 {
   pageTitle        = 'Obtener Detalle de Oferta Vehicular';
   description      = `Método para obtener el detalle de una oferta vehicular.`;
-  pubName          = 'Obtener Detalle de Oferta Vehicular';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ObtenerDetalleOfertaVehicular';
+  programa   = 'RBTPNV08';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalleOfertaVehicularComponent1750258525239 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de simulación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPartners.ObtenerDetalleOfertaVehicular>
@@ -46,7 +47,9 @@ export class ObtenerDetalleOfertaVehicularComponent1750258525239 {
          <bts:destinoCredito>12</bts:destinoCredito>
       </bts:BTPartners.ObtenerDetalleOfertaVehicular>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerDetalleOfertaVehicular\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ export class ObtenerDetalleOfertaVehicularComponent1750258525239 {
     "cantidadCuotas": 3,
     "destinoCredito": 12
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ObtenerDetalleOfertaVehicularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -288,7 +292,9 @@ export class ObtenerDetalleOfertaVehicularComponent1750258525239 {
          </Btoutreq>
       </BTPartners.ObtenerDetalleOfertaVehicularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EmitirChequeElectronicoComponent1750258524624 {
+export class EmitirChequeElectronicoComponent1750272790706 {
   pageTitle        = 'Emitir Cheque Electrónico';
   description      = `Método para emitir un cheque electrónico de una chequera. Si la chequera no existe, crea una.`;
-  pubName          = 'Emitir Cheque Electrónico';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.EmitirChequeElectronico';
+  programa   = 'RBTPAR27';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EmitirChequeElectronicoComponent1750258524624 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.EmitirChequeElectronico>
@@ -44,7 +45,9 @@ export class EmitirChequeElectronicoComponent1750258524624 {
          <bts:fechaPago>2019-05-05</bts:fechaPago>
       </bts:BTCuentasCorrientes.EmitirChequeElectronico>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope></soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?EmitirChequeElectronico\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class EmitirChequeElectronicoComponent1750258524624 {
 	"tipoDocumentoBeneficiarioId": "2",
 	"fechaPago": "2019-05-05"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.EmitirChequeElectronicoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -124,7 +128,9 @@ export class EmitirChequeElectronicoComponent1750258524624 {
          </Btoutreq>
       </BTCuentasCorrientes.EmitirChequeElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

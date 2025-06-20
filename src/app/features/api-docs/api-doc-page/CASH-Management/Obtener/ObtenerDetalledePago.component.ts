@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePagoComponent1750258524699 {
+export class ObtenerDetalledePagoComponent1750272790796 {
   pageTitle        = 'Obtener Detalle de Pago';
   description      = `Método para obtener la información de líneas de detalle de pago.`;
-  pubName          = 'Obtener Detalle de Pago';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDetallePago';
+  programa   = 'RBTPGC22';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalledePagoComponent1750258524699 {
   errors     = [{ Codigo: '1030711', Descripcion: 'No se recuperó informacion para el identificador de archivo recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.ObtenerDetallePago>
@@ -38,7 +39,9 @@ export class ObtenerDetalledePagoComponent1750258524699 {
          <bts:archivoId>104</bts:archivoId>
       </bts:BTCASHManagement.ObtenerDetallePago>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/odwsbt_BTCASHManagement_v1?ObtenerDetallePago\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerDetalledePagoComponent1750258524699 {
 	},
 	"archivoId":104
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.ObtenerDetallePagoResponse>
          <Btinreq>
@@ -132,7 +136,9 @@ export class ObtenerDetalledePagoComponent1750258524699 {
          </Btoutreq>
       </BTCASHManagement.ObtenerDetallePagoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

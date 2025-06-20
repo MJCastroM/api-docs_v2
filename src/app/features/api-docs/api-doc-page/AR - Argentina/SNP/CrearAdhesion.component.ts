@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearAdhesionComponent1750258524629 {
+export class CrearAdhesionComponent1750272790713 {
   pageTitle        = 'Crear Adhesión';
   description      = `Método para crear una adhesión.`;
-  pubName          = 'Crear Adhesión';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.CrearAdhesion';
+  programa   = 'RBTPG346';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearAdhesionComponent1750258524629 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se encontró un cliente para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se recibió importe.' }, { Codigo: '30021', Descripcion: 'La operación no corresponde al cliente.' }, { Codigo: '40001', Descripcion: 'El largo del ID no coincide con el esperado.' }, { Codigo: '40002', Descripcion: 'El código de moneda no es válido.' }, { Codigo: '40003', Descripcion: 'La prestación para la empresa seleccionada no está disponible.' }, { Codigo: '40004', Descripcion: 'No existe prestación para la empresa seleccionada.' }, { Codigo: '40005', Descripcion: 'Empresa Originante Inexistente.' }, { Codigo: '40006', Descripcion: 'No se pudieron generar los bloques de CBU a partir de la operación dada.' }, { Codigo: '40007', Descripcion: 'La operación recibida para obtener el CBU no pertenece al cliente especificado.' }, { Codigo: '40008', Descripcion: 'No existe la cuenta.' }, { Codigo: '40009', Descripcion: 'Cuenta bloqueada, no permite la adhesión.' }, { Codigo: '40010', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '40011', Descripcion: 'El código de monto máximo de débito es incorrecto.' }, { Codigo: '40012', Descripcion: 'El monto no puede ser nulo.' }, { Codigo: '40013', Descripcion: 'Ya existe un alta activa o pendiente de proceso.' }, { Codigo: '40014', Descripcion: 'Cargar Programa de generación de CBU.' }, { Codigo: '40102', Descripcion: 'Cuenta Vinculada debe ser distinto de cero.' }, { Codigo: '40104', Descripcion: 'Cuenta BT inexistente.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.CrearAdhesion>
@@ -47,7 +48,9 @@ export class CrearAdhesionComponent1750258524629 {
          <bts:importe>1000</bts:importe>
       </bts:BTSNP.CrearAdhesion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearAdhesion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class CrearAdhesionComponent1750258524629 {
     "montoMaximoDebito": "M",
     "importe": 1000
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.CrearAdhesionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +97,9 @@ export class CrearAdhesionComponent1750258524629 {
          </Btoutreq>
       </BTSNP.CrearAdhesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `` }
+</SOAP-ENV:Envelope>`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

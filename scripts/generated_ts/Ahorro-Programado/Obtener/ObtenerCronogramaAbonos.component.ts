@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaAbonosComponent1750258524599 {
+export class ObtenerCronogramaAbonosComponent1750272790680 {
   pageTitle        = 'Obtener Cronograma de Abonos';
   description      = `Método para obtener el cronograma de abonos de un ahorro programado.`;
-  pubName          = 'Obtener Cronograma de Abonos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ObtenerCronogramaDeAbonos';
+  programa   = 'RBTPG528';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerCronogramaAbonosComponent1750258524599 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el valor de filtroCuota.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '40001', Descripcion: 'El filtro de la cuota no es válido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>
@@ -39,7 +40,9 @@ export class ObtenerCronogramaAbonosComponent1750258524599 {
          <bts:filtroAbono>1</bts:filtroAbono>
       </bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCronogramaDeAbonos\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerCronogramaAbonosComponent1750258524599 {
 		"operacionUId": 94,
       "filtroAbono": 1
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -202,7 +206,9 @@ export class ObtenerCronogramaAbonosComponent1750258524599 {
          </Btoutreq>
       </BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

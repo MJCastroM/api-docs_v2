@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarResultadoProcesamientoComponent1750258524729 {
+export class VisualizarResultadoProcesamientoComponent1750272790834 {
   pageTitle        = 'Visualizar Resultado Procesamiento';
   description      = `Método para visualizar el resultado del procesamiento de un archivo.`;
-  pubName          = 'Visualizar Resultado Procesamiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.VisualizarResultadoProcesamiento';
+  programa   = 'RBTPGC20';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class VisualizarResultadoProcesamientoComponent1750258524729 {
   errors     = [{ Codigo: '1030711', Descripcion: 'No se recuperó información para el identificador de archivo recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
      <soapenv:Body>
       <bts:BTCASHManagement.VisualizarResultadoProcesamiento>
@@ -38,7 +39,9 @@ export class VisualizarResultadoProcesamientoComponent1750258524729 {
          <bts:archivoId>95</bts:archivoId>
       </bts:BTCASHManagement.VisualizarResultadoProcesamiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarResultadoProcesamiento=\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: 1c730fd2-5de9-415a-855d-9bfdb517098a,bf88767f-74e5-4941-80fd-4f8cfb1f888a\' \
@@ -53,7 +56,8 @@ export class VisualizarResultadoProcesamientoComponent1750258524729 {
 	},
     "archivoId": "95"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.VisualizarResultadoProcesamientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class VisualizarResultadoProcesamientoComponent1750258524729 {
          </Btoutreq>
       </BTCASHManagement.VisualizarResultadoProcesamientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

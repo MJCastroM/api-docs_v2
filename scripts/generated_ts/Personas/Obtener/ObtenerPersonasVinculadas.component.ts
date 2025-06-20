@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasVinculadasComponent1750258525391 {
+export class ObtenerPersonasVinculadasComponent1750272791597 {
   pageTitle        = 'Obtener Personas Vinculadas';
   description      = `Método para obtener un listado de los vínculos de la persona.`;
-  pubName          = 'Obtener Personas Vinculadas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerPersonasVinculadas';
+  programa   = 'RBTPG375';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPersonasVinculadasComponent1750258525391 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerPersonasVinculadas>
@@ -38,7 +39,9 @@ export class ObtenerPersonasVinculadasComponent1750258525391 {
          <bts:personaUId>1</bts:personaUId>
       </bts:BTPersonas.ObtenerPersonasVinculadas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasVinculadas\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerPersonasVinculadasComponent1750258525391 {
 	},
 	"personaUId": "1",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerPersonasVinculadasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class ObtenerPersonasVinculadasComponent1750258525391 {
          </Btoutreq>
       </BTPersonas.ObtenerPersonasVinculadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
 	    "Device": "GP", 
 	    "Usuario": "MINSTALADOR", 

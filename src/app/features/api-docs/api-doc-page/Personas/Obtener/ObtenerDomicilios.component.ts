@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDomiciliosComponent1750258525365 {
+export class ObtenerDomiciliosComponent1750272791574 {
   pageTitle        = 'Obtener Domicilios';
   description      = `Método para obtener los datos del domicilio de una persona.`;
-  pubName          = 'Obtener Domicilios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerDomicilios';
+  programa   = 'RBTPG576';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDomiciliosComponent1750258525365 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'El identificador de la persona no es correcto.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerDomicilios>
@@ -39,7 +40,9 @@ export class ObtenerDomiciliosComponent1750258525365 {
          <bts:PersonaUid>237</bts:PersonaUid>
       </bts:BTPersonas.ObtenerDomicilios>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDomicilios=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -54,7 +57,8 @@ export class ObtenerDomiciliosComponent1750258525365 {
   },
    "PersonaUid": 237
     }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerDomiciliosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -108,7 +112,9 @@ export class ObtenerDomiciliosComponent1750258525365 {
          </Btoutreq>
       </BTPersonas.ObtenerDomiciliosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `curl -X POST \
+</SOAP-ENV:Envelope>`,  
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDomicilios=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \

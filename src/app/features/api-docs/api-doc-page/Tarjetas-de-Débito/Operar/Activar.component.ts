@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActivarComponent1750258525642 {
+export class ActivarComponent1750272791875 {
   pageTitle        = 'Activar';
   description      = `Método para activar una tarjeta de débito física.`;
-  pubName          = 'Activar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.Activar';
+  programa   = 'RBTPG069';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActivarComponent1750258525642 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30004', Descripcion: 'La tarjeta no pertenece al cliente.' }, { Codigo: '40001', Descripcion: 'Error interno.' }, { Codigo: '40002', Descripcion: 'Error en parámetros de input.' }, { Codigo: '40003', Descripcion: 'No existen tarjetas de débito para los datos ingresados [Número de Tarjeta].' }, { Codigo: '40004', Descripcion: 'No Existe la funcionalidad en TDD025.' }, { Codigo: '40005', Descripcion: 'Funcionalidad TDD025 inhabilitada.' }, { Codigo: '40006', Descripcion: 'Motivo de cancelación no válido.' }, { Codigo: '40007', Descripcion: 'Error al ejecutar la funcionalidad en PTDD0017.' }, { Codigo: '40008', Descripcion: 'El servicio se encuentra en ejecución.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.Activar>
@@ -39,7 +40,9 @@ export class ActivarComponent1750258525642 {
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTTarjetasDeDebito.Activar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Activar=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ActivarComponent1750258525642 {
    "tarjetaUId": 2000002072,
    "clienteUId": 161
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ActivarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class ActivarComponent1750258525642 {
          </Btoutreq>
       </BTTarjetasDeDebito.ActivarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

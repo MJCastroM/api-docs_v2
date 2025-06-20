@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarDocumentoComponent1750258525417 {
+export class ValidarDocumentoComponent1750272791628 {
   pageTitle        = 'Validar Documento';
   description      = `Método para validar el documento de una persona.`;
-  pubName          = 'Validar Documento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ValidarDocumento';
+  programa   = 'RBTPG531';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ValidarDocumentoComponent1750258525417 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de país.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibió el número de documento.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ValidarDocumento>
@@ -40,7 +41,9 @@ export class ValidarDocumentoComponent1750258525417 {
          <bts:numeroDocumento>52116325</bts:numeroDocumento>
       </bts:BTPersonas.ValidarDocumento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarDocumento=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ValidarDocumentoComponent1750258525417 {
    "tipoDocumentoId":1,
    "numeroDocumento":"52116325"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ValidarDocumentoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class ValidarDocumentoComponent1750258525417 {
          </Btoutreq>
       </BTPersonas.ValidarDocumentoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",

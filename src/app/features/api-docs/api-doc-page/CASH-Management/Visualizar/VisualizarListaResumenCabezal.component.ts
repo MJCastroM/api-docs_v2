@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarListaResumenCabezalComponent1750258524725 {
+export class VisualizarListaResumenCabezalComponent1750272790829 {
   pageTitle        = 'Visualizar Lista Resumen Cabezal';
   description      = `Método para visualizar una lista del resumen de información de archivos.`;
-  pubName          = 'Visualizar Lista Resumen Cabezal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.VisualizarListaResumenCabezal';
+  programa   = 'RBTPGC21';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class VisualizarListaResumenCabezalComponent1750258524725 {
   errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030708', Descripcion: 'Estado de archivo desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }, { Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la informacion.' }, { Codigo: '1030714', Descripcion: 'El contrato consultado no corresponde al servicio recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.VisualizarListaResumenCabezal>
@@ -43,7 +44,9 @@ export class VisualizarListaResumenCabezalComponent1750258524725 {
          <bts:fechaHastaF></bts:fechaHastaF>
       </bts:BTCASHManagement.VisualizarListaResumenCabezal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarListaResumenCabezal \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -64,7 +67,8 @@ export class VisualizarListaResumenCabezalComponent1750258524725 {
 	"fechaDesdeF" : "",
 	"fechaHastaF" : ""
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.VisualizarListaResumenCabezalResponse>
          <Btinreq>
@@ -135,7 +139,9 @@ export class VisualizarListaResumenCabezalComponent1750258524725 {
          </Btoutreq>
       </BTCASHManagement.VisualizarListaResumenCabezalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

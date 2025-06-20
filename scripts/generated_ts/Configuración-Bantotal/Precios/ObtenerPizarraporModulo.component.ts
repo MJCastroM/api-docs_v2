@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraporModuloComponent1750258524956 {
+export class ObtenerPizarraporModuloComponent1750272791045 {
   pageTitle        = 'Obtener Pizarra por Módulo';
   description      = `Método para obtener la pizarra genérica por módulo.`;
-  pubName          = 'Obtener Pizarra por Módulo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerPizarraPorModulo';
+  programa   = 'RBTPG294';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPizarraporModuloComponent1750258524956 {
   errors     = [{ Codigo: '40001', Descripcion: 'No se encontraron pizarras de tasas para el módulo indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>
@@ -38,7 +39,9 @@ export class ObtenerPizarraporModuloComponent1750258524956 {
          <bts:modulo>20</bts:modulo>
       </bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerPizarraPorModulo\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -52,7 +55,8 @@ export class ObtenerPizarraporModuloComponent1750258524956 {
 	  "bts:Device": "AC"
 	},
 	"modulo": 20,` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ObtenerPizarraporModuloComponent1750258524956 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750258524560 {
+export class CrearComponent1750272790647 {
   pageTitle        = 'Crear';
   description      = `Método para contratar un ahorro programado.`;
-  pubName          = 'Crear';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.Crear';
+  programa   = 'RBTPG118';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearComponent1750258524560 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del producto.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de la cuenta de origen del ahorro.' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de la cuenta de destino del ahorro.' }, { Codigo: '30006', Descripcion: 'No se recibió el abono para el ahorro.' }, { Codigo: '30007', Descripcion: 'No se recibió el día de abono para el ahorro.' }, { Codigo: '30008', Descripcion: 'No se recuperó la persona para el identificador: [Número de identificador].' }, { Codigo: '30009', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30010', Descripcion: 'No se recuperó la cuenta origen del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30011', Descripcion: 'No se recuperó la cuenta destino del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'La Sucursal indicada es incorrecta.' }, { Codigo: '40004', Descripcion: 'El plazo indicado es menor al mínimo permitido.' }, { Codigo: '40005', Descripcion: 'El plazo indicado es mayor al máximo permitido.' }, { Codigo: '40006', Descripcion: 'La cuota indicada es menor al mínimo permitido.' }, { Codigo: '40007', Descripcion: 'La cuota indicada es mayor al máximo permitido.' }, { Codigo: '40008', Descripcion: 'La cantidad de periodos de gracia indicado es menor al mínimo permitido.' }, { Codigo: '40009', Descripcion: 'La cantidad de periodos de gracia indicado es mayor al máximo permitido.' }, { Codigo: '40010', Descripcion: 'La cantidad máxima de renovaciones indicado es menor al mínimo permitido.' }, { Codigo: '40011', Descripcion: 'La cantidad máxima de renovaciones indicado es mayor al máximo permitido.' }, { Codigo: '40012', Descripcion: 'La periodicidad de incremento de ahorro ingresado es menor al mínimo permitido.' }, { Codigo: '40013', Descripcion: 'La periodicidad de incremento de ahorro ingresado es mayor al máximo permitido.' }, { Codigo: '40014', Descripcion: 'El intento de incremento ingresado es menor al mínimo permitido.' }, { Codigo: '40015', Descripcion: 'El intento de incremento ingresado es mayor al máximo permitido.' }, { Codigo: '40016', Descripcion: 'La tasa ingresada no puede ser nula.' }, { Codigo: '40018', Descripcion: 'Se debe modificar la periodicidad o el plazo.' }, { Codigo: '40023', Descripcion: 'El abono no puede ser menor al abono vigente.' }, { Codigo: '40040', Descripcion: 'La Tasa indicada está fuera de tolerancia.' }, { Codigo: '40050', Descripcion: 'El abono no debe superar el máximo permitido.' }, { Codigo: '40051', Descripcion: 'El abono no debe ser inferior al mínimo permitido.' }, { Codigo: '40707', Descripcion: 'La fecha de inicio debe corresponder a un día hábil.' }, { Codigo: '40708', Descripcion: 'La fecha de inicio no puede ser menor a la del día.' }, { Codigo: '40709', Descripcion: 'El día de incremento debe ser un día hábil según el calendario.' }, { Codigo: '40710', Descripcion: 'Debe indicar un plazo válido.' }, { Codigo: '40711', Descripcion: 'No se ha ingresado el depósito inicial.' }, { Codigo: '40712', Descripcion: 'La periodicidad de incremento no es válida para el plazo indicado.' }, { Codigo: '40721', Descripcion: 'La fecha de la meta de ahorro no puede ser menor a la del día.' }, { Codigo: '40800', Descripcion: 'Error de configuración: Solicitud de tasa interactiva.' }, { Codigo: '40950', Descripcion: 'El depósito inicial es inferior al mínimo permitido (?)' }, { Codigo: '40951', Descripcion: 'La fecha del primer incremento debe ser antes del [Fecha]' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.Crear>
@@ -53,7 +54,9 @@ export class CrearComponent1750258524560 {
          </bts:sdtAhorroProgramado>
       </bts:BTAhorroProgramado.Crear>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?Crear\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -83,7 +86,8 @@ export class CrearComponent1750258524560 {
 		"plazo": 360
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<SOAP-ENV:Body>
       <BTAhorroProgramado.CrearResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -106,7 +110,9 @@ export class CrearComponent1750258524560 {
          </Btoutreq>
       </BTAhorroProgramado.CrearResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

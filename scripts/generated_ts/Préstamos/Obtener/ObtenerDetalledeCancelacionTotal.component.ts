@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCancelacionTotalComponent1750258525515 {
+export class ObtenerDetalledeCancelacionTotalComponent1750272791709 {
   pageTitle        = 'Obtener Detalle de Cancelación Total';
   description      = `Método para obtener el detalle de la cancelación total de un préstamo.`;
-  pubName          = 'Obtener Detalle de Cancelación Total';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetalleCancelacionTotal';
+  programa   = 'RBTPG539';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalledeCancelacionTotalComponent1750258525515 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el modo expresado.' }, { Codigo: '30004', Descripcion: 'El valor de expresadoEn no es correcto.' }, { Codigo: '30005', Descripcion: 'No se recibió si es cancelacion total.' }, { Codigo: '30006', Descripcion: 'El valor de cancelacionTotal no es correcto.' }, { Codigo: '30007', Descripcion: 'No se recibió si se perdona intereses.' }, { Codigo: '30008', Descripcion: 'El valor de perdonaIntereses no es correcto.' }, { Codigo: '40001', Descripcion: 'La Fecha para Consultas es anterior a la de la Operación.' }, { Codigo: '40002', Descripcion: 'La Operación no es válida para la Solicitud realizada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDetalleCancelacionTotal>
@@ -42,7 +43,9 @@ export class ObtenerDetalledeCancelacionTotalComponent1750258525515 {
          <bts:expresadoEn>M</bts:expresadoEn>
       </bts:BTPrestamos.ObtenerDetalleCancelacionTotal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleCancelacionTotal\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -61,7 +64,8 @@ export class ObtenerDetalledeCancelacionTotalComponent1750258525515 {
     "cancelacionTotal": "S",
     "expresadoEn": "M"
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDetalleCancelacionTotalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -122,7 +126,9 @@ export class ObtenerDetalledeCancelacionTotalComponent1750258525515 {
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleCancelacionTotalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionAdicionalComponent1750258524794 {
+export class ObtenerInformacionAdicionalComponent1750272790916 {
   pageTitle        = 'Obtener Información Adicional';
   description      = `Método para obtener la información adicional de una cuenta cliente.`;
-  pubName          = 'Obtener Información Adicional';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerInformacionAdicional';
+  programa   = 'RBTPG520';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerInformacionAdicionalComponent1750258524794 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerInformacionAdicional>
@@ -38,7 +39,9 @@ export class ObtenerInformacionAdicionalComponent1750258524794 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTClientes.ObtenerInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerInformacionAdicional\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerInformacionAdicionalComponent1750258524794 {
 	},
 	"clienteUId": "101",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerInformacionAdicionalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class ObtenerInformacionAdicionalComponent1750258524794 {
          </Btoutreq>
       </BTClientes.ObtenerInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",

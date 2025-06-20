@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ComprarComponent1750258525659 {
+export class ComprarComponent1750272791899 {
   pageTitle        = 'Comprar';
   description      = `Método para comprar un título.`;
-  pubName          = 'Comprar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTitulos.Comprar';
+  programa   = 'RBTPG496';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ComprarComponent1750258525659 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del mercado.' }, { Codigo: '30002', Descripcion: 'El valor del campo compra tiene que ser C o V.' }, { Codigo: '30003', Descripcion: 'El valor del campo ingresa tiene que ser I o V.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de la especie.' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30006', Descripcion: 'El valor del campo precio tiene que ser L o C.' }, { Codigo: '30007', Descripcion: 'Se tiene que ingresar plazo o vigencia hasta.' }, { Codigo: '30008', Descripcion: 'Se tiene que ingresar tasa o comisión.' }, { Codigo: '30009', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30010', Descripcion: 'La forma de pago tiene que ser CC o CA.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '30012', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30013', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente.' }, { Codigo: '30014', Descripcion: 'La operación ingresada no corresponde a una cuenta de ahorro.' }, { Codigo: '30015', Descripcion: 'La operación no pertenece al cliente.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTitulos.ComprarTitulo>
@@ -64,7 +65,9 @@ export class ComprarComponent1750258525659 {
          </bts:sdtComprarTitulo>
       </bts:BTTitulos.ComprarTitulo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ComprarTitulo\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -105,7 +108,8 @@ export class ComprarComponent1750258525659 {
       "tipoPrecio": "L"
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTitulos.ComprarTituloResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -129,7 +133,9 @@ export class ComprarComponent1750258525659 {
          </Btoutreq>
       </BTTitulos.ComprarTituloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

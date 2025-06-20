@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularConCronogramaComponent1750258525106 {
+export class SimularConCronogramaComponent1750272791286 {
   pageTitle        = 'Simular Con Cronograma';
   description      = `Método para simular el alta de un depósito a plazo con cronograma.`;
-  pubName          = 'Simular Con Cronograma';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositoAPlazo.SimularConCronograma';
+  programa   = 'RBTPG454';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Para configurar los productos habilitados, se debe agregar un registro en la guía especial 70100 para cada producto de la siguiente manera: 
@@ -38,7 +38,8 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del Producto.' }, { Codigo: '30003', Descripcion: 'No se recibió el capital del Producto.' }, { Codigo: '30004', Descripcion: 'No se recibió el plazo del Producto.' }, { Codigo: '40001', Descripcion: 'El plazo ingresado es menor al plazo mínimo parametrizado para el producto.' }, { Codigo: '40003', Descripcion: 'El plazo ingresado es mayor al plazo máximo parametrizado para el producto.' }, { Codigo: '40004', Descripcion: 'El monto ingresado es menor al monto mínimo parametrizado para el producto.' }, { Codigo: '40005', Descripcion: 'El monto ingresado es mayor al monto máximo parametrizado para el producto.' }, { Codigo: '40006', Descripcion: 'No se encontró Tasa para el producto a Simular.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.SimularConCronograma>
@@ -57,7 +58,9 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          <bts:sBTDatosExtendidos/>
       </bts:BTDepositosAPlazo.SimularConCronograma>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -77,7 +80,8 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
       "periodicidad": 30,
       "sBTDatosExtendidos": ""
    }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.SimularConCronograma xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -314,7 +318,9 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          </Btoutreq>
       </BTDepositosAPlazo.SimularConCronograma>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 "Btinreq": { 
          "Canal": "BTDIGITAL", 
          "Requerimiento": 1, 

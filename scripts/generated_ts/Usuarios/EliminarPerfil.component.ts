@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarPerfilComponent1750258525667 {
+export class EliminarPerfilComponent1750272791911 {
   pageTitle        = 'Eliminar Perfil';
   description      = `Método para eliminar un perfil asociado a un usuario.`;
-  pubName          = 'Eliminar Perfil';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.EliminarPerfil';
+  programa   = 'RBTPG123';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EliminarPerfilComponent1750258525667 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30002', Descripcion: 'No existe Usuario.' }, { Codigo: '30003', Descripcion: 'Debe ingresar Perfil.' }, { Codigo: '30004', Descripcion: 'No existe Perfil.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.EliminarPerfil>
@@ -39,7 +40,9 @@ export class EliminarPerfilComponent1750258525667 {
          <bts:perfil>COMEX</bts:perfil>
       </bts:BTUsuarios.EliminarPerfil>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?EliminarPerfil\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class EliminarPerfilComponent1750258525667 {
    "usuario": "INSTALADOR",
    "perfil": "COMEX"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.EliminarPerfilResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class EliminarPerfilComponent1750258525667 {
          </Btoutreq>
       </BTUsuarios.EliminarPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

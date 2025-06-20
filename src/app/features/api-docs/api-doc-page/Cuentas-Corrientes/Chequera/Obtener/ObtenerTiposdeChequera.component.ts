@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraComponent1750258524994 {
+export class ObtenerTiposdeChequeraComponent1750272791116 {
   pageTitle        = 'Obtener Tipos de Chequera';
   description      = `Método para obtener un listado de los tipos de chequeras.`;
-  pubName          = 'Obtener Tipos de Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequera';
+  programa   = 'RBTPG315';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTiposdeChequeraComponent1750258524994 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerTiposDeChequera>
@@ -37,7 +38,9 @@ export class ObtenerTiposdeChequeraComponent1750258524994 {
          </bts:Btinreq>
       </bts:BTCuentasCorrientes.ObtenerTiposDeChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerTiposDeChequera\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerTiposdeChequeraComponent1750258524994 {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerTiposDeChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -119,7 +123,9 @@ export class ObtenerTiposdeChequeraComponent1750258524994 {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerTiposDeChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

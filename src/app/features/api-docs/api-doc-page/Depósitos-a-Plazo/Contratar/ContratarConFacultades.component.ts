@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarConFacultadesComponent1750258525072 {
+export class ContratarConFacultadesComponent1750272791247 {
   pageTitle        = 'Contratar con Facultades';
   description      = `Método para contratar un depósito a plazo fijo dando de alta las facultades correspondientes.`;
-  pubName          = 'Contratar con Facultades';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ContratarConFacultades';
+  programa   = 'RBTPG573';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ContratarConFacultadesComponent1750258525072 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la Cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la Simulación.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación a utilizar para el débito.' }, { Codigo: '30007', Descripcion: 'La simulación ya no se encuentra habilitada para su contratación.' }, { Codigo: '30008', Descripcion: 'La simulación ingresada no pertenece al cliente ingresado.' }, { Codigo: '30010', Descripcion: 'La operación del débito no pertenece al cliente ingresado.' }, { Codigo: '30012', Descripcion: 'La operación de acreditación no pertenece al cliente ingresado.' }, { Codigo: '30014', Descripcion: 'Error de configuración: No se definió control de CAC.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ContratarConFacultades>
@@ -44,7 +45,9 @@ export class ContratarConFacultadesComponent1750258525072 {
          <bts:tipoIntegracionCuenta>A</bts:tipoIntegracionCuenta>
       </bts:BTDepositosAPlazo.ContratarConFacultades>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarConFacultades=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class ContratarConFacultadesComponent1750258525072 {
     "controlaMismoCliente": "N",
     "tipoIntegracionCuenta": "A"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ContratarConFacultadesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class ContratarConFacultadesComponent1750258525072 {
          </Btoutreq>
       </BTDepositosAPlazo.ContratarConFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
   "Btinreq": {
       "Device": "FC",
       "Usuario": "INSTALADOR",

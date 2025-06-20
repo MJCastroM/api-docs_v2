@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraEspecialporTransaccionComponent1750258525432 {
+export class ObtenerPizarraEspecialporTransaccionComponent1750272791649 {
   pageTitle        = 'Obtener Pizarra Especial por Transacción';
   description      = `Método para obtener la pizarra especial para una transacción.`;
-  pubName          = 'Obtener Pizarra Especial por Transacción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerPizarraEspecialPorTransaccion';
+  programa   = 'RBTPG355';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPizarraEspecialporTransaccionComponent1750258525432 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar transacción Bantotal.' }, { Codigo: '30002', Descripcion: 'Debe ingresar módulo Bantotal.' }, { Codigo: '30003', Descripcion: 'La moneda ingresada no existe.' }, { Codigo: '30004', Descripcion: 'El módulo ingresado no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerPizarraEspecialPorTransaccion>
@@ -41,7 +42,9 @@ export class ObtenerPizarraEspecialporTransaccionComponent1750258525432 {
          <bts:monedaId>2222</bts:monedaId>
       </bts:BTPrecios.ObtenerPizarraEspecialPorTransaccion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios?ObtenerPizarraEspecialPorTransaccion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ObtenerPizarraEspecialporTransaccionComponent1750258525432 {
     "transaccion":"100",
     "monedaId":"2222"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerPizarraEspecialPorTransaccionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class ObtenerPizarraEspecialporTransaccionComponent1750258525432 {
          </Btoutreq>
       </BTPrecios.ObtenerPizarraEspecialPorTransaccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoFechaValorComponent1750258524979 {
+export class RegistrarAsientoFechaValorComponent1750272791088 {
   pageTitle        = 'Registrar Asiento Fecha Valor';
   description      = `Método para registrar en el sistema un asiento a una fecha valor determinada.`;
-  pubName          = 'Registrar Asiento Fecha Valor';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.RegistrarAsientoFechaValor';
+  programa   = 'RBTPG532';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class RegistrarAsientoFechaValorComponent1750258524979 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos una operación.' }, { Codigo: '30002', Descripcion: 'Debe ingresar la fecha.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de Identificador].' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.RegistrarAsientoFechaValor>
@@ -53,7 +54,9 @@ export class RegistrarAsientoFechaValorComponent1750258524979 {
          </bts:sdtDatosAsiento>
          <bts:fecha>2022-11-24</bts:fecha>
       </bts:BTContabilidad.RegistrarAsientoFechaValor>
-   </soapenv:Body>`, json: `curl -X POST \ 
+   </soapenv:Body>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?RegistrarAsientoFechaValor=\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -84,7 +87,8 @@ export class RegistrarAsientoFechaValorComponent1750258524979 {
 	},    
 	"fecha": "2022-11-24", 
   }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTContabilidad.RegistrarAsientoFechaValorResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -107,7 +111,9 @@ export class RegistrarAsientoFechaValorComponent1750258524979 {
          </Btoutreq> 
       </BTContabilidad.RegistrarAsientoFechaValorResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 

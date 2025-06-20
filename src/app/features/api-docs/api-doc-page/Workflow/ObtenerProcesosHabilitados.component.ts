@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosHabilitadosComponent1750258525678 {
+export class ObtenerProcesosHabilitadosComponent1750272791929 {
   pageTitle        = 'Obtener Procesos Habilitados';
   description      = ``;
-  pubName          = 'Obtener Procesos Habilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerProcesosHabilitadosComponent1750258525678 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
    <soapenv:Header/> 
    <soapenv:Body> 
       <bts:BTWorkflow.ObtenerProcesosHabilitados> 
@@ -37,7 +38,9 @@ export class ObtenerProcesosHabilitadosComponent1750258525678 {
          </bts:Btinreq> 
       </bts:BTWorkflow.ObtenerProcesosHabilitados> 
    </soapenv:Body> 
-</soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerProcesosHabilitados \ 
 -H \'cache-control: no-cache\' \ 
 -H \'content-type: application/json\' \ 
@@ -50,7 +53,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
         "Token": "3789c5608bCD285A89A23FBE" 
     }, 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTWorkflow.ObtenerProcesosHabilitadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -164,7 +168,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerProcesosHabilitadosResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
   "Btinreq": { 
       "Device": "GP", 
       "Usuario": "INSTALADOR", 

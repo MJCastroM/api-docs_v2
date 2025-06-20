@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarPoliticasComponent1750258525191 {
+export class ValidarPoliticasComponent1750272791381 {
   pageTitle        = 'Validar Políticas';
   description      = `Método para validar las políticas crediticias de una determinada etapa del proceso de otorgamiento de créditos.`;
-  pubName          = 'Validar Políticas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ValidarPoliticas';
+  programa   = 'RBTPG417';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ValidarPoliticasComponent1750258525191 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ValidarPoliticas>
@@ -38,7 +39,9 @@ export class ValidarPoliticasComponent1750258525191 {
          <bts:solicitudUId>10972</bts:solicitudUId>
       </bts:BTMicrofinanzas.ValidarPoliticas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ValidarPoliticas \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ValidarPoliticasComponent1750258525191 {
       },
       "solicitudUId": "10972"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ValidarPoliticasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -126,7 +130,9 @@ export class ValidarPoliticasComponent1750258525191 {
          </Btoutreq>
       </BTMicrofinanzas.ValidarPoliticasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
    "Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "95",

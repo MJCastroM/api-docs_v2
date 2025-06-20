@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class IngresarOrdenPagoComponent1750258524712 {
+export class IngresarOrdenPagoComponent1750272790814 {
   pageTitle        = 'Ingresar Orden Pago';
   description      = `Método para ingresar una orden de pago.`;
-  pubName          = 'Ingresar Orden Pago';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.IngresarOrdenPago';
+  programa   = 'RBTPGC31';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class IngresarOrdenPagoComponent1750258524712 {
   errors     = [{ Codigo: '1030770', Descripcion: 'No se recupero informacion para la cuenta recibida.' }, { Codigo: '1030771', Descripcion: 'No se recibio importe para la orden.' }, { Codigo: '1030772', Descripcion: 'No se recibio moneda para la orden.' }, { Codigo: '1030773', Descripcion: 'No se recibio fecha para la orden.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.IngresarOrdenPago>
@@ -49,7 +50,9 @@ export class IngresarOrdenPagoComponent1750258524712 {
          </bts:listaCampoValor>
       </bts:BTCASHManagement.IngresarOrdenPago>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_CASHManagement_v1?IngresarOrdenPago\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: e985ea19-7527-41bc-bc60-fe431d9352b0,dbbd8038-2208-48fc-9395-1dfa11f1a0b1\' \
@@ -78,7 +81,8 @@ export class IngresarOrdenPagoComponent1750258524712 {
 		]
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.IngresarOrdenPagoResponse>
          <Btinreq>
@@ -101,7 +105,9 @@ export class IngresarOrdenPagoComponent1750258524712 {
          </Btoutreq>
       </BTCASHManagement.IngresarOrdenPagoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

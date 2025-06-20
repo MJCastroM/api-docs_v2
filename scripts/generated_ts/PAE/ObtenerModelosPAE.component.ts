@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosPAEComponent1750258525220 {
+export class ObtenerModelosPAEComponent1750272791405 {
   pageTitle        = 'Obtener Modelos PAE';
   description      = `Método para obtener los modelos PAE.`;
-  pubName          = 'Obtener Modelos PAE';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPAE.ObtenerModelosPAE';
+  programa   = 'RBTPGP51';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerModelosPAEComponent1750258525220 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPAE.ObtenerModelosPAE>
@@ -37,7 +38,9 @@ export class ObtenerModelosPAEComponent1750258525220 {
          </bts:Btinreq>
       </bts:BTPAE.ObtenerModelosPAE>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerModelosPAE\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerModelosPAEComponent1750258525220 {
         "Token": "bc8b678bc44A8B5C60A82434"
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPAE.ObtenerModelosPAEResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class ObtenerModelosPAEComponent1750258525220 {
          </Btoutreq>
       </BTPAE.ObtenerModelosPAEResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

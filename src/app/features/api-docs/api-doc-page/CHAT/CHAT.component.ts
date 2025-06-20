@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CHATComponent1750258524737 {
+export class CHATComponent1750272790843 {
   pageTitle        = 'CHAT';
   description      = ``;
-  pubName          = '';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,8 +24,14 @@ export class CHATComponent1750258524737 {
   errors     = [];
 
   examples = {
-    invocation: { xml: ``, json: `` },
-    response:   { xml: ``,  json: `` }
+    invocation: { xml: `
+`, 
+    json: `
+` },
+    response:   { xml: `
+`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

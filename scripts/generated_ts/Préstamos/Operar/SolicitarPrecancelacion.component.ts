@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarPrecancelacionComponent1750258525555 {
+export class SolicitarPrecancelacionComponent1750272791770 {
   pageTitle        = 'Solicitar Precancelación';
   description      = `Método para solicitar la precancelación de un préstamo.`;
-  pubName          = 'Solicitar Precancelación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SolicitarPrecancelacion';
+  programa   = 'RBTPG572';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class SolicitarPrecancelacionComponent1750258525555 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se ingresó el tipo de precancelación.' }, { Codigo: '30011', Descripcion: 'El valor del campo tipoPrecancelacion tiene que ser P o T.' }, { Codigo: '30012', Descripcion: 'No se ingresó si es pre pago manual.' }, { Codigo: '30013', Descripcion: 'El valor del campo prepagoManual tiene que ser S o N.' }, { Codigo: '30014', Descripcion: 'No se ingresó el tipo de reducción.' }, { Codigo: '30015', Descripcion: 'El valor del campo tipoReduccion tiene que ser P o C.' }, { Codigo: '30016', Descripcion: 'No se ingresó la modalidad de intereses.' }, { Codigo: '30017', Descripcion: 'El valor del campo modalidadIntereses tiene que ser CP o SP.' }, { Codigo: '30018', Descripcion: 'No se ingresó el motivo de la precancelación.' }, { Codigo: '30019', Descripcion: 'No se ingresó la fecha valor.' }, { Codigo: '40001', Descripcion: 'El identificador de motivo de precancelación no está registrado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.SolicitarPrecancelacion>
@@ -47,7 +48,9 @@ export class SolicitarPrecancelacionComponent1750258525555 {
          <bts:motivoPrecancelacion>1</bts:motivoPrecancelacion>
       </bts:BTPrestamos.SolicitarPrecancelacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SolicitarPrecancelacion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class SolicitarPrecancelacionComponent1750258525555 {
       "modalidadIntereses": "SP",
       "motivoPrecancelacion": 1
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.SolicitarPrecancelacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class SolicitarPrecancelacionComponent1750258525555 {
          </Btoutreq>
       </BTPrestamos.SolicitarPrecancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

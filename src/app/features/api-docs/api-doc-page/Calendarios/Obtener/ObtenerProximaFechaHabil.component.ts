@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProximaFechaHabilComponent1750258524677 {
+export class ObtenerProximaFechaHabilComponent1750272790769 {
   pageTitle        = 'Obtener Próxima Fecha Hábil';
   description      = `Método para obtener la próxima fecha hábil a la fecha ingresada.`;
-  pubName          = 'Obtener Próxima Fecha Hábil';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCalendario.ObtenerProximaFechaHabil';
+  programa   = 'RBTPG331';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerProximaFechaHabilComponent1750258524677 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCalendarios.ObtenerProximaFechaHabil>
@@ -38,7 +39,9 @@ export class ObtenerProximaFechaHabilComponent1750258524677 {
          <bts:fecha>2021-03-26</bts:fecha>
       </bts:BTCalendarios.ObtenerProximaFechaHabil>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerProximaFechaHabil\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerProximaFechaHabilComponent1750258524677 {
     },
     "fecha": "2021-03-26"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCalendarios.ObtenerProximaFechaHabilResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -76,7 +80,9 @@ export class ObtenerProximaFechaHabilComponent1750258524677 {
          </Btoutreq>
       </BTCalendarios.ObtenerProximaFechaHabilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
 	"Btinreq": {
       "Canal": "BTDIGITAL",
       "Requerimiento": "1",

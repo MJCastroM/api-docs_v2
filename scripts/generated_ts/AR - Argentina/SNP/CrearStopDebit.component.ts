@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitComponent1750258524632 {
+export class CrearStopDebitComponent1750272790715 {
   pageTitle        = 'Crear Stop Debit';
   description      = `Método para crear un stop debit sin importe.`;
-  pubName          = 'Crear Stop Debit';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.CrearStopDebit';
+  programa   = 'RBTPG341';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearStopDebitComponent1750258524632 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se encontró un cliente para el identificador: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'Se indicó fecha de inicio del rango de fechas pero no de fin.' }, { Codigo: '40001', Descripcion: 'No existe la empresa originante.' }, { Codigo: '40002', Descripcion: 'No existe el tipo de débito.' }, { Codigo: '40003', Descripcion: 'No existe la prestación.' }, { Codigo: '40004', Descripcion: 'El largo del ID del cliente no es correcto.' }, { Codigo: '40005', Descripcion: 'No existe la moneda.' }, { Codigo: '40006', Descripcion: 'Aviso: ID del cliente no pertenece a la adhesión.' }, { Codigo: '40007', Descripcion: 'Si ingresa tipo de débito, debe ingresar la empresa originante.' }, { Codigo: '40008', Descripcion: 'Si ingresa Prestación, debe ingresar el tipo de débito.' }, { Codigo: '40009', Descripcion: 'Si ingresa el ID Cliente, debe ingresar la prestación.' }, { Codigo: '40010', Descripcion: 'Es posible indicar Fecha de Vencimiento ó Rango de fecha de vencimiento, pero no ambas.' }, { Codigo: '40011', Descripcion: 'La fecha desde debe ser menor o igual que la fecha hasta.' }, { Codigo: '40012', Descripcion: 'Si ingresa monto máximo, debe ingresar empresa, tipo de débito, prestación, cliente, moneda e importe.' }, { Codigo: '40013', Descripcion: 'Si ingresa monto máximo, no debe ingresar fecha de vencimiento ni referencia.' }, { Codigo: '40014', Descripcion: 'Si ingresa Id Cliente, la cantidad de caracteres debe corresponderse con el Largo Id.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.CrearStopDebit>
@@ -48,7 +49,9 @@ export class CrearStopDebitComponent1750258524632 {
          </bts:sdtStopDebit>
       </bts:BTSNP.CrearStopDebit>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearStopDebit\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -73,7 +76,8 @@ export class CrearStopDebitComponent1750258524632 {
         "fechaDesde": "2019-04-04"
     }
   }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.CrearStopDebitResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class CrearStopDebitComponent1750258524632 {
          </Btoutreq>
       </BTSNP.CrearStopDebitResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",

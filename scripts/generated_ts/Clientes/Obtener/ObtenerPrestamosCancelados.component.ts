@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosCanceladosComponent1750258524809 {
+export class ObtenerPrestamosCanceladosComponent1750272790935 {
   pageTitle        = 'Obtener Préstamos Cancelados';
   description      = `Método para obtener los préstamos cancelados de un cliente.`;
-  pubName          = 'Obtener Préstamos Cancelados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerPrestamosCancelados';
+  programa   = 'RBTPG486';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPrestamosCanceladosComponent1750258524809 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cuenta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'El cliente no tiene operaciones.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerPrestamosCancelados>
@@ -38,7 +39,9 @@ export class ObtenerPrestamosCanceladosComponent1750258524809 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTClientes.ObtenerPrestamosCancelados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPrestamosCancelados=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerPrestamosCanceladosComponent1750258524809 {
     },
     "clienteUId": 61,
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerPrestamosCanceladosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -105,7 +109,9 @@ export class ObtenerPrestamosCanceladosComponent1750258524809 {
          </Btoutreq>
       </BTClientes.ObtenerPrestamosCanceladosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

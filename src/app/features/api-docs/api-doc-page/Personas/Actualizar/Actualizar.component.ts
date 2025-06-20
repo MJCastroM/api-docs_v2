@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarComponent1750258525275 {
+export class ActualizarComponent1750272791473 {
   pageTitle        = 'Actualizar';
   description      = `Método para actualizar los datos de una persona.`;
-  pubName          = 'Actualizar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.Actualizar';
+  programa   = 'RBTPG398';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActualizarComponent1750258525275 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recuperó la persona para el identificador de persona: [Número de Identificador].' }, { Codigo: '40001', Descripcion: 'Debe ingresar País del Documento.' }, { Codigo: '40002', Descripcion: 'El País del Documento no existe.' }, { Codigo: '40003', Descripcion: 'Debe ingresar Tipo de Documento.' }, { Codigo: '40004', Descripcion: 'El Tipo de Documento no existe.' }, { Codigo: '40005', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '40006', Descripcion: 'Número de Documento incorrecto.' }, { Codigo: '40007', Descripcion: 'Debe ingresar Primer Apellido.' }, { Codigo: '40008', Descripcion: 'Debe ingresar Primer Nombre.' }, { Codigo: '40009', Descripcion: 'Debe ingresar Fecha de Nacimiento.' }, { Codigo: '40010', Descripcion: 'La Fecha de Nacimiento no puede ser posterior a hoy.' }, { Codigo: '40011', Descripcion: 'La persona no es mayor de [Edad mínima] años.' }, { Codigo: '40012', Descripcion: 'Debe ingresar Sexo.' }, { Codigo: '40013', Descripcion: 'Debe ingresar Ocupación.' }, { Codigo: '40014', Descripcion: 'El código de Ocupación no existe.' }, { Codigo: '40015', Descripcion: 'La Fecha de Inicio de Actividad no puede ser posterior a hoy.' }, { Codigo: '40016', Descripcion: 'Caracteres incorrectos en nombre/apellido.' }, { Codigo: '40028', Descripcion: 'Debe ingresar al menos un Teléfono.' }, { Codigo: '40029', Descripcion: 'Email inválido.' }, { Codigo: '40030', Descripcion: 'La persona se encuentra en la lista de Inhabilitados: [Descripción lista].' }, { Codigo: '40041', Descripcion: 'Debe ingresar Actividad Laboral.' }, { Codigo: '40042', Descripcion: 'El código de Actividad Laboral no existe.' }, { Codigo: '40043', Descripcion: 'El País de la nacionalidad no existe.' }, { Codigo: '40044', Descripcion: 'El sexo ingresado no es válido.' }, { Codigo: '40051', Descripcion: 'La persona ya existe.' }, { Codigo: '40101', Descripcion: 'Código de domicilio no válido.' }, { Codigo: '40119', Descripcion: 'Debe ingresar País del Domicilio' }, { Codigo: '40120', Descripcion: 'El País del Domicilio no existe.' }, { Codigo: '40121', Descripcion: 'Debe ingresar Departamento.' }, { Codigo: '40122', Descripcion: 'El Departamento no existe.' }, { Codigo: '40123', Descripcion: 'Debe ingresar Localidad.' }, { Codigo: '40124', Descripcion: 'La Localidad no existe.' }, { Codigo: '40125', Descripcion: 'El barrio no existe.' }, { Codigo: '40126', Descripcion: 'Debe ingresar calle.' }, { Codigo: '40127', Descripcion: 'Debe ingresar número de puerta.' }, { Codigo: '40128', Descripcion: 'Debe ingresar código postal.' }, { Codigo: '40130', Descripcion: 'El domicilio ingresado ya existe.' }, { Codigo: '40131', Descripcion: 'El domicilio ingresado no existe.' }, { Codigo: '40132', Descripcion: 'El número de puerta no puede superar los 5 dígitos.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.Actualizar>
@@ -107,7 +108,9 @@ export class ActualizarComponent1750258525275 {
          </bts:sdtPersona>
       </bts:BTPersonas.Actualizar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?Actualizar=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -192,7 +195,8 @@ export class ActualizarComponent1750258525275 {
         }
       }
     }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -214,7 +218,9 @@ export class ActualizarComponent1750258525275 {
          </Btoutreq>
       </BTPersonas.ActualizarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Device": "AS",
           "Usuario": "INSTALADOR",

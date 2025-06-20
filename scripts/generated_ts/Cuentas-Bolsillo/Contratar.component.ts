@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750258524985 {
+export class ContratarComponent1750272791097 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar una nueva cuenta bolsillo.`;
-  pubName          = 'Contratar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasBolsillo.Contratar';
+  programa   = 'RBTPG609';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ContratarComponent1750258524985 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de la Cuenta principal.' }, { Codigo: '30002', Descripcion: 'No se recuperó la clave de operación para el Identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de producto.' }, { Codigo: '30004', Descripcion: 'No existe registro para el identificador único de producto.' }, { Codigo: '30005', Descripcion: 'El producto ingresado no corresponde a una cuenta bolsillo.' }, { Codigo: '30011', Descripcion: 'Cuenta principal no es un producto admitido.' }, { Codigo: '30012', Descripcion: 'Debe indicar nombre de subcuenta.' }, { Codigo: '30013', Descripcion: 'Debe indicar meta de ahorro.' }, { Codigo: '30019', Descripcion: 'Superó cantidad máxima de cuentas bolsillos.' }, { Codigo: '30020', Descripcion: 'No existe cuenta de acreditación asociada.' }, { Codigo: '30021', Descripcion: 'Cuenta principal no permite operar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasBolsillo.Contratar>
@@ -41,7 +42,9 @@ export class ContratarComponent1750258524985 {
          <bts:metaAhorro>10000</bts:metaAhorro>
       </bts:BTCuentasBolsillo.Contratar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Contratar\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ContratarComponent1750258524985 {
     "nombreSubCuenta": "Contratacion",
     "metaAhorro": 10000
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasBolsillo.ContratarResponse xmlns=http://uy.com.dlya.bantotal/BTSOA/>
          <Btinreq>
@@ -82,7 +86,9 @@ export class ContratarComponent1750258524985 {
          </Btoutreq>
       </BTCuentasBolsillo.ContratarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "1",
         "Usuario": "MINSTALADOR",

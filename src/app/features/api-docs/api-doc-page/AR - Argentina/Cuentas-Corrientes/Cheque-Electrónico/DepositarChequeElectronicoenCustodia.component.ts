@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicoenCustodiaComponent1750258524622 {
+export class DepositarChequeElectronicoenCustodiaComponent1750272790704 {
   pageTitle        = 'Depositar Cheque Electrónico en Custodia';
   description      = `Método para depositar un cheque electrónico bajo custodia.`;
-  pubName          = 'Depositar Cheque Electrónico en Custodia';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia';
+  programa   = 'RBTPAR32';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class DepositarChequeElectronicoenCustodiaComponent1750258524622 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia>
@@ -46,7 +47,9 @@ export class DepositarChequeElectronicoenCustodiaComponent1750258524622 {
          <bts:fechaVencimiento></bts:fechaVencimiento>
       </bts:BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope></soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?DepositarChequeElectronicoEnCustodia\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ export class DepositarChequeElectronicoenCustodiaComponent1750258524622 {
 	"paisBeneficiarioId": "",
 	"fechaVencimiento": ""
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.DepositarChequeElectronicoEnCustodiaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +95,9 @@ export class DepositarChequeElectronicoenCustodiaComponent1750258524622 {
          </Btoutreq>
       </BTCuentasCorrientes.DepositarChequeElectronicoEnCustodiaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDestinosCreditoComponent1750258525168 {
+export class ObtenerDestinosCreditoComponent1750272791357 {
   pageTitle        = 'Obtener Destinos Crédito';
   description      = `Método para obtener los destinos posibles para un crédito.`;
-  pubName          = 'Obtener Destinos Crédito';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerDestinosCredito';
+  programa   = 'RBTPG415';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDestinosCreditoComponent1750258525168 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerDestinosCredito>
@@ -39,7 +40,9 @@ export class ObtenerDestinosCreditoComponent1750258525168 {
 		 <bts:productoUId>23</bts:productoUId>
       </bts:BTMicrofinanzas.ObtenerDestinosCredito>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerDestinosCredito \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerDestinosCreditoComponent1750258525168 {
     "solicitudUId": "10896",
     "productoUId": "23"
  }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerDestinosCreditoResponse>
          <Btinreq>
@@ -111,7 +115,9 @@ export class ObtenerDestinosCreditoComponent1750258525168 {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerDestinosCreditoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

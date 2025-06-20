@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresDomicilioComponent1750258524948 {
+export class ObtenerAgrupadoresDomicilioComponent1750272791026 {
   pageTitle        = 'Obtener Agrupadores de Domicilio';
   description      = `Método para obtener los diferentes niveles de agrupadores de domicilios.`;
-  pubName          = 'Obtener Agrupadores de Domicilio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio';
+  programa   = 'RBTPG221';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerAgrupadoresDomicilioComponent1750258524948 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se encontraron agrupadores.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio>
@@ -43,7 +44,9 @@ export class ObtenerAgrupadoresDomicilioComponent1750258524948 {
          <bts:agrupadorId6></bts:agrupadorId6>
       </bts:BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerAgrupadoresDomicilio\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -63,7 +66,8 @@ export class ObtenerAgrupadoresDomicilioComponent1750258524948 {
     "agrupadorId5": "",
     "agrupadorId6": ""
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerAgrupadoresDomicilioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -118,7 +122,9 @@ export class ObtenerAgrupadoresDomicilioComponent1750258524948 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerAgrupadoresDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
   "Btinreq": {
     "Device": "GP",
     "Usuario": "INSTALADOR",

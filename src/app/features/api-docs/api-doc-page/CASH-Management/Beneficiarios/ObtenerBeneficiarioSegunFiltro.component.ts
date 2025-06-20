@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiarioSegunFiltroComponent1750258524691 {
+export class ObtenerBeneficiarioSegunFiltroComponent1750272790786 {
   pageTitle        = 'Obtener Beneficiario Según Filtro';
   description      = `Método para obtener el beneficiario según el filtro.`;
-  pubName          = 'Obtener Beneficiario Según Filtro';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerBeneficiarioSegunFiltro';
+  programa   = 'RBTPGC075';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerBeneficiarioSegunFiltroComponent1750258524691 {
   errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificación de cuenta cliente' }, { Codigo: '1030713', Descripcion: 'El contrato no corresponde a la cuenta recibida.' }, { Codigo: '1030780', Descripcion: 'No se recupero Beneficiario para la identificación recibida.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>
@@ -47,7 +48,9 @@ export class ObtenerBeneficiarioSegunFiltroComponent1750258524691 {
          </bts:sdtValorCampoCash>
       </bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerBeneficiarioSegunFiltro=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class ObtenerBeneficiarioSegunFiltroComponent1750258524691 {
          }
       }
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -183,7 +187,9 @@ export class ObtenerBeneficiarioSegunFiltroComponent1750258524691 {
          </Btoutreq>
       </BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

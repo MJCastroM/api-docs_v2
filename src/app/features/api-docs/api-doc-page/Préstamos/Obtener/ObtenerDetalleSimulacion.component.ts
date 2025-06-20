@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleSimulacionComponent1750258525523 {
+export class ObtenerDetalleSimulacionComponent1750272791722 {
   pageTitle        = 'Obtener Detalle Simulación';
   description      = `Método para obtener el detalle de la simulación de un préstamo.`;
-  pubName          = 'Obtener Detalle Simulación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetalleSimulacion';
+  programa   = 'RBTPG456';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalleSimulacionComponent1750258525523 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDetalleSimulacion>
@@ -39,7 +40,9 @@ export class ObtenerDetalleSimulacionComponent1750258525523 {
          <bts:clienteUId>342</bts:clienteUId>
       </bts:BTPrestamos.ObtenerDetalleSimulacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerDetalleSimulacionComponent1750258525523 {
         "operacionUId": 18544,
         "clienteUId": 342
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDetalleSimulacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -244,7 +248,9 @@ export class ObtenerDetalleSimulacionComponent1750258525523 {
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleSimulacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 	"Btinreq": { 
           "Token": "DC534B7EE96C31983417C526", 
           "Canal": "BTDIGITAL", 

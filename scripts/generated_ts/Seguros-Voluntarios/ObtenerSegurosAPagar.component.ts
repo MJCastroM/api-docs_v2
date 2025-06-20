@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosAPagarComponent1750258525622 {
+export class ObtenerSegurosAPagarComponent1750272791850 {
   pageTitle        = 'Obtener Seguros a Pagar';
   description      = ``;
-  pubName          = 'Obtener Seguros a Pagar';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerSegurosAPagarComponent1750258525622 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSegurosVoluntarios.ObtenerSegurosAPagar>
@@ -38,7 +39,9 @@ export class ObtenerSegurosAPagarComponent1750258525622 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTSegurosVoluntarios.ObtenerSegurosAPagar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSegurosVoluntarios?ObtenerSegurosAPagar\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerSegurosAPagarComponent1750258525622 {
     },
     "clienteUId": 61
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSegurosVoluntarios.ObtenerSegurosAPagarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -126,7 +130,9 @@ export class ObtenerSegurosAPagarComponent1750258525622 {
          </Btoutreq>
       </BTSegurosVoluntarios.ObtenerSegurosAPagarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",

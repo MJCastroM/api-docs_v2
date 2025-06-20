@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdendeCuentaComponent1750258524697 {
+export class ObtenerDetalledeOrdendeCuentaComponent1750272790795 {
   pageTitle        = 'Obtener Detalle de Orden de Cuenta';
   description      = `Método para obtener la información de las líneas del detalle de orden de cuenta.`;
-  pubName          = 'Obtener Detalle de Orden de Cuenta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDetalleOrdenCuenta';
+  programa   = 'RBTPGC23F';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalledeOrdendeCuentaComponent1750258524697 {
   errors     = [{ Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la información.' }, { Codigo: '1030713', Descripcion: 'El contrato consultado no corresponde a la cuenta recibida.' }, { Codigo: '1030770', Descripcion: 'No se recuperó información para la cuenta recibida.' }, { Codigo: '1039999', Descripcion: 'Error no clasificado' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.ObtenerDetalleOrdenCuenta>
@@ -39,7 +40,9 @@ export class ObtenerDetalledeOrdendeCuentaComponent1750258524697 {
          <bts:clienteUId>376</bts:clienteUId>
       </bts:BTCASHManagement.ObtenerDetalleOrdenCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?ObtenerDetalleOrdenCuenta=\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: 5671946f-3030-43ca-9d7b-58d54d588d21,a454ff51-cf63-4795-a47b-05a16d861dcd\' \
@@ -55,7 +58,8 @@ export class ObtenerDetalledeOrdendeCuentaComponent1750258524697 {
     "ordenId": "204",
     "clienteUId": "376"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.ObtenerDetalleOrdenCuentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +96,9 @@ export class ObtenerDetalledeOrdendeCuentaComponent1750258524697 {
          </Btoutreq>
       </BTCASHManagement.ObtenerDetalleOrdenCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

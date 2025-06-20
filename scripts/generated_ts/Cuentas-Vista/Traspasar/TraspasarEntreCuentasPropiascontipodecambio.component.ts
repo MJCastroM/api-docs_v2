@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiascontipodecambioComponent1750258525060 {
+export class TraspasarEntreCuentasPropiascontipodecambioComponent1750272791229 {
   pageTitle        = 'Traspasar Entre Cuentas Propias (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas propias.`;
-  pubName          = 'Traspasar Entre Cuentas Propias (con tipo de cambio)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarCuentasPropiasConCotizacion';
+  programa   = 'RBTPG263';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:
@@ -38,7 +38,8 @@ export class TraspasarEntreCuentasPropiascontipodecambioComponent1750258525060 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30005', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30006', Descripcion: 'Debe ingresar tipo de cambio a aplicar.' }, { Codigo: '30007', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '30010', Descripcion: 'La cuenta destino debe coincidir con la cuenta origen.' }, { Codigo: '30011', Descripcion: 'La operación origen y operación destino no pueden ser iguales.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }, { Codigo: '51005', Descripcion: 'La moneda del traspaso debe coincidir con la moneda de la operación origen' }, { Codigo: '51008', Descripcion: 'Error de configuración: No se definió transacción a ejecutar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
     <soapenv:Header/>    
     <soapenv:Body>        
         <bts:BTCuentasVista.TraspasarCuentasPropiasConCotizacion>  
@@ -60,7 +61,9 @@ export class TraspasarEntreCuentasPropiascontipodecambioComponent1750258525060 {
             <bts:tipoDeCambio>31.5</bts:tipoDeCambio>  
         </bts:BTCuentasVista.TraspasarCuentasPropiasConCotizacion>  
     </soapenv:Body> 
-</soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarCuentasPropiasConCotizacion \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -84,7 +87,8 @@ export class TraspasarEntreCuentasPropiascontipodecambioComponent1750258525060 {
       }, 
     "tipoDeCambio": "31.5" 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">   
     <SOAP-ENV:Body>       
         <BTCuentasVista.TraspasarCuentasPropiasConCotizacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">  
             <Btinreq>      
@@ -113,7 +117,9 @@ export class TraspasarEntreCuentasPropiascontipodecambioComponent1750258525060 {
             </Btoutreq>       
         </BTCuentasVista.TraspasarCuentasPropiasConCotizacionResponse> 
     </SOAP-ENV:Body>  
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
     "Btinreq": { 
         "Device": "AV", 
         "Usuario": "MINSTALADOR", 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleSucursalComponent1750258524837 {
+export class ObtenerDetalleSucursalComponent1750272790977 {
   pageTitle        = 'Obtener Detalle de Sucursal';
   description      = `Método para obtener el detalle de una sucursal.`;
-  pubName          = 'Obtener Detalle de Sucursal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerDetalleSucursal';
+  programa   = 'RBTPG558';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalleSucursalComponent1750258524837 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de sucursal.' }, { Codigo: '41001', Descripcion: 'La Sucursal no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerDetalleSucursal>
@@ -38,7 +39,9 @@ export class ObtenerDetalleSucursalComponent1750258524837 {
          <bts:sucursalId>1</bts:sucursalId>
       </bts:BTConfiguracionBantotal.ObtenerDetalleSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDetalleSucursal=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerDetalleSucursalComponent1750258524837 {
       },
       "sucursalId": 1,
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerDetalleSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -97,7 +101,9 @@ export class ObtenerDetalleSucursalComponent1750258524837 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

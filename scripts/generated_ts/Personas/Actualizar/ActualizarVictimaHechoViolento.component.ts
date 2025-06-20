@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarVictimaHechoViolentoComponent1750258525302 {
+export class ActualizarVictimaHechoViolentoComponent1750272791502 {
   pageTitle        = 'Actualizar Víctima Hecho Violento';
   description      = `Método para actualizar la información de una persona víctima de un hecho violento.`;
-  pubName          = 'Actualizar Víctima Hecho Violento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarVictimaHechoViolento';
+  programa   = 'RBTPCO05';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActualizarVictimaHechoViolentoComponent1750258525302 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '40001', Descripcion: 'Debe ingresar entidad.' }, { Codigo: '40002', Descripcion: 'La entidad ingresada no es válida.' }, { Codigo: '40003', Descripcion: 'Debe ingresar fecha del hecho.' }, { Codigo: '40004', Descripcion: 'La fecha del hecho no puede ser posterior a la fecha de apertura.' }, { Codigo: '40005', Descripcion: 'Debe ingresar fecha de certificación.' }, { Codigo: '40006', Descripcion: 'La fecha de certificación no puede ser anterior a la fecha del hecho.' }, { Codigo: '40007', Descripcion: 'Debe ingresar fecha de vencimiento.' }, { Codigo: '40008', Descripcion: 'La fecha de vencimiento no puede ser anterior a la fecha del hecho.' }, { Codigo: '40009', Descripcion: 'La fecha de vencimiento no puede ser anterior a la fecha de certificación.' }, { Codigo: '40011', Descripcion: 'El departamento ingresado no es válido.' }, { Codigo: '40013', Descripcion: 'El municipio ingresado no es válido.' }, { Codigo: '40019', Descripcion: 'El tipo de hecho ingresado no es válido.' }, { Codigo: '40020', Descripcion: 'No existe registro.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarVictimaHechoViolento>
@@ -56,7 +57,9 @@ export class ActualizarVictimaHechoViolentoComponent1750258525302 {
          </bts:sdtVictimaHechoViolento>
       </bts:BTPersonas.ActualizarVictimaHechoViolento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarVictimaHechoViolento \
 -H \'cache-control: no-cache\' \
 -H \'content-type: application/json\' \
@@ -84,7 +87,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
 	  "fechaHecho": "2021-06-20"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarVictimaHechoViolentoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -106,7 +110,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.ActualizarVictimaHechoViolentoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

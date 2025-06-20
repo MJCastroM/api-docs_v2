@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPeriododeAcreditacionComponent1750258525043 {
+export class ActualizarPeriododeAcreditacionComponent1750272791204 {
   pageTitle        = 'Actualizar Período de Acreditación';
   description      = `Método para actualizar el período de acreditación de intereses de una subcuenta contratada.`;
-  pubName          = 'Actualizar Período de Acreditación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ActualizarPeriodoDeAcreditacion';
+  programa   = 'RBTPG359';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActualizarPeriododeAcreditacionComponent1750258525043 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'El período de acreditación ingresado es inválido.' }, { Codigo: '30003', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ActualizarPeriodoDeAcreditacion>
@@ -39,7 +40,9 @@ export class ActualizarPeriododeAcreditacionComponent1750258525043 {
          <bts:periodoAcreditacion>1</bts:periodoAcreditacion>
       </bts:BTCuentasVista.ActualizarPeriodoDeAcreditacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `{
+</soapenv:Envelope>`, 
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -50,7 +53,8 @@ export class ActualizarPeriododeAcreditacionComponent1750258525043 {
     "operacionUId": "10209",
     "periodoAcreditacion": "15"
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ActualizarPeriodoDeAcreditacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -72,7 +76,9 @@ export class ActualizarPeriododeAcreditacionComponent1750258525043 {
          </Btoutreq>
       </BTCuentasVista.ActualizarPeriodoDeAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",

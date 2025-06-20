@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaComponent1750258525638 {
+export class ObtenerTarjetaComponent1750272791868 {
   pageTitle        = 'Obtener Tarjeta';
   description      = `Método para obtener la tarjeta encriptada según las normas PCI.`;
-  pubName          = 'Obtener Tarjeta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerTarjeta';
+  programa   = 'RBTPG805';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se debe parametrizar el programa particular que resuelve la encriptación de la tarjeta en la FST900 con programa estándar RBTSTD13.
@@ -26,7 +26,8 @@ export class ObtenerTarjetaComponent1750258525638 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el Identificador de Tarjeta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerTarjeta>
@@ -41,7 +42,9 @@ export class ObtenerTarjetaComponent1750258525638 {
          <bts:tarjetaUID>2000001751</bts:tarjetaUID>
       </bts:BTTarjetasDeDebito.ObtenerTarjeta>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjetas\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ObtenerTarjetaComponent1750258525638 {
         "personaUID": 679,
         "tarjetaUID": 2000001751
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerTarjetaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ObtenerTarjetaComponent1750258525638 {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTarjetaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Requerimiento": 1,

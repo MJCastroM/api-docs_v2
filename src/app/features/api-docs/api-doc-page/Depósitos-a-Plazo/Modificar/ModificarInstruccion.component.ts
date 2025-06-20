@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarInstruccionComponent1750258525086 {
+export class ModificarInstruccionComponent1750272791261 {
   pageTitle        = 'Modificar Instrucción';
   description      = `Método para modificar la instrucción al vencimiento de un depósito a plazo.`;
-  pubName          = 'Modificar Instrucción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ModificarInstruccion';
+  programa   = 'RBTPG106';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se debe parametrizar en la guía de procesos 70101 de la siguiente manera: 
@@ -31,7 +31,8 @@ Importe específico | 3.
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación del depósito.' }, { Codigo: '30003', Descripcion: 'No se recibió la instrucción al vencimiento.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del depósito para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'La operación asociada al identificador: [Número de identificador] no pertenece a un depósito a plazo.' }, { Codigo: '30007', Descripcion: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '30011', Descripcion: 'No se recibió el identificador de la operación de la cuenta.' }, { Codigo: '30012', Descripcion: 'No se recuperó la operación de la cuenta para el identificador: [Número de identificador].' }, { Codigo: '30013', Descripcion: 'La operación asociada al identificador: [Número de identificador] no pertenece a un producto cuenta.' }, { Codigo: '40001', Descripcion: 'Se debe indicar el código de instrucción al vencimiento aplicar.' }, { Codigo: '40002', Descripcion: 'El código de instrucción al vencimiento ingresado es incorrecto.' }, { Codigo: '40003', Descripcion: 'No se encontró instrucción al vencimiento para el depósito ingresado.' }, { Codigo: '40004', Descripcion: 'La instrucción al vencimiento a aplicar es igual a la que tiene el depósito.' }, { Codigo: '40005', Descripcion: 'La operación donde se abonarían los intereses no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ModificarInstruccion>
@@ -48,7 +49,9 @@ Importe específico | 3.
          <bts:accion>2</bts:accion>
       </bts:BTDepositosAPlazo.ModificarInstruccion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ModificarInstruccion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -66,7 +69,8 @@ Importe específico | 3.
 	"cuentaUId": 2,
 	"accion": "2"	 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ModificarInstruccionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +92,9 @@ Importe específico | 3.
          </Btoutreq>
       </BTDepositosAPlazo.ModificarInstruccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

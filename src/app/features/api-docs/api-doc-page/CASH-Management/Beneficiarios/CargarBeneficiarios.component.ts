@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarBeneficiariosComponent1750258524688 {
+export class CargarBeneficiariosComponent1750272790783 {
   pageTitle        = 'Cargar Beneficiarios';
   description      = `Método para cargar un archivo con los beneficiarios de los pagos.`;
-  pubName          = 'Cargar Beneficiarios';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.CargarBeneficiarios';
+  programa   = 'RBTPGC70';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CargarBeneficiariosComponent1750258524688 {
   errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030713', Descripcion: 'El contrato consultado no corresponde a la cuenta recibida.' }, { Codigo: '1030770', Descripcion: 'No se recupero información para la cuenta recibida.' }, { Codigo: '1030774', Descripcion: 'No se recibió Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor.' }, { Codigo: '1030775', Descripcion: 'No se identifico servicio para la Agenda.' }, { Codigo: '1030776', Descripcion: 'No se identifico la Agenda para la cual se realiza la Carga.' }, { Codigo: '1030702', Descripcion: 'El archivo esta vacío.' }, { Codigo: '1030703', Descripcion: 'No hay información en el archivo.' }, { Codigo: '1030707', Descripcion: 'Error al abrir el archivo.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.CargarBeneficiarios>
@@ -42,7 +43,9 @@ export class CargarBeneficiariosComponent1750258524688 {
          <bts:nomArchBeneficiarios>Agenda_8_240.xls</bts:nomArchBeneficiarios>
       </bts:BTCASHManagement.CargarBeneficiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?CargarBeneficiarios=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -61,7 +64,8 @@ export class CargarBeneficiariosComponent1750258524688 {
     "agendaId": "",
     "nomArchBeneficiarios": "Agenda_8_240.xls"
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.CargarBeneficiariosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class CargarBeneficiariosComponent1750258524688 {
          </Btoutreq>
       </BTCASHManagement.CargarBeneficiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

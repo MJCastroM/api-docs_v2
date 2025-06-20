@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarFATCAComponent1750258525316 {
+export class AgregarFATCAComponent1750272791526 {
   pageTitle        = 'Agregar FATCA';
   description      = `Método para agregar la información FATCA de una persona.`;
-  pubName          = 'Agregar FATCA';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarFATCA';
+  programa   = 'RBTPCO10';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AgregarFATCAComponent1750258525316 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '30002', Descripcion: 'Error - Datos duplicados.' }, { Codigo: '40001', Descripcion: 'Debe ingresar al menos una Residencia Fiscal.' }, { Codigo: '40002', Descripcion: 'El país ingresado no es válido.' }, { Codigo: '40003', Descripcion: 'Ya existe el registro.' }, { Codigo: '40004', Descripcion: 'No se puede ingresar residencias fiscales.' }, { Codigo: '40005', Descripcion: 'No existe el registro.' }, { Codigo: '40006', Descripcion: 'No existe el país indicado.' }, { Codigo: '40007', Descripcion: 'No existe el tipo de documento indicado.' }, { Codigo: '40007', Descripcion: 'No debe ingresar correlativo para residencia.' }, { Codigo: '40007', Descripcion: 'Se ingresó la misma residencia dos veces.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarFATCA>
@@ -54,7 +55,9 @@ export class AgregarFATCAComponent1750258525316 {
          </bts:sdtInformacionFATCA>
       </bts:BTPersonas.AgregarFATCA>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarFATCA \
 -H \'cache-control: no-cache\' \
 -H \'content-type: application/json\' \
@@ -84,7 +87,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
    }
 }
 \'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarFATCAResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -107,7 +111,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.AgregarFATCAResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

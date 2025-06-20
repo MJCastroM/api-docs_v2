@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDolarUSAComponent1750258524940 {
+export class ObtenerDolarUSAComponent1750272791014 {
   pageTitle        = 'Obtener Dólar USA';
   description      = `Método para obtener los datos del dólar estadounidense.`;
-  pubName          = 'Obtener Dólar USA';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerDolarUSA';
+  programa   = 'RBTPG154';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDolarUSAComponent1750258524940 {
   errors     = [{ Codigo: '40001', Descripcion: 'No existen Monedas ingresadas en el sistema.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerDolarUSA>
@@ -37,7 +38,9 @@ export class ObtenerDolarUSAComponent1750258524940 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerDolarUSA>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDolarUSA=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerDolarUSAComponent1750258524940 {
 		"Token": "669747179CD285A89A23FBEE"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerDolarUSAResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -78,7 +82,9 @@ export class ObtenerDolarUSAComponent1750258524940 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDolarUSAResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

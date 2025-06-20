@@ -1,23 +1,36 @@
 <ng-container *ngIf="types.length > 0">
   <h1>Tipos de Dato Estructurado</h1>
-  <mat-accordion>
-    <mat-expansion-panel *ngFor="let sdt of types">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{ sdt.typeName }}
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>Los campos del tipo de dato estructurado {{ sdt.typeName }} son los siguientes:</p>
-      <!-- Main table for this SDT -->
-      <app-api-table
-        [columns]="['Nombre','Tipo','Comentarios']"
-        [data]="sdt.fields">
-      </app-api-table>
 
-      <!-- RECURSION: if this SDT has children, render them here -->
-      <div *ngIf="sdt.children?.length" class="nested-sdts">
-        <app-structured-data [types]="sdt.children || []"></app-structured-data>
-      </div>
-    </mat-expansion-panel>
-  </mat-accordion>
+  <div (click)="onContainerClick($event)">
+    <mat-accordion>
+
+      <mat-expansion-panel
+        #panel
+        [attr.id]="sdt.typeName | lowercase"
+        *ngFor="let sdt of types">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ sdt.typeName }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <p>
+          Los campos del tipo de dato estructurado
+          <strong>{{ sdt.typeName }}</strong> son:
+        </p>
+
+        <app-api-table
+          [columns]="['Nombre','Tipo','Comentarios']"
+          [data]="sdt.fields">
+        </app-api-table>
+
+        <div *ngIf="sdt.children?.length" class="nested-sdts">
+          <app-structured-data
+            [types]="sdt.children">
+          </app-structured-data>
+        </div>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </div>
 </ng-container>

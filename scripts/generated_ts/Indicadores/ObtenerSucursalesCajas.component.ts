@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesCajasComponent1750258525127 {
+export class ObtenerSucursalesCajasComponent1750272791314 {
   pageTitle        = 'Obtener Sucursales Cajas';
   description      = `Método para obtener porcentajes y listados de sucursales y cajas del sistema.`;
-  pubName          = 'Obtener Sucursales Cajas';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTIndicadores.ObtenerSucursalesCajas';
+  programa   = 'RBTPG705';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerSucursalesCajasComponent1750258525127 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTIndicadores.ObtenerSucursalesCajas>
@@ -37,7 +38,9 @@ export class ObtenerSucursalesCajasComponent1750258525127 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerSucursalesCajas>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerSucursalesCajas\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerSucursalesCajasComponent1750258525127 {
       "Requerimiento": "?"
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTIndicadores.ObtenerSucursalesCajasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -78,7 +82,9 @@ export class ObtenerSucursalesCajasComponent1750258525127 {
          ...
       </BTIndicadores.ObtenerSucursalesCajasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",

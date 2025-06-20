@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionesComponent1750258525195 {
+export class ObtenerComisionesComponent1750272791386 {
   pageTitle        = 'Obtener Comisiones';
   description      = `Método para obtener las comisiones parametrizadas de un producto de préstamos.`;
-  pubName          = 'Obtener Comisiones';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerComisiones';
+  programa   = 'RBTPG521';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerComisionesComponent1750258525195 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTModeladorPrestamos.ObtenerComisiones>
@@ -38,7 +39,9 @@ export class ObtenerComisionesComponent1750258525195 {
          <bts:productoUId>48</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerComisiones>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerComisionesComponent1750258525195 {
 	},
 	"productoUId": "48"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTModeladorPrestamos.ObtenerComisionesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class ObtenerComisionesComponent1750258525195 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerComisionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "1",
         "Usuario": "MINSTALADOR",

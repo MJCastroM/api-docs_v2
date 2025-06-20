@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarChequeraComponent1750258524996 {
+export class EliminarChequeraComponent1750272791119 {
   pageTitle        = 'Eliminar Chequera';
   description      = `Método para eliminar una chequera.`;
-  pubName          = 'Eliminar Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.EliminarChequera';
+  programa   = 'RBTPG243';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EliminarChequeraComponent1750258524996 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de chequera.' }, { Codigo: '40001', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40002', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40003', Descripcion: 'La chequera contiene cheques utilizados; no puede ser eliminada.' }, { Codigo: '40004', Descripcion: 'Cuenta Cerrada, solo se permite consulta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.EliminarChequera>
@@ -38,7 +39,9 @@ export class EliminarChequeraComponent1750258524996 {
          <bts:chequeraId>37</bts:chequeraId>
       </bts:BTCuentasCorrientes.EliminarChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?EliminarChequera\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class EliminarChequeraComponent1750258524996 {
 	},
 	"chequeraId":"37"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.EliminarChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -75,7 +79,9 @@ export class EliminarChequeraComponent1750258524996 {
          </Btoutreq>
       </BTCuentasCorrientes.EliminarChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

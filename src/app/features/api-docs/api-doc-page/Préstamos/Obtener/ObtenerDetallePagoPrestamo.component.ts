@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetallePagoPrestamoComponent1750258525521 {
+export class ObtenerDetallePagoPrestamoComponent1750272791718 {
   pageTitle        = 'Obtener Detalle Pago Préstamo';
   description      = `Método para obtener el detalle de un pago de préstamo a partir del movimiento.`;
-  pubName          = 'Obtener Detalle Pago Préstamo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetallePagoPrestamo';
+  programa   = 'RBTPG838';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetallePagoPrestamoComponent1750258525521 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de movimiento.' }, { Codigo: '30003', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30103', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30104', Descripcion: 'No existe registro para el movimiento indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDetallePagoPrestamo>
@@ -39,7 +40,9 @@ export class ObtenerDetallePagoPrestamoComponent1750258525521 {
          <bts:movimientoUId>981</bts:movimientoUId>
       </bts:BTPrestamos.ObtenerDetallePagoPrestamo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetallePagoPrestamo\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerDetallePagoPrestamoComponent1750258525521 {
         "operacionUId": 751,
         "movimientoUId": 981
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDetallePagoPrestamoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -337,7 +341,9 @@ export class ObtenerDetallePagoPrestamoComponent1750258525521 {
          </Btoutreq>
       </BTPrestamos.ObtenerDetallePagoPrestamoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 	"Btinreq": { 
           "Device": "1", 
           "Usuario": "MINSTALADOR", 

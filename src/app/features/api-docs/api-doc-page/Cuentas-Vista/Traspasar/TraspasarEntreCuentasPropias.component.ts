@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiasComponent1750258525061 {
+export class TraspasarEntreCuentasPropiasComponent1750272791233 {
   pageTitle        = 'Traspasar Entre Cuentas Propias';
   description      = `Método para realizar un traspaso entre cuentas propias.`;
-  pubName          = 'Traspasar Entre Cuentas Propias';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarEntreCuentasPropias';
+  programa   = 'RBTPG031';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:
@@ -38,7 +38,8 @@ export class TraspasarEntreCuentasPropiasComponent1750258525061 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador]' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador]' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]' }, { Codigo: '30008', Descripcion: 'La cuenta destino no pertenece al cliente [Número de cuenta].' }, { Codigo: '30009', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '51005', Descripcion: 'La moneda del traspaso debe coincidir con la moneda de la operación origen' }, { Codigo: '51008', Descripcion: 'Error de configuración: No se definió transacción a ejecutar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.TraspasarEntreCuentasPropias>
@@ -58,7 +59,9 @@ export class TraspasarEntreCuentasPropiasComponent1750258525061 {
          </bts:sdtTraspaso>
       </bts:BTCuentasVista.TraspasarEntreCuentasPropias>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?TraspasarEntreCuentasPropias=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -78,7 +81,8 @@ export class TraspasarEntreCuentasPropiasComponent1750258525061 {
 		"concepto": "Traspaso"
 	}      
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.TraspasarEntreCuentasPropiasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -107,7 +111,9 @@ export class TraspasarEntreCuentasPropiasComponent1750258525061 {
          </Btoutreq>
       </BTCuentasVista.TraspasarEntreCuentasPropiasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

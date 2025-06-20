@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregaraListaNegraComponent1750258525305 {
+export class AgregaraListaNegraComponent1750272791505 {
   pageTitle        = 'Agregar a Lista Negra';
   description      = `Método para agregar una persona a una lista negra.`;
-  pubName          = 'Agregar a Lista Negra';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarAListaNegra';
+  programa   = 'RBTPG310';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AgregaraListaNegraComponent1750258525305 {
   errors     = [{ Codigo: '30001', Descripcion: 'Identificador de persona requerido.' }, { Codigo: '30002', Descripcion: 'No existe persona con el identificador ingresado.' }, { Codigo: '40001', Descripcion: 'Código Lista no puede ser vacío.' }, { Codigo: '40002', Descripcion: 'Código Lista Inválido.' }, { Codigo: '40003', Descripcion: 'Motivo no puede ser vacío.' }, { Codigo: '40004', Descripcion: 'La persona ya se encuentra inhabilitada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarAListaNegra>
@@ -40,7 +41,9 @@ export class AgregaraListaNegraComponent1750258525305 {
          <bts:motivo>Lavado de dinero</bts:motivo>
       </bts:BTPersonas.AgregarAListaNegra>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarAListaNegra\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class AgregaraListaNegraComponent1750258525305 {
 	"codigoDeLista":"1",
 	"motivo":"Lavado de dinero"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarAListaNegraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class AgregaraListaNegraComponent1750258525305 {
          </Btoutreq>
       </BTPersonas.AgregarAListaNegraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

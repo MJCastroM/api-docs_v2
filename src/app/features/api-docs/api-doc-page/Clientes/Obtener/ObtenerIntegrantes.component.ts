@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesComponent1750258524796 {
+export class ObtenerIntegrantesComponent1750272790917 {
   pageTitle        = 'Obtener Integrantes';
   description      = `Método para obtener los integrantes de una cuenta cliente.`;
-  pubName          = 'Obtener Integrantes';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerIntegrantes';
+  programa   = 'RBTPG139';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerIntegrantesComponent1750258524796 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: ?' }, { Codigo: '30011', Descripcion: 'No existe el cliente seleccionado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerIntegrantes>
@@ -38,7 +39,9 @@ export class ObtenerIntegrantesComponent1750258524796 {
          <bts:clienteUId>21</bts:clienteUId>
       </bts:BTClientes.ObtenerIntegrantes>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerIntegrantes=\' \
+</soapenv:Envelope>`, 
+    json: `
+\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerIntegrantes=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
   -H \'postman-token: 52baf1dc-e302-90a6-0de1-24fa234c0379\' \
@@ -52,7 +55,8 @@ export class ObtenerIntegrantesComponent1750258524796 {
 	},
 	"clienteUId": "21",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerIntegrantesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +92,9 @@ export class ObtenerIntegrantesComponent1750258524796 {
          </Btoutreq>
       </BTClientes.ObtenerIntegrantesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

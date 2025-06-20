@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesPersonaJuridicaComponent1750258525378 {
+export class ObtenerIntegrantesPersonaJuridicaComponent1750272791586 {
   pageTitle        = 'Obtener Integrantes Persona Jurídica';
   description      = `Método para obtener un listado de los integrantes de una persona jurídica.`;
-  pubName          = 'Obtener Integrantes Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerIntegrantesPersonaJuridica';
+  programa   = 'RBTPG385';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerIntegrantesPersonaJuridicaComponent1750258525378 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '40001', Descripcion: 'La persona jurídica no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerIntegrantesPersonaJuridica>
@@ -38,7 +39,9 @@ export class ObtenerIntegrantesPersonaJuridicaComponent1750258525378 {
          <bts:personaUId>10017</bts:personaUId>
       </bts:BTPersonas.ObtenerIntegrantesPersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerIntegrantesPersonaJuridica\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerIntegrantesPersonaJuridicaComponent1750258525378 {
     },
     "personaUId": 10017,
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerIntegrantesPersonaJuridicaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class ObtenerIntegrantesPersonaJuridicaComponent1750258525378 {
          </Btoutreq>
       </BTPersonas.ObtenerIntegrantesPersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

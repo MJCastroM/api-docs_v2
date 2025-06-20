@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750258525666 {
+export class CrearComponent1750272791909 {
   pageTitle        = 'Crear';
   description      = `Método para crear un usuario.`;
-  pubName          = 'Crear';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.Crear';
+  programa   = 'RBTPG120';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearComponent1750258525666 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30002', Descripcion: 'El Usuario ya existe.' }, { Codigo: '30004', Descripcion: 'Debe ingresar Nombre.' }, { Codigo: '30005', Descripcion: 'Debe ingresar Email.' }, { Codigo: '30006', Descripcion: 'Debe ingresar Nro de Caja.' }, { Codigo: '30007', Descripcion: 'Valor incorrecto para cantidad de sesiones abiertas.' }, { Codigo: '30008', Descripcion: 'Valor incorrecto para Nivel.' }, { Codigo: '30009', Descripcion: 'Debe ingresar Programa Inicial.' }, { Codigo: '30010', Descripcion: 'El Programa Inicial no existe.' }, { Codigo: '30011', Descripcion: 'Debe ingresar Sucursal.' }, { Codigo: '30012', Descripcion: 'La Sucursal no existe.' }, { Codigo: '40012', Descripcion: 'Número de Cajero ya asignado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.Crear>
@@ -58,7 +59,9 @@ export class CrearComponent1750258525666 {
 
       </bts:BTUsuarios.Crear>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Crear\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -92,7 +95,8 @@ export class CrearComponent1750258525666 {
       "usuarioWorkflow": "S"
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.CrearResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -114,7 +118,9 @@ export class CrearComponent1750258525666 {
          </Btoutreq>
       </BTUsuarios.CrearResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

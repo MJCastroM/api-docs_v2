@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarArchivoComponent1750258524687 {
+export class RechazarArchivoComponent1750272790781 {
   pageTitle        = 'Rechazar Archivo';
   description      = `Método para rechazar órdenes del archivo.`;
-  pubName          = 'Rechazar Archivo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.RechazarArchivo';
+  programa   = 'RBTPGC03R';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class RechazarArchivoComponent1750258524687 {
   errors     = [{ Codigo: '1030723', Descripcion: 'No se encontraron ordenes para rechazar para el identificador recibido.' }, { Codigo: '1030724', Descripcion: 'El estado de la orden, no permite rechazar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.RechazarArchivo>
@@ -38,7 +39,9 @@ export class RechazarArchivoComponent1750258524687 {
          <bts:archivoId>28</bts:archivoId>
       </bts:BTCASHManagement.RechazarArchivo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?RechazarArchivo=\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: 285bb36e-0ec0-4527-88dc-3c5af0cfa98d,5d8c5e38-a390-4db5-8dbb-91779170d76d\' \
@@ -53,7 +56,8 @@ export class RechazarArchivoComponent1750258524687 {
 	},
     "archivoId": "29"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.RechazarArchivoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -75,7 +79,9 @@ export class RechazarArchivoComponent1750258524687 {
          </Btoutreq>
       </BTCASHManagement.RechazarArchivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

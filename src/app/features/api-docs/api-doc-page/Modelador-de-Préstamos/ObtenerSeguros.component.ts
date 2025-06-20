@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosComponent1750258525206 {
+export class ObtenerSegurosComponent1750272791401 {
   pageTitle        = 'Obtener Seguros';
   description      = `Método para obtener los seguros disponibles de un producto de préstamo.`;
-  pubName          = 'Obtener Seguros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTModeladorPrestamos.ObtenerSeguros';
+  programa   = 'RBTPG351';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerSegurosComponent1750258525206 {
   errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTModeladorPrestamos.ObtenerSeguros>
@@ -38,7 +39,9 @@ export class ObtenerSegurosComponent1750258525206 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerSeguros>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `{
+</soapenv:Envelope>`, 
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -48,7 +51,8 @@ export class ObtenerSegurosComponent1750258525206 {
     },
     "productoUId": "105"
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTModeladorPrestamos.ObtenerSegurosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ObtenerSegurosComponent1750258525206 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerSegurosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",

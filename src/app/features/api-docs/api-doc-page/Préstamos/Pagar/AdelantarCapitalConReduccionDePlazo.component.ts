@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AdelantarCapitalConReduccionDePlazoComponent1750258525556 {
+export class AdelantarCapitalConReduccionDePlazoComponent1750272791774 {
   pageTitle        = 'Adelantar Capital Con Reducción De Plazo';
   description      = `Método para realizar el pago de cuota de un préstamo con reducción de plazo.`;
-  pubName          = 'Adelantar Capital Con Reducción De Plazo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.AdelantarCapitalConReduccionDePlazo';
+  programa   = 'RBTPG555';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AdelantarCapitalConReduccionDePlazoComponent1750258525556 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se ingresó la modalidad de intereses.' }, { Codigo: '30011', Descripcion: 'El valor del campo modalidadIntereses tiene que ser CP o SP.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }, { Codigo: '51002', Descripcion: 'La operación no existe.' }, { Codigo: '51003', Descripcion: 'La operación de cobro no existe.' }, { Codigo: '51012', Descripcion: 'La operación esta cancelada.' }, { Codigo: '51013', Descripcion: 'La operación de cobro esta cancelada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.AdelantarCapitalConReduccionDePlazo>
@@ -43,7 +44,9 @@ export class AdelantarCapitalConReduccionDePlazoComponent1750258525556 {
          <bts:modalidadIntereses>SP</bts:modalidadIntereses>
       </bts:BTPrestamos.AdelantarCapitalConReduccionDePlazo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AdelantarCapitalConReduccionDePlazo\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -63,7 +66,8 @@ export class AdelantarCapitalConReduccionDePlazoComponent1750258525556 {
     "referencia": "",
     "modalidadIntereses": "SP"
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.AdelantarCapitalConReduccionDePlazoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +90,9 @@ export class AdelantarCapitalConReduccionDePlazoComponent1750258525556 {
          </Btoutreq>
       </BTPrestamos.AdelantarCapitalConReduccionDePlazoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

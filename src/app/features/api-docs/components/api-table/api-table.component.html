@@ -5,14 +5,14 @@
     </tr>
   </thead>
   <tbody>
-     <ng-container *ngIf="columns?.length; else dynamicRow">      
+     <ng-container *ngIf="columns?.length; else dynamicRow">
       <tr *ngFor="let row of data">
-        <td *ngFor="let col of columns">
-          {{ row[col] || '' }}
+        <td 
+          *ngFor="let col of columns"
+          [innerHTML]="row[col] | markdownLink">
         </td>
       </tr>
     </ng-container>
-    <!-- Si no hay columnas, recorre dinámicamente las propiedades del objeto -->
     <ng-template #dynamicRow>
       <tr *ngFor="let row of data">
         <th>{{row.campo}}</th><td>{{row.valor}}</td>
@@ -20,4 +20,3 @@
     </ng-template>
   </tbody>
 </table>
-    

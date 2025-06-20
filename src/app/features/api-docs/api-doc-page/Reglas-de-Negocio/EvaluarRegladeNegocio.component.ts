@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarRegladeNegocioComponent1750258525603 {
+export class EvaluarRegladeNegocioComponent1750272791831 {
   pageTitle        = 'Evaluar Regla de Negocio';
   description      = `Método para evaluar una determinada regla de negocio.`;
-  pubName          = 'Evaluar Regla de Negocio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTReglasNegocio.EvaluarReglaNegocio';
+  programa   = 'RBTPGR55';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EvaluarRegladeNegocioComponent1750258525603 {
   errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió ID de Regla.' }, { Codigo: '40001', Descripcion: 'Error de Parametrización' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTReglasNegocio.EvaluarReglaNegocio>
@@ -44,7 +45,9 @@ export class EvaluarRegladeNegocioComponent1750258525603 {
          </bts:sdtVariables>
       </bts:BTReglasNegocio.EvaluarReglaNegocio>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?EvaluarReglaNegocio\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class EvaluarRegladeNegocioComponent1750258525603 {
         },
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTReglasNegocio.EvaluarReglaNegocioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class EvaluarRegladeNegocioComponent1750258525603 {
          </Btoutreq>
       </BTReglasNegocio.EvaluarReglaNegocioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCalendariodeSucursalComponent1750258524914 {
+export class ObtenerCalendariodeSucursalComponent1750272791005 {
   pageTitle        = 'Obtener Calendario de Sucursal';
   description      = `Método para obtener el calendario de una sucursal.`;
-  pubName          = 'Obtener Calendario de Sucursal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTConfiguracionBantotal.ObtenerCalendarioDeSucursal';
+  programa   = 'RBTPG283';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerCalendariodeSucursalComponent1750258524914 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'No existe sucursal con el identificador ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTConfiguracionBantotal.ObtenerCalendarioDeSucursal>
@@ -38,7 +39,9 @@ export class ObtenerCalendariodeSucursalComponent1750258524914 {
          <bts:sucursalId>1000</bts:sucursalId>
       </bts:BTConfiguracionBantotal.ObtenerCalendarioDeSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X GET \
+</soapenv:Envelope>`, 
+    json: `
+curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerCalendarioDeSucursal\' \
    -H \'cache-control: no-cache\' \
    -H \'content-type: application/json\' \
@@ -52,7 +55,8 @@ export class ObtenerCalendariodeSucursalComponent1750258524914 {
     },
 	"sucursalId":1000
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTConfiguracionBantotal.ObtenerCalendarioDeSucursalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class ObtenerCalendariodeSucursalComponent1750258524914 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerCalendarioDeSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "MC",
         "Usuario": "MI",

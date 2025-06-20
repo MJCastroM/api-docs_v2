@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTelefonoComponent1750258525322 {
+export class AgregarTelefonoComponent1750272791538 {
   pageTitle        = 'Agregar Teléfono';
   description      = `Método para agregar el teléfono de una persona.`;
-  pubName          = 'Agregar Teléfono';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.AgregarTelefono';
+  programa   = 'RBTPG483';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AgregarTelefonoComponent1750258525322 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un teléfono.' }, { Codigo: '30005', Descripcion: 'No se recibió el tipo del teléfono.' }, { Codigo: '30006', Descripcion: 'No se recibió el código del domicilio.' }, { Codigo: '40002', Descripcion: 'No existe persona con los datos ingresados.' }, { Codigo: '40003', Descripcion: 'El número del teléfono es incorrecto (es muy corto).' }, { Codigo: '40004', Descripcion: 'El número del teléfono es incorrecto (es muy largo).' }, { Codigo: '40005', Descripcion: 'El número del teléfono no acepta caracteres.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.AgregarTelefono>
@@ -41,7 +42,9 @@ export class AgregarTelefonoComponent1750258525322 {
          <bts:domicilioId>1</bts:domicilioId>
       </bts:BTPersonas.AgregarTelefono>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarTelefono\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class AgregarTelefonoComponent1750258525322 {
    "tipoTelefonoId": "2",
    "domicilioId": "1",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.AgregarTelefonoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -82,7 +86,9 @@ export class AgregarTelefonoComponent1750258525322 {
          </Btoutreq>
       </BTPersonas.AgregarTelefonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": "AV",
       "Usuario": "MINSTALADOR",

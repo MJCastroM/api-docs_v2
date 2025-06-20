@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearParaPersonaJuridicaComponent1750258524766 {
+export class CrearParaPersonaJuridicaComponent1750272790881 {
   pageTitle        = 'Crear Para Persona Jurídica';
   description      = `Método para crear una persona jurídica y su cuenta cliente.`;
-  pubName          = 'Crear Para Persona Jurídica';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.CrearParaPersonaJuridica';
+  programa   = 'RBTPG282';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearParaPersonaJuridicaComponent1750258524766 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos un integrante.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de vínculo.' }, { Codigo: '30003', Descripcion: 'No se pudo obtener identificador único de la persona.' }, { Codigo: '30004', Descripcion: 'No se pudo recuperar el número de cuenta.' }, { Codigo: '30005', Descripcion: 'No se pudo obtener identificador único de la cuenta.' }, { Codigo: '40001', Descripcion: 'Ya existe persona con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'Debe ingresar país.' }, { Codigo: '40003', Descripcion: 'El país ingresado no existe.' }, { Codigo: '40004', Descripcion: 'Debe ingresar tipo de documento.' }, { Codigo: '40005', Descripcion: 'El tipo de documento ingresado no existe.' }, { Codigo: '40006', Descripcion: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Codigo: '40007', Descripcion: 'Debe ingresar número de documento.' }, { Codigo: '40008', Descripcion: 'Número de documento incorrecto.' }, { Codigo: '40009', Descripcion: 'Debe ingresar razón social.' }, { Codigo: '40010', Descripcion: 'Caracteres incorrectos en razón social.' }, { Codigo: '40011', Descripcion: 'Caracteres incorrectos en nombre reducido.' }, { Codigo: '40012', Descripcion: 'Debe ingresar naturaleza jurídica.' }, { Codigo: '40013', Descripcion: 'La naturaleza jurídica ingresada no existe.' }, { Codigo: '40014', Descripcion: 'Debe ingresar la fecha de constitución.' }, { Codigo: '40015', Descripcion: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Codigo: '40016', Descripcion: 'Debe ingresar tipo de actividad.' }, { Codigo: '40017', Descripcion: 'El tipo de actividad ingresado no existe.' }, { Codigo: '40018', Descripcion: 'Debe ingresar actividad.' }, { Codigo: '40019', Descripcion: 'La actividad ingresada no existe.' }, { Codigo: '40020', Descripcion: 'Debe ingresar país del domicilio.' }, { Codigo: '40021', Descripcion: 'El país del domicilio no existe.' }, { Codigo: '40022', Descripcion: 'Debe ingresar departamento.' }, { Codigo: '40023', Descripcion: 'El departamento no existe.' }, { Codigo: '40024', Descripcion: 'Debe ingresar localidad.' }, { Codigo: '40025', Descripcion: 'La localidad no existe.' }, { Codigo: '40026', Descripcion: 'El barrio no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.CrearParaPersonaJuridica>
@@ -97,7 +98,9 @@ export class CrearParaPersonaJuridicaComponent1750258524766 {
          </bts:sdtIntegrantesJuridicosAlta>
       </bts:BTClientes.CrearParaPersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?CrearParaPersonaJuridica\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -171,7 +174,8 @@ export class CrearParaPersonaJuridicaComponent1750258524766 {
       }
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.CrearParaPersonaJuridicaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -194,7 +198,9 @@ export class CrearParaPersonaJuridicaComponent1750258524766 {
          </Btoutreq>
       </BTClientes.CrearParaPersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
 	 "Btinreq": { 
 		"Device": "MC", 
 		"Usuario": "INSTALADOR", 

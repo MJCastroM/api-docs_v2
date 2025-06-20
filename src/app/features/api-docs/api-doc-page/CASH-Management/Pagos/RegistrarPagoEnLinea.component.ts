@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoEnLineaComponent1750258524723 {
+export class RegistrarPagoEnLineaComponent1750272790825 {
   pageTitle        = 'Registrar Pago en Linea';
   description      = `Método para registrar el pago de una deuda en línea, realizado mediante canal externo.`;
-  pubName          = 'Registrar Pago en Linea';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.RegistrarPagoEnLinea';
+  programa   = 'RBTPGC64';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class RegistrarPagoEnLineaComponent1750258524723 {
   errors     = [{ Codigo: '1030614', Descripcion: 'Canal no habilitado para el servicio.' }, { Codigo: '1030615', Descripcion: 'Canal no habilitado para el contrato.' }, { Codigo: '1030618', Descripcion: 'El importe debe ser mayor a cero.' }, { Codigo: '1030619', Descripcion: 'Código de Moneda desconocido.' }, { Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030706', Descripcion: 'El contrato no esta activo.' }, { Codigo: '1030761', Descripcion: 'No se obtuvo Canal CASH para el canal que invoca.' }, { Codigo: '1030762', Descripcion: 'El servicio no es de recaudos.' }, { Codigo: '1030763', Descripcion: 'Debe indicar el identificador de la deuda.' }, { Codigo: '1030764', Descripcion: 'El servicio no es en linea, no se crea el cobro.' }, { Codigo: '1030765', Descripcion: 'La moneda del pago difiere con la del convenio.' }, { Codigo: '1030766', Descripcion: 'No se pudo dar de alta la orden.' }, { Codigo: '1039999', Descripcion: 'No se determino módulo/transacción en la regla: [Número de regla].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.RegistrarPagoEnLinea>
@@ -42,7 +43,9 @@ export class RegistrarPagoEnLineaComponent1750258524723 {
          <bts:importe>543</bts:importe>
       </bts:BTCASHManagement.RegistrarPagoEnLinea>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?RegistrarPagoEnLinea=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -61,7 +64,8 @@ export class RegistrarPagoEnLineaComponent1750258524723 {
     "moneda": 0,
     "importe": 543
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.RegistrarPagoEnLineaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +90,9 @@ export class RegistrarPagoEnLineaComponent1750258524723 {
          </Btoutreq>
       </BTCASHManagement.RegistrarPagoEnLineaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

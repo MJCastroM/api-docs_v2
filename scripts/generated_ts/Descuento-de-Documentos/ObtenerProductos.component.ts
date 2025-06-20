@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750258525112 {
+export class ObtenerProductosComponent1750272791294 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de descuento de documentos.`;
-  pubName          = 'Obtener Productos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDescuentoDocumentos.ObtenerProductos';
+  programa   = 'RBTPG163';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerProductosComponent1750258525112 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDescuentoDocumentos.ObtenerProductos>
@@ -37,7 +38,9 @@ export class ObtenerProductosComponent1750258525112 {
          </bts:Btinreq>
       </bts:BTDescuentoDocumentos.ObtenerProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?ObtenerProductos=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerProductosComponent1750258525112 {
 		"Token": "fa2c02c95a4A8B5C60A82434"
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDescuentoDocumentos.ObtenerProductosResponse>
          <Btinreq>
@@ -147,7 +151,9 @@ export class ObtenerProductosComponent1750258525112 {
          </Btoutreq>
       </BTDescuentoDocumentos.ObtenerProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

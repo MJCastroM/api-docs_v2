@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasadeOperacionComponent1750258525435 {
+export class ObtenerTasadeOperacionComponent1750272791654 {
   pageTitle        = 'Obtener Tasa de Operación';
   description      = `Método para obtener la tasa de la operación junto con la fecha de vigencia.`;
-  pubName          = 'Obtener Tasa de Operación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerTasaOperacion';
+  programa   = 'RBTPG318';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTasadeOperacionComponent1750258525435 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de operación.' }, { Codigo: '30002', Descripcion: 'Debe ingresar fecha.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'Debe ingresar plazo.' }, { Codigo: '40001', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '50001', Descripcion: 'El registro no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerTasaOperacion>
@@ -41,7 +42,9 @@ export class ObtenerTasadeOperacionComponent1750258525435 {
          <bts:plazo>360</bts:plazo>
       </bts:BTPrecios.ObtenerTasaOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTasaOperacion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ObtenerTasadeOperacionComponent1750258525435 {
 	"importe": 100000,
 	"plazo": 360
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerTasaOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -86,7 +90,9 @@ export class ObtenerTasadeOperacionComponent1750258525435 {
          </Btoutreq>
       </BTPrecios.ObtenerTasaOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

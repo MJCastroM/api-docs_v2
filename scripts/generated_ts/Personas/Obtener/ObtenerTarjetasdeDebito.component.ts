@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasdeDebitoComponent1750258525397 {
+export class ObtenerTarjetasdeDebitoComponent1750272791602 {
   pageTitle        = 'Obtener Tarjetas de Débito';
   description      = `Método para obtener las tarjetas de débito de una persona.`;
-  pubName          = 'Obtener Tarjetas de Débito';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTarjetasDeDebito';
+  programa   = 'RBTPG383';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTarjetasdeDebitoComponent1750258525397 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recuperó la persona para el identificador: [Número de identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTarjetasDeDebito>
@@ -38,7 +39,9 @@ export class ObtenerTarjetasdeDebitoComponent1750258525397 {
          <bts:personaUId>381</bts:personaUId>
       </bts:BTPersonas.ObtenerTarjetasDeDebito>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTarjetasDeDebito\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerTarjetasdeDebitoComponent1750258525397 {
     },
    "personaUId": "381"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTarjetasDeDebitoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -119,7 +123,9 @@ export class ObtenerTarjetasdeDebitoComponent1750258525397 {
          </Btoutreq>
       </BTPersonas.ObtenerTarjetasDeDebitoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
         "Device": "GP", 
         "Usuario": "MINSTALADOR", 

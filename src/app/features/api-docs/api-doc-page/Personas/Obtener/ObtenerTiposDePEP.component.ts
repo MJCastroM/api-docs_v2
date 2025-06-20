@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDePEPComponent1750258525406 {
+export class ObtenerTiposDePEPComponent1750272791612 {
   pageTitle        = 'Obtener Tipos de PEP';
   description      = `Método para obtener los tipos de personas expuestas políticamente.`;
-  pubName          = 'Obtener Tipos de PEP';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerTiposDePEP';
+  programa   = 'RBTPG553';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTiposDePEPComponent1750258525406 {
   errors     = [{ Codigo: '40002', Descripcion: 'La guía 8260 no está parametrizada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerTiposDePEP>
@@ -37,7 +38,9 @@ export class ObtenerTiposDePEPComponent1750258525406 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerTiposDePEP>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTiposDePEP\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerTiposDePEPComponent1750258525406 {
         "Token": "8e3a8ef2dd99865B3A2E76CF"
     },
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerTiposDePEPResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -91,7 +95,9 @@ export class ObtenerTiposDePEPComponent1750258525406 {
          </Btoutreq>
       </BTPersonas.ObtenerTiposDePEPResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

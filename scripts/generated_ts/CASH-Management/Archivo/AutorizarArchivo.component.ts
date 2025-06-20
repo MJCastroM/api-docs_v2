@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutorizarArchivoComponent1750258524680 {
+export class AutorizarArchivoComponent1750272790773 {
   pageTitle        = 'Autorizar Archivo';
   description      = `Método para autorizar órdenes del archivo indicado.`;
-  pubName          = 'Autorizar Archivo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.AutorizarArchivo';
+  programa   = 'PBTPGC03';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AutorizarArchivoComponent1750258524680 {
   errors     = [{ Codigo: '1030721', Descripcion: 'No se encontraron ordenes para autorizar para el identificador recibido' }, { Codigo: '1030722', Descripcion: 'El estado de la orden, no permite autorizar' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.AutorizarArchivo>
@@ -38,7 +39,9 @@ export class AutorizarArchivoComponent1750258524680 {
          <bts:archivoId>97</bts:archivoId>
       </bts:BTCASHManagement.AutorizarArchivo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?AutorizarArchivo=\' \
   -H \'Content-Type: application/json\' \
   -H \'Postman-Token: 5671946f-3030-43ca-9d7b-58d54d588d21,a454ff51-cf63-4795-a47b-05a16d861dcd\' \
@@ -53,7 +56,8 @@ export class AutorizarArchivoComponent1750258524680 {
 	},
     "archivoId": "23"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.AutorizarArchivoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -75,7 +79,9 @@ export class AutorizarArchivoComponent1750258524680 {
          </Btoutreq>
       </BTCASHManagement.AutorizarArchivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -15,6 +15,7 @@ const globalRippleConfig: RippleGlobalOptions = {
 };
 
 
+
 @NgModule({
   declarations: [ AppComponent ],
   imports: [

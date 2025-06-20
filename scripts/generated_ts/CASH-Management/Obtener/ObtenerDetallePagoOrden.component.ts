@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetallePagoOrdenComponent1750258524703 {
+export class ObtenerDetallePagoOrdenComponent1750272790799 {
   pageTitle        = 'Obtener Detalle de Pago de una Orden';
   description      = `Método para obtener la información de las lineas del detalle del pago para una orden.`;
-  pubName          = 'Obtener Detalle de Pago de una Orden';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.ObtenerDetallePagoOrden';
+  programa   = 'RBTPGC23';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetallePagoOrdenComponent1750258524703 {
   errors     = [{ Codigo: '1030753', Descripcion: 'No se encontró la orden para el identificador recibido.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.ObtenerDetallePagoOrden>
@@ -38,7 +39,9 @@ export class ObtenerDetallePagoOrdenComponent1750258524703 {
          <bts:ordenId>345</bts:ordenId>
       </bts:BTCASHManagement.ObtenerDetallePagoOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetallePagoOrden=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerDetallePagoOrdenComponent1750258524703 {
     },
     "ordenId": 345
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.ObtenerDetallePagoOrdenResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -107,7 +111,9 @@ export class ObtenerDetallePagoOrdenComponent1750258524703 {
          </Btoutreq>
       </BTCASHManagement.ObtenerDetallePagoOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

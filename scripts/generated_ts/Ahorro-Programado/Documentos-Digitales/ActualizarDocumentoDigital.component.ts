@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDocumentoDigitalComponent1750258524576 {
+export class ActualizarDocumentoDigitalComponent1750272790653 {
   pageTitle        = 'Actualizar Documento Digital';
   description      = `Método para actualizar un documento digital para un ahorro programado.`;
-  pubName          = 'Actualizar Documento Digital';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.ActualizarDocumentoDigital';
+  programa   = 'RBTPG565';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011.
@@ -26,7 +26,8 @@ export class ActualizarDocumentoDigitalComponent1750258524576 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de instancia de documento digital.' }, { Codigo: '30002', Descripcion: 'No se recibió nombre.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30004', Descripcion: 'La operación ingresada no corresponde a un ahorro programado.' }, { Codigo: '30021', Descripcion: 'No se recuperó el identificador para la operación recibida.' }, { Codigo: '40101', Descripcion: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Codigo: '40993', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Codigo: '40994', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.ActualizarDocumentoDigital>
@@ -45,7 +46,9 @@ export class ActualizarDocumentoDigitalComponent1750258524576 {
          <bts:fechaEmision>2010-10-10</bts:fechaEmision>
       </bts:BTAhorroProgramado.ActualizarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ActualizarDocumentoDigital=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class ActualizarDocumentoDigitalComponent1750258524576 {
     "fechaEmision":"2010-10-10",
     "fechaVencimiento": "2020-10-10"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.ActualizarDocumentoDigitalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -87,7 +91,9 @@ export class ActualizarDocumentoDigitalComponent1750258524576 {
          </Btoutreq>
       </BTAhorroProgramado.ActualizarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

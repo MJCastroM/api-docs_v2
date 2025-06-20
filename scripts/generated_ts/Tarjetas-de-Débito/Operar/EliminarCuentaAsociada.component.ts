@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarCuentaAsociadaComponent1750258525657 {
+export class EliminarCuentaAsociadaComponent1750272791897 {
   pageTitle        = 'Eliminar Cuenta Asociada';
   description      = `Método para eliminar una cuenta asociada de una tarjeta de débito.`;
-  pubName          = 'Eliminar Cuenta Asociada';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.EliminarCuentaAsociada';
+  programa   = 'RBTPG378';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EliminarCuentaAsociadaComponent1750258525657 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de tarjeta de débito.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación a eliminar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.EliminarCuentaAsociada>
@@ -39,7 +40,9 @@ export class EliminarCuentaAsociadaComponent1750258525657 {
          <bts:tarjetaUId>1</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.EliminarCuentaAsociada>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `{
+</soapenv:Envelope>`, 
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",
@@ -51,7 +54,8 @@ export class EliminarCuentaAsociadaComponent1750258525657 {
     "operacionUId":"10",
     "tarjetaUId"  :"1"
 }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.EliminarCuentaAsociadaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -73,7 +77,9 @@ export class EliminarCuentaAsociadaComponent1750258525657 {
          </Btoutreq>
       </BTTarjetasDeDebito.EliminarCuentaAsociadaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Canal": "BTDIGITAL",
         "Requerimiento": "",

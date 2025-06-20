@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSolicitudesdeChequerasComponent1750258524993 {
+export class ObtenerSolicitudesdeChequerasComponent1750272791114 {
   pageTitle        = 'Obtener Solicitudes de Chequeras';
   description      = `Método para obtener todas las chequeras y solicitudes de chequeras asociadas a una operación.`;
-  pubName          = 'Obtener Solicitudes de Chequeras';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.ObtenerSolicitudesChequera';
+  programa   = 'RBTPG400';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerSolicitudesdeChequerasComponent1750258524993 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe la operación indicada.' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.ObtenerSolicitudesChequera>
@@ -38,7 +39,9 @@ export class ObtenerSolicitudesdeChequerasComponent1750258524993 {
          <bts:operacionUId>101</bts:operacionUId>
       </bts:BTCuentasCorrientes.ObtenerSolicitudesChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerSolicitudesChequera \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerSolicitudesdeChequerasComponent1750258524993 {
       }
     }
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.ObtenerSolicitudesChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -146,7 +150,9 @@ export class ObtenerSolicitudesdeChequerasComponent1750258524993 {
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerSolicitudesChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeOtroBancoComponent1750258524621 {
+export class DepositarChequeElectronicodeOtroBancoComponent1750272790702 {
   pageTitle        = 'Depositar Cheque Electrónico de Otro Banco';
   description      = `Método para depositar un cheque electrónico de otro banco.`;
-  pubName          = 'Depositar Cheque Electrónico de Otro Banco';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco';
+  programa   = 'RBTPAR33';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class DepositarChequeElectronicodeOtroBancoComponent1750258524621 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
    <soapenv:Header/> 
    <soapenv:Body> 
       <bts:BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco> 
@@ -43,7 +44,9 @@ export class DepositarChequeElectronicodeOtroBancoComponent1750258524621 {
          <bts:cuentaDeCheque>32</bts:cuentaDeCheque> 
       </bts:BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco> 
    </soapenv:Body> 
-</soapenv:Envelope></soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope></soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.?DepositarChequeElectronicoDeOtroBanco\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -63,7 +66,8 @@ export class DepositarChequeElectronicodeOtroBancoComponent1750258524621 {
 	"numeroCheque": "3434", 
 	"cuentaDeCheque": "32", 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBancoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -85,7 +89,9 @@ export class DepositarChequeElectronicodeOtroBancoComponent1750258524621 {
          </Btoutreq> 
       </BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBancoResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 	"Btinreq": { 
 		"Device": "AV", 
 		"Usuario": "MINSTALADOR", 

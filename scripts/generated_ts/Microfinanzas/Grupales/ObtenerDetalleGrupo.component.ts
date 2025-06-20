@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleGrupoComponent1750258525152 {
+export class ObtenerDetalleGrupoComponent1750272791341 {
   pageTitle        = 'Obtener Detalle Grupo';
   description      = `Método para obtener el detalle de un grupo de crédito.`;
-  pubName          = 'Obtener Detalle Grupo';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.ObtenerDetalleGrupo';
+  programa   = 'RBTPG431';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalleGrupoComponent1750258525152 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de grupo.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.ObtenerDetalleGrupo>
@@ -38,7 +39,9 @@ export class ObtenerDetalleGrupoComponent1750258525152 {
          <bts:grupoId>1</bts:grupoId>
       </bts:BTMicrofinanzas.ObtenerDetalleGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerDetalleGrupo=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerDetalleGrupoComponent1750258525152 {
 	},
     "grupoId": 1
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.ObtenerDetalleGrupoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -92,7 +96,9 @@ export class ObtenerDetalleGrupoComponent1750258525152 {
          </Btoutreq>
       </BTMicrofinanzas.ObtenerDetalleGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

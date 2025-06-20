@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750258525503 {
+export class ObtenerDocumentosDigitalesComponent1750272791688 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener un listado de los documentos digitales asociados a un préstamo.`;
-  pubName          = 'Obtener Documentos Digitales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDocumentosDigitales';
+  programa   = 'RBTPG180';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011. 
@@ -26,7 +26,8 @@ export class ObtenerDocumentosDigitalesComponent1750258525503 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30021', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '30031', Descripcion: 'La operación seleccionada no corresponde a un producto de préstamos.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDocumentosDigitales>
@@ -40,7 +41,9 @@ export class ObtenerDocumentosDigitalesComponent1750258525503 {
          <bts:operacionUId>121</bts:operacionUId>
       </bts:BTPrestamos.ObtenerDocumentosDigitales>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDocumentosDigitales\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerDocumentosDigitalesComponent1750258525503 {
 	},
 	"operacionUId": "121",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDocumentosDigitalesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -128,7 +132,9 @@ export class ObtenerDocumentosDigitalesComponent1750258525503 {
          </Btoutreq>
       </BTPrestamos.ObtenerDocumentosDigitalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

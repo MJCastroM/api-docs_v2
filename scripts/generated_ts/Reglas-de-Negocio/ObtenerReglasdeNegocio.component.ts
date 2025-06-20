@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerReglasdeNegocioComponent1750258525604 {
+export class ObtenerReglasdeNegocioComponent1750272791833 {
   pageTitle        = 'Obtener Reglas de Negocio';
   description      = `Método para obtener un listado de las reglas de negocio.`;
-  pubName          = 'Obtener Reglas de Negocio';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTReglasNegocio.ObtenerReglasNegocio';
+  programa   = 'RBTPGR53';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerReglasdeNegocioComponent1750258525604 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTReglasNegocio.ObtenerReglasNegocio>
@@ -37,7 +38,9 @@ export class ObtenerReglasdeNegocioComponent1750258525604 {
          </bts:Btinreq>
       </bts:BTReglasNegocio.ObtenerReglasNegocio>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerReglasNegocio\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerReglasdeNegocioComponent1750258525604 {
         "Token": "bc8b678bc44A8B5C60A82434"
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTReglasNegocio.ObtenerReglasNegocioResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +88,9 @@ export class ObtenerReglasdeNegocioComponent1750258525604 {
          </Btoutreq>
       </BTReglasNegocio.ObtenerReglasNegocioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

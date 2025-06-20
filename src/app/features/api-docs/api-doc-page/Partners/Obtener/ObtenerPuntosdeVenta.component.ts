@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPuntosdeVentaComponent1750258525250 {
+export class ObtenerPuntosdeVentaComponent1750272791440 {
   pageTitle        = 'Obtener Puntos de Venta';
   description      = `Método para retornar los puntos de venta del Partner.`;
-  pubName          = 'Obtener Puntos de Venta';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPartners.ObtenerPuntosDeVenta';
+  programa   = 'RBTPN005';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPuntosdeVentaComponent1750258525250 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPartners.ObtenerPuntosDeVenta>
@@ -42,7 +43,9 @@ export class ObtenerPuntosdeVentaComponent1750258525250 {
          </bts:sdtPartner>
       </bts:BTPartners.ObtenerPuntosDeVenta>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPuntosDeVenta\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -61,7 +64,8 @@ export class ObtenerPuntosdeVentaComponent1750258525250 {
         "partnerUId": 1
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPartners.ObtenerPuntosDeVentaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +94,9 @@ export class ObtenerPuntosdeVentaComponent1750258525250 {
          </Btoutreq>
       </BTPartners.ObtenerPuntosDeVentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",

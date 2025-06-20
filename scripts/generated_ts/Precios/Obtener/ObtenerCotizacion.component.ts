@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionComponent1750258525428 {
+export class ObtenerCotizacionComponent1750272791643 {
   pageTitle        = 'Obtener Cotización';
   description      = `Método para obtener la cotización del día.`;
-  pubName          = 'Obtener Cotización';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerCotizacion';
+  programa   = 'RBTPG840';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerCotizacionComponent1750258525428 {
   errors     = [{ Codigo: '30001', Descripcion: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Codigo: '30002', Descripcion: 'No se recuperó moneda para el identificador ingresado.' }, { Codigo: '30003', Descripcion: 'No se recuperaron monedas.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerCotizacion>
@@ -39,7 +40,9 @@ export class ObtenerCotizacionComponent1750258525428 {
          <bts:fecha></bts:fecha>
       </bts:BTPrecios.ObtenerCotizacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -54,7 +57,8 @@ export class ObtenerCotizacionComponent1750258525428 {
     "monedaId": "2",
     "fecha": ""
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerCotizacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +88,9 @@ export class ObtenerCotizacionComponent1750258525428 {
          </Btoutreq>
       </BTPrecios.ObtenerCotizacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",

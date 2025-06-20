@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosdelProximoVencimientoComponent1750258525511 {
+export class ObtenerDatosdelProximoVencimientoComponent1750272791702 {
   pageTitle        = 'Obtener Datos del Próximo Vencimiento';
   description      = `Método para obtener los datos de próximo vencimiento de cuota.`;
-  pubName          = 'Obtener Datos del Próximo Vencimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDatosProxVencimiento';
+  programa   = 'RBTPG526';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDatosdelProximoVencimientoComponent1750258525511 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'La Fecha para Consultas es anterior a la de la Operación.' }, { Codigo: '30007', Descripcion: 'La Operación no es válida para la Solicitud realizada.' }, { Codigo: '30008', Descripcion: 'La Operación se encuentra cancelada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDatosProxVencimiento>
@@ -39,7 +40,9 @@ export class ObtenerDatosdelProximoVencimientoComponent1750258525511 {
          <bts:fechaConsulta>2020-08-09</bts:fechaConsulta>
       </bts:BTPrestamos.ObtenerDatosProxVencimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDatosProxVencimiento\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerDatosdelProximoVencimientoComponent1750258525511 {
 	"operacionUId": 9,
     "fechaConsulta": "2020-08-09"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDatosProxVencimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -89,7 +93,9 @@ export class ObtenerDatosdelProximoVencimientoComponent1750258525511 {
          </Btoutreq>
       </BTPrestamos.ObtenerDatosProxVencimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": "1",
       "Usuario": "MINSTALADOR",

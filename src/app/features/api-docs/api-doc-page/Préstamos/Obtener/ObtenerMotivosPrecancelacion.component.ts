@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosPrecancelacionComponent1750258525539 {
+export class ObtenerMotivosPrecancelacionComponent1750272791740 {
   pageTitle        = 'Obtener Motivos de Precancelación';
   description      = `Método para obtener los motivos de precancelación.`;
-  pubName          = 'Obtener Motivos de Precancelación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerMotivosPrecancelacion';
+  programa   = 'RBTPG571';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerMotivosPrecancelacionComponent1750258525539 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único del producto.' }, { Codigo: '30002', Descripcion: 'El identificador único del producto es incorrecto.' }, { Codigo: '30010', Descripcion: 'No se ingresó el tipo de precancelación.' }, { Codigo: '30011', Descripcion: 'El valor del campo tipoPrecancelacion tiene que ser P o T.' }, { Codigo: '40001', Descripcion: 'No se encontró el registro.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:prueba.ObtenerMotivosPreCancelacion>
@@ -39,7 +40,9 @@ export class ObtenerMotivosPrecancelacionComponent1750258525539 {
          <bts:tipoPrecancelacion>T</bts:tipoPrecancelacion>
       </bts:prueba.ObtenerMotivosPreCancelacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerMotivosPreCancelacion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerMotivosPrecancelacionComponent1750258525539 {
       "productoUId": 167,
       "tipoPrecancelacion": 5,
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <prueba.ObtenerMotivosPreCancelacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -83,7 +87,9 @@ export class ObtenerMotivosPrecancelacionComponent1750258525539 {
          </Btoutreq>
       </prueba.ObtenerMotivosPreCancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

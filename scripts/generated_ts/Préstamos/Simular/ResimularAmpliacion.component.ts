@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ResimularAmpliacionComponent1750258525563 {
+export class ResimularAmpliacionComponent1750272791783 {
   pageTitle        = 'Resimular Ampliación';
   description      = `Método para resimular la ampliación de un préstamo.`;
-  pubName          = 'Resimular Ampliación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ResimularAmpliacion';
+  programa   = 'RBTPG575';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ResimularAmpliacionComponent1750258525563 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de Ampliación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'El identificador de Ampliación no es válido.' }, { Codigo: '30005', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operacionUId de la operación a ampliar.' }, { Codigo: '30007', Descripcion: 'No se recuperó la operación a cancelar para el identificador [Número de Identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ResimularAmpliacion>
@@ -50,7 +51,9 @@ export class ResimularAmpliacionComponent1750258525563 {
          </bts:sdtSimulacionUpdate>
       </bts:BTPrestamos.ResimularAmpliacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ResimularAmpliacion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -77,7 +80,8 @@ export class ResimularAmpliacionComponent1750258525563 {
          "clienteUid": 370
       }
   }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ResimularAmpliacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -999,7 +1003,9 @@ export class ResimularAmpliacionComponent1750258525563 {
          </Btoutreq>
       </BTPrestamos.ResimularAmpliacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
       "Device": "AC",
       "Usuario": "MINSTALADOR",

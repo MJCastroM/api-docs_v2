@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeOperacionComponent1750258524971 {
+export class ObtenerIdentificadorUnicodeOperacionComponent1750272791070 {
   pageTitle        = 'Obtener Identificador Único de Operación';
   description      = `Método para obtener el identificador único de una operación.`;
-  pubName          = 'Obtener Identificador Único de Operación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoOperacion';
+  programa   = 'RBTPG836';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se puede parametrizar la opción general por módulo 1416. En caso de estar en \'S\', se inhabilitará el control de existencia de la operación en la tabla FSD011. 
@@ -26,7 +26,8 @@ export class ObtenerIdentificadorUnicodeOperacionComponent1750258524971 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió empresaId.' }, { Codigo: '30002', Descripcion: 'No se recibió módulo.' }, { Codigo: '30003', Descripcion: 'No se recibió sucursal.' }, { Codigo: '30004', Descripcion: 'Moneda no existe.' }, { Codigo: '30005', Descripcion: 'Papel no existe.' }, { Codigo: '30006', Descripcion: 'No se recibió cuenta de cliente.' }, { Codigo: '30007', Descripcion: 'No se recibió operación.' }, { Codigo: '30008', Descripcion: 'No se recibió sub operación.' }, { Codigo: '30009', Descripcion: 'No se recibió tipo de operación.' }, { Codigo: '30010', Descripcion: 'Operación no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdentificadorUnicoOperacion>
@@ -48,7 +49,9 @@ export class ObtenerIdentificadorUnicodeOperacionComponent1750258524971 {
          <bts:tipoOperacionBT>48</bts:tipoOperacionBT>
       </bts:BTContabilidad.ObtenerIdentificadorUnicoOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoOperacion\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -70,7 +73,8 @@ export class ObtenerIdentificadorUnicodeOperacionComponent1750258524971 {
     "subOperacionBT": "8",
     "tipoOperacionBT": "48"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdentificadorUnicoOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +97,9 @@ export class ObtenerIdentificadorUnicodeOperacionComponent1750258524971 {
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
         "Device": "bms", 
         "Usuario": "MINSTALADOR", 

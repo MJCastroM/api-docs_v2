@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetadataDeTareaComponent1750258525677 {
+export class ObtenerMetadataDeTareaComponent1750272791928 {
   pageTitle        = 'Obtener Metadata De Tarea';
   description      = ``;
-  pubName          = 'Obtener Metadata De Tarea';
-  programa         = '';
-  scope            = '';
+  pubName    = '';
+  programa   = '';
+  scope      = '';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerMetadataDeTareaComponent1750258525677 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/"> 
    <soapenv:Header/> 
    <soapenv:Body> 
       <bts:BTWorkflow.ObtenerMetadataDeTarea> 
@@ -39,7 +40,9 @@ export class ObtenerMetadataDeTareaComponent1750258525677 {
          <bts:tareaId>11</bts:tareaId> 
       </bts:BTWorkflow.ObtenerMetadataDeTarea> 
    </soapenv:Body> 
-</soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerMetadataDeTarea \ 
 -H \'cache-control: no-cache\' \ 
 -H \'content-type: application/json\' \ 
@@ -54,7 +57,8 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
     "procesoId": "1", 
     "tareaId": "11" 
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTWorkflow.ObtenerMetadataDeTareaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -102,7 +106,9 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerMetadataDeTareaResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
     "Btinreq": { 
         "Device": "GP", 
         "Usuario": "INSTALADOR", 

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionCierreComponent1750258525431 {
+export class ObtenerCotizacionCierreComponent1750272791647 {
   pageTitle        = 'Obtener Cotización Cierre';
   description      = `Método para obtener la cotización del cierre.`;
-  pubName          = 'Obtener Cotización Cierre';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrecios.ObtenerCotizacionCierre';
+  programa   = 'RBTPG841';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerCotizacionCierreComponent1750258525431 {
   errors     = [{ Codigo: '30001', Descripcion: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Codigo: '30002', Descripcion: 'No se recuperó moneda para el identificador ingresado.' }, { Codigo: '30003', Descripcion: 'No se recuperaron monedas.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrecios.ObtenerCotizacionCierre>
@@ -39,7 +40,9 @@ export class ObtenerCotizacionCierreComponent1750258525431 {
          <bts:fecha></bts:fecha>
       </bts:BTPrecios.ObtenerCotizacionCierre>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacionCierre\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -54,7 +57,8 @@ export class ObtenerCotizacionCierreComponent1750258525431 {
     "monedaId": "2",
     "fecha": ""
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrecios.ObtenerCotizacionCierreResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +88,9 @@ export class ObtenerCotizacionCierreComponent1750258525431 {
          </Btoutreq>
       </BTPrecios.ObtenerCotizacionCierreResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",

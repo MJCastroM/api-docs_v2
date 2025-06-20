@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosHabilitadosComponent1750258525099 {
+export class ObtenerPeriodosHabilitadosComponent1750272791276 {
   pageTitle        = 'Obtener Períodos Habilitados';
   description      = `Método para obtener los períodos habilitados de un deposito a plazo.`;
-  pubName          = 'Obtener Períodos Habilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.ObtenerPeriodosHabilitados';
+  programa   = 'RBTPG492';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPeriodosHabilitadosComponent1750258525099 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del Producto.' }, { Codigo: '30006', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'El producto no corresponde a un producto de depósito a plazo.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>
@@ -38,7 +39,9 @@ export class ObtenerPeriodosHabilitadosComponent1750258525099 {
          <bts:productoUId>184</bts:productoUId>
       </bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerPeriodosHabilitados=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerPeriodosHabilitadosComponent1750258525099 {
 	},
    "productoUId": 184
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ObtenerPeriodosHabilitadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -123,7 +127,9 @@ export class ObtenerPeriodosHabilitadosComponent1750258525099 {
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerPeriodosHabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",

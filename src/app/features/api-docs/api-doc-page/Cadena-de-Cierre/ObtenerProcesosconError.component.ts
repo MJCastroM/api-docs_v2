@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosconErrorComponent1750258524653 {
+export class ObtenerProcesosconErrorComponent1750272790739 {
   pageTitle        = 'Obtener Procesos con Error';
   description      = `Método para obtener un listado de los procesos con error en la cadena de cierre para una fecha dada.`;
-  pubName          = 'Obtener Procesos con Error';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerProcesosConError';
+  programa   = 'RBTPG505';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerProcesosconErrorComponent1750258524653 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCadenaCierre.ObtenerProcesosConError>
@@ -38,7 +39,9 @@ export class ObtenerProcesosconErrorComponent1750258524653 {
          <bts:fecha>2018-05-07</bts:fecha>
       </bts:BTCadenaCierre.ObtenerProcesosConError>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosConError\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerProcesosconErrorComponent1750258524653 {
     }, 
     "fecha":"2018-05-07",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCadenaCierre.ObtenerProcesosConErrorResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -229,7 +233,9 @@ export class ObtenerProcesosconErrorComponent1750258524653 {
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosConErrorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
       "Device": "mc",
       "Usuario": "INSTALADOR",

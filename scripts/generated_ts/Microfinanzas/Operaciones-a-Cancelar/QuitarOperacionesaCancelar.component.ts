@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class QuitarOperacionesaCancelarComponent1750258525180 {
+export class QuitarOperacionesaCancelarComponent1750272791372 {
   pageTitle        = 'Quitar Operaciones a Cancelar';
   description      = `Método para quitar operaciones a cancelar para una solicitud de créditos.`;
-  pubName          = 'Quitar Operaciones a Cancelar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.QuitarOperacionesACancelar';
+  programa   = 'RBTPG363';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class QuitarOperacionesaCancelarComponent1750258525180 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30003', Descripcion: 'No se recibió ninguna operación para cancelar' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador]' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador]' }, { Codigo: '40001', Descripcion: 'La solicitud ingresada no existe' }, { Codigo: '40002', Descripcion: 'El cliente ingresado no corresponde con la solicitud' }, { Codigo: '40004', Descripcion: 'No existe registro para la operación ingresada' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.QuitarOparacionesACancelar>
@@ -44,7 +45,9 @@ export class QuitarOperacionesaCancelarComponent1750258525180 {
          </bts:sdtOperaciones>
       </bts:BTMicrofinanzas.QuitarOparacionesACancelar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?QuitarOperacionesACancelar\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class QuitarOperacionesaCancelarComponent1750258525180 {
       },
    },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.QuitarOparacionesACancelarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +92,9 @@ export class QuitarOperacionesaCancelarComponent1750258525180 {
          </Btoutreq>
       </BTMicrofinanzas.QuitarOparacionesACancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
    "Btinreq": {
       "Device": "GP",
       "Usuario": "MINSTALADOR",

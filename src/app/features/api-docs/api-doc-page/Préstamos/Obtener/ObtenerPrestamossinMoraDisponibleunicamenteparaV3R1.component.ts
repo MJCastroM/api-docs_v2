@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750258525544 {
+export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750272791751 {
   pageTitle        = 'Obtener Préstamos Sin Mora';
   description      = `Método para retornar préstamos sin mora.`;
-  pubName          = 'Obtener Préstamos Sin Mora';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerPrestamosSinMora';
+  programa   = 'RBTPG471';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750258
   errors     = [{ Codigo: '30003', Descripcion: 'No existe registro para el producto indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerPrestamosSinMora>
@@ -40,7 +41,9 @@ export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750258
          <bts:contarRegistros>S</bts:contarRegistros>
       </bts:BTPrestamos.ObtenerPrestamosSinMora>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosSinMora=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750258
   "limit": 100,
   "contarRegistros": "S"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerPrestamosSinMoraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -243,7 +247,9 @@ export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750258
          </Btoutreq>
       </BTPrestamos.ObtenerPrestamosSinMoraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{ 
 	"Btinreq": { 
     "Requerimiento": 0, 
     "Canal": "BTDIGITAL", 

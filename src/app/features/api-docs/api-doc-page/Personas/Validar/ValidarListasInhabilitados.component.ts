@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarListasInhabilitadosComponent1750258525421 {
+export class ValidarListasInhabilitadosComponent1750272791632 {
   pageTitle        = 'Validar Listas Inhabilitados';
   description      = `Método para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: país, tipo de documento y número de documento, o primer nombre y primer apellido)`;
-  pubName          = 'Validar Listas Inhabilitados';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ValidarListasInhabilitados';
+  programa   = 'RBTPG313';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ValidarListasInhabilitadosComponent1750258525421 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó primer nombre de la persona.' }, { Codigo: '30002', Descripcion: 'No se ingresó primer apellido de la persona.' }, { Codigo: '30003', Descripcion: 'No se ingresó país de la persona.' }, { Codigo: '30004', Descripcion: 'No se ingresó tipo de documento de la persona.' }, { Codigo: '30005', Descripcion: 'No se ingresó documento de la persona.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ValidarListasInhabilitados>
@@ -46,7 +47,9 @@ export class ValidarListasInhabilitadosComponent1750258525421 {
          <bts:razonSocial></bts:razonSocial>
       </bts:BTPersonas.ValidarListasInhabilitados>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarListasInhabilitados\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ export class ValidarListasInhabilitadosComponent1750258525421 {
 	"segundoApellido":"",
 	"razonSocial":""
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ValidarListasInhabilitadosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +104,9 @@ export class ValidarListasInhabilitadosComponent1750258525421 {
          </Btoutreq>
       </BTPersonas.ValidarListasInhabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

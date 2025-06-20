@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750258524563 {
+export class SimularComponent1750272790650 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un ahorro programado.`;
-  pubName          = 'Simular';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTAhorroProgramado.Simular';
+  programa   = 'RBTPG446';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class SimularComponent1750258524563 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del producto.' }, { Codigo: '30008', Descripcion: 'No se recuperó la persona para el identificador: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de Identificador].' }, { Codigo: '40150', Descripcion: 'Ocurrio un error al actualizar la información del ahorro.' }, { Codigo: '40955', Descripcion: 'El deposito inicial es superior al total a ahorrar.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTAhorroProgramado.Simular>
@@ -49,7 +50,9 @@ export class SimularComponent1750258524563 {
          </bts:sdtDatos>
       </bts:BTAhorroProgramado.Simular>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?Simular\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -75,7 +78,8 @@ export class SimularComponent1750258524563 {
           "periodicidadIncremento": 1
         }
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTAhorroProgramado.SimularResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -138,7 +142,9 @@ export class SimularComponent1750258524563 {
          </Btoutreq>
       </BTAhorroProgramado.SimularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
           "Canal": "BTDIGITAL",
           "Usuario": "MINSTALADOR",

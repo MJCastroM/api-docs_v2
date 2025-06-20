@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750258525071 {
+export class ContratarComponent1750272791245 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un depósito a plazo.`;
-  pubName          = 'Contratar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTDepositosAPlazo.Contratar';
+  programa   = 'RBTPG094';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta de depósito a plazo, teniendo en cuenta que:
@@ -34,7 +34,8 @@ export class ContratarComponent1750258525071 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTDepositosAPlazo.Contratar>
@@ -52,7 +53,9 @@ export class ContratarComponent1750258525071 {
          <bts:instruccionAlVencimiento>2</bts:instruccionAlVencimiento>
       </bts:BTDepositosAPlazo.Contratar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?Contratar=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class ContratarComponent1750258525071 {
     "operacionUIdDestino":281,
     "instruccionAlVencimiento":2   
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTDepositosAPlazo.ContratarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -99,7 +103,9 @@ export class ContratarComponent1750258525071 {
          </Btoutreq>
       </BTDepositosAPlazo.ContratarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

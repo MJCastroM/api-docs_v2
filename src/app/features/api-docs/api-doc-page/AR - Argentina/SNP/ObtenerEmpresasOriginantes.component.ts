@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresasOriginantesComponent1750258524641 {
+export class ObtenerEmpresasOriginantesComponent1750272790726 {
   pageTitle        = 'Obtener Empresas Originantes';
   description      = `Método para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.`;
-  pubName          = 'Obtener Empresas Originantes';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.ObtenerEmpresasOriginantes';
+  programa   = 'RBTPG325';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerEmpresasOriginantesComponent1750258524641 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No se encontraron empresas originantes para este cliente.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.ObtenerEmpresasOriginantes>
@@ -38,7 +39,9 @@ export class ObtenerEmpresasOriginantesComponent1750258524641 {
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTSNP.ObtenerEmpresasOriginantes>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerEmpresasOriginantesComponent1750258524641 {
 		},
 		"clienteUId": 4
 	}` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.ObtenerEmpresasOriginantesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class ObtenerEmpresasOriginantesComponent1750258524641 {
          </Btoutreq>
       </BTSNP.ObtenerEmpresasOriginantesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "AC",
         "Usuario": "BANTOTAL",

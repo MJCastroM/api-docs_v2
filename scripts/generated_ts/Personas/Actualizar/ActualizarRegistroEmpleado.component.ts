@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750258525299 {
+export class ActualizarRegistroEmpleadoComponent1750272791498 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si una persona es empleado de la institución, así como la fecha de ingreso si corresponde.`;
-  pubName          = 'Actualizar Registro Empleado';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ActualizarRegistroEmpleado';
+  programa   = 'RBTPG536';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ActualizarRegistroEmpleadoComponent1750258525299 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió si la persona es un empleado de la institución o no.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30005', Descripcion: 'El valor de empleado no es correcto.' }, { Codigo: '40001', Descripcion: 'La persona no existe.' }, { Codigo: '40002', Descripcion: 'No se encontró una cuenta válida para la persona ingresada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ActualizarRegistroEmpleado>
@@ -41,7 +42,9 @@ export class ActualizarRegistroEmpleadoComponent1750258525299 {
          <bts:fechaBaja></bts:fechaBaja>
       </bts:BTPersonas.ActualizarRegistroEmpleado>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarRegistroEmpleado\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class ActualizarRegistroEmpleadoComponent1750258525299 {
     "fechaAlta": "2024-01-01",
     "fechaBaja": ""
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ActualizarRegistroEmpleadoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class ActualizarRegistroEmpleadoComponent1750258525299 {
          </Btoutreq>
       </BTPersonas.ActualizarRegistroEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
         "Requerimiento": 0,
         "Canal": "BTDIGITAL",

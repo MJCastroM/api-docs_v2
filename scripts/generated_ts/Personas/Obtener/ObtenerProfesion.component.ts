@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionComponent1750258525393 {
+export class ObtenerProfesionComponent1750272791600 {
   pageTitle        = 'Obtener Profesión';
   description      = `Método para obtener la profesión de una persona física.`;
-  pubName          = 'Obtener Profesión';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerProfesion';
+  programa   = 'RBTPG289';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerProfesionComponent1750258525393 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerProfesion>
@@ -38,8 +39,11 @@ export class ObtenerProfesionComponent1750258525393 {
          <bts:personaUId>10003</bts:personaUId>
       </bts:BTPersonas.ObtenerProfesion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, 
+    json: `
+` },
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerProfesionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -66,7 +70,9 @@ export class ObtenerProfesionComponent1750258525393 {
          </Btoutreq>
       </BTPersonas.ObtenerProfesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

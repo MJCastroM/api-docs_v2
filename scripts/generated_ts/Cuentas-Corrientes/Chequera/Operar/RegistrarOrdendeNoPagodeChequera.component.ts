@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarOrdendeNoPagodeChequeraComponent1750258524997 {
+export class RegistrarOrdendeNoPagodeChequeraComponent1750272791121 {
   pageTitle        = 'Registrar Orden de No Pago de Chequera';
   description      = `Método para registrar una orden de no pago de una chequera.`;
-  pubName          = 'Registrar Orden de No Pago de Chequera';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera';
+  programa   = 'RBTPG244';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class RegistrarOrdendeNoPagodeChequeraComponent1750258524997 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió identificador de chequera.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '40002', Descripcion: 'No existe la operación indicada.' }, { Codigo: '40003', Descripcion: 'La chequera no pertenece a la operación.' }, { Codigo: '40004', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40005', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40006', Descripcion: 'Cuenta Cerrada, solo se permite consultas.' }, { Codigo: '40008', Descripcion: 'El cheque DESDE debe ser menor/igual que el HASTA.' }, { Codigo: '40009', Descripcion: 'El cheque DESDE debe ser mayor/igual que el INICIAL de la chequera.' }, { Codigo: '40010', Descripcion: 'El cheque HASTA debe ser mayor/igual que el INICIAL de la chequera.' }, { Codigo: '40011', Descripcion: 'El cheque DESDE debe ser menor/igual que el ULTIMO de la chequera.' }, { Codigo: '40012', Descripcion: 'El cheque HASTA debe ser menor/igual que el ULTIMO de la chequera.' }, { Codigo: '40013', Descripcion: 'El cheque [Número de cheque] ya está pago.' }, { Codigo: '40014', Descripcion: 'El cheque [Número de cheque] ya tiene O.N.P.' }, { Codigo: '40015', Descripcion: 'El cheque [Número de cheque] está rechazado.' }, { Codigo: '40016', Descripcion: 'El cheque [Número de cheque] esta certificado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>
@@ -44,7 +45,9 @@ export class RegistrarOrdendeNoPagodeChequeraComponent1750258524997 {
          <bts:chequeHasta>1350</bts:chequeHasta>
       </bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?RegistrarOrdenDeNoPagoChequera\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -65,7 +68,8 @@ export class RegistrarOrdendeNoPagodeChequeraComponent1750258524997 {
 	"chequeDesde": "1326",
 	"chequeHasta": "1350"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -88,7 +92,9 @@ export class RegistrarOrdendeNoPagodeChequeraComponent1750258524997 {
          </Btoutreq>
       </BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

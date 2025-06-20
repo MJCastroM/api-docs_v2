@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarStopDebitComponent1750258524636 {
+export class EliminarStopDebitComponent1750272790719 {
   pageTitle        = 'Eliminar Stop Debit';
   description      = `Método para eliminar un stop debit.`;
-  pubName          = 'Eliminar Stop Debit';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSNP.EliminarStopDebit';
+  programa   = 'RBTPG344';
+  scope      = 'Argentina';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EliminarStopDebitComponent1750258524636 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió correlativo del Stop Debit.' }, { Codigo: '40001', Descripcion: 'El Stop Debit ya está dado de baja.' }, { Codigo: '40002', Descripcion: 'El Stop Debit no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSNP.EliminarStopDebit>
@@ -39,7 +40,9 @@ export class EliminarStopDebitComponent1750258524636 {
          <bts:correlativo>4</bts:correlativo>
       </bts:BTSNP.EliminarStopDebit>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?SolicitarBajaDeAdhesion\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class EliminarStopDebitComponent1750258524636 {
     "clienteUId": 2,
     "correlativo": 4
   }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSNP.EliminarStopDebitResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -77,7 +81,9 @@ export class EliminarStopDebitComponent1750258524636 {
          </Btoutreq>
       </BTSNP.EliminarStopDebitResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `` }
+</SOAP-ENV:Envelope>`,  
+    json: `
+` }
   };
 
   structuredTypes = [];

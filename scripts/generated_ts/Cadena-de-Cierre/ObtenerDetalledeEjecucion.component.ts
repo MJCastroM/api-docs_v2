@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeEjecucionComponent1750258524649 {
+export class ObtenerDetalledeEjecucionComponent1750272790735 {
   pageTitle        = 'Obtener Detalle de Ejecución';
   description      = `Método para obtener el detalle de la ejecución de un proceso en la cadena de cierre.`;
-  pubName          = 'Obtener Detalle de Ejecución';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerDetalleEjecucion';
+  programa   = 'RBTPG504';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalledeEjecucionComponent1750258524649 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCadenaCierre.ObtenerDatelleEjecucion>
@@ -39,7 +40,9 @@ export class ObtenerDetalledeEjecucionComponent1750258524649 {
          <bts:fecha>2021-10-12</bts:fecha>
       </bts:BTCadenaCierre.ObtenerDatelleEjecucion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDatelleEjecucion\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class ObtenerDetalledeEjecucionComponent1750258524649 {
     "identificador":"93",
     "fecha":"2021-10-12",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCadenaCierre.ObtenerDatelleEjecucionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ObtenerDetalledeEjecucionComponent1750258524649 {
          </Btoutreq>
       </BTCadenaCierre.ObtenerDatelleEjecucionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
       "Device": "mc", 
       "Usuario": "INSTALADOR", 

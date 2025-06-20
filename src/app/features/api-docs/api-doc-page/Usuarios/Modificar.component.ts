@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarComponent1750258525672 {
+export class ModificarComponent1750272791918 {
   pageTitle        = 'Modificar';
   description      = `Método para modificar un usuario.`;
-  pubName          = 'Modificar';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.Modificar';
+  programa   = 'RBTPG120';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ModificarComponent1750258525672 {
   errors     = [{ Codigo: '30000', Descripcion: 'Parámetro modo incorrecto.' }, { Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30003', Descripcion: 'No existe Usuario.' }, { Codigo: '30004', Descripcion: 'Debe ingresar Nombre.' }, { Codigo: '30005', Descripcion: 'Debe ingresar Email.' }, { Codigo: '30006', Descripcion: 'Debe ingresar Nro de Caja.' }, { Codigo: '30007', Descripcion: 'Valor incorrecto para cantidad de sesiones abiertas.' }, { Codigo: '30008', Descripcion: 'Valor incorrecto para Nivel.' }, { Codigo: '30009', Descripcion: 'Debe ingresar Programa Inicial.' }, { Codigo: '30010', Descripcion: 'El Programa Inicial no existe.' }, { Codigo: '30011', Descripcion: 'Debe ingresar Sucursal.' }, { Codigo: '30012', Descripcion: 'La Sucursal no existe.' }, { Codigo: '40011', Descripcion: 'La Empresa para el Usuario no existe.' }, { Codigo: '40012', Descripcion: 'Número de Cajero ya asignado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.Modificar>
@@ -50,7 +51,9 @@ export class ModificarComponent1750258525672 {
          </bts:sdtUsuario>
       </bts:BTUsuarios.Modificar>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Modificar\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -77,7 +80,8 @@ export class ModificarComponent1750258525672 {
 		"NumeroCaja": 0
 	}
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.ModificarResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -99,7 +103,9 @@ export class ModificarComponent1750258525672 {
          </Btoutreq>
       </BTUsuarios.ModificarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

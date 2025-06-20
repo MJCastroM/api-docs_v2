@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoBalloonSinClienteComponent1750258525583 {
+export class SimularIngresandoBalloonSinClienteComponent1750272791806 {
   pageTitle        = 'Simular Ingresando Balloon Sin Cliente';
   description      = `Método para simular un préstamo sin cliente ingresando el balloon.`;
-  pubName          = 'Simular Ingresando Balloon Sin Cliente';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.SimularIngresandoBalloonSC';
+  programa   = 'RBTPG466';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class SimularIngresandoBalloonSinClienteComponent1750258525583 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.SimularIngresandoBalloonSC>
@@ -49,7 +50,9 @@ export class SimularIngresandoBalloonSinClienteComponent1750258525583 {
          </bts:sdtPrestamoAlta> 
       </bts:BTPrestamos.SimularIngresandoBalloonSC>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \ 
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularIngresandoBalloonSC\' \ 
   -H \'cache-control: no-cache\' \ 
   -H \'content-type: application/json\' \ 
@@ -75,7 +78,8 @@ export class SimularIngresandoBalloonSinClienteComponent1750258525583 {
          "pizarra": "" 
       } 
 	}` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
    <SOAP-ENV:Body> 
       <BTPrestamos.SimularIngresandoBalloonSCResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/"> 
          <Btinreq> 
@@ -135,7 +139,9 @@ export class SimularIngresandoBalloonSinClienteComponent1750258525583 {
          </Btoutreq> 
       </BTPrestamos.SimularIngresandoBalloonSCResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
    "Btinreq": { 
       "Device": "BTDIGITAL", 
       "Usuario": "INSTALADOR", 

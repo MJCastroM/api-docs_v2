@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionporDeudaTotalComponent1750258525494 {
+export class ContratarRefinanciacionporDeudaTotalComponent1750272791678 {
   pageTitle        = 'Contratar Refinanciación por Deuda Total';
   description      = `Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.`;
-  pubName          = 'Contratar Refinanciación por Deuda Total';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ContratarRefinanciacionDeudaTotal';
+  programa   = 'RBTPG235';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de alta, teniendo en cuenta que: 
@@ -38,7 +38,8 @@ export class ContratarRefinanciacionporDeudaTotalComponent1750258525494 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de refinanciación.' }, { Codigo: '30002', Descripcion: 'El identificador de refinanciación no es válido.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de operación de la cuenta vista.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta vista para el identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de operación de la instrucción de cobro.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30008', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30011', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30012', Descripcion: 'No se recuperó la operación para el identificador [Número de Identificador].' }, { Codigo: '30013', Descripcion: 'No se recuperó la operación simulada con identificador .' }, { Codigo: '40001', Descripcion: 'en adelante, errores de contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ContratarRefinanciacionDeudaTotal>
@@ -54,7 +55,9 @@ export class ContratarRefinanciacionporDeudaTotalComponent1750258525494 {
          <bts:operacionUId_cobro>211</bts:operacionUId_cobro>
       </bts:BTPrestamos.ContratarRefinanciacionDeudaTotal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ContratarRefinanciacionDeudaTotal\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -71,7 +74,8 @@ export class ContratarRefinanciacionporDeudaTotalComponent1750258525494 {
 	"clienteUId":"221",
 	"operacionUId_cobro":"211",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ContratarRefinanciacionDeudaTotalResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +97,9 @@ export class ContratarRefinanciacionporDeudaTotalComponent1750258525494 {
          </Btoutreq>
       </BTPrestamos.ContratarRefinanciacionDeudaTotalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

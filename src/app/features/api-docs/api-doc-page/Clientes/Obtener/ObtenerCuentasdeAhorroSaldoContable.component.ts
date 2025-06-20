@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasdeAhorroSaldoContableComponent1750258524779 {
+export class ObtenerCuentasdeAhorroSaldoContableComponent1750272790897 {
   pageTitle        = 'Obtener Cuentas de Ahorro (Saldo Contable)';
   description      = `Método para obtener los productos de cuenta de ahorro que tiene contratado un cliente, junto con su saldo contable.`;
-  pubName          = 'Obtener Cuentas de Ahorro (Saldo Contable)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTClientes.ObtenerCuentasAhorro';
+  programa   = 'RBTPG006';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `Se pueden parametrizar módulos adicionales a incluir ingresando en la guía especial 1041 los siguientes valores: 
@@ -41,7 +41,8 @@ Valor específico 2 | Tipo de operación a excluir.
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTClientes.ObtenerCuentasAhorro>
@@ -55,7 +56,9 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTClientes.ObtenerCuentasAhorro>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerCuentasAhorro=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -70,7 +73,8 @@ Valor específico 2 | Tipo de operación a excluir.
 	},
     "clienteUId": 161
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTClientes.ObtenerCuentasAhorroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -126,7 +130,9 @@ Valor específico 2 | Tipo de operación a excluir.
          </Btoutreq>
       </BTClientes.ObtenerCuentasAhorroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

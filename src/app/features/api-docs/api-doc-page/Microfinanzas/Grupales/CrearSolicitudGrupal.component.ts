@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudGrupalComponent1750258525148 {
+export class CrearSolicitudGrupalComponent1750272791335 {
   pageTitle        = 'Crear Solicitud Grupal';
   description      = `Método para crear una solicitud de crédito grupal.`;
-  pubName          = 'Crear Solicitud Grupal';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTMicrofinanzas.CrearSolicitudGrupal';
+  programa   = 'RBTPG438';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearSolicitudGrupalComponent1750258525148 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de grupo.' }, { Codigo: '30011', Descripcion: 'El Grupo seleccionado no está vigente.' }, { Codigo: '30012', Descripcion: 'El Tipo de Grupo no existe.' }, { Codigo: '30013', Descripcion: 'No se pudo determinar el coordinador del grupo.' }, { Codigo: '30014', Descripcion: 'No se encontró registro en la FSD008 para la cuenta [Número de cuenta].' }, { Codigo: '30015', Descripcion: 'No se obtuvo el titular representativo de la cuenta [Número de cuenta].' }, { Codigo: '30016', Descripcion: 'No se pudo determinar la sucursal de la solicitud.' }, { Codigo: '30017', Descripcion: 'No se pudo determinar el asesor de la solicitud.' }, { Codigo: '30018', Descripcion: 'El código de campaña no existe.' }, { Codigo: '30019', Descripcion: 'El código de origen de captación no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTMicrofinanzas.CrearSolicitudGrupal>
@@ -46,7 +47,9 @@ export class CrearSolicitudGrupalComponent1750258525148 {
          </bts:sdtDatosSolicitud>
       </bts:BTMicrofinanzas.CrearSolicitudGrupal>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudGrupal \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -68,7 +71,8 @@ export class CrearSolicitudGrupalComponent1750258525148 {
         "origenCaptacion": "6"
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTMicrofinanzas.CrearSolicitudGrupalResponse>
          <Btinreq>
@@ -91,7 +95,9 @@ export class CrearSolicitudGrupalComponent1750258525148 {
          </Btoutreq>
       </BTMicrofinanzas.CrearSolicitudGrupalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "1",
 		"Usuario": "INSTALADOR",

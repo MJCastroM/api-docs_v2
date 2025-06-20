@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasAdicionalesComponent1750258525640 {
+export class ObtenerTarjetasAdicionalesComponent1750272791870 {
   pageTitle        = 'Obtener Tarjetas Adicionales';
   description      = `Método para obtener las tarjetas adicionales que están asociadas a una tarjeta de débito.`;
-  pubName          = 'Obtener Tarjetas Adicionales';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTTarjetasDeDebito.ObtenerTarjetasAdicionales';
+  programa   = 'RBTPG018';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerTarjetasAdicionalesComponent1750258525640 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de tarjeta.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTTarjetasDeDebito.ObtenerTarjetasAdicionales>
@@ -38,7 +39,9 @@ export class ObtenerTarjetasAdicionalesComponent1750258525640 {
          <bts:tarjetaUId>3</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerTarjetasAdicionales>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjetasAdicionales=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerTarjetasAdicionalesComponent1750258525640 {
 	},
    "tarjetaUId": 3
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTTarjetasDeDebito.ObtenerTarjetasAdicionalesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class ObtenerTarjetasAdicionalesComponent1750258525640 {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTarjetasAdicionalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVariablesReglaComponent1750258525606 {
+export class ObtenerVariablesReglaComponent1750272791834 {
   pageTitle        = 'Obtener Variables Regla';
   description      = `Método para obtener las variables de una determinada regla de negocio.`;
-  pubName          = 'Obtener Variables Regla';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTReglasNegocio.ObtenerVariablesRegla';
+  programa   = 'RBTPGR54';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerVariablesReglaComponent1750258525606 {
   errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió ID de Regla.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTReglasNegocio.ObtenerVariablesRegla>
@@ -38,7 +39,9 @@ export class ObtenerVariablesReglaComponent1750258525606 {
          <bts:reglaId>1</bts:reglaId>
       </bts:BTReglasNegocio.ObtenerVariablesRegla>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerVariablesRegla\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -52,7 +55,8 @@ export class ObtenerVariablesReglaComponent1750258525606 {
         "Token": "bc8b678bc44A8B5C60A82434"
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTReglasNegocio.ObtenerVariablesReglaResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -100,7 +104,9 @@ export class ObtenerVariablesReglaComponent1750258525606 {
          </Btoutreq>
       </BTReglasNegocio.ObtenerVariablesReglaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

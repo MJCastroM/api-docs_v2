@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosReprocesablesComponent1750258524659 {
+export class ObtenerProcesosReprocesablesComponent1750272790747 {
   pageTitle        = 'Obtener Procesos Reprocesables';
   description      = `Método para obtener un listado de los procesos reprocesables de la cadena de cierre.`;
-  pubName          = 'Obtener Procesos Reprocesables';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCadenaCierre.ObtenerProcesosReprocesables';
+  programa   = 'RBTPG506';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerProcesosReprocesablesComponent1750258524659 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCadenaCierre.ObtenerProcesosReprocesables>
@@ -37,7 +38,9 @@ export class ObtenerProcesosReprocesablesComponent1750258524659 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.ObtenerProcesosReprocesables>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosReprocesables\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -51,7 +54,8 @@ export class ObtenerProcesosReprocesablesComponent1750258524659 {
         "Token": "bc8b678bc44A8B5C60A82434"
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCadenaCierre.ObtenerProcesosReprocesablesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -84,7 +88,9 @@ export class ObtenerProcesosReprocesablesComponent1750258524659 {
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosReprocesablesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
       "Device": "mc",
       "Usuario": "INSTALADOR",

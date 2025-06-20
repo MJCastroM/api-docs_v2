@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarExcepcionComponent1750258525613 {
+export class RechazarExcepcionComponent1750272791843 {
   pageTitle        = 'Rechazar Excepción';
   description      = `Método para rechazar una excepción.`;
-  pubName          = 'Rechazar Excepción';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTSeguridad.RechazarExcepcion';
+  programa   = 'RBTPG088';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class RechazarExcepcionComponent1750258525613 {
   errors     = [{ Codigo: '30001', Descripcion: 'Excepción asignada a otro Usuario.' }, { Codigo: '30011', Descripcion: 'No se recibió el identificador de excepción.' }, { Codigo: '30012', Descripcion: 'No se recibió Usuario.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTSeguridad.RechazarExcepcion>
@@ -40,7 +41,9 @@ export class RechazarExcepcionComponent1750258525613 {
          <bts:contraseña>z0na#1357</bts:contraseña>
       </bts:BTSeguridad.RechazarExcepcion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?AutorizarExcepcion=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -57,7 +60,8 @@ export class RechazarExcepcionComponent1750258525613 {
     "usuario": "BANTOTAL",
     "contraseña": "z0na#1357"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTSeguridad.RechazarExcepcionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -79,7 +83,9 @@ export class RechazarExcepcionComponent1750258525613 {
          </Btoutreq>
       </BTSeguridad.RechazarExcepcionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarCuentadeCobroComponent1750258525552 {
+export class AgregarCuentadeCobroComponent1750272791765 {
   pageTitle        = 'Agregar Cuenta de Cobro';
   description      = `Método para agregar una cuenta de cobro de un préstamo.`;
-  pubName          = 'Agregar Cuenta de Cobro';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.AgregarCuentaDeCobro';
+  programa   = 'RBTPG132';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AgregarCuentadeCobroComponent1750258525552 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de Préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación de cobro para el Identificador: [Número de Identificador].' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.AgregarCuentaDeCobro>
@@ -41,7 +42,9 @@ export class AgregarCuentadeCobroComponent1750258525552 {
          <bts:permite_pago_parcial>S</bts:permite_pago_parcial>
       </bts:BTPrestamos.AgregarCuentaDeCobro>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AgregarCuentaDeCobro\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -59,7 +62,8 @@ export class AgregarCuentadeCobroComponent1750258525552 {
 	"permite_sobregirar": "S",
 	"permite_pago_parcial": "S"
 	}\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.AgregarCuentaDeCobroResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class AgregarCuentadeCobroComponent1750258525552 {
          </Btoutreq>
       </BTPrestamos.AgregarCuentaDeCobroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

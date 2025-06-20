@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePrestamoCanceladoComponent1750258525520 {
+export class ObtenerDetalledePrestamoCanceladoComponent1750272791716 {
   pageTitle        = 'Obtener Detalle de Préstamo Cancelado';
   description      = `Devuelve el detalle del préstamo cancelado indicado.`;
-  pubName          = 'Obtener Detalle de Préstamo Cancelado';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerDetallePrestamoCancelado';
+  programa   = 'RBTPG248';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerDetalledePrestamoCanceladoComponent1750258525520 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'El préstamo no se encuentra cancelado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerDetallePrestamoCancelado>
@@ -38,7 +39,9 @@ export class ObtenerDetalledePrestamoCanceladoComponent1750258525520 {
          <bts:operacionUId>10118</bts:operacionUId>
       </bts:BTPrestamos.ObtenerDetallePrestamoCancelado>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ObtenerDetallePrestamoCancelado\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerDetalledePrestamoCanceladoComponent1750258525520 {
 	},
 	"operacionUId": "10118"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.ObtenerDetallePrestamoCanceladoResponse>
          <Btinreq>
@@ -165,7 +169,9 @@ export class ObtenerDetalledePrestamoCanceladoComponent1750258525520 {
          </Btoutreq>
       </BTPrestamos.ObtenerDetallePrestamoCanceladoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 	  "Canal": "BTDIGITAL",
 	  "Requerimiento": "1",

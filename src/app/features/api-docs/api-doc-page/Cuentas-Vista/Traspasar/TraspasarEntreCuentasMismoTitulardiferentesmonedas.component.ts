@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750258525059 {
+export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent1750272791227 {
   pageTitle        = 'Traspasar Entre Cuentas Mismo Titular (diferentes monedas)';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda cuyo titular sea la misma persona.`;
-  pubName          = 'Traspasar Entre Cuentas Mismo Titular (diferentes monedas)';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.TraspasarMismoTitularDiferentesMonedas';
+  programa   = 'RBTPG272';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de traspaso, teniendo en cuenta que:
@@ -38,7 +38,8 @@ export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent17502585
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30007', Descripcion: 'Debe ingresar importe a acreditar.' }, { Codigo: '30008', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '30009', Descripcion: 'Debe ingresar importe a debitar.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
     <soapenv:Header/>
     <soapenv:Body>
         <bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>
@@ -60,7 +61,9 @@ export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent17502585
             </bts:sdtTraspaso>
         </bts:BTCuentasVista.TraspasarMismoTitularDiferentesMonedas>
     </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarMismoTitularDiferentesMonedas \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -84,7 +87,8 @@ export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent17502585
         "concepto": "Traspaso",
     },
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAPENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAPENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SOAP-ENV:Body>
         <BTCuentasVista.TraspasarMismoTitularDiferentesMonedasResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
             <Btinreq>
@@ -113,7 +117,9 @@ export class TraspasarEntreCuentasMismoTitulardiferentesmonedasComponent17502585
             </Btoutreq>
         </BTCuentasVista.TraspasarMismoTitularDiferentesMonedasResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
     "Btinreq": {
         "Device": "AV",
         "Usuario": "MINSTALADOR",

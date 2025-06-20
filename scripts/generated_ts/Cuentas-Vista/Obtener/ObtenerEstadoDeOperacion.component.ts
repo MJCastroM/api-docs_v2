@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadoDeOperacionComponent1750258525033 {
+export class ObtenerEstadoDeOperacionComponent1750272791183 {
   pageTitle        = 'Obtener Estado De Operación';
   description      = `Método para obtener el estado de una cuenta vista.`;
-  pubName          = 'Obtener Estado De Operación';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCuentasVista.ObtenerEstadoDeOperacion';
+  programa   = 'RBTPG559';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerEstadoDeOperacionComponent1750258525033 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de la operación.' }, { Codigo: '30002', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30003', Descripcion: 'No se recuperó la operación para el identificador ingresado.' }, { Codigo: '30004', Descripcion: 'No fue posible recuperar el estado para la operación ingresada.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCuentasVista.ObtenerEstadoDeOperacion>
@@ -38,7 +39,9 @@ export class ObtenerEstadoDeOperacionComponent1750258525033 {
          <bts:operacionUId>210</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerEstadoDeOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerEstadoDeOperacion\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerEstadoDeOperacionComponent1750258525033 {
       },
       "operacionUId": 150
    }` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCuentasVista.ObtenerEstadoDeOperacionResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -80,7 +84,9 @@ export class ObtenerEstadoDeOperacionComponent1750258525033 {
          </Btoutreq>
       </BTCuentasVista.ObtenerEstadoDeOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
    "Btinreq": {
       "Device": 1,
       "Usuario": "INSTALADOR",

@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNivelesEducativosComponent1750258525385 {
+export class ObtenerNivelesEducativosComponent1750272791590 {
   pageTitle        = 'Obtener Niveles Educativos';
   description      = `Método para obtener un listado de los niveles educativos.`;
-  pubName          = 'Obtener Niveles Educativos';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.ObtenerNivelesEducativos';
+  programa   = 'RBTPG382';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerNivelesEducativosComponent1750258525385 {
   errors     = [];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.ObtenerNivelesEducativos>
@@ -37,8 +38,11 @@ export class ObtenerNivelesEducativosComponent1750258525385 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerNivelesEducativos>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+</soapenv:Envelope>`, 
+    json: `
+` },
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.ObtenerNivelesEducativosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -90,7 +94,9 @@ export class ObtenerNivelesEducativosComponent1750258525385 {
          </Btoutreq>
       </BTPersonas.ObtenerNivelesEducativosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",

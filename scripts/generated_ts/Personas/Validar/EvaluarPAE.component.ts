@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarPAEComponent1750258525413 {
+export class EvaluarPAEComponent1750272791624 {
   pageTitle        = 'Evaluar PAE';
   description      = `Método para retornar el resultado de evaluar el PAE de una persona.`;
-  pubName          = 'Evaluar PAE';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.EvaluarPAE';
+  programa   = 'RBTPGP50';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EvaluarPAEComponent1750258525413 {
   errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió modelo de evaluación PAE.' }, { Codigo: '1011051', Descripcion: 'No se recuperó la persona para el Id recibido.' }, { Codigo: '1011052', Descripcion: 'No se recuperó el producto para el Id recibido.' }, { Codigo: '1011053', Descripcion: 'El modelo de evaluación no está definido.' }, { Codigo: '1011054', Descripcion: 'El modelo de evaluación no tiene tipo definido.' }, { Codigo: '1011055', Descripcion: 'No hay ítems a resolver para la evaluación solicitada.' }, { Codigo: '1011056', Descripcion: 'No es posible evaluar reglas en la plataforma de ejecución.' }, { Codigo: '1011056', Descripcion: 'Error en la parametrización del modelo de evaluación.' }, { Codigo: '1011057', Descripcion: 'Error en la ejecución del modelo de evaluación.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.EvaluarPAE>
@@ -46,7 +47,9 @@ export class EvaluarPAEComponent1750258525413 {
          </bts:sdtValores>
       </bts:BTPersonas.EvaluarPAE>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EvaluarPAE=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -69,7 +72,8 @@ export class EvaluarPAEComponent1750258525413 {
       }
    }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.EvaluarPAEResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -95,7 +99,9 @@ export class EvaluarPAEComponent1750258525413 {
          </Btoutreq>
       </BTPersonas.EvaluarPAEResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

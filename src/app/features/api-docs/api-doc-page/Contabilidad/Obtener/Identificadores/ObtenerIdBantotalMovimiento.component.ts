@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalMovimientoComponent1750258524967 {
+export class ObtenerIdBantotalMovimientoComponent1750272791063 {
   pageTitle        = 'Obtener Identificador Bantotal de Movimiento';
   description      = `Método para obtener la clave de identificación Bantotal de un movimiento.`;
-  pubName          = 'Obtener Identificador Bantotal de Movimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.ObtenerIdBantotalMovimiento';
+  programa   = 'RBTPG368';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerIdBantotalMovimientoComponent1750258524967 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de movimiento.' }, { Codigo: '30002', Descripcion: 'No existe registro para el identificador de movimiento ingresado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.ObtenerIdBantotalMovimiento>
@@ -38,7 +39,9 @@ export class ObtenerIdBantotalMovimientoComponent1750258524967 {
          <bts:movimientoUId>2</bts:movimientoUId>
       </bts:BTContabilidad.ObtenerIdBantotalMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalMovimiento\' \
 	-H \'cache-control: no-cache\' \
 	-H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerIdBantotalMovimientoComponent1750258524967 {
 	},
 	"movimientoUId": "2"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.ObtenerIdBantotalMovimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -81,7 +85,9 @@ export class ObtenerIdBantotalMovimientoComponent1750258524967 {
          </Btoutreq>
       </BTContabilidad.ObtenerIdBantotalMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": { 
 	    "Device": "GP", 
 	    "Usuario": "MINSTALADOR", 

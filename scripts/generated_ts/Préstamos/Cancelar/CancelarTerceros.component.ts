@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarTercerosComponent1750258525445 {
+export class CancelarTercerosComponent1750272791669 {
   pageTitle        = 'Cancelar Terceros';
   description      = `Método para realizar la cancelación de un préstamo con una cuenta de cobro de terceros.`;
-  pubName          = 'Cancelar Terceros';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.CancelarTerceros';
+  programa   = 'RBTPG830';
+  scope      = 'Global';
 
   hasBackendConfig = true;
   backendText      = `1) Definir la transacción de Pago, teniendo en cuenta que: 
@@ -36,7 +36,8 @@ export class CancelarTercerosComponent1750258525445 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30100', Descripcion: 'Error en la Contabilización.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.CancelarTerceros>
@@ -53,7 +54,9 @@ export class CancelarTercerosComponent1750258525445 {
          <bts:referencia>Cancelacion con terceros</bts:referencia>
       </bts:BTPrestamos.CancelarTerceros>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?CancelarTerceros\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -70,7 +73,8 @@ export class CancelarTercerosComponent1750258525445 {
     "operacionCobroUId": "865",
     "referencia": "Paga cuota terceros"
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPrestamos.CancelarTercerosResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -93,7 +97,9 @@ export class CancelarTercerosComponent1750258525445 {
          </Btoutreq>
       </BTPrestamos.CancelarTercerosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{
+</SOAP-ENV:Envelope>`,  
+    json: `
+{
     "Btinreq": {
         "Device": "bms",
         "Usuario": "MINSTALADOR",

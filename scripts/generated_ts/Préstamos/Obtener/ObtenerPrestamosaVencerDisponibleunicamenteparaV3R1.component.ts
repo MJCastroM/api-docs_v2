@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750258525542 {
+export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750272791746 {
   pageTitle        = 'Obtener Préstamos a Vencer';
   description      = `Método para obtener los préstamos que están por vencer dentro de determinados días.`;
-  pubName          = 'Obtener Préstamos a Vencer';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPrestamos.ObtenerPrestamosAVencer';
+  programa   = 'RBTPG472';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750258
   errors     = [{ Codigo: '30003', Descripcion: 'No existe registro para el producto indicado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPrestamos.ObtenerPrestamosAVencer>
@@ -38,7 +39,9 @@ export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750258
          <bts:diasVtoCuota>2</bts:diasVtoCuota>
       </bts:BTPrestamos.ObtenerPrestamosAVencer>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosAVencer=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750258
   },
   "diasVtoCuota": 2
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
         <BTPrestamos.ObtenerPrestamosAVencerResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -115,7 +119,9 @@ export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750258
          </Btoutreq>
       </BTPrestamos.ObtenerPrestamosAVencerResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
     "Requerimiento": 0,
     "Canal": "BTDIGITAL",

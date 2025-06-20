@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarServiciosDisponiblesComponent1750258524694 {
+export class CargarServiciosDisponiblesComponent1750272790791 {
   pageTitle        = 'Cargar Servicios Disponibles';
   description      = `Método para obtener los servicios disponibles para el cliente.`;
-  pubName          = 'Cargar Servicios Disponibles';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTCASHManagement.CargarServiciosDisponibles';
+  programa   = 'RBTPGC07';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CargarServiciosDisponiblesComponent1750258524694 {
   errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTCASHManagement.CargarServiciosDisponibles>
@@ -38,7 +39,9 @@ export class CargarServiciosDisponiblesComponent1750258524694 {
          <bts:clienteUId>1</bts:clienteUId>
       </bts:BTCASHManagement.CargarServiciosDisponibles>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?CargarServiciosDisponibles=\' \
   -H \'Cache-Control: no-cache\' \
@@ -55,7 +58,8 @@ export class CargarServiciosDisponiblesComponent1750258524694 {
         },
         "clienteUId": "1"
     }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTCASHManagement.CargarServiciosDisponiblesResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -85,7 +89,9 @@ export class CargarServiciosDisponiblesComponent1750258524694 {
          </Btoutreq>
       </BTCASHManagement.CargarServiciosDisponiblesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

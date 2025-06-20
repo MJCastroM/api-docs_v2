@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearReducidoComponent1750258525327 {
+export class CrearReducidoComponent1750272791548 {
   pageTitle        = 'Crear Reducido';
   description      = `Método para crear una persona de forma reducida.`;
-  pubName          = 'Crear Reducido';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTPersonas.CrearReducido';
+  programa   = 'RBTPG534';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class CrearReducidoComponent1750258525327 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar País del Documento.' }, { Codigo: '30002', Descripcion: 'Debe ingresar Tipo de Documento.' }, { Codigo: '30003', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '30004', Descripcion: 'Debe ingresar apellido paterno.' }, { Codigo: '30005', Descripcion: 'Debe ingresar primer nombre.' }, { Codigo: '30006', Descripcion: 'Debe ingresar fecha de nacimiento.' }, { Codigo: '30007', Descripcion: 'Debe ingresar sexo.' }, { Codigo: '30008', Descripcion: 'Debe ingresar estado civil.' }, { Codigo: '30009', Descripcion: 'Debe ingresar ocupación.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTPersonas.CrearReducido>
@@ -82,7 +83,9 @@ export class CrearReducidoComponent1750258525327 {
          </bts:sdtPersona>
       </bts:BTPersonas.CrearReducido>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?CrearReducido=\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -142,7 +145,8 @@ export class CrearReducidoComponent1750258525327 {
         "tipoDocumento": ""
     }
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTPersonas.CrearReducidoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -165,7 +169,9 @@ export class CrearReducidoComponent1750258525327 {
          </Btoutreq>
       </BTPersonas.CrearReducidoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "GZ",
 		"Usuario": "MINSTALADOR",

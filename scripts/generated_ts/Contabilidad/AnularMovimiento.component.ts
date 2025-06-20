@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularMovimientoComponent1750258524962 {
+export class AnularMovimientoComponent1750272791057 {
   pageTitle        = 'Anular Movimiento';
   description      = `Método para anular un movimiento.`;
-  pubName          = 'Anular Movimiento';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTContabilidad.AnularMovimiento';
+  programa   = 'RBTPG237';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class AnularMovimientoComponent1750258524962 {
   errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de movimiento.' }, { Codigo: '30002', Descripcion: 'No se recibió fecha de anulación.' }, { Codigo: '40003', Descripcion: 'No se permite ingresar operaciones anteriores al último cierre.' }, { Codigo: '40004', Descripcion: 'Usuario no autorizado a cambiar la Fecha Valor Contable.' }, { Codigo: '40071', Descripcion: 'La fecha valor contable no puede ser un feriado.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTContabilidad.AnularMovimiento>
@@ -39,7 +40,9 @@ export class AnularMovimientoComponent1750258524962 {
          <bts:fecha>2018-08-10</bts:fecha>
       </bts:BTContabilidad.AnularMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AnularMovimiento\' \
   -H \'cache-control: no-cache\' \
   -H \'content-type: application/json\' \
@@ -55,7 +58,8 @@ export class AnularMovimientoComponent1750258524962 {
     "movimientoUId": 245,
     "fecha": 2018-08-10
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTContabilidad.AnularMovimientoResponse xmlns="http://uy.com.dlya.bantotal/BTSOA/">
          <Btinreq>
@@ -78,7 +82,9 @@ export class AnularMovimientoComponent1750258524962 {
          </Btoutreq>
       </BTContabilidad.AnularMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `\'{
+</SOAP-ENV:Envelope>`,  
+    json: `
+\'{
 	"Btinreq": {
 		"Device": "AV",
 		"Usuario": "MINSTALADOR",

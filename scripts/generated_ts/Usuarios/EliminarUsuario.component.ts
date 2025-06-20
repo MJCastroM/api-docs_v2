@@ -8,12 +8,12 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarUsuarioComponent1750258525668 {
+export class EliminarUsuarioComponent1750272791912 {
   pageTitle        = 'Eliminar Usuario';
   description      = `Método para eliminar un usuario.`;
-  pubName          = 'Eliminar Usuario';
-  programa         = '';
-  scope            = '';
+  pubName    = 'BTUsuarios.EliminarUsuario';
+  programa   = 'RBTPG390';
+  scope      = 'Global';
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -24,7 +24,8 @@ export class EliminarUsuarioComponent1750258525668 {
   errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar usuario.' }, { Codigo: '30002', Descripcion: 'No existe el usuario ingresado.' }, { Codigo: '30003', Descripcion: 'No es posible eliminar el usuario. Existen datos relacionados de Perfil/Usuario.' }, { Codigo: '30004', Descripcion: 'El Usuario no existe. (Tabla FST746)' }, { Codigo: '30005', Descripcion: 'La Empresa para el Usuario no existe.' }];
 
   examples = {
-    invocation: { xml: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
+    invocation: { xml: `
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bts="http://uy.com.dlya.bantotal/BTSOA/">
    <soapenv:Header/>
    <soapenv:Body>
       <bts:BTUsuarios.EliminarUsuario>
@@ -38,7 +39,9 @@ export class EliminarUsuarioComponent1750258525668 {
          <bts:usuario>GPONTES</bts:usuario>
       </bts:BTUsuarios.EliminarUsuario>
    </soapenv:Body>
-</soapenv:Envelope>`, json: `curl -X POST \
+</soapenv:Envelope>`, 
+    json: `
+curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?EliminarUsuario\' \
     -H \'cache-control: no-cache\' \
     -H \'content-type: application/json\' \
@@ -53,7 +56,8 @@ export class EliminarUsuarioComponent1750258525668 {
     },
    "usuario": "GPONTES",
 }\'` },
-    response:   { xml: `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    response:   { xml: `
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <BTUsuarios.EliminarUsuarioResponse>
          <Btinreq>
@@ -75,7 +79,9 @@ export class EliminarUsuarioComponent1750258525668 {
          </Btoutreq>
       </BTUsuarios.EliminarUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  json: `{ 
+</SOAP-ENV:Envelope>`,  
+    json: `
+{ 
     "Btinreq": {
         "Device": "GP",
         "Usuario": "MINSTALADOR",
