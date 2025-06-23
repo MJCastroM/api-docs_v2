@@ -1,88 +1,68 @@
 // 1) Sólo directivas @use/@forward (antes de cualquier @import, regla o include)
-@use '@angular/material' as mat;
-//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//@use '@angular/material' as mat;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import 'variables';
 
-$primary-color:    #c62828;
-$text-main:        #2c3e50;
-$background-light: #fdfdfe;
-$grey-header:      #e0e0e0;
-$shadow-light:      rgba(0, 0, 0, .15);
-$border-radius:    1rem;
-$margin:           3rem 14rem;
-
-// 2) Definición de palettes y del objeto tema
-$api-docs-primary: mat.define-palette(mat.$indigo-palette);
-$api-docs-accent:  mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$api-docs-warn:    mat.define-palette(mat.$red-palette);
-
-$api-docs-theme: mat.define-light-theme((
-  color: (
-    primary: $api-docs-primary,
-    accent:  $api-docs-accent,
-    warn:    $api-docs-warn,
-  )
-));
-
-// 3) Ya podemos @include los mixins de Material (una sola vez)
-@include mat.all-component-themes($api-docs-theme);
-
-// 4) Mixins y reglas propias
 @mixin card-shadow {
   box-shadow: 0 2px 8px $shadow-light;
 }
 
 // PROPIEDADES GLOBALES
+html {
+  scroll-behavior: smooth;
+}
 
 html, body {
   height: 100%;
+  overflow: hidden; // ✅ no queremos scroll global
 }
 body {
   margin: 0;
   background-color: #f5f5f7 !important;
   font-size: 1rem !important;
   line-height: 1.5 !important;
+  color: $text-color;
+}
+
+.mat-drawer-content {
+  background-color: #f5f5f7 !important;
 }
 // CIERRE - PROPIEDADES GLOBALES
 
-.page-title { // TÍTULO DE LA PÁGINA
-  margin: 3rem 10rem 1.5rem 10rem !important;
-  border-bottom: none !important;
-  padding: 0rem !important;
-  font-size: 2.5rem;
-  color: $text-main;
-}
-
-.mat-accordion-BT { 
+.mat-accordion-BT {
   margin: 2rem 0;
+  font-family: $font-family;
 
   .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
     margin: $margin;
     background: $background-light;
     border-radius: $border-radius !important;
-    box-shadow: 15px 15px 15px 10px $shadow-light !important;
+    box-shadow: $box-shadow !important;
 
     .mat-expansion-panel-header {
       background: $background-light;
-      color: $text-main;
-      //font-weight: bold;
+      color: $text-color;
       font-size: 1rem;
-      padding: .5rem 2rem;
+      font-family: $font-family;
+      padding: 1.5rem;
       border-radius: $border-radius;
+      font-weight: 700;
+       box-shadow: none !important;
 
       .mat-panel-title {
         font-weight: 500;
-        color: $text-main;
+        color: $text-color;
       }
       .mat-expansion-indicator::after {
-        color: $primary-color;
+        color: $red-1;
+        font-weight: 700;
       }
     }
 
     .mat-expansion-panel-body {
       padding: 0rem 2rem 2rem;
       background: $background-light;
-      box-shadow: 15px 15px 15px 10px $shadow-light;
+      //box-shadow: 15px 15px 15px 10px $shadow-light;
     }
 
     .mat-expansion-panel-content {
@@ -91,8 +71,17 @@ body {
     }
 
     .mat-icon {
-      color: $text-main;
+      color: $text-color;
       vertical-align: text-bottom;
     }
+  }
+}
+
+a {
+  color: $red-1 !important;
+  text-decoration: none;
+  &:hover {
+    color: darken($red-1, 5%) !important;
+    text-decoration: underline;
   }
 }

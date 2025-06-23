@@ -1,0 +1,4094 @@
+[
+  {
+    "type": "folder",
+    "name": "Ahorro-Programado",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Contratar Simulación",
+            "url": "/api/Ahorro-Programado/Contratar/ContratarSimulacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear",
+            "url": "/api/Ahorro-Programado/Contratar/Crear.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular",
+            "url": "/api/Ahorro-Programado/Contratar/Simular.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Documentos-Digitales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Documento Digital",
+            "url": "/api/Ahorro-Programado/Documentos-Digitales/ActualizarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Documento Digital",
+            "url": "/api/Ahorro-Programado/Documentos-Digitales/AsociarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Digital",
+            "url": "/api/Ahorro-Programado/Documentos-Digitales/EliminarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documento Digital",
+            "url": "/api/Ahorro-Programado/Documentos-Digitales/ObtenerDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Digitales",
+            "url": "/api/Ahorro-Programado/Documentos-Digitales/ObtenerDocumentosDigitales.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Modificar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Modificar Cuenta Destino",
+            "url": "/api/Ahorro-Programado/Modificar/ModificarCuentaDestino.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Cuenta Origen",
+            "url": "/api/Ahorro-Programado/Modificar/ModificarCuentaOrigen.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Fecha de Abono",
+            "url": "/api/Ahorro-Programado/Modificar/ModificarFechadeAbono.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Meta de Ahorro",
+            "url": "/api/Ahorro-Programado/Modificar/ModificarMetadeAhorro.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Monto de Abono",
+            "url": "/api/Ahorro-Programado/Modificar/ModificarMontodeAbono.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener",
+            "url": "/api/Ahorro-Programado/Obtener/Obtener.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cronograma de Abonos",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerCronogramaAbonos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Destino Habilitadas",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerCuentasDestinoHabilitadas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Origen Habilitadas",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerCuentasOrigenHabilitadas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estado de Cuenta",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerEstadodeCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Períodos Habilitados",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerPeriodosHabilitados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Plazos Habilitados",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerPlazosHabilitados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Ahorro-Programado/Obtener/ObtenerProductos.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "api-docs-routing.module",
+    "url": "/api/api-docs-routing.module"
+  },
+  {
+    "type": "folder",
+    "name": "AR - Argentina",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Cuentas-Corrientes",
+        "children": [
+          {
+            "type": "folder",
+            "name": "Cheque-Electrónico",
+            "children": [
+              {
+                "type": "file",
+                "name": "Anular Cheque Electrónico",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AnularChequeElectronico.component"
+              },
+              {
+                "type": "file",
+                "name": "Asignar Id a Cheque Electrónico",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AsignarIdaChequeElectronico.component"
+              },
+              {
+                "type": "file",
+                "name": "Crear Chequera Electrónica",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/CrearChequeraElectronica.component"
+              },
+              {
+                "type": "file",
+                "name": "Depositar Cheque Electrónico de Banco Propio",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeBancoPropio.component"
+              },
+              {
+                "type": "file",
+                "name": "Depositar Cheque Electrónico de Otro Banco",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicodeOtroBanco.component"
+              },
+              {
+                "type": "file",
+                "name": "Depositar Cheque Electrónico en Custodia",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/DepositarChequeElectronicoenCustodia.component"
+              },
+              {
+                "type": "file",
+                "name": "Emitir Cheque Electrónico",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronico.component"
+              },
+              {
+                "type": "file",
+                "name": "Emitir Cheque Electrónico de Chequera",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronicodeChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Habilitar Cheque Electrónico",
+                "url": "/api/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/HabilitarChequeElectronico.component"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "SNP",
+        "children": [
+          {
+            "type": "file",
+            "name": "Crear Adhesión",
+            "url": "/api/AR - Argentina/SNP/CrearAdhesion.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Stop Debit",
+            "url": "/api/AR - Argentina/SNP/CrearStopDebit.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Stop Debit para Adhesión con Importe",
+            "url": "/api/AR - Argentina/SNP/CrearStopDebitparaAdhesionconImporte.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Stop Debit",
+            "url": "/api/AR - Argentina/SNP/EliminarStopDebit.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Adhesiones",
+            "url": "/api/AR - Argentina/SNP/ObtenerAdhesiones.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Débitos",
+            "url": "/api/AR - Argentina/SNP/ObtenerDebitos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Empresas Originantes",
+            "url": "/api/AR - Argentina/SNP/ObtenerEmpresasOriginantes.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Stop Debits",
+            "url": "/api/AR - Argentina/SNP/ObtenerStopDebits.component"
+          },
+          {
+            "type": "file",
+            "name": "Reversar Débitos",
+            "url": "/api/AR - Argentina/SNP/ReversarDebitos.component"
+          },
+          {
+            "type": "file",
+            "name": "Solicitar Baja de Adhesión",
+            "url": "/api/AR - Argentina/SNP/SolicitarBajadeAdhesion.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Autenticación",
+    "children": [
+      {
+        "type": "file",
+        "name": "Autenticación",
+        "url": "/api/Autenticación/Autenticacion.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Cadena-de-Cierre",
+    "children": [
+      {
+        "type": "file",
+        "name": "Obtener Detalle de Ejecución",
+        "url": "/api/Cadena-de-Cierre/ObtenerDetalledeEjecucion.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Detalle de Proceso",
+        "url": "/api/Cadena-de-Cierre/ObtenerDetalledeProceso.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Procesos con Error",
+        "url": "/api/Cadena-de-Cierre/ObtenerProcesosconError.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Procesos Críticos",
+        "url": "/api/Cadena-de-Cierre/ObtenerProcesosCriticos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Procesos Diarios",
+        "url": "/api/Cadena-de-Cierre/ObtenerProcesosDiarios.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Procesos Mensuales",
+        "url": "/api/Cadena-de-Cierre/ObtenerProcesosMensuales.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Procesos Reprocesables",
+        "url": "/api/Cadena-de-Cierre/ObtenerProcesosReprocesables.component"
+      },
+      {
+        "type": "file",
+        "name": "Verificar Estado del Servidor",
+        "url": "/api/Cadena-de-Cierre/VerificarEstadoServidor.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Calendarios",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Calcular",
+        "children": [
+          {
+            "type": "file",
+            "name": "Calcular Fecha de Vencimiento",
+            "url": "/api/Calendarios/Calcular/CalcularFechadeVencimiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Calcular Fecha de Vencimiento en Días Hábiles",
+            "url": "/api/Calendarios/Calcular/CalcularFechadeVencimientoenDiasHabiles.component"
+          },
+          {
+            "type": "file",
+            "name": "Calcular Plazo",
+            "url": "/api/Calendarios/Calcular/CalcularPlazo.component"
+          },
+          {
+            "type": "file",
+            "name": "Calcular Plazo en Días Hábiles",
+            "url": "/api/Calendarios/Calcular/CalcularPlazoenDiasHabiles.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Fecha Hábil",
+            "url": "/api/Calendarios/Obtener/ObtenerFechaHabil.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fecha Hábil Anterior",
+            "url": "/api/Calendarios/Obtener/ObtenerFechaHabilAnterior.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fecha Hábil Anterior de Sucursal",
+            "url": "/api/Calendarios/Obtener/ObtenerFechaHabilAnteriordeSucursal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fecha Hábil de Sucursal",
+            "url": "/api/Calendarios/Obtener/ObtenerFechaHabildeSucursal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Inicio y Fin de Mes",
+            "url": "/api/Calendarios/Obtener/ObtenerInicioyFindeMes.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Inicio y Fin de Mes de Sucursal",
+            "url": "/api/Calendarios/Obtener/ObtenerInicioyFindeMesdeSucursal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Próxima Fecha Hábil",
+            "url": "/api/Calendarios/Obtener/ObtenerProximaFechaHabil.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Próxima Fecha Hábil de Sucursal",
+            "url": "/api/Calendarios/Obtener/ObtenerProximaFechaHabildeSucursal.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "CASH-Management",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Archivo",
+        "children": [
+          {
+            "type": "file",
+            "name": "Autorizar Archivo",
+            "url": "/api/CASH-Management/Archivo/AutorizarArchivo.component"
+          },
+          {
+            "type": "file",
+            "name": "Cargar Archivo",
+            "url": "/api/CASH-Management/Archivo/CargarArchivo.component"
+          },
+          {
+            "type": "file",
+            "name": "Cargar Archivo Recibido Como Dato",
+            "url": "/api/CASH-Management/Archivo/CargarArchivoRecibidoComoDato.component"
+          },
+          {
+            "type": "file",
+            "name": "Detener Archivo",
+            "url": "/api/CASH-Management/Archivo/DetenerArchivo.component"
+          },
+          {
+            "type": "file",
+            "name": "Rechazar Archivo",
+            "url": "/api/CASH-Management/Archivo/RechazarArchivo.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Beneficiarios",
+        "children": [
+          {
+            "type": "file",
+            "name": "Cargar Beneficiarios",
+            "url": "/api/CASH-Management/Beneficiarios/CargarBeneficiarios.component"
+          },
+          {
+            "type": "file",
+            "name": "Ingresar Beneficiario",
+            "url": "/api/CASH-Management/Beneficiarios/IngresarBeneficiario.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Beneficiario Según Filtro",
+            "url": "/api/CASH-Management/Beneficiarios/ObtenerBeneficiarioSegunFiltro.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Alta Automática Contrato",
+            "url": "/api/CASH-Management/Contratar/AltaAutomaticaContrato.component"
+          },
+          {
+            "type": "file",
+            "name": "Cargar Servicios Disponibles",
+            "url": "/api/CASH-Management/Contratar/CargarServiciosDisponibles.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Débito Automático",
+            "url": "/api/CASH-Management/Contratar/ContratarDebitoAutomatico.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Orden de Cuenta",
+            "url": "/api/CASH-Management/Obtener/ObtenerDetalledeOrdendeCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Pago",
+            "url": "/api/CASH-Management/Obtener/ObtenerDetalledePago.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Orden Según Campo",
+            "url": "/api/CASH-Management/Obtener/ObtenerDetalleOrdenSegunCampo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Pago de una Orden",
+            "url": "/api/CASH-Management/Obtener/ObtenerDetallePagoOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Deuda",
+            "url": "/api/CASH-Management/Obtener/ObtenerDeuda.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Resumen de una Orden",
+            "url": "/api/CASH-Management/Obtener/ObtenerResumenOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Servicios",
+            "url": "/api/CASH-Management/Obtener/ObtenerServicios.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Valores Orden",
+            "url": "/api/CASH-Management/Obtener/ObtenerValoresOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Valores de Orden Según Campo",
+            "url": "/api/CASH-Management/Obtener/ObtenerValoresOrdenSegunCampo.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Orden",
+        "children": [
+          {
+            "type": "file",
+            "name": "Autorizar Orden",
+            "url": "/api/CASH-Management/Orden/AutorizarOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Detener Orden",
+            "url": "/api/CASH-Management/Orden/DetenerOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Ingresar Orden Pago",
+            "url": "/api/CASH-Management/Orden/IngresarOrdenPago.component"
+          },
+          {
+            "type": "file",
+            "name": "Procesar Orden",
+            "url": "/api/CASH-Management/Orden/ProcesarOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Rechazar Orden",
+            "url": "/api/CASH-Management/Orden/RechazarOrden.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Pagos",
+        "children": [
+          {
+            "type": "file",
+            "name": "Anular Pago Deuda",
+            "url": "/api/CASH-Management/Pagos/AnularPagoDeuda.component"
+          },
+          {
+            "type": "file",
+            "name": "Pagar Deuda Desde Cuenta",
+            "url": "/api/CASH-Management/Pagos/PagarDeudaDesdeCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Registrar Pago de Deuda",
+            "url": "/api/CASH-Management/Pagos/RegistrarPagoDeuda.component"
+          },
+          {
+            "type": "file",
+            "name": "Registrar Pago en Linea",
+            "url": "/api/CASH-Management/Pagos/RegistrarPagoEnLinea.component"
+          },
+          {
+            "type": "file",
+            "name": "Registrar Pago En Linea Desde Cuenta",
+            "url": "/api/CASH-Management/Pagos/RegistrarPagoEnLineaDesdeCuenta.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Visualizar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Visualizar Lista Resumen Cabezal",
+            "url": "/api/CASH-Management/Visualizar/VisualizarListaResumenCabezal.component"
+          },
+          {
+            "type": "file",
+            "name": "Visualizar Lista de Órdenes con su Resumen",
+            "url": "/api/CASH-Management/Visualizar/VisualizarListaResumenCabezalOrden.component"
+          },
+          {
+            "type": "file",
+            "name": "Visualizar Orden de Archivo Para Cuenta",
+            "url": "/api/CASH-Management/Visualizar/VisualizarOrdendeArchivoParaCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Visualizar Resultado Procesamiento",
+            "url": "/api/CASH-Management/Visualizar/VisualizarResultadoProcesamiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Visualizar Resumen Cabezal",
+            "url": "/api/CASH-Management/Visualizar/VisualizarResumenCabezal.component"
+          },
+          {
+            "type": "file",
+            "name": "Visualizar Situación Archivos",
+            "url": "/api/CASH-Management/Visualizar/VisualizarSituacionArchivos.component"
+          },
+          {
+            "type": "file",
+            "name": "Visualizar Situación Lineas",
+            "url": "/api/CASH-Management/Visualizar/VisualizarSituacionLineas.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "CHAT",
+    "children": [
+      {
+        "type": "file",
+        "name": "CHAT",
+        "url": "/api/CHAT/CHAT.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Clientes",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Actualizar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar",
+            "url": "/api/Clientes/Actualizar/Actualizar.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Documento Digital",
+            "url": "/api/Clientes/Actualizar/ActualizarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Domicilio",
+            "url": "/api/Clientes/Actualizar/ActualizarDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Información Adicional",
+            "url": "/api/Clientes/Actualizar/ActualizarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Registro Empleado",
+            "url": "/api/Clientes/Actualizar/ActualizarRegistroEmpleado.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Teléfono",
+            "url": "/api/Clientes/Actualizar/ActualizarTelefono.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Domicilio",
+            "url": "/api/Clientes/Actualizar/AgregarDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Información Adicional",
+            "url": "/api/Clientes/Actualizar/AgregarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Integrante",
+            "url": "/api/Clientes/Actualizar/AgregarIntegrante.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Teléfono",
+            "url": "/api/Clientes/Actualizar/AgregarTelefono.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Documento Digital",
+            "url": "/api/Clientes/Actualizar/AsociarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Digital",
+            "url": "/api/Clientes/Actualizar/EliminarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Domicilio",
+            "url": "/api/Clientes/Actualizar/EliminarDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Información Adicional",
+            "url": "/api/Clientes/Actualizar/EliminarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Integrante",
+            "url": "/api/Clientes/Actualizar/EliminarIntegrante.component"
+          },
+          {
+            "type": "file",
+            "name": "Habilitar",
+            "url": "/api/Clientes/Actualizar/Habilitar.component"
+          },
+          {
+            "type": "file",
+            "name": "Inhabilitar",
+            "url": "/api/Clientes/Actualizar/Inhabilitar.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Ejecutivo",
+            "url": "/api/Clientes/Actualizar/ModificarEjecutivo.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Crear",
+        "children": [
+          {
+            "type": "file",
+            "name": "Crear",
+            "url": "/api/Clientes/Crear/Crear.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear con Persona Existente",
+            "url": "/api/Clientes/Crear/CrearconPersonaExistente.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Para Persona Jurídica",
+            "url": "/api/Clientes/Crear/CrearParaPersonaJuridica.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener",
+            "url": "/api/Clientes/Obtener/Obtener.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Ahorros Programados",
+            "url": "/api/Clientes/Obtener/ObtenerAhorrosProgramados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Bolsillos",
+            "url": "/api/Clientes/Obtener/ObtenerBolsillos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Clasificaciones Internas",
+            "url": "/api/Clientes/Obtener/ObtenerClasificacionesInternas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuenta Cliente",
+            "url": "/api/Clientes/Obtener/ObtenerCuentaCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Corrientes (Saldo Contable)",
+            "url": "/api/Clientes/Obtener/ObtenerCuentasCorrientesSaldoContable.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Corrientes (Saldo Disponible)",
+            "url": "/api/Clientes/Obtener/ObtenerCuentasCorrientesSaldoDisponible.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas de Ahorro (Saldo Contable)",
+            "url": "/api/Clientes/Obtener/ObtenerCuentasdeAhorroSaldoContable.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas de Ahorro (Saldo Disponible)",
+            "url": "/api/Clientes/Obtener/ObtenerCuentasdeAhorroSaldoDisponible.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos",
+            "url": "/api/Clientes/Obtener/ObtenerDatos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Posición",
+            "url": "/api/Clientes/Obtener/ObtenerDetallePosicion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documento Digital",
+            "url": "/api/Clientes/Obtener/ObtenerDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Digitales",
+            "url": "/api/Clientes/Obtener/ObtenerDocumentosDigitales.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Domicilios",
+            "url": "/api/Clientes/Obtener/ObtenerDomicilios.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Facultades",
+            "url": "/api/Clientes/Obtener/ObtenerFacultades.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Identificador Único",
+            "url": "/api/Clientes/Obtener/ObtenerIdentificadorUnico.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Información Adicional",
+            "url": "/api/Clientes/Obtener/ObtenerInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Integrantes",
+            "url": "/api/Clientes/Obtener/ObtenerIntegrantes.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Límites",
+            "url": "/api/Clientes/Obtener/ObtenerLimites.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Motivos Inhabilitación",
+            "url": "/api/Clientes/Obtener/ObtenerMotivosInhabilitacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Perfil",
+            "url": "/api/Clientes/Obtener/ObtenerPerfil.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Plazos Fijos",
+            "url": "/api/Clientes/Obtener/ObtenerPlazosFijos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Plazos Fijos Cancelados",
+            "url": "/api/Clientes/Obtener/ObtenerPlazosFijosCancelados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Plazos Fijos con Avance",
+            "url": "/api/Clientes/Obtener/ObtenerPlazosFijosconAvance.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Posición",
+            "url": "/api/Clientes/Obtener/ObtenerPosicion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos",
+            "url": "/api/Clientes/Obtener/ObtenerPrestamos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos Cancelados",
+            "url": "/api/Clientes/Obtener/ObtenerPrestamosCancelados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos Castigados",
+            "url": "/api/Clientes/Obtener/ObtenerPrestamosCastigados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos con Avance",
+            "url": "/api/Clientes/Obtener/ObtenerPrestamosconAvance.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Resumen de Productos (Cierre de Año)",
+            "url": "/api/Clientes/Obtener/ObtenerResumendeProductosCierredeano.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Resumen de Productos (Saldos Contables)",
+            "url": "/api/Clientes/Obtener/ObtenerResumendeProductosSaldosContables.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Resumen de Productos (Saldos Disponibles)",
+            "url": "/api/Clientes/Obtener/ObtenerResumendeProductosSaldosDisponibles.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Resumen por Producto a Cierre Año",
+            "url": "/api/Clientes/Obtener/ObtenerResumenporProductoaCierreAno.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Riesgo de Credito",
+            "url": "/api/Clientes/Obtener/ObtenerRiesgodeCredito.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Saldos de Otros Productos",
+            "url": "/api/Clientes/Obtener/ObtenerSaldosdeOtrosProductos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Sectores",
+            "url": "/api/Clientes/Obtener/ObtenerSectores.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Segmentos",
+            "url": "/api/Clientes/Obtener/ObtenerSegmentos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tarjetas de Débito",
+            "url": "/api/Clientes/Obtener/ObtenerTarjetasdeDebito.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Telefonos",
+            "url": "/api/Clientes/Obtener/ObtenerTelefonos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Integración",
+            "url": "/api/Clientes/Obtener/ObtenerTiposdeIntegracion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Titular Representativo",
+            "url": "/api/Clientes/Obtener/ObtenerTitularRepresentativo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Títulos",
+            "url": "/api/Clientes/Obtener/ObtenerTitulos.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Validar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Validar Existencia",
+            "url": "/api/Clientes/Validar/ValidarExistencia.component"
+          },
+          {
+            "type": "file",
+            "name": "Verificar Empleado",
+            "url": "/api/Clientes/Validar/VerificarEmpleado.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Configuración-Bantotal",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Bancos",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Agencias Banco",
+            "url": "/api/Configuración-Bantotal/Bancos/ObtenerAgenciasBanco.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Bancos",
+            "url": "/api/Configuración-Bantotal/Bancos/ObtenerBancos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Sucursal",
+            "url": "/api/Configuración-Bantotal/Bancos/ObtenerDetalleSucursal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Sucursales Principales",
+            "url": "/api/Configuración-Bantotal/Bancos/ObtenerSucursalesPrincipales.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Clientes",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Actividades",
+            "url": "/api/Configuración-Bantotal/Clientes/ObtenerActividades.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Actividades por Tipo",
+            "url": "/api/Configuración-Bantotal/Clientes/ObtenerActividadesporTipo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Ejecutivos",
+            "url": "/api/Configuración-Bantotal/Clientes/ObtenerEjecutivos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Actividad",
+            "url": "/api/Configuración-Bantotal/Clientes/ObtenerTiposdeActividad.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Tarjeta",
+            "url": "/api/Configuración-Bantotal/Clientes/ObtenerTiposdeTarjeta.component"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "Obtener Impuestos",
+        "url": "/api/Configuración-Bantotal/ObtenerImpuestos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Tipos de Documento Digital",
+        "url": "/api/Configuración-Bantotal/ObtenerTiposdeDocumentoDigital.component"
+      },
+      {
+        "type": "folder",
+        "name": "Operaciones",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Estados",
+            "url": "/api/Configuración-Bantotal/Operaciones/ObtenerEstados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Instrucciones",
+            "url": "/api/Configuración-Bantotal/Operaciones/ObtenerInstrucciones.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Paquetes",
+            "url": "/api/Configuración-Bantotal/Operaciones/ObtenerPaquetes.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Texto",
+            "url": "/api/Configuración-Bantotal/Operaciones/ObtenerTiposdeTexto.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Parámetros Generales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Calendario de Sucursal",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerCalendariodeSucursal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Calendarios",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerCalendarios.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Calendario",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendario.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Calendario de Sucursal",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendariodeSucursal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Dólar USA",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerDolarUSA.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Empresa",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerEmpresa.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fecha de Sistema",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerFechadeSistema.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Moneda Nacional",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerMonedaNacional.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Monedas",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerMonedas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Sucursales",
+            "url": "/api/Configuración-Bantotal/Parámetros Generales/ObtenerSucursales.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Personas",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Agrupadores de Domicilio",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerAgrupadoresDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Barrios y Colonias",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerBarriosyColonias.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Ciudades y Localidades",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerCiudadesyLocalidades.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Códigos de Domicilio",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerCodigosdeDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estados, Provincias y Departamentos",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerEstadosProvinciasyDepartamentos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Países",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerPaises.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Listas Negras",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerTiposdeListasNegras.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Telefono",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerTiposdeTelefono.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Vivienda",
+            "url": "/api/Configuración-Bantotal/Personas/ObtenerTiposdeVivienda.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Precios",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Pizarra por Módulo",
+            "url": "/api/Configuración-Bantotal/Precios/ObtenerPizarraporModulo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Pizarras",
+            "url": "/api/Configuración-Bantotal/Precios/ObtenerPizarras.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Seguridad",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Menús",
+            "url": "/api/Configuración-Bantotal/Seguridad/ObtenerMenus.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Perfiles",
+            "url": "/api/Configuración-Bantotal/Seguridad/ObtenerPerfiles.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Contabilidad",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Agregar-Texto",
+        "children": [
+          {
+            "type": "file",
+            "name": "Agregar Texto Asiento",
+            "url": "/api/Contabilidad/Agregar-Texto/AgregarTextoAsiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Texto Ordinal",
+            "url": "/api/Contabilidad/Agregar-Texto/AgregarTextoOrdinal.component"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "Anular Movimiento",
+        "url": "/api/Contabilidad/AnularMovimiento.component"
+      },
+      {
+        "type": "folder",
+        "name": "Condición-Impositiva",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Condición Impositiva",
+            "url": "/api/Contabilidad/Condición-Impositiva/ActualizarCondicionImpositiva.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Condición Impositiva",
+            "url": "/api/Contabilidad/Condición-Impositiva/CrearCondicionImpositiva.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "folder",
+            "name": "Identificadores",
+            "children": [
+              {
+                "type": "file",
+                "name": "Obtener Identificador Bantotal de Movimiento",
+                "url": "/api/Contabilidad/Obtener/Identificadores/ObtenerIdBantotalMovimiento.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Identificador Bantotal de Operación",
+                "url": "/api/Contabilidad/Obtener/Identificadores/ObtenerIdBantotalOperacion.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Identificador Bantotal de Producto",
+                "url": "/api/Contabilidad/Obtener/Identificadores/ObtenerIdBantotalProducto.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Identificador Único de Movimiento",
+                "url": "/api/Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeMovimiento.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Identificador Único de Operación",
+                "url": "/api/Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeOperacion.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Identificador Único de Producto",
+                "url": "/api/Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeProducto.component"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cliente de una Operación",
+            "url": "/api/Contabilidad/Obtener/ObtenerClientedeunaOperacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Condición Impositiva",
+            "url": "/api/Contabilidad/Obtener/ObtenerCondicionImpositiva.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Movimiento",
+            "url": "/api/Contabilidad/Obtener/ObtenerDetalledeMovimiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Ordinal",
+            "url": "/api/Contabilidad/Obtener/ObtenerDetalledeOrdinal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Integrantes de Operación",
+            "url": "/api/Contabilidad/Obtener/ObtenerIntegrantesdeOperacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Textos de Movimiento",
+            "url": "/api/Contabilidad/Obtener/ObtenerTextosdeMovimiento.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Registrar-Asiento",
+        "children": [
+          {
+            "type": "file",
+            "name": "Registrar Asiento",
+            "url": "/api/Contabilidad/Registrar-Asiento/RegistrarAsiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Registrar Asiento Fecha Valor",
+            "url": "/api/Contabilidad/Registrar-Asiento/RegistrarAsientoFechaValor.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Cuentas-Bolsillo",
+    "children": [
+      {
+        "type": "file",
+        "name": "Cancelar",
+        "url": "/api/Cuentas-Bolsillo/Cancelar.component"
+      },
+      {
+        "type": "file",
+        "name": "Cash In",
+        "url": "/api/Cuentas-Bolsillo/CashIn.component"
+      },
+      {
+        "type": "file",
+        "name": "Cash Out",
+        "url": "/api/Cuentas-Bolsillo/CashOut.component"
+      },
+      {
+        "type": "file",
+        "name": "Contratar",
+        "url": "/api/Cuentas-Bolsillo/Contratar.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Datos",
+        "url": "/api/Cuentas-Bolsillo/ObtenerDatos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Movimientos",
+        "url": "/api/Cuentas-Bolsillo/ObtenerMovimientos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Productos",
+        "url": "/api/Cuentas-Bolsillo/ObtenerProductos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Productos CV",
+        "url": "/api/Cuentas-Bolsillo/ObtenerProductosCV.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Cuentas-Corrientes",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Chequera",
+        "children": [
+          {
+            "type": "folder",
+            "name": "Obtener",
+            "children": [
+              {
+                "type": "file",
+                "name": "Obtener Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Chequeras",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerChequeras.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Cheques de Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerChequesdeChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Comisión Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerComisionChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Estado de Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerEstadodeChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Solicitudes de Chequeras",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerSolicitudesdeChequeras.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Tipos de Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Obtener Tipos de Chequera por Producto",
+                "url": "/api/Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequeraporProducto.component"
+              }
+            ]
+          },
+          {
+            "type": "folder",
+            "name": "Operar",
+            "children": [
+              {
+                "type": "file",
+                "name": "Eliminar Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Operar/EliminarChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Registrar Orden de No Pago de Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeChequera.component"
+              },
+              {
+                "type": "file",
+                "name": "Registrar Orden de No Pago de Cheques",
+                "url": "/api/Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeCheques.component"
+              },
+              {
+                "type": "file",
+                "name": "Solicitar Chequera",
+                "url": "/api/Cuentas-Corrientes/Chequera/Operar/SolicitarChequera.component"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Contratar con Periodicidad",
+            "url": "/api/Cuentas-Corrientes/Contratar/ContratarconPeriodicidad.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Producto",
+            "url": "/api/Cuentas-Corrientes/Contratar/ContratarProducto.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Producto con Alta de Facultades",
+            "url": "/api/Cuentas-Corrientes/Contratar/ContratarProductoconAltadeFacultades.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Acuerdos",
+            "url": "/api/Cuentas-Corrientes/Obtener/ObtenerAcuerdos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos",
+            "url": "/api/Cuentas-Corrientes/Obtener/ObtenerDatos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estado de Cuenta",
+            "url": "/api/Cuentas-Corrientes/Obtener/ObtenerEstadodeCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Evolución de Saldos",
+            "url": "/api/Cuentas-Corrientes/Obtener/ObtenerEvoluciondeSaldos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Cuentas-Corrientes/Obtener/ObtenerProductos.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Cuentas-de-Ahorro",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Contratar con Periodicidad",
+            "url": "/api/Cuentas-de-Ahorro/Contratar/ContratarconPeriodicidad.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Producto",
+            "url": "/api/Cuentas-de-Ahorro/Contratar/ContratarProducto.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Producto con Alta de Facultades",
+            "url": "/api/Cuentas-de-Ahorro/Contratar/ContratarProductoconAltadeFacultades.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Datos",
+            "url": "/api/Cuentas-de-Ahorro/Obtener/ObtenerDatos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estado de Cuenta",
+            "url": "/api/Cuentas-de-Ahorro/Obtener/ObtenerEstadodeCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Evolución de Saldos",
+            "url": "/api/Cuentas-de-Ahorro/Obtener/ObtenerEvoluciondeSaldos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Cuentas-de-Ahorro/Obtener/ObtenerProductos.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Cuentas-Vista",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Beneficiarios",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Beneficiarios",
+            "url": "/api/Cuentas-Vista/Beneficiarios/ActualizarBeneficiarios.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Beneficiarios",
+            "url": "/api/Cuentas-Vista/Beneficiarios/ObtenerBeneficiarios.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Documentos-Digitales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Documento Digital",
+            "url": "/api/Cuentas-Vista/Documentos-Digitales/ActualizarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Documento Digital",
+            "url": "/api/Cuentas-Vista/Documentos-Digitales/AsociarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Digital",
+            "url": "/api/Cuentas-Vista/Documentos-Digitales/EliminarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documento Digital",
+            "url": "/api/Cuentas-Vista/Documentos-Digitales/ObtenerDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Digitales",
+            "url": "/api/Cuentas-Vista/Documentos-Digitales/ObtenerDocumentosDigitales.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Bolsillos",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerBolsillos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener CBU de Cuenta Vista",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerCBUdeCuentaVista.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuenta Vista de CBU",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerCuentaVistadeCBU.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle Bloqueo",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerDetalleBloqueo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estado de Cuenta por Período",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerEstadodeCuentaporPeriodo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estado De Operación",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerEstadoDeOperacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Facultades",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerFacultades.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Paquete",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerPaquete.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Período de Acreditación",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerPeriododeAcreditacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Períodos de Acreditación",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerPeriodosdeAcreditacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Saldo Bloqueado",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerSaldoBloqueado.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Saldo Disponible",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerSaldoDisponible.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Saldos Bloqueados",
+            "url": "/api/Cuentas-Vista/Obtener/ObtenerSaldosBloqueados.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Operar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Acreditar en Cuenta",
+            "url": "/api/Cuentas-Vista/Operar/AcreditarEnCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Activar",
+            "url": "/api/Cuentas-Vista/Operar/Activar.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Período de Acreditación",
+            "url": "/api/Cuentas-Vista/Operar/ActualizarPeriododeAcreditacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Bloquear Saldo",
+            "url": "/api/Cuentas-Vista/Operar/BloquearSaldo.component"
+          },
+          {
+            "type": "file",
+            "name": "Cancelar",
+            "url": "/api/Cuentas-Vista/Operar/Cancelar.component"
+          },
+          {
+            "type": "file",
+            "name": "Debitar en Cuenta",
+            "url": "/api/Cuentas-Vista/Operar/DebitarEnCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Desbloquear Saldo",
+            "url": "/api/Cuentas-Vista/Operar/DesbloquearSaldo.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Perfil-Transaccional",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Perfil Transaccional",
+            "url": "/api/Cuentas-Vista/Perfil-Transaccional/ActualizarPerfilTransaccional.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Perfil Transaccional",
+            "url": "/api/Cuentas-Vista/Perfil-Transaccional/AgregarPerfilTransaccional.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Perfil Transaccional",
+            "url": "/api/Cuentas-Vista/Perfil-Transaccional/ObtenerPerfilTransaccional.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Traspasar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Traspasar con Tipo de Cambio Especial",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarConTipoDeCambioEspecial.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas de la Misma Persona",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasdelaMismaPersona.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitularcontipodecambio.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Mismo Titular (diferentes monedas)",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitulardiferentesmonedas.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Propias",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropias.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Propias (con tipo de cambio)",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiascontipodecambio.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Propias (diferentes monedas)",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasPropiasdiferentesmonedas.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Terceros",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceros.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Terceros (con tipo de cambio)",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceroscontipodecambio.component"
+          },
+          {
+            "type": "file",
+            "name": "Traspasar Entre Cuentas Terceros (diferentes monedas)",
+            "url": "/api/Cuentas-Vista/Traspasar/TraspasarEntreCuentasTercerosdiferentesmonedas.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Depósitos-a-Plazo",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Beneficiarios",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Beneficiarios",
+            "url": "/api/Depósitos-a-Plazo/Beneficiarios/ActualizarBeneficiarios.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Beneficiarios",
+            "url": "/api/Depósitos-a-Plazo/Beneficiarios/ObtenerBeneficiarios.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Contratar",
+            "url": "/api/Depósitos-a-Plazo/Contratar/Contratar.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar con Facultades",
+            "url": "/api/Depósitos-a-Plazo/Contratar/ContratarConFacultades.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Simulación",
+            "url": "/api/Depósitos-a-Plazo/Contratar/ContratarSimulacion.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Documentos-Digitales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Documento Digital",
+            "url": "/api/Depósitos-a-Plazo/Documentos-Digitales/ActualizarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Documento Digital",
+            "url": "/api/Depósitos-a-Plazo/Documentos-Digitales/AsociarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Digital",
+            "url": "/api/Depósitos-a-Plazo/Documentos-Digitales/EliminarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documento Digital",
+            "url": "/api/Depósitos-a-Plazo/Documentos-Digitales/ObtenerDocumentoDigital.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Modificar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Modificar Cuenta Destino al Vencimiento",
+            "url": "/api/Depósitos-a-Plazo/Modificar/ModificarCuentaDestinoalVencimiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Cuenta Destino de Acreditación Periódica",
+            "url": "/api/Depósitos-a-Plazo/Modificar/ModificarCuentaDestinodeAcreditacionPeriodica.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Instrucción",
+            "url": "/api/Depósitos-a-Plazo/Modificar/ModificarInstruccion.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Avance",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerAvance.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerDatos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos de Precancelación",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerDatosPrecancelacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Digitales",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerDocumentosDigitales.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Instrucción",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerInstruccion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Instrucciones Habilitados",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerInstruccionesHabilitados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Movimientos",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerMovimientos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Períodos Habilitados",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerPeriodosHabilitados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerProductos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos Habilitados",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerProductosHabilitados.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tasa de Precancelación",
+            "url": "/api/Depósitos-a-Plazo/Obtener/ObtenerTasadePrecancelacion.component"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "Precancelar",
+        "url": "/api/Depósitos-a-Plazo/Precancelar.component"
+      },
+      {
+        "type": "folder",
+        "name": "Simular",
+        "children": [
+          {
+            "type": "file",
+            "name": "Simular",
+            "url": "/api/Depósitos-a-Plazo/Simular/Simular.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Con Cronograma",
+            "url": "/api/Depósitos-a-Plazo/Simular/SimularConCronograma.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Descuento-de-Documentos",
+    "children": [
+      {
+        "type": "file",
+        "name": "Confirmar Lista",
+        "url": "/api/Descuento-de-Documentos/ConfirmarLista.component"
+      },
+      {
+        "type": "file",
+        "name": "Crear Lista",
+        "url": "/api/Descuento-de-Documentos/CrearLista.component"
+      },
+      {
+        "type": "file",
+        "name": "Crear Lista Cheques",
+        "url": "/api/Descuento-de-Documentos/CrearListaCheques.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Productos",
+        "url": "/api/Descuento-de-Documentos/ObtenerProductos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Tipos de Desembolso",
+        "url": "/api/Descuento-de-Documentos/ObtenerTiposDeDesembolso.component"
+      },
+      {
+        "type": "file",
+        "name": "Seleccionar Opción Desembolso",
+        "url": "/api/Descuento-de-Documentos/SeleccionarOpcionDesembolso.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Indicadores",
+    "children": [
+      {
+        "type": "file",
+        "name": "Obtener Agrupadores",
+        "url": "/api/Indicadores/ObtenerAgrupadores.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Cierre de Saldos por Moneda",
+        "url": "/api/Indicadores/ObtenerCierredeSaldosporMoneda.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Condiciones Generales",
+        "url": "/api/Indicadores/ObtenerCondicionesGenerales.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Indicadores",
+        "url": "/api/Indicadores/ObtenerIndicadores.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Métodos Más Ejecutados",
+        "url": "/api/Indicadores/ObtenerMetodosMasEjecutados.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Monedas Indices",
+        "url": "/api/Indicadores/ObtenerMonedasIndices.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Rubros Bolsa",
+        "url": "/api/Indicadores/ObtenerRubrosBolsa.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Servicios Más Ejecutados",
+        "url": "/api/Indicadores/ObtenerServiciosMasEjecutados.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Sesiones Por Usuario",
+        "url": "/api/Indicadores/ObtenerSesionesPorUsuario.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Sucursales Cajas",
+        "url": "/api/Indicadores/ObtenerSucursalesCajas.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Transacciones por Estados",
+        "url": "/api/Indicadores/ObtenerTransaccionesporEstados.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Microfinanzas",
+    "children": [
+      {
+        "type": "file",
+        "name": "Buscar Cliente",
+        "url": "/api/Microfinanzas/BuscarCliente.component"
+      },
+      {
+        "type": "file",
+        "name": "Completar Tarea",
+        "url": "/api/Microfinanzas/CompletarTarea.component"
+      },
+      {
+        "type": "folder",
+        "name": "Crear-Solicitud",
+        "children": [
+          {
+            "type": "file",
+            "name": "Crear Solicitud Ampliación",
+            "url": "/api/Microfinanzas/Crear-Solicitud/CrearSolicitudAmpliacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Solicitud Individual",
+            "url": "/api/Microfinanzas/Crear-Solicitud/CrearSolicitudIndividual.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Solicitud Renovación",
+            "url": "/api/Microfinanzas/Crear-Solicitud/CrearSolicitudRenovacion.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Fiadores",
+        "children": [
+          {
+            "type": "file",
+            "name": "Agregar Fiador",
+            "url": "/api/Microfinanzas/Fiadores/AgregarFiador.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Fiador",
+            "url": "/api/Microfinanzas/Fiadores/EliminarFiador.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Grupales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Grupo",
+            "url": "/api/Microfinanzas/Grupales/ActualizarGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Integrante de Grupo",
+            "url": "/api/Microfinanzas/Grupales/ActualizarIntegrantedeGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Grupo",
+            "url": "/api/Microfinanzas/Grupales/AgregarGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Integrante a Grupo",
+            "url": "/api/Microfinanzas/Grupales/AgregarIntegranteaGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Solicitud Grupal",
+            "url": "/api/Microfinanzas/Grupales/CrearSolicitudGrupal.component"
+          },
+          {
+            "type": "file",
+            "name": "Habilitar Integrante de Grupo",
+            "url": "/api/Microfinanzas/Grupales/HabilitarIntegrantedeunGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Inhabilitar Integrante de Grupo",
+            "url": "/api/Microfinanzas/Grupales/InhabilitarIntegrantedeunGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle Grupo",
+            "url": "/api/Microfinanzas/Grupales/ObtenerDetalleGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Grupos",
+            "url": "/api/Microfinanzas/Grupales/ObtenerGrupos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Integrantes de Grupo",
+            "url": "/api/Microfinanzas/Grupales/ObtenerIntegrantesdeGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Grupo",
+            "url": "/api/Microfinanzas/Grupales/ObtenerTiposdeGrupo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Integrante",
+            "url": "/api/Microfinanzas/Grupales/ObtenerTiposdeIntegrante.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Amortizable Grupal",
+            "url": "/api/Microfinanzas/Grupales/SimularPrestamoAmortizableGrupal.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Asesores",
+            "url": "/api/Microfinanzas/Obtener/ObtenerAsesores.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Campañas",
+            "url": "/api/Microfinanzas/Obtener/ObtenerCampanas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Destinos Crédito",
+            "url": "/api/Microfinanzas/Obtener/ObtenerDestinosCredito.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Operaciones Cliente",
+            "url": "/api/Microfinanzas/Obtener/ObtenerOperacionesCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Orígenes de Captación",
+            "url": "/api/Microfinanzas/Obtener/ObtenerOrigenesdeCaptacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Microfinanzas/Obtener/ObtenerProductos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Solicitudes Cliente",
+            "url": "/api/Microfinanzas/Obtener/ObtenerSolicitudesCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos Aval",
+            "url": "/api/Microfinanzas/Obtener/ObtenerTiposAval.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Operaciones-a-Cancelar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Agregar Operaciones a Cancelar",
+            "url": "/api/Microfinanzas/Operaciones-a-Cancelar/AgregarOperacionesaCancelar.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Operaciones a Cancelar",
+            "url": "/api/Microfinanzas/Operaciones-a-Cancelar/ObtenerOperacionesaCancelar.component"
+          },
+          {
+            "type": "file",
+            "name": "Quitar Operaciones a Cancelar",
+            "url": "/api/Microfinanzas/Operaciones-a-Cancelar/QuitarOperacionesaCancelar.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Simular",
+        "children": [
+          {
+            "type": "file",
+            "name": "Simular Libre Amortización",
+            "url": "/api/Microfinanzas/Simular/SimularLibreAmortizacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Amortizable",
+            "url": "/api/Microfinanzas/Simular/SimularPrestamoAmortizable.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Plazo Fijo",
+            "url": "/api/Microfinanzas/Simular/SimularPrestamoPlazoFijo.component"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "Validar Políticas",
+        "url": "/api/Microfinanzas/ValidarPoliticas.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Modelador-de-Préstamos",
+    "children": [
+      {
+        "type": "file",
+        "name": "Obtener Cantidad Cuotas",
+        "url": "/api/Modelador-de-Préstamos/ObtenerCantidadCuotas.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Capital",
+        "url": "/api/Modelador-de-Préstamos/ObtenerCapital.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Comisiones",
+        "url": "/api/Modelador-de-Préstamos/ObtenerComisiones.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Comisiones por Cuota",
+        "url": "/api/Modelador-de-Préstamos/ObtenerComisionesporCuota.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Días Primer Período",
+        "url": "/api/Modelador-de-Préstamos/ObtenerDiasPrimerPeriodo.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Período Entre Cuotas",
+        "url": "/api/Modelador-de-Préstamos/ObtenerPeriodoEntreCuotas.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Permite Seguros del Mismo Tipo",
+        "url": "/api/Modelador-de-Préstamos/ObtenerPermiteSegurosdelMismoTipo.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Plazo",
+        "url": "/api/Modelador-de-Préstamos/ObtenerPlazo.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Requiere Seguro de Vida Obligatorio",
+        "url": "/api/Modelador-de-Préstamos/ObtenerRequiereSegurodeVidaObligatorio.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Seguros",
+        "url": "/api/Modelador-de-Préstamos/ObtenerSeguros.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "PAE",
+    "children": [
+      {
+        "type": "file",
+        "name": "Obtener Items Modelo",
+        "url": "/api/PAE/ObtenerItemsModelo.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Modelos PAE",
+        "url": "/api/PAE/ObtenerModelosPAE.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Scores",
+        "url": "/api/PAE/ObtenerScores.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Tipos De Modelos",
+        "url": "/api/PAE/ObtenerTiposDeModelos.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Partners",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Contratar Préstamo",
+            "url": "/api/Partners/Contratar/ContratarPrestamo.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Vehicular",
+            "url": "/api/Partners/Contratar/ContratarVehicular.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Crear",
+        "children": [
+          {
+            "type": "file",
+            "name": "Crear Cliente",
+            "url": "/api/Partners/Crear/CrearCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Persona Cliente",
+            "url": "/api/Partners/Crear/CrearPersonaCliente.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Datos de Usuario",
+            "url": "/api/Partners/Obtener/ObtenerDatosdeUsuario.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Oferta Amortizable",
+            "url": "/api/Partners/Obtener/ObtenerDetalledeOfertaAmortizable.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Oferta Vehicular",
+            "url": "/api/Partners/Obtener/ObtenerDetalleOfertaVehicular.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Marcas",
+            "url": "/api/Partners/Obtener/ObtenerMarcas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Modelos",
+            "url": "/api/Partners/Obtener/ObtenerModelos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Partners",
+            "url": "/api/Partners/Obtener/ObtenerPartners.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos de Cliente",
+            "url": "/api/Partners/Obtener/ObtenerPrestamosdeCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Partners/Obtener/ObtenerProductos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos del Partner",
+            "url": "/api/Partners/Obtener/ObtenerProductosdelPartner.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Puntos de Venta",
+            "url": "/api/Partners/Obtener/ObtenerPuntosdeVenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Vendedores",
+            "url": "/api/Partners/Obtener/ObtenerVendedores.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Versiones",
+            "url": "/api/Partners/Obtener/ObtenerVersiones.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Simular",
+        "children": [
+          {
+            "type": "file",
+            "name": "Simular Ofertas",
+            "url": "/api/Partners/Simular/SimularOfertas.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ofertas Vehicular",
+            "url": "/api/Partners/Simular/SimularOfertasVehicular.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Préstamo",
+            "url": "/api/Partners/Simular/SimularPrestamo.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Vehicular",
+            "url": "/api/Partners/Simular/SimularVehicular.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Parámetros-Base",
+    "children": [
+      {
+        "type": "file",
+        "name": "Obtener Correlativo Guía",
+        "url": "/api/Parámetros-Base/ObtenerCorrelativoGuia.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Correlativo Guía Especial",
+        "url": "/api/Parámetros-Base/ObtenerCorrelativoGuiaEspecial.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Guía de Proceso",
+        "url": "/api/Parámetros-Base/ObtenerGuiadeProceso.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Guía Especial de Proceso",
+        "url": "/api/Parámetros-Base/ObtenerGuiaEspecialdeProceso.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Opción General de Proceso",
+        "url": "/api/Parámetros-Base/ObtenerOpcionGeneraldeProceso.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Opción General Por Módulo",
+        "url": "/api/Parámetros-Base/ObtenerOpcionGeneralPorModulo.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Programa Particular",
+        "url": "/api/Parámetros-Base/ObtenerProgramaParticular.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Personas",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Actualizar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar",
+            "url": "/api/Personas/Actualizar/Actualizar.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Celular",
+            "url": "/api/Personas/Actualizar/ActualizarCelular.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Contacto",
+            "url": "/api/Personas/Actualizar/ActualizarContacto.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Cónyuge",
+            "url": "/api/Personas/Actualizar/ActualizarConyuge.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Correo Electrónico",
+            "url": "/api/Personas/Actualizar/ActualizarCorreoElectronico.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Domicilio",
+            "url": "/api/Personas/Actualizar/ActualizarDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar FATCA",
+            "url": "/api/Personas/Actualizar/ActualizarFATCA.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Información Adicional",
+            "url": "/api/Personas/Actualizar/ActualizarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Información Financiera",
+            "url": "/api/Personas/Actualizar/ActualizarInformacionFinanciera.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Integrante de Persona Jurídica",
+            "url": "/api/Personas/Actualizar/ActualizarIntegrantedePersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Persona Jurídica",
+            "url": "/api/Personas/Actualizar/ActualizarPersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Profesión",
+            "url": "/api/Personas/Actualizar/ActualizarProfesion.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Referencia",
+            "url": "/api/Personas/Actualizar/ActualizarReferencia.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Registro Empleado",
+            "url": "/api/Personas/Actualizar/ActualizarRegistroEmpleado.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Teléfono",
+            "url": "/api/Personas/Actualizar/ActualizarTelefono.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Víctima Hecho Violento",
+            "url": "/api/Personas/Actualizar/ActualizarVictimaHechoViolento.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Documento Adicional",
+            "url": "/api/Personas/Actualizar/ModificarDocumentoAdicional.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Agregar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Agregar a Lista Negra",
+            "url": "/api/Personas/Agregar/AgregaraListaNegra.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Contacto",
+            "url": "/api/Personas/Agregar/AgregarContacto.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Correo Electrónico",
+            "url": "/api/Personas/Agregar/AgregarCorreoElectronico.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Datos PEP",
+            "url": "/api/Personas/Agregar/AgregarDatosPEP.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Documento Adicional",
+            "url": "/api/Personas/Agregar/AgregarDocumentoAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Domicilio",
+            "url": "/api/Personas/Agregar/AgregarDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Estado Financiero",
+            "url": "/api/Personas/Agregar/AgregarEstadoFinanciero.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar FATCA",
+            "url": "/api/Personas/Agregar/AgregarFATCA.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Información Adicional",
+            "url": "/api/Personas/Agregar/AgregarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Información Financiera",
+            "url": "/api/Personas/Agregar/AgregarInformacionFinanciera.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Integrante a Persona Jurídica",
+            "url": "/api/Personas/Agregar/AgregarIntegranteaPersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Persona Vinculada",
+            "url": "/api/Personas/Agregar/AgregarPersonaVinculada.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Referencia",
+            "url": "/api/Personas/Agregar/AgregarReferencia.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Teléfono",
+            "url": "/api/Personas/Agregar/AgregarTelefono.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Víctima Hecho Violento",
+            "url": "/api/Personas/Agregar/AgregarVictimaHechoViolento.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Crear",
+        "children": [
+          {
+            "type": "file",
+            "name": "Crear",
+            "url": "/api/Personas/Crear/Crear.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Cónyuge",
+            "url": "/api/Personas/Crear/CrearConyuge.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Persona Jurídica",
+            "url": "/api/Personas/Crear/CrearPersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Reducido",
+            "url": "/api/Personas/Crear/CrearReducido.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Documentos-Digitales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Documento Digital",
+            "url": "/api/Personas/Documentos-Digitales/ActualizarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Documento Digital",
+            "url": "/api/Personas/Documentos-Digitales/AsociarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Digital",
+            "url": "/api/Personas/Documentos-Digitales/EliminarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documento Digital",
+            "url": "/api/Personas/Documentos-Digitales/ObtenerDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Digitales",
+            "url": "/api/Personas/Documentos-Digitales/ObtenerDocumentosDigitales.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Eliminar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Eliminar Cónyuge",
+            "url": "/api/Personas/Eliminar/EliminarConyuge.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Adicional",
+            "url": "/api/Personas/Eliminar/EliminarDocumentoAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Domicilio",
+            "url": "/api/Personas/Eliminar/EliminarDomicilio.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Información Adicional",
+            "url": "/api/Personas/Eliminar/EliminarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Integrante de Persona Jurídica",
+            "url": "/api/Personas/Eliminar/EliminarIntegrantedePersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Persona Vinculada",
+            "url": "/api/Personas/Eliminar/EliminarPersonaVinculada.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Profesión",
+            "url": "/api/Personas/Eliminar/EliminarProfesion.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener",
+            "url": "/api/Personas/Obtener/Obtener.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Concepto",
+            "url": "/api/Personas/Obtener/ObtenerConcepto.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Contactos",
+            "url": "/api/Personas/Obtener/ObtenerContactos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cónyuge",
+            "url": "/api/Personas/Obtener/ObtenerConyuge.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Correos Electrónicos",
+            "url": "/api/Personas/Obtener/ObtenerCorreosElectronicos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Cliente",
+            "url": "/api/Personas/Obtener/ObtenerCuentasCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos PEP",
+            "url": "/api/Personas/Obtener/ObtenerDatosPEP.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Adicionales",
+            "url": "/api/Personas/Obtener/ObtenerDocumentosAdicionales.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Domicilios",
+            "url": "/api/Personas/Obtener/ObtenerDomicilios.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Estados Civiles",
+            "url": "/api/Personas/Obtener/ObtenerEstadosCiviles.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Facultades",
+            "url": "/api/Personas/Obtener/ObtenerFacultades.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener FATCA",
+            "url": "/api/Personas/Obtener/ObtenerFATCA.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Hobbies",
+            "url": "/api/Personas/Obtener/ObtenerHobbies.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Hobby",
+            "url": "/api/Personas/Obtener/ObtenerHobby.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Id Bantotal",
+            "url": "/api/Personas/Obtener/ObtenerIdBantotal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Identidades de Género",
+            "url": "/api/Personas/Obtener/ObtenerIdentidadesdeGenero.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Identificador Único",
+            "url": "/api/Personas/Obtener/ObtenerIdentificadorUnico.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Información Adicional",
+            "url": "/api/Personas/Obtener/ObtenerInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Información Financiera",
+            "url": "/api/Personas/Obtener/ObtenerInformacionFinanciera.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Integrantes Persona Jurídica",
+            "url": "/api/Personas/Obtener/ObtenerIntegrantesPersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Límites",
+            "url": "/api/Personas/Obtener/ObtenerLimites.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Naturalezas Jurídicas",
+            "url": "/api/Personas/Obtener/ObtenerNaturalezasJuridicas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Niveles Educativos",
+            "url": "/api/Personas/Obtener/ObtenerNivelesEducativos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Ocupaciones",
+            "url": "/api/Personas/Obtener/ObtenerOcupaciones.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Persona Jurídica",
+            "url": "/api/Personas/Obtener/ObtenerPersonaJuridica.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Personas",
+            "url": "/api/Personas/Obtener/ObtenerPersonas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Personas Jurídicas",
+            "url": "/api/Personas/Obtener/ObtenerPersonasJuridicas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Personas Vinculadas",
+            "url": "/api/Personas/Obtener/ObtenerPersonasVinculadas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Profesión",
+            "url": "/api/Personas/Obtener/ObtenerProfesion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Profesiones",
+            "url": "/api/Personas/Obtener/ObtenerProfesiones.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Referencias",
+            "url": "/api/Personas/Obtener/ObtenerReferencias.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tarjetas de Débito",
+            "url": "/api/Personas/Obtener/ObtenerTarjetasdeDebito.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Teléfonos",
+            "url": "/api/Personas/Obtener/ObtenerTelefonos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipo de Persona",
+            "url": "/api/Personas/Obtener/ObtenerTipodePersona.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Documento",
+            "url": "/api/Personas/Obtener/ObtenerTiposdeDocumento.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Funcionario Público",
+            "url": "/api/Personas/Obtener/ObtenerTiposDeFuncionarioPublico.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de PEP",
+            "url": "/api/Personas/Obtener/ObtenerTiposDePEP.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Titulares de Teléfono",
+            "url": "/api/Personas/Obtener/ObtenerTitularesDelTelefono.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Víctima Hecho Violento",
+            "url": "/api/Personas/Obtener/ObtenerVictimaHechoViolento.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Vínculos",
+            "url": "/api/Personas/Obtener/ObtenerVinculos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Vínculos de Afinidad",
+            "url": "/api/Personas/Obtener/ObtenerVinculosdeAfinidad.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Vínculos de Consanguinidad",
+            "url": "/api/Personas/Obtener/ObtenerVinculosdeConsanguinidad.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Vínculos Juridicos",
+            "url": "/api/Personas/Obtener/ObtenerVinculosJuridicos.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Validar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Evaluar PAE",
+            "url": "/api/Personas/Validar/EvaluarPAE.component"
+          },
+          {
+            "type": "file",
+            "name": "Validar Correo electrónico",
+            "url": "/api/Personas/Validar/ValidarCorreoElectronico.component"
+          },
+          {
+            "type": "file",
+            "name": "Validar Documento",
+            "url": "/api/Personas/Validar/ValidarDocumento.component"
+          },
+          {
+            "type": "file",
+            "name": "Validar en Listas Negras",
+            "url": "/api/Personas/Validar/ValidarenListasNegras.component"
+          },
+          {
+            "type": "file",
+            "name": "Validar Existencia",
+            "url": "/api/Personas/Validar/ValidarExistencia.component"
+          },
+          {
+            "type": "file",
+            "name": "Validar Listas Inhabilitados",
+            "url": "/api/Personas/Validar/ValidarListasInhabilitados.component"
+          },
+          {
+            "type": "file",
+            "name": "Verificar Empleado",
+            "url": "/api/Personas/Validar/VerificarEmpleado.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Precios",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Convertir",
+        "children": [
+          {
+            "type": "file",
+            "name": "Convertir Tasa Anual Efectiva a Lineal",
+            "url": "/api/Precios/Convertir/ConvertirTasaAnualEfectivaaLineal.component"
+          },
+          {
+            "type": "file",
+            "name": "Convertir Tasa Anual Lineal a Efectiva",
+            "url": "/api/Precios/Convertir/ConvertirTasaAnualLinealaEfectiva.component"
+          },
+          {
+            "type": "file",
+            "name": "Convertir Tasa Mensual Efectiva a Lineal",
+            "url": "/api/Precios/Convertir/ConvertirTasaMensualEfectivaaLineal.component"
+          },
+          {
+            "type": "file",
+            "name": "Convertir Tasa Mensual Lineal a Efectiva",
+            "url": "/api/Precios/Convertir/ConvertirTasaMensualLinealaEfectiva.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Cotización",
+            "url": "/api/Precios/Obtener/ObtenerCotizacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cotización a Fecha",
+            "url": "/api/Precios/Obtener/ObtenerCotizacionaFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cotización Cierre",
+            "url": "/api/Precios/Obtener/ObtenerCotizacionCierre.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Pizarra Especial por Transacción",
+            "url": "/api/Precios/Obtener/ObtenerPizarraEspecialporTransaccion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Precio a Fecha",
+            "url": "/api/Precios/Obtener/ObtenerPrecioaFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Precio Especie",
+            "url": "/api/Precios/Obtener/ObtenerPrecioEspecie.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tasa de Operación",
+            "url": "/api/Precios/Obtener/ObtenerTasadeOperacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tasa Para Cliente",
+            "url": "/api/Precios/Obtener/ObtenerTasaParaCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tasa Para Producto",
+            "url": "/api/Precios/Obtener/ObtenerTasaParaProducto.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipo de Cambio",
+            "url": "/api/Precios/Obtener/ObtenerTipodeCambio.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Cambio Especiales",
+            "url": "/api/Precios/Obtener/ObtenerTiposDeCambioEspeciales.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Préstamos",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Cancelar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Cancelar",
+            "url": "/api/Préstamos/Cancelar/Cancelar.component"
+          },
+          {
+            "type": "file",
+            "name": "Cancelar a Fecha",
+            "url": "/api/Préstamos/Cancelar/CancelaraFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Cancelar a Fecha Terceros",
+            "url": "/api/Préstamos/Cancelar/CancelaraFechaTerceros.component"
+          },
+          {
+            "type": "file",
+            "name": "Cancelar Terceros",
+            "url": "/api/Préstamos/Cancelar/CancelarTerceros.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Contratar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Contratar",
+            "url": "/api/Préstamos/Contratar/Contratar.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Ampliación",
+            "url": "/api/Préstamos/Contratar/ContratarAmpliacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Refinanciación",
+            "url": "/api/Préstamos/Contratar/ContratarRefinanciacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Refinanciación por Deuda Total",
+            "url": "/api/Préstamos/Contratar/ContratarRefinanciacionporDeudaTotal.component"
+          },
+          {
+            "type": "file",
+            "name": "Contratar Refinanciación por Saldo Capital",
+            "url": "/api/Préstamos/Contratar/ContratarRefinanciacionporSaldoCapital.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Documentos-Digitales",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Documento Digital",
+            "url": "/api/Préstamos/Documentos-Digitales/ActualizarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Documento Digital",
+            "url": "/api/Préstamos/Documentos-Digitales/AsociarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Documento Digital",
+            "url": "/api/Préstamos/Documentos-Digitales/EliminarDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documento Digital",
+            "url": "/api/Préstamos/Documentos-Digitales/ObtenerDocumentoDigital.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Documentos Digitales",
+            "url": "/api/Préstamos/Documentos-Digitales/ObtenerDocumentosDigitales.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Cronograma",
+            "url": "/api/Préstamos/Obtener/ObtenerCronograma.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cronograma a Fecha",
+            "url": "/api/Préstamos/Obtener/ObtenerCronogramaaFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cronograma con Pagos a Fecha",
+            "url": "/api/Préstamos/Obtener/ObtenerCronogramaconPagosaFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cronograma en Especie",
+            "url": "/api/Préstamos/Obtener/ObtenerCronogramaenEspecie.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cronograma Original",
+            "url": "/api/Préstamos/Obtener/ObtenerCronogramaOriginal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas de Cobro",
+            "url": "/api/Préstamos/Obtener/ObtenerCuentadeCobro.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos del Próximo Vencimiento",
+            "url": "/api/Préstamos/Obtener/ObtenerDatosdelProximoVencimiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalle.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle a Fecha",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalleaFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Cancelación Total",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalledeCancelacionTotal.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Oferta",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalledeOferta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Oferta Amortizable",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalledeOfertaAmortizable.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Operaciones a Refinanciar",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalledeOperacionesaRefinanciar.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle de Préstamo Cancelado",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalledePrestamoCancelado.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle Pago Préstamo",
+            "url": "/api/Préstamos/Obtener/ObtenerDetallePagoPrestamo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle Reducido",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalleReducido.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Detalle Simulación",
+            "url": "/api/Préstamos/Obtener/ObtenerDetalleSimulacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Deuda",
+            "url": "/api/Préstamos/Obtener/ObtenerDeuda.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Deuda Préstamo Castigado",
+            "url": "/api/Préstamos/Obtener/ObtenerDeudaPrestamoCastigado.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Deuda Vencida",
+            "url": "/api/Préstamos/Obtener/ObtenerDeudaVencida.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fecha de Incumplimiento",
+            "url": "/api/Préstamos/Obtener/ObtenerFechadeIncumplimiento.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fecha de Último Pago",
+            "url": "/api/Préstamos/Obtener/ObtenerFechadeUltimoPago.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Fechas de Pago",
+            "url": "/api/Préstamos/Obtener/ObtenerFechasdePago.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Información Adicional",
+            "url": "/api/Préstamos/Obtener/ObtenerInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Monto de Cancelación",
+            "url": "/api/Préstamos/Obtener/ObtenerMontodeCancelacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Motivos de Precancelación",
+            "url": "/api/Préstamos/Obtener/ObtenerMotivosPrecancelacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Pagos de Cuota",
+            "url": "/api/Préstamos/Obtener/ObtenerPagosdeCuota.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Pagos de un Préstamo",
+            "url": "/api/Préstamos/Obtener/ObtenerPagosdeunPrestamo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos a Vencer",
+            "url": "/api/Préstamos/Obtener/ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos por Rango Mora",
+            "url": "/api/Préstamos/Obtener/ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Préstamos Sin Mora",
+            "url": "/api/Préstamos/Obtener/ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos",
+            "url": "/api/Préstamos/Obtener/ObtenerProductos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Productos Refinanciación",
+            "url": "/api/Préstamos/Obtener/ObtenerProductosRefinanciacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Refinanciación Simulada",
+            "url": "/api/Préstamos/Obtener/ObtenerRefinanciacionSimulada.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Operar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Abonar a Cuenta",
+            "url": "/api/Préstamos/Operar/AbonaraCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Información Adicional",
+            "url": "/api/Préstamos/Operar/ActualizarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Prestamos con Evento",
+            "url": "/api/Préstamos/Operar/ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Cuenta de Cobro",
+            "url": "/api/Préstamos/Operar/AgregarCuentadeCobro.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Información Adicional",
+            "url": "/api/Préstamos/Operar/AgregarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Cuenta de Cobro",
+            "url": "/api/Préstamos/Operar/EliminarCuentadeCobro.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Información Adicional",
+            "url": "/api/Préstamos/Operar/EliminarInformacionAdicional.component"
+          },
+          {
+            "type": "file",
+            "name": "Solicitar Precancelación",
+            "url": "/api/Préstamos/Operar/SolicitarPrecancelacion.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Pagar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Adelantar Capital Con Reducción De Cuota",
+            "url": "/api/Préstamos/Pagar/AdelantarCapitalConReduccionDeCuota.component"
+          },
+          {
+            "type": "file",
+            "name": "Adelantar Capital Con Reducción De Plazo",
+            "url": "/api/Préstamos/Pagar/AdelantarCapitalConReduccionDePlazo.component"
+          },
+          {
+            "type": "file",
+            "name": "Pagar Cuota",
+            "url": "/api/Préstamos/Pagar/PagarCuota.component"
+          },
+          {
+            "type": "file",
+            "name": "Pagar Cuota a Fecha",
+            "url": "/api/Préstamos/Pagar/PagarCuotaaFecha.component"
+          },
+          {
+            "type": "file",
+            "name": "Pagar Cuota a Fecha Terceros",
+            "url": "/api/Préstamos/Pagar/PagarCuotaaFechaTerceros.component"
+          },
+          {
+            "type": "file",
+            "name": "Pagar Cuota Terceros",
+            "url": "/api/Préstamos/Pagar/PagarCuotaTerceros.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Simular",
+        "children": [
+          {
+            "type": "file",
+            "name": "Resimular Amortizable",
+            "url": "/api/Préstamos/Simular/ResimularAmortizable.component"
+          },
+          {
+            "type": "file",
+            "name": "Resimular Ampliación",
+            "url": "/api/Préstamos/Simular/ResimularAmpliacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Resimular Refinanciación",
+            "url": "/api/Préstamos/Simular/ResimularRefinanciacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular",
+            "url": "/api/Préstamos/Simular/Simular.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Amortizable",
+            "url": "/api/Préstamos/Simular/SimularAmortizable.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Amortizable Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularAmortizableSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ampliación",
+            "url": "/api/Préstamos/Simular/SimularAmpliacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ampliación Ingresando Seguros",
+            "url": "/api/Préstamos/Simular/SimularAmpliacionIngresandoSeguros.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Despejando Capital y Cantidad de Cuotas",
+            "url": "/api/Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotas.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Despejando Capital y Cantidad de Cuotas Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularDespejandoCapitalyCantidaddeCuotasSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas",
+            "url": "/api/Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotas.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Despejando Fecha de Vencimiento y Tasa",
+            "url": "/api/Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasa.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Despejando Fecha de Vencimiento y Tasa Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularDespejandoFechadeVencimientoyTasaSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ingresando Balloon",
+            "url": "/api/Préstamos/Simular/SimularIngresandoBalloon.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ingresando Balloon Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularIngresandoBalloonSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ingresando Seguros",
+            "url": "/api/Préstamos/Simular/SimularIngresandoSeguros.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ingresando Seguros Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularIngresandoSegurosSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Libre Amortización",
+            "url": "/api/Préstamos/Simular/SimularLibreAmortizacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Libre Amortización Sin Cliente",
+            "url": "/api/Préstamos/Simular/SimularLibreAmortizacionSinCliente.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Ofertas",
+            "url": "/api/Préstamos/Simular/SimularOfertas.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Plazo Fijo",
+            "url": "/api/Préstamos/Simular/SimularPlazoFijo.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Refinanciación",
+            "url": "/api/Préstamos/Simular/SimularRefinanciacion.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Refinanciación por Deuda Total",
+            "url": "/api/Préstamos/Simular/SimularRefinanciacionporDeudaTotal.component"
+          },
+          {
+            "type": "file",
+            "name": "Simular Refinanciación por Saldo Capital",
+            "url": "/api/Préstamos/Simular/SimularRefinanciacionporSaldoCapital.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Textos",
+        "children": [
+          {
+            "type": "file",
+            "name": "Actualizar Textos",
+            "url": "/api/Préstamos/Textos/ActualizarTextos.component"
+          },
+          {
+            "type": "file",
+            "name": "Agregar Textos",
+            "url": "/api/Préstamos/Textos/AgregarTextos.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Textos",
+            "url": "/api/Préstamos/Textos/EliminarTextos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Textos",
+            "url": "/api/Préstamos/Textos/ObtenerTextos.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Reglas-de-Negocio",
+    "children": [
+      {
+        "type": "file",
+        "name": "Evaluar Regla de Negocio",
+        "url": "/api/Reglas-de-Negocio/EvaluarRegladeNegocio.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Reglas de Negocio",
+        "url": "/api/Reglas-de-Negocio/ObtenerReglasdeNegocio.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Variables Regla",
+        "url": "/api/Reglas-de-Negocio/ObtenerVariablesRegla.component"
+      },
+      {
+        "type": "file",
+        "name": "Validar Datos Regla de Negocio",
+        "url": "/api/Reglas-de-Negocio/ValidarDatosRegladeNegocio.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Seguridad",
+    "children": [
+      {
+        "type": "file",
+        "name": "Autorizar Excepción",
+        "url": "/api/Seguridad/AutorizarExcepcion.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Detalle de Excepción",
+        "url": "/api/Seguridad/ObtenerDetalledeExcepcion.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Excepciones",
+        "url": "/api/Seguridad/ObtenerExcepciones.component"
+      },
+      {
+        "type": "file",
+        "name": "Rechazar Excepción",
+        "url": "/api/Seguridad/RechazarExcepcion.component"
+      },
+      {
+        "type": "file",
+        "name": "Registrar Dispositivo",
+        "url": "/api/Seguridad/RegistrarDispositivo.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Seguros-Voluntarios",
+    "children": [
+      {
+        "type": "file",
+        "name": "Contratar Seguro",
+        "url": "/api/Seguros-Voluntarios/ContratarSeguro.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Montos de Seguro",
+        "url": "/api/Seguros-Voluntarios/ObtenerMontosDeUnSeguro.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Seguros",
+        "url": "/api/Seguros-Voluntarios/ObtenerSeguros.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Seguros a Pagar",
+        "url": "/api/Seguros-Voluntarios/ObtenerSegurosAPagar.component"
+      },
+      {
+        "type": "file",
+        "name": "Pagar Seguro",
+        "url": "/api/Seguros-Voluntarios/PagarSeguro.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Tarjetas-de-Débito",
+    "children": [
+      {
+        "type": "folder",
+        "name": "Obtener",
+        "children": [
+          {
+            "type": "file",
+            "name": "Obtener Códigos de Límites",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerCodigosdeLimites.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuenta Preferencial",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerCuentaPreferencial.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas a Asociar",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerCuentasaAsociar.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Asociadas",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadas.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Cuentas Asociadas Por Tipo",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerCuentasAsociadasPorTipo.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerDatos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Datos de Contacto",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerDatosContacto.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Identificador Único",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerIdentificadorUnico.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Límites",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerLimites.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Movimientos",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerMovimientos.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tarjeta",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerTarjeta.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tarjeta Habiente",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerTarjetaHabiente.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tarjetas Adicionales",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerTarjetasAdicionales.component"
+          },
+          {
+            "type": "file",
+            "name": "Obtener Tipos de Cuenta",
+            "url": "/api/Tarjetas-de-Débito/Obtener/ObtenerTiposdeCuenta.component"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "name": "Operar",
+        "children": [
+          {
+            "type": "file",
+            "name": "Activar",
+            "url": "/api/Tarjetas-de-Débito/Operar/Activar.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Cuenta Preferencial",
+            "url": "/api/Tarjetas-de-Débito/Operar/ActualizarCuentaPreferencial.component"
+          },
+          {
+            "type": "file",
+            "name": "Actualizar Datos de Contacto",
+            "url": "/api/Tarjetas-de-Débito/Operar/ActualizarDatosContacto.component"
+          },
+          {
+            "type": "file",
+            "name": "Asociar Cuenta",
+            "url": "/api/Tarjetas-de-Débito/Operar/AsociarCuenta.component"
+          },
+          {
+            "type": "file",
+            "name": "Blanquear PIN",
+            "url": "/api/Tarjetas-de-Débito/Operar/BlanquearPin.component"
+          },
+          {
+            "type": "file",
+            "name": "Bloquear",
+            "url": "/api/Tarjetas-de-Débito/Operar/Bloquear.component"
+          },
+          {
+            "type": "file",
+            "name": "Bloquear Desde RED",
+            "url": "/api/Tarjetas-de-Débito/Operar/BloquearDesdeRED.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear",
+            "url": "/api/Tarjetas-de-Débito/Operar/Crear.component"
+          },
+          {
+            "type": "file",
+            "name": "Crear Con Cuentas Asociadas",
+            "url": "/api/Tarjetas-de-Débito/Operar/CrearConCuentasAsociadas.component"
+          },
+          {
+            "type": "file",
+            "name": "Denunciar",
+            "url": "/api/Tarjetas-de-Débito/Operar/Denunciar.component"
+          },
+          {
+            "type": "file",
+            "name": "Denunciar Desde RED",
+            "url": "/api/Tarjetas-de-Débito/Operar/DenunciarDesdeRED.component"
+          },
+          {
+            "type": "file",
+            "name": "Desbloquear",
+            "url": "/api/Tarjetas-de-Débito/Operar/Desbloquear.component"
+          },
+          {
+            "type": "file",
+            "name": "Desbloquear Desde RED",
+            "url": "/api/Tarjetas-de-Débito/Operar/DesbloquearDesdeRED.component"
+          },
+          {
+            "type": "file",
+            "name": "Eliminar Cuenta Asociada",
+            "url": "/api/Tarjetas-de-Débito/Operar/EliminarCuentaAsociada.component"
+          },
+          {
+            "type": "file",
+            "name": "Modificar Límite",
+            "url": "/api/Tarjetas-de-Débito/Operar/ModificarLimite.component"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Títulos",
+    "children": [
+      {
+        "type": "file",
+        "name": "Comprar",
+        "url": "/api/Títulos/Comprar.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Estado de Compra",
+        "url": "/api/Títulos/ObtenerEstadoCompra.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Grupos",
+        "url": "/api/Títulos/ObtenerGrupos.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Valores",
+        "url": "/api/Títulos/ObtenerValores.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Usuarios",
+    "children": [
+      {
+        "type": "file",
+        "name": "Agregar Perfil",
+        "url": "/api/Usuarios/AgregarPerfil.component"
+      },
+      {
+        "type": "file",
+        "name": "Crear",
+        "url": "/api/Usuarios/Crear.component"
+      },
+      {
+        "type": "file",
+        "name": "Eliminar Perfil",
+        "url": "/api/Usuarios/EliminarPerfil.component"
+      },
+      {
+        "type": "file",
+        "name": "Eliminar Usuario",
+        "url": "/api/Usuarios/EliminarUsuario.component"
+      },
+      {
+        "type": "file",
+        "name": "Habilitar en Canal",
+        "url": "/api/Usuarios/HabilitarEnCanal.component"
+      },
+      {
+        "type": "file",
+        "name": "Habilitar Usuario",
+        "url": "/api/Usuarios/HabilitarUsuario.component"
+      },
+      {
+        "type": "file",
+        "name": "Inhabilitar Usuario",
+        "url": "/api/Usuarios/InhabilitarUsuario.component"
+      },
+      {
+        "type": "file",
+        "name": "Modificar",
+        "url": "/api/Usuarios/Modificar.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener",
+        "url": "/api/Usuarios/Obtener.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Perfiles",
+        "url": "/api/Usuarios/ObtenerPerfiles.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Usuarios",
+        "url": "/api/Usuarios/ObtenerUsuarios.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Usuarios Para Perfil",
+        "url": "/api/Usuarios/ObtenerUsuariosParaPerfil.component"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "Workflow",
+    "children": [
+      {
+        "type": "file",
+        "name": "Obtener Metadata De Tarea",
+        "url": "/api/Workflow/ObtenerMetadataDeTarea.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Procesos Habilitados",
+        "url": "/api/Workflow/ObtenerProcesosHabilitados.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Roles",
+        "url": "/api/Workflow/ObtenerRoles.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Roles de Tarea",
+        "url": "/api/Workflow/ObtenerRolesdeTarea.component"
+      },
+      {
+        "type": "file",
+        "name": "Obtener Tareas de Proceso",
+        "url": "/api/Workflow/ObtenerTareasdeProceso.component"
+      }
+    ]
+  }
+]

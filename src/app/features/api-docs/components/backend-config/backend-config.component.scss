@@ -1,5 +1,5 @@
 $primary-color:   #c62828;
-$text-main:       #333;
+$text-color:       #333;
 $background-light: #fdfdfe;
 $grey-header:     #e0e0e0;
 $shadow-light:    rgba(0, 0, 0, .15);
@@ -11,7 +11,7 @@ $margin:          3rem 14rem;
 * {
   letter-spacing: 0.01em !important;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  color: $text-main !important;
+  color: $text-color !important;
   line-height: 1.5 !important;
 }
 
@@ -39,7 +39,7 @@ $margin:          3rem 14rem;
     display: inline-block;
     font-size: 1.25rem;
     margin: 0;
-    color: $text-main;
+    color: $text-color;
   }
 
   pre {

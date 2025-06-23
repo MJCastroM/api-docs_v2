@@ -1,32 +1,66 @@
-/*
-  chat-popup.component.scss
-*/
-.chat-logo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-image: url('/assets/image/favicon.ico');
-  background-size: cover;
+@import 'variables';
+
+.chat-bubble {
+  position: fixed !important;
+  bottom: 1.5rem;
+  inset-inline-end: 2rem;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  border-width: 0;
   border-radius: 50%;
+  background: $red-1;
+  color: var(--chatAPI-color);
+  box-shadow: 10px 10px 10px 5px $shadow-light;
   cursor: pointer;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.chat-img {
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .chat-popup {
+  padding: 0.5rem;
+  font-family: $font-family;
   position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: 320px;
+  bottom: 7rem;
+  right: 1.5rem;
+  width: 30rem;
   max-height: 75vh;
-  background: var(--warning-bg-color);
-  border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  background: $background-light;
+  border-radius: $border-radius;
+  //border: solid 4px #7f7f80;
+  box-shadow: 0 0 20px rgba(0,0,0,1);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  z-index: 1000;
+  z-index: 10;
+  cursor: default;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -9px; // Hace que sobresalga
+    right: 32px;
+    width: 18px;
+    height: 18px;
+    background: $background-light;
+    //border-right: solid 4px $red-1;
+    //border-bottom: solid 4px $red-1;
+    transform: rotate(45deg);
+    z-index: 0;
+    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.25);
+  }
 }
+
+
 .clear-history-button {
   position: absolute;
   top: 10px;
@@ -51,14 +85,32 @@
   max-width: 80%;
 }
 .user-message {
-  background: #edd6d7;
-  color: #C3261F;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: #edd6d7;
+  color: #c3261f;
   align-self: flex-end;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px 20px 0 / 20px 20px 0px;
+  float: right;
+  clear: both;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .bot-message {
-  background: var(--bg-color-secondary);
-  color: var(--text-color);
+  background-color: $chat-grey;
+  color: $text-color;
   align-self: flex-start;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px 20px 20px 0 / 20px 20px 20px 0px;
+  float: left;
+  clear: both;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1.5;
 }
 .chat-input {
   display: flex;
@@ -67,9 +119,12 @@
 }
 .chat-input input {
   flex: 1;
-  padding: 0.5rem;
+  padding: 1rem;
+  border: $chat-grey;
   border-radius: 1rem;
-  border: 1px solid var(--bg-color-secondary);
+  outline: none;
+  background-color: $chat-grey;
+  font-size: 1rem;
 }
 .chat-input button {
   margin-left: 0.5rem;
@@ -78,4 +133,11 @@
   border: none;
   background: #C3261F;
   color: #fff;
+  cursor: pointer;
+  position: relative; // Obligatorio para que z-index funcione
+  z-index: 10; // Más alto que la punta
+
+  &:hover {
+    background-color: darken($red-1, 10%);
+  }
 }

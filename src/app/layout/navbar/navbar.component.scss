@@ -1,0 +1,26 @@
+@import 'variables';
+
+.navbar {
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  box-shadow: 0 8px 15px (rgba(0, 0, 0, .15));
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 175;
+  height: $navbar-height;
+  background-color: $background-color;
+}
+
+.logo {
+    vertical-align: middle;
+    height: calc( 3.25rem - .5rem);
+    margin-inline-end: .8rem;
+    margin-left: -1rem;
+}

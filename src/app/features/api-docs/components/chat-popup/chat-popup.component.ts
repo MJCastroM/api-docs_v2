@@ -2,7 +2,8 @@
   chat-popup.component.ts
 */
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { ChatService } from '../../../services/chat.service';
+import { ChatService } from '../../../../core/services/chat.service';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 interface Message { text: string; isUser: boolean; }
 interface ChatEntry { role: string; content: string; }
@@ -10,7 +11,18 @@ interface ChatEntry { role: string; content: string; }
 @Component({
   selector: 'app-chat-popup',
   templateUrl: './chat-popup.component.html',
-  styleUrls: ['./chat-popup.component.scss']
+  styleUrls: ['./chat-popup.component.scss'],
+  animations: [
+    trigger('fadeSlide', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(20px)' }),
+        animate('300ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({ opacity: 0, transform: 'translateY(20px)' }))
+      ])
+    ])
+  ]
 })
 export class ChatPopupComponent implements OnInit, AfterViewInit {
   showChat = false;

@@ -13,7 +13,6 @@ import { MatButtonModule }    from '@angular/material/button';
 import { PrismHighlightDirective }     from './prism-highlight.directive';
 import { ApiDocsRoutingModule } from './api-doc-page/api-docs-routing.module';
 
-import { SidebarComponent }        from './components/sidebar/sidebar.component';
 import { PageHeaderComponent }     from './components/page-header/page-header.component';
 import { InfoCardComponent }       from './components/info-card/info-card.component';
 import { BackendConfigComponent }  from './components/backend-config/backend-config.component';
@@ -25,7 +24,7 @@ import { FooterSpaceComponent } from './components/footer-space/footer-space.com
 import { FormsModule }    from '@angular/forms';            // ← importa FormsModule
 import { ChatPopupComponent } from './components/chat-popup/chat-popup.component';
 import { SearchComponent } from './components/search/search.component';
-import { SearchService } from '../services/search.service';
+import { SearchService } from '../../core/services/search.service';
 import { HttpClientModule } from '@angular/common/http';  // ← aquí
 
 import { SharedModule } from '../../shared/shared.module';
@@ -718,7 +717,6 @@ import { ObtenerTareasdeProcesoComponent1750446219042 } from './api-doc-page/Wor
 
 @NgModule({
   declarations: [
-    SearchComponent,
     ChatPopupComponent,
     //declarations Page components
     ContratarSimulacionComponent1750446218029,
@@ -1408,14 +1406,13 @@ import { ObtenerTareasdeProcesoComponent1750446219042 } from './api-doc-page/Wor
     ChatPopupComponent,
     FooterSpaceComponent,
     CodeExampleComponent,
-    SidebarComponent,
     PageHeaderComponent,
     InfoCardComponent,
     BackendConfigComponent,
     ApiTabsComponent,
     ApiTableComponent,
     PrismHighlightDirective,
-    StructuredDataComponent    
+    StructuredDataComponent
   ],
   imports: [
     HttpClientModule,
@@ -2119,9 +2116,8 @@ import { ObtenerTareasdeProcesoComponent1750446219042 } from './api-doc-page/Wor
     ObtenerRolesdeTareaComponent1750446219041,
     ObtenerTareasdeProcesoComponent1750446219042,
     //exports End page components
-    SidebarComponent    // exporta sólo lo que necesites fuera del módulo
   ],
-  
+
   providers: [SearchService],
 })
 export class ApiDocsModule {}

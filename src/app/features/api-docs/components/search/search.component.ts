@@ -1,61 +1,47 @@
-// src/app/features/tu-carpeta/search/search.component.ts
-import { Component } from '@angular/core';
-import { SearchService, SearchResult } from '../../../services/search.service';
+import { Component, HostListener, ElementRef } from '@angular/core';
+import { SearchService, SearchResult } from 'src/app/core/services/search.service';
 
 @Component({
   selector: 'app-search',
-  template: `
-    <div>
-      <input
-        type="text"
-        [(ngModel)]="query"
-        placeholder="Buscar..."
-      />
-      <button (click)="search()">Buscar</button>
-
-      <ul *ngIf="results.length">
-        <li *ngFor="let r of results">
-          <!-- Enlace clickeable -->
-          <a [href]="r.url" target="_blank">{{ r.url }}</a>
-          <!-- Snippet de contexto -->
-          <p class="snippet">{{ r.snippet }}</p>
-        </li>
-      </ul>
-
-      <p *ngIf="searchDone && !results.length">
-        No se encontraron resultados.
-      </p>
-    </div>
-  `,
-  styles: [`
-    .snippet {
-      margin: 0.25em 0 1em;
-      font-style: italic;
-      color: #666;
-    }
-    li {
-      margin-bottom: 1em;
-    }
-  `]
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
   query = '';
   results: SearchResult[] = [];
   searchDone = false;
 
-  constructor(private searchService: SearchService) {}
+  constructor(
+    private searchService: SearchService,
+    private elRef: ElementRef
+  ) {}
 
   search() {
-    this.searchDone = false;
-    this.results = [];
-
     if (!this.query.trim()) {
-      this.searchDone = true;
+      this.clearResults();
       return;
     }
 
-    // Ahora devuelve SearchResult[]
     this.results = this.searchService.search(this.query);
     this.searchDone = true;
+  }
+
+  clearResults() {
+    this.results = [];
+    this.searchDone = false;
+  }
+
+  // Cerrar al hacer clic fuera del componente
+  @HostListener('document:click', ['$event'])
+  handleClickOutside(event: MouseEvent) {
+    if (!this.elRef.nativeElement.contains(event.target)) {
+      this.clearResults();
+    }
+  }
+
+  // Cerrar al presionar Escape
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey() {
+    this.clearResults();
   }
 }
