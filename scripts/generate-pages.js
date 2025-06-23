@@ -90,55 +90,55 @@ export class ApiDocsRoutingModule {}
 fs.writeFileSync(ROUTES_OUT, routingModule, 'utf8');
 console.log(`✅  Rutas generadas en ${ROUTES_OUT}`);
 
-// 5) Generar sidebar.component.html
-function renderSidebar(node, parentPath = '') {
-  return Object.entries(node).flatMap(([key, val]) => {
-    if (val.__entry) {
-      // enlace hoja
-      var label = humanLabel(key);
-      // → NUEVO: link usando la ruta completa
-      var link  = '/' + (parentPath ? parentPath + '/' : '') + key;
-      return `    <a mat-list-item routerLink="${link}" routerLinkActive="active">${label}</a>`;
-    } else {
-      // grupo con children
-      var label = humanLabel(key);
-      var children = renderSidebar(val.__children, parentPath + (parentPath?'/':'') + key);
-      return [
-        `<mat-expansion-panel>`,
-        `  <mat-expansion-panel-header>`,
-        `    <mat-panel-title>${label}</mat-panel-title>`,
-        `  </mat-expansion-panel-header>`,
-        `  <mat-nav-list>`,
-        ...children,
-        `  </mat-nav-list>`,
-        `</mat-expansion-panel>`
-      ];
-    }
-  });
-}
+// // 5) Generar sidebar.component.html
+// function renderSidebar(node, parentPath = '') {
+//   return Object.entries(node).flatMap(([key, val]) => {
+//     if (val.__entry) {
+//       // enlace hoja
+//       var label = humanLabel(key);
+//       // → NUEVO: link usando la ruta completa
+//       var link  = '/' + (parentPath ? parentPath + '/' : '') + key;
+//       return `    <a mat-list-item routerLink="${link}" routerLinkActive="active">${label}</a>`;
+//     } else {
+//       // grupo con children
+//       var label = humanLabel(key);
+//       var children = renderSidebar(val.__children, parentPath + (parentPath?'/':'') + key);
+//       return [
+//         `<mat-expansion-panel>`,
+//         `  <mat-expansion-panel-header>`,
+//         `    <mat-panel-title>${label}</mat-panel-title>`,
+//         `  </mat-expansion-panel-header>`,
+//         `  <mat-nav-list>`,
+//         ...children,
+//         `  </mat-nav-list>`,
+//         `</mat-expansion-panel>`
+//       ];
+//     }
+//   });
+// }
 
-var tree = {};
-for (var e of entries) {
-  var folder = path.dirname(path.relative(FEATURE_DIR, e.filePath)).replace(/\\/g, '/');
-  var parts = folder === '' ? [] : folder.split('/');
-  let node = tree;
-  for (var part of parts) {
-    node[part] = node[part] || { __children: {} };
-    node = node[part].__children;
-  }
-  // → NUEVO: guardo la entry bajo su baseRoute (sin 'app-')
-  var baseRoute = e.routePath.split('/').pop();
-  node[baseRoute] = { __entry: e };
-}
+// var tree = {};
+// for (var e of entries) {
+//   var folder = path.dirname(path.relative(FEATURE_DIR, e.filePath)).replace(/\\/g, '/');
+//   var parts = folder === '' ? [] : folder.split('/');
+//   let node = tree;
+//   for (var part of parts) {
+//     node[part] = node[part] || { __children: {} };
+//     node = node[part].__children;
+//   }
+//   // → NUEVO: guardo la entry bajo su baseRoute (sin 'app-')
+//   var baseRoute = e.routePath.split('/').pop();
+//   node[baseRoute] = { __entry: e };
+// }
 
-var sidebarLines = [
-  `<mat-nav-list class="sidebar">`,
-  ...renderSidebar(tree),
-  `</mat-nav-list>`
-];
+// var sidebarLines = [
+//   `<mat-nav-list class="sidebar">`,
+//   ...renderSidebar(tree),
+//   `</mat-nav-list>`
+// ];
 
-fs.writeFileSync(SIDEBAR_OUT, sidebarLines.join('\n'), 'utf8');
-console.log(`✅  Sidebar actualizado en ${SIDEBAR_OUT}`);
+// fs.writeFileSync(SIDEBAR_OUT, sidebarLines.join('\n'), 'utf8');
+// console.log(`✅  Sidebar actualizado en ${SIDEBAR_OUT}`);
 
 
 // scripts/generate-routes.js
