@@ -6,7 +6,7 @@ var FEATURE_DIR  = path.resolve(__dirname, '../src/app/features/api-docs/api-doc
 var ROUTES_OUT   = path.join(FEATURE_DIR, 'api-docs-routing.module.ts');
 var SIDEBAR_OUT  = path.join(
   FEATURE_DIR,
-  '../components/sidebar/sidebar.component.html'
+  '../../../layout/sidebar/sidebar.component.html'
 );
 
 // 1) humanLabel: ahora también separa camelCase
@@ -132,7 +132,7 @@ for (var e of entries) {
 }
 
 var sidebarLines = [
-  `<mat-nav-list>`,
+  `<mat-nav-list class="sidebar">`,
   ...renderSidebar(tree),
   `</mat-nav-list>`
 ];
