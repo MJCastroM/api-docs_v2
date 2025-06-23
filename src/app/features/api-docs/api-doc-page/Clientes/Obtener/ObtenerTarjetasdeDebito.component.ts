@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasdeDebitoComponent1750446218306 {
+export class ObtenerTarjetasdeDebitoComponent1750713393498 {
   pageTitle        = 'Obtener Tarjetas de Débito';
   description      = `Método para obtener los productos de tarjeta de débito que tiene contratado un cliente.`;
   pubName    = 'BTClientes.ObtenerTarjetasDebito';
@@ -184,5 +184,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBDProductoTarjeta', fields: [{ Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Sucursal de la tarjeta.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta de débito.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }] }];
+  structuredTypes = [{ typeName: 'sBDProductoTarjeta', fields: [{ Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Numero de tarjeta.' }, { Nombre: 'sucursal', Tipo: 'String', Comentarios: 'Sucursal de la tarjeta.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta de débito.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

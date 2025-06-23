@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosComponent1750446218976 {
+export class ObtenerSegurosComponent1750713394992 {
   pageTitle        = 'Obtener Seguros';
   description      = `Método para obtener un listado de los seguros.`;
   pubName    = 'BTSegurosVoluntarios.ObtenerSeguros';
@@ -124,5 +124,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSeguro', fields: [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }] }];
+  structuredTypes = [{ typeName: 'sBTSeguro', fields: [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarSeguroComponent1750446218978 {
+export class PagarSeguroComponent1750713394997 {
   pageTitle        = 'Pagar Seguro';
   description      = `Método para pagar un seguro.`;
   pubName    = 'BTSegurosVoluntarios.PagarSeguro';

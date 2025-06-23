@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresComponent1750446219022 {
+export class ObtenerValoresComponent1750713395091 {
   pageTitle        = 'Obtener Valores';
   description      = `Método para obtener los títulos disponibles para un grupo y sus respectivos valores.`;
   pubName    = 'BTTitulos.ObtenerValores';
@@ -178,5 +178,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTitulo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del título.' }, { Nombre: 'grupo', Tipo: 'String', Comentarios: 'Nombre del grupo.' }, { Nombre: 'grupoId', Tipo: 'Byte', Comentarios: 'Identificador del grupo.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del título.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Listado de otros conceptos.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre del país.' }, { Nombre: 'precioActual', Tipo: 'Double', Comentarios: 'Precio actual.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }] }];
+  structuredTypes = [{ typeName: 'sBTTitulo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del título.' }, { Nombre: 'grupo', Tipo: 'String', Comentarios: 'Nombre del grupo.' }, { Nombre: 'grupoId', Tipo: 'Byte', Comentarios: 'Identificador del grupo.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del título.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Listado de otros conceptos.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre del país.' }, { Nombre: 'precioActual', Tipo: 'Double', Comentarios: 'Precio actual.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProximaFechaHabildeSucursalComponent1750446218132 {
+export class ObtenerProximaFechaHabildeSucursalComponent1750713393175 {
   pageTitle        = 'Obtener Próxima Fecha Hábil de Sucursal';
   description      = `Método para obtener la próxima fecha hábil a la fecha ingresada, para la sucursal recibida por parámetro.`;
   pubName    = 'BTCalendario.ObtenerProximaFechaHabilSucursal';

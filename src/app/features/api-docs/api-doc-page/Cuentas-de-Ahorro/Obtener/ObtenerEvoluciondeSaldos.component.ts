@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEvoluciondeSaldosComponent1750446218517 {
+export class ObtenerEvoluciondeSaldosComponent1750713393781 {
   pageTitle        = 'Obtener Evolución de Saldos';
   description      = `Método para obtener la evolución del saldo de un producto de cuenta de ahorro.`;
   pubName    = 'BTCuentasDeAhorro.ObtenerEvolucionDeSaldos';
@@ -138,5 +138,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEvolucionSaldos', fields: [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'saldos', Tipo: '[sBTSaldoMensual](#sbtsaldomensual)', Comentarios: 'Listado de saldo mensual.' }, { Nombre: '### sBTSaldoMensual', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTSaldoMensual', fields: [{ Nombre: 'anio', Tipo: 'Short', Comentarios: 'Año.' }, { Nombre: 'mes', Tipo: 'Byte', Comentarios: 'Mes.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo mensual.' }] }];
+  structuredTypes = [{ typeName: 'sBTEvolucionSaldos', fields: [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'saldos', Tipo: '[sBTSaldoMensual](#sbtsaldomensual)', Comentarios: 'Listado de saldo mensual.' }] }, { typeName: 'sBTSaldoMensual', fields: [{ Nombre: 'anio', Tipo: 'Short', Comentarios: 'Año.' }, { Nombre: 'mes', Tipo: 'Byte', Comentarios: 'Mes.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo mensual.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

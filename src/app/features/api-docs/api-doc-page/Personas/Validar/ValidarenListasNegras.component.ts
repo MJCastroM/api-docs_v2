@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarenListasNegrasComponent1750446218808 {
+export class ValidarenListasNegrasComponent1750713394618 {
   pageTitle        = 'Validar en Listas Negras';
   description      = `Método para validar si una persona pertenece a alguna lista negra.`;
   pubName    = 'BTPersonas.ValidarEnListasNegras';
@@ -134,5 +134,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTListaInhabilitados', fields: [{ Nombre: 'bloqueante', Tipo: 'String', Comentarios: '¿Es bloqueante? (S/N).' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de lista negra.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de lista negra.' }] }];
+  structuredTypes = [{ typeName: 'sBTListaInhabilitados', fields: [{ Nombre: 'bloqueante', Tipo: 'String', Comentarios: '¿Es bloqueante? (S/N).' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de lista negra.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de lista negra.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

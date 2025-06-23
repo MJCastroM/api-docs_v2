@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750446218992 {
+export class ObtenerMovimientosComponent1750713395028 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener los movimientos de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerMovimientos';
@@ -261,5 +261,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstadoCuentaDebito', fields: [{ Nombre: 'movimientos', Tipo: '[sBTMovimientoDebito](#sbtmovimientodebito)', Comentarios: 'Listado de movimientos.' }, { Nombre: '### sBTMovimientoDebito', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTMovimientoDebito son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'banco', Tipo: 'String', Comentarios: 'Nombre del banco.' }, { Nombre: 'codigoMovimiento', Tipo: 'String', Comentarios: 'Código de movimiento.' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del movimiento.' }, { Nombre: 'debitoOCredito', Tipo: 'String', Comentarios: 'Débito o crédito (D/C).' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha del movimiento.' }, { Nombre: 'hora', Tipo: 'String', Comentarios: 'Hora de movimiento.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Moneda del movimiento.' }, { Nombre: 'red', Tipo: 'String', Comentarios: 'Red por donde se realizó el movimiento.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }] }];
+  structuredTypes = [{ typeName: 'sBTEstadoCuentaDebito', fields: [{ Nombre: 'movimientos', Tipo: '[sBTMovimientoDebito](#sbtmovimientodebito)', Comentarios: 'Listado de movimientos.' }] }, { typeName: 'sBTMovimientoDebito', fields: [{ Nombre: 'banco', Tipo: 'String', Comentarios: 'Nombre del banco.' }, { Nombre: 'codigoMovimiento', Tipo: 'String', Comentarios: 'Código de movimiento.' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del movimiento.' }, { Nombre: 'debitoOCredito', Tipo: 'String', Comentarios: 'Débito o crédito (D/C).' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha del movimiento.' }, { Nombre: 'hora', Tipo: 'String', Comentarios: 'Hora de movimiento.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Moneda del movimiento.' }, { Nombre: 'red', Tipo: 'String', Comentarios: 'Red por donde se realizó el movimiento.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

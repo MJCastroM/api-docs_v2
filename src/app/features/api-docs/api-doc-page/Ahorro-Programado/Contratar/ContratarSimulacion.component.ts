@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750446218029 {
+export class ContratarSimulacionComponent1750713393003 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un ahorro programado a partir de una simulación.`;
   pubName    = 'BTAhorroProgramado.ContratarSimulacion';
@@ -116,5 +116,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCrearSolicitudAhorro', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'cuentaDestinoUId', Tipo: 'Long', Comentarios: 'Identificador de cuenta destino.' }, { Nombre: 'cuentaOrigenUId', Tipo: 'Long', Comentarios: 'Identificador de cuenta origen.' }, { Nombre: 'motivoAhorro', Tipo: 'String', Comentarios: 'Motivo de ahorro.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador de simulación.' }] }];
+  structuredTypes = [{ typeName: 'sBTCrearSolicitudAhorro', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'cuentaDestinoUId', Tipo: 'Long', Comentarios: 'Identificador de cuenta destino.' }, { Nombre: 'cuentaOrigenUId', Tipo: 'Long', Comentarios: 'Identificador de cuenta origen.' }, { Nombre: 'motivoAhorro', Tipo: 'String', Comentarios: 'Motivo de ahorro.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador de simulación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorreosElectronicosComponent1750446218758 {
+export class ObtenerCorreosElectronicosComponent1750713394444 {
   pageTitle        = 'Obtener Correos Electrónicos';
   description      = `Método para obtener un listado de los correos electrónicos de una persona.`;
   pubName    = 'BTPersonas.ObtenerCorreosElectronicos';
@@ -116,5 +116,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCorreoElectronico', fields: [{ Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo de correo electrónico.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }] }];
+  structuredTypes = [{ typeName: 'sBTCorreoElectronico', fields: [{ Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo de correo electrónico.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

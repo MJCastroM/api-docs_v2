@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCorreoElectronicoComponent1750446218700 {
+export class ActualizarCorreoElectronicoComponent1750713394262 {
   pageTitle        = 'Actualizar Correo Electrónico';
   description      = `Método para actualizar el correo electrónico de una persona.`;
   pubName    = 'BTPersonas.ActualizarCorreoElectronico';
@@ -112,5 +112,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCorreoElectronico', fields: [{ Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo de correo electrónico.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }] }];
+  structuredTypes = [{ typeName: 'sBTCorreoElectronico', fields: [{ Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo de correo electrónico.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

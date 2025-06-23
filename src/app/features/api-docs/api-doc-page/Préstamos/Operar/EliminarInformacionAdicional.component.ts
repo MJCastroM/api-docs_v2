@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarInformacionAdicionalComponent1750446218916 {
+export class EliminarInformacionAdicionalComponent1750713394830 {
   pageTitle        = 'Eliminar Información Adicional';
   description      = `Método para eliminar la información adicional de un préstamo.`;
   pubName    = 'BTPrestamos.EliminarInformacionAdicional';
@@ -114,5 +114,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de información adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de información adicional.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de información adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de información adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

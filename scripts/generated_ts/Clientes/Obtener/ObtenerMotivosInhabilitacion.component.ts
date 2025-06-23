@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosInhabilitacionComponent1750446218272 {
+export class ObtenerMotivosInhabilitacionComponent1750713393440 {
   pageTitle        = 'Obtener Motivos Inhabilitación';
   description      = `Método para obtener un listado de los motivos de inhabilitación.`;
   pubName    = 'BTClientes.ObtenerMotivosInhabilitacion';
@@ -130,5 +130,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTMotivoInhabilitacion', fields: [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código del motivo de inhabilitación.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del motivo de inhabilitación.' }] }];
+  structuredTypes = [{ typeName: 'sBTMotivoInhabilitacion', fields: [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código del motivo de inhabilitación.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del motivo de inhabilitación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarPAEComponent1750446218806 {
+export class EvaluarPAEComponent1750713394609 {
   pageTitle        = 'Evaluar PAE';
   description      = `Método para retornar el resultado de evaluar el PAE de una persona.`;
   pubName    = 'BTPersonas.EvaluarPAE';
@@ -128,5 +128,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPAEValorItem', fields: [{ Nombre: 'itemNombre', Tipo: 'String', Comentarios: 'Nombre del ítem.' }, { Nombre: 'itemValor', Tipo: 'String', Comentarios: 'Valor del ítem.' }] }, { typeName: 'sBTPoliticaIncumplida', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoDsc', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'nroAutorizacion', Tipo: 'Long', Comentarios: 'Número de la autorización.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación.' }, { Nombre: 'politica', Tipo: 'String', Comentarios: 'Política.' }, { Nombre: 'politicaId', Tipo: 'Int', Comentarios: 'Identificador de la política.' }, { Nombre: 'restriccion', Tipo: 'String', Comentarios: 'Restricción.' }, { Nombre: 'restriccionDsc', Tipo: 'String', Comentarios: 'Descripción de la restricción.' }] }];
+  structuredTypes = [{ typeName: 'sBTPAEValorItem', fields: [{ Nombre: 'itemNombre', Tipo: 'String', Comentarios: 'Nombre del ítem.' }, { Nombre: 'itemValor', Tipo: 'String', Comentarios: 'Valor del ítem.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTPoliticaIncumplida', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTPoliticaIncumplida', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoDsc', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'nroAutorizacion', Tipo: 'Long', Comentarios: 'Número de la autorización.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación.' }, { Nombre: 'politica', Tipo: 'String', Comentarios: 'Política.' }, { Nombre: 'politicaId', Tipo: 'Int', Comentarios: 'Identificador de la política.' }, { Nombre: 'restriccion', Tipo: 'String', Comentarios: 'Restricción.' }, { Nombre: 'restriccionDsc', Tipo: 'String', Comentarios: 'Descripción de la restricción.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularFechadeVencimientoenDiasHabilesComponent1750446218118 {
+export class CalcularFechadeVencimientoenDiasHabilesComponent1750713393150 {
   pageTitle        = 'Calcular Fecha de Vencimiento en Días Hábiles';
   description      = `Método para calcular la fecha de vencimiento en días hábiles de un plazo, a partir de la fecha de inicio.`;
   pubName    = 'BTCalendarios.CalcularFechaVencimientoDiasHabiles';

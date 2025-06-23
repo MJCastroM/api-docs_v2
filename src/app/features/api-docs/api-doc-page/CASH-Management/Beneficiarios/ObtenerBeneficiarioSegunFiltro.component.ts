@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiarioSegunFiltroComponent1750446218143 {
+export class ObtenerBeneficiarioSegunFiltroComponent1750713393194 {
   pageTitle        = 'Obtener Beneficiario Según Filtro';
   description      = `Método para obtener el beneficiario según el filtro.`;
   pubName    = 'BTCASHManagement.ObtenerBeneficiarioSegunFiltro';
@@ -304,5 +304,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }] }];
+  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

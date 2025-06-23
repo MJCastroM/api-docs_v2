@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetadataDeTareaComponent1750446219036 {
+export class ObtenerMetadataDeTareaComponent1750713395131 {
   pageTitle        = 'Obtener Metadata De Tarea';
   description      = `Método para obtener la metadata de una determinada tarea de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerMetadataDeTarea';

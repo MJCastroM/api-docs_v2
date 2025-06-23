@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCiudadesyLocalidadesComponent1750446218384 {
+export class ObtenerCiudadesyLocalidadesComponent1750713393602 {
   pageTitle        = 'Obtener Ciudades y Localidades';
   description      = `Método para obtener un listado de las ciudades/localidades ingresadas en Bantotal para un determinado estado de un país.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCiudadesLocalidades';
@@ -120,5 +120,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCiudad', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de Ciudad.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de Ciudad.' }] }];
+  structuredTypes = [{ typeName: 'sBTCiudad', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de Ciudad.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de Ciudad.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

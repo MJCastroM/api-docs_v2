@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarFechadeAbonoComponent1750446218054 {
+export class ModificarFechadeAbonoComponent1750713393039 {
   pageTitle        = 'Modificar Fecha de Abono';
   description      = `Método para modificar la fecha del abono para el ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarFechaDeAbono';

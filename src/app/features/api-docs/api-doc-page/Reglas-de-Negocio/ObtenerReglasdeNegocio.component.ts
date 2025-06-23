@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerReglasdeNegocioComponent1750446218965 {
+export class ObtenerReglasdeNegocioComponent1750713394964 {
   pageTitle        = 'Obtener Reglas de Negocio';
   description      = `Método para obtener un listado de las reglas de negocio.`;
   pubName    = 'BTReglasNegocio.ObtenerReglasNegocio';
@@ -125,5 +125,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTReglaNegocio', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de regla de negocio.' }, { Nombre: 'reglaId', Tipo: 'Long', Comentarios: 'Código de regla de negocio.' }] }];
+  structuredTypes = [{ typeName: 'sBTReglaNegocio', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de regla de negocio.' }, { Nombre: 'reglaId', Tipo: 'Long', Comentarios: 'Código de regla de negocio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

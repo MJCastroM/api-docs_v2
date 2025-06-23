@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActivarComponent1750446218997 {
+export class ActivarComponent1750713395042 {
   pageTitle        = 'Activar';
   description      = `Método para activar una tarjeta de débito física.`;
   pubName    = 'BTTarjetasDeDebito.Activar';

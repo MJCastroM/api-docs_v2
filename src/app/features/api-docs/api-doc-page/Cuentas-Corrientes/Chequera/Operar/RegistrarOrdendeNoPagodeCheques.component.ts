@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarOrdendeNoPagodeChequesComponent1750446218452 {
+export class RegistrarOrdendeNoPagodeChequesComponent1750713393740 {
   pageTitle        = 'Registrar Orden de No Pago de Cheques';
   description      = `Método para registrar una orden de no pago de cheques.`;
   pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoCheques';
@@ -124,5 +124,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCheque', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'estado', Tipo: 'Short', Comentarios: 'Estado del cheque.' }, { Nombre: 'numero', Tipo: 'Int', Comentarios: 'Número de cheque.' }] }];
+  structuredTypes = [{ typeName: 'sBTCheque', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'estado', Tipo: 'Short', Comentarios: 'Estado del cheque.' }, { Nombre: 'numero', Tipo: 'Int', Comentarios: 'Número de cheque.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

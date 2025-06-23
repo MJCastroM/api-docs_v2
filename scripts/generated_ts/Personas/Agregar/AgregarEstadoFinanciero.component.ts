@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarEstadoFinancieroComponent1750446218724 {
+export class AgregarEstadoFinancieroComponent1750713394340 {
   pageTitle        = 'Agregar Estado Financiero';
   description      = `Método para agregar los estados financieros a una persona.`;
   pubName    = 'BTPersonas.AgregarEstadoFinanciero';
@@ -160,5 +160,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstadoFinanciero', fields: [{ Nombre: 'auditado', Tipo: 'String', Comentarios: '¿Es auditado? (S/N).' }, { Nombre: 'fechaDeElaborado', Tipo: 'Date', Comentarios: 'Fecha de elaborado.' }, { Nombre: 'fechaRegistro', Tipo: 'Date', Comentarios: 'Fecha de registro.' }, { Nombre: 'id', Tipo: 'int', Comentarios: 'Identificador de estado financiero.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'usuarioDeIngreso', Tipo: 'String', Comentarios: 'Usuario de ingreso.' }] }, { typeName: 'sBTCondicionTributaria', fields: [{ Nombre: 'activo', Tipo: 'String', Comentarios: '¿Está activo? (S/N).' }, { Nombre: 'regimenTributario', Tipo: 'String', Comentarios: 'Régimen tributario.' }, { Nombre: 'RUC', Tipo: 'String', Comentarios: 'RUC.' }, { Nombre: 'ventasAnuales', Tipo: 'Double', Comentarios: 'Total de ventas anuales.' }] }, { typeName: 'sBTDetallesEstadosFinancieros', fields: [{ Nombre: 'idConcepto', Tipo: 'int', Comentarios: 'Identificador del concepto del estado financiero.' }, { Nombre: 'valorConcepto', Tipo: 'Double', Comentarios: 'Valor del concepto del estado financiero.' }] }];
+  structuredTypes = [{ typeName: 'sBTEstadoFinanciero', fields: [{ Nombre: 'auditado', Tipo: 'String', Comentarios: '¿Es auditado? (S/N).' }, { Nombre: 'fechaDeElaborado', Tipo: 'Date', Comentarios: 'Fecha de elaborado.' }, { Nombre: 'fechaRegistro', Tipo: 'Date', Comentarios: 'Fecha de registro.' }, { Nombre: 'id', Tipo: 'int', Comentarios: 'Identificador de estado financiero.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'usuarioDeIngreso', Tipo: 'String', Comentarios: 'Usuario de ingreso.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTCondicionTributaria', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTCondicionTributaria', fields: [{ Nombre: 'activo', Tipo: 'String', Comentarios: '¿Está activo? (S/N).' }, { Nombre: 'regimenTributario', Tipo: 'String', Comentarios: 'Régimen tributario.' }, { Nombre: 'RUC', Tipo: 'String', Comentarios: 'RUC.' }, { Nombre: 'ventasAnuales', Tipo: 'Double', Comentarios: 'Total de ventas anuales.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTDetallesEstadosFinancieros', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDetallesEstadosFinancieros', fields: [{ Nombre: 'idConcepto', Tipo: 'int', Comentarios: 'Identificador del concepto del estado financiero.' }, { Nombre: 'valorConcepto', Tipo: 'Double', Comentarios: 'Valor del concepto del estado financiero.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

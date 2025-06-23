@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNaturalezasJuridicasComponent1750446218779 {
+export class ObtenerNaturalezasJuridicasComponent1750713394544 {
   pageTitle        = 'Obtener Naturalezas Jurídicas';
   description      = `Método para obtener un listado de las naturalezas jurídicas ingresadas.`;
   pubName    = 'BTPersonas.ObtenerNaturalezasJuridicas';
@@ -180,5 +180,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTNaturalezaJuridica', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de naturaleza jurídica.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de naturaleza jurídica.' }] }];
+  structuredTypes = [{ typeName: 'sBTNaturalezaJuridica', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de naturaleza jurídica.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de naturaleza jurídica.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudAmpliacionComponent1750446218608 {
+export class CrearSolicitudAmpliacionComponent1750713394010 {
   pageTitle        = 'Crear Solicitud Ampliación';
   description      = `Método para crear una solicitud de ampliación de crédito.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudAmpliacion';
@@ -122,5 +122,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSolicitudIndividual', fields: [{ Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.' }, { Nombre: 'asunto', Tipo: 'String', Comentarios: 'Asunto de la solicitud.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente que solicita el préstamo.' }, { Nombre: 'comentario', Tipo: 'String', Comentarios: 'Comentario de la solicitud.' }, { Nombre: 'origenCaptacion', Tipo: 'Int', Comentarios: 'Identificador de origen captación.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente.' }] }];
+  structuredTypes = [{ typeName: 'sBTSolicitudIndividual', fields: [{ Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.' }, { Nombre: 'asunto', Tipo: 'String', Comentarios: 'Asunto de la solicitud.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente que solicita el préstamo.' }, { Nombre: 'comentario', Tipo: 'String', Comentarios: 'Comentario de la solicitud.' }, { Nombre: 'origenCaptacion', Tipo: 'Int', Comentarios: 'Identificador de origen captación.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

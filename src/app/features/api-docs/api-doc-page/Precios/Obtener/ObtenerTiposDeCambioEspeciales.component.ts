@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeCambioEspecialesComponent1750446218829 {
+export class ObtenerTiposDeCambioEspecialesComponent1750713394671 {
   pageTitle        = 'Obtener Tipos de Cambio Especiales';
   description      = `Método para obtener un listado de los tipos de cambio especiales.`;
   pubName    = 'BTPrecios.ObtenerTiposDeCambioEspeciales ';
@@ -135,5 +135,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoDeCambioEspecial', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'esInteractivo', Tipo: 'Double', Comentarios: '¿Es interactiva? (S o N).' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de la pizarra.' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoDeCambioEspecial', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'esInteractivo', Tipo: 'Double', Comentarios: '¿Es interactiva? (S o N).' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de la pizarra.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

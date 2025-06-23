@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadoDeOperacionComponent1750446218533 {
+export class ObtenerEstadoDeOperacionComponent1750713393815 {
   pageTitle        = 'Obtener Estado De Operación';
   description      = `Método para obtener el estado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeOperacion';
@@ -116,5 +116,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstadoOperacion', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del estado.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'permiteOperar', Tipo: 'String', Comentarios: '¿Permite Operar?' }] }];
+  structuredTypes = [{ typeName: 'sBTEstadoOperacion', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del estado.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'permiteOperar', Tipo: 'String', Comentarios: '¿Permite Operar?' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

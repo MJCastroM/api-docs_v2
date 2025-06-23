@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitularesDelTelefonoComponent1750446218797 {
+export class ObtenerTitularesDelTelefonoComponent1750713394591 {
   pageTitle        = 'Obtener Titulares de Teléfono';
   description      = `Método para obtener los titulares de un teléfono.`;
   pubName    = 'BTPersonas.ObtenerTitularesDelTelefono';
@@ -116,5 +116,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTitularTelefono', fields: [{ Nombre: 'datosAdicionales', Tipo: '[sBTDatoAdicional](#sbtdatoadicional)', Comentarios: 'Listado de datos adicionales.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: '### sBTDatoAdicional', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDatoAdicional', fields: [{ Nombre: 'detalle', Tipo: 'String', Comentarios: 'Detalle.' }] }];
+  structuredTypes = [{ typeName: 'sBTTitularTelefono', fields: [{ Nombre: 'datosAdicionales', Tipo: '[sBTDatoAdicional](#sbtdatoadicional)', Comentarios: 'Listado de datos adicionales.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }] }, { typeName: 'sBTDatoAdicional', fields: [{ Nombre: 'detalle', Tipo: 'String', Comentarios: 'Detalle.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

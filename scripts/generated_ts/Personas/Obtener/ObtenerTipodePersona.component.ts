@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTipodePersonaComponent1750446218793 {
+export class ObtenerTipodePersonaComponent1750713394582 {
   pageTitle        = 'Obtener Tipo de Persona';
   description      = `Método para obtener el tipo de una persona (Física o Jurídica).`;
   pubName    = 'BTPersonas.ObtenerTipoDePersona';

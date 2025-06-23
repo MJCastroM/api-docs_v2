@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoComponent1750446218513 {
+export class ContratarProductoComponent1750713393772 {
   pageTitle        = 'Contratar Producto';
   description      = `Método para contratar un producto de cuenta de ahorro.`;
   pubName    = 'BTCuentasDeAhorro.ContratarProducto';

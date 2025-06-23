@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeOperacionComponent1750446218419 {
+export class ObtenerIdentificadorUnicodeOperacionComponent1750713393663 {
   pageTitle        = 'Obtener Identificador Único de Operación';
   description      = `Método para obtener el identificador único de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoOperacion';

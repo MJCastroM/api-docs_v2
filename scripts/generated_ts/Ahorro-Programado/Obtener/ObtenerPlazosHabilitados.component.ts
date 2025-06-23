@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosHabilitadosComponent1750446218069 {
+export class ObtenerPlazosHabilitadosComponent1750713393065 {
   pageTitle        = 'Obtener Plazos Habilitados';
   description      = `Método para obtener un listado de plazos habilitados para los casos que el alta de ahorro programado se realice mediante selección de plazo como lista de valores.`;
   pubName    = 'BTAhorroProgramado.ObtenerPlazosHabilitados';
@@ -170,5 +170,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPlazo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción extendida del plazo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de plazo (Diario: \'D\', Mensual: \'M\', Anual: \'A\').' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Plazo.' }] }];
+  structuredTypes = [{ typeName: 'sBTPlazo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción extendida del plazo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de plazo (Diario: \'D\', Mensual: \'M\', Anual: \'A\').' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

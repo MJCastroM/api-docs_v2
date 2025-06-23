@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaqueteComponent1750446218537 {
+export class ObtenerPaqueteComponent1750713393819 {
   pageTitle        = 'Obtener Paquete';
   description      = `Método para obtener los datos de un paquete.`;
   pubName    = 'BTCuentasVista.ObtenerPaquete';
@@ -161,5 +161,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPaquete', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de paquete.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de paquete.' }, { Nombre: 'productos', Tipo: '[sBTProductoPaquete](#sbtproductopaquete)', Comentarios: 'Listado de productos incluidos en el paquete.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si está vigente el paquete (S/N).' }, { Nombre: '### sBTProductoPaquete', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTProductoPaquete', fields: [{ Nombre: 'cantidad', Tipo: 'Short', Comentarios: 'Cantidad de productos de este tipo incluidos en el paquete.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de producto.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Símbolo de papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }] }];
+  structuredTypes = [{ typeName: 'sBTPaquete', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de paquete.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de paquete.' }, { Nombre: 'productos', Tipo: '[sBTProductoPaquete](#sbtproductopaquete)', Comentarios: 'Listado de productos incluidos en el paquete.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si está vigente el paquete (S/N).' }] }, { typeName: 'sBTProductoPaquete', fields: [{ Nombre: 'cantidad', Tipo: 'Short', Comentarios: 'Cantidad de productos de este tipo incluidos en el paquete.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de producto.' }, { Nombre: 'papel', Tipo: 'String', Comentarios: 'Símbolo de papel.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

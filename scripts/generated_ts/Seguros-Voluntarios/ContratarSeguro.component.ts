@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSeguroComponent1750446218974 {
+export class ContratarSeguroComponent1750713394987 {
   pageTitle        = 'Contratar Seguro';
   description      = `Método para contratar un seguro.`;
   pubName    = 'BTSegurosVoluntarios.ContratarSeguro';

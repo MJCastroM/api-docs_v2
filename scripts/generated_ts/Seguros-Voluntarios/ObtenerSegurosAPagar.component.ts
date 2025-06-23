@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosAPagarComponent1750446218977 {
+export class ObtenerSegurosAPagarComponent1750713394995 {
   pageTitle        = 'Obtener Seguros a Pagar';
   description      = `Método para obtener un listado de los seguros a pagar.`;
   pubName    = 'BTSegurosVoluntarios.ObtenerSegurosAPagar';
@@ -208,5 +208,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTProductosSeguro', fields: [{ Nombre: 'nroAfiliado', Tipo: 'Int', Comentarios: 'Número del afiliado.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }, { Nombre: 'seguro', Tipo: 'String', Comentarios: 'Seguro.' }, { Nombre: 'seguroId', Tipo: 'Int', Comentarios: 'Identificador único del seguro.' }] }];
+  structuredTypes = [{ typeName: 'sBTProductosSeguro', fields: [{ Nombre: 'nroAfiliado', Tipo: 'Int', Comentarios: 'Número del afiliado.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }, { Nombre: 'seguro', Tipo: 'String', Comentarios: 'Seguro.' }, { Nombre: 'seguroId', Tipo: 'Int', Comentarios: 'Identificador único del seguro.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

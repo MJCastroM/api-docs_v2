@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposAvalComponent1750446218639 {
+export class ObtenerTiposAvalComponent1750713394085 {
   pageTitle        = 'Obtener Tipos Aval';
   description      = `Método para obtener una lista de los tipos de aval.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposAval';
@@ -111,5 +111,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoAval', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de tipo de aval.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de aval.' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoAval', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de tipo de aval.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de aval.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

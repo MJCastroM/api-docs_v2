@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCalendariosComponent1750446218364 {
+export class ObtenerCalendariosComponent1750713393567 {
   pageTitle        = 'Obtener Calendarios';
   description      = `Método para obtener los calendarios ingresados en el sistema.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCalendarios';
@@ -123,5 +123,5 @@ curl -X GET \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCalendario', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del calendario.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Código del calendario.' }] }];
+  structuredTypes = [{ typeName: 'sBTCalendario', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del calendario.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Código del calendario.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

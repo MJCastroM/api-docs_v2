@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarOperacionesaCancelarComponent1750446218640 {
+export class AgregarOperacionesaCancelarComponent1750713394087 {
   pageTitle        = 'Agregar Operaciones a Cancelar';
   description      = `Método para agregar operaciones a cancelar para una solicitud de créditos.`;
   pubName    = 'BTMicrofinanzas.AgregarOperacionesACancelar';
@@ -117,5 +117,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOperacionId', fields: [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }] }];
+  structuredTypes = [{ typeName: 'sBTOperacionId', fields: [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

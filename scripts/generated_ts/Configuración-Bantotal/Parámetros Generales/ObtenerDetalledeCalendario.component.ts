@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendarioComponent1750446218366 {
+export class ObtenerDetalledeCalendarioComponent1750713393569 {
   pageTitle        = 'Obtener Detalle de Calendario';
   description      = `Método para obtener el detalle de los días de un determinado calendario.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendario';
@@ -130,5 +130,5 @@ curl -X GET \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDiaCalendario', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Día del calendario.' }, { Nombre: 'habil', Tipo: 'String', Comentarios: '¿Día hábil? (S/N)' }] }];
+  structuredTypes = [{ typeName: 'sBTDiaCalendario', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Día del calendario.' }, { Nombre: 'habil', Tipo: 'String', Comentarios: '¿Día hábil? (S/N)' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

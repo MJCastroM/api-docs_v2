@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerActividadesporTipoComponent1750446218342 {
+export class ObtenerActividadesporTipoComponent1750713393535 {
   pageTitle        = 'Obtener Actividades por Tipo';
   description      = `Método para obtener un listado de las actividades por tipo ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerActividadesPorTipo';
@@ -435,5 +435,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTActividad', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de actividad.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de actividad.' }, { Nombre: 'identificadorEntidadReguladora', Tipo: 'Long', Comentarios: 'Identificador de entidad reguladora.' }] }];
+  structuredTypes = [{ typeName: 'sBTActividad', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de actividad.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de actividad.' }, { Nombre: 'identificadorEntidadReguladora', Tipo: 'Long', Comentarios: 'Identificador de entidad reguladora.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

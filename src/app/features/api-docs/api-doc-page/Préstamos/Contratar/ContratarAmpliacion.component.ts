@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarAmpliacionComponent1750446218839 {
+export class ContratarAmpliacionComponent1750713394689 {
   pageTitle        = 'Contratar Ampliación';
   description      = `Método para contratar un préstamo ampliado, cancelando las operaciones indicadas en la simulación.`;
   pubName    = 'BTPrestamos.ContratarAmpliacion';

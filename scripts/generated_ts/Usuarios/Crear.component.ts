@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750446219024 {
+export class CrearComponent1750713395096 {
   pageTitle        = 'Crear';
   description      = `Método para crear un usuario.`;
   pubName    = 'BTUsuarios.Crear';
@@ -143,5 +143,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTRolWF', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del rol.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del rol.' }] }];
+  structuredTypes = [{ typeName: 'sBTRolWF', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del rol.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del rol.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

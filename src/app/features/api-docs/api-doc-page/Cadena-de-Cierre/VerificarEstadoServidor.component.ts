@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEstadoServidorComponent1750446218115 {
+export class VerificarEstadoServidorComponent1750713393144 {
   pageTitle        = 'Verificar Estado del Servidor';
   description      = `Método para verificar el estado del servidor de procesos.`;
   pubName    = 'BTCadenaCierre.VerificarEstadoServidor';

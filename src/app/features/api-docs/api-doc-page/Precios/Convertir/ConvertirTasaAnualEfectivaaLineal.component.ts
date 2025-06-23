@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConvertirTasaAnualEfectivaaLinealComponent1750446218813 {
+export class ConvertirTasaAnualEfectivaaLinealComponent1750713394627 {
   pageTitle        = 'Convertir Tasa Anual Efectiva a Lineal';
   description      = `Método para convertir una tasa efectiva anual a tasa lineal anual.`;
   pubName    = 'BTPrecios.ConvertirTasaAnualEfectivaALineal';

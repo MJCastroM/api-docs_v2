@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesComponent1750446218380 {
+export class ObtenerSucursalesComponent1750713393590 {
   pageTitle        = 'Obtener Sucursales';
   description      = `Método para obtener un listado de las sucursales ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerSucursales';

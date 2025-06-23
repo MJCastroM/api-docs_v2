@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerImpuestosComponent1750446218348 {
+export class ObtenerImpuestosComponent1750713393546 {
   pageTitle        = 'Obtener Impuestos';
   description      = `Método para obtener un listado de los impuestos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerImpuestos';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDestinosCreditoComponent1750446218630 {
+export class ObtenerDestinosCreditoComponent1750713394071 {
   pageTitle        = 'Obtener Destinos Crédito';
   description      = `Método para obtener los destinos posibles para un crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerDestinosCredito';
@@ -173,5 +173,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDestinoCredito', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de destino de crédito.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de destino de crédito.' }] }];
+  structuredTypes = [{ typeName: 'sBTDestinoCredito', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de destino de crédito.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de destino de crédito.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

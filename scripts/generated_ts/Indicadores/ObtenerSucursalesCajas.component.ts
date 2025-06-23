@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesCajasComponent1750446218604 {
+export class ObtenerSucursalesCajasComponent1750713394001 {
   pageTitle        = 'Obtener Sucursales Cajas';
   description      = `Método para obtener porcentajes y listados de sucursales y cajas del sistema.`;
   pubName    = 'BTIndicadores.ObtenerSucursalesCajas';
@@ -112,5 +112,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Dirección de la sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Int', Comentarios: 'Latitud de la sucursal.' }, { Nombre: 'longitud', Tipo: 'Int', Comentarios: 'Longitud de la sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono de la sucursal.' }] }, { typeName: 'sBTCaja', fields: [{ Nombre: 'indicador', Tipo: 'Int', Comentarios: 'Indicador de la caja.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la caja.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario de la caja.' }] }];
+  structuredTypes = [{ typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Dirección de la sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Int', Comentarios: 'Latitud de la sucursal.' }, { Nombre: 'longitud', Tipo: 'Int', Comentarios: 'Longitud de la sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono de la sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTCaja', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTCaja', fields: [{ Nombre: 'indicador', Tipo: 'Int', Comentarios: 'Indicador de la caja.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la caja.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario de la caja.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

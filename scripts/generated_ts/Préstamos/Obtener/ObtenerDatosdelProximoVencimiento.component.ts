@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosdelProximoVencimientoComponent1750446218863 {
+export class ObtenerDatosdelProximoVencimientoComponent1750713394733 {
   pageTitle        = 'Obtener Datos del Próximo Vencimiento';
   description      = `Método para obtener los datos de próximo vencimiento de cuota.`;
   pubName    = 'BTPrestamos.ObtenerDatosProxVencimiento';
@@ -128,5 +128,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTProximoVto', fields: [{ Nombre: 'cantCuoImpVenc', Tipo: 'Int', Comentarios: 'Cantidad de cuotas impagas vencidas.' }, { Nombre: 'cantCuoPagas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas pagas.' }, { Nombre: 'cuotaVigente', Tipo: 'Decimal', Comentarios: 'Cuota vigente.' }, { Nombre: 'deudaVencida', Tipo: 'Decimal', Comentarios: 'Deuda vencida.' }, { Nombre: 'fechaPrimerIncumplimiento', Tipo: 'Date', Comentarios: 'Fecha de primer incumplimiento.' }, { Nombre: 'fechaProxVencimiento', Tipo: 'Date', Comentarios: 'Identificador de información adicional.' }, { Nombre: 'fechaUltPago', Tipo: 'Date', Comentarios: 'Fecha de último pago.' }, { Nombre: 'monto', Tipo: 'Decimal', Comentarios: 'Valor de información adicional.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }, { Nombre: '### sBTConcepto', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTConcepto son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Campo', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }] }];
+  structuredTypes = [{ typeName: 'sBTProximoVto', fields: [{ Nombre: 'cantCuoImpVenc', Tipo: 'Int', Comentarios: 'Cantidad de cuotas impagas vencidas.' }, { Nombre: 'cantCuoPagas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas pagas.' }, { Nombre: 'cuotaVigente', Tipo: 'Decimal', Comentarios: 'Cuota vigente.' }, { Nombre: 'deudaVencida', Tipo: 'Decimal', Comentarios: 'Deuda vencida.' }, { Nombre: 'fechaPrimerIncumplimiento', Tipo: 'Date', Comentarios: 'Fecha de primer incumplimiento.' }, { Nombre: 'fechaProxVencimiento', Tipo: 'Date', Comentarios: 'Identificador de información adicional.' }, { Nombre: 'fechaUltPago', Tipo: 'Date', Comentarios: 'Fecha de último pago.' }, { Nombre: 'monto', Tipo: 'Decimal', Comentarios: 'Valor de información adicional.' }, { Nombre: 'otrosConceptos', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros conceptos.' }] }];
 }

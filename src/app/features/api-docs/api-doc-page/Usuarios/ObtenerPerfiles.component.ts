@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilesComponent1750446219031 {
+export class ObtenerPerfilesComponent1750713395123 {
   pageTitle        = 'Obtener Perfiles';
   description      = `Método para obtener los perfiles que tiene asignado un usuario.`;
   pubName    = 'BTUsuarios.ObtenerPerfiles';

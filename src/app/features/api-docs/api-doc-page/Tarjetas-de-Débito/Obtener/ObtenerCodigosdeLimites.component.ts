@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCodigosdeLimitesComponent1750446218983 {
+export class ObtenerCodigosdeLimitesComponent1750713395010 {
   pageTitle        = 'Obtener Códigos de Límites';
   description      = `Método para obtener un listado de los códigos de límites disponibles para tarjetas de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCodigosDeLimites';

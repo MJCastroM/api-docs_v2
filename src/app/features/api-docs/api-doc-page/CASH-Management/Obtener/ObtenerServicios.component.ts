@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerServiciosComponent1750446218159 {
+export class ObtenerServiciosComponent1750713393223 {
   pageTitle        = 'Obtener Servicios';
   description      = `Método para obtener un listado de los servicios de CASH.`;
   pubName    = 'BTCASHManagement.ObtenerServicios';
@@ -240,5 +240,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTConvServicioCASH', fields: [{ Nombre: 'descServicio', Tipo: 'String', Comentarios: 'Descripción de servicios.' }, { Nombre: 'idContrato', Tipo: 'Long', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'tipoServicio', Tipo: 'String', Comentarios: 'Tipo de servicio.' }] }];
+  structuredTypes = [{ typeName: 'sBTConvServicioCASH', fields: [{ Nombre: 'descServicio', Tipo: 'String', Comentarios: 'Descripción de servicios.' }, { Nombre: 'idContrato', Tipo: 'Long', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'tipoServicio', Tipo: 'String', Comentarios: 'Tipo de servicio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }
