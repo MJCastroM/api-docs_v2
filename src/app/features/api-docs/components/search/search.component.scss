@@ -1,0 +1,72 @@
+@import 'variables';
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+
+  input {
+    padding: 0.5rem 1rem 0.5rem 2rem; // padding izquierdo para el ícono
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: $font-family;
+    background-color: $chat-grey;
+    border-radius: $border-radius;
+    position: relative;
+    color: darken($chat-grey, 40%);
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid $text-color; // o el color que quieras
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+  }
+
+  button {
+    padding: 0.3rem 0.7rem;
+    border: none;
+    background-color: $red-1;
+    color: white;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($red-1, 10%);
+    }
+  }
+
+  .snippet {
+    margin: 0.25em 0 1em;
+    font-style: italic;
+    color: #666;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #999;
+  pointer-events: none;
+  z-index: 1; // fuerza que quede adelante
+}
+
+.search-popup {
+  position: absolute;
+  margin-top: 2rem;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
+  max-height: 20rem;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,1);
+  border-radius: $border-radius;
+  padding: 1rem;
+  scrollbar-width: thin;
+}

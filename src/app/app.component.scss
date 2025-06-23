@@ -1,10 +1,5 @@
-.app-container {
-  height: 100vh;
-  mat-sidenav {
-    width: 240px;
-    background: #fff;
-  }
-}
+@import 'src/app/layout/sidebar/sidebar.component.scss';
+
 .page-container {
   opacity: 1;
 }

@@ -1,9 +1,14 @@
-$primary-color:    #c62828;
-$text-main:        #333;
-$background-light: #fdfdfe;
-$grey-header:      #e0e0e0;
-$shadow-light:     rgba(0,0,0,0.15);
-$border-radius:    1rem;
-$margin:           3rem 10rem;
+@import '~prismjs/themes/prism.css';
+@import 'variables';
 
-// ELEMENTO INICIAL
+// EJEMPLOS DE EJECUCIÓN
+
+::ng-deep .sdt-title {
+  // TÍTULO DEL EJEMPLO
+  margin: $margin-title-2;
+  font-size: 1.8rem;
+  font-family: $font-family;
+  font-weight: 700;
+  color: $text-color;
+  border-bottom: $title-underlined;
+}

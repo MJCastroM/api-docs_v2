@@ -4,11 +4,11 @@
 // EJEMPLOS DE EJECUCIÓN
 
 .example-title { // TÍTULO DEL EJEMPLO
-  margin: 2rem 14rem 0rem 14rem !important;
+  margin: $margin-title-2;
   font-size: 1.8rem;
   font-family: $font-family;
   font-weight: 700;
-  color: $text-main;
+  color: $text-color;
   border-bottom: $title-underlined;
 }
 
@@ -21,9 +21,9 @@
   height: auto;
   position: relative;
   overflow: hidden;
+  color: $text-color !important;
 
   button[mat-button] { // BOTONES DE CÓDIGO
-    color: $text-main;
     padding: 0.4rem 0.75rem;
     background: none;
     border-radius: 0.7rem 0.7rem 0 0;
@@ -61,6 +61,23 @@
   }
 }
 
+// PROPIEDADES DEL CÓDIGO
+
+::ng-deep pre[class*="language-"],
+::ng-deep code[class*="language-"] {
+  color: $text-color !important;
+
+  .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+    color:#e45649 !important;
+  }
+  .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.url, .token.inserted {
+      color: #b76b01 !important;
+  }
+
+  .token.atrule, .token.attr-value, .token.keyword {
+      color: #50a14f;
+  }
+}
 
 // --- Ahora nuestro override:
 pre[class*="language-"] {

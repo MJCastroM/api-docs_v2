@@ -1,0 +1,15 @@
+@import 'variables';
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.content-area {
+  margin-top: $navbar-height;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  scrollbar-color: $red-1 $grey-hover;
+  scrollbar-width: thin;
+}
