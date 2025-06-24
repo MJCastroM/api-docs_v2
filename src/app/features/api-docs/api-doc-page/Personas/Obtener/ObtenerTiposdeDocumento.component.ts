@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeDocumentoComponent1750446218794 {
+export class ObtenerTiposdeDocumentoComponent1750713394584 {
   pageTitle        = 'Obtener Tipos de Documento';
   description      = `Método para obtener un listado de los tipos de documento registrados.`;
   pubName    = 'BTPersonas.ObtenerTiposdeDocumento';
@@ -198,5 +198,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoDocumento', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de documento.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'tipoPersona', Tipo: 'String', Comentarios: 'Tipo de Persona (F/J).' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoDocumento', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de documento.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'tipoPersona', Tipo: 'String', Comentarios: 'Tipo de Persona (F/J).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

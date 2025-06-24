@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDolarUSAComponent1750446218371 {
+export class ObtenerDolarUSAComponent1750713393574 {
   pageTitle        = 'Obtener Dólar USA';
   description      = `Método para obtener los datos del dólar estadounidense.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDolarUSA';
@@ -109,5 +109,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTMoneda', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de moneda.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }] }];
+  structuredTypes = [{ typeName: 'sBTMoneda', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de moneda.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'simbolo', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

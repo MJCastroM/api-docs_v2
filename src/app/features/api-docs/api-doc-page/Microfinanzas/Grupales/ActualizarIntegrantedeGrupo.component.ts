@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarIntegrantedeGrupoComponent1750446218613 {
+export class ActualizarIntegrantedeGrupoComponent1750713394029 {
   pageTitle        = 'Actualizar Integrante de Grupo';
   description      = `Método para actualizar un integrante de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ActualizarIntegranteGrupo';
@@ -120,5 +120,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTIntegranteGrupo', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'cuenta', Tipo: 'String', Comentarios: 'Nombre de la cuenta.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del integrante.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de baja del integrante.' }, { Nombre: 'identificacionAlternativa', Tipo: 'String', Comentarios: 'Identificación alternativa del integrante.' }, { Nombre: 'tipoIntegrante', Tipo: 'String', Comentarios: 'Descripción del tipo de integrante.' }, { Nombre: 'tipoIntegranteId', Tipo: 'Short', Comentarios: 'Tipo de integrante a ser actualizado.' }] }];
+  structuredTypes = [{ typeName: 'sBTIntegranteGrupo', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'cuenta', Tipo: 'String', Comentarios: 'Nombre de la cuenta.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del integrante.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de baja del integrante.' }, { Nombre: 'identificacionAlternativa', Tipo: 'String', Comentarios: 'Identificación alternativa del integrante.' }, { Nombre: 'tipoIntegrante', Tipo: 'String', Comentarios: 'Descripción del tipo de integrante.' }, { Nombre: 'tipoIntegranteId', Tipo: 'Short', Comentarios: 'Tipo de integrante a ser actualizado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750446218991 {
+export class ObtenerLimitesComponent1750713395024 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerLimites';
@@ -119,5 +119,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTLimiteTarjeta', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Código de límite.' }, { Nombre: 'limiteBandaMagnetica', Tipo: 'Double', Comentarios: 'Monto límite en banda magnética.' }, { Nombre: 'limiteEMV', Tipo: 'Double', Comentarios: 'Monto límite EMV.' }, { Nombre: 'limiteNoPresencial', Tipo: 'Double', Comentarios: 'Monto límite no presencial.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Código de moneda.' }] }];
+  structuredTypes = [{ typeName: 'sBTLimiteTarjeta', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Código de límite.' }, { Nombre: 'limiteBandaMagnetica', Tipo: 'Double', Comentarios: 'Monto límite en banda magnética.' }, { Nombre: 'limiteEMV', Tipo: 'Double', Comentarios: 'Monto límite EMV.' }, { Nombre: 'limiteNoPresencial', Tipo: 'Double', Comentarios: 'Monto límite no presencial.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Código de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

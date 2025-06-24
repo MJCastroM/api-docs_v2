@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AcreditarEnCuentaComponent1750446218541 {
+export class AcreditarEnCuentaComponent1750713393835 {
   pageTitle        = 'Acreditar en Cuenta';
   description      = `Método para realizar una acreditación a una cuenta vista determinada.`;
   pubName    = 'BTCuentasVista.AcreditarEnCuenta ';
@@ -168,5 +168,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosAcreditarDebitar', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'concepto1', Tipo: 'String', Comentarios: 'Concepto 1 del movimiento.' }, { Nombre: 'concepto2', Tipo: 'String', Comentarios: 'Concepto 2 del movimiento.' }, { Nombre: 'concepto3', Tipo: 'String', Comentarios: 'Concepto 3 del movimiento.' }, { Nombre: 'concepto4', Tipo: 'String', Comentarios: 'Concepto 4 del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosAcreditarDebitar', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'concepto1', Tipo: 'String', Comentarios: 'Concepto 1 del movimiento.' }, { Nombre: 'concepto2', Tipo: 'String', Comentarios: 'Concepto 2 del movimiento.' }, { Nombre: 'concepto3', Tipo: 'String', Comentarios: 'Concepto 3 del movimiento.' }, { Nombre: 'concepto4', Tipo: 'String', Comentarios: 'Concepto 4 del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

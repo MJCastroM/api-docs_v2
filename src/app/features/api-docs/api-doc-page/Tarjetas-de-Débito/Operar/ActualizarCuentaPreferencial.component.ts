@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCuentaPreferencialComponent1750446218998 {
+export class ActualizarCuentaPreferencialComponent1750713395045 {
   pageTitle        = 'Actualizar Cuenta Preferencial';
   description      = `Método para actualizar la cuenta preferencial de tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarCuentaPreferencial';

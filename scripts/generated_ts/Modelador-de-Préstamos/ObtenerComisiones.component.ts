@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionesComponent1750446218655 {
+export class ObtenerComisionesComponent1750713394114 {
   pageTitle        = 'Obtener Comisiones';
   description      = `Método para obtener las comisiones parametrizadas de un producto de préstamos.`;
   pubName    = 'BTModeladorPrestamos.ObtenerComisiones';
@@ -131,5 +131,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTComisionPrestamo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de comisión.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la comisión.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe de la comisión.' }, { Nombre: 'porcentaje', Tipo: 'Double', Comentarios: 'Porcentaje de comisión.' }] }];
+  structuredTypes = [{ typeName: 'sBTComisionPrestamo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de comisión.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la comisión.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe de la comisión.' }, { Nombre: 'porcentaje', Tipo: 'Double', Comentarios: 'Porcentaje de comisión.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

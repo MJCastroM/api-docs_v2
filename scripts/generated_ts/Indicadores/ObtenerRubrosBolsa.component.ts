@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRubrosBolsaComponent1750446218601 {
+export class ObtenerRubrosBolsaComponent1750713393991 {
   pageTitle        = 'Obtener Rubros Bolsa';
   description      = `Método para obtener posibles rubros de bolsa ingresados en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerRubrosBolsa';
@@ -148,5 +148,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTRubroBolsa', fields: [{ Nombre: 'cuentaCliente', Tipo: 'Int', Comentarios: 'Cuenta cliente.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre del rubro.' }, { Nombre: 'empresa', Tipo: 'Int', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moneda', Tipo: 'Int', Comentarios: 'Identificador de moneda.' }, { Nombre: 'nombreEmpresa', Tipo: 'String', Comentarios: 'Nombre de la empresa.' }, { Nombre: 'nombrePapel', Tipo: 'String', Comentarios: 'Nombre del papel.' }, { Nombre: 'nombreSucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'ocurrencias', Tipo: 'Int', Comentarios: 'Ocurrencias.' }, { Nombre: 'operacion', Tipo: 'Int', Comentarios: 'Identificador de operación.' }, { Nombre: 'papel', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'rubro', Tipo: 'Int', Comentarios: 'Número de rubro.' }, { Nombre: 'signoMoneda', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'subOperacion', Tipo: 'Int', Comentarios: 'Identificador de sub operación.' }, { Nombre: 'sucursal', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'tipoOperacion', Tipo: 'Int', Comentarios: 'Identificador de tipo de operación.' }] }];
+  structuredTypes = [{ typeName: 'sBTRubroBolsa', fields: [{ Nombre: 'cuentaCliente', Tipo: 'Int', Comentarios: 'Cuenta cliente.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Nombre del rubro.' }, { Nombre: 'empresa', Tipo: 'Int', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moneda', Tipo: 'Int', Comentarios: 'Identificador de moneda.' }, { Nombre: 'nombreEmpresa', Tipo: 'String', Comentarios: 'Nombre de la empresa.' }, { Nombre: 'nombrePapel', Tipo: 'String', Comentarios: 'Nombre del papel.' }, { Nombre: 'nombreSucursal', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'ocurrencias', Tipo: 'Int', Comentarios: 'Ocurrencias.' }, { Nombre: 'operacion', Tipo: 'Int', Comentarios: 'Identificador de operación.' }, { Nombre: 'papel', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'rubro', Tipo: 'Int', Comentarios: 'Número de rubro.' }, { Nombre: 'signoMoneda', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'subOperacion', Tipo: 'Int', Comentarios: 'Identificador de sub operación.' }, { Nombre: 'sucursal', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'tipoOperacion', Tipo: 'Int', Comentarios: 'Identificador de tipo de operación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750446218838 {
+export class ContratarComponent1750713394686 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un préstamo amortizable.`;
   pubName    = 'BTPrestamos.Contratar';

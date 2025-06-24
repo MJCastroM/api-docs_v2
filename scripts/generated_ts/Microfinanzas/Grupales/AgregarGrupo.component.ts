@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarGrupoComponent1750446218613 {
+export class AgregarGrupoComponent1750713394032 {
   pageTitle        = 'Agregar Grupo';
   description      = `Método para agregar un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.AgregarGrupo';
@@ -138,5 +138,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDetalleGrupo', fields: [{ Nombre: 'agencia', Tipo: 'String', Comentarios: 'Agencia.' }, { Nombre: 'agenciaId', Tipo: 'Int', Comentarios: 'Identificador de agencia.' }, { Nombre: 'asesor', Tipo: 'String', Comentarios: 'Asesor del grupo.' }, { Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del asesor del grupo.' }, { Nombre: 'bloqueado', Tipo: 'String', Comentarios: '¿Está bloqueado? (S/N).' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del grupo.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha comienzo vigencia.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha fin vigencia.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del grupo.' }, { Nombre: 'nombreExtendido', Tipo: 'String', Comentarios: 'Nombre extendido del grupo.' }, { Nombre: 'nroSecuencia', Tipo: 'Int', Comentarios: 'Número de secuencia.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de grupo.' }, { Nombre: 'tipoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de grupo.' }, { Nombre: 'usuarioAlta', Tipo: 'String', Comentarios: 'Usuario de alta del grupo.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: '¿Es vigente? (S/N).' }] }];
+  structuredTypes = [{ typeName: 'sBTDetalleGrupo', fields: [{ Nombre: 'agencia', Tipo: 'String', Comentarios: 'Agencia.' }, { Nombre: 'agenciaId', Tipo: 'Int', Comentarios: 'Identificador de agencia.' }, { Nombre: 'asesor', Tipo: 'String', Comentarios: 'Asesor del grupo.' }, { Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del asesor del grupo.' }, { Nombre: 'bloqueado', Tipo: 'String', Comentarios: '¿Está bloqueado? (S/N).' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del grupo.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha comienzo vigencia.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha fin vigencia.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del grupo.' }, { Nombre: 'nombreExtendido', Tipo: 'String', Comentarios: 'Nombre extendido del grupo.' }, { Nombre: 'nroSecuencia', Tipo: 'Int', Comentarios: 'Número de secuencia.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de grupo.' }, { Nombre: 'tipoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de grupo.' }, { Nombre: 'usuarioAlta', Tipo: 'String', Comentarios: 'Usuario de alta del grupo.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: '¿Es vigente? (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCondicionesGeneralesComponent1750446218597 {
+export class ObtenerCondicionesGeneralesComponent1750713393981 {
   pageTitle        = 'Obtener Condiciones Generales';
   description      = `Método para obtener las condiciones generales ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerCondicionesGenerales';
@@ -132,5 +132,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCondicionesGenerales', fields: [{ Nombre: 'cantidadPAE', Tipo: 'Int', Comentarios: 'Cantidad PAE.' }, { Nombre: 'cantidadReglas', Tipo: 'Int', Comentarios: 'Cantidad reglas.' }, { Nombre: 'debug', Tipo: 'String', Comentarios: 'Opción debug.' }, { Nombre: 'empresasIguales', Tipo: 'String', Comentarios: 'Empresas iguales.' }, { Nombre: 'fechaApertura', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaAperturaCanales', Tipo: 'Date', Comentarios: 'Fecha de apertura de canales.' }, { Nombre: 'fechaCierre', Tipo: 'Date', Comentarios: 'Fecha de cierre.' }, { Nombre: 'fechaCierreCanales', Tipo: 'Date', Comentarios: 'Fecha de cierre de canales.' }, { Nombre: 'opcion7x24', Tipo: 'String', Comentarios: 'Opción 7x24.' }, { Nombre: 'opcionPAE', Tipo: 'String', Comentarios: 'Opción PAE.' }, { Nombre: 'opcionWorkFlow', Tipo: 'String', Comentarios: 'Opción Workflow.' }, { Nombre: 'parametrosGeneralesWF', Tipo: 'String', Comentarios: 'Parámetros Generales de Workflow.' }, { Nombre: 'periodo7x24', Tipo: 'String', Comentarios: 'Periodo 7x24.' }, { Nombre: 'reglasNegocio', Tipo: 'String', Comentarios: 'Opción reglas de negocio.' }] }];
+  structuredTypes = [{ typeName: 'sBTCondicionesGenerales', fields: [{ Nombre: 'cantidadPAE', Tipo: 'Int', Comentarios: 'Cantidad PAE.' }, { Nombre: 'cantidadReglas', Tipo: 'Int', Comentarios: 'Cantidad reglas.' }, { Nombre: 'debug', Tipo: 'String', Comentarios: 'Opción debug.' }, { Nombre: 'empresasIguales', Tipo: 'String', Comentarios: 'Empresas iguales.' }, { Nombre: 'fechaApertura', Tipo: 'Date', Comentarios: 'Fecha de apertura.' }, { Nombre: 'fechaAperturaCanales', Tipo: 'Date', Comentarios: 'Fecha de apertura de canales.' }, { Nombre: 'fechaCierre', Tipo: 'Date', Comentarios: 'Fecha de cierre.' }, { Nombre: 'fechaCierreCanales', Tipo: 'Date', Comentarios: 'Fecha de cierre de canales.' }, { Nombre: 'opcion7x24', Tipo: 'String', Comentarios: 'Opción 7x24.' }, { Nombre: 'opcionPAE', Tipo: 'String', Comentarios: 'Opción PAE.' }, { Nombre: 'opcionWorkFlow', Tipo: 'String', Comentarios: 'Opción Workflow.' }, { Nombre: 'parametrosGeneralesWF', Tipo: 'String', Comentarios: 'Parámetros Generales de Workflow.' }, { Nombre: 'periodo7x24', Tipo: 'String', Comentarios: 'Periodo 7x24.' }, { Nombre: 'reglasNegocio', Tipo: 'String', Comentarios: 'Opción reglas de negocio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

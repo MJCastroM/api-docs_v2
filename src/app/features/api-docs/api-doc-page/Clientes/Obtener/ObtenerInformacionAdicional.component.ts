@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionAdicionalComponent1750446218267 {
+export class ObtenerInformacionAdicionalComponent1750713393434 {
   pageTitle        = 'Obtener Información Adicional';
   description      = `Método para obtener la información adicional de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerInformacionAdicional';
@@ -123,5 +123,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de información adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de información adicional.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatoLista', fields: [{ Nombre: 'clave', Tipo: 'String', Comentarios: 'Identificador de información adicional.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de información adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

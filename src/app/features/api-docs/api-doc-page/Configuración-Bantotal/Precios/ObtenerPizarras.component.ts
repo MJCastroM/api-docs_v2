@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarrasComponent1750446218400 {
+export class ObtenerPizarrasComponent1750713393626 {
   pageTitle        = 'Obtener Pizarras';
   description      = `Método para obtener un listado de los tipos de pizarras ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPizarras';

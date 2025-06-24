@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaHabienteComponent1750446218994 {
+export class ObtenerTarjetaHabienteComponent1750713395035 {
   pageTitle        = 'Obtener Tarjeta Habiente';
   description      = `Método para obtener el habiente de una tarjeta.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetaHabiente';
@@ -115,5 +115,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTitularTarjeta', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'País del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo de documento.' }] }];
+  structuredTypes = [{ typeName: 'sBTTitularTarjeta', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'País del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo de documento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

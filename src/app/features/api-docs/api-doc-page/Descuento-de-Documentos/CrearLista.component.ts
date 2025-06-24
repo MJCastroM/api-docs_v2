@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearListaComponent1750446218591 {
+export class CrearListaComponent1750713393962 {
   pageTitle        = 'Crear Lista';
   description      = `Método para crear una lista de documentos a descontar.`;
   pubName    = 'BTDescuentoDocumentos.CrearLista';
@@ -136,5 +136,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDescuentoDocumento', fields: [{ Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento.' }, { Nombre: 'fechaVto', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'identificacion', Tipo: 'String', Comentarios: 'Identificador del documento.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona titular del documento.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa a aplicar al documento.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono.' }] }];
+  structuredTypes = [{ typeName: 'sBTDescuentoDocumento', fields: [{ Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento.' }, { Nombre: 'fechaVto', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'identificacion', Tipo: 'String', Comentarios: 'Identificador del documento.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona titular del documento.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa a aplicar al documento.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

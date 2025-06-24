@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarCuotaTercerosComponent1750446218928 {
+export class PagarCuotaTercerosComponent1750713394851 {
   pageTitle        = 'Pagar Cuota Terceros';
   description      = `Método para realizar el pago de cuota de un préstamo con una cuenta de cobro de terceros.`;
   pubName    = 'BTPrestamos.PagarCuotaTerceros';

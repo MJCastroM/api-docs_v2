@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarListasInhabilitadosComponent1750446218811 {
+export class ValidarListasInhabilitadosComponent1750713394623 {
   pageTitle        = 'Validar Listas Inhabilitados';
   description      = `Método para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: país, tipo de documento y número de documento, o primer nombre y primer apellido)`;
   pubName    = 'BTPersonas.ValidarListasInhabilitados';
@@ -138,5 +138,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTListaInhabilitados', fields: [{ Nombre: 'bloqueante', Tipo: 'String', Comentarios: '¿Es bloqueante? (S/N).' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de lista de inhabilitados.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de lista de inhabilitados.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha en que la persona ingresa a la lista de inhabilitados.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha en que la persona deja de pertenecer a la lista.' }] }];
+  structuredTypes = [{ typeName: 'sBTListaInhabilitados', fields: [{ Nombre: 'bloqueante', Tipo: 'String', Comentarios: '¿Es bloqueante? (S/N).' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de lista de inhabilitados.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de lista de inhabilitados.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha en que la persona ingresa a la lista de inhabilitados.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha en que la persona deja de pertenecer a la lista.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

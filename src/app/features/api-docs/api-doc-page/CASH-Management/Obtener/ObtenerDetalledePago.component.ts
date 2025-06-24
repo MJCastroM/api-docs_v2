@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePagoComponent1750446218150 {
+export class ObtenerDetalledePagoComponent1750713393208 {
   pageTitle        = 'Obtener Detalle de Pago';
   description      = `Método para obtener la información de líneas de detalle de pago.`;
   pubName    = 'BTCASHManagement.ObtenerDetallePago';
@@ -218,5 +218,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDetallePago', fields: [{ Nombre: 'beneficiarioBanco', Tipo: 'String', Comentarios: 'Banco del Beneficiario.' }, { Nombre: 'beneficiarioCuenta', Tipo: 'String', Comentarios: 'Cuenta del Beneficiario.' }, { Nombre: 'beneficiarioId', Tipo: 'String', Comentarios: 'Identificador de Beneficiario.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la línea.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de Pago o Cobro.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la línea.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del Beneficiario de Pago.' }] }];
+  structuredTypes = [{ typeName: 'sBTDetallePago', fields: [{ Nombre: 'beneficiarioBanco', Tipo: 'String', Comentarios: 'Banco del Beneficiario.' }, { Nombre: 'beneficiarioCuenta', Tipo: 'String', Comentarios: 'Cuenta del Beneficiario.' }, { Nombre: 'beneficiarioId', Tipo: 'String', Comentarios: 'Identificador de Beneficiario.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la línea.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de Pago o Cobro.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la línea.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del Beneficiario de Pago.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

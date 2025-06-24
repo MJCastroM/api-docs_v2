@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarProfesionComponent1750446218710 {
+export class ActualizarProfesionComponent1750713394285 {
   pageTitle        = 'Actualizar Profesión';
   description      = `Método para actualizar la profesión de una persona física.`;
   pubName    = 'BTPersonas.ActualizarProfesion';

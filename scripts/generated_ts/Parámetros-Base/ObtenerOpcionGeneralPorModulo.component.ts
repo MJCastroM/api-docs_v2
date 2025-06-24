@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneralPorModuloComponent1750446218696 {
+export class ObtenerOpcionGeneralPorModuloComponent1750713394247 {
   pageTitle        = 'Obtener Opción General Por Módulo';
   description      = `Método para obtener los datos de una opción general de un determinado módulo.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralPorModulo';
@@ -113,5 +113,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOpcionGeneral', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la opción general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Código de la opción general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opción general de procesos (S/N).' }] }];
+  structuredTypes = [{ typeName: 'sBTOpcionGeneral', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la opción general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Código de la opción general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opción general de procesos (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

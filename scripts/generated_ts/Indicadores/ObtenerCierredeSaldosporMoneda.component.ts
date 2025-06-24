@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCierredeSaldosporMonedaComponent1750446218596 {
+export class ObtenerCierredeSaldosporMonedaComponent1750713393978 {
   pageTitle        = 'Obtener Cierre de Saldos por Moneda';
   description      = `Método para obtener el cierre de saldos por moneda.`;
   pubName    = 'BTIndicadores.ObtenerCierreSaldosPorMoneda';
@@ -190,5 +190,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTBalanceMonedaSaldo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'saldo', Tipo: 'Int', Comentarios: 'Saldo de cierre de moneda.' }, { Nombre: 'signo', Tipo: 'String', Comentarios: 'Signo de moneda.' }] }];
+  structuredTypes = [{ typeName: 'sBTBalanceMonedaSaldo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de la moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'saldo', Tipo: 'Int', Comentarios: 'Saldo de cierre de moneda.' }, { Nombre: 'signo', Tipo: 'String', Comentarios: 'Signo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

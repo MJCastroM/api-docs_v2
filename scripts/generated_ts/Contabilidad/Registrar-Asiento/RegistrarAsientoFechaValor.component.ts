@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoFechaValorComponent1750446218430 {
+export class RegistrarAsientoFechaValorComponent1750713393690 {
   pageTitle        = 'Registrar Asiento Fecha Valor';
   description      = `Método para registrar en el sistema un asiento a una fecha valor determinada.`;
   pubName    = 'BTContabilidad.RegistrarAsientoFechaValor';
@@ -137,5 +137,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosAsiento', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'importe5', Tipo: 'Double', Comentarios: 'Importe 5 del movimiento.' }, { Nombre: 'importe6', Tipo: 'Double', Comentarios: 'Importe 6 del movimiento.' }, { Nombre: 'importe7', Tipo: 'Double', Comentarios: 'Importe 7 del movimiento.' }, { Nombre: 'importe8', Tipo: 'Double', Comentarios: 'Importe 8 del movimiento.' }, { Nombre: 'operacionUId1', Tipo: 'Long', Comentarios: 'Identificador único de operación 1.' }, { Nombre: 'operacionUId2', Tipo: 'Long', Comentarios: 'Identificador único de operación 2.' }, { Nombre: 'operacionUId3', Tipo: 'Long', Comentarios: 'Identificador único de operación 3.' }, { Nombre: 'operacionUId4', Tipo: 'Long', Comentarios: 'Identificador único de operación 4.' }, { Nombre: 'operacionUId5', Tipo: 'Long', Comentarios: 'Identificador único de operación 5.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosAsiento', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del movimiento.' }, { Nombre: 'importe1', Tipo: 'Double', Comentarios: 'Importe 1 del movimiento.' }, { Nombre: 'importe2', Tipo: 'Double', Comentarios: 'Importe 2 del movimiento.' }, { Nombre: 'importe3', Tipo: 'Double', Comentarios: 'Importe 3 del movimiento.' }, { Nombre: 'importe4', Tipo: 'Double', Comentarios: 'Importe 4 del movimiento.' }, { Nombre: 'importe5', Tipo: 'Double', Comentarios: 'Importe 5 del movimiento.' }, { Nombre: 'importe6', Tipo: 'Double', Comentarios: 'Importe 6 del movimiento.' }, { Nombre: 'importe7', Tipo: 'Double', Comentarios: 'Importe 7 del movimiento.' }, { Nombre: 'importe8', Tipo: 'Double', Comentarios: 'Importe 8 del movimiento.' }, { Nombre: 'operacionUId1', Tipo: 'Long', Comentarios: 'Identificador único de operación 1.' }, { Nombre: 'operacionUId2', Tipo: 'Long', Comentarios: 'Identificador único de operación 2.' }, { Nombre: 'operacionUId3', Tipo: 'Long', Comentarios: 'Identificador único de operación 3.' }, { Nombre: 'operacionUId4', Tipo: 'Long', Comentarios: 'Identificador único de operación 4.' }, { Nombre: 'operacionUId5', Tipo: 'Long', Comentarios: 'Identificador único de operación 5.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

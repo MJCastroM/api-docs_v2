@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDocumentoDigitalComponent1750446218043 {
+export class ActualizarDocumentoDigitalComponent1750713393017 {
   pageTitle        = 'Actualizar Documento Digital';
   description      = `Método para actualizar un documento digital para un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.ActualizarDocumentoDigital';

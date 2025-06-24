@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTextoComponent1750446218360 {
+export class ObtenerTiposdeTextoComponent1750713393560 {
   pageTitle        = 'Obtener Tipos de Texto';
   description      = `Método para obtener un listado de los tipos de texto ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeTexto';
@@ -220,5 +220,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoTexto', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de texto.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de tipo de texto.' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoTexto', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de texto.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de tipo de texto.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

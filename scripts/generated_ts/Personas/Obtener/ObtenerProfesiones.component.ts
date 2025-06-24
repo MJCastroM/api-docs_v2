@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionesComponent1750446218788 {
+export class ObtenerProfesionesComponent1750713394567 {
   pageTitle        = 'Obtener Profesiones';
   description      = `Método para obtener un listado de las profesiones registradas.`;
   pubName    = 'BTPersonas.ObtenerProfesiones';
@@ -220,5 +220,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTProfesion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de profesión.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de profesión.' }] }];
+  structuredTypes = [{ typeName: 'sBTProfesion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de profesión.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de profesión.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

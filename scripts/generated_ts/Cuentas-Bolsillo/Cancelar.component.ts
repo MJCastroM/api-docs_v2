@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750446218431 {
+export class CancelarComponent1750713393692 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la liquidación y cierre de una cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.Cancelar';

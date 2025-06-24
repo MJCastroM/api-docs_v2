@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesPrincipalesComponent1750446218338 {
+export class ObtenerSucursalesPrincipalesComponent1750713393528 {
   pageTitle        = 'Obtener Sucursales Principales';
   description      = `Método para obtener un listado de las sucursales principales.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerSucursalesPrincipales';
@@ -137,5 +137,5 @@ curl -X POST \
 \'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Dirección de sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Long', Comentarios: 'Latitud de sucursal.' }, { Nombre: 'longitud', Tipo: 'Long', Comentarios: 'Longitud de sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono de sucursal.' }] }];
+  structuredTypes = [{ typeName: 'sBTSucursal', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de sucursal.' }, { Nombre: 'direccion', Tipo: 'String', Comentarios: 'Dirección de sucursal.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'latitud', Tipo: 'Long', Comentarios: 'Latitud de sucursal.' }, { Nombre: 'longitud', Tipo: 'Long', Comentarios: 'Longitud de sucursal.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono de sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

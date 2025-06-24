@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasComponent1750446218378 {
+export class ObtenerMonedasComponent1750713393586 {
   pageTitle        = 'Obtener Monedas';
   description      = `Método para obtener un listado de las monedas ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerMonedas';

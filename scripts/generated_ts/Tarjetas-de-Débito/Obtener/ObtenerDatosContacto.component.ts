@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosContactoComponent1750446218989 {
+export class ObtenerDatosContactoComponent1750713395016 {
   pageTitle        = 'Obtener Datos de Contacto';
   description      = `Método para obtener los datos de contacto de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerDatosContacto';
@@ -114,5 +114,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosContacto', fields: [{ Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Teléfono.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosContacto', fields: [{ Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Teléfono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

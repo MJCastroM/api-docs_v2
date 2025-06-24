@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldosBloqueadosComponent1750446218541 {
+export class ObtenerSaldosBloqueadosComponent1750713393833 {
   pageTitle        = 'Obtener Saldos Bloqueados';
   description      = `Método para obtener los saldos bloqueados de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldosBloqueados';
@@ -132,5 +132,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTBloqueoSaldo', fields: [{ Nombre: 'bloqueoId', Tipo: 'Long', Comentarios: 'Identificador del bloqueo.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'motivo', Tipo: 'String', Comentarios: 'Motivo.' }] }];
+  structuredTypes = [{ typeName: 'sBTBloqueoSaldo', fields: [{ Nombre: 'bloqueoId', Tipo: 'Long', Comentarios: 'Identificador del bloqueo.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'motivo', Tipo: 'String', Comentarios: 'Motivo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeViviendaComponent1750446218397 {
+export class ObtenerTiposdeViviendaComponent1750713393620 {
   pageTitle        = 'Obtener Tipos de Vivienda';
   description      = `Método para obtener un listado de los tipos de vivienda ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeVivienda';
@@ -151,5 +151,5 @@ export class ObtenerTiposdeViviendaComponent1750446218397 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoDeVivienda', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de vivienda.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de vivienda.' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoDeVivienda', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de vivienda.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de vivienda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

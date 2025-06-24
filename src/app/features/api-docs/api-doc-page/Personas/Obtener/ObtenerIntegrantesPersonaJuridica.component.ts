@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesPersonaJuridicaComponent1750446218777 {
+export class ObtenerIntegrantesPersonaJuridicaComponent1750713394538 {
   pageTitle        = 'Obtener Integrantes Persona Jurídica';
   description      = `Método para obtener un listado de los integrantes de una persona jurídica.`;
   pubName    = 'BTPersonas.ObtenerIntegrantesPersonaJuridica';
@@ -131,5 +131,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTIntegranteJuridico', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre del país.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador del país.' }, { Nombre: 'participacion', Tipo: 'Double', Comentarios: 'Porcentaje de participación del integrante.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'vinculo', Tipo: 'String', Comentarios: 'Descripción del vínculo.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador de vínculo.' }] }];
+  structuredTypes = [{ typeName: 'sBTIntegranteJuridico', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la persona.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre del país.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador del país.' }, { Nombre: 'participacion', Tipo: 'Double', Comentarios: 'Porcentaje de participación del integrante.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'vinculo', Tipo: 'String', Comentarios: 'Descripción del vínculo.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador de vínculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

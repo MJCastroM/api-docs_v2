@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresasOriginantesComponent1750446218098 {
+export class ObtenerEmpresasOriginantesComponent1750713393116 {
   pageTitle        = 'Obtener Empresas Originantes';
   description      = `Método para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.`;
   pubName    = 'BTSNP.ObtenerEmpresasOriginantes';
@@ -150,5 +150,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEmpresaOriginante', fields: [{ Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'prestaciones', Tipo: '[sBTPrestacion](#sbtprestacion)', Comentarios: 'Listado de prestaciones.' }] }, { typeName: 'sBTPrestacion', fields: [{ Nombre: 'codigo', Tipo: 'String', Comentarios: 'Código identificador de la prestación.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la prestación.' }] }];
+  structuredTypes = [{ typeName: 'sBTEmpresaOriginante', fields: [{ Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'prestaciones', Tipo: '[sBTPrestacion](#sbtprestacion)', Comentarios: 'Listado de prestaciones.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTPrestacion', fields: [{ Nombre: 'codigo', Tipo: 'String', Comentarios: 'Código identificador de la prestación.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la prestación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

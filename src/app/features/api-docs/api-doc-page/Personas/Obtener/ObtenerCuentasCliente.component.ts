@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasClienteComponent1750446218759 {
+export class ObtenerCuentasClienteComponent1750713394447 {
   pageTitle        = 'Obtener Cuentas Cliente';
   description      = `Método para obtener un listado de las cuentas de una persona.`;
   pubName    = 'BTPersonas.ObtenerCuentasCliente';
@@ -140,5 +140,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCuentaCliente', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cuenta.' }, { Nombre: 'representativo', Tipo: 'String', Comentarios: 'Indica si es titular representativo (S/N).' }, { Nombre: 'titularidad', Tipo: '[sBTTipoIntegrante](#sbttipointegrante)', Comentarios: 'Datos de tipo de integrante.' }, { Nombre: '### sBTTipoIntegrante', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del integrante.' }] }];
+  structuredTypes = [{ typeName: 'sBTCuentaCliente', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cuenta.' }, { Nombre: 'representativo', Tipo: 'String', Comentarios: 'Indica si es titular representativo (S/N).' }, { Nombre: 'titularidad', Tipo: '[sBTTipoIntegrante](#sbttipointegrante)', Comentarios: 'Datos de tipo de integrante.' }] }, { typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del integrante.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

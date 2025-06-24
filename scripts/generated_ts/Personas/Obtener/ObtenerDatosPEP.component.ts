@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPEPComponent1750446218761 {
+export class ObtenerDatosPEPComponent1750713394453 {
   pageTitle        = 'Obtener Datos PEP';
   description      = `Método para obtener los datos de una persona expuesta políticamente.`;
   pubName    = 'BTPersonas.ObtenerDatosPEP';
@@ -105,5 +105,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosPEP', fields: [{ Nombre: 'cargoRelacion', Tipo: 'String', Comentarios: 'Cargo que ocupa.' }, { Nombre: 'entidad', Tipo: 'String', Comentarios: 'Entidad.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio.' }, { Nombre: 'fechaSalida', Tipo: 'Date', Comentarios: 'Fecha de salida.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosPEP', fields: [{ Nombre: 'cargoRelacion', Tipo: 'String', Comentarios: 'Cargo que ocupa.' }, { Nombre: 'entidad', Tipo: 'String', Comentarios: 'Entidad.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio.' }, { Nombre: 'fechaSalida', Tipo: 'Date', Comentarios: 'Fecha de salida.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

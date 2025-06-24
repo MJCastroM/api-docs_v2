@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesComponent1750446219040 {
+export class ObtenerRolesComponent1750713395137 {
   pageTitle        = 'Obtener Roles';
   description      = `Método para obtener un listado de los roles de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerRoles ';
@@ -536,5 +536,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTRolWF', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del rol.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del rol.' }] }];
+  structuredTypes = [{ typeName: 'sBTRolWF', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del rol.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del rol.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

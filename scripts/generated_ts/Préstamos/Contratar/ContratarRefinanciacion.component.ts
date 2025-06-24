@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionComponent1750446218841 {
+export class ContratarRefinanciacionComponent1750713394691 {
   pageTitle        = 'Contratar Refinanciación';
   description      = `Método para contratar la refinanciación de un préstamo.`;
   pubName    = 'BTPrestamos.ContratarRefinanciacion';

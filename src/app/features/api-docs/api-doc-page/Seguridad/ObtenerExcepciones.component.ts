@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerExcepcionesComponent1750446218970 {
+export class ObtenerExcepcionesComponent1750713394976 {
   pageTitle        = 'Obtener Excepciones';
   description      = `Método para obtener un listado de las excepciones por usuario.`;
   pubName    = 'BTSeguridad.ObtenerExcepciones';

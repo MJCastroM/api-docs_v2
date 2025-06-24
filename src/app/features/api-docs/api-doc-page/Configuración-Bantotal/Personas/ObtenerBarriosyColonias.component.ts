@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBarriosyColoniasComponent1750446218383 {
+export class ObtenerBarriosyColoniasComponent1750713393600 {
   pageTitle        = 'Obtener Barrios y Colonias';
   description      = `Método para obtener un listado de los barrios/colonias ingresados en Bantotal para una determinada ciudad de un país.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerBarriosColonias';
@@ -199,5 +199,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTBarrio', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de barrio.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de barrio.' }] }];
+  structuredTypes = [{ typeName: 'sBTBarrio', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripcion de barrio.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de barrio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

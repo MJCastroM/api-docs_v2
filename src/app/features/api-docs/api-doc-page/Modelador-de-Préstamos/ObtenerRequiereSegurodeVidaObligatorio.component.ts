@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRequiereSegurodeVidaObligatorioComponent1750446218662 {
+export class ObtenerRequiereSegurodeVidaObligatorioComponent1750713394137 {
   pageTitle        = 'Obtener Requiere Seguro de Vida Obligatorio';
   description      = `Método para obtener si un producto de préstamo requiere seguro de vida obligatorio.`;
   pubName    = 'BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio';

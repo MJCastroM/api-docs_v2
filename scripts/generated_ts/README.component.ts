@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class READMEComponent1750446218963 {
+export class READMEComponent1750713394957 {
   pageTitle        = 'Novedades Release Mayo 2025';
   description      = ``;
   pubName    = '';

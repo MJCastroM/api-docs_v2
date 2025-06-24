@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarChequeraComponent1750446218449 {
+export class EliminarChequeraComponent1750713393736 {
   pageTitle        = 'Eliminar Chequera';
   description      = `Método para eliminar una chequera.`;
   pubName    = 'BTCuentasCorrientes.EliminarChequera';

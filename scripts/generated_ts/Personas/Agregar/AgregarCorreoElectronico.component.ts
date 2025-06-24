@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarCorreoElectronicoComponent1750446218719 {
+export class AgregarCorreoElectronicoComponent1750713394327 {
   pageTitle        = 'Agregar Correo Electrónico';
   description      = `Método para agregar un correo electrónico a una persona.`;
   pubName    = 'BTPersonas.AgregarCorreoElectronico';
@@ -112,5 +112,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCorreoElectronico', fields: [{ Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo de correo electrónico.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }] }];
+  structuredTypes = [{ typeName: 'sBTCorreoElectronico', fields: [{ Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo de correo electrónico.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

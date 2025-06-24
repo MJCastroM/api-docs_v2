@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosProvinciasyDepartamentosComponent1750446218390 {
+export class ObtenerEstadosProvinciasyDepartamentosComponent1750713393608 {
   pageTitle        = 'Obtener Estados, Provincias y Departamentos';
   description      = `Método para obtener un listado de los estados/provincias/departamentos ingresados en Bantotal para un determinado país.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos';
@@ -262,5 +262,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstado', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de estado.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de estado.' }] }];
+  structuredTypes = [{ typeName: 'sBTEstado', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de estado.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de estado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaDestinoComponent1750446218050 {
+export class ModificarCuentaDestinoComponent1750713393033 {
   pageTitle        = 'Modificar Cuenta Destino';
   description      = `Método para modificar la cuenta destino donde se acreditarán los ahorros al vencimiento.`;
   pubName    = 'BTAhorroProgramado.ModificarCuentaDestino';

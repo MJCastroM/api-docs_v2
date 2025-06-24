@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ReversarDebitosComponent1750446218101 {
+export class ReversarDebitosComponent1750713393121 {
   pageTitle        = 'Reversar Débitos';
   description      = `Método para solicitar el reverso de un débito indicado.`;
   pubName    = 'BTSNP.ReversarDebitos';

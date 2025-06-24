@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDePEPComponent1750446218796 {
+export class ObtenerTiposDePEPComponent1750713394589 {
   pageTitle        = 'Obtener Tipos de PEP';
   description      = `Método para obtener los tipos de personas expuestas políticamente.`;
   pubName    = 'BTPersonas.ObtenerTiposDePEP';
@@ -140,5 +140,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTiposPEP', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de PEP.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de PEP.' }] }];
+  structuredTypes = [{ typeName: 'sBTTiposPEP', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de PEP.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de PEP.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

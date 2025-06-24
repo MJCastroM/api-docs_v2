@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodoEntreCuotasComponent1750446218660 {
+export class ObtenerPeriodoEntreCuotasComponent1750713394129 {
   pageTitle        = 'Obtener Período Entre Cuotas';
   description      = `Método para obtener los períodos entre cuotas parametrizados de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerPeriodoEntreCuotas';
@@ -125,5 +125,5 @@ export class ObtenerPeriodoEntreCuotasComponent1750446218660 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValor', fields: [{ Nombre: 'valor', Tipo: 'Long', Comentarios: 'Valor de período de cuotas.' }] }];
+  structuredTypes = [{ typeName: 'sBTValor', fields: [{ Nombre: 'valor', Tipo: 'Long', Comentarios: 'Valor de período de cuotas.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

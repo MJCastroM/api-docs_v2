@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConfirmarListaComponent1750446218590 {
+export class ConfirmarListaComponent1750713393959 {
   pageTitle        = 'Confirmar Lista';
   description      = `Método para confirmar y contabilizar una lista de documentos.`;
   pubName    = 'BTDescuentoDocumentos.ConfirmarLista';

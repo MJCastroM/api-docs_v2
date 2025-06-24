@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNivelesEducativosComponent1750446218780 {
+export class ObtenerNivelesEducativosComponent1750713394549 {
   pageTitle        = 'Obtener Niveles Educativos';
   description      = `Método para obtener un listado de los niveles educativos.`;
   pubName    = 'BTPersonas.ObtenerNivelesEducativos';
@@ -150,5 +150,5 @@ export class ObtenerNivelesEducativosComponent1750446218780 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTNivelEducativo', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de nivel educativo.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de nivel educativo.' }] }];
+  structuredTypes = [{ typeName: 'sBTNivelEducativo', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de nivel educativo.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de nivel educativo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }
