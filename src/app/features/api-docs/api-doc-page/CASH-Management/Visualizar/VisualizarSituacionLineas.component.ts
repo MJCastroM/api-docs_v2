@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarSituacionLineasComponent1750446218191 {
+export class VisualizarSituacionLineasComponent1750713393291 {
   pageTitle        = 'Visualizar Situación Lineas';
   description      = `Método para visualizar las líneas del archivo con su estado.`;
   pubName    = 'BTCASHManagement.VisualizarSituacionLineas';
@@ -134,5 +134,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSituacionLinea', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la línea.' }, { Nombre: 'linea', Tipo: 'String', Comentarios: 'Línea de texto.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la línea.' }] }];
+  structuredTypes = [{ typeName: 'sBTSituacionLinea', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la línea.' }, { Nombre: 'linea', Tipo: 'String', Comentarios: 'Línea de texto.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la línea.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

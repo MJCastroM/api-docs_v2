@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBancosComponent1750446218333 {
+export class ObtenerBancosComponent1750713393523 {
   pageTitle        = 'Obtener Bancos';
   description      = `Método para obtener un listado de los bancos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerBancos';
@@ -236,5 +236,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTBanco', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de banco.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de banco.' }] }];
+  structuredTypes = [{ typeName: 'sBTBanco', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de banco.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de banco.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

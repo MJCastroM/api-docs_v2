@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarArchivoComponent1750446218135 {
+export class CargarArchivoComponent1750713393181 {
   pageTitle        = 'Cargar Archivo';
   description      = `Método para realizar la carga de un archivo.`;
   pubName    = 'BTCASHManagement.CargarArchivo';

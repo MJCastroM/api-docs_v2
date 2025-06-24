@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasAdicionalesComponent1750446218995 {
+export class ObtenerTarjetasAdicionalesComponent1750713395037 {
   pageTitle        = 'Obtener Tarjetas Adicionales';
   description      = `Método para obtener las tarjetas adicionales que están asociadas a una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetasAdicionales';
@@ -114,5 +114,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTarjetasDebitoAdicionales', fields: [{ Nombre: 'adicionales', Tipo: '[sBDTarjetaDebitoAdicional](#sbdtarjetadebitoadicional)', Comentarios: 'Listado de tarjetas de débito adicionales.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: '### sBDTarjetaDebitoAdicional', Tipo: '', Comentarios: '' }] }, { typeName: 'sBDTarjetaDebitoAdicional', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Descripción de estado.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Número de tarjeta.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }] }];
+  structuredTypes = [{ typeName: 'sBTTarjetasDebitoAdicionales', fields: [{ Nombre: 'adicionales', Tipo: '[sBDTarjetaDebitoAdicional](#sbdtarjetadebitoadicional)', Comentarios: 'Listado de tarjetas de débito adicionales.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }] }, { typeName: 'sBDTarjetaDebitoAdicional', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Descripción de estado.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Número de tarjeta.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

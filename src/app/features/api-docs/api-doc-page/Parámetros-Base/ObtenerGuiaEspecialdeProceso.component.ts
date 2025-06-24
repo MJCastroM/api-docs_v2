@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGuiaEspecialdeProcesoComponent1750446218694 {
+export class ObtenerGuiaEspecialdeProcesoComponent1750713394239 {
   pageTitle        = 'Obtener Guía Especial de Proceso';
   description      = `Método para obtener los datos de una determinada guía especial de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerGuiaEspecialDeProceso';
@@ -154,5 +154,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCorrelativoGuiaEspecial', fields: [{ Nombre: 'correlativo1', Tipo: 'Short', Comentarios: 'Correlativo 1.' }, { Nombre: 'correlativo2', Tipo: 'Short', Comentarios: 'Correlativo 2.' }, { Nombre: 'correlativo3', Tipo: 'Short', Comentarios: 'Correlativo 3.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'importeEspecifico1', Tipo: 'Double', Comentarios: 'Importe específico 1.' }, { Nombre: 'importeEspecifico2', Tipo: 'Double', Comentarios: 'Importe específico 2.' }, { Nombre: 'importeEspecifico3', Tipo: 'Double', Comentarios: 'Importe específico 3.' }, { Nombre: 'valorEspecifico1', Tipo: 'Long', Comentarios: 'Valor específico 1.' }, { Nombre: 'valorEspecifico2', Tipo: 'Long', Comentarios: 'Valor específico 2.' }, { Nombre: 'valorEspecifico3', Tipo: 'Long', Comentarios: 'Valor específico 3.' }] }];
+  structuredTypes = [{ typeName: 'sBTCorrelativoGuiaEspecial', fields: [{ Nombre: 'correlativo1', Tipo: 'Short', Comentarios: 'Correlativo 1.' }, { Nombre: 'correlativo2', Tipo: 'Short', Comentarios: 'Correlativo 2.' }, { Nombre: 'correlativo3', Tipo: 'Short', Comentarios: 'Correlativo 3.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'importeEspecifico1', Tipo: 'Double', Comentarios: 'Importe específico 1.' }, { Nombre: 'importeEspecifico2', Tipo: 'Double', Comentarios: 'Importe específico 2.' }, { Nombre: 'importeEspecifico3', Tipo: 'Double', Comentarios: 'Importe específico 3.' }, { Nombre: 'valorEspecifico1', Tipo: 'Long', Comentarios: 'Valor específico 1.' }, { Nombre: 'valorEspecifico2', Tipo: 'Long', Comentarios: 'Valor específico 2.' }, { Nombre: 'valorEspecifico3', Tipo: 'Long', Comentarios: 'Valor específico 3.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

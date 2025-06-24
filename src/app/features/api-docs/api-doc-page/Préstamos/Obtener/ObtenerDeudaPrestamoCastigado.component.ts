@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaPrestamoCastigadoComponent1750446218882 {
+export class ObtenerDeudaPrestamoCastigadoComponent1750713394769 {
   pageTitle        = 'Obtener Deuda Préstamo Castigado';
   description      = `Método para obtener la deuda de un préstamo castigado.`;
   pubName    = 'BTPrestamos.ObtenerDeudaPrestamoCastigado';
@@ -120,5 +120,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPrestamoCastigado', fields: [{ Nombre: 'interes', Tipo: 'Double', Comentarios: 'Interés generado.' }, { Nombre: 'interesSuspenso', Tipo: 'Double', Comentarios: 'Interés suspenso.' }, { Nombre: 'mora', Tipo: 'Double', Comentarios: 'Mora generada.' }, { Nombre: 'moraSuspenso', Tipo: 'Double', Comentarios: 'Mora suspenso.' }, { Nombre: 'saldoCapital', Tipo: 'Double', Comentarios: 'Saldo capital del préstamo.' }, { Nombre: 'seguros', Tipo: 'Double', Comentarios: 'Seguros.' }] }];
+  structuredTypes = [{ typeName: 'sBTPrestamoCastigado', fields: [{ Nombre: 'interes', Tipo: 'Double', Comentarios: 'Interés generado.' }, { Nombre: 'interesSuspenso', Tipo: 'Double', Comentarios: 'Interés suspenso.' }, { Nombre: 'mora', Tipo: 'Double', Comentarios: 'Mora generada.' }, { Nombre: 'moraSuspenso', Tipo: 'Double', Comentarios: 'Mora suspenso.' }, { Nombre: 'saldoCapital', Tipo: 'Double', Comentarios: 'Saldo capital del préstamo.' }, { Nombre: 'seguros', Tipo: 'Double', Comentarios: 'Seguros.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

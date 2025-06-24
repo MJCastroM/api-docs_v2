@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750446219006 {
+export class CrearComponent1750713395060 {
   pageTitle        = 'Crear';
   description      = `Método para dar de alta una tarjeta de débito para un cliente.`;
   pubName    = 'BTTarjetasDeDebito.Crear';

@@ -1,12 +1,17 @@
-/*
-  chat-popup.component.ts
-*/
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { ChatService } from '../../../../core/services/chat.service';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  HostListener
+} from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { ChatService } from '../../../../core/services/chat.service';
 
-interface Message { text: string; isUser: boolean; }
-interface ChatEntry { role: string; content: string; }
+interface Message { text: SafeHtml; isUser: boolean; }
+interface ChatEntry { role: string; content: string /* raw text */; }
 
 @Component({
   selector: 'app-chat-popup',
@@ -25,6 +30,8 @@ interface ChatEntry { role: string; content: string; }
   ]
 })
 export class ChatPopupComponent implements OnInit, AfterViewInit {
+  @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
+
   showChat = false;
   inputMessage = '';
   messages: Message[] = [];
@@ -32,114 +39,212 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   typingIndicator = false;
   chatHistory: ChatEntry[] = [];
 
-  @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
+  constructor(
+    private chatService: ChatService,
+    private sanitizer: DomSanitizer
+  ) {}
 
-  constructor(private chatService: ChatService) {}
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.loadChatHistory();
     if (!this.messages.length) {
       this.clearChatHistory();
     }
   }
 
-  ngAfterViewInit(): void {
-    const container = document.querySelector('.chat-messages');
-    if (container) {
+  ngAfterViewInit() {
+    const c = document.querySelector('.chat-messages');
+    if (c) {
       new MutationObserver(() => this.scrollToBottom())
-        .observe(container, { childList: true });
+        .observe(c, { childList: true });
     }
   }
 
-  toggleChat(): void {
+  toggleChat() {
     this.showChat = !this.showChat;
     if (this.showChat) {
       setTimeout(() => this.inputRef.nativeElement.focus(), 0);
     }
   }
 
-  clearChatHistory(): void {
-    this.messages = [{ text: '¡Hola!, ¿En qué puedo ayudarte?', isUser: false }];
+  clearChatHistory() {
+    this.messages = [
+      { text: this.sanitize('¡Hola!, ¿En qué puedo ayudarte?'), isUser: false }
+    ];
     this.chatHistory = [];
-    localStorage.removeItem('messages');
-    localStorage.removeItem('chatHistory');
-    localStorage.removeItem('chatSessionId');
-    // iniciar nueva sesión
-    this.chatService.iniciarSesion()
-      .then(() => {
-        // sesión iniciada
-      })
-      .catch(err => console.error('Error iniciando sesión:', err));
+    localStorage.clear();
+    this.chatService.iniciarSesion().catch(console.error);
   }
 
-  loadChatHistory(): void {
+  loadChatHistory() {
     const savedMsgs = localStorage.getItem('messages');
+    if (savedMsgs) {
+      JSON.parse(savedMsgs).forEach((m: any) =>
+        this.messages.push({ text: this.sanitize(m.text), isUser: m.isUser })
+      );
+    }
     const savedHist = localStorage.getItem('chatHistory');
-    if (savedMsgs) this.messages = JSON.parse(savedMsgs);
-    if (savedHist) this.chatHistory = JSON.parse(savedHist);
-  }
-
-  saveChatHistory(): void {
-    localStorage.setItem('messages', JSON.stringify(this.messages));
-    localStorage.setItem('chatHistory', JSON.stringify(this.chatHistory));
-  }
-
-  sendMessage(): void {
-    const text = this.inputMessage.trim();
-    if (!text) return;
-
-    this.messages.push({ text, isUser: true });
-    this.chatHistory.push({ role: 'user', content: text });
-    this.inputMessage = '';
-    this.showLoader();
-    this.typingIndicator = true;
-
-    const sessionId = localStorage.getItem('chatSessionId');
-    if (!sessionId) {
-      this.chatService.iniciarSesion()
-        .then(() => this.proceedChat(text))
-        .catch(err => {
-          console.error(err);
-          this.messages.push({ text: 'Error iniciando sesión.', isUser: false });
-          this.hideLoader();
-        });
-    } else {
-      this.proceedChat(text);
+    if (savedHist) {
+      this.chatHistory = JSON.parse(savedHist);
     }
   }
 
-  private proceedChat(text: string): void {
+  saveChatHistory() {
+    localStorage.setItem('messages',
+      JSON.stringify(this.messages.map(m => ({ text: m.text.toString(), isUser: m.isUser })))
+    );
+    localStorage.setItem('chatHistory', JSON.stringify(this.chatHistory));
+  }
+
+  sendMessage() {
+    const txt = this.inputMessage.trim();
+    if (!txt) return;
+
+    this.messages.push({ text: this.sanitize(txt), isUser: true });
+    this.chatHistory.push({ role: 'user', content: txt });
+    this.inputMessage = '';
+    this.loading = true;
+    this.typingIndicator = true;
+
+    const sid = localStorage.getItem('chatSessionId');
+    if (sid) {
+      this.proceedChat(txt);
+    } else {
+      this.chatService.iniciarSesion()
+        .then(() => this.proceedChat(txt))
+        .catch(err => {
+          console.error(err);
+          this.messages.push({
+            text: this.sanitize('Error iniciando sesión.'),
+            isUser: false
+          });
+          this.loading = this.typingIndicator = false;
+        });
+    }
+  }
+
+  private proceedChat(userMsg: string) {
+    // Push a new assistant entry with empty raw content
     this.chatHistory.push({ role: 'assistant', content: '' });
-    this.messages.push({ text: '', isUser: false });
+    // Also push an empty display message
+    this.messages.push({ text: this.sanitize(''), isUser: false });
     const msgIdx = this.messages.length - 1;
     const histIdx = this.chatHistory.length - 1;
 
-    this.chatService.streamMessages(text, this.chatHistory)
+    this.chatService.streamMessages(userMsg, this.chatHistory)
       .subscribe({
         next: chunk => {
+          // Accumulate raw chunk
           this.chatHistory[histIdx].content += chunk;
-          this.messages[msgIdx].text = this.chatHistory[histIdx].content;
+          // Format entire raw content each time
+          const formatted = this.formatMessage(this.chatHistory[histIdx].content);
+          this.messages[msgIdx].text = this.sanitize(formatted);
           this.scrollToBottom();
         },
         error: err => {
           console.error(err);
-          this.messages.push({ text: 'Error en la solicitud.', isUser: false });
-          this.finalizeResponse();
+          this.messages.push({
+            text: this.sanitize('Error en la solicitud.'),
+            isUser: false
+          });
+          this.finalize();
         },
-        complete: () => this.finalizeResponse()
+        complete: () => this.finalize()
       });
   }
 
-  private finalizeResponse(): void {
+  private finalize() {
+    this.loading = false;
     this.typingIndicator = false;
-    this.hideLoader();
     this.saveChatHistory();
   }
 
-  private showLoader(): void { this.loading = true; }
-  private hideLoader(): void { this.loading = false; }
-  private scrollToBottom(): void {
+  /** Escape HTML chars in code blocks */
+  private escapeHtml(str: string): string {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  /**
+   * Apply Markdown-like formatting:
+   * - Extract and escape ```xml```/```json``` blocks
+   * - Bold **text**, headings, lists, links
+   * - Convert single \n → <br/>
+   */
+  private formatMessage(raw: string): string {
+    let text = raw.replace(/\r\n?/g, '\n');
+
+    // 1) extract code blocks
+    const blocks: { ph: string; html: string }[] = [];
+    text = text.replace(/```(xml|json)\n([\s\S]*?)```/g,
+      (_, lang, inner) => {
+        const esc = this.escapeHtml(inner);
+        const html = `<div class="${lang}-code"><code>${esc}</code>` +
+                     `<button class="copy-button">Copiar</button></div>`;
+        const ph = `@@BLK${blocks.length}@@`;
+        blocks.push({ ph, html });
+        return ph;
+      }
+    );
+
+    // 2) bold **
+    text = text.replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>');
+
+    // 3) headings
+    text = text
+      .replace(/^######\s*(.+)$/gm, '<h6>$1</h6>')
+      .replace(/^#####\s*(.+)$/gm, '<h5>$1</h5>')
+      .replace(/^####\s*(.+)$/gm, '<h4>$1</h4>')
+      .replace(/^###\s*(.+)$/gm, '<h3>$1</h3>')
+      .replace(/^##\s*(.+)$/gm, '<h2>$1</h2>')
+      .replace(/^#\s*(.+)$/gm, '<h1>$1</h1>');
+
+    // 4) lists
+    text = text.replace(/^\-\s+(.+)$/gm, '<li>$1</li>');
+    text = text.replace(
+      /(<li>[\s\S]+?<\/li>)(\s*<li>[\s\S]+?<\/li>)+/g,
+      m => `<ul>${m.replace(/<\/li>\s*<li>/g,'</li><li>')}</ul>`
+    );
+
+    // 5) links
+    text = text.replace(
+      /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+      '<a href="$2" target="_blank">$1</a>'
+    );
+
+    // 6) single-line breaks
+    text = text.replace(/\n/g, '<br/>');
+
+    // 7) restore code blocks
+    for (const b of blocks) {
+      text = text.replace(b.ph, b.html);
+    }
+    return text;
+  }
+
+  /** Handle copy button clicks */
+  @HostListener('click', ['$event'])
+  onHostClick(e: MouseEvent) {
+    const btn = (e.target as HTMLElement).closest('.copy-button') as HTMLElement;
+    if (!btn) return;
+    e.stopPropagation();
+    e.preventDefault();
+    const code = btn.parentElement?.querySelector('code');
+    if (!code) return;
+    navigator.clipboard.writeText(code.textContent || '').then(() => {
+      btn.textContent = 'Copiado';
+      setTimeout(() => (btn.textContent = 'Copiar'), 2000);
+    });
+  }
+
+  /** Mark HTML safe for innerHTML */
+  private sanitize(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
+  private scrollToBottom() {
     const c = document.querySelector('.chat-messages');
-    if (c) c.scrollTop = (c as HTMLElement).scrollHeight;
+    if (c) (c as HTMLElement).scrollTop = c.scrollHeight;
   }
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerConceptoComponent1750446218756 {
+export class ObtenerConceptoComponent1750713394435 {
   pageTitle        = 'Obtener Concepto';
   description      = `Método para obtener los conceptos de los programas de personas.`;
   pubName    = 'BTPersonas.ObtenerConcepto';
@@ -128,5 +128,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValorCampo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador.' }] }];
+  structuredTypes = [{ typeName: 'sBTValorCampo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

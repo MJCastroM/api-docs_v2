@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesdeOperacionComponent1750446218427 {
+export class ObtenerIntegrantesdeOperacionComponent1750713393682 {
   pageTitle        = 'Obtener Integrantes de Operación';
   description      = `Método para obtener los integrantes de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIntegrantesOperacion';
@@ -133,5 +133,5 @@ export class ObtenerIntegrantesdeOperacionComponent1750446218427 {
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTIntegrante', fields: [{ Nombre: 'nombre', Tipo: 'Long', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Nombre del país del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'representativo', Tipo: 'String', Comentarios: 'Indica si es titular representativo (S/N).' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'titularidad', Tipo: '[sBTTipoIntegrante](#sbttipointegrante)', Comentarios: 'Tipo de integrante.' }, { Nombre: '### sBTTipoIntegrante', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del tipo de integrante.' }] }];
+  structuredTypes = [{ typeName: 'sBTIntegrante', fields: [{ Nombre: 'nombre', Tipo: 'Long', Comentarios: 'Nombre de la persona.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'paisDocumento', Tipo: 'String', Comentarios: 'Nombre del país del documento.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'representativo', Tipo: 'String', Comentarios: 'Indica si es titular representativo (S/N).' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre del tipo de documento.' }, { Nombre: 'titularidad', Tipo: '[sBTTipoIntegrante](#sbttipointegrante)', Comentarios: 'Tipo de integrante.' }] }, { typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del tipo de integrante.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

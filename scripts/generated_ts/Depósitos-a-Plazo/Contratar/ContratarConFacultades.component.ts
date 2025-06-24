@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarConFacultadesComponent1750446218563 {
+export class ContratarConFacultadesComponent1750713393890 {
   pageTitle        = 'Contratar con Facultades';
   description      = `Método para contratar un depósito a plazo fijo dando de alta las facultades correspondientes.`;
   pubName    = 'BTDepositosAPlazo.ContratarConFacultades';

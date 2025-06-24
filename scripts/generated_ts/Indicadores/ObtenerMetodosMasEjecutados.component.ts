@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetodosMasEjecutadosComponent1750446218599 {
+export class ObtenerMetodosMasEjecutadosComponent1750713393986 {
   pageTitle        = 'Obtener Métodos Más Ejecutados';
   description      = `Método para obtener un listado de los métodos más ejecutados para un servicio dado y sus estadísticas.`;
   pubName    = 'BTIndicadores.ObtenerMetodosMasEjecutados';
@@ -267,5 +267,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstadisticasServicioMetodo', fields: [{ Nombre: 'cantidadEjecuciones', Tipo: 'Long', Comentarios: 'Cantidad de ejecuciones.' }, { Nombre: 'metodo', Tipo: 'String', Comentarios: 'Método del servicio.' }, { Nombre: 'servicio', Tipo: 'String', Comentarios: 'Identificador del servicio' }, { Nombre: 'tiempoMaximo', Tipo: 'Int', Comentarios: 'Tiempo máximo registrado para los métodos del servicio.' }, { Nombre: 'tiempoMinimo', Tipo: 'Int', Comentarios: 'Tiempo mínimo registrado para los métodos del servicio.' }, { Nombre: 'tiempoPromedio', Tipo: 'Int', Comentarios: 'Tiempo promedio de las ejecuciones a los métodos del servicio.' }] }];
+  structuredTypes = [{ typeName: 'sBTEstadisticasServicioMetodo', fields: [{ Nombre: 'cantidadEjecuciones', Tipo: 'Long', Comentarios: 'Cantidad de ejecuciones.' }, { Nombre: 'metodo', Tipo: 'String', Comentarios: 'Método del servicio.' }, { Nombre: 'servicio', Tipo: 'String', Comentarios: 'Identificador del servicio' }, { Nombre: 'tiempoMaximo', Tipo: 'Int', Comentarios: 'Tiempo máximo registrado para los métodos del servicio.' }, { Nombre: 'tiempoMinimo', Tipo: 'Int', Comentarios: 'Tiempo mínimo registrado para los métodos del servicio.' }, { Nombre: 'tiempoPromedio', Tipo: 'Int', Comentarios: 'Tiempo promedio de las ejecuciones a los métodos del servicio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

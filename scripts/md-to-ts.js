@@ -87,43 +87,48 @@ function extractBackendConfig(content) {
 }
 
 function extractSdts(content) {
-  var block = extractBlock(content,
+  // 1) Saco todo el bloque de SDTs
+  let block = extractBlock(content,
     '<!-- ABRE SDT -->',
     '<!-- CIERRA SDT -->'
   );
-  if (!block){
+  if (!block) {
     block = extractBlock(content,
-    '<!-- ABRE EL SDT -->',
-    '<!-- CIERRA EL SDT -->'
+      '<!-- ABRE EL SDT -->',
+      '<!-- CIERRA EL SDT -->'
     );
   }
-  const sdts = [];
+  if (!block) return [];
+
+  // 2) Encuentro todos los encabezados de tipo
   const headerRe = /###\s*([A-Za-z0-9_]+)/g;
   const entries = Array.from(block.matchAll(headerRe));
 
+  const sdts = [];
   for (let i = 0; i < entries.length; i++) {
     const typeName = entries[i][1];
     const startIdx = entries[i].index + entries[i][0].length;
-    const centerMarker = '::: center';
-    const centerPos = block.indexOf(centerMarker, startIdx);
-    if (centerPos < 0) continue;
+    // cálcula dónde arranca la siguiente sección
+    const endIdx = (i + 1 < entries.length)
+      ? entries[i + 1].index
+      : block.length;
+    // tomo TODO lo que va de este encabezado al siguiente
+    const section = block.slice(startIdx, endIdx);
 
-    const afterCenter = block.slice(centerPos + centerMarker.length);
-    const endCenter = afterCenter.indexOf(':::');
-    const centerContent = endCenter >= 0
-      ? afterCenter.slice(0, endCenter)
-      : afterCenter;
-
-    const tableStart = centerContent.search(/Nombre\s*\|\s*Tipo\s*\|\s*Comentarios/);
+    // busco la tabla Markdown
+    const tableHeaderRe = /Nombre\s*\|\s*Tipo\s*\|\s*Comentarios/;
+    const tableStart = section.search(tableHeaderRe);
     if (tableStart < 0) continue;
 
-    const tableMd = centerContent.slice(tableStart);
+    // extraigo desde allí hasta el final de la sección
+    const tableMd = section.slice(tableStart);
     const fields = parseTable(tableMd);
     sdts.push({ typeName, fields });
   }
 
   return sdts;
 }
+
 
 function extractApiTabs(content) {
   var block = extractBlock(content,

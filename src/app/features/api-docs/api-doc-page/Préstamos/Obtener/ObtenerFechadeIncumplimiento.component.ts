@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechadeIncumplimientoComponent1750446218888 {
+export class ObtenerFechadeIncumplimientoComponent1750713394773 {
   pageTitle        = 'Obtener Fecha de Incumplimiento';
   description      = `Método para obtener la fecha de incumplimiento de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerFechaDeIncumplimiento';

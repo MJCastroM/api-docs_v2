@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoDigitalComponent1750446218848 {
+export class EliminarDocumentoDigitalComponent1750713394705 {
   pageTitle        = 'Eliminar Documento Digital';
   description      = `Método para eliminar un documento digital de un préstamo.`;
   pubName    = 'BTPrestamos.EliminarDocumentoDigital';

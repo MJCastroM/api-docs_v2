@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerScoresComponent1750446218665 {
+export class ObtenerScoresComponent1750713394150 {
   pageTitle        = 'Obtener Scores';
   description      = `Método para obtener los scores de los modelos de evaluación.`;
   pubName    = 'BTPAE.ObtenerScores';
@@ -147,5 +147,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTScorePAE', fields: [{ Nombre: 'codigoItem', Tipo: 'Numérico', Comentarios: 'Código de item.' }, { Nombre: 'codigoModelo', Tipo: 'Numérico', Comentarios: 'Código de modelo.' }, { Nombre: 'correlativo', Tipo: 'Numérico', Comentarios: 'Correlativo.' }, { Nombre: 'desdeNumerico', Tipo: 'Numerico', Comentarios: 'Número desde.' }, { Nombre: 'desdeCaracter', Tipo: 'String', Comentarios: 'Caracter desde.' }, { Nombre: 'desdeFecha', Tipo: 'Date', Comentarios: 'Fecha desde.' }, { Nombre: 'hastaNumerico', Tipo: 'Numerico', Comentarios: 'Número hasta.' }, { Nombre: 'hastaCaracter', Tipo: 'String', Comentarios: 'Caracter hasta.' }, { Nombre: 'hastaFecha', Tipo: 'Date', Comentarios: 'Fecha hasta.' }, { Nombre: 'idPolitica', Tipo: 'Numérico', Comentarios: 'Código de política.' }, { Nombre: 'mensajeIncumPolitica', Tipo: 'String', Comentarios: 'Mensaje de política incumplida.' }, { Nombre: 'tipoRestriccion', Tipo: 'String', Comentarios: 'Tipo de restricción por defecto. (\'I\'= Informativa; \'A\'= Alerta; \'B\'= Bloqueante; \'E\'= Bloqueante con Excepción;).' }, { Nombre: 'valorPolitica', Tipo: 'String', Comentarios: 'Valor de política para el rango (S/N).' }, { Nombre: 'valorScoreRango', Tipo: 'Numérico', Comentarios: 'Rango del valor score.' }] }];
+  structuredTypes = [{ typeName: 'sBTScorePAE', fields: [{ Nombre: 'codigoItem', Tipo: 'Numérico', Comentarios: 'Código de item.' }, { Nombre: 'codigoModelo', Tipo: 'Numérico', Comentarios: 'Código de modelo.' }, { Nombre: 'correlativo', Tipo: 'Numérico', Comentarios: 'Correlativo.' }, { Nombre: 'desdeNumerico', Tipo: 'Numerico', Comentarios: 'Número desde.' }, { Nombre: 'desdeCaracter', Tipo: 'String', Comentarios: 'Caracter desde.' }, { Nombre: 'desdeFecha', Tipo: 'Date', Comentarios: 'Fecha desde.' }, { Nombre: 'hastaNumerico', Tipo: 'Numerico', Comentarios: 'Número hasta.' }, { Nombre: 'hastaCaracter', Tipo: 'String', Comentarios: 'Caracter hasta.' }, { Nombre: 'hastaFecha', Tipo: 'Date', Comentarios: 'Fecha hasta.' }, { Nombre: 'idPolitica', Tipo: 'Numérico', Comentarios: 'Código de política.' }, { Nombre: 'mensajeIncumPolitica', Tipo: 'String', Comentarios: 'Mensaje de política incumplida.' }, { Nombre: 'tipoRestriccion', Tipo: 'String', Comentarios: 'Tipo de restricción por defecto. (\'I\'= Informativa; \'A\'= Alerta; \'B\'= Bloqueante; \'E\'= Bloqueante con Excepción;).' }, { Nombre: 'valorPolitica', Tipo: 'String', Comentarios: 'Valor de política para el rango (S/N).' }, { Nombre: 'valorScoreRango', Tipo: 'Numérico', Comentarios: 'Rango del valor score.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSolicitudesClienteComponent1750446218638 {
+export class ObtenerSolicitudesClienteComponent1750713394082 {
   pageTitle        = 'Obtener Solicitudes Cliente';
   description      = `Método para obtener un listado de las solicitudes activas de préstamos de un cliente.`;
   pubName    = 'BTMicrofinanzas.ObtenerSolicitudesCliente';
@@ -135,5 +135,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosInstancia', fields: [{ Nombre: 'asesor', Tipo: 'String', Comentarios: 'Usuario asesor del crédito.' }, { Nombre: 'capital', Tipo: 'Decimal', Comentarios: 'Importe capital del crédito.' }, { Nombre: 'instancia', Tipo: 'Long', Comentarios: 'Número de instancia WorkFlow.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'tarea', Tipo: 'String', Comentarios: 'Tarea en la que se encuentra la instancia.' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosInstancia', fields: [{ Nombre: 'asesor', Tipo: 'String', Comentarios: 'Usuario asesor del crédito.' }, { Nombre: 'capital', Tipo: 'Decimal', Comentarios: 'Importe capital del crédito.' }, { Nombre: 'instancia', Tipo: 'Long', Comentarios: 'Número de instancia WorkFlow.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'tarea', Tipo: 'String', Comentarios: 'Tarea en la que se encuentra la instancia.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

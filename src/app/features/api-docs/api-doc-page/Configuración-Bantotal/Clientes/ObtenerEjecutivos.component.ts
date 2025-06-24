@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEjecutivosComponent1750446218344 {
+export class ObtenerEjecutivosComponent1750713393538 {
   pageTitle        = 'Obtener Ejecutivos';
   description      = `Método para obtener un listado de los ejecutivos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEjecutivos';
@@ -260,5 +260,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEjecutivo', fields: [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción de ejecutivo.' }] }];
+  structuredTypes = [{ typeName: 'sBTEjecutivo', fields: [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción de ejecutivo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

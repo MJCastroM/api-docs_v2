@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresComponent1750446218595 {
+export class ObtenerAgrupadoresComponent1750713393975 {
   pageTitle        = 'Obtener Agrupadores';
   description      = `Método para obtener los agrupadores de indicadores ingresados en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerAgrupadores';
@@ -130,5 +130,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTAgrupador', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Identificador del agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del agrupador.' }] }];
+  structuredTypes = [{ typeName: 'sBTAgrupador', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Identificador del agrupador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del agrupador.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

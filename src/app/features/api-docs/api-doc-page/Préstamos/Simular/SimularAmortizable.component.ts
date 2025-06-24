@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularAmortizableComponent1750446218937 {
+export class SimularAmortizableComponent1750713394868 {
   pageTitle        = 'Simular Amortizable';
   description      = `Método para simular un préstamo amortizable.`;
   pubName    = 'BTPrestamos.SimularAmortizable';

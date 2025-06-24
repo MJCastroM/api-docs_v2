@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosPAEComponent1750446218664 {
+export class ObtenerModelosPAEComponent1750713394147 {
   pageTitle        = 'Obtener Modelos PAE';
   description      = `Método para obtener los modelos PAE.`;
   pubName    = 'BTPAE.ObtenerModelosPAE';
@@ -119,5 +119,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTModeloPAE', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de modelo.' }, { Nombre: 'modeloId', Tipo: 'Short', Comentarios: 'Código de modelo.' }, { Nombre: 'tipoModelo', Tipo: 'String', Comentarios: 'Tipo de modelo.' }] }];
+  structuredTypes = [{ typeName: 'sBTModeloPAE', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de modelo.' }, { Nombre: 'modeloId', Tipo: 'Short', Comentarios: 'Código de modelo.' }, { Nombre: 'tipoModelo', Tipo: 'String', Comentarios: 'Tipo de modelo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

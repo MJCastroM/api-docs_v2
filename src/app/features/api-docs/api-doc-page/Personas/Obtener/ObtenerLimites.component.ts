@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750446218778 {
+export class ObtenerLimitesComponent1750713394541 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una persona.`;
   pubName    = 'BTPersonas.ObtenerLimites';
@@ -238,5 +238,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTLimiteCliente', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del límite.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Límite disponible para el cliente.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Límite otorgado al cliente.' }, { Nombre: 'limteUtilizado', Tipo: 'Double', Comentarios: 'Límite utilizado por el cliente.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }] }];
+  structuredTypes = [{ typeName: 'sBTLimiteCliente', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del límite.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Límite disponible para el cliente.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Límite otorgado al cliente.' }, { Nombre: 'limteUtilizado', Tipo: 'Double', Comentarios: 'Límite utilizado por el cliente.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Símbolo de moneda.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

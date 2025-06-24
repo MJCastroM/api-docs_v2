@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class InhabilitarUsuarioComponent1750446219029 {
+export class InhabilitarUsuarioComponent1750713395111 {
   pageTitle        = 'Inhabilitar Usuario';
   description      = `Método para inhabilitar un usuario.`;
   pubName    = 'BTUsuarios.InhabilitarUsuario';

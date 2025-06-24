@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionaFechaComponent1750446218820 {
+export class ObtenerCotizacionaFechaComponent1750713394645 {
   pageTitle        = 'Obtener Cotización a Fecha';
   description      = `Método para obtener un listado de las cotizaciones de las monedas ingresadas.`;
   pubName    = 'BTPrecios.ObtenerCotizacionAFecha';
@@ -168,5 +168,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCotizacion', fields: [{ Nombre: 'compra', Tipo: 'Double', Comentarios: 'Cotización Compra.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monedaISO', Tipo: 'String', Comentarios: 'Código ISO de la moneda.' }, { Nombre: 'venta', Tipo: 'Double', Comentarios: 'Cotización Venta.' }] }];
+  structuredTypes = [{ typeName: 'sBTCotizacion', fields: [{ Nombre: 'compra', Tipo: 'Double', Comentarios: 'Cotización Compra.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monedaISO', Tipo: 'String', Comentarios: 'Código ISO de la moneda.' }, { Nombre: 'venta', Tipo: 'Double', Comentarios: 'Cotización Venta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

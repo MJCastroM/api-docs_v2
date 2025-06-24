@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeIntegracionComponent1750446218311 {
+export class ObtenerTiposdeIntegracionComponent1750713393503 {
   pageTitle        = 'Obtener Tipos de Integración';
   description      = `Método para obtener un listado de los tipos de integración ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerTiposDeIntegracion';
@@ -140,5 +140,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de tipo de integrante.' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoIntegrante', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de integrante.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de tipo de integrante.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPerfilComponent1750446219023 {
+export class AgregarPerfilComponent1750713395093 {
   pageTitle        = 'Agregar Perfil';
   description      = `Método para agregar un perfil a un usuario.`;
   pubName    = 'BTUsuarios.AgregarPerfil';

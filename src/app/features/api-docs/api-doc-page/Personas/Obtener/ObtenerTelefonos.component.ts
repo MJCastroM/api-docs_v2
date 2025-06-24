@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTelefonosComponent1750446218793 {
+export class ObtenerTelefonosComponent1750713394578 {
   pageTitle        = 'Obtener Teléfonos';
   description      = `Método para obtener los teléfonos de una persona.`;
   pubName    = 'BTPersonas.ObtenerTelefonos';
@@ -131,5 +131,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTelefono', fields: [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del tipo de teléfono.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Número de teléfono.' }, { Nombre: 'tipoDeDomicilio', Tipo: 'String', Comentarios: 'Nombre del tipo de domicilio.' }, { Nombre: 'tipoDeDomicilioId', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }] }];
+  structuredTypes = [{ typeName: 'sBTTelefono', fields: [{ Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador del tipo de teléfono.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Número de teléfono.' }, { Nombre: 'tipoDeDomicilio', Tipo: 'String', Comentarios: 'Nombre del tipo de domicilio.' }, { Nombre: 'tipoDeDomicilioId', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

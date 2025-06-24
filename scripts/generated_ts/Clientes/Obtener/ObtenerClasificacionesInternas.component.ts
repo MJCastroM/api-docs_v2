@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerClasificacionesInternasComponent1750446218242 {
+export class ObtenerClasificacionesInternasComponent1750713393394 {
   pageTitle        = 'Obtener Clasificaciones Internas';
   description      = `Método para obtener un listado de las clasificaciones internas ingresadas en Bantotal.`;
   pubName    = 'BTClientes.ObtenerClasificacionesInternas';
@@ -188,5 +188,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTClasificacionInterna', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de clasificación interna.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de clasificación interna.' }] }];
+  structuredTypes = [{ typeName: 'sBTClasificacionInterna', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de clasificación interna.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de clasificación interna.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

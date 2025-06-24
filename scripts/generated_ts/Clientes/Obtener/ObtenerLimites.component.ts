@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750446218271 {
+export class ObtenerLimitesComponent1750713393438 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerLimites';
@@ -206,5 +206,5 @@ curl -X POST \
  }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTLimiteCliente', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Límite disponible para el cliente.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Límite otorgado al cliente.' }, { Nombre: 'limteUtilizado', Tipo: 'Double', Comentarios: 'Límite utilizado por el cliente.' }] }];
+  structuredTypes = [{ typeName: 'sBTLimiteCliente', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Límite disponible para el cliente.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Límite otorgado al cliente.' }, { Nombre: 'limteUtilizado', Tipo: 'Double', Comentarios: 'Límite utilizado por el cliente.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

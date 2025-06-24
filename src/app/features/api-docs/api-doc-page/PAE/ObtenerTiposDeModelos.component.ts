@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeModelosComponent1750446218666 {
+export class ObtenerTiposDeModelosComponent1750713394154 {
   pageTitle        = 'Obtener Tipos De Modelos';
   description      = `Método para obtener los diferentes tipos de modelos de evaluación.`;
   pubName    = 'BTPAE.ObtenerTiposDeModelos';
@@ -171,5 +171,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTModeloPAE', fields: [{ Nombre: 'categoriaModelo', Tipo: 'Numérico', Comentarios: 'Categoría de Modelo (1 - Lineal, 2 - Mínimo, 3 - Máximo, 4 - Especial).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de modelo.' }, { Nombre: 'programaEvaluacion', Tipo: 'String', Comentarios: 'Programa particular para realizar la evaluación del modelo.' }, { Nombre: 'tipoModelo', Tipo: 'Numérico', Comentarios: 'Identificador del tipo de modelo.' }] }];
+  structuredTypes = [{ typeName: 'sBTTModeloPAE', fields: [{ Nombre: 'categoriaModelo', Tipo: 'Numérico', Comentarios: 'Categoría de Modelo (1 - Lineal, 2 - Mínimo, 3 - Máximo, 4 - Especial).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de modelo.' }, { Nombre: 'programaEvaluacion', Tipo: 'String', Comentarios: 'Programa particular para realizar la evaluación del modelo.' }, { Nombre: 'tipoModelo', Tipo: 'Numérico', Comentarios: 'Identificador del tipo de modelo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequerasComponent1750446218443 {
+export class ObtenerChequerasComponent1750713393719 {
   pageTitle        = 'Obtener Chequeras';
   description      = `Método para obtener un listado de las chequeras activas de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequeras';
@@ -116,5 +116,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTChequerasCC', fields: [{ Nombre: 'cantidad', Tipo: 'Int', Comentarios: 'Cantidad de chequeras.' }, { Nombre: 'chequera', Tipo: '[sBTChequera](#sbtchequera)', Comentarios: 'Datos de Chequera.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: '### sBTChequera', Tipo: '', Comentarios: '' }, { Nombre: 'Los campos del tipo de dato estructurado sBTChequera son los siguientes:', Tipo: '', Comentarios: '' }, { Nombre: 'Nombre', Tipo: 'Tipo', Comentarios: 'Comentarios' }, { Nombre: ':---------', Tipo: ':-----------', Comentarios: ':-----------' }, { Nombre: 'cantidadCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques.' }, { Nombre: 'chequeInicial', Tipo: 'Int', Comentarios: 'Número de cheque en el cual inicia la chequera.' }, { Nombre: 'chequesDisponibles', Tipo: 'Short', Comentarios: 'Cantidad de cheques disponibles.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'estado de chequera.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'tipo de chequera.' }] }];
+  structuredTypes = [{ typeName: 'sBTChequerasCC', fields: [{ Nombre: 'cantidad', Tipo: 'Int', Comentarios: 'Cantidad de chequeras.' }, { Nombre: 'chequera', Tipo: '[sBTChequera](#sbtchequera)', Comentarios: 'Datos de Chequera.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }] }, { typeName: 'sBTChequera', fields: [{ Nombre: 'cantidadCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques.' }, { Nombre: 'chequeInicial', Tipo: 'Int', Comentarios: 'Número de cheque en el cual inicia la chequera.' }, { Nombre: 'chequesDisponibles', Tipo: 'Short', Comentarios: 'Cantidad de cheques disponibles.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'estado de chequera.' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'tipo de chequera.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

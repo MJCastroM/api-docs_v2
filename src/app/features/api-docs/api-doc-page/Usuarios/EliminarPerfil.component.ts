@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarPerfilComponent1750446219025 {
+export class EliminarPerfilComponent1750713395100 {
   pageTitle        = 'Eliminar Perfil';
   description      = `Método para eliminar un perfil asociado a un usuario.`;
   pubName    = 'BTUsuarios.EliminarPerfil';

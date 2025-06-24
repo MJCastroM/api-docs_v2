@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMontosDeUnSeguroComponent1750446218975 {
+export class ObtenerMontosDeUnSeguroComponent1750713394990 {
   pageTitle        = 'Obtener Montos de Seguro';
   description      = `Método para obtener los montos de un seguro.`;
   pubName    = 'BTSegurosVoluntarios.ObtenerMontosDeUnSeguro';

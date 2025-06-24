@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBolsillosComponent1750446218528 {
+export class ObtenerBolsillosComponent1750713393804 {
   pageTitle        = 'Obtener Bolsillos';
   description      = `Método para obtener un listado de las cuentas bolsillo asociadas a una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerBolsillos';
@@ -167,5 +167,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTInfRBolsillo', fields: [{ Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado.' }, { Nombre: 'nombreProducto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'operacionBolsilloUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de bolsillo.' }, { Nombre: 'productoBolsilloId', Tipo: 'Short', Comentarios: 'Identificador único del producto del bolsillo.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }] }];
+  structuredTypes = [{ typeName: 'sBTInfRBolsillo', fields: [{ Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado.' }, { Nombre: 'nombreProducto', Tipo: 'String', Comentarios: 'Nombre del producto.' }, { Nombre: 'operacionBolsilloUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de bolsillo.' }, { Nombre: 'productoBolsilloId', Tipo: 'Short', Comentarios: 'Identificador único del producto del bolsillo.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDebitosComponent1750446218097 {
+export class ObtenerDebitosComponent1750713393112 {
   pageTitle        = 'Obtener Débitos';
   description      = `Método para obtener los débitos de una adhesión, dado el estado ingresado.`;
   pubName    = 'BTSNP.ConsultarDebitos';
@@ -148,5 +148,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDebito', fields: [{ Nombre: 'CBU2', Tipo: 'String', Comentarios: 'CBU.' }, { Nombre: 'monedaSigno', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado).' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del débito.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }] }];
+  structuredTypes = [{ typeName: 'sBTDebito', fields: [{ Nombre: 'CBU2', Tipo: 'String', Comentarios: 'CBU.' }, { Nombre: 'monedaSigno', Tipo: 'String', Comentarios: 'Signo de la moneda.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado).' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del débito.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

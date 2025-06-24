@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInicioyFindeMesComponent1750446218129 {
+export class ObtenerInicioyFindeMesComponent1750713393168 {
   pageTitle        = 'Obtener Inicio y Fin de Mes';
   description      = `Método para obtener la primer y última fecha hábil para el mes indicado.`;
   pubName    = 'BTCalendario.ObtenerInicioYFinMes';

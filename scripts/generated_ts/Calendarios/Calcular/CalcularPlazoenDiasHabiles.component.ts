@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularPlazoenDiasHabilesComponent1750446218122 {
+export class CalcularPlazoenDiasHabilesComponent1750713393154 {
   pageTitle        = 'Calcular Plazo en Días Hábiles';
   description      = `Método para calcular el plazo en días hábiles entre una fecha de inicio y una fecha de fin dadas.`;
   pubName    = 'BTCalendarios.CalcularPlazoDiasHabiles';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarStopDebitComponent1750446218095 {
+export class EliminarStopDebitComponent1750713393106 {
   pageTitle        = 'Eliminar Stop Debit';
   description      = `Método para eliminar un stop debit.`;
   pubName    = 'BTSNP.EliminarStopDebit';

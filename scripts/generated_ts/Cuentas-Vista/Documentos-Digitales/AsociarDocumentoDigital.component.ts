@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750446218524 {
+export class AsociarDocumentoDigitalComponent1750713393795 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a una cuenta vista.`;
   pubName    = 'BTCuentasVista.AsociarDocumentoDigital';

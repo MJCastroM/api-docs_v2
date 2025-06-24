@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGruposComponent1750446219020 {
+export class ObtenerGruposComponent1750713395088 {
   pageTitle        = 'Obtener Grupos';
   description      = `Método para obtener los grupos de papeles parametrizados.`;
   pubName    = 'BTTitulos.ObtenerGrupos';
@@ -172,5 +172,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTGrupo', fields: [{ Nombre: 'codigo', Tipo: 'int', Comentarios: 'Código del grupo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción del grupo.' }] }];
+  structuredTypes = [{ typeName: 'sBTGrupo', fields: [{ Nombre: 'codigo', Tipo: 'int', Comentarios: 'Código del grupo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción del grupo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

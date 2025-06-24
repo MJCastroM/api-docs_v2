@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendariodeSucursalComponent1750446218368 {
+export class ObtenerDetalledeCalendariodeSucursalComponent1750713393572 {
   pageTitle        = 'Obtener Detalle de Calendario de Sucursal';
   description      = `Método para obtener el detalle de los días del calendario de una determinada sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal';
@@ -372,5 +372,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDiaCalendario', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Día del calendario.' }, { Nombre: 'habil', Tipo: 'String', Comentarios: '¿Día hábil? (S/N)' }] }];
+  structuredTypes = [{ typeName: 'sBTDiaCalendario', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Día del calendario.' }, { Nombre: 'habil', Tipo: 'String', Comentarios: '¿Día hábil? (S/N)' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
 }

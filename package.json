@@ -25,6 +25,7 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "markdown-it": "^14.1.0",
+    "marked": "^15.0.12",
     "ngx-highlight": "^0.0.3",
     "ngx-highlight-js": "^20.0.0",
     "path": "^0.12.7",
