@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { SearchService, SearchResult } from 'src/app/core/services/search.service';
 
 @Component({
@@ -9,7 +9,9 @@ import { SearchService, SearchResult } from 'src/app/core/services/search.servic
 export class SearchComponent {
   query = '';
   results: SearchResult[] = [];
-  searchDone = false;
+  showPopup = false;
+
+  @ViewChild('searchInput') searchInput!: ElementRef;
 
   constructor(
     private searchService: SearchService,
@@ -23,25 +25,30 @@ export class SearchComponent {
     }
 
     this.results = this.searchService.search(this.query);
-    this.searchDone = true;
+    this.showPopup = true;
+    document.body.classList.add('popup-open');
   }
 
   clearResults() {
+    this.query = '';
     this.results = [];
-    this.searchDone = false;
+    this.showPopup = false;
+    document.body.classList.remove('popup-open');
+
+    // Sacar el foco manualmente del input
+    this.searchInput?.nativeElement.blur();
   }
 
-  // Cerrar al hacer clic fuera del componente
   @HostListener('document:click', ['$event'])
   handleClickOutside(event: MouseEvent) {
-    if (!this.elRef.nativeElement.contains(event.target)) {
+    const clickedInside = this.elRef.nativeElement.contains(event.target);
+    if (!clickedInside) {
       this.clearResults();
     }
   }
 
-  // Cerrar al presionar Escape
   @HostListener('document:keydown.escape', ['$event'])
-  handleEscapeKey() {
+  onEscapeKey() {
     this.clearResults();
   }
 }

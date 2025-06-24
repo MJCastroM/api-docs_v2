@@ -12,6 +12,61 @@
   border-bottom: $title-underlined;
 }
 
+.mat-accordion-BT {
+  margin: 2rem 0;
+  font-family: $font-family;
+
+  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
+    margin: $margin;
+    background: $background-light;
+    border-radius: $border-radius !important;
+    box-shadow: $box-shadow !important;
+
+    .mat-expansion-panel-header {
+      background: $background-light;
+      color: $text-color;
+      font-size: 1rem;
+      font-family: $font-family;
+      padding: 1.5rem;
+      border-radius: $border-radius;
+      font-weight: 700;
+      box-shadow: none !important;
+
+      .mat-panel-title {
+        font-weight: 500;
+        color: $text-color;
+      }
+      
+      .mat-expansion-indicator::after {
+        color: $red-1 !important;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        content: "";
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        vertical-align: middle;
+      }
+    }
+
+    .mat-expansion-panel-body {
+      padding: 0rem 2rem 2rem;
+      background: $background-light;
+      //box-shadow: 15px 15px 15px 10px $shadow-light;
+    }
+
+    .mat-expansion-panel-content {
+      background: $background-light;
+      border-radius: $border-radius;
+    }
+
+    .mat-icon {
+      color: $text-color;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
 .code-toggle {
   display: flex;
   justify-content: flex-start;
