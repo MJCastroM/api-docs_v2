@@ -3,9 +3,9 @@
 <div class="mat-accordion-BT">
 
   <!-- Recorremos dos secciones: invocation y response -->
-  <mat-expansion-panel *ngFor="let section of sections">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
+  <mat-expansion-panel class="example-panel" *ngFor="let section of sections">
+    <mat-expansion-panel-header class="example-panel-header">
+      <mat-panel-title class="example-panel-title">
         {{ section === 'invocation'
            ? 'Ejemplo de Invocación'
            : 'Ejemplo de Respuesta' }}

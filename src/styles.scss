@@ -29,7 +29,13 @@ body {
 }
 // CIERRE - PROPIEDADES GLOBALES
 
+.mat-mdc-tab-body-content {
+  scrollbar-width: thin !important;
+}
 
+.mat-expansion-indicator { // FLECHA DE EXPANSIÓN
+  color: $red-1 !important;
+}
 
 a {
   color: $red-1 !important;

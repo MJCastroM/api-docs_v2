@@ -33,16 +33,16 @@
   position: fixed;
   bottom: 7rem;
   right: 1.5rem;
-  width: 30rem;
+  width: 50vw;
   max-height: 75vh;
   background: $background-light;
   border-radius: $border-radius;
-  //border: solid 4px #7f7f80;
   box-shadow: 0 0 20px rgba(0,0,0,1);
   display: flex;
   flex-direction: column;
   z-index: 10;
   cursor: default;
+  scrollbar-width: thin;
 
   &::after {
     content: '';
@@ -73,12 +73,12 @@
   border-radius: 50%;
 }
 .chat-messages {
-  
+
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
   background: var(--bg-note-color);
-  
+
   p {
     margin: 0.5em 0;
     line-height: 1.4;

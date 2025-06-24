@@ -16,13 +16,13 @@
   margin: 2rem 0;
   font-family: $font-family;
 
-  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
+  .example-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
     margin: $margin;
     background: $background-light;
     border-radius: $border-radius !important;
     box-shadow: $box-shadow !important;
 
-    .mat-expansion-panel-header {
+    .example-panel-header {
       background: $background-light;
       color: $text-color;
       font-size: 1rem;
@@ -32,12 +32,12 @@
       font-weight: 700;
       box-shadow: none !important;
 
-      .mat-panel-title {
-        font-weight: 500;
+      .example-panel-title {
+        font-weight: 700;
         color: $text-color;
       }
-      
-      .mat-expansion-indicator::after {
+
+      .example-panel-indicator::after {
         color: $red-1 !important;
         border-style: solid;
         border-width: 0 2px 2px 0;
@@ -67,6 +67,7 @@
   }
 }
 
+// PESTAÑA QUE CONTIENE EL CÓDIGO
 .code-toggle {
   display: flex;
   justify-content: flex-start;
@@ -115,12 +116,13 @@
     }
   }
 }
+// FIN - PESTAÑA QUE CONTIENE EL CÓDIGO
 
 // PROPIEDADES DEL CÓDIGO
-
 ::ng-deep pre[class*="language-"],
 ::ng-deep code[class*="language-"] {
   color: $text-color !important;
+  background-color: #ecf4fa !important;
 
   .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
     color:#e45649 !important;
@@ -133,6 +135,7 @@
       color: #50a14f;
   }
 }
+// FIN - PROPIEDADES DEL CÓDIGO
 
 // --- Ahora nuestro override:
 pre[class*="language-"] {
