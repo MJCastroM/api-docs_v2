@@ -32,6 +32,7 @@ interface ChatEntry { role: string; content: string /* raw text */; }
 export class ChatPopupComponent implements OnInit, AfterViewInit {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
 
+  readCode = false;
   showChat = false;
   inputMessage = '';
   messages: Message[] = [];
@@ -51,6 +52,61 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     }
   }
 
+  private copyCode(button:any) {
+      const codeElement = button.parentElement.querySelector("code");
+
+      if (!codeElement) {
+        console.error("Code element not found!");
+        return;
+      }
+
+      let textToCopy = codeElement.innerText || codeElement.textContent;
+
+      if (!textToCopy) {
+        console.error("No text found in the code element.");
+        return;
+      }
+
+      textToCopy = textToCopy.replace(/\r?\n/g, '\n');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy)
+          .then(() => {
+            button.textContent = "Copiado";
+            button.style.color = "var(--text-color)"; 
+            button.style.backgroundImage = "none";
+            setTimeout(() => {
+              button.textContent = "";
+              button.style.color = ""; // Restaurá el color original
+              button.style.backgroundImage = "var(--code-copy-icon)";
+            }, 2000);
+          })
+          .catch(err => {
+            console.error("Failed to copy text: ", err);
+            alert("Failed to copy text. Please try again.");
+          });
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand("copy");
+          button.textContent = "Copiado";
+          button.style.color = "var(--text-color)";
+          button.style.backgroundImage = "none";
+          setTimeout(() => {
+            button.textContent = "";
+            button.style.color = "";
+            button.style.backgroundImage = "var(--code-copy-icon)";
+          }, 2000);
+        } catch (err) {
+          console.error("Fallback: Failed to copy text: ", err);
+          alert("Failed to copy text. Please try again.");
+        }
+        document.body.removeChild(textarea);
+      }
+    }
   ngAfterViewInit() {
     const c = document.querySelector('.chat-messages');
     if (c) {
@@ -68,7 +124,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
 
   clearChatHistory() {
     this.messages = [
-      { text: this.sanitize('¡Hola!, ¿En qué puedo ayudarte?'), isUser: false }
+      { text: '¡Hola!, ¿En qué puedo ayudarte?', isUser: false }
     ];
     this.chatHistory = [];
     localStorage.clear();
@@ -79,7 +135,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     const savedMsgs = localStorage.getItem('messages');
     if (savedMsgs) {
       JSON.parse(savedMsgs).forEach((m: any) =>
-        this.messages.push({ text: this.sanitize(m.text), isUser: m.isUser })
+        this.messages.push({ text: m.text, isUser: m.isUser })
       );
     }
     const savedHist = localStorage.getItem('chatHistory');
@@ -99,7 +155,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     const txt = this.inputMessage.trim();
     if (!txt) return;
 
-    this.messages.push({ text: this.sanitize(txt), isUser: true });
+    this.messages.push({ text: txt, isUser: true });
     this.chatHistory.push({ role: 'user', content: txt });
     this.inputMessage = '';
     this.loading = true;
@@ -114,7 +170,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
         .catch(err => {
           console.error(err);
           this.messages.push({
-            text: this.sanitize('Error iniciando sesión.'),
+            text: 'Error iniciando sesión.',
             isUser: false
           });
           this.loading = this.typingIndicator = false;
@@ -122,11 +178,29 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     }
   }
 
+  private chunkProcess = (text:any) => {
+    if (this.readCode){
+      return text
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\|\|/g, '<br>')
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+    }
+    else {
+      return text
+        .replace(/</g, '<')
+        .replace(/>/g, '>')
+        .replace(/\|\|/g, '<br>')
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+
+    }
+  };
+
   private proceedChat(userMsg: string) {
     // Push a new assistant entry with empty raw content
     this.chatHistory.push({ role: 'assistant', content: '' });
     // Also push an empty display message
-    this.messages.push({ text: this.sanitize(''), isUser: false });
+    this.messages.push({ text: '', isUser: false });
     const msgIdx = this.messages.length - 1;
     const histIdx = this.chatHistory.length - 1;
 
@@ -134,16 +208,16 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       .subscribe({
         next: chunk => {
           // Accumulate raw chunk
-          this.chatHistory[histIdx].content += chunk;
+          this.chatHistory[histIdx].content +=  this.chunkProcess(chunk);
           // Format entire raw content each time
           const formatted = this.formatMessage(this.chatHistory[histIdx].content);
-          this.messages[msgIdx].text = this.sanitize(formatted);
+          this.messages[msgIdx].text = formatted;
           this.scrollToBottom();
         },
         error: err => {
           console.error(err);
           this.messages.push({
-            text: this.sanitize('Error en la solicitud.'),
+            text: 'Error en la solicitud.',
             isUser: false
           });
           this.finalize();
@@ -166,62 +240,116 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       .replace(/>/g, '&gt;');
   }
 
+
+
   /**
    * Apply Markdown-like formatting:
    * - Extract and escape ```xml```/```json``` blocks
    * - Bold **text**, headings, lists, links
    * - Convert single \n → <br/>
    */
-  private formatMessage(raw: string): string {
-    let text = raw.replace(/\r\n?/g, '\n');
 
-    // 1) extract code blocks
-    const blocks: { ph: string; html: string }[] = [];
-    text = text.replace(/```(xml|json)\n([\s\S]*?)```/g,
-      (_, lang, inner) => {
-        const esc = this.escapeHtml(inner);
-        const html = `<div class="${lang}-code"><code>${esc}</code>` +
-                     `<button class="copy-button">Copiar</button></div>`;
-        const ph = `@@BLK${blocks.length}@@`;
-        blocks.push({ ph, html });
-        return ph;
+    
+  private formatMessage = (message) => {
+      // Procesar JSON
+      let formattedMessage = message;
+      
+      if (!this.readCode) {
+        // Agregar un espacio en blanco después de "por favor", ya que siempre queda pegado a la siguiente palabra
+        formattedMessage = formattedMessage.replace(/(por favor\.)/gi, '$1 ');
+
+        // Agregar un único salto de línea después de cada punteo numerado
+        formattedMessage = formattedMessage.replace(/(\d+\.\s[^\n]+)/g, '$1\n');
+
+        // Eliminar cualquier acumulación de saltos de línea (deja solo uno)
+        formattedMessage = formattedMessage.replace(/\n+/g, '\n');
+
+        // Convertir enlaces en Markdown a HTML
+        const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+        formattedMessage = formattedMessage.replace(linkRegex, '<a href="$2" target="_blank">$1</a>');
+
+        // Convertir encabezados (hasta ####)
+        formattedMessage = formattedMessage
+          .replace(/####\s*(.+?)(?:\n|$)/g, '<h3><strong>$1</strong></h3>')
+          .replace(/###\s*(.+?)(?:\n|$)/g, '<h2><strong>$1</strong></h2>')
+          .replace(/##\s*(.+?)(?:\n|$)/g, '<h2><strong>$1</strong></h2>')
+          .replace(/#\s*(.+?)(?:\n|$)/g, '<h1><strong>$1</strong></h1>');
+
+        // Manejar negritas
+        formattedMessage = formattedMessage.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+        // Manejar listas con guiones
+        formattedMessage = formattedMessage.replace(/-\s(.+?)(?:\n|$)/g, '<li>$1</li>');
+        
+        // Convertir saltos de línea a <br/> para HTML
+        formattedMessage = formattedMessage.replace(/\n/g, '<br/>');
+
       }
-    );
+      
+      // Procesar JSON
+      formattedMessage = formattedMessage.replace(/((```json)|(<div class="json-code"><code>))([\s\S]+?)/g, (match, p1, p2, p3, p4) => {
+        const escapedContent = p4
+          .replace(/&/g, '&') // Escapar `&`
+          .replace(/</g, '<') // Escapar `<`
+          .replace(/>/g, '>'); // Escapar `<`
+        return `<div class="json-code"><code>${escapedContent}`;
+      });
 
-    // 2) bold **
-    text = text.replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>');
+      var regex = /```xml/; 
+      if (regex.test(formattedMessage)){
+          //console.log("leo xml")
+          this.readCode = true
+      }
 
-    // 3) headings
-    text = text
-      .replace(/^######\s*(.+)$/gm, '<h6>$1</h6>')
-      .replace(/^#####\s*(.+)$/gm, '<h5>$1</h5>')
-      .replace(/^####\s*(.+)$/gm, '<h4>$1</h4>')
-      .replace(/^###\s*(.+)$/gm, '<h3>$1</h3>')
-      .replace(/^##\s*(.+)$/gm, '<h2>$1</h2>')
-      .replace(/^#\s*(.+)$/gm, '<h1>$1</h1>');
+      // Procesar XML
+      formattedMessage = formattedMessage.replace(/```xml/g, `<div class="xml-code"><code>`);
+      
+      if (/```/.test(formattedMessage)) {
+        //console.log('fin xml');
+        //console.log('before replace:', formattedMessage);
 
-    // 4) lists
-    text = text.replace(/^\-\s+(.+)$/gm, '<li>$1</li>');
-    text = text.replace(
-      /(<li>[\s\S]+?<\/li>)(\s*<li>[\s\S]+?<\/li>)+/g,
-      m => `<ul>${m.replace(/<\/li>\s*<li>/g,'</li><li>')}</ul>`
-    );
+        const replacement = `</code><button
+          class="copy-button"
+          onclick="copyCode(this)"
+          style="background-image: var(--code-copy-icon);"
+          title="Copiar código">
+        </button></div>`;
 
-    // 5) links
-    text = text.replace(
-      /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-      '<a href="$2" target="_blank">$1</a>'
-    );
+        // split/join para forzar el reemplazo literal
+        formattedMessage = formattedMessage.split('```').join(replacement);
 
-    // 6) single-line breaks
-    text = text.replace(/\n/g, '<br/>');
+        //console.log(' after replace:', formattedMessage);
+        this.readCode = false;
+      }
 
-    // 7) restore code blocks
-    for (const b of blocks) {
-      text = text.replace(b.ph, b.html);
-    }
-    return text;
-  }
+      //Estilos para el código
+      formattedMessage = formattedMessage.replace(/("([^"]+)")(\s*:\s*)("[^"]*")/g, (match, key, keyName, colon, value) => {
+        // Elimina las comillas iniciales y finales del valor
+        const rawValue = value.slice(1, -1);
+
+        // Verifica si el valor ya tiene el formato aplicado
+        if (!rawValue.startsWith('<span class="token string">')) {
+          value = `<span class="token string">"${rawValue}"</span>`;
+        }
+
+        return `${key}${colon}${value}`;
+      });
+      formattedMessage = formattedMessage.replace(/(?<!\<span class="token property">)(\&lt\;.*?\&gt\;)(?<!\<\/span>)/g, (match, p1, p2, p3) => {
+        return `<span class="token property">${p1}</span>`;
+      });
+      formattedMessage = formattedMessage.replace(/(?<!<span class="token property">)"([^"]+)":(?<!<\/span>)/g, (match, p1) => {
+        // `p1` es la clave JSON (sin comillas)
+        return `<span class="token property">"${p1}":</span>`;
+      });
+      formattedMessage = formattedMessage.replace(/(?<!title)(?<!style)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
+        return `<span class="token string">${p1}"${p2}"</span>`;
+      });
+      
+    //console.log(' definitive replace:', formattedMessage);
+      return formattedMessage;
+    };
+
+
 
   /** Handle copy button clicks */
   @HostListener('click', ['$event'])
@@ -236,11 +364,6 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       btn.textContent = 'Copiado';
       setTimeout(() => (btn.textContent = 'Copiar'), 2000);
     });
-  }
-
-  /** Mark HTML safe for innerHTML */
-  private sanitize(html: string): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   private scrollToBottom() {
