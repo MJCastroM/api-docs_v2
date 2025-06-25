@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener, ElementRef  } from '@angular/core';
 import { SearchService, SearchResult } from 'src/app/core/services/search.service';
 
 @Component({
@@ -9,46 +9,56 @@ import { SearchService, SearchResult } from 'src/app/core/services/search.servic
 export class SearchComponent {
   query = '';
   results: SearchResult[] = [];
-  showPopup = false;
+  searchDone = false;
 
-  @ViewChild('searchInput') searchInput!: ElementRef;
+  readonly elRef: ElementRef;
 
   constructor(
     private searchService: SearchService,
-    private elRef: ElementRef
-  ) {}
+    elRef: ElementRef
+  ) {
+    this.elRef = elRef;
+  }
 
   search() {
-    if (!this.query.trim()) {
-      this.clearResults();
-      return;
-    }
+    if (!this.query.trim()) return this.clearResults();
 
     this.results = this.searchService.search(this.query);
-    this.showPopup = true;
-    document.body.classList.add('popup-open');
+    this.searchDone = true;
+  }
+
+  isFocused = false;
+
+  onBlur() {
+    // Usamos un timeout corto para que no se cierre antes de hacer click en los resultados
+    setTimeout(() => {
+      this.isFocused = false;
+      this.clearResults();
+    }, 100);
   }
 
   clearResults() {
     this.query = '';
     this.results = [];
-    this.showPopup = false;
-    document.body.classList.remove('popup-open');
-
-    // Sacar el foco manualmente del input
-    this.searchInput?.nativeElement.blur();
+    this.searchDone = false;
   }
 
-  @HostListener('document:click', ['$event'])
-  handleClickOutside(event: MouseEvent) {
-    const clickedInside = this.elRef.nativeElement.contains(event.target);
-    if (!clickedInside) {
-      this.clearResults();
+  @HostListener('document:keydown.escape')
+  handleEscapeKey() {
+    this.clearResults();
+  }
+
+  @HostListener('document:keydown.control.f', ['$event'])
+  handleCtrlF(event: KeyboardEvent) {
+    event.preventDefault(); // evitar que se abra el buscador del navegador
+    this.focusSearchInput();
+  }
+
+  focusSearchInput() {
+    const input = this.elRef.nativeElement.querySelector('input');
+    if (input) {
+      input.focus();
     }
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscapeKey() {
-    this.clearResults();
-  }
 }

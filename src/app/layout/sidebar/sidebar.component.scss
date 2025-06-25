@@ -3,12 +3,16 @@
 $background-panel: darken($background-color, 5%);
 $background-panel-2: darken($background-panel, 5%);
 
+.mdc-list {
+    padding: 0 !important;
+}
+
 .sidebar { // PROPIEDADES GENERALES DE LA SIDEBAR
   position: fixed;
   top: $navbar-height;
   left: 0;
-  width: 20vw;
-  height: 100vh;
+  width: 15vw;
+  height: calc(100vh - $navbar-height);
   background-color: $background-color;
   overflow-y: auto;
   font-family: $font-family;
@@ -17,54 +21,59 @@ $background-panel-2: darken($background-panel, 5%);
   box-shadow: 2px 15px 15px 10px $shadow-light;
 }
 
-.sidebar-header { // CABEZAL PADRE DE CADA PANEL
+.sidebar-header-level-1 { // CABEZAL PADRE DE CADA PANEL
   padding: 0.5rem 1rem;
   background-color: $background-light;
 }
 
 // PANEL PADRE EXPANDIDO (EFECTO HUNDIDO ARRIBA Y ABAJO)
 mat-expansion-panel.mat-expanded {
-  background-color: transparent;
-  box-shadow:
-    inset 0 -6px 6px -6px rgba(0, 0, 0, 0.6),   // sombra abajo
-    //inset -6px 0 6px -6px rgba(0, 0, 0, 0.6);    // sombra derecha
-  //border-left: 4px solid $red-1;
+  background-color: $background-light;
+  box-shadow: inset 0 -6px 6px -6px rgba(0, 0, 0, 0.6); // SOMBRA ABAJO
 }
 
 mat-expansion-panel.mat-expanded > .mat-expansion-panel-header {
-  background-color: transparent;
-  box-shadow:
-    inset 0 6px 6px -6px rgba(0, 0, 0, 0.6),    // sombra arriba
-    //inset -6px 0 6px -6px rgba(0, 0, 0, 0.6);    // sombra derecha
+  background-color: $background-light;
+  box-shadow: inset 0 6px 6px -6px rgba(0, 0, 0, 0.6); // SOMBRA ARRIBA
 }
+ // FIN - PANEL PADRE EXPANDIDO
 
 // PANEL HIJO CERRADO (PLANO)
-mat-expansion-panel.child-panel {
+.sidebar-header-level-2 { // CABEZAL HIJO DE CADA PANEL
   padding: 0.5rem 1rem;
-  background-color: transparent;
+  background-color: $background-light;
   box-shadow: none;
 
   .mat-expansion-panel-header {
     padding: 0.5rem 1rem;
-    background-color: transparent;
+    background-color: $background-light;
     box-shadow: none;
   }
 }
+// PANEL HIJO CERRADO (PLANO)
 
 // PANEL HIJO EXPANDIDO (EFECTO HUNDIDO)
-mat-expansion-panel.child-panel.mat-expanded {
-  background-color: transparent;
+mat-expansion-panel.sidebar-header-level-2.mat-expanded {
+  background-color: $background-light;
   box-shadow:
-    inset 0 6px 6px -6px rgba(0, 0, 0, 0.6),     // arriba
-    inset 0 -6px 6px -6px rgba(0, 0, 0, 0.6),    // abajo
-    //inset -6px 0 6px -6px rgba(0, 0, 0, 0.6);     // derecha
+    inset 0 6px 6px -6px rgba(0, 0, 0, 0.6),  // SOMBRA ARRIBA
+    inset 0 -6px 6px -6px rgba(0, 0, 0, 0.6); // SOMBRA ABAJO
 }
 
-mat-expansion-panel.child-panel.mat-expanded > .mat-expansion-panel-header {
-  background-color: transparent;
-  //box-shadow:
-    //inset 0 6px 6px -6px rgba(0, 0, 0, 0.6),     // arriba
-    //inset -6px 0 6px -6px rgba(0, 0, 0, 0.6);     // derecha
+mat-expansion-panel.sidebar-header-level-2.mat-expanded > .mat-expansion-panel-header {
+  background-color: $background-light;
+}
+
+.sidebar-header-level-3 { // CABEZAL HIJO DE CADA PANEL
+  padding: 0.5rem 1rem;
+  background-color: $background-light;
+  box-shadow: none;
+
+  .mat-expansion-panel-header {
+    padding: 0.5rem 1rem;
+    background-color: $background-light;
+    box-shadow: none;
+  }
 }
 
 .mat-expansion-panel-spacing {

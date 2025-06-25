@@ -19,6 +19,7 @@ import { BackendConfigComponent }  from './components/backend-config/backend-con
 import { ApiTabsComponent }        from './components/api-tabs/api-tabs.component';
 import { ApiTableComponent }       from './components/api-table/api-table.component';
 import { CodeExampleComponent }    from './components/code-example/code-example.component';
+import { CodeTabsComponent }       from './components//code-tabs/code-tabs.component';
 import { StructuredDataComponent } from './components/structured-data/structured-data.component';
 import { FooterSpaceComponent } from './components/footer-space/footer-space.component';
 import { FormsModule }    from '@angular/forms';            // ← importa FormsModule
@@ -1412,7 +1413,8 @@ import { ObtenerTareasdeProcesoComponent1750713395141 } from './api-doc-page/Wor
     ApiTabsComponent,
     ApiTableComponent,
     PrismHighlightDirective,
-    StructuredDataComponent
+    StructuredDataComponent,
+    CodeTabsComponent
   ],
   imports: [
     HttpClientModule,

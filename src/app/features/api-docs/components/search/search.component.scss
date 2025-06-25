@@ -6,7 +6,7 @@
   max-width: 400px;
   z-index: 1000;
 
-  input {
+  input { // INPUT DE BÚSQUEDA
     padding: 0.5rem 1rem 0.5rem 2rem; // padding izquierdo para el ícono
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -49,7 +49,7 @@ body.popup-open {
   overflow: hidden;
 }
 
-.search-icon {
+.search-icon { // ÍCONO DE BÚSQUEDA
   position: absolute;
   left: 0.75rem;
   top: 50%;
@@ -61,34 +61,23 @@ body.popup-open {
   z-index: 1001; // fuerza que quede adelante
 }
 
-.search-popup {
-  font-family: $font-family;
-  overflow: hidden;
-  border-radius: $border-radius;
-  scrollbar-width: thin;
-  position: absolute;
-  margin-top: 2rem !important;
-  top: 100%;
-  right: 0;
-  width: 50vw;
-  max-width: 90vw;
+.search-popup { // CONTENEDOR DE RESULTADO DE BÚSQUEDA
   background: white;
-  z-index: 1002;
-  max-height: 20rem;
+  border-radius: $border-radius;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  font-family: $font-family;
+  margin-top: 2rem !important;
+  max-height: 20rem; // ojo, esto estaba como 20vw antes
   overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0,0,0,1);
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-
-  // Contenedor interno con scroll
-  .scroll-container {
-    max-height: 18rem;
-    overflow-y: auto;
-    padding-right: 0.5rem; // para que no tape el contenido
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-  }
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  scrollbar-color: $red-1 transparent;
+  scrollbar-width: thin;
+  top: 100%;
+  width: 50vw;
+  z-index: 1002;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -102,36 +91,23 @@ body.popup-open {
   &::-webkit-scrollbar-track {
     background: transparent;
   }
+
+  li {
+    display: block;
+    list-style-type: disc;
+    padding-left: 1rem;
+  }
 }
 
-.search-overlay {
+.blur-overlay { // CAPA DE DESENFOQUE
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(5px); // el blur
-  background-color: rgba(0, 0, 0, 0.1); // leve oscuridad
-  z-index: 900; // debajo del popup
-  animation: fadeBlur 0.3s ease forwards;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.2); // opcional, para un efecto más sutil
+  z-index: 999; // debajo de la search-wrapper
 }
 
-@keyframes fadeBlur {
-  from {
-    backdrop-filter: blur(0px);
-    background-color: rgba(0, 0, 0, 0);
-  }
-  to {
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
 
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
-    padding-inline-start: 1rem !important;
-    unicode-bidi: isolate;
-}

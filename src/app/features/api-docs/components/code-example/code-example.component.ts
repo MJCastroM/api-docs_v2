@@ -6,7 +6,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 import * as Prism from 'prismjs';
-import 'prismjs/components/prism-markup.js';  
+import 'prismjs/components/prism-markup.js';
 import 'prismjs/components/prism-json.min.js';    // JSON highlighter
 
 @Component({
@@ -40,6 +40,8 @@ export class CodeExampleComponent implements OnInit, OnChanges {
     invocation: { xml: '', json: '' },
     response:   { xml: '', json: '' }
   };
+
+  expandedSection: 'invocation' | 'response' | null = null;
 
   ngOnInit() {
     this.updateHighlight();
