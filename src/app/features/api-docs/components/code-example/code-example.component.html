@@ -1,8 +1,8 @@
-<h1 class="example-title">Ejemplos</h1>
+  <!--<h1 class="example-title">Ejemplos</h1>
 
 <div class="mat-accordion-BT">
 
-  <!-- Recorremos dos secciones: invocation y response -->
+  <!-- Recorremos dos secciones: invocation y response -->  <!--
   <mat-expansion-panel class="example-panel" *ngFor="let section of sections">
     <mat-expansion-panel-header class="example-panel-header">
       <mat-panel-title class="example-panel-title">
@@ -10,7 +10,13 @@
            ? 'Ejemplo de Invocación'
            : 'Ejemplo de Respuesta' }}
       </mat-panel-title>
-    </mat-expansion-panel-header>
+    </mat-expansion-panel-header>-->
+<h1 class="example-title">Ejemplos</h1>
+
+<mat-tab-group class="api-tabs" disableRipple>
+  <mat-tab
+    *ngFor="let section of sections"
+    [label]="getTabLabel(section)">
 
     <div class="code-toggle">
       <button
@@ -36,6 +42,10 @@
         class="language-{{ view[section] }}">
       </code>
     </pre>
+  </mat-tab>
+</mat-tab-group>
+
+     <!--
   </mat-expansion-panel>
 
-</div>
+</div>-->

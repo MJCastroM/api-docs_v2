@@ -41,7 +41,11 @@ export class CodeExampleComponent implements OnInit, OnChanges {
     response:   { xml: '', json: '' }
   };
 
-  expandedSection: 'invocation' | 'response' | null = null;
+  getTabLabel(section: 'invocation' | 'response'): string {
+    return section === 'invocation'
+      ? 'Ejemplo de Invocación'
+      : 'Ejemplo de Respuesta';
+  }
 
   ngOnInit() {
     this.updateHighlight();
