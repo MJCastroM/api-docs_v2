@@ -1,48 +1,57 @@
 <mat-nav-list class="sidebar">
+  <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Ahorro Programado</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Ahorro Programado</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Ahorro-Programado/Contratar/ContratarSimulacion" routerLinkActive="active">Contratar Simulacion</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Contratar/Crear" routerLinkActive="active">Crear</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Contratar/Simular" routerLinkActive="active">Simular</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Documentos Digitales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Documentos Digitales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Ahorro-Programado/Documentos-Digitales/ActualizarDocumentoDigital" routerLinkActive="active">Actualizar Documento Digital</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Documentos-Digitales/AsociarDocumentoDigital" routerLinkActive="active">Asociar Documento Digital</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Documentos-Digitales/EliminarDocumentoDigital" routerLinkActive="active">Eliminar Documento Digital</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Documentos-Digitales/ObtenerDocumentoDigital" routerLinkActive="active">Obtener Documento Digital</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Documentos-Digitales/ObtenerDocumentosDigitales" routerLinkActive="active">Obtener Documentos Digitales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Modificar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Modificar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Ahorro-Programado/Modificar/ModificarCuentaDestino" routerLinkActive="active">Modificar Cuenta Destino</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Modificar/ModificarCuentaOrigen" routerLinkActive="active">Modificar Cuenta Origen</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Modificar/ModificarFechadeAbono" routerLinkActive="active">Modificar Fechade Abono</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Modificar/ModificarMetadeAhorro" routerLinkActive="active">Modificar Metade Ahorro</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Modificar/ModificarMontodeAbono" routerLinkActive="active">Modificar Montode Abono</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Ahorro-Programado/Obtener/Obtener" routerLinkActive="active">Obtener</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Obtener/ObtenerCronogramaAbonos" routerLinkActive="active">Obtener Cronograma Abonos</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Obtener/ObtenerCuentasDestinoHabilitadas" routerLinkActive="active">Obtener Cuentas Destino Habilitadas</a>
@@ -51,25 +60,30 @@
     <a mat-list-item routerLink="/Ahorro-Programado/Obtener/ObtenerPeriodosHabilitados" routerLinkActive="active">Obtener Periodos Habilitados</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Obtener/ObtenerPlazosHabilitados" routerLinkActive="active">Obtener Plazos Habilitados</a>
     <a mat-list-item routerLink="/Ahorro-Programado/Obtener/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>AR   Argentina</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>AR   Argentina</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Cuentas Corrientes</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Cuentas Corrientes</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-3">
-    <mat-panel-title>Cheque Electrónico</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-3">
+    <mat-expansion-panel-header class="sidebar-header-level-3">
+      <mat-panel-title>Cheque Electrónico</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-3">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AnularChequeElectronico" routerLinkActive="active">Anular Cheque Electronico</a>
     <a mat-list-item routerLink="/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/AsignarIdaChequeElectronico" routerLinkActive="active">Asignar Ida Cheque Electronico</a>
     <a mat-list-item routerLink="/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/CrearChequeraElectronica" routerLinkActive="active">Crear Chequera Electronica</a>
@@ -79,15 +93,18 @@
     <a mat-list-item routerLink="/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronico" routerLinkActive="active">Emitir Cheque Electronico</a>
     <a mat-list-item routerLink="/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/EmitirChequeElectronicodeChequera" routerLinkActive="active">Emitir Cheque Electronicode Chequera</a>
     <a mat-list-item routerLink="/AR - Argentina/Cuentas-Corrientes/Cheque-Electrónico/HabilitarChequeElectronico" routerLinkActive="active">Habilitar Cheque Electronico</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>SNP</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>SNP</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/AR - Argentina/SNP/CrearAdhesion" routerLinkActive="active">Crear Adhesion</a>
     <a mat-list-item routerLink="/AR - Argentina/SNP/CrearStopDebit" routerLinkActive="active">Crear Stop Debit</a>
     <a mat-list-item routerLink="/AR - Argentina/SNP/CrearStopDebitparaAdhesionconImporte" routerLinkActive="active">Crear Stop Debitpara Adhesioncon Importe</a>
@@ -98,23 +115,28 @@
     <a mat-list-item routerLink="/AR - Argentina/SNP/ObtenerStopDebits" routerLinkActive="active">Obtener Stop Debits</a>
     <a mat-list-item routerLink="/AR - Argentina/SNP/ReversarDebitos" routerLinkActive="active">Reversar Debitos</a>
     <a mat-list-item routerLink="/AR - Argentina/SNP/SolicitarBajadeAdhesion" routerLinkActive="active">Solicitar Bajade Adhesion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Autenticación</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Autenticación</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Autenticación/Autenticacion" routerLinkActive="active">Autenticacion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Cadena De Cierre</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Cadena De Cierre</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cadena-de-Cierre/ObtenerDetalledeEjecucion" routerLinkActive="active">Obtener Detallede Ejecucion</a>
     <a mat-list-item routerLink="/Cadena-de-Cierre/ObtenerDetalledeProceso" routerLinkActive="active">Obtener Detallede Proceso</a>
     <a mat-list-item routerLink="/Cadena-de-Cierre/ObtenerProcesosconError" routerLinkActive="active">Obtener Procesoscon Error</a>
@@ -123,29 +145,34 @@
     <a mat-list-item routerLink="/Cadena-de-Cierre/ObtenerProcesosMensuales" routerLinkActive="active">Obtener Procesos Mensuales</a>
     <a mat-list-item routerLink="/Cadena-de-Cierre/ObtenerProcesosReprocesables" routerLinkActive="active">Obtener Procesos Reprocesables</a>
     <a mat-list-item routerLink="/Cadena-de-Cierre/VerificarEstadoServidor" routerLinkActive="active">Verificar Estado Servidor</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Calendarios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Calendarios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Calcular</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Calcular</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Calendarios/Calcular/CalcularFechadeVencimiento" routerLinkActive="active">Calcular Fechade Vencimiento</a>
     <a mat-list-item routerLink="/Calendarios/Calcular/CalcularFechadeVencimientoenDiasHabiles" routerLinkActive="active">Calcular Fechade Vencimientoen Dias Habiles</a>
     <a mat-list-item routerLink="/Calendarios/Calcular/CalcularPlazo" routerLinkActive="active">Calcular Plazo</a>
     <a mat-list-item routerLink="/Calendarios/Calcular/CalcularPlazoenDiasHabiles" routerLinkActive="active">Calcular Plazoen Dias Habiles</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Calendarios/Obtener/ObtenerFechaHabil" routerLinkActive="active">Obtener Fecha Habil</a>
     <a mat-list-item routerLink="/Calendarios/Obtener/ObtenerFechaHabilAnterior" routerLinkActive="active">Obtener Fecha Habil Anterior</a>
     <a mat-list-item routerLink="/Calendarios/Obtener/ObtenerFechaHabilAnteriordeSucursal" routerLinkActive="active">Obtener Fecha Habil Anteriorde Sucursal</a>
@@ -154,52 +181,62 @@
     <a mat-list-item routerLink="/Calendarios/Obtener/ObtenerInicioyFindeMesdeSucursal" routerLinkActive="active">Obtener Inicioy Finde Mesde Sucursal</a>
     <a mat-list-item routerLink="/Calendarios/Obtener/ObtenerProximaFechaHabil" routerLinkActive="active">Obtener Proxima Fecha Habil</a>
     <a mat-list-item routerLink="/Calendarios/Obtener/ObtenerProximaFechaHabildeSucursal" routerLinkActive="active">Obtener Proxima Fecha Habilde Sucursal</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>CASH Management</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>CASH Management</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Archivo</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Archivo</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Archivo/AutorizarArchivo" routerLinkActive="active">Autorizar Archivo</a>
     <a mat-list-item routerLink="/CASH-Management/Archivo/CargarArchivo" routerLinkActive="active">Cargar Archivo</a>
     <a mat-list-item routerLink="/CASH-Management/Archivo/CargarArchivoRecibidoComoDato" routerLinkActive="active">Cargar Archivo Recibido Como Dato</a>
     <a mat-list-item routerLink="/CASH-Management/Archivo/DetenerArchivo" routerLinkActive="active">Detener Archivo</a>
     <a mat-list-item routerLink="/CASH-Management/Archivo/RechazarArchivo" routerLinkActive="active">Rechazar Archivo</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Beneficiarios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Beneficiarios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Beneficiarios/CargarBeneficiarios" routerLinkActive="active">Cargar Beneficiarios</a>
     <a mat-list-item routerLink="/CASH-Management/Beneficiarios/IngresarBeneficiario" routerLinkActive="active">Ingresar Beneficiario</a>
     <a mat-list-item routerLink="/CASH-Management/Beneficiarios/ObtenerBeneficiarioSegunFiltro" routerLinkActive="active">Obtener Beneficiario Segun Filtro</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Contratar/AltaAutomaticaContrato" routerLinkActive="active">Alta Automatica Contrato</a>
     <a mat-list-item routerLink="/CASH-Management/Contratar/CargarServiciosDisponibles" routerLinkActive="active">Cargar Servicios Disponibles</a>
     <a mat-list-item routerLink="/CASH-Management/Contratar/ContratarDebitoAutomatico" routerLinkActive="active">Contratar Debito Automatico</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Obtener/ObtenerDetalledeOrdendeCuenta" routerLinkActive="active">Obtener Detallede Ordende Cuenta</a>
     <a mat-list-item routerLink="/CASH-Management/Obtener/ObtenerDetalledePago" routerLinkActive="active">Obtener Detallede Pago</a>
     <a mat-list-item routerLink="/CASH-Management/Obtener/ObtenerDetalleOrdenSegunCampo" routerLinkActive="active">Obtener Detalle Orden Segun Campo</a>
@@ -209,37 +246,43 @@
     <a mat-list-item routerLink="/CASH-Management/Obtener/ObtenerServicios" routerLinkActive="active">Obtener Servicios</a>
     <a mat-list-item routerLink="/CASH-Management/Obtener/ObtenerValoresOrden" routerLinkActive="active">Obtener Valores Orden</a>
     <a mat-list-item routerLink="/CASH-Management/Obtener/ObtenerValoresOrdenSegunCampo" routerLinkActive="active">Obtener Valores Orden Segun Campo</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Orden</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Orden</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Orden/AutorizarOrden" routerLinkActive="active">Autorizar Orden</a>
     <a mat-list-item routerLink="/CASH-Management/Orden/DetenerOrden" routerLinkActive="active">Detener Orden</a>
     <a mat-list-item routerLink="/CASH-Management/Orden/IngresarOrdenPago" routerLinkActive="active">Ingresar Orden Pago</a>
     <a mat-list-item routerLink="/CASH-Management/Orden/ProcesarOrden" routerLinkActive="active">Procesar Orden</a>
     <a mat-list-item routerLink="/CASH-Management/Orden/RechazarOrden" routerLinkActive="active">Rechazar Orden</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Pagos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Pagos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Pagos/AnularPagoDeuda" routerLinkActive="active">Anular Pago Deuda</a>
     <a mat-list-item routerLink="/CASH-Management/Pagos/PagarDeudaDesdeCuenta" routerLinkActive="active">Pagar Deuda Desde Cuenta</a>
     <a mat-list-item routerLink="/CASH-Management/Pagos/RegistrarPagoDeuda" routerLinkActive="active">Registrar Pago Deuda</a>
     <a mat-list-item routerLink="/CASH-Management/Pagos/RegistrarPagoEnLinea" routerLinkActive="active">Registrar Pago En Linea</a>
     <a mat-list-item routerLink="/CASH-Management/Pagos/RegistrarPagoEnLineaDesdeCuenta" routerLinkActive="active">Registrar Pago En Linea Desde Cuenta</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Visualizar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Visualizar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CASH-Management/Visualizar/VisualizarListaResumenCabezal" routerLinkActive="active">Visualizar Lista Resumen Cabezal</a>
     <a mat-list-item routerLink="/CASH-Management/Visualizar/VisualizarListaResumenCabezalOrden" routerLinkActive="active">Visualizar Lista Resumen Cabezal Orden</a>
     <a mat-list-item routerLink="/CASH-Management/Visualizar/VisualizarOrdendeArchivoParaCuenta" routerLinkActive="active">Visualizar Ordende Archivo Para Cuenta</a>
@@ -247,28 +290,34 @@
     <a mat-list-item routerLink="/CASH-Management/Visualizar/VisualizarResumenCabezal" routerLinkActive="active">Visualizar Resumen Cabezal</a>
     <a mat-list-item routerLink="/CASH-Management/Visualizar/VisualizarSituacionArchivos" routerLinkActive="active">Visualizar Situacion Archivos</a>
     <a mat-list-item routerLink="/CASH-Management/Visualizar/VisualizarSituacionLineas" routerLinkActive="active">Visualizar Situacion Lineas</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>CHAT</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>CHAT</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/CHAT/CHAT" routerLinkActive="active">CHAT</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Clientes</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Clientes</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Actualizar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Actualizar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Clientes/Actualizar/Actualizar" routerLinkActive="active">Actualizar</a>
     <a mat-list-item routerLink="/Clientes/Actualizar/ActualizarDocumentoDigital" routerLinkActive="active">Actualizar Documento Digital</a>
     <a mat-list-item routerLink="/Clientes/Actualizar/ActualizarDomicilio" routerLinkActive="active">Actualizar Domicilio</a>
@@ -287,23 +336,27 @@
     <a mat-list-item routerLink="/Clientes/Actualizar/Habilitar" routerLinkActive="active">Habilitar</a>
     <a mat-list-item routerLink="/Clientes/Actualizar/Inhabilitar" routerLinkActive="active">Inhabilitar</a>
     <a mat-list-item routerLink="/Clientes/Actualizar/ModificarEjecutivo" routerLinkActive="active">Modificar Ejecutivo</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Crear</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Crear</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Clientes/Crear/Crear" routerLinkActive="active">Crear</a>
     <a mat-list-item routerLink="/Clientes/Crear/CrearconPersonaExistente" routerLinkActive="active">Crearcon Persona Existente</a>
     <a mat-list-item routerLink="/Clientes/Crear/CrearParaPersonaJuridica" routerLinkActive="active">Crear Para Persona Juridica</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Clientes/Obtener/Obtener" routerLinkActive="active">Obtener</a>
     <a mat-list-item routerLink="/Clientes/Obtener/ObtenerAhorrosProgramados" routerLinkActive="active">Obtener Ahorros Programados</a>
     <a mat-list-item routerLink="/Clientes/Obtener/ObtenerBolsillos" routerLinkActive="active">Obtener Bolsillos</a>
@@ -346,65 +399,77 @@
     <a mat-list-item routerLink="/Clientes/Obtener/ObtenerTiposdeIntegracion" routerLinkActive="active">Obtener Tiposde Integracion</a>
     <a mat-list-item routerLink="/Clientes/Obtener/ObtenerTitularRepresentativo" routerLinkActive="active">Obtener Titular Representativo</a>
     <a mat-list-item routerLink="/Clientes/Obtener/ObtenerTitulos" routerLinkActive="active">Obtener Titulos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Validar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Validar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Clientes/Validar/ValidarExistencia" routerLinkActive="active">Validar Existencia</a>
     <a mat-list-item routerLink="/Clientes/Validar/VerificarEmpleado" routerLinkActive="active">Verificar Empleado</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Configuración Bantotal</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Configuración Bantotal</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Bancos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Bancos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Bancos/ObtenerAgenciasBanco" routerLinkActive="active">Obtener Agencias Banco</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Bancos/ObtenerBancos" routerLinkActive="active">Obtener Bancos</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Bancos/ObtenerDetalleSucursal" routerLinkActive="active">Obtener Detalle Sucursal</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Bancos/ObtenerSucursalesPrincipales" routerLinkActive="active">Obtener Sucursales Principales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Clientes</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Clientes</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Clientes/ObtenerActividades" routerLinkActive="active">Obtener Actividades</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Clientes/ObtenerActividadesporTipo" routerLinkActive="active">Obtener Actividadespor Tipo</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Clientes/ObtenerEjecutivos" routerLinkActive="active">Obtener Ejecutivos</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Clientes/ObtenerTiposdeActividad" routerLinkActive="active">Obtener Tiposde Actividad</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Clientes/ObtenerTiposdeTarjeta" routerLinkActive="active">Obtener Tiposde Tarjeta</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
     <a mat-list-item routerLink="/Configuración-Bantotal/ObtenerImpuestos" routerLinkActive="active">Obtener Impuestos</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/ObtenerTiposdeDocumentoDigital" routerLinkActive="active">Obtener Tiposde Documento Digital</a>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Operaciones</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Operaciones</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Operaciones/ObtenerEstados" routerLinkActive="active">Obtener Estados</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Operaciones/ObtenerInstrucciones" routerLinkActive="active">Obtener Instrucciones</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Operaciones/ObtenerPaquetes" routerLinkActive="active">Obtener Paquetes</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Operaciones/ObtenerTiposdeTexto" routerLinkActive="active">Obtener Tiposde Texto</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Parámetros Generales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Parámetros Generales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Parámetros Generales/ObtenerCalendariodeSucursal" routerLinkActive="active">Obtener Calendariode Sucursal</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Parámetros Generales/ObtenerCalendarios" routerLinkActive="active">Obtener Calendarios</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Parámetros Generales/ObtenerDetalledeCalendario" routerLinkActive="active">Obtener Detallede Calendario</a>
@@ -415,13 +480,15 @@
     <a mat-list-item routerLink="/Configuración-Bantotal/Parámetros Generales/ObtenerMonedaNacional" routerLinkActive="active">Obtener Moneda Nacional</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Parámetros Generales/ObtenerMonedas" routerLinkActive="active">Obtener Monedas</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Parámetros Generales/ObtenerSucursales" routerLinkActive="active">Obtener Sucursales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Personas</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Personas</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Personas/ObtenerAgrupadoresDomicilio" routerLinkActive="active">Obtener Agrupadores Domicilio</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Personas/ObtenerBarriosyColonias" routerLinkActive="active">Obtener Barriosy Colonias</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Personas/ObtenerCiudadesyLocalidades" routerLinkActive="active">Obtener Ciudadesy Localidades</a>
@@ -431,69 +498,83 @@
     <a mat-list-item routerLink="/Configuración-Bantotal/Personas/ObtenerTiposdeListasNegras" routerLinkActive="active">Obtener Tiposde Listas Negras</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Personas/ObtenerTiposdeTelefono" routerLinkActive="active">Obtener Tiposde Telefono</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Personas/ObtenerTiposdeVivienda" routerLinkActive="active">Obtener Tiposde Vivienda</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Precios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Precios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Precios/ObtenerPizarraporModulo" routerLinkActive="active">Obtener Pizarrapor Modulo</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Precios/ObtenerPizarras" routerLinkActive="active">Obtener Pizarras</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Seguridad</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Seguridad</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Configuración-Bantotal/Seguridad/ObtenerMenus" routerLinkActive="active">Obtener Menus</a>
     <a mat-list-item routerLink="/Configuración-Bantotal/Seguridad/ObtenerPerfiles" routerLinkActive="active">Obtener Perfiles</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Contabilidad</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Contabilidad</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Agregar Texto</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Agregar Texto</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Contabilidad/Agregar-Texto/AgregarTextoAsiento" routerLinkActive="active">Agregar Texto Asiento</a>
     <a mat-list-item routerLink="/Contabilidad/Agregar-Texto/AgregarTextoOrdinal" routerLinkActive="active">Agregar Texto Ordinal</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
     <a mat-list-item routerLink="/Contabilidad/AnularMovimiento" routerLinkActive="active">Anular Movimiento</a>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Condición Impositiva</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Condición Impositiva</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Contabilidad/Condición-Impositiva/ActualizarCondicionImpositiva" routerLinkActive="active">Actualizar Condicion Impositiva</a>
     <a mat-list-item routerLink="/Contabilidad/Condición-Impositiva/CrearCondicionImpositiva" routerLinkActive="active">Crear Condicion Impositiva</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-3">
-    <mat-panel-title>Identificadores</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-3">
+    <mat-expansion-panel-header class="sidebar-header-level-3">
+      <mat-panel-title>Identificadores</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-3">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Contabilidad/Obtener/Identificadores/ObtenerIdBantotalMovimiento" routerLinkActive="active">Obtener Id Bantotal Movimiento</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/Identificadores/ObtenerIdBantotalOperacion" routerLinkActive="active">Obtener Id Bantotal Operacion</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/Identificadores/ObtenerIdBantotalProducto" routerLinkActive="active">Obtener Id Bantotal Producto</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeMovimiento" routerLinkActive="active">Obtener Identificador Unicode Movimiento</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeOperacion" routerLinkActive="active">Obtener Identificador Unicode Operacion</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/Identificadores/ObtenerIdentificadorUnicodeProducto" routerLinkActive="active">Obtener Identificador Unicode Producto</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
     <a mat-list-item routerLink="/Contabilidad/Obtener/ObtenerClientedeunaOperacion" routerLinkActive="active">Obtener Clientedeuna Operacion</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/ObtenerCondicionImpositiva" routerLinkActive="active">Obtener Condicion Impositiva</a>
@@ -501,24 +582,29 @@
     <a mat-list-item routerLink="/Contabilidad/Obtener/ObtenerDetalledeOrdinal" routerLinkActive="active">Obtener Detallede Ordinal</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/ObtenerIntegrantesdeOperacion" routerLinkActive="active">Obtener Integrantesde Operacion</a>
     <a mat-list-item routerLink="/Contabilidad/Obtener/ObtenerTextosdeMovimiento" routerLinkActive="active">Obtener Textosde Movimiento</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Registrar Asiento</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Registrar Asiento</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Contabilidad/Registrar-Asiento/RegistrarAsiento" routerLinkActive="active">Registrar Asiento</a>
     <a mat-list-item routerLink="/Contabilidad/Registrar-Asiento/RegistrarAsientoFechaValor" routerLinkActive="active">Registrar Asiento Fecha Valor</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Cuentas Bolsillo</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Cuentas Bolsillo</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Bolsillo/Cancelar" routerLinkActive="active">Cancelar</a>
     <a mat-list-item routerLink="/Cuentas-Bolsillo/CashIn" routerLinkActive="active">Cash In</a>
     <a mat-list-item routerLink="/Cuentas-Bolsillo/CashOut" routerLinkActive="active">Cash Out</a>
@@ -527,23 +613,27 @@
     <a mat-list-item routerLink="/Cuentas-Bolsillo/ObtenerMovimientos" routerLinkActive="active">Obtener Movimientos</a>
     <a mat-list-item routerLink="/Cuentas-Bolsillo/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
     <a mat-list-item routerLink="/Cuentas-Bolsillo/ObtenerProductosCV" routerLinkActive="active">Obtener Productos CV</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Cuentas Corrientes</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Cuentas Corrientes</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Chequera</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Chequera</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-3">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-3">
+    <mat-expansion-panel-header class="sidebar-header-level-3">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-3">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Obtener/ObtenerChequera" routerLinkActive="active">Obtener Chequera</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Obtener/ObtenerChequeras" routerLinkActive="active">Obtener Chequeras</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Obtener/ObtenerChequesdeChequera" routerLinkActive="active">Obtener Chequesde Chequera</a>
@@ -552,104 +642,125 @@
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Obtener/ObtenerSolicitudesdeChequeras" routerLinkActive="active">Obtener Solicitudesde Chequeras</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequera" routerLinkActive="active">Obtener Tiposde Chequera</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Obtener/ObtenerTiposdeChequeraporProducto" routerLinkActive="active">Obtener Tiposde Chequerapor Producto</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-3">
-    <mat-panel-title>Operar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-3">
+    <mat-expansion-panel-header class="sidebar-header-level-3">
+      <mat-panel-title>Operar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-3">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Operar/EliminarChequera" routerLinkActive="active">Eliminar Chequera</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeChequera" routerLinkActive="active">Registrar Ordende No Pagode Chequera</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Operar/RegistrarOrdendeNoPagodeCheques" routerLinkActive="active">Registrar Ordende No Pagode Cheques</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Chequera/Operar/SolicitarChequera" routerLinkActive="active">Solicitar Chequera</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Corrientes/Contratar/ContratarconPeriodicidad" routerLinkActive="active">Contratarcon Periodicidad</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Contratar/ContratarProducto" routerLinkActive="active">Contratar Producto</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Contratar/ContratarProductoconAltadeFacultades" routerLinkActive="active">Contratar Productocon Altade Facultades</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Corrientes/Obtener/ObtenerAcuerdos" routerLinkActive="active">Obtener Acuerdos</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Obtener/ObtenerDatos" routerLinkActive="active">Obtener Datos</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Obtener/ObtenerEstadodeCuenta" routerLinkActive="active">Obtener Estadode Cuenta</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Obtener/ObtenerEvoluciondeSaldos" routerLinkActive="active">Obtener Evolucionde Saldos</a>
     <a mat-list-item routerLink="/Cuentas-Corrientes/Obtener/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Cuentas De Ahorro</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Cuentas De Ahorro</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Contratar/ContratarconPeriodicidad" routerLinkActive="active">Contratarcon Periodicidad</a>
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Contratar/ContratarProducto" routerLinkActive="active">Contratar Producto</a>
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Contratar/ContratarProductoconAltadeFacultades" routerLinkActive="active">Contratar Productocon Altade Facultades</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Obtener/ObtenerDatos" routerLinkActive="active">Obtener Datos</a>
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Obtener/ObtenerEstadodeCuenta" routerLinkActive="active">Obtener Estadode Cuenta</a>
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Obtener/ObtenerEvoluciondeSaldos" routerLinkActive="active">Obtener Evolucionde Saldos</a>
     <a mat-list-item routerLink="/Cuentas-de-Ahorro/Obtener/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Cuentas Vista</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Cuentas Vista</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Beneficiarios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Beneficiarios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Vista/Beneficiarios/ActualizarBeneficiarios" routerLinkActive="active">Actualizar Beneficiarios</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Beneficiarios/ObtenerBeneficiarios" routerLinkActive="active">Obtener Beneficiarios</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Documentos Digitales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Documentos Digitales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Vista/Documentos-Digitales/ActualizarDocumentoDigital" routerLinkActive="active">Actualizar Documento Digital</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Documentos-Digitales/AsociarDocumentoDigital" routerLinkActive="active">Asociar Documento Digital</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Documentos-Digitales/EliminarDocumentoDigital" routerLinkActive="active">Eliminar Documento Digital</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Documentos-Digitales/ObtenerDocumentoDigital" routerLinkActive="active">Obtener Documento Digital</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Documentos-Digitales/ObtenerDocumentosDigitales" routerLinkActive="active">Obtener Documentos Digitales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Vista/Obtener/ObtenerBolsillos" routerLinkActive="active">Obtener Bolsillos</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Obtener/ObtenerCBUdeCuentaVista" routerLinkActive="active">Obtener CBUde Cuenta Vista</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Obtener/ObtenerCuentaVistadeCBU" routerLinkActive="active">Obtener Cuenta Vistade CBU</a>
@@ -663,13 +774,15 @@
     <a mat-list-item routerLink="/Cuentas-Vista/Obtener/ObtenerSaldoBloqueado" routerLinkActive="active">Obtener Saldo Bloqueado</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Obtener/ObtenerSaldoDisponible" routerLinkActive="active">Obtener Saldo Disponible</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Obtener/ObtenerSaldosBloqueados" routerLinkActive="active">Obtener Saldos Bloqueados</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Operar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Operar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Vista/Operar/AcreditarEnCuenta" routerLinkActive="active">Acreditar En Cuenta</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Operar/Activar" routerLinkActive="active">Activar</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Operar/ActualizarPeriododeAcreditacion" routerLinkActive="active">Actualizar Periodode Acreditacion</a>
@@ -677,23 +790,27 @@
     <a mat-list-item routerLink="/Cuentas-Vista/Operar/Cancelar" routerLinkActive="active">Cancelar</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Operar/DebitarEnCuenta" routerLinkActive="active">Debitar En Cuenta</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Operar/DesbloquearSaldo" routerLinkActive="active">Desbloquear Saldo</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Perfil Transaccional</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Perfil Transaccional</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Vista/Perfil-Transaccional/ActualizarPerfilTransaccional" routerLinkActive="active">Actualizar Perfil Transaccional</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Perfil-Transaccional/AgregarPerfilTransaccional" routerLinkActive="active">Agregar Perfil Transaccional</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Perfil-Transaccional/ObtenerPerfilTransaccional" routerLinkActive="active">Obtener Perfil Transaccional</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Traspasar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Traspasar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Cuentas-Vista/Traspasar/TraspasarConTipoDeCambioEspecial" routerLinkActive="active">Traspasar Con Tipo De Cambio Especial</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Traspasar/TraspasarEntreCuentasdelaMismaPersona" routerLinkActive="active">Traspasar Entre Cuentasdela Misma Persona</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Traspasar/TraspasarEntreCuentasMismoTitularcontipodecambio" routerLinkActive="active">Traspasar Entre Cuentas Mismo Titularcontipodecambio</a>
@@ -704,60 +821,72 @@
     <a mat-list-item routerLink="/Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceros" routerLinkActive="active">Traspasar Entre Cuentas Terceros</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Traspasar/TraspasarEntreCuentasTerceroscontipodecambio" routerLinkActive="active">Traspasar Entre Cuentas Terceroscontipodecambio</a>
     <a mat-list-item routerLink="/Cuentas-Vista/Traspasar/TraspasarEntreCuentasTercerosdiferentesmonedas" routerLinkActive="active">Traspasar Entre Cuentas Tercerosdiferentesmonedas</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Depósitos A Plazo</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Depósitos A Plazo</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Beneficiarios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Beneficiarios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Beneficiarios/ActualizarBeneficiarios" routerLinkActive="active">Actualizar Beneficiarios</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Beneficiarios/ObtenerBeneficiarios" routerLinkActive="active">Obtener Beneficiarios</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Contratar/Contratar" routerLinkActive="active">Contratar</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Contratar/ContratarConFacultades" routerLinkActive="active">Contratar Con Facultades</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Contratar/ContratarSimulacion" routerLinkActive="active">Contratar Simulacion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Documentos Digitales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Documentos Digitales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Documentos-Digitales/ActualizarDocumentoDigital" routerLinkActive="active">Actualizar Documento Digital</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Documentos-Digitales/AsociarDocumentoDigital" routerLinkActive="active">Asociar Documento Digital</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Documentos-Digitales/EliminarDocumentoDigital" routerLinkActive="active">Eliminar Documento Digital</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Documentos-Digitales/ObtenerDocumentoDigital" routerLinkActive="active">Obtener Documento Digital</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Modificar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Modificar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Modificar/ModificarCuentaDestinoalVencimiento" routerLinkActive="active">Modificar Cuenta Destinoal Vencimiento</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Modificar/ModificarCuentaDestinodeAcreditacionPeriodica" routerLinkActive="active">Modificar Cuenta Destinode Acreditacion Periodica</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Modificar/ModificarInstruccion" routerLinkActive="active">Modificar Instruccion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Obtener/ObtenerAvance" routerLinkActive="active">Obtener Avance</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Obtener/ObtenerDatos" routerLinkActive="active">Obtener Datos</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Obtener/ObtenerDatosPrecancelacion" routerLinkActive="active">Obtener Datos Precancelacion</a>
@@ -769,38 +898,45 @@
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Obtener/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Obtener/ObtenerProductosHabilitados" routerLinkActive="active">Obtener Productos Habilitados</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Obtener/ObtenerTasadePrecancelacion" routerLinkActive="active">Obtener Tasade Precancelacion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Precancelar" routerLinkActive="active">Precancelar</a>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Simular</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Simular</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Simular/Simular" routerLinkActive="active">Simular</a>
     <a mat-list-item routerLink="/Depósitos-a-Plazo/Simular/SimularConCronograma" routerLinkActive="active">Simular Con Cronograma</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Descuento De Documentos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Descuento De Documentos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Descuento-de-Documentos/ConfirmarLista" routerLinkActive="active">Confirmar Lista</a>
     <a mat-list-item routerLink="/Descuento-de-Documentos/CrearLista" routerLinkActive="active">Crear Lista</a>
     <a mat-list-item routerLink="/Descuento-de-Documentos/CrearListaCheques" routerLinkActive="active">Crear Lista Cheques</a>
     <a mat-list-item routerLink="/Descuento-de-Documentos/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
     <a mat-list-item routerLink="/Descuento-de-Documentos/ObtenerTiposDeDesembolso" routerLinkActive="active">Obtener Tipos De Desembolso</a>
     <a mat-list-item routerLink="/Descuento-de-Documentos/SeleccionarOpcionDesembolso" routerLinkActive="active">Seleccionar Opcion Desembolso</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Indicadores</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Indicadores</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Indicadores/ObtenerAgrupadores" routerLinkActive="active">Obtener Agrupadores</a>
     <a mat-list-item routerLink="/Indicadores/ObtenerCierredeSaldosporMoneda" routerLinkActive="active">Obtener Cierrede Saldospor Moneda</a>
     <a mat-list-item routerLink="/Indicadores/ObtenerCondicionesGenerales" routerLinkActive="active">Obtener Condiciones Generales</a>
@@ -812,39 +948,46 @@
     <a mat-list-item routerLink="/Indicadores/ObtenerSesionesPorUsuario" routerLinkActive="active">Obtener Sesiones Por Usuario</a>
     <a mat-list-item routerLink="/Indicadores/ObtenerSucursalesCajas" routerLinkActive="active">Obtener Sucursales Cajas</a>
     <a mat-list-item routerLink="/Indicadores/ObtenerTransaccionesporEstados" routerLinkActive="active">Obtener Transaccionespor Estados</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Microfinanzas</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Microfinanzas</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/BuscarCliente" routerLinkActive="active">Buscar Cliente</a>
     <a mat-list-item routerLink="/Microfinanzas/CompletarTarea" routerLinkActive="active">Completar Tarea</a>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Crear Solicitud</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Crear Solicitud</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/Crear-Solicitud/CrearSolicitudAmpliacion" routerLinkActive="active">Crear Solicitud Ampliacion</a>
     <a mat-list-item routerLink="/Microfinanzas/Crear-Solicitud/CrearSolicitudIndividual" routerLinkActive="active">Crear Solicitud Individual</a>
     <a mat-list-item routerLink="/Microfinanzas/Crear-Solicitud/CrearSolicitudRenovacion" routerLinkActive="active">Crear Solicitud Renovacion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Fiadores</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Fiadores</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/Fiadores/AgregarFiador" routerLinkActive="active">Agregar Fiador</a>
     <a mat-list-item routerLink="/Microfinanzas/Fiadores/EliminarFiador" routerLinkActive="active">Eliminar Fiador</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Grupales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Grupales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/Grupales/ActualizarGrupo" routerLinkActive="active">Actualizar Grupo</a>
     <a mat-list-item routerLink="/Microfinanzas/Grupales/ActualizarIntegrantedeGrupo" routerLinkActive="active">Actualizar Integrantede Grupo</a>
     <a mat-list-item routerLink="/Microfinanzas/Grupales/AgregarGrupo" routerLinkActive="active">Agregar Grupo</a>
@@ -858,13 +1001,15 @@
     <a mat-list-item routerLink="/Microfinanzas/Grupales/ObtenerTiposdeGrupo" routerLinkActive="active">Obtener Tiposde Grupo</a>
     <a mat-list-item routerLink="/Microfinanzas/Grupales/ObtenerTiposdeIntegrante" routerLinkActive="active">Obtener Tiposde Integrante</a>
     <a mat-list-item routerLink="/Microfinanzas/Grupales/SimularPrestamoAmortizableGrupal" routerLinkActive="active">Simular Prestamo Amortizable Grupal</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/Obtener/ObtenerAsesores" routerLinkActive="active">Obtener Asesores</a>
     <a mat-list-item routerLink="/Microfinanzas/Obtener/ObtenerCampanas" routerLinkActive="active">Obtener Campanas</a>
     <a mat-list-item routerLink="/Microfinanzas/Obtener/ObtenerDestinosCredito" routerLinkActive="active">Obtener Destinos Credito</a>
@@ -873,36 +1018,43 @@
     <a mat-list-item routerLink="/Microfinanzas/Obtener/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
     <a mat-list-item routerLink="/Microfinanzas/Obtener/ObtenerSolicitudesCliente" routerLinkActive="active">Obtener Solicitudes Cliente</a>
     <a mat-list-item routerLink="/Microfinanzas/Obtener/ObtenerTiposAval" routerLinkActive="active">Obtener Tipos Aval</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Operaciones A Cancelar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Operaciones A Cancelar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/Operaciones-a-Cancelar/AgregarOperacionesaCancelar" routerLinkActive="active">Agregar Operacionesa Cancelar</a>
     <a mat-list-item routerLink="/Microfinanzas/Operaciones-a-Cancelar/ObtenerOperacionesaCancelar" routerLinkActive="active">Obtener Operacionesa Cancelar</a>
     <a mat-list-item routerLink="/Microfinanzas/Operaciones-a-Cancelar/QuitarOperacionesaCancelar" routerLinkActive="active">Quitar Operacionesa Cancelar</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Simular</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Simular</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Microfinanzas/Simular/SimularLibreAmortizacion" routerLinkActive="active">Simular Libre Amortizacion</a>
     <a mat-list-item routerLink="/Microfinanzas/Simular/SimularPrestamoAmortizable" routerLinkActive="active">Simular Prestamo Amortizable</a>
     <a mat-list-item routerLink="/Microfinanzas/Simular/SimularPrestamoPlazoFijo" routerLinkActive="active">Simular Prestamo Plazo Fijo</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
     <a mat-list-item routerLink="/Microfinanzas/ValidarPoliticas" routerLinkActive="active">Validar Politicas</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Modelador De Préstamos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Modelador De Préstamos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Modelador-de-Préstamos/ObtenerCantidadCuotas" routerLinkActive="active">Obtener Cantidad Cuotas</a>
     <a mat-list-item routerLink="/Modelador-de-Préstamos/ObtenerCapital" routerLinkActive="active">Obtener Capital</a>
     <a mat-list-item routerLink="/Modelador-de-Préstamos/ObtenerComisiones" routerLinkActive="active">Obtener Comisiones</a>
@@ -913,47 +1065,56 @@
     <a mat-list-item routerLink="/Modelador-de-Préstamos/ObtenerPlazo" routerLinkActive="active">Obtener Plazo</a>
     <a mat-list-item routerLink="/Modelador-de-Préstamos/ObtenerRequiereSegurodeVidaObligatorio" routerLinkActive="active">Obtener Requiere Segurode Vida Obligatorio</a>
     <a mat-list-item routerLink="/Modelador-de-Préstamos/ObtenerSeguros" routerLinkActive="active">Obtener Seguros</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>PAE</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>PAE</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/PAE/ObtenerItemsModelo" routerLinkActive="active">Obtener Items Modelo</a>
     <a mat-list-item routerLink="/PAE/ObtenerModelosPAE" routerLinkActive="active">Obtener Modelos PAE</a>
     <a mat-list-item routerLink="/PAE/ObtenerScores" routerLinkActive="active">Obtener Scores</a>
     <a mat-list-item routerLink="/PAE/ObtenerTiposDeModelos" routerLinkActive="active">Obtener Tipos De Modelos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Partners</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Partners</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Partners/Contratar/ContratarPrestamo" routerLinkActive="active">Contratar Prestamo</a>
     <a mat-list-item routerLink="/Partners/Contratar/ContratarVehicular" routerLinkActive="active">Contratar Vehicular</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Crear</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Crear</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Partners/Crear/CrearCliente" routerLinkActive="active">Crear Cliente</a>
     <a mat-list-item routerLink="/Partners/Crear/CrearPersonaCliente" routerLinkActive="active">Crear Persona Cliente</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Partners/Obtener/ObtenerDatosdeUsuario" routerLinkActive="active">Obtener Datosde Usuario</a>
     <a mat-list-item routerLink="/Partners/Obtener/ObtenerDetalledeOfertaAmortizable" routerLinkActive="active">Obtener Detallede Oferta Amortizable</a>
     <a mat-list-item routerLink="/Partners/Obtener/ObtenerDetalleOfertaVehicular" routerLinkActive="active">Obtener Detalle Oferta Vehicular</a>
@@ -966,26 +1127,31 @@
     <a mat-list-item routerLink="/Partners/Obtener/ObtenerPuntosdeVenta" routerLinkActive="active">Obtener Puntosde Venta</a>
     <a mat-list-item routerLink="/Partners/Obtener/ObtenerVendedores" routerLinkActive="active">Obtener Vendedores</a>
     <a mat-list-item routerLink="/Partners/Obtener/ObtenerVersiones" routerLinkActive="active">Obtener Versiones</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Simular</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Simular</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Partners/Simular/SimularOfertas" routerLinkActive="active">Simular Ofertas</a>
     <a mat-list-item routerLink="/Partners/Simular/SimularOfertasVehicular" routerLinkActive="active">Simular Ofertas Vehicular</a>
     <a mat-list-item routerLink="/Partners/Simular/SimularPrestamo" routerLinkActive="active">Simular Prestamo</a>
     <a mat-list-item routerLink="/Partners/Simular/SimularVehicular" routerLinkActive="active">Simular Vehicular</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Parámetros Base</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Parámetros Base</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Parámetros-Base/ObtenerCorrelativoGuia" routerLinkActive="active">Obtener Correlativo Guia</a>
     <a mat-list-item routerLink="/Parámetros-Base/ObtenerCorrelativoGuiaEspecial" routerLinkActive="active">Obtener Correlativo Guia Especial</a>
     <a mat-list-item routerLink="/Parámetros-Base/ObtenerGuiadeProceso" routerLinkActive="active">Obtener Guiade Proceso</a>
@@ -993,18 +1159,21 @@
     <a mat-list-item routerLink="/Parámetros-Base/ObtenerOpcionGeneraldeProceso" routerLinkActive="active">Obtener Opcion Generalde Proceso</a>
     <a mat-list-item routerLink="/Parámetros-Base/ObtenerOpcionGeneralPorModulo" routerLinkActive="active">Obtener Opcion General Por Modulo</a>
     <a mat-list-item routerLink="/Parámetros-Base/ObtenerProgramaParticular" routerLinkActive="active">Obtener Programa Particular</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Personas</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Personas</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Actualizar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Actualizar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Actualizar/Actualizar" routerLinkActive="active">Actualizar</a>
     <a mat-list-item routerLink="/Personas/Actualizar/ActualizarCelular" routerLinkActive="active">Actualizar Celular</a>
     <a mat-list-item routerLink="/Personas/Actualizar/ActualizarContacto" routerLinkActive="active">Actualizar Contacto</a>
@@ -1022,13 +1191,15 @@
     <a mat-list-item routerLink="/Personas/Actualizar/ActualizarTelefono" routerLinkActive="active">Actualizar Telefono</a>
     <a mat-list-item routerLink="/Personas/Actualizar/ActualizarVictimaHechoViolento" routerLinkActive="active">Actualizar Victima Hecho Violento</a>
     <a mat-list-item routerLink="/Personas/Actualizar/ModificarDocumentoAdicional" routerLinkActive="active">Modificar Documento Adicional</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Agregar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Agregar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Agregar/AgregaraListaNegra" routerLinkActive="active">Agregara Lista Negra</a>
     <a mat-list-item routerLink="/Personas/Agregar/AgregarContacto" routerLinkActive="active">Agregar Contacto</a>
     <a mat-list-item routerLink="/Personas/Agregar/AgregarCorreoElectronico" routerLinkActive="active">Agregar Correo Electronico</a>
@@ -1044,36 +1215,42 @@
     <a mat-list-item routerLink="/Personas/Agregar/AgregarReferencia" routerLinkActive="active">Agregar Referencia</a>
     <a mat-list-item routerLink="/Personas/Agregar/AgregarTelefono" routerLinkActive="active">Agregar Telefono</a>
     <a mat-list-item routerLink="/Personas/Agregar/AgregarVictimaHechoViolento" routerLinkActive="active">Agregar Victima Hecho Violento</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Crear</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Crear</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Crear/Crear" routerLinkActive="active">Crear</a>
     <a mat-list-item routerLink="/Personas/Crear/CrearConyuge" routerLinkActive="active">Crear Conyuge</a>
     <a mat-list-item routerLink="/Personas/Crear/CrearPersonaJuridica" routerLinkActive="active">Crear Persona Juridica</a>
     <a mat-list-item routerLink="/Personas/Crear/CrearReducido" routerLinkActive="active">Crear Reducido</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Documentos Digitales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Documentos Digitales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Documentos-Digitales/ActualizarDocumentoDigital" routerLinkActive="active">Actualizar Documento Digital</a>
     <a mat-list-item routerLink="/Personas/Documentos-Digitales/AsociarDocumentoDigital" routerLinkActive="active">Asociar Documento Digital</a>
     <a mat-list-item routerLink="/Personas/Documentos-Digitales/EliminarDocumentoDigital" routerLinkActive="active">Eliminar Documento Digital</a>
     <a mat-list-item routerLink="/Personas/Documentos-Digitales/ObtenerDocumentoDigital" routerLinkActive="active">Obtener Documento Digital</a>
     <a mat-list-item routerLink="/Personas/Documentos-Digitales/ObtenerDocumentosDigitales" routerLinkActive="active">Obtener Documentos Digitales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Eliminar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Eliminar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Eliminar/EliminarConyuge" routerLinkActive="active">Eliminar Conyuge</a>
     <a mat-list-item routerLink="/Personas/Eliminar/EliminarDocumentoAdicional" routerLinkActive="active">Eliminar Documento Adicional</a>
     <a mat-list-item routerLink="/Personas/Eliminar/EliminarDomicilio" routerLinkActive="active">Eliminar Domicilio</a>
@@ -1081,13 +1258,15 @@
     <a mat-list-item routerLink="/Personas/Eliminar/EliminarIntegrantedePersonaJuridica" routerLinkActive="active">Eliminar Integrantede Persona Juridica</a>
     <a mat-list-item routerLink="/Personas/Eliminar/EliminarPersonaVinculada" routerLinkActive="active">Eliminar Persona Vinculada</a>
     <a mat-list-item routerLink="/Personas/Eliminar/EliminarProfesion" routerLinkActive="active">Eliminar Profesion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Obtener/Obtener" routerLinkActive="active">Obtener</a>
     <a mat-list-item routerLink="/Personas/Obtener/ObtenerConcepto" routerLinkActive="active">Obtener Concepto</a>
     <a mat-list-item routerLink="/Personas/Obtener/ObtenerContactos" routerLinkActive="active">Obtener Contactos</a>
@@ -1131,13 +1310,15 @@
     <a mat-list-item routerLink="/Personas/Obtener/ObtenerVinculosdeAfinidad" routerLinkActive="active">Obtener Vinculosde Afinidad</a>
     <a mat-list-item routerLink="/Personas/Obtener/ObtenerVinculosdeConsanguinidad" routerLinkActive="active">Obtener Vinculosde Consanguinidad</a>
     <a mat-list-item routerLink="/Personas/Obtener/ObtenerVinculosJuridicos" routerLinkActive="active">Obtener Vinculos Juridicos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Validar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Validar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Personas/Validar/EvaluarPAE" routerLinkActive="active">Evaluar PAE</a>
     <a mat-list-item routerLink="/Personas/Validar/ValidarCorreoElectronico" routerLinkActive="active">Validar Correo Electronico</a>
     <a mat-list-item routerLink="/Personas/Validar/ValidarDocumento" routerLinkActive="active">Validar Documento</a>
@@ -1145,31 +1326,37 @@
     <a mat-list-item routerLink="/Personas/Validar/ValidarExistencia" routerLinkActive="active">Validar Existencia</a>
     <a mat-list-item routerLink="/Personas/Validar/ValidarListasInhabilitados" routerLinkActive="active">Validar Listas Inhabilitados</a>
     <a mat-list-item routerLink="/Personas/Validar/VerificarEmpleado" routerLinkActive="active">Verificar Empleado</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Precios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Precios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Convertir</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Convertir</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Precios/Convertir/ConvertirTasaAnualEfectivaaLineal" routerLinkActive="active">Convertir Tasa Anual Efectivaa Lineal</a>
     <a mat-list-item routerLink="/Precios/Convertir/ConvertirTasaAnualLinealaEfectiva" routerLinkActive="active">Convertir Tasa Anual Lineala Efectiva</a>
     <a mat-list-item routerLink="/Precios/Convertir/ConvertirTasaMensualEfectivaaLineal" routerLinkActive="active">Convertir Tasa Mensual Efectivaa Lineal</a>
     <a mat-list-item routerLink="/Precios/Convertir/ConvertirTasaMensualLinealaEfectiva" routerLinkActive="active">Convertir Tasa Mensual Lineala Efectiva</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Precios/Obtener/ObtenerCotizacion" routerLinkActive="active">Obtener Cotizacion</a>
     <a mat-list-item routerLink="/Precios/Obtener/ObtenerCotizacionaFecha" routerLinkActive="active">Obtener Cotizaciona Fecha</a>
     <a mat-list-item routerLink="/Precios/Obtener/ObtenerCotizacionCierre" routerLinkActive="active">Obtener Cotizacion Cierre</a>
@@ -1181,55 +1368,65 @@
     <a mat-list-item routerLink="/Precios/Obtener/ObtenerTasaParaProducto" routerLinkActive="active">Obtener Tasa Para Producto</a>
     <a mat-list-item routerLink="/Precios/Obtener/ObtenerTipodeCambio" routerLinkActive="active">Obtener Tipode Cambio</a>
     <a mat-list-item routerLink="/Precios/Obtener/ObtenerTiposDeCambioEspeciales" routerLinkActive="active">Obtener Tipos De Cambio Especiales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Préstamos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Préstamos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Cancelar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Cancelar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Cancelar/Cancelar" routerLinkActive="active">Cancelar</a>
     <a mat-list-item routerLink="/Préstamos/Cancelar/CancelaraFecha" routerLinkActive="active">Cancelara Fecha</a>
     <a mat-list-item routerLink="/Préstamos/Cancelar/CancelaraFechaTerceros" routerLinkActive="active">Cancelara Fecha Terceros</a>
     <a mat-list-item routerLink="/Préstamos/Cancelar/CancelarTerceros" routerLinkActive="active">Cancelar Terceros</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Contratar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Contratar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Contratar/Contratar" routerLinkActive="active">Contratar</a>
     <a mat-list-item routerLink="/Préstamos/Contratar/ContratarAmpliacion" routerLinkActive="active">Contratar Ampliacion</a>
     <a mat-list-item routerLink="/Préstamos/Contratar/ContratarRefinanciacion" routerLinkActive="active">Contratar Refinanciacion</a>
     <a mat-list-item routerLink="/Préstamos/Contratar/ContratarRefinanciacionporDeudaTotal" routerLinkActive="active">Contratar Refinanciacionpor Deuda Total</a>
     <a mat-list-item routerLink="/Préstamos/Contratar/ContratarRefinanciacionporSaldoCapital" routerLinkActive="active">Contratar Refinanciacionpor Saldo Capital</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Documentos Digitales</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Documentos Digitales</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Documentos-Digitales/ActualizarDocumentoDigital" routerLinkActive="active">Actualizar Documento Digital</a>
     <a mat-list-item routerLink="/Préstamos/Documentos-Digitales/AsociarDocumentoDigital" routerLinkActive="active">Asociar Documento Digital</a>
     <a mat-list-item routerLink="/Préstamos/Documentos-Digitales/EliminarDocumentoDigital" routerLinkActive="active">Eliminar Documento Digital</a>
     <a mat-list-item routerLink="/Préstamos/Documentos-Digitales/ObtenerDocumentoDigital" routerLinkActive="active">Obtener Documento Digital</a>
     <a mat-list-item routerLink="/Préstamos/Documentos-Digitales/ObtenerDocumentosDigitales" routerLinkActive="active">Obtener Documentos Digitales</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Obtener/ObtenerCronograma" routerLinkActive="active">Obtener Cronograma</a>
     <a mat-list-item routerLink="/Préstamos/Obtener/ObtenerCronogramaaFecha" routerLinkActive="active">Obtener Cronogramaa Fecha</a>
     <a mat-list-item routerLink="/Préstamos/Obtener/ObtenerCronogramaconPagosaFecha" routerLinkActive="active">Obtener Cronogramacon Pagosa Fecha</a>
@@ -1264,13 +1461,15 @@
     <a mat-list-item routerLink="/Préstamos/Obtener/ObtenerProductos" routerLinkActive="active">Obtener Productos</a>
     <a mat-list-item routerLink="/Préstamos/Obtener/ObtenerProductosRefinanciacion" routerLinkActive="active">Obtener Productos Refinanciacion</a>
     <a mat-list-item routerLink="/Préstamos/Obtener/ObtenerRefinanciacionSimulada" routerLinkActive="active">Obtener Refinanciacion Simulada</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Operar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Operar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Operar/AbonaraCuenta" routerLinkActive="active">Abonara Cuenta</a>
     <a mat-list-item routerLink="/Préstamos/Operar/ActualizarInformacionAdicional" routerLinkActive="active">Actualizar Informacion Adicional</a>
     <a mat-list-item routerLink="/Préstamos/Operar/ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1" routerLinkActive="active">Actualizar Prestamoscon Evento Disponibleunicamentepara V3R1</a>
@@ -1279,26 +1478,30 @@
     <a mat-list-item routerLink="/Préstamos/Operar/EliminarCuentadeCobro" routerLinkActive="active">Eliminar Cuentade Cobro</a>
     <a mat-list-item routerLink="/Préstamos/Operar/EliminarInformacionAdicional" routerLinkActive="active">Eliminar Informacion Adicional</a>
     <a mat-list-item routerLink="/Préstamos/Operar/SolicitarPrecancelacion" routerLinkActive="active">Solicitar Precancelacion</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Pagar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Pagar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Pagar/AdelantarCapitalConReduccionDeCuota" routerLinkActive="active">Adelantar Capital Con Reduccion De Cuota</a>
     <a mat-list-item routerLink="/Préstamos/Pagar/AdelantarCapitalConReduccionDePlazo" routerLinkActive="active">Adelantar Capital Con Reduccion De Plazo</a>
     <a mat-list-item routerLink="/Préstamos/Pagar/PagarCuota" routerLinkActive="active">Pagar Cuota</a>
     <a mat-list-item routerLink="/Préstamos/Pagar/PagarCuotaaFecha" routerLinkActive="active">Pagar Cuotaa Fecha</a>
     <a mat-list-item routerLink="/Préstamos/Pagar/PagarCuotaaFechaTerceros" routerLinkActive="active">Pagar Cuotaa Fecha Terceros</a>
     <a mat-list-item routerLink="/Préstamos/Pagar/PagarCuotaTerceros" routerLinkActive="active">Pagar Cuota Terceros</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Simular</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Simular</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Simular/ResimularAmortizable" routerLinkActive="active">Resimular Amortizable</a>
     <a mat-list-item routerLink="/Préstamos/Simular/ResimularAmpliacion" routerLinkActive="active">Resimular Ampliacion</a>
     <a mat-list-item routerLink="/Préstamos/Simular/ResimularRefinanciacion" routerLinkActive="active">Resimular Refinanciacion</a>
@@ -1324,66 +1527,78 @@
     <a mat-list-item routerLink="/Préstamos/Simular/SimularRefinanciacion" routerLinkActive="active">Simular Refinanciacion</a>
     <a mat-list-item routerLink="/Préstamos/Simular/SimularRefinanciacionporDeudaTotal" routerLinkActive="active">Simular Refinanciacionpor Deuda Total</a>
     <a mat-list-item routerLink="/Préstamos/Simular/SimularRefinanciacionporSaldoCapital" routerLinkActive="active">Simular Refinanciacionpor Saldo Capital</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Textos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Textos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Préstamos/Textos/ActualizarTextos" routerLinkActive="active">Actualizar Textos</a>
     <a mat-list-item routerLink="/Préstamos/Textos/AgregarTextos" routerLinkActive="active">Agregar Textos</a>
     <a mat-list-item routerLink="/Préstamos/Textos/EliminarTextos" routerLinkActive="active">Eliminar Textos</a>
     <a mat-list-item routerLink="/Préstamos/Textos/ObtenerTextos" routerLinkActive="active">Obtener Textos</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Reglas De Negocio</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Reglas De Negocio</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Reglas-de-Negocio/EvaluarRegladeNegocio" routerLinkActive="active">Evaluar Reglade Negocio</a>
     <a mat-list-item routerLink="/Reglas-de-Negocio/ObtenerReglasdeNegocio" routerLinkActive="active">Obtener Reglasde Negocio</a>
     <a mat-list-item routerLink="/Reglas-de-Negocio/ObtenerVariablesRegla" routerLinkActive="active">Obtener Variables Regla</a>
     <a mat-list-item routerLink="/Reglas-de-Negocio/ValidarDatosRegladeNegocio" routerLinkActive="active">Validar Datos Reglade Negocio</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Seguridad</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Seguridad</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Seguridad/AutorizarExcepcion" routerLinkActive="active">Autorizar Excepcion</a>
     <a mat-list-item routerLink="/Seguridad/ObtenerDetalledeExcepcion" routerLinkActive="active">Obtener Detallede Excepcion</a>
     <a mat-list-item routerLink="/Seguridad/ObtenerExcepciones" routerLinkActive="active">Obtener Excepciones</a>
     <a mat-list-item routerLink="/Seguridad/RechazarExcepcion" routerLinkActive="active">Rechazar Excepcion</a>
     <a mat-list-item routerLink="/Seguridad/RegistrarDispositivo" routerLinkActive="active">Registrar Dispositivo</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Seguros Voluntarios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Seguros Voluntarios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Seguros-Voluntarios/ContratarSeguro" routerLinkActive="active">Contratar Seguro</a>
     <a mat-list-item routerLink="/Seguros-Voluntarios/ObtenerMontosDeUnSeguro" routerLinkActive="active">Obtener Montos De Un Seguro</a>
     <a mat-list-item routerLink="/Seguros-Voluntarios/ObtenerSeguros" routerLinkActive="active">Obtener Seguros</a>
     <a mat-list-item routerLink="/Seguros-Voluntarios/ObtenerSegurosAPagar" routerLinkActive="active">Obtener Seguros APagar</a>
     <a mat-list-item routerLink="/Seguros-Voluntarios/PagarSeguro" routerLinkActive="active">Pagar Seguro</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Tarjetas De Débito</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Tarjetas De Débito</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Obtener</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Obtener</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Obtener/ObtenerCodigosdeLimites" routerLinkActive="active">Obtener Codigosde Limites</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Obtener/ObtenerCuentaPreferencial" routerLinkActive="active">Obtener Cuenta Preferencial</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Obtener/ObtenerCuentasaAsociar" routerLinkActive="active">Obtener Cuentasa Asociar</a>
@@ -1398,13 +1613,15 @@
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Obtener/ObtenerTarjetaHabiente" routerLinkActive="active">Obtener Tarjeta Habiente</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Obtener/ObtenerTarjetasAdicionales" routerLinkActive="active">Obtener Tarjetas Adicionales</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Obtener/ObtenerTiposdeCuenta" routerLinkActive="active">Obtener Tiposde Cuenta</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-2">
-    <mat-panel-title>Operar</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-2">
+    <mat-expansion-panel-header class="sidebar-header-level-2">
+      <mat-panel-title>Operar</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-2">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Operar/Activar" routerLinkActive="active">Activar</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Operar/ActualizarCuentaPreferencial" routerLinkActive="active">Actualizar Cuenta Preferencial</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Operar/ActualizarDatosContacto" routerLinkActive="active">Actualizar Datos Contacto</a>
@@ -1420,26 +1637,31 @@
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Operar/DesbloquearDesdeRED" routerLinkActive="active">Desbloquear Desde RED</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Operar/EliminarCuentaAsociada" routerLinkActive="active">Eliminar Cuenta Asociada</a>
     <a mat-list-item routerLink="/Tarjetas-de-Débito/Operar/ModificarLimite" routerLinkActive="active">Modificar Limite</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Títulos</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Títulos</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Títulos/Comprar" routerLinkActive="active">Comprar</a>
     <a mat-list-item routerLink="/Títulos/ObtenerEstadoCompra" routerLinkActive="active">Obtener Estado Compra</a>
     <a mat-list-item routerLink="/Títulos/ObtenerGrupos" routerLinkActive="active">Obtener Grupos</a>
     <a mat-list-item routerLink="/Títulos/ObtenerValores" routerLinkActive="active">Obtener Valores</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Usuarios</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Usuarios</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Usuarios/AgregarPerfil" routerLinkActive="active">Agregar Perfil</a>
     <a mat-list-item routerLink="/Usuarios/Crear" routerLinkActive="active">Crear</a>
     <a mat-list-item routerLink="/Usuarios/EliminarPerfil" routerLinkActive="active">Eliminar Perfil</a>
@@ -1452,18 +1674,22 @@
     <a mat-list-item routerLink="/Usuarios/ObtenerPerfiles" routerLinkActive="active">Obtener Perfiles</a>
     <a mat-list-item routerLink="/Usuarios/ObtenerUsuarios" routerLinkActive="active">Obtener Usuarios</a>
     <a mat-list-item routerLink="/Usuarios/ObtenerUsuariosParaPerfil" routerLinkActive="active">Obtener Usuarios Para Perfil</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
 <mat-expansion-panel>
-  <mat-expansion-panel-header class="sidebar-header-level-1">
-    <mat-panel-title>Workflow</mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-nav-list class="sidebar-level-1">
+    <mat-expansion-panel-header class="sidebar-header-level-1">
+      <mat-panel-title>Workflow</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list class="sidebar-level-1">
+      <mat-accordion multi="false">
     <a mat-list-item routerLink="/Workflow/ObtenerMetadataDeTarea" routerLinkActive="active">Obtener Metadata De Tarea</a>
     <a mat-list-item routerLink="/Workflow/ObtenerProcesosHabilitados" routerLinkActive="active">Obtener Procesos Habilitados</a>
     <a mat-list-item routerLink="/Workflow/ObtenerRoles" routerLinkActive="active">Obtener Roles</a>
     <a mat-list-item routerLink="/Workflow/ObtenerRolesdeTarea" routerLinkActive="active">Obtener Rolesde Tarea</a>
     <a mat-list-item routerLink="/Workflow/ObtenerTareasdeProceso" routerLinkActive="active">Obtener Tareasde Proceso</a>
-  </mat-nav-list>
+      </mat-accordion>
+    </mat-nav-list>
 </mat-expansion-panel>
+  </mat-accordion>
 </mat-nav-list>
