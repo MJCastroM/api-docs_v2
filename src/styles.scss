@@ -19,7 +19,7 @@ html, body {
 body {
   margin: 0;
   background-color: #f5f5f7 !important;
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   line-height: 1.5 !important;
   color: $text-color;
 }
@@ -29,59 +29,45 @@ body {
 }
 // CIERRE - PROPIEDADES GLOBALES
 
-.mat-accordion-BT {
-  margin: 2rem 0;
-  font-family: $font-family;
+.mat-mdc-tab-body-content { // BARRA DE SCROLL DE LA PÁGINA
+  scrollbar-width: thin !important;
+}
 
-  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
-    margin: $margin;
-    background: $background-light;
-    border-radius: $border-radius !important;
-    box-shadow: $box-shadow !important;
+.mat-expansion-indicator { // FLECHA DE EXPANSIÓN
+  color: $red-1 !important;
+}
 
-    .mat-expansion-panel-header {
-      background: $background-light;
-      color: $text-color;
-      font-size: 1rem;
-      font-family: $font-family;
-      padding: 1.5rem;
-      border-radius: $border-radius;
-      font-weight: 700;
-       box-shadow: none !important;
+// PANELES DE LA SIDEBAR
 
-      .mat-panel-title {
-        font-weight: 500;
-        color: $text-color;
-      }
-      .mat-expansion-indicator::after {
-        color: $red-1;
-        font-weight: 700;
-      }
-    }
+.mat-expansion-panel-body a[mat-list-item] .mdc-list-item__primary-text {
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  text-overflow: unset !important;
+}
 
-    .mat-expansion-panel-body {
-      padding: 0rem 2rem 2rem;
-      background: $background-light;
-      //box-shadow: 15px 15px 15px 10px $shadow-light;
-    }
+.mat-expansion-panel-body a[mat-list-item] span {
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  text-overflow: unset !important;
+}
 
-    .mat-expansion-panel-content {
-      background: $background-light;
-      border-radius: $border-radius;
-    }
+.mat-mdc-list-base .mdc-list-item__content {
+  pointer-events: auto;
+  padding: 0.5rem;
+}
 
-    .mat-icon {
-      color: $text-color;
-      vertical-align: text-bottom;
-    }
-  }
+.mdc-list-item {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
 }
 
 a {
   color: $red-1 !important;
   text-decoration: none;
   &:hover {
-    color: darken($red-1, 5%) !important;
+    color: darken($red-1, 10%) !important;
     text-decoration: underline;
   }
 }

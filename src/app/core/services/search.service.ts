@@ -16,6 +16,7 @@ interface PageIndex {
 export interface SearchResult {
   url: string;
   snippet: string;
+  pubName: string;
 }
 
 @Injectable({
@@ -73,6 +74,7 @@ export class SearchService {
 
       // 4) Preparamos palabras para extraer contexto
       const words = haystack.split(/\s+/);
+      const originalWords = originalText.split(/\s+/);
 
       // 5) Encontramos el primer término que haga match parcial
       let snippet = '';
@@ -81,14 +83,15 @@ export class SearchService {
         if (idx !== -1) {
           const start = Math.max(0, idx - 5);
           const end   = Math.min(words.length, idx + 6);
-          snippet = `... ${words.slice(start, end).join(' ')} ...`;
+          snippet = `... ${originalWords.slice(start, end).join(' ')} ...`;
           break;
         }
       }
 
       results.push({
         url: page.url,
-        snippet
+        snippet,
+        pubName: page.pubName
       });
     }
 

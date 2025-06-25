@@ -20,14 +20,19 @@
     />
   </div>
 
-  <ul *ngIf="searchDone && results.length > 0" class="search-popup">
-    <li *ngFor="let r of results">
-      <a [href]="r.url" target="_blank">{{ r.url }}</a>
-      <p class="snippet">{{ r.snippet }}</p>
-    </li>
+  <div class="search-overlay" *ngIf="showPopup"></div>
+
+  <ul *ngIf="showPopup" class="search-popup">
+    <div class="scroll-container">
+      <li *ngFor="let r of results">
+        <a [href]="r.url">{{ r.pubName }}</a>
+        <p class="snippet">{{ r.snippet }}</p>
+      </li>
+    </div>
   </ul>
 
-  <p *ngIf="searchDone && !results.length" class="search-popup">
+  <!-- Sin resultados -->
+  <p *ngIf="!showPopup && query.trim()" class="search-popup">
     No se encontraron resultados.
   </p>
 </div>

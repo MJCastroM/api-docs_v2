@@ -10,6 +10,8 @@ table {
   border-collapse: collapse;
   border-radius: $border-radius !important;
   overflow: hidden;
+  border: 1px solid $table-grey-header;
+  scrollbar-width: thin;
 
   thead {
     background: $table-grey-header;
@@ -42,3 +44,5 @@ table {
     font-style: italic;
   }
 }
+
+

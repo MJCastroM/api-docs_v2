@@ -51,7 +51,7 @@ var entries = files.map(file => {
   var className = m[2];
 
   // → NUEVO: calcular carpeta relativa
-  var folder = path.dirname(path.relative(FEATURE_DIR, file)).replace(/\\/g, '/'); 
+  var folder = path.dirname(path.relative(FEATURE_DIR, file)).replace(/\\/g, '/');
   // selector sin 'app-'
   var baseRoute = selector.replace(/^app-/, '');
   // → NUEVO: ruta completa incluyendo carpetas
@@ -105,12 +105,14 @@ console.log(`✅  Rutas generadas en ${ROUTES_OUT}`);
        var children = renderSidebar(val.__children, parentPath + (parentPath?'/':'') + key, level + 1);
        return [
          `<mat-expansion-panel>`,
-         `  <mat-expansion-panel-header class="sidebar-header-level-${level}">`,
-         `    <mat-panel-title>${label}</mat-panel-title>`,
-         `  </mat-expansion-panel-header>`,
-         `  <mat-nav-list class="sidebar-level-${level}">`,
+         `    <mat-expansion-panel-header class="sidebar-header-level-${level}">`,
+         `      <mat-panel-title>${label}</mat-panel-title>`,
+         `    </mat-expansion-panel-header>`,
+         `    <mat-nav-list class="sidebar-level-${level}">`,
+         `      <mat-accordion multi="false">`,
          ...children,
-         `  </mat-nav-list>`,
+         `      </mat-accordion>`,
+         `    </mat-nav-list>`,
          `</mat-expansion-panel>`
        ];
      }
@@ -133,7 +135,9 @@ console.log(`✅  Rutas generadas en ${ROUTES_OUT}`);
 
  var sidebarLines = [
    `<mat-nav-list class="sidebar">`,
+   `  <mat-accordion multi="false">`,
    ...renderSidebar(tree),
+   `  </mat-accordion>`,
    `</mat-nav-list>`
  ];
 

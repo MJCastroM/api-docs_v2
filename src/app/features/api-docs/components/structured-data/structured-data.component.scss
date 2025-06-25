@@ -1,7 +1,55 @@
 @import '~prismjs/themes/prism.css';
 @import 'variables';
 
-// EJEMPLOS DE EJECUCIÓN
+// SDT - ESTRUCTURAS DE DATOS Y ALGORITMOS
+
+.mat-accordion-BT {
+  margin: 2rem 0;
+  font-family: $font-family;
+
+  .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
+    margin: $margin;
+    background: $background-light;
+    border-radius: $border-radius !important;
+    box-shadow: $box-shadow !important;
+
+    .mat-expansion-panel-header {
+      background: $background-light;
+      color: $text-color;
+      font-size: 1rem;
+      font-family: $font-family;
+      padding: 1.5rem;
+      border-radius: $border-radius;
+      font-weight: 700;
+       box-shadow: none !important;
+
+      .mat-panel-title {
+        font-weight: 500;
+        color: $text-color;
+      }
+      .mat-expansion-indicator::after {
+        color: $red-1;
+        font-weight: 700;
+      }
+    }
+
+    .mat-expansion-panel-body {
+      padding: 0rem 2rem 2rem;
+      background: $background-light;
+      //box-shadow: 15px 15px 15px 10px $shadow-light;
+    }
+
+    .mat-expansion-panel-content {
+      background: $background-light;
+      border-radius: $border-radius;
+    }
+
+    .mat-icon {
+      color: $text-color;
+      vertical-align: text-bottom;
+    }
+  }
+}
 
 ::ng-deep .sdt-title {
   // TÍTULO DEL EJEMPLO
