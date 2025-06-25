@@ -1,4 +1,6 @@
-<div class="search-wrapper">
+<div class="search-wrapper" (click)="$event.stopPropagation()">
+  <div class="blur-overlay" *ngIf="isFocused" (click)="clearResults()"></div>
+
   <div class="input-wrapper">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,23 +18,22 @@
       type="text"
       [(ngModel)]="query"
       (input)="search()"
+      (focus)="isFocused = true"
       placeholder="Buscar..."
     />
   </div>
 
-  <div class="search-overlay" *ngIf="showPopup"></div>
-
-  <ul *ngIf="showPopup" class="search-popup">
-    <div class="scroll-container">
-      <li *ngFor="let r of results">
-        <a [href]="r.url">{{ r.pubName }}</a>
-        <p class="snippet">{{ r.snippet }}</p>
-      </li>
-    </div>
+  <ul *ngIf="searchDone && results.length > 0" class="search-popup" (click)="$event.stopPropagation()">
+    <li *ngFor="let r of results" class="search-result">
+      <button (click)="goTo(r.url)" class="link-button">
+        {{ r.pubName || r.url }}
+      </button>
+      <p class="snippet">{{ r.snippet }}</p>
+    </li>
   </ul>
 
-  <!-- Sin resultados -->
-  <p *ngIf="!showPopup && query.trim()" class="search-popup">
+  <p *ngIf="searchDone && !results.length" class="search-popup" (click)="$event.stopPropagation()">
     No se encontraron resultados.
   </p>
+
 </div>

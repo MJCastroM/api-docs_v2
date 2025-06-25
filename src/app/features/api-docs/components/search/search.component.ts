@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { SearchService, SearchResult } from 'src/app/core/services/search.service';
 
 @Component({
@@ -9,9 +9,8 @@ import { SearchService, SearchResult } from 'src/app/core/services/search.servic
 export class SearchComponent {
   query = '';
   results: SearchResult[] = [];
-  showPopup = false;
-
-  @ViewChild('searchInput') searchInput!: ElementRef;
+  searchDone = false;
+  isFocused = false;
 
   constructor(
     private searchService: SearchService,
@@ -20,23 +19,30 @@ export class SearchComponent {
 
   search() {
     if (!this.query.trim()) {
-      this.clearResults();
-      return;
+      return this.clearResults();
     }
 
     this.results = this.searchService.search(this.query);
-    this.showPopup = true;
-    document.body.classList.add('popup-open');
+    this.searchDone = true;
   }
 
   clearResults() {
     this.query = '';
     this.results = [];
-    this.showPopup = false;
-    document.body.classList.remove('popup-open');
+    this.searchDone = false;
+    this.isFocused = false;
+  }
 
-    // Sacar el foco manualmente del input
-    this.searchInput?.nativeElement.blur();
+  goTo(url: string) {
+    console.log('Redirigiendo a:', url);
+    window.location.assign(url);
+  }
+
+  focusSearchInput() {
+    const input = this.elRef.nativeElement.querySelector('input');
+    if (input) {
+      input.focus();
+    }
   }
 
   @HostListener('document:click', ['$event'])
@@ -47,8 +53,23 @@ export class SearchComponent {
     }
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscapeKey() {
+  @HostListener('document:keydown.escape')
+  handleEscapeKey() {
     this.clearResults();
+    this.blurInput();
   }
+
+  @HostListener('document:keydown.control.f', ['$event'])
+  handleCtrlF(event: KeyboardEvent) {
+    event.preventDefault();
+    this.focusSearchInput();
+  }
+
+  blurInput() {
+    const input = this.elRef.nativeElement.querySelector('input');
+    if (input) {
+      input.blur();
+    }
+  }
+
 }
