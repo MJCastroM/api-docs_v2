@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegmentosComponent1750713393494 {
+export class ObtenerSegmentosComponent1750945332034 {
   pageTitle        = 'Obtener Segmentos';
   description      = `Método para obtener un listado de los segmentos ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerSegmentos';
@@ -140,5 +140,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSegmento', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del segmento.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del segmento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTSegmento', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del segmento.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del segmento.' }] }];
 }

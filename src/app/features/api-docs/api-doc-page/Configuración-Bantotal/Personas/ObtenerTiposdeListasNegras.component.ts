@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeListasNegrasComponent1750713393615 {
+export class ObtenerTiposdeListasNegrasComponent1750945332298 {
   pageTitle        = 'Obtener Tipos de Listas Negras';
   description      = `Método para obtener un listado de los tipos de listas negras ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposListasNegras';
@@ -156,5 +156,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoListaNegra', fields: [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Identificador de tipo de lista negra.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de lista negra.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoListaNegra', fields: [{ Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Identificador de tipo de lista negra.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de lista negra.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilesComponent1750713393632 {
+export class ObtenerPerfilesComponent1750945332334 {
   pageTitle        = 'Obtener Perfiles';
   description      = `Método para obtener un listado de los perfiles ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPerfiles';
@@ -140,5 +140,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPerfil', fields: [{ Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador del perfil.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del perfil.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPerfil', fields: [{ Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador del perfil.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del perfil.' }] }];
 }

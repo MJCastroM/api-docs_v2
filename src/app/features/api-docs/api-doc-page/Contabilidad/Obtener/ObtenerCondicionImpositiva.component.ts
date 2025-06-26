@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCondicionImpositivaComponent1750713393673 {
+export class ObtenerCondicionImpositivaComponent1750945332419 {
   pageTitle        = 'Obtener Condición Impositiva';
   description      = `Método para obtener una condición impositiva de una persona.`;
   pubName    = 'BTContabilidad.ObtenerCondicionImpositiva';

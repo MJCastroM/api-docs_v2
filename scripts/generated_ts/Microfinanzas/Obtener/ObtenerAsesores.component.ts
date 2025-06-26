@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAsesoresComponent1750713394066 {
+export class ObtenerAsesoresComponent1750945333484 {
   pageTitle        = 'Obtener Asesores';
   description      = `Método para obtener los usuarios asesores.`;
   pubName    = 'BTMicrofinanzas.ObtenerAsesores';
@@ -193,5 +193,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTAsesor', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del asesor.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Nombre de usuario asesor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTAsesor', fields: [{ Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del asesor.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Nombre de usuario asesor.' }] }];
 }

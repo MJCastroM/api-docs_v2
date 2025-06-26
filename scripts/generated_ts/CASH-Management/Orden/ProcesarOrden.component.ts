@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ProcesarOrdenComponent1750713393240 {
+export class ProcesarOrdenComponent1750945331520 {
   pageTitle        = 'Procesar Orden';
   description      = `Método para procesar una orden de pago.`;
   pubName    = 'BTCASHManagement.ProcesarOrden';

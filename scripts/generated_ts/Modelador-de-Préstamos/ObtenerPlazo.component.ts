@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazoComponent1750713394132 {
+export class ObtenerPlazoComponent1750945333664 {
   pageTitle        = 'Obtener Plazo';
   description      = `Método para obtener los plazos parametrizados de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerPlazo';
@@ -111,5 +111,5 @@ export class ObtenerPlazoComponent1750713394132 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValor', fields: [{ Nombre: 'valor', Tipo: 'Long', Comentarios: 'Valor de plazo de cuotas.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTValor', fields: [{ Nombre: 'valor', Tipo: 'Long', Comentarios: 'Valor de plazo de cuotas.' }] }];
 }

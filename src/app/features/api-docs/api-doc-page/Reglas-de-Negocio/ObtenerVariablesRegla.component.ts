@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVariablesReglaComponent1750713394967 {
+export class ObtenerVariablesReglaComponent1750945335464 {
   pageTitle        = 'Obtener Variables Regla';
   description      = `Método para obtener las variables de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ObtenerVariablesRegla';
@@ -156,5 +156,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTVariableRegla', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de variable.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción de variable.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Tipo de dato.' }, { Nombre: 'variableId', Tipo: 'Short', Comentarios: 'Código de variable.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTVariableRegla', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de variable.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción de variable.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Tipo de dato.' }, { Nombre: 'variableId', Tipo: 'Short', Comentarios: 'Código de variable.' }] }];
 }

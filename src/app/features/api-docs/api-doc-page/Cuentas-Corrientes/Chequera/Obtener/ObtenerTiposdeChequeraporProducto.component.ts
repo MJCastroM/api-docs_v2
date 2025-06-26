@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraporProductoComponent1750713393734 {
+export class ObtenerTiposdeChequeraporProductoComponent1750945332605 {
   pageTitle        = 'Obtener Tipos de Chequera por Producto';
   description      = `Método para obtener un listado de las chequeras que se pueden asignar a un determinado producto.`;
   pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto';
@@ -123,5 +123,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoChequera', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de chequera.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de tipo de chequera.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoChequera', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de chequera.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de tipo de chequera.' }] }];
 }

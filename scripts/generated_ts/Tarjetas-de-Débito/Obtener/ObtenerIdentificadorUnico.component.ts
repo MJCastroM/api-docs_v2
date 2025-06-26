@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750713395020 {
+export class ObtenerIdentificadorUnicoComponent1750945335588 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerIdentificadorUnico';

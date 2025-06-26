@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarconPeriodicidadComponent1750713393744 {
+export class ContratarconPeriodicidadComponent1750945332640 {
   pageTitle        = 'Contratar con Periodicidad';
   description      = `Método para contratar un producto de cuenta corriente ingresando un período de acreditación.`;
   pubName    = 'BTCuentasCorrientes.ContratarConPeriodicidad';

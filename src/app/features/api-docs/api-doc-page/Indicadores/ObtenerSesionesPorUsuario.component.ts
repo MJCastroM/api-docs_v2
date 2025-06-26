@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSesionesPorUsuarioComponent1750713393997 {
+export class ObtenerSesionesPorUsuarioComponent1750945333326 {
   pageTitle        = 'Obtener Sesiones Por Usuario';
   description      = `Método para obtener la cantidad de sesiones abiertas por usuario.`;
   pubName    = 'BTIndicadores.ObtenerSesionesPorUsuario';
@@ -129,5 +129,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSesionesPorUsuario', fields: [{ Nombre: 'cantidadsesiones', Tipo: 'Int', Comentarios: 'Cantidad de sesiones abiertas.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador de usuario.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTSesionesPorUsuario', fields: [{ Nombre: 'cantidadsesiones', Tipo: 'Int', Comentarios: 'Cantidad de sesiones abiertas.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador de usuario.' }] }];
 }

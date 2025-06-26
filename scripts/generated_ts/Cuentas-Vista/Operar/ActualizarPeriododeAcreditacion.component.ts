@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPeriododeAcreditacionComponent1750713393839 {
+export class ActualizarPeriododeAcreditacionComponent1750945332903 {
   pageTitle        = 'Actualizar Período de Acreditación';
   description      = `Método para actualizar el período de acreditación de intereses de una subcuenta contratada.`;
   pubName    = 'BTCuentasVista.ActualizarPeriodoDeAcreditacion';

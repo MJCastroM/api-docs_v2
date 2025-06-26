@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionporDeudaTotalComponent1750713394694 {
+export class ContratarRefinanciacionporDeudaTotalComponent1750945334817 {
   pageTitle        = 'Contratar Refinanciación por Deuda Total';
   description      = `Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.`;
   pubName    = 'BTPrestamos.ContratarRefinanciacionDeudaTotal';

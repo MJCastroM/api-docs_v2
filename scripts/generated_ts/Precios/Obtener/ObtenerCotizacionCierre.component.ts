@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionCierreComponent1750713394648 {
+export class ObtenerCotizacionCierreComponent1750945334698 {
   pageTitle        = 'Obtener Cotización Cierre';
   description      = `Método para obtener la cotización del cierre.`;
   pubName    = 'BTPrecios.ObtenerCotizacionCierre';
@@ -123,5 +123,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCotizacion', fields: [{ Nombre: 'compra', Tipo: 'Double', Comentarios: 'Cotización Compra.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monedaISO', Tipo: 'String', Comentarios: 'Código ISO de la moneda.' }, { Nombre: 'venta', Tipo: 'Double', Comentarios: 'Cotización Venta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTCotizacion', fields: [{ Nombre: 'compra', Tipo: 'Double', Comentarios: 'Cotización Compra.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'monedaISO', Tipo: 'String', Comentarios: 'Código ISO de la moneda.' }, { Nombre: 'venta', Tipo: 'Double', Comentarios: 'Cotización Venta.' }] }];
 }

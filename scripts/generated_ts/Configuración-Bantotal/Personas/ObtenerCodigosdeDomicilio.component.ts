@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCodigosdeDomicilioComponent1750713393605 {
+export class ObtenerCodigosdeDomicilioComponent1750945332276 {
   pageTitle        = 'Obtener Códigos de Domicilio';
   description      = `Método para obtener un listado de los códigos de domicilio ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCodigosDeDomicilio';
@@ -188,5 +188,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCodigoDomicilio', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de código de domicilio.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de código de domicilio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTCodigoDomicilio', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de código de domicilio.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de código de domicilio.' }] }];
 }

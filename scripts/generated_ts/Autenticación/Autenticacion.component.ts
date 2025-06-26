@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutenticacionComponent1750713393125 {
+export class AutenticacionComponent1750945331214 {
   pageTitle        = 'Autenticación';
   description      = ``;
   pubName    = '';

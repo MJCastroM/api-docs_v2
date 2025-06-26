@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAdhesionesComponent1750713393108 {
+export class ObtenerAdhesionesComponent1750945331168 {
   pageTitle        = 'Obtener Adhesiones';
   description      = `Método para obtener las adhesiones de un cliente a una determinada empresa originante.`;
   pubName    = 'BTSNP.ObtenerAdhesiones';
@@ -142,5 +142,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTAdhesion', fields: [{ Nombre: 'CBU1', Tipo: 'String', Comentarios: 'Primer bloque del CBU.' }, { Nombre: 'CBU2', Tipo: 'String', Comentarios: 'Segundo bloque del CBU.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'dscEmpresaOri', Tipo: 'String', Comentarios: 'Descripción empresa originante.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la adhesión.' }, { Nombre: 'fechaDeAlta', Tipo: 'Date', Comentarios: 'Fecha de alta' }, { Nombre: 'fechaDeBaja', Tipo: 'Date', Comentarios: 'Fecha de baja.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: 'transaccionCod', Tipo: 'Byte', Comentarios: 'Código de transacción.' }, { Nombre: 'transaccionInfoAd', Tipo: 'Byte', Comentarios: 'Código de transacción para información adicional.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTAdhesion', fields: [{ Nombre: 'CBU1', Tipo: 'String', Comentarios: 'Primer bloque del CBU.' }, { Nombre: 'CBU2', Tipo: 'String', Comentarios: 'Segundo bloque del CBU.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'dscEmpresaOri', Tipo: 'String', Comentarios: 'Descripción empresa originante.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la adhesión.' }, { Nombre: 'fechaDeAlta', Tipo: 'Date', Comentarios: 'Fecha de alta' }, { Nombre: 'fechaDeBaja', Tipo: 'Date', Comentarios: 'Fecha de baja.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: 'transaccionCod', Tipo: 'Byte', Comentarios: 'Código de transacción.' }, { Nombre: 'transaccionInfoAd', Tipo: 'Byte', Comentarios: 'Código de transacción para información adicional.' }] }];
 }

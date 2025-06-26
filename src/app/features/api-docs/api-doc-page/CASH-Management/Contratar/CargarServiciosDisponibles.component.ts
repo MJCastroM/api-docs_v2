@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarServiciosDisponiblesComponent1750713393201 {
+export class CargarServiciosDisponiblesComponent1750945331421 {
   pageTitle        = 'Cargar Servicios Disponibles';
   description      = `Método para obtener los servicios disponibles para el cliente.`;
   pubName    = 'BTCASHManagement.CargarServiciosDisponibles';
@@ -126,5 +126,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTConvServicioCASH', fields: [{ Nombre: 'contratoId', Tipo: 'Long', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'descripcionServicio', Tipo: 'String', Comentarios: 'Descripción de servicios.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'tipoServicio', Tipo: 'String', Comentarios: 'Tipo de servicio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTConvServicioCASH', fields: [{ Nombre: 'contratoId', Tipo: 'Long', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'descripcionServicio', Tipo: 'String', Comentarios: 'Descripción de servicios.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'tipoServicio', Tipo: 'String', Comentarios: 'Tipo de servicio.' }] }];
 }

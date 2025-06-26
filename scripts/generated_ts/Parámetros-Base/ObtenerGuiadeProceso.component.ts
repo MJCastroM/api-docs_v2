@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGuiadeProcesoComponent1750713394237 {
+export class ObtenerGuiadeProcesoComponent1750945333880 {
   pageTitle        = 'Obtener Guía de Proceso';
   description      = `Método para obtener los datos de una determinada guía de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerGuiaDeProceso';
@@ -142,5 +142,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCorrelativoGuia', fields: [{ Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo de la guía.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del correlativo.' }, { Nombre: 'importeEspecifico', Tipo: 'Double', Comentarios: 'Importe específico del correlativo.' }, { Nombre: 'valorEspecifico', Tipo: 'Long', Comentarios: 'Valor específico del correlativo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTCorrelativoGuia', fields: [{ Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo de la guía.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del correlativo.' }, { Nombre: 'importeEspecifico', Tipo: 'Double', Comentarios: 'Importe específico del correlativo.' }, { Nombre: 'valorEspecifico', Tipo: 'Long', Comentarios: 'Valor específico del correlativo.' }] }];
 }

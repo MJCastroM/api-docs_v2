@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoconAltadeFacultadesComponent1750713393752 {
+export class ContratarProductoconAltadeFacultadesComponent1750945332655 {
   pageTitle        = 'Contratar Producto con Alta de Facultades';
   description      = `Método para contratar un producto de cuenta corriente dando de alta las facultades.`;
   pubName    = 'BTCuentasCorrientes.ContratarConFacultades';

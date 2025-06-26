@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarPoliticasComponent1750713394105 {
+export class ValidarPoliticasComponent1750945333602 {
   pageTitle        = 'Validar Políticas';
   description      = `Método para validar las políticas crediticias de una determinada etapa del proceso de otorgamiento de créditos.`;
   pubName    = 'BTMicrofinanzas.ValidarPoliticas';
@@ -195,5 +195,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValidacionPoliticas', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoDsc', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación que aplique para una política. Por ejemplo, que haya sido autorizada en una etapa previa.' }, { Nombre: 'politica', Tipo: 'String', Comentarios: 'Descripción de la política.' }, { Nombre: 'politicaId', Tipo: 'Int', Comentarios: 'Identificador de política.' }, { Nombre: 'restriccion', Tipo: 'String', Comentarios: 'Tipo de restricción de la política.' }, { Nombre: 'restriccionDsc', Tipo: 'String', Comentarios: 'Descripción de la restricción.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTValidacionPoliticas', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'estadoDsc', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación que aplique para una política. Por ejemplo, que haya sido autorizada en una etapa previa.' }, { Nombre: 'politica', Tipo: 'String', Comentarios: 'Descripción de la política.' }, { Nombre: 'politicaId', Tipo: 'Int', Comentarios: 'Identificador de política.' }, { Nombre: 'restriccion', Tipo: 'String', Comentarios: 'Tipo de restricción de la política.' }, { Nombre: 'restriccionDsc', Tipo: 'String', Comentarios: 'Descripción de la restricción.' }] }];
 }

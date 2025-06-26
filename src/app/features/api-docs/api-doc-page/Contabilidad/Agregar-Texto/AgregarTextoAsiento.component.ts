@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextoAsientoComponent1750713393634 {
+export class AgregarTextoAsientoComponent1750945332342 {
   pageTitle        = 'Agregar Texto Asiento';
   description      = `Método para agregar un texto a un asiento.`;
   pubName    = 'BTContabilidad.AgregarTextoAsiento';
@@ -115,5 +115,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTextoMovimiento', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del texto.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de texto.' }, { Nombre: 'renglon', Tipo: 'Short', Comentarios: 'Renglón.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto asociado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTextoMovimiento', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del texto.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de texto.' }, { Nombre: 'renglon', Tipo: 'Short', Comentarios: 'Renglón.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto asociado.' }] }];
 }

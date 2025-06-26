@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequeraComponent1750713393715 {
+export class ObtenerChequeraComponent1750945332556 {
   pageTitle        = 'Obtener Chequera';
   description      = `Método para obtener los datos de una chequera de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequera';
@@ -129,5 +129,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosChequera', fields: [{ Nombre: 'cantidadLibretas', Tipo: 'Short', Comentarios: 'Cantidad de libretas.' }, { Nombre: 'chequeInicial', Tipo: 'Int', Comentarios: 'Cheque inicial.' }, { Nombre: 'empresa', Tipo: 'Short', Comentarios: 'Empresa de emisión de la chequera.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado actual de la solicitud de la chequera.' }, { Nombre: 'estadoId', Tipo: 'Short', Comentarios: 'Identificador del estado de la solicitud de la chequera.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'solicitud', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de chequera.' }, { Nombre: 'tipoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de chequera.' }, { Nombre: 'titular', Tipo: 'String', Comentarios: 'Titular de la cuenta.' }, { Nombre: 'totalCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques de la chequera.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosChequera', fields: [{ Nombre: 'cantidadLibretas', Tipo: 'Short', Comentarios: 'Cantidad de libretas.' }, { Nombre: 'chequeInicial', Tipo: 'Int', Comentarios: 'Cheque inicial.' }, { Nombre: 'empresa', Tipo: 'Short', Comentarios: 'Empresa de emisión de la chequera.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado actual de la solicitud de la chequera.' }, { Nombre: 'estadoId', Tipo: 'Short', Comentarios: 'Identificador del estado de la solicitud de la chequera.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'solicitud', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de chequera.' }, { Nombre: 'tipoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de chequera.' }, { Nombre: 'titular', Tipo: 'String', Comentarios: 'Titular de la cuenta.' }, { Nombre: 'totalCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques de la chequera.' }] }];
 }

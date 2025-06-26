@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeEjecucionComponent1750713393127 {
+export class ObtenerDetalledeEjecucionComponent1750945331218 {
   pageTitle        = 'Obtener Detalle de Ejecución';
   description      = `Método para obtener el detalle de la ejecución de un proceso en la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerDetalleEjecucion';

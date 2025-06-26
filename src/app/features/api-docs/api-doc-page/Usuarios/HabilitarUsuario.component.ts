@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarUsuarioComponent1750713395107 {
+export class HabilitarUsuarioComponent1750945335807 {
   pageTitle        = 'Habilitar Usuario';
   description      = `Método para habilitar un usuario que se encuentra inhabilitado.`;
   pubName    = 'BTUsuarios.HabilitarUsuario';

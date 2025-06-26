@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarProfesionComponent1750713394426 {
+export class EliminarProfesionComponent1750945334257 {
   pageTitle        = 'Eliminar Profesión';
   description      = `Método para eliminar la profesión de una persona física.`;
   pubName    = 'BTPersonas.EliminarProfesion';

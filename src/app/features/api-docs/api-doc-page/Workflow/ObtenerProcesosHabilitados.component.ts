@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosHabilitadosComponent1750713395135 {
+export class ObtenerProcesosHabilitadosComponent1750945335857 {
   pageTitle        = 'Obtener Procesos Habilitados';
   description      = `Método para obtener un listado de los procesos habilitados de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerProcesosHabilitados';

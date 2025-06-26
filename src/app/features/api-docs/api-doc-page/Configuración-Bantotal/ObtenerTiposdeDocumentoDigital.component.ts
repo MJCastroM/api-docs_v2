@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeDocumentoDigitalComponent1750713393549 {
+export class ObtenerTiposdeDocumentoDigitalComponent1750945332160 {
   pageTitle        = 'Obtener Tipos de Documento Digital';
   description      = `Método para obtener un listado de los tipos de documento digital ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentidadesdeGeneroComponent1750713394527 {
+export class ObtenerIdentidadesdeGeneroComponent1750945334396 {
   pageTitle        = 'Obtener Identidades de Género';
   description      = `Método para obtener un listado de las identidades de género ingresadas en el sistema.`;
   pubName    = 'BTPersonas.ObtenerIdentidadesDeGenero';
@@ -119,5 +119,5 @@ export class ObtenerIdentidadesdeGeneroComponent1750713394527 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTIdentidadDeGenero', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de identidad de género.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de identidad de género.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTIdentidadDeGenero', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de identidad de género.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de identidad de género.' }] }];
 }

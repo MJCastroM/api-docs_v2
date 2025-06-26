@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarTelefonoComponent1750713393324 {
+export class ActualizarTelefonoComponent1750945331658 {
   pageTitle        = 'Actualizar Teléfono';
   description      = `Método para actualizar el teléfono de un cliente.`;
   pubName    = 'BTClientes.ActualizarTelefono';

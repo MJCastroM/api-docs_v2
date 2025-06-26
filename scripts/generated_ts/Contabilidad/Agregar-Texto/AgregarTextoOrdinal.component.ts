@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextoOrdinalComponent1750713393639 {
+export class AgregarTextoOrdinalComponent1750945332347 {
   pageTitle        = 'Agregar Texto Ordinal';
   description      = `Método para agregar un texto a un determinado ordinal de un asiento.`;
   pubName    = 'BTContabilidad.AgregarTextoOrdinal';
@@ -117,5 +117,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTextoMovimiento', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del texto.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de texto.' }, { Nombre: 'renglon', Tipo: 'Short', Comentarios: 'Renglón.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto asociado.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTextoMovimiento', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del texto.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de texto.' }, { Nombre: 'renglon', Tipo: 'Short', Comentarios: 'Renglón.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto asociado.' }] }];
 }

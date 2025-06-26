@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAcuerdosComponent1750713393755 {
+export class ObtenerAcuerdosComponent1750945332663 {
   pageTitle        = 'Obtener Acuerdos';
   description      = `Método para obtener los acuerdos de sobregiro de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerAcuerdos';
@@ -170,5 +170,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTAcuerdoClienteCC', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha de inicio del acuerdo.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha del vencimiento.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Limite disponible.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Limite otorgado.' }, { Nombre: 'limiteUtilizado', Tipo: 'Double', Comentarios: 'Limite utilizado.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Símbolo de la moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'operacionUIdCuentaVista', Tipo: 'Long', Comentarios: 'Identificador único de la operación de la cuenta vista.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaActualizada', Tipo: 'Double', Comentarios: 'Tasa actualizada.' }, { Nombre: 'tipoTasa', Tipo: 'Byte', Comentarios: 'Tipo de tasa.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTAcuerdoClienteCC', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha de inicio del acuerdo.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha del vencimiento.' }, { Nombre: 'limiteDisponible', Tipo: 'Double', Comentarios: 'Limite disponible.' }, { Nombre: 'limiteOtorgado', Tipo: 'Double', Comentarios: 'Limite otorgado.' }, { Nombre: 'limiteUtilizado', Tipo: 'Double', Comentarios: 'Limite utilizado.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Símbolo de la moneda.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'operacionUIdCuentaVista', Tipo: 'Long', Comentarios: 'Identificador único de la operación de la cuenta vista.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaActualizada', Tipo: 'Double', Comentarios: 'Tasa actualizada.' }, { Nombre: 'tipoTasa', Tipo: 'Byte', Comentarios: 'Tipo de tasa.' }] }];
 }

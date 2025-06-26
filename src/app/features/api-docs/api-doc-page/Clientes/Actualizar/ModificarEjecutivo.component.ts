@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarEjecutivoComponent1750713393372 {
+export class ModificarEjecutivoComponent1750945331742 {
   pageTitle        = 'Modificar Ejecutivo';
   description      = `Método para modificar el ejecutivo de una cuenta cliente.`;
   pubName    = 'BTClientes.ModificarEjecutivo';

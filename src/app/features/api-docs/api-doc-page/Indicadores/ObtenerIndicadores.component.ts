@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIndicadoresComponent1750713393984 {
+export class ObtenerIndicadoresComponent1750945333290 {
   pageTitle        = 'Obtener Indicadores';
   description      = `Método para obtener los indicadores por agrupador.`;
   pubName    = 'BTIndicadores.ObtenerIndicadores';
@@ -124,5 +124,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTIndicador', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Identificador de indicador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del indicador.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTIndicador', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Identificador de indicador.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del indicador.' }] }];
 }

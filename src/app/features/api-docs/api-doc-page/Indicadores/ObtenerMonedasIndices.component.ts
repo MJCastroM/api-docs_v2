@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasIndicesComponent1750713393988 {
+export class ObtenerMonedasIndicesComponent1750945333306 {
   pageTitle        = 'Obtener Monedas Indices';
   description      = `Método para obtener las monedas e índices en funcionamiento.`;
   pubName    = 'BTIndicadores.ObtenerMonedasIndices';
@@ -202,5 +202,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTMonedaIndice', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código identificador de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'tipoCambio', Tipo: 'String', Comentarios: 'Tipo Cambio.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTMonedaIndice', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código identificador de moneda.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de moneda.' }, { Nombre: 'tipoCambio', Tipo: 'String', Comentarios: 'Tipo Cambio.' }] }];
 }

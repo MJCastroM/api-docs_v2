@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaVencidaComponent1750713394771 {
+export class ObtenerDeudaVencidaComponent1750945335011 {
   pageTitle        = 'Obtener Deuda Vencida';
   description      = `Método para obtener la deuda vencida de un préstamo a una determinada fecha.`;
   pubName    = 'BTPrestamos.ObtenerDeudaVencida';

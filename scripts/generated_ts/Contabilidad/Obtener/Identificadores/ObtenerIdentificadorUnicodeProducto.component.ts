@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeProductoComponent1750713393666 {
+export class ObtenerIdentificadorUnicodeProductoComponent1750945332406 {
   pageTitle        = 'Obtener Identificador Único de Producto';
   description      = `Método para obtener el identificador único de un producto.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoProducto';

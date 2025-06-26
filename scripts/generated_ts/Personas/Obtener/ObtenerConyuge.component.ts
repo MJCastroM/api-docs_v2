@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerConyugeComponent1750713394450 {
+export class ObtenerConyugeComponent1750945334312 {
   pageTitle        = 'Obtener Cónyuge';
   description      = `Método para obtener los datos del cónyuge de una persona física.`;
   pubName    = 'BTPersonas.ObtenerConyuge';
@@ -119,5 +119,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosConyuge', fields: [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador del cónyuge.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido del cónyuge.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre del cónyuge.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido del cónyuge.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre del cónyuge.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosConyuge', fields: [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador del cónyuge.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido del cónyuge.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre del cónyuge.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido del cónyuge.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre del cónyuge.' }] }];
 }

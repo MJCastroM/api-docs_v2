@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaOrigenComponent1750713393036 {
+export class ModificarCuentaOrigenComponent1750945330980 {
   pageTitle        = 'Modificar Cuenta Origen';
   description      = `Método para modificar la cuenta de origen desde donde se toman los fondos para el ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarCuentaOrigen';

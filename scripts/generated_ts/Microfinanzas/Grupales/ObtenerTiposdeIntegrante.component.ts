@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeIntegranteComponent1750713394058 {
+export class ObtenerTiposdeIntegranteComponent1750945333467 {
   pageTitle        = 'Obtener Tipos de Integrante';
   description      = `Método para obtener los tipos de integrante correspondientes a un tipo de grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposDeIntegrante';
@@ -138,5 +138,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoIntegranteGrupo', fields: [{ Nombre: 'cantidadPermitida', Tipo: 'Int', Comentarios: 'Cantidad máxima de integrantes de este tipo permitidos.' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador del tipo de integrante.' }, { Nombre: 'coordinador', Tipo: 'String', Comentarios: 'Indica si el integrante es coordinador o no (S/N).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de integrante.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si el tipo de integrante está vigente (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoIntegranteGrupo', fields: [{ Nombre: 'cantidadPermitida', Tipo: 'Int', Comentarios: 'Cantidad máxima de integrantes de este tipo permitidos.' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador del tipo de integrante.' }, { Nombre: 'coordinador', Tipo: 'String', Comentarios: 'Indica si el integrante es coordinador o no (S/N).' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de integrante.' }, { Nombre: 'vigente', Tipo: 'String', Comentarios: 'Indica si el tipo de integrante está vigente (S/N).' }] }];
 }

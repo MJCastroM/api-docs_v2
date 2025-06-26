@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarConyugeComponent1750713394402 {
+export class EliminarConyugeComponent1750945334211 {
   pageTitle        = 'Eliminar Cónyuge';
   description      = `Método para eliminar el cónyuge de una persona.`;
   pubName    = 'BTPersonas.EliminarConyuge';

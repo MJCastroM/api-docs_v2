@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosPrecancelacionComponent1750713394787 {
+export class ObtenerMotivosPrecancelacionComponent1750945335062 {
   pageTitle        = 'Obtener Motivos de Precancelación';
   description      = `Método para obtener los motivos de precancelación.`;
   pubName    = 'BTPrestamos.ObtenerMotivosPrecancelacion';
@@ -116,5 +116,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValorCampo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del campo.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador del campo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTValorCampo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del campo.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador del campo.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasadePrecancelacionComponent1750713393948 {
+export class ObtenerTasadePrecancelacionComponent1750945333197 {
   pageTitle        = 'Obtener Tasa de Precancelación';
   description      = `Método para obtener la tasa de precancelación de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerTasaPrecancelacion';

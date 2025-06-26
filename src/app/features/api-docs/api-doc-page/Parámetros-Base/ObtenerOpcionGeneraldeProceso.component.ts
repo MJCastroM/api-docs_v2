@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneraldeProcesoComponent1750713394242 {
+export class ObtenerOpcionGeneraldeProcesoComponent1750945333895 {
   pageTitle        = 'Obtener Opción General de Proceso';
   description      = `Método para obtener los datos de una determinada opción general de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralDeProceso';
@@ -110,5 +110,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOpcionGeneral', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la opción general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Código de la opción general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opción general de procesos (S/N).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTOpcionGeneral', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la opción general de procesos.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Código de la opción general de procesos.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de la opción general de procesos (S/N).' }] }];
 }

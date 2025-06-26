@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarArchivoRecibidoComoDatoComponent1750713393183 {
+export class CargarArchivoRecibidoComoDatoComponent1750945331374 {
   pageTitle        = 'Cargar Archivo Recibido Como Dato';
   description      = `Método para cargar un archivo recibido como dato.`;
   pubName    = 'BTCASHManagement.CargarArchivoDato';

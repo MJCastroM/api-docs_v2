@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionComponent1750713394570 {
+export class ObtenerProfesionComponent1750945334483 {
   pageTitle        = 'Obtener Profesión';
   description      = `Método para obtener la profesión de una persona física.`;
   pubName    = 'BTPersonas.ObtenerProfesion';
@@ -99,5 +99,5 @@ export class ObtenerProfesionComponent1750713394570 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTProfesion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de profesión.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de profesión.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTProfesion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de profesión.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de profesión.' }] }];
 }

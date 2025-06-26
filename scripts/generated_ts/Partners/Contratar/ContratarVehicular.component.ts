@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarVehicularComponent1750713394160 {
+export class ContratarVehicularComponent1750945333725 {
   pageTitle        = 'Contratar Vehicular';
   description      = `Método para contratar un préstamo vehicular.`;
   pubName    = 'BTPartners.ContratarVehicular';
@@ -149,5 +149,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTDatosAltaVeh', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTDatosAltaVeh', fields: [{ Nombre: 'anioConstruccion', Tipo: 'Short', Comentarios: 'Año de construcción.' }, { Nombre: 'color', Tipo: 'Int', Comentarios: 'Número del color.' }, { Nombre: 'compraPara', Tipo: 'Long', Comentarios: 'Propietario del vehículo.' }, { Nombre: 'datosAdicionales', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros datos.' }, { Nombre: 'fiadores', Tipo: 'Long', Comentarios: 'Listado de fiadores.' }, { Nombre: 'numeroMotor', Tipo: 'String', Comentarios: 'Número del motor.' }, { Nombre: 'placa', Tipo: 'String', Comentarios: 'Placa.' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }, { typeName: 'sBTDatosAltaVeh', fields: [{ Nombre: 'anioConstruccion', Tipo: 'Short', Comentarios: 'Año de construcción.' }, { Nombre: 'color', Tipo: 'Int', Comentarios: 'Número del color.' }, { Nombre: 'compraPara', Tipo: 'Long', Comentarios: 'Propietario del vehículo.' }, { Nombre: 'datosAdicionales', Tipo: '[sBTConcepto](#sbtconcepto)', Comentarios: 'Datos de otros datos.' }, { Nombre: 'fiadores', Tipo: 'Long', Comentarios: 'Listado de fiadores.' }, { Nombre: 'numeroMotor', Tipo: 'String', Comentarios: 'Número del motor.' }, { Nombre: 'placa', Tipo: 'String', Comentarios: 'Placa.' }] }, { typeName: 'sBTConcepto', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto.' }, { Nombre: 'texto', Tipo: 'String', Comentarios: 'Texto.' }, { Nombre: 'valor', Tipo: 'Double', Comentarios: 'Importe.' }] }];
 }

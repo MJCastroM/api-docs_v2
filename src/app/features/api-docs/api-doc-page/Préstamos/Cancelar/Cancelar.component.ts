@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750713394674 {
+export class CancelarComponent1750945334763 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la cancelación de un préstamo.`;
   pubName    = 'BTPrestamos.Cancelar';

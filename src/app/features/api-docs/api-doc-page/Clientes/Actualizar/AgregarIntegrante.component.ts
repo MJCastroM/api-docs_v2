@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteComponent1750713393340 {
+export class AgregarIntegranteComponent1750945331683 {
   pageTitle        = 'Agregar Integrante';
   description      = `Método para agregar un integrante a una cuenta cliente.`;
   pubName    = 'BTClientes.AgregarIntegrante';

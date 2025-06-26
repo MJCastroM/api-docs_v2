@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosComponent1750713393552 {
+export class ObtenerEstadosComponent1750945332165 {
   pageTitle        = 'Obtener Estados';
   description      = `Método para obtener un listado de los estados de producto ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstados';
@@ -217,5 +217,5 @@ curl -X GET \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstadoOperacion', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del estado.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'permiteOperar', Tipo: 'String', Comentarios: '¿Permite Operar?' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTEstadoOperacion', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código del estado.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del estado.' }, { Nombre: 'permiteOperar', Tipo: 'String', Comentarios: '¿Permite Operar?' }] }];
 }

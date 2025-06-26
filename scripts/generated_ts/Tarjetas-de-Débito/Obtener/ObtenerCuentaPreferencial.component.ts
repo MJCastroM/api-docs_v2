@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentaPreferencialComponent1750713395000 {
+export class ObtenerCuentaPreferencialComponent1750945335540 {
   pageTitle        = 'Obtener Cuenta Preferencial';
   description      = `Método para obtener la operación de la cuenta preferencial de tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCuentaPreferencial';

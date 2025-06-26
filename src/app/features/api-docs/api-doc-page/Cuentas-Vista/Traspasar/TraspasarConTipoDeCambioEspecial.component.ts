@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarConTipoDeCambioEspecialComponent1750713393856 {
+export class TraspasarConTipoDeCambioEspecialComponent1750945332955 {
   pageTitle        = 'Traspasar con Tipo de Cambio Especial';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda ingresando un tipo de cambio especial.`;
   pubName    = 'BTCuentasVista.TraspasarConTipoDeCambioEspecial ';
@@ -151,5 +151,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTraspasoMoneda', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del Traspaso' }, { Nombre: 'importeCredito', Tipo: 'Double', Comentarios: 'Importe a acreditar.' }, { Nombre: 'importeDebito', Tipo: 'Double', Comentarios: 'Importe a debitar.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de Moneda.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador de operación de origen del traspaso.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador de operación de destino del traspaso.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTraspasoMoneda', fields: [{ Nombre: 'concepto', Tipo: 'String', Comentarios: 'Concepto del Traspaso' }, { Nombre: 'importeCredito', Tipo: 'Double', Comentarios: 'Importe a acreditar.' }, { Nombre: 'importeDebito', Tipo: 'Double', Comentarios: 'Importe a debitar.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de Moneda.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador de operación de origen del traspaso.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador de operación de destino del traspaso.' }] }];
 }

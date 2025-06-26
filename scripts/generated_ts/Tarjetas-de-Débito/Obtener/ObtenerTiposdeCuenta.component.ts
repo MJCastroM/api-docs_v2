@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeCuentaComponent1750713395040 {
+export class ObtenerTiposdeCuentaComponent1750945335630 {
   pageTitle        = 'Obtener Tipos de Cuenta';
   description      = `Método para obtener los tipos de cuenta de tarjetas de débito ingresados en el sistema.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTiposDeCuenta';
@@ -119,5 +119,5 @@ export class ObtenerTiposdeCuentaComponent1750713395040 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoDeCuenta', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del tipo de cuenta.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de cuenta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoDeCuenta', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del tipo de cuenta.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de cuenta.' }] }];
 }

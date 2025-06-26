@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPosicionComponent1750713393454 {
+export class ObtenerPosicionComponent1750945331946 {
   pageTitle        = 'Obtener Posición';
   description      = `Método para obtener las posiciones de los títulos de un cliente.`;
   pubName    = 'BTClientes.ObtenerPosicion';
@@ -156,5 +156,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTClaseActivo', fields: [{ Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de la clase de activo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la clase de activo.' }, { Nombre: 'porcentajeComposicion', Tipo: 'Double', Comentarios: 'Porcentaje de composición de la clase de activo.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total de la clase de activo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTClaseActivo', fields: [{ Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de la clase de activo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la clase de activo.' }, { Nombre: 'porcentajeComposicion', Tipo: 'Double', Comentarios: 'Porcentaje de composición de la clase de activo.' }, { Nombre: 'total', Tipo: 'Double', Comentarios: 'Total de la clase de activo.' }] }];
 }

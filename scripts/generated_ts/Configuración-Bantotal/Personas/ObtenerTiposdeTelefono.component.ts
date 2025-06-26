@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTelefonoComponent1750713393618 {
+export class ObtenerTiposdeTelefonoComponent1750945332305 {
   pageTitle        = 'Obtener Tipos de Telefono';
   description      = `Método para obtener un listado de los tipos de teléfono ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeTelefono';
@@ -132,5 +132,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoTelefono', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de teléfono.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de tipo de teléfono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoTelefono', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de teléfono.' }, { Nombre: 'identificador', Tipo: 'Long', Comentarios: 'Identificador de tipo de teléfono.' }] }];
 }

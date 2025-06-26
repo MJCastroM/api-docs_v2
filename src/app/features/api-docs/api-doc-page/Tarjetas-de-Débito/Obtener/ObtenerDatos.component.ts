@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750713395013 {
+export class ObtenerDatosComponent1750945335575 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener los datos de un producto de tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerDatos';

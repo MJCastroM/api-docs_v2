@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DesbloquearDesdeREDComponent1750713395074 {
+export class DesbloquearDesdeREDComponent1750945335721 {
   pageTitle        = 'Desbloquear Desde RED';
   description      = `Método para desbloquear una tarjeta de débito sin notificar a la RED.`;
   pubName    = 'BTTarjetasDeDebito.DesbloquearDesdeRED';

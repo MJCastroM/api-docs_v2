@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitComponent1750713393100 {
+export class CrearStopDebitComponent1750945331149 {
   pageTitle        = 'Crear Stop Debit';
   description      = `Método para crear un stop debit sin importe.`;
   pubName    = 'BTSNP.CrearStopDebit';
@@ -124,5 +124,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTStopDebit', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde para aplicar el Stop Debit.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta para aplicar el Stop Debit.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del débito.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTStopDebit', fields: [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde para aplicar el Stop Debit.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta para aplicar el Stop Debit.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del débito.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }] }];
 }

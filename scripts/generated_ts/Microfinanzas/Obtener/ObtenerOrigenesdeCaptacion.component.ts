@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOrigenesdeCaptacionComponent1750713394076 {
+export class ObtenerOrigenesdeCaptacionComponent1750945333518 {
   pageTitle        = 'Obtener Orígenes de Captación';
   description      = `Método para obtener los orígenes de captación.`;
   pubName    = 'BTMicrofinanzas.ObtenerOrigenesCaptacion';
@@ -169,5 +169,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOrigenCaptacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de origen de captación.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de origen de captación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTOrigenCaptacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de origen de captación.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de origen de captación.' }] }];
 }

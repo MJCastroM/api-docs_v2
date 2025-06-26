@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AdelantarCapitalConReduccionDeCuotaComponent1750713394836 {
+export class AdelantarCapitalConReduccionDeCuotaComponent1750945335188 {
   pageTitle        = 'Adelantar Capital Con Reducción De Cuota';
   description      = `Método para realizar el pago de cuota de un préstamo con adelanto de capital.`;
   pubName    = 'BTPrestamos.AdelantarCapitalConReduccionDeCuota';

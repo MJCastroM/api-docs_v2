@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarPersonaVinculadaComponent1750713394424 {
+export class EliminarPersonaVinculadaComponent1750945334250 {
   pageTitle        = 'Eliminar Persona Vinculada';
   description      = `Método para eliminar un vínculo de consanguinidad a una persona.`;
   pubName    = 'BTPersonas.EliminarPersonaVinculada';

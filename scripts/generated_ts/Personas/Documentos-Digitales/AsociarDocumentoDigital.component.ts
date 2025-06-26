@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750713394390 {
+export class AsociarDocumentoDigitalComponent1750945334182 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a una persona.`;
   pubName    = 'BTPersonas.AsociarDocumentoDigital';

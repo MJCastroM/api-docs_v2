@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTipodeCambioComponent1750713394668 {
+export class ObtenerTipodeCambioComponent1750945334747 {
   pageTitle        = 'Obtener Tipo de Cambio';
   description      = `Método que toma un monto en una determinada moneda origen y lo convierte a una moneda destino, devolviendo los tipos de cambio de ambas monedas.`;
   pubName    = 'BTPrecios.ObtenerTipoCambio';

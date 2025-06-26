@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRiesgodeCreditoComponent1750713393485 {
+export class ObtenerRiesgodeCreditoComponent1750945332015 {
   pageTitle        = 'Obtener Riesgo de Credito';
   description      = `Método para obtener la categoría de riesgo de un determinado cliente según la clasificación banco centralista.`;
   pubName    = 'BTClientes.ObtenerRiesgoCredito';

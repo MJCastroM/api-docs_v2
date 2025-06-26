@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearConCuentasAsociadasComponent1750713395064 {
+export class CrearConCuentasAsociadasComponent1750945335693 {
   pageTitle        = 'Crear Con Cuentas Asociadas';
   description      = `Método para dar de alta una tarjeta con cuentas asociadas.`;
   pubName    = 'BTTarjetasDeDebito.CrearConCuentasAsociadas';
@@ -136,5 +136,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTIdOperacion', fields: [{ Nombre: 'idOperacion', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTIdOperacion', fields: [{ Nombre: 'idOperacion', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }] }];
 }
