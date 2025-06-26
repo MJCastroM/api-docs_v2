@@ -39,12 +39,57 @@ function walk(dir) {
   });
 }
 
+
+// 1) Ajusta aquí la carpeta que quieres recorrer
+const ROOT_DIR = path.resolve(__dirname, '../src/app/features/api-docs/api-doc-page');
+/**
+ * Extrae la información deseada de un contenido .ts
+ */
+function extractInfo(content, filePath) {
+  const getMatch = (re, def = '') => {
+    const m = content.match(re);
+    return m ? m[1].trim() : def;
+  };
+
+  const pageTitle        = getMatch(/pageTitle\s*=\s*['"`]([^'"`]+)['"`]/);
+  const description      = getMatch(/description\s*=\s*`([\s\S]*?)`/, '');
+  const pubName          = getMatch(/pubName\s*=\s*['"`]([^'"`]*)['"`]/, '');
+  const programa         = getMatch(/programa\s*=\s*['"`]([^'"`]*)['"`]/, '');
+  const scope            = getMatch(/scope\s*=\s*['"`]([^'"`]*)['"`]/, '');
+
+  const hasBackendConfig = (getMatch(/hasBackendConfig\s*=\s*(true|false)/, 'false') === 'true');
+  const backendText      = getMatch(/backendText\s*=\s*`([\s\S]*?)`/, '');
+
+  let backendConfig = [];
+  const bcMatch = content.match(/backendConfig\s*=\s*(\[[\s\S]*?\]);/);
+  if (bcMatch) {
+    try {
+      backendConfig = eval(`(${bcMatch[1]})`);
+    } catch (e) {
+      console.warn(`No se pudo parsear backendConfig en ${filePath}: ${e.message}`);
+    }
+  }
+
+  return {
+    url: buildUrl(filePath),
+    pageTitle,
+    description,
+    pubName,
+    programa,
+    scope,
+    hasBackendConfig,
+    backendText,
+    backendConfig
+  };
+}
+
 // 3) Regex componente (sin cambios)
 var COMPONENT_RE = /@Component\(\{\s*selector\s*:\s*['"`](.+?)['"`][\s\S]*?export\s+class\s+(\w+)/m;
 var files = walk(FEATURE_DIR);
 
 var entries = files.map(file => {
-  var txt = fs.readFileSync(file, 'utf8');
+  var txt = fs.readFileSync(file, 'utf8');  
+  const info = extractInfo(txt, file);
   var m   = txt.match(COMPONENT_RE);
   if (!m) return null;
   var selector  = m[1];
@@ -59,7 +104,7 @@ var entries = files.map(file => {
 
   var relImport = './' +
     path.relative(FEATURE_DIR, file).replace(/\\/g, '/').replace(/\.ts$/, '');
-  return { selector, className, routePath, importPath: relImport, filePath: file };
+  return { selector, className, routePath, importPath: relImport, filePath: file, pageTitle: info.pageTitle };
 }).filter(Boolean);
 
 // 4) Generar api-docs-routing.module.ts
@@ -95,7 +140,7 @@ console.log(`✅  Rutas generadas en ${ROUTES_OUT}`);
    return Object.entries(node).flatMap(([key, val]) => {
      if (val.__entry) {
        // enlace hoja
-       var label = humanLabel(key);
+       var label = val.__entry.pageTitle;
        // → NUEVO: link usando la ruta completa
        var link  = '/' + (parentPath ? parentPath + '/' : '') + key;
        return `    <a mat-list-item routerLink="${link}" routerLinkActive="active">${label}</a>`;
@@ -223,8 +268,6 @@ moduleSrc = moduleSrc.replace(
 fs.writeFileSync(MODULE_FILE, moduleSrc, 'utf8');
 console.log(`✅ api-docs.module.ts actualizado con ${entries.length} componentes de página.`);
 
-// 1) Ajusta aquí la carpeta que quieres recorrer
-const ROOT_DIR = path.resolve(__dirname, '../src/app/features/api-docs/api-doc-page');
 // 2) Nombre del fichero de salida
 const OUT_ROOT = path.resolve(__dirname, '../src/assets/api-doc-page');
 const OUT_FILE = path.join(OUT_ROOT, 'index.json');
@@ -259,47 +302,6 @@ function buildUrl(filePath) {
     .replace(/\.component$/, '');
   // Usar siempre '/' como separador
   return '/' + noExt.split(path.sep).join('/');
-}
-
-/**
- * Extrae la información deseada de un contenido .ts
- */
-function extractInfo(content, filePath) {
-  const getMatch = (re, def = '') => {
-    const m = content.match(re);
-    return m ? m[1].trim() : def;
-  };
-
-  const pageTitle        = getMatch(/pageTitle\s*=\s*['"`]([^'"`]+)['"`]/);
-  const description      = getMatch(/description\s*=\s*`([\s\S]*?)`/, '');
-  const pubName          = getMatch(/pubName\s*=\s*['"`]([^'"`]*)['"`]/, '');
-  const programa         = getMatch(/programa\s*=\s*['"`]([^'"`]*)['"`]/, '');
-  const scope            = getMatch(/scope\s*=\s*['"`]([^'"`]*)['"`]/, '');
-
-  const hasBackendConfig = (getMatch(/hasBackendConfig\s*=\s*(true|false)/, 'false') === 'true');
-  const backendText      = getMatch(/backendText\s*=\s*`([\s\S]*?)`/, '');
-
-  let backendConfig = [];
-  const bcMatch = content.match(/backendConfig\s*=\s*(\[[\s\S]*?\]);/);
-  if (bcMatch) {
-    try {
-      backendConfig = eval(`(${bcMatch[1]})`);
-    } catch (e) {
-      console.warn(`No se pudo parsear backendConfig en ${filePath}: ${e.message}`);
-    }
-  }
-
-  return {
-    url: buildUrl(filePath),
-    pageTitle,
-    description,
-    pubName,
-    programa,
-    scope,
-    hasBackendConfig,
-    backendText,
-    backendConfig
-  };
 }
 
 /**
