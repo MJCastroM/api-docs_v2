@@ -33,6 +33,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
 
   readCode = false;
+  afterNl = ''
   showChat = false;
   inputMessage = '';
   messages: Message[] = [];
@@ -207,11 +208,32 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     this.chatService.streamMessages(userMsg, this.chatHistory)
       .subscribe({
         next: chunk => {
-          // Accumulate raw chunk
-          this.chatHistory[histIdx].content +=  this.chunkProcess(chunk);
-          // Format entire raw content each time
-          const formatted = this.formatMessage(this.chatHistory[histIdx].content);
-          this.messages[msgIdx].text = formatted;
+          // 1) procesa solo el chunk
+          var text_to_process = this.afterNl + chunk
+          this.afterNl = ''
+          const processed = this.chunkProcess(text_to_process);
+
+          // 2) acumula en el contenido
+          let fullMessage = this.messages[msgIdx].text + processed;
+
+          const prev = this.chatHistory[histIdx].content;
+          const tentative = prev + processed;
+          // 3) si el chunk trae al menos un salto, reaplicas el formateo completo
+          
+          if (/\n/.test(processed)) {
+            // índice del último salto en el acumulado
+            const idx = tentative.lastIndexOf('\n');
+            const upToNl    = tentative.slice(0, idx + 1);
+            this.afterNl   = tentative.slice(idx + 1);
+            // formateamos sólo la parte hasta el \n
+            const fmtUpToNl = this.formatMessage(upToNl);
+            fullMessage = fmtUpToNl;
+          } 
+          // actualizas tanto el array de mensajes como la historia
+          
+          this.messages[msgIdx].text         = fullMessage;
+          this.chatHistory[histIdx].content  = fullMessage;
+
           this.scrollToBottom();
         },
         error: err => {
