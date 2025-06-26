@@ -40,6 +40,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   loading = false;
   typingIndicator = false;
   chatHistory: ChatEntry[] = [];
+  public safeHtml!: SafeHtml;
 
   constructor(
     private chatService: ChatService,
@@ -309,12 +310,12 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       }
       
       // Procesar JSON
-      formattedMessage = formattedMessage.replace(/((```json)|(<div class="json-code"><code>))([\s\S]+?)/g, (match, p1, p2, p3, p4) => {
+      formattedMessage = formattedMessage.replace(/((```json)|(<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><code class="language-json">))([\s\S]+?)/g, (match, p1, p2, p3, p4) => {
         const escapedContent = p4
           .replace(/&/g, '&') // Escapar `&`
           .replace(/</g, '<') // Escapar `<`
           .replace(/>/g, '>'); // Escapar `<`
-        return `<div class="json-code"><code>${escapedContent}`;
+        return `<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><code class="language-json">${escapedContent}`;
       });
 
       var regex = /```xml/; 
@@ -324,18 +325,17 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       }
 
       // Procesar XML
-      formattedMessage = formattedMessage.replace(/```xml/g, `<div class="xml-code"><code>`);
+      const start_xml_code = [
+  `<div class="mat-mdc-tab-body-content" style="transform: none;">`,
+  `<pre class="language-xml"><code class="language-xml">`
+].join('');
+      formattedMessage = formattedMessage.replace(/```xml/g, start_xml_code);
       
       if (/```/.test(formattedMessage)) {
         //console.log('fin xml');
         //console.log('before replace:', formattedMessage);
 
-        const replacement = `</code><button
-          class="copy-button"
-          onclick="copyCode(this)"
-          style="background-image: var(--code-copy-icon);"
-          title="Copiar código">
-        </button></div>`;
+        const replacement = `</code></pre></div>`;
 
         // split/join para forzar el reemplazo literal
         formattedMessage = formattedMessage.split('```').join(replacement);
@@ -363,7 +363,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
         // `p1` es la clave JSON (sin comillas)
         return `<span class="token property">"${p1}":</span>`;
       });
-      formattedMessage = formattedMessage.replace(/(?<!title)(?<!style)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
+      formattedMessage = formattedMessage.replace(/(?<!div)(?<!pre)(?<!title)(?<!style)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
         return `<span class="token string">${p1}"${p2}"</span>`;
       });
       
