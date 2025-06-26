@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCapitalComponent1750713394110 {
+export class ObtenerCapitalComponent1750945333617 {
   pageTitle        = 'Obtener Capital';
   description      = `Método para obtener capital mínimo, máximo y promedio de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerCapital';

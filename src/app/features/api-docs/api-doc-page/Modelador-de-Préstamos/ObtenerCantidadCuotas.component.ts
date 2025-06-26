@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCantidadCuotasComponent1750713394107 {
+export class ObtenerCantidadCuotasComponent1750945333610 {
   pageTitle        = 'Obtener Cantidad Cuotas';
   description      = `Método para obtener la cantidad de cuotas parametrizadas de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerCantidadCuotas';
@@ -191,5 +191,5 @@ export class ObtenerCantidadCuotasComponent1750713394107 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValor', fields: [{ Nombre: 'valor', Tipo: 'Long', Comentarios: 'Valor de cantidad de cuotas.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTValor', fields: [{ Nombre: 'valor', Tipo: 'Long', Comentarios: 'Valor de cantidad de cuotas.' }] }];
 }

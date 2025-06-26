@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarRegladeNegocioComponent1750713394960 {
+export class EvaluarRegladeNegocioComponent1750945335452 {
   pageTitle        = 'Evaluar Regla de Negocio';
   description      = `Método para evaluar una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.EvaluarReglaNegocio';
@@ -119,5 +119,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTVariable', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de variable.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de variable.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTVariable', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de variable.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de variable.' }] }];
 }

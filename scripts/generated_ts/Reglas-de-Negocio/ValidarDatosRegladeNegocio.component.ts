@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarDatosRegladeNegocioComponent1750713394969 {
+export class ValidarDatosRegladeNegocioComponent1750945335469 {
   pageTitle        = 'Validar Datos Regla de Negocio';
   description      = `Método para validar los datos de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ValidarDatosReglaNegocio';
@@ -129,5 +129,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTVariable', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de variable.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de variable.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTRetorno', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTRetorno', fields: [{ Nombre: 'retorno', Tipo: 'String', Comentarios: 'Retorno de la evaluación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTVariable', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de variable.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor de variable.' }] }, { typeName: 'sBTRetorno', fields: [{ Nombre: 'retorno', Tipo: 'String', Comentarios: 'Retorno de la evaluación.' }] }];
 }

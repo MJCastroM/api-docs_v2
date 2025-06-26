@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTarjetaComponent1750713393542 {
+export class ObtenerTiposdeTarjetaComponent1750945332147 {
   pageTitle        = 'Obtener Tipos de Tarjeta';
   description      = `Método para obtener un listado de los tipos de tarjeta ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposTarjeta';
@@ -124,5 +124,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoTarjeta', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de tarjeta.' }, { Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de tipo de tarjeta.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoTarjeta', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de tipo de tarjeta.' }, { Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de tipo de tarjeta.' }] }];
 }

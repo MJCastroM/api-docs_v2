@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumendeProductosSaldosContablesComponent1750713393475 {
+export class ObtenerResumendeProductosSaldosContablesComponent1750945331994 {
   pageTitle        = 'Obtener Resumen de Productos (Saldos Contables)';
   description      = `Método para obtener un resumen de los productos de un cliente y su saldo contable correspondiente.`;
   pubName    = 'BTClientes.ObtenerResumenProductos';
@@ -198,5 +198,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sCTInfoProductos', fields: [{ Nombre: 'cajasAhorros', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Cajas de ahorro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'cofresSeguridad', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Cofres de seguridad.' }, { Nombre: 'cuentasCorrientes', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Cuentas corrientes.' }, { Nombre: 'plazosFijos', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Plazos fijos.' }, { Nombre: 'prestamos', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Préstamos.' }, { Nombre: 'tarjetasDebito', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Tarjetas de débito.' }] }, { typeName: 'sCTResumenProducto', fields: [{ Nombre: 'cantidad', Tipo: 'Int', Comentarios: 'Cantidad de operaciones.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'saldoMN', Tipo: 'Double', Comentarios: 'Saldo disponible en moneda nacional.' }, { Nombre: 'saldoUSD', Tipo: 'Double', Comentarios: 'Saldo disponible en dólares.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sCTInfoProductos', fields: [{ Nombre: 'cajasAhorros', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Cajas de ahorro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'cofresSeguridad', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Cofres de seguridad.' }, { Nombre: 'cuentasCorrientes', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Cuentas corrientes.' }, { Nombre: 'plazosFijos', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Plazos fijos.' }, { Nombre: 'prestamos', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Préstamos.' }, { Nombre: 'tarjetasDebito', Tipo: '[sCTResumenProducto](#sctresumenproducto)', Comentarios: 'Tarjetas de débito.' }] }, { typeName: 'sCTResumenProducto', fields: [{ Nombre: 'cantidad', Tipo: 'Int', Comentarios: 'Cantidad de operaciones.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'saldoMN', Tipo: 'Double', Comentarios: 'Saldo disponible en moneda nacional.' }, { Nombre: 'saldoUSD', Tipo: 'Double', Comentarios: 'Saldo disponible en dólares.' }] }];
 }

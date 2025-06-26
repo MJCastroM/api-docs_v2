@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AltaAutomaticaContratoComponent1750713393198 {
+export class AltaAutomaticaContratoComponent1750945331416 {
   pageTitle        = 'Alta Automática Contrato';
   description      = `Método para dar de alta un contrato para el cliente.`;
   pubName    = 'BTCASHManagement.AltaAutomaticaContrato';

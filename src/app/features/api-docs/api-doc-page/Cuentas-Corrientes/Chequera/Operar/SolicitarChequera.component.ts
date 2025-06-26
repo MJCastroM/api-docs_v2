@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarChequeraComponent1750713393742 {
+export class SolicitarChequeraComponent1750945332635 {
   pageTitle        = 'Solicitar Chequera';
   description      = `Método para solicitar una chequera para una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.SolicitarChequera';
@@ -129,5 +129,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSolicitudChequera', fields: [{ Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio a enviar la chequera.' }, { Nombre: 'persona1Texto1', Tipo: 'String', Comentarios: 'Información persona 1.' }, { Nombre: 'persona1Texto2', Tipo: 'String', Comentarios: 'Información complementaria persona 1.' }, { Nombre: 'persona2Texto1', Tipo: 'String', Comentarios: 'Información persona 2.' }, { Nombre: 'persona2Texto2', Tipo: 'String', Comentarios: 'Información complementaria persona 2.' }, { Nombre: 'persona3Texto1', Tipo: 'String', Comentarios: 'Información persona 3.' }, { Nombre: 'persona3Texto2', Tipo: 'String', Comentarios: 'Información complementaria persona 3.' }, { Nombre: 'sucuraslDeRetiroId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal de retiro.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTSolicitudChequera', fields: [{ Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio a enviar la chequera.' }, { Nombre: 'persona1Texto1', Tipo: 'String', Comentarios: 'Información persona 1.' }, { Nombre: 'persona1Texto2', Tipo: 'String', Comentarios: 'Información complementaria persona 1.' }, { Nombre: 'persona2Texto1', Tipo: 'String', Comentarios: 'Información persona 2.' }, { Nombre: 'persona2Texto2', Tipo: 'String', Comentarios: 'Información complementaria persona 2.' }, { Nombre: 'persona3Texto1', Tipo: 'String', Comentarios: 'Información persona 3.' }, { Nombre: 'persona3Texto2', Tipo: 'String', Comentarios: 'Información complementaria persona 3.' }, { Nombre: 'sucuraslDeRetiroId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal de retiro.' }] }];
 }

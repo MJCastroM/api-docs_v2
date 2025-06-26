@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarDeudaDesdeCuentaComponent1750713393248 {
+export class PagarDeudaDesdeCuentaComponent1750945331538 {
   pageTitle        = 'Pagar Deuda Desde Cuenta';
   description      = `Método para pagar una factura debitando desde una cuenta vista.`;
   pubName    = 'BTCASHManagement.PagarDeudaDesdeCuenta';

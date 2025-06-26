@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750713393954 {
+export class SimularComponent1750945333214 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Simular';

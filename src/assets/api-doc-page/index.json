@@ -1079,17 +1079,6 @@
       "backendConfig": []
     },
     {
-      "url": "/CHAT/CHAT",
-      "pageTitle": "CHAT",
-      "description": "",
-      "pubName": "",
-      "programa": "",
-      "scope": "",
-      "hasBackendConfig": false,
-      "backendText": "",
-      "backendConfig": []
-    },
-    {
       "url": "/Clientes/Actualizar/Actualizar",
       "pageTitle": "Actualizar",
       "description": "Método para actualizar los datos de un cliente.",

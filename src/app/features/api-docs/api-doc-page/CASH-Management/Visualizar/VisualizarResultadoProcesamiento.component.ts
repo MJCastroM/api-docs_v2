@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarResultadoProcesamientoComponent1750713393273 {
+export class VisualizarResultadoProcesamientoComponent1750945331581 {
   pageTitle        = 'Visualizar Resultado Procesamiento';
   description      = `Método para visualizar el resultado del procesamiento de un archivo.`;
   pubName    = 'BTCASHManagement.VisualizarResultadoProcesamiento';
@@ -150,5 +150,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSituacionLinea', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la línea.' }, { Nombre: 'linea', Tipo: 'String', Comentarios: 'Línea de texto.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la línea.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTSituacionLinea', fields: [{ Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado de la línea.' }, { Nombre: 'linea', Tipo: 'String', Comentarios: 'Línea de texto.' }, { Nombre: 'mensajesError', Tipo: 'String', Comentarios: 'Lista de mensajes de la línea.' }] }];
 }

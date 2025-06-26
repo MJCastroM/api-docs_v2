@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosComponent1750713394190 {
+export class ObtenerModelosComponent1750945333769 {
   pageTitle        = 'Obtener Modelos';
   description      = `Método para retornar los modelos de una marca.`;
   pubName    = 'BTPartners.ObtenerModelos';
@@ -136,5 +136,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTModelo', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTModelo', fields: [{ Nombre: 'carroceria', Tipo: 'String', Comentarios: 'Carrocería.' }, { Nombre: 'carroceriaId', Tipo: 'Short', Comentarios: 'Identificador de la carrocería.' }, { Nombre: 'gpsObligatorio', Tipo: 'String', Comentarios: '¿Es el GPS obligatorio? (S/N)' }, { Nombre: 'marcaUId', Tipo: 'Long', Comentarios: 'Identificador de la marca.' }, { Nombre: 'modeloUId', Tipo: 'Long', Comentarios: 'Identificador del modelo.' }, { Nombre: 'nombreModelo', Tipo: 'String', Comentarios: 'Nombre del modelo.' }, { Nombre: 'tipoVehiculo', Tipo: 'String', Comentarios: 'Tipo de vehículo.' }, { Nombre: 'tipoVehiculoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de vehículo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }, { typeName: 'sBTModelo', fields: [{ Nombre: 'carroceria', Tipo: 'String', Comentarios: 'Carrocería.' }, { Nombre: 'carroceriaId', Tipo: 'Short', Comentarios: 'Identificador de la carrocería.' }, { Nombre: 'gpsObligatorio', Tipo: 'String', Comentarios: '¿Es el GPS obligatorio? (S/N)' }, { Nombre: 'marcaUId', Tipo: 'Long', Comentarios: 'Identificador de la marca.' }, { Nombre: 'modeloUId', Tipo: 'Long', Comentarios: 'Identificador del modelo.' }, { Nombre: 'nombreModelo', Tipo: 'String', Comentarios: 'Nombre del modelo.' }, { Nombre: 'tipoVehiculo', Tipo: 'String', Comentarios: 'Tipo de vehículo.' }, { Nombre: 'tipoVehiculoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de vehículo.' }] }];
 }

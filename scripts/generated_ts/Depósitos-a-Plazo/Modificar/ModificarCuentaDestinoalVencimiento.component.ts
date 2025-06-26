@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaDestinoalVencimientoComponent1750713393910 {
+export class ModificarCuentaDestinoalVencimientoComponent1750945333099 {
   pageTitle        = 'Modificar Cuenta Destino al Vencimiento';
   description      = `Método para modificar la cuenta de destino de la instrucción al vencimiento de un depósito.`;
   pubName    = 'BTDepositosAPlazo.ModificarCuentaDestinoVencimiento';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerHobbyComponent1750713394522 {
+export class ObtenerHobbyComponent1750945334381 {
   pageTitle        = 'Obtener Hobby';
   description      = `Método para obtener el hobby de una persona.`;
   pubName    = 'BTPersonas.ObtenerHobby';
@@ -111,5 +111,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTHobby', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de hobby.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de hobby.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTHobby', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de hobby.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de hobby.' }] }];
 }

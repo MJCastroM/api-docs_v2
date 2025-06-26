@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPrecancelacionComponent1750713393924 {
+export class ObtenerDatosPrecancelacionComponent1750945333141 {
   pageTitle        = 'Obtener Datos de Precancelación';
   description      = `Método para obtener la simulación de la precancelación de un depósito a plazo para una fecha dada.`;
   pubName    = 'BTDepositosAPlazo.ObtenerDatosPrecancelacion';
@@ -128,5 +128,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatoPrecancelar', fields: [{ Nombre: 'tasaDescripcion', Tipo: 'String', Comentarios: 'Descripción de la tasa.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'datosAdicionales', Tipo: '[sBTDatoAdicional](#sbtdatoAdicional)', Comentarios: 'Listado de datos adicionales.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'valorInicial', Tipo: 'Double', Comentarios: 'Valor inicial.' }, { Nombre: 'tasaOriginal', Tipo: 'Double', Comentarios: 'Tasa original.' }, { Nombre: 'tasaPrecancelacion', Tipo: 'Double', Comentarios: 'Tasa de precancelación.' }] }, { typeName: 'sBTDatoAdicional', fields: [{ Nombre: 'detalle', Tipo: 'String', Comentarios: 'Detalle.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTDatoPrecancelar', fields: [{ Nombre: 'tasaDescripcion', Tipo: 'String', Comentarios: 'Descripción de la tasa.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'datosAdicionales', Tipo: '[sBTDatoAdicional](#sbtdatoAdicional)', Comentarios: 'Listado de datos adicionales.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'valorInicial', Tipo: 'Double', Comentarios: 'Valor inicial.' }, { Nombre: 'tasaOriginal', Tipo: 'Double', Comentarios: 'Tasa original.' }, { Nombre: 'tasaPrecancelacion', Tipo: 'Double', Comentarios: 'Tasa de precancelación.' }] }, { typeName: 'sBTDatoAdicional', fields: [{ Nombre: 'detalle', Tipo: 'String', Comentarios: 'Detalle.' }] }];
 }

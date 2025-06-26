@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosdeAcreditacionComponent1750713393821 {
+export class ObtenerPeriodosdeAcreditacionComponent1750945332849 {
   pageTitle        = 'Obtener Períodos de Acreditación';
   description      = `Método para obtener los períodos de acreditación cargados en el sistema.`;
   pubName    = 'BTCuentasVista.ObtenerPeriodosDeAcreditacion';
@@ -159,5 +159,5 @@ export class ObtenerPeriodosdeAcreditacionComponent1750713393821 {
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPeriodoDeAcreditacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del período.' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Valor del período.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPeriodoDeAcreditacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del período.' }, { Nombre: 'valor', Tipo: 'Int', Comentarios: 'Valor del período.' }] }];
 }

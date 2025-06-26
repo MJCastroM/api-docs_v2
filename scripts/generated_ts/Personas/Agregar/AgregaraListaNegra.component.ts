@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregaraListaNegraComponent1750713394303 {
+export class AgregaraListaNegraComponent1750945334036 {
   pageTitle        = 'Agregar a Lista Negra';
   description      = `Método para agregar una persona a una lista negra.`;
   pubName    = 'BTPersonas.AgregarAListaNegra';

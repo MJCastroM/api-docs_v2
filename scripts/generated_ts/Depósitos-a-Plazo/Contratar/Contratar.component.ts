@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750713393888 {
+export class ContratarComponent1750945333048 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Contratar';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresOrdenSegunCampoComponent1750713393228 {
+export class ObtenerValoresOrdenSegunCampoComponent1750945331493 {
   pageTitle        = 'Obtener Valores de Orden Según Campo';
   description      = `Método para obtener los valores de los campos CASH recibidos para la orden que pertenezca al campo/valor recibido.`;
   pubName    = 'BTCASHManagement.ObtenerValoresOrdenSegunCampo';
@@ -142,5 +142,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedaNacionalComponent1750713393584 {
+export class ObtenerMonedaNacionalComponent1750945332232 {
   pageTitle        = 'Obtener Moneda Nacional';
   description      = `Método para obtener los datos de la moneda nacional.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerMonedaNacional';

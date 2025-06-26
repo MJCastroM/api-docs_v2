@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCampanasComponent1750713394068 {
+export class ObtenerCampanasComponent1750945333491 {
   pageTitle        = 'Obtener Campañas';
   description      = `Método para obtener las campañas de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerCampanias';
@@ -115,5 +115,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCampania', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de campaña.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de campaña.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTCampania', fields: [{ Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Identificador de campaña.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de campaña.' }] }];
 }

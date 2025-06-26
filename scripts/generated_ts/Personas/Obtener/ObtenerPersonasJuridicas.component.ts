@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasJuridicasComponent1750713394559 {
+export class ObtenerPersonasJuridicasComponent1750945334465 {
   pageTitle        = 'Obtener Personas Jurídicas';
   description      = `Método para obtener un listado de personas jurídicas (10 máximo), dada una razón social.`;
   pubName    = 'BTPersonas.ObtenerPersonasJuridicas';
@@ -150,5 +150,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPersonaJuridica', fields: [{ Nombre: 'fechaConstitucion', Tipo: 'Date', Comentarios: 'Fecha de constitución.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre de país.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador de país.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razón social.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre de tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPersonaJuridica', fields: [{ Nombre: 'fechaConstitucion', Tipo: 'Date', Comentarios: 'Fecha de constitución.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'pais', Tipo: 'String', Comentarios: 'Nombre de país.' }, { Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador de país.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razón social.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Nombre de tipo de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }] }];
 }

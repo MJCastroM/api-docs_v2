@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class QuitarOperacionesaCancelarComponent1750713394092 {
+export class QuitarOperacionesaCancelarComponent1750945333564 {
   pageTitle        = 'Quitar Operaciones a Cancelar';
   description      = `Método para quitar operaciones a cancelar para una solicitud de créditos.`;
   pubName    = 'BTMicrofinanzas.QuitarOperacionesACancelar';
@@ -117,5 +117,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOperacionId', fields: [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'identificador único de operación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTOperacionId', fields: [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'identificador único de operación.' }] }];
 }

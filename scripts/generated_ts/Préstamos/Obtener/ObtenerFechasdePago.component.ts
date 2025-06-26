@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechasdePagoComponent1750713394779 {
+export class ObtenerFechasdePagoComponent1750945335037 {
   pageTitle        = 'Obtener Fechas de Pago';
   description      = `Método para obtener fechas de pago de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerFechasPago';

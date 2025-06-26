@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearListaChequesComponent1750713393965 {
+export class CrearListaChequesComponent1750945333244 {
   pageTitle        = 'Crear Lista Cheques';
   description      = `Método para crear una lista de cheques a descontar.`;
   pubName    = 'BTDescuentoDocumentos.CrearListaCheques';
@@ -147,5 +147,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDescuentoCheque', fields: [{ Nombre: 'agencia', Tipo: 'Int', Comentarios: 'Agencia.' }, { Nombre: 'banco', Tipo: 'Int', Comentarios: 'Banco.' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento.' }, { Nombre: 'fechaVto', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'identificacion', Tipo: 'String', Comentarios: 'Identificador del documento.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona titular del documento.' }, { Nombre: 'plaza', Tipo: 'Short', Comentarios: 'Plaza.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa a aplicar al documento.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTDescuentoCheque', fields: [{ Nombre: 'agencia', Tipo: 'Int', Comentarios: 'Agencia.' }, { Nombre: 'banco', Tipo: 'Int', Comentarios: 'Banco.' }, { Nombre: 'ciudad', Tipo: 'String', Comentarios: 'Ciudad.' }, { Nombre: 'domicilio', Tipo: 'String', Comentarios: 'Domicilio.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento.' }, { Nombre: 'fechaVto', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento.' }, { Nombre: 'identificacion', Tipo: 'String', Comentarios: 'Identificador del documento.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona titular del documento.' }, { Nombre: 'plaza', Tipo: 'Short', Comentarios: 'Plaza.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa a aplicar al documento.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Teléfono.' }] }];
 }

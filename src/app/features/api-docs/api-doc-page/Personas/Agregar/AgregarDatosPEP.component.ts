@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDatosPEPComponent1750713394332 {
+export class AgregarDatosPEPComponent1750945334055 {
   pageTitle        = 'Agregar Datos PEP';
   description      = `Método para agregar los datos de una persona expuesta políticamente.`;
   pubName    = 'BTPersonas.AgregarDatosPEP';
@@ -130,5 +130,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosPEP', fields: [{ Nombre: 'cargoRelacion', Tipo: 'String', Comentarios: 'Cargo que ocupa.' }, { Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo.' }, { Nombre: 'entidad', Tipo: 'String', Comentarios: 'Entidad.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio.' }, { Nombre: 'fechaSalida', Tipo: 'Date', Comentarios: 'Fecha de salida.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación.' }, { Nombre: 'tipoFuncionarioPublico', Tipo: 'String', Comentarios: 'Tipo de funcionario publico.' }, { Nombre: 'tipoFuncionarioPublicoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de funcionario publico.' }, { Nombre: 'tipoPEP', Tipo: 'String', Comentarios: 'Tipo de PEP.' }, { Nombre: 'tipoPEPId', Tipo: 'Short', Comentarios: 'Identificador de tipo de PEP.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosPEP', fields: [{ Nombre: 'cargoRelacion', Tipo: 'String', Comentarios: 'Cargo que ocupa.' }, { Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo.' }, { Nombre: 'entidad', Tipo: 'String', Comentarios: 'Entidad.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio.' }, { Nombre: 'fechaSalida', Tipo: 'Date', Comentarios: 'Fecha de salida.' }, { Nombre: 'observacion', Tipo: 'String', Comentarios: 'Observación.' }, { Nombre: 'tipoFuncionarioPublico', Tipo: 'String', Comentarios: 'Tipo de funcionario publico.' }, { Nombre: 'tipoFuncionarioPublicoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de funcionario publico.' }, { Nombre: 'tipoPEP', Tipo: 'String', Comentarios: 'Tipo de PEP.' }, { Nombre: 'tipoPEPId', Tipo: 'Short', Comentarios: 'Identificador de tipo de PEP.' }] }];
 }

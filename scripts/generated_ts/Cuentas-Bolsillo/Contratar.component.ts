@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750713393701 {
+export class ContratarComponent1750945332484 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar una nueva cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.Contratar';

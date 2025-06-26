@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTelefonosComponent1750713393500 {
+export class ObtenerTelefonosComponent1750945332049 {
   pageTitle        = 'Obtener Telefonos';
   description      = `Método para obtener los teléfonos de un cliente.`;
   pubName    = 'BTClientes.ObtenerTelefonos';
@@ -158,5 +158,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTelefono', fields: [{ Nombre: 'identificador', Tipo: 'Byte', Comentarios: 'Identificador correlativo de teléfono.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Número de teléfono' }, { Nombre: 'tipoDeDomicilio', Tipo: 'String', Comentarios: 'Descripción de tipo de domicilio del teléfono.' }, { Nombre: 'tipoDeDomicilioId', Tipo: 'Byte', Comentarios: 'Identificador de tipo de domicilio del teléfono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTelefono', fields: [{ Nombre: 'identificador', Tipo: 'Byte', Comentarios: 'Identificador correlativo de teléfono.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Número de teléfono' }, { Nombre: 'tipoDeDomicilio', Tipo: 'String', Comentarios: 'Descripción de tipo de domicilio del teléfono.' }, { Nombre: 'tipoDeDomicilioId', Tipo: 'Byte', Comentarios: 'Identificador de tipo de domicilio del teléfono.' }] }];
 }

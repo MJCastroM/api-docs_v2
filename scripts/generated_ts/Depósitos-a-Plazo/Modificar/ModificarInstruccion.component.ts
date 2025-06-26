@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarInstruccionComponent1750713393916 {
+export class ModificarInstruccionComponent1750945333114 {
   pageTitle        = 'Modificar Instrucción';
   description      = `Método para modificar la instrucción al vencimiento de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ModificarInstruccion';

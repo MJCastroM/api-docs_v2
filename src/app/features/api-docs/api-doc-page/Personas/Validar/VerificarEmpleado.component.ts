@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEmpleadoComponent1750713394625 {
+export class VerificarEmpleadoComponent1750945334641 {
   pageTitle        = 'Verificar Empleado';
   description      = `Método para verificar si una persona es empleada de la institución.`;
   pubName    = 'BTPersonas.VerificarEmpleado';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldoDisponibleComponent1750713393827 {
+export class ObtenerSaldoDisponibleComponent1750945332872 {
   pageTitle        = 'Obtener Saldo Disponible';
   description      = `Método para obtener el total de saldo disponible de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldoDisponible';

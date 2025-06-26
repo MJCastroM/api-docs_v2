@@ -121,7 +121,12 @@ function extractSdts(content) {
     if (tableStart < 0) continue;
 
     // extraigo desde allí hasta el final de la sección
-    const tableMd = section.slice(tableStart);
+    var tableMd = section.slice(tableStart);
+    // quito las líneas de marcador ':::'
+    tableMd = tableMd
+      .split('\n')
+      .filter(line => !line.trim().startsWith(':::'))
+      .join('\n');
     const fields = parseTable(tableMd);
     sdts.push({ typeName, fields });
   }

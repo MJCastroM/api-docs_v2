@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeDesembolsoComponent1750713393971 {
+export class ObtenerTiposDeDesembolsoComponent1750945333258 {
   pageTitle        = 'Obtener Tipos de Desembolso';
   description      = `Método para obtener los tipos de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.ObtenerTiposDeDesembolso';
@@ -234,5 +234,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoDesembolso', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de desembolso.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de desembolso.' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Modulo.' }, { Nombre: 'monedaDesembolso', Tipo: 'Short', Comentarios: 'Moneda del tipo de desembolso.' }, { Nombre: 'papelDesembolso', Tipo: 'Int', Comentarios: 'Papel del tipo de desembolso.' }, { Nombre: 'pideCheque', Tipo: 'String', Comentarios: '¿Pide cheque? (S = Si / N = No).' }, { Nombre: 'pideCuenta', Tipo: 'String', Comentarios: '¿Pide cuenta? (S = Si / N = No).' }, { Nombre: 'pideOperacion', Tipo: 'String', Comentarios: '¿Pide operación? (S = Si / N = No).' }, { Nombre: 'pideSucursal', Tipo: 'String', Comentarios: '¿Pide sucursal? (S = Si / N = No).' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'rubro', Tipo: 'Long', Comentarios: 'Rubro.' }, { Nombre: 'simboloMonedaDesembolso', Tipo: 'String', Comentarios: 'Símbolo de la moneda del tipo de desembolso.' }, { Nombre: 'simboloPapelDesembolso', Tipo: 'String', Comentarios: 'Símbolo del papel del tipo de desembolso.' }, { Nombre: 'tipo', Tipo: 'Byte', Comentarios: 'Tipo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoDesembolso', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de desembolso.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de desembolso.' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Modulo.' }, { Nombre: 'monedaDesembolso', Tipo: 'Short', Comentarios: 'Moneda del tipo de desembolso.' }, { Nombre: 'papelDesembolso', Tipo: 'Int', Comentarios: 'Papel del tipo de desembolso.' }, { Nombre: 'pideCheque', Tipo: 'String', Comentarios: '¿Pide cheque? (S = Si / N = No).' }, { Nombre: 'pideCuenta', Tipo: 'String', Comentarios: '¿Pide cuenta? (S = Si / N = No).' }, { Nombre: 'pideOperacion', Tipo: 'String', Comentarios: '¿Pide operación? (S = Si / N = No).' }, { Nombre: 'pideSucursal', Tipo: 'String', Comentarios: '¿Pide sucursal? (S = Si / N = No).' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'rubro', Tipo: 'Long', Comentarios: 'Rubro.' }, { Nombre: 'simboloMonedaDesembolso', Tipo: 'String', Comentarios: 'Símbolo de la moneda del tipo de desembolso.' }, { Nombre: 'simboloPapelDesembolso', Tipo: 'String', Comentarios: 'Símbolo del papel del tipo de desembolso.' }, { Nombre: 'tipo', Tipo: 'Byte', Comentarios: 'Tipo.' }] }];
 }

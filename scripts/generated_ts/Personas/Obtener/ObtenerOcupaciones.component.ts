@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOcupacionesComponent1750713394552 {
+export class ObtenerOcupacionesComponent1750945334445 {
   pageTitle        = 'Obtener Ocupaciones';
   description      = `Método para obtener un listado de las ocupaciones registradas.`;
   pubName    = 'BTPersonas.ObtenerOcupaciones';
@@ -188,5 +188,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOcupacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de ocupación.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de ocupación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTOcupacion', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de ocupación.' }, { Nombre: 'identificador', Tipo: 'Int', Comentarios: 'Identificador de ocupación.' }] }];
 }

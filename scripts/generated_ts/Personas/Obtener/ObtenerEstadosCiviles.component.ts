@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosCivilesComponent1750713394500 {
+export class ObtenerEstadosCivilesComponent1750945334347 {
   pageTitle        = 'Obtener Estados Civiles';
   description      = `Método para obtener un listado de los estados civiles registrados.`;
   pubName    = 'BTPersonas.ObtenerEstadoCiviles';
@@ -180,5 +180,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTEstadoCivil', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de estado civil.' }, { Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de estado civil.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTEstadoCivil', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de estado civil.' }, { Nombre: 'identificador', Tipo: 'String', Comentarios: 'Identificador de estado civil.' }] }];
 }

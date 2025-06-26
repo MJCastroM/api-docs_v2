@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEmpleadoComponent1750713393515 {
+export class VerificarEmpleadoComponent1750945332083 {
   pageTitle        = 'Verificar Empleado';
   description      = `Método para obtener si el cliente ingresado es o no empleado de la institución.`;
   pubName    = 'BTClientes.VerificarEmpleado';

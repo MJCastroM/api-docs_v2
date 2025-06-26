@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoEnLineaComponent1750713393255 {
+export class RegistrarPagoEnLineaComponent1750945331550 {
   pageTitle        = 'Registrar Pago en Linea';
   description      = `Método para registrar el pago de una deuda en línea, realizado mediante canal externo.`;
   pubName    = 'BTCASHManagement.RegistrarPagoEnLinea';

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTareasdeProcesoComponent1750713395141 {
+export class ObtenerTareasdeProcesoComponent1750945335876 {
   pageTitle        = 'Obtener Tareas de Proceso';
   description      = `Método para obtener las tareas de un determinado proceso de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerTareasDeProceso';
@@ -172,5 +172,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTareaWF', fields: [{ Nombre: 'deadline', Tipo: 'Double', Comentarios: 'Tiempo de deadline.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la tarea.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la tarea.' }, { Nombre: 'programaPostcondicional', Tipo: 'String', Comentarios: 'Programa postcondicional.' }, { Nombre: 'tareaId', Tipo: 'Int', Comentarios: 'Identificador de tarea Workflow.' }, { Nombre: 'warning', Tipo: 'Double', Comentarios: 'Tiempo de warning.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTareaWF', fields: [{ Nombre: 'deadline', Tipo: 'Double', Comentarios: 'Tiempo de deadline.' }, { Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la tarea.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la tarea.' }, { Nombre: 'programaPostcondicional', Tipo: 'String', Comentarios: 'Programa postcondicional.' }, { Nombre: 'tareaId', Tipo: 'Int', Comentarios: 'Identificador de tarea Workflow.' }, { Nombre: 'warning', Tipo: 'Double', Comentarios: 'Tiempo de warning.' }] }];
 }

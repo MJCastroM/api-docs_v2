@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeFuncionarioPublicoComponent1750713394586 {
+export class ObtenerTiposDeFuncionarioPublicoComponent1750945334530 {
   pageTitle        = 'Obtener Tipos de Funcionario Público';
   description      = `Método para obtener los tipos de funcionario público.`;
   pubName    = 'BTPersonas.ObtenerTiposDeFuncionarioPublico';
@@ -124,5 +124,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTTipoFuncionario', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de funcionario público.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de funcionario público.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTTipoFuncionario', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción del tipo de funcionario público.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador del tipo de funcionario público.' }] }];
 }

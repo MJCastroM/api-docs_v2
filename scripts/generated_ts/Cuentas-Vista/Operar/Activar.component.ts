@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActivarComponent1750713393837 {
+export class ActivarComponent1750945332896 {
   pageTitle        = 'Activar';
   description      = `Método para activar una cuenta vista.`;
   pubName    = 'BTCuentasVista.Activar';

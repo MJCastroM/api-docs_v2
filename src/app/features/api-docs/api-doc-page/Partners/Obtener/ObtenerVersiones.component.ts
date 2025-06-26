@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVersionesComponent1750713394213 {
+export class ObtenerVersionesComponent1750945333822 {
   pageTitle        = 'Obtener Versiones';
   description      = `Método para retornar las versiones del modelo.`;
   pubName    = 'BTPartners.ObtenerVersiones';
@@ -150,5 +150,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTVersion', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTVersion', fields: [{ Nombre: 'anio', Tipo: 'Short', Comentarios: 'Año.' }, { Nombre: 'combustibleId', Tipo: 'Short', Comentarios: 'Identificador del combustible.' }, { Nombre: 'condicion', Tipo: 'String', Comentarios: 'Condición.' }, { Nombre: 'condicionId', Tipo: 'Short', Comentarios: 'Identificador de la condición.' }, { Nombre: 'nombreVersion', Tipo: 'String', Comentarios: 'Nombre de versión.' }, { Nombre: 'precioMN', Tipo: 'Duble', Comentarios: 'Precio moneda nacional.' }, { Nombre: 'precioUS', Tipo: 'Double', Comentarios: 'Precio moneda USA.' }, { Nombre: 'puertas', Tipo: 'String', Comentarios: 'Puertas.' }, { Nombre: 'transmisionId', Tipo: 'Short', Comentarios: 'Identificador de la trasmisión.' }, { Nombre: 'versionUId', Tipo: 'Long', Comentarios: 'Identificador de la versión.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }, { typeName: 'sBTVersion', fields: [{ Nombre: 'anio', Tipo: 'Short', Comentarios: 'Año.' }, { Nombre: 'combustibleId', Tipo: 'Short', Comentarios: 'Identificador del combustible.' }, { Nombre: 'condicion', Tipo: 'String', Comentarios: 'Condición.' }, { Nombre: 'condicionId', Tipo: 'Short', Comentarios: 'Identificador de la condición.' }, { Nombre: 'nombreVersion', Tipo: 'String', Comentarios: 'Nombre de versión.' }, { Nombre: 'precioMN', Tipo: 'Duble', Comentarios: 'Precio moneda nacional.' }, { Nombre: 'precioUS', Tipo: 'Double', Comentarios: 'Precio moneda USA.' }, { Nombre: 'puertas', Tipo: 'String', Comentarios: 'Puertas.' }, { Nombre: 'transmisionId', Tipo: 'Short', Comentarios: 'Identificador de la trasmisión.' }, { Nombre: 'versionUId', Tipo: 'Long', Comentarios: 'Identificador de la versión.' }] }];
 }

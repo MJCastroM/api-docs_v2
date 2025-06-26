@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSectoresComponent1750713393491 {
+export class ObtenerSectoresComponent1750945332029 {
   pageTitle        = 'Obtener Sectores';
   description      = `Método para obtener un listado de los sectores ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerSectores';
@@ -148,5 +148,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSector', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de sector.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de sector.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTSector', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de sector.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de sector.' }] }];
 }

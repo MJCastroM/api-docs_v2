@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudGrupalComponent1750713394038 {
+export class CrearSolicitudGrupalComponent1750945333419 {
   pageTitle        = 'Crear Solicitud Grupal';
   description      = `Método para crear una solicitud de crédito grupal.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudGrupal';
@@ -118,5 +118,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTSolicitudGrupal', fields: [{ Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.' }, { Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo que solicita el préstamo.' }, { Nombre: 'origenCaptacion', Tipo: 'Int', Comentarios: 'Identificador de origen captación.' }, { Nombre: 'sucursalId', Tipo: 'Short', Comentarios: 'Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTSolicitudGrupal', fields: [{ Nombre: 'asesorId', Tipo: 'Int', Comentarios: 'Identificador del Asesor de la solicitud. En caso de no especificarse, se asigna el Asesor del cliente.' }, { Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo que solicita el préstamo.' }, { Nombre: 'origenCaptacion', Tipo: 'Int', Comentarios: 'Identificador de origen captación.' }, { Nombre: 'sucursalId', Tipo: 'Short', Comentarios: 'Sucursal de la solicitud. En caso de no especificarse, se asigna la sucursal del cliente.' }] }];
 }

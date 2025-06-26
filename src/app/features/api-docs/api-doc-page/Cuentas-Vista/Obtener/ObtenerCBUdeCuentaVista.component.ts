@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCBUdeCuentaVistaComponent1750713393806 {
+export class ObtenerCBUdeCuentaVistaComponent1750945332802 {
   pageTitle        = 'Obtener CBU de Cuenta Vista';
   description      = `Método para obtener el CBU de una vista.`;
   pubName    = 'BTCuentasVista.ObtenerCBUdeCuentaVista';

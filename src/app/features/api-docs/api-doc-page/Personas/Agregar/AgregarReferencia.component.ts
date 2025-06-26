@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarReferenciaComponent1750713394360 {
+export class AgregarReferenciaComponent1750945334125 {
   pageTitle        = 'Agregar Referencia';
   description      = `Método para agregar una referencia a una persona.`;
   pubName    = 'BTPersonas.AgregarReferencia';
@@ -128,5 +128,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTReferencia', fields: [{ Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo.' }, { Nombre: 'domicilio1', Tipo: 'String', Comentarios: 'Domicilio 1.' }, { Nombre: 'domicilio2', Tipo: 'String', Comentarios: 'Domicilio 2.' }, { Nombre: 'domicilio3', Tipo: 'String', Comentarios: 'Domicilio 3.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre completo de la referencia.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Número de teléfono.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Descripción del tipo de referencia' }, { Nombre: 'tipoId', Tipo: 'String', Comentarios: 'Identificador de tipo de referencia.' }, { Nombre: 'vinculo', Tipo: 'String', Comentarios: 'Vínculo.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador de vínculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTReferencia', fields: [{ Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo.' }, { Nombre: 'domicilio1', Tipo: 'String', Comentarios: 'Domicilio 1.' }, { Nombre: 'domicilio2', Tipo: 'String', Comentarios: 'Domicilio 2.' }, { Nombre: 'domicilio3', Tipo: 'String', Comentarios: 'Domicilio 3.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre completo de la referencia.' }, { Nombre: 'telefono', Tipo: 'String', Comentarios: 'Número de teléfono.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Descripción del tipo de referencia' }, { Nombre: 'tipoId', Tipo: 'String', Comentarios: 'Identificador de tipo de referencia.' }, { Nombre: 'vinculo', Tipo: 'String', Comentarios: 'Vínculo.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador de vínculo.' }] }];
 }

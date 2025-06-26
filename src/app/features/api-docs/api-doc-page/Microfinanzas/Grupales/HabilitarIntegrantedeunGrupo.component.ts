@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarIntegrantedeunGrupoComponent1750713394041 {
+export class HabilitarIntegrantedeunGrupoComponent1750945333427 {
   pageTitle        = 'Habilitar Integrante de Grupo';
   description      = `Método para habilitar un integrante de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.HabilitarIntegranteGrupo';

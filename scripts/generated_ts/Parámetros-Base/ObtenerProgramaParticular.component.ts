@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProgramaParticularComponent1750713394252 {
+export class ObtenerProgramaParticularComponent1750945333911 {
   pageTitle        = 'Obtener Programa Particular';
   description      = `Método para obtener el programa particular a ejecutar según el programa estándar ingresado.`;
   pubName    = 'BTParametrosBase.ObtenerProgramaParticular';
@@ -114,5 +114,5 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTProgramaParticular', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la opción general de procesos.' }, { Nombre: 'programaParticular', Tipo: 'String', Comentarios: 'Nombre de programa particular.' }, { Nombre: 'programaStandard', Tipo: 'String', Comentarios: 'Nombre de programa standard.' }, { Nombre: 'valorCaracteres', Tipo: 'String', Comentarios: 'Valor caracteres.' }, { Nombre: 'valorNumerico', Tipo: 'Int', Comentarios: 'Valor numérico.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTProgramaParticular', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de la opción general de procesos.' }, { Nombre: 'programaParticular', Tipo: 'String', Comentarios: 'Nombre de programa particular.' }, { Nombre: 'programaStandard', Tipo: 'String', Comentarios: 'Nombre de programa standard.' }, { Nombre: 'valorCaracteres', Tipo: 'String', Comentarios: 'Valor caracteres.' }, { Nombre: 'valorNumerico', Tipo: 'Int', Comentarios: 'Valor numérico.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGruposComponent1750713394051 {
+export class ObtenerGruposComponent1750945333444 {
   pageTitle        = 'Obtener Grupos';
   description      = `Método para obtener los grupos de crédito existentes.`;
   pubName    = 'BTMicrofinanzas.ObtenerGrupos';
@@ -134,5 +134,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTGrupo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del grupo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción del grupo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTGrupo', fields: [{ Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código del grupo.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Descripción del grupo.' }] }];
 }

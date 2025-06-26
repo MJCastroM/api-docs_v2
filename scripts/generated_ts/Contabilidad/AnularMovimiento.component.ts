@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularMovimientoComponent1750713393642 {
+export class AnularMovimientoComponent1750945332352 {
   pageTitle        = 'Anular Movimiento';
   description      = `Método para anular un movimiento.`;
   pubName    = 'BTContabilidad.AnularMovimiento';

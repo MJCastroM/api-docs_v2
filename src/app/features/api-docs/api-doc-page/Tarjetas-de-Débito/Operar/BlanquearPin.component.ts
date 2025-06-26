@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BlanquearPinComponent1750713395053 {
+export class BlanquearPinComponent1750945335663 {
   pageTitle        = 'Blanquear PIN';
   description      = `Método para realizar el blanqueo de PIN de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.BlanquearPIN';

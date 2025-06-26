@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750713394290 {
+export class ActualizarRegistroEmpleadoComponent1750945334010 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si una persona es empleado de la institución, así como la fecha de ingreso si corresponde.`;
   pubName    = 'BTPersonas.ActualizarRegistroEmpleado';

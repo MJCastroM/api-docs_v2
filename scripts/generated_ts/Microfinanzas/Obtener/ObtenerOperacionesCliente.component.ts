@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOperacionesClienteComponent1750713394074 {
+export class ObtenerOperacionesClienteComponent1750945333510 {
   pageTitle        = 'Obtener Operaciones Cliente';
   description      = `Método para obtener las operaciones elegibles a cancelar para una solicitud de créditos.`;
   pubName    = 'BTMicrofinanzas.ObtenerOperacionesCliente';
@@ -145,5 +145,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTOperacionWF', fields: [{ Nombre: 'diasMora', Tipo: 'Int', Comentarios: 'Días de mora de la operación.' }, { Nombre: 'fechaUltimoPago', Tipo: 'Date', Comentarios: 'Fecha de último pago de la operación.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor de la operación.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento de la operación.' }, { Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelación de la operación.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo de la operación.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTOperacionWF', fields: [{ Nombre: 'diasMora', Tipo: 'Int', Comentarios: 'Días de mora de la operación.' }, { Nombre: 'fechaUltimoPago', Tipo: 'Date', Comentarios: 'Fecha de último pago de la operación.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor de la operación.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento de la operación.' }, { Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelación de la operación.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo de la operación.' }] }];
 }

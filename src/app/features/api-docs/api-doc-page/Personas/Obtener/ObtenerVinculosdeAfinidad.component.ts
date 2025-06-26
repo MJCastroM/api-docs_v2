@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeAfinidadComponent1750713394599 {
+export class ObtenerVinculosdeAfinidadComponent1750945334563 {
   pageTitle        = 'Obtener Vínculos de Afinidad';
   description      = `Método para obtener un listado de los vínculos de afinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosAfinidad';
@@ -115,5 +115,5 @@ export class ObtenerVinculosdeAfinidadComponent1750713394599 {
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTVinculo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de vínculo.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de vínculo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vínculo.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTVinculo', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción de vínculo.' }, { Nombre: 'identificador', Tipo: 'Short', Comentarios: 'Identificador de vínculo.' }, { Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vínculo.' }] }];
 }

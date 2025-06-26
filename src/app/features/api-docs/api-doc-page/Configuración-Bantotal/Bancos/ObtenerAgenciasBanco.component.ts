@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgenciasBancoComponent1750713393519 {
+export class ObtenerAgenciasBancoComponent1750945332091 {
   pageTitle        = 'Obtener Agencias Banco';
   description      = `Método para obtener un listado de las agencias de un banco.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerAgenciasBanco';
@@ -121,5 +121,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTAgenciaBanco', fields: [{ Nombre: 'banco', Tipo: 'Int', Comentarios: 'Identificador de banco.' }, { Nombre: 'codPostal', Tipo: 'String', Comentarios: 'Código postal.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursal', Tipo: 'Long', Comentarios: 'Identificador de sucursal.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTAgenciaBanco', fields: [{ Nombre: 'banco', Tipo: 'Int', Comentarios: 'Identificador de banco.' }, { Nombre: 'codPostal', Tipo: 'String', Comentarios: 'Código postal.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de la sucursal.' }, { Nombre: 'sucursal', Tipo: 'Long', Comentarios: 'Identificador de sucursal.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerItemsModeloComponent1750713394142 {
+export class ObtenerItemsModeloComponent1750945333689 {
   pageTitle        = 'Obtener Items Modelo';
   description      = `Método para obtener los items de un determinado modelo PAE.`;
   pubName    = 'BTPAE.ObtenerItemsModelo';
@@ -130,5 +130,5 @@ curl -X POST \
 }` }
   };
 
-  structuredTypes = [{ typeName: 'sBTItemPAE', fields: [{ Nombre: 'itemId', Tipo: 'Short', Comentarios: 'Código de item.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de item.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Descripción de tipo de dato.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTItemPAE', fields: [{ Nombre: 'itemId', Tipo: 'Short', Comentarios: 'Código de item.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre de item.' }, { Nombre: 'tipoDato', Tipo: 'String', Comentarios: 'Descripción de tipo de dato.' }] }];
 }

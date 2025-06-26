@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVendedoresComponent1750713394210 {
+export class ObtenerVendedoresComponent1750945333815 {
   pageTitle        = 'Obtener Vendedores';
   description      = `Método para retornar los vendedores de un Partner/Punto de venta.`;
   pubName    = 'BTPartners.ObtenerVendedores';
@@ -126,5 +126,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }, { Nombre: '::: details sBTVendedor', Tipo: '', Comentarios: '' }] }, { typeName: 'sBTVendedor', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre.' }, { Nombre: 'nombrePuntoVenta', Tipo: 'String', Comentarios: 'Nombre del punto de venta.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPartnerInReq', fields: [{ Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }, { typeName: 'sBTVendedor', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre.' }, { Nombre: 'nombrePuntoVenta', Tipo: 'String', Comentarios: 'Nombre del punto de venta.' }, { Nombre: 'puntoVentaUId', Tipo: 'Int', Comentarios: 'Identificador del punto de venta.' }, { Nombre: 'vendedorUId', Tipo: 'Int', Comentarios: 'Identificador del vendedor.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPartnersComponent1750713394193 {
+export class ObtenerPartnersComponent1750945333777 {
   pageTitle        = 'Obtener Partners';
   description      = `Método para obtener los Partners.`;
   pubName    = 'BTPartner.ObtenerPartners';
@@ -146,5 +146,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPartner', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del Partner.' }, { Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPartner', fields: [{ Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del Partner.' }, { Nombre: 'partnerUId', Tipo: 'Int', Comentarios: 'Identificador del Partner.' }] }];
 }

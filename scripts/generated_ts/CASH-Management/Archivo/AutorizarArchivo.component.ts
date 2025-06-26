@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutorizarArchivoComponent1750713393178 {
+export class AutorizarArchivoComponent1750945331359 {
   pageTitle        = 'Autorizar Archivo';
   description      = `Método para autorizar órdenes del archivo indicado.`;
   pubName    = 'BTCASHManagement.AutorizarArchivo';

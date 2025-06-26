@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDatosContactoComponent1750713395048 {
+export class ActualizarDatosContactoComponent1750945335649 {
   pageTitle        = 'Actualizar Datos de Contacto';
   description      = `Método para actualizar los datos de contacto de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarDatosContacto';
@@ -124,5 +124,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTDatosContacto', fields: [{ Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Teléfono.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTDatosContacto', fields: [{ Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Identificador del tipo de domicilio.' }, { Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Teléfono.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeunPrestamoComponent1750713394792 {
+export class ObtenerPagosdeunPrestamoComponent1750945335078 {
   pageTitle        = 'Obtener Pagos de un Préstamo';
   description      = `Método para obtener el detalle de pagos de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerPagos';
@@ -183,5 +183,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTPagoPrestamo', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe pagado.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }, { Nombre: 'operacionUIdCobro', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTPagoPrestamo', fields: [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe pagado.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }, { Nombre: 'operacionUIdCobro', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }] }];
 }

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequesdeChequeraComponent1750713393721 {
+export class ObtenerChequesdeChequeraComponent1750945332573 {
   pageTitle        = 'Obtener Cheques de Chequera';
   description      = `Método para obtener un listado de los cheques de una chequera.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequesDeChequera';
@@ -131,5 +131,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTCheque', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'estado', Tipo: 'Short', Comentarios: 'Estado del cheque.' }, { Nombre: 'numero', Tipo: 'Int', Comentarios: 'Número de cheque.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTCheque', fields: [{ Nombre: 'descripcion', Tipo: 'String', Comentarios: 'Descripción.' }, { Nombre: 'estado', Tipo: 'Short', Comentarios: 'Estado del cheque.' }, { Nombre: 'numero', Tipo: 'Int', Comentarios: 'Número de cheque.' }] }];
 }

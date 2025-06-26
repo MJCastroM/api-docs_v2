@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoEnLineaDesdeCuentaComponent1750713393258 {
+export class RegistrarPagoEnLineaDesdeCuentaComponent1750945331557 {
   pageTitle        = 'Registrar Pago En Linea Desde Cuenta';
   description      = `Método para registrar el pago en linea de una factura, debitando desde la cuenta.`;
   pubName    = 'BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta';
@@ -132,5 +132,5 @@ curl -X POST \
 }\'` }
   };
 
-  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }, { Nombre: ':::', Tipo: '', Comentarios: '' }] }];
+  structuredTypes = [{ typeName: 'sBTValorCampoCASH', fields: [{ Nombre: 'tag', Tipo: 'String', Comentarios: 'Tag del campo CASH.' }, { Nombre: 'valor', Tipo: 'String', Comentarios: 'Valor del campo CASH.' }] }];
 }

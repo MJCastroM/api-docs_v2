@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldoBloqueadoComponent1750713393825 {
+export class ObtenerSaldoBloqueadoComponent1750945332865 {
   pageTitle        = 'Obtener Saldo Bloqueado';
   description      = `Método para obtener el total de saldo bloqueado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldoBloqueado';

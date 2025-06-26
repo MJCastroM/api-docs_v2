@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarExistenciaComponent1750713393510 {
+export class ValidarExistenciaComponent1750945332076 {
   pageTitle        = 'Validar Existencia';
   description      = `Método para validar la existencia de un número de cuenta en Bantotal.`;
   pubName    = 'BTClientes.ValidarExistencia';
