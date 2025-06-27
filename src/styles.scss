@@ -13,9 +13,13 @@ html {
 }
 
 html, body {
-  height: 100%;
-  overflow: hidden; // ✅ no queremos scroll global
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; // permite scroll
 }
+
 body {
   margin: 0;
   background-color: #f5f5f7 !important;
@@ -71,3 +75,4 @@ a {
     text-decoration: underline;
   }
 }
+
