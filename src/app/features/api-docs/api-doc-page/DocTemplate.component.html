@@ -1,36 +1,23 @@
-
 <app-page-header [title]="pageTitle"></app-page-header>
+<div class="content">
+  <div class="content-left">
+    <app-info-card [description]="description" [pubName]="pubName" [programa]="programa" [scope]="scope">
+    </app-info-card>
 
-<app-info-card
-  [description]="description"
-  [pubName]="pubName"
-  [programa]="programa"
-  [scope]="scope">
-</app-info-card>
+    <app-backend-config *ngIf="hasBackendConfig" [text]="backendText" [backendData]="backendConfig">
+    </app-backend-config>
 
-<app-backend-config
-  *ngIf="hasBackendConfig"
-  [text]="backendText"
-  [backendData]="backendConfig">
-</app-backend-config>
+    <app-api-tabs [inputCols]="['Nombre','Tipo','Comentarios']" [inputData]="inputData"
+      [outputCols]="['Nombre','Tipo','Comentarios']" [outputData]="outputData" [errorCols]="['Código', 'Descripción']"
+      [errors]="errors">
+    </app-api-tabs>
 
-<div appAnchorScroll>
+    <app-structured-data [types]="structuredTypes"></app-structured-data>
+  </div>
 
-  <app-api-tabs
-    [inputCols]="['Nombre','Tipo','Comentarios']"
-    [inputData]="inputData"
-    [outputCols]="['Nombre','Tipo','Comentarios']"
-    [outputData]="outputData"
-    [errorCols]="['Codigo', 'Descripcion']"
-    [errors]="errors">
-  </app-api-tabs>
-
-  <app-code-example [examples]="examples"></app-code-example>
-
-  <app-structured-data [types]="structuredTypes"></app-structured-data>
-
+  <div class="content-right" appAnchorScroll>
+    <app-code-example [examples]="examples"></app-code-example>
+  </div>
   <app-chat-popup></app-chat-popup>
-
+  <app-footer-space></app-footer-space>
 </div>
-
-<app-footer-space></app-footer-space>

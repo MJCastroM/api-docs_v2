@@ -1,13 +1,47 @@
 @import 'variables';
 
 // TÍTULO DE LA PÁGINA
-.page-title {
-  border-bottom: $title-underlined;
-  color: $text-color !important;
-  font-family: $font-family !important;
-  font-size: $title-size-1;
-  font-weight: 700;
-  letter-spacing: 0.01em !important;
-  line-height: 1.5 !important;
-  margin: $margin-title;
+.header-content {
+  position: fixed;
+  top: $navbar-height;
+  left: $sidebar-width;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  height: $title-height;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+
+  .page-title {
+    font-size: 2rem;
+    margin: 0;
+    color: $text-color;
+    font-family: $font-family;
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+    transform-origin: left center;
+    padding-left: 4rem;
+
+  }
+
+  &.scrolled {
+    height: 60px;
+    background-color: $background-color;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transition-delay: 0s; // sin delay al achicar
+
+    .page-title {
+      transform: scale(0.8); // achica sin tocar el layout
+      padding-left: 2.4rem;
+    }
+  }
+
+  // cuando vuelve al estado normal (se expande), le damos delay
+  &:not(.scrolled) {
+    transition-delay: 0.15s;
+    .page-title {
+      transition-delay: 0.15s;
+    }
+  }
 }
+

@@ -1,16 +1,44 @@
 @import 'variables';
 
+:host {
+  display: block;
+  height: 100%;
+}
+
 .main-container {
   display: flex;
-  height: 100vh;
+   height: auto; // ⬅ cambiamos 100vh por auto
+  background-color: $background-color; // si tenés uno
+}
+
+app-sidebar {
+  flex-shrink: 0;
+  width: $sidebar-width; // o el ancho que uses para tu sidebar
+  height: 100%;
+  border-right: 1px solid #eee;
+  background-color: #fff;
+  z-index: 100;
 }
 
 .content-area {
+  flex: 1;
+  position: relative;
+  background-color: $background-color;
+  padding-top: $title-height;
+  z-index: 1;
   margin-top: $navbar-height;
-  margin-left: $sidebar-width;
-  flex-grow: 1;
-  padding: 1rem;
-  overflow-y: auto;
-  scrollbar-color: $red-1 $grey-hover;
-  scrollbar-width: thin;
+}
+
+@media (max-width: 1024px) {
+  app-sidebar {
+    display: none;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content-area {
+    width: 100%;
+  }
 }

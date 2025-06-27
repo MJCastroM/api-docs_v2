@@ -8,7 +8,7 @@
   font-family: $font-family;
 
   .mat-expansion-panel {// ELEMENTO DESPLEGABLE DE EJEMPLOS DE EJECUCIÓN Y SDT
-    margin: $margin;
+    margin: $margin-info;
     background: $background-light;
     border-radius: $border-radius !important;
     box-shadow: $box-shadow !important;
@@ -51,7 +51,7 @@
   }
 }
 
-::ng-deep .sdt-title {
+.sdt-title {
   // TÍTULO DEL EJEMPLO
   margin: $margin-title-2;
   font-size: 1.8rem;
