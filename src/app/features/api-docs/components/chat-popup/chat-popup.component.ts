@@ -9,14 +9,15 @@ import {
 import { trigger, transition, style, animate } from '@angular/animations';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ChatService } from '../../../../core/services/chat.service';
-
+import DOMPurify from 'dompurify';
 interface Message { text: SafeHtml; isUser: boolean; }
 interface ChatEntry { role: string; content: string /* raw text */; }
+
 
 @Component({
   selector: 'app-chat-popup',
   templateUrl: './chat-popup.component.html',
-  styleUrls: ['./chat-popup.component.scss'],
+  styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
   animations: [
     trigger('fadeSlide', [
       transition(':enter', [
@@ -37,6 +38,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   showChat = false;
   inputMessage = '';
   messages: Message[] = [];
+  messagesHTML: Message[] = [];
   loading = false;
   typingIndicator = false;
   chatHistory: ChatEntry[] = [];
@@ -48,6 +50,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit() {
+    (window as any).copyCode = this.copyCode.bind(this);
     this.loadChatHistory();
     if (!this.messages.length) {
       this.clearChatHistory();
@@ -74,14 +77,14 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(textToCopy)
           .then(() => {
-            button.textContent = "Copiado";
-            button.style.color = "var(--text-color)"; 
-            button.style.backgroundImage = "none";
-            setTimeout(() => {
-              button.textContent = "";
-              button.style.color = ""; // Restaurá el color original
-              button.style.backgroundImage = "var(--code-copy-icon)";
-            }, 2000);
+            // button.textContent = "Copiado";
+            // button.style.color = "var(--text-color)"; 
+            // button.style.backgroundImage = "none";
+            // setTimeout(() => {
+            //   button.textContent = "";
+            //   button.style.color = ""; // Restaurá el color original
+            //   button.style.backgroundImage = "var(--code-copy-icon)";
+            // }, 2000);
           })
           .catch(err => {
             console.error("Failed to copy text: ", err);
@@ -94,14 +97,14 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
         textarea.select();
         try {
           document.execCommand("copy");
-          button.textContent = "Copiado";
-          button.style.color = "var(--text-color)";
-          button.style.backgroundImage = "none";
-          setTimeout(() => {
-            button.textContent = "";
-            button.style.color = "";
-            button.style.backgroundImage = "var(--code-copy-icon)";
-          }, 2000);
+          // button.textContent = "Copiado";
+          // button.style.color = "var(--text-color)";
+          // button.style.backgroundImage = "none";
+          // setTimeout(() => {
+          //   button.textContent = "";
+          //   button.style.color = "";
+          //   button.style.backgroundImage = "var(--code-copy-icon)";
+          // }, 2000);
         } catch (err) {
           console.error("Fallback: Failed to copy text: ", err);
           alert("Failed to copy text. Please try again.");
@@ -128,6 +131,9 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     this.messages = [
       { text: '¡Hola!, ¿En qué puedo ayudarte?', isUser: false }
     ];
+    this.messagesHTML = [
+      { text: '¡Hola!, ¿En qué puedo ayudarte?', isUser: false }
+    ];
     this.chatHistory = [];
     localStorage.clear();
     this.chatService.iniciarSesion().catch(console.error);
@@ -136,9 +142,15 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   loadChatHistory() {
     const savedMsgs = localStorage.getItem('messages');
     if (savedMsgs) {
-      JSON.parse(savedMsgs).forEach((m: any) =>
+      JSON.parse(savedMsgs).forEach((m: any) => {
         this.messages.push({ text: m.text, isUser: m.isUser })
-      );
+        
+        const clean = DOMPurify.sanitize(m.text, {
+          ALLOWED_TAGS: ['div', 'span', 'code', 'button', 'mat-icon', 'pre', 'a', 'strong', 'li', 'h1', 'h2', 'h3', 'br'],
+          ALLOWED_ATTR: ['class', 'onclick', 'style', 'href', 'target']
+        });
+        this.messagesHTML.push({ text: this.sanitizer.bypassSecurityTrustHtml(clean), isUser: m.isUser })
+      });
     }
     const savedHist = localStorage.getItem('chatHistory');
     if (savedHist) {
@@ -158,6 +170,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     if (!txt) return;
 
     this.messages.push({ text: txt, isUser: true });
+    this.messagesHTML.push({ text: txt, isUser: true });
     this.chatHistory.push({ role: 'user', content: txt });
     this.inputMessage = '';
     this.loading = true;
@@ -203,6 +216,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     this.chatHistory.push({ role: 'assistant', content: '' });
     // Also push an empty display message
     this.messages.push({ text: '', isUser: false });
+    this.messagesHTML.push({ text: '', isUser: false });
     const msgIdx = this.messages.length - 1;
     const histIdx = this.chatHistory.length - 1;
 
@@ -231,7 +245,11 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
             fullMessage = fmtUpToNl;
           } 
           // actualizas tanto el array de mensajes como la historia
-          
+          const clean = DOMPurify.sanitize(fullMessage, {
+            ALLOWED_TAGS: ['div', 'span', 'code', 'button', 'mat-icon', 'pre', 'a', 'strong', 'li', 'h1', 'h2', 'h3', 'br'],
+            ALLOWED_ATTR: ['class', 'onclick', 'style', 'href', 'target']
+          });
+          this.messagesHTML[msgIdx].text = this.sanitizer.bypassSecurityTrustHtml(clean);
           this.messages[msgIdx].text         = fullMessage;
           this.chatHistory[histIdx].content  = fullMessage;
 
@@ -240,6 +258,10 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
         error: err => {
           console.error(err);
           this.messages.push({
+            text: 'Error en la solicitud.',
+            isUser: false
+          });
+          this.messagesHTML.push({
             text: 'Error en la solicitud.',
             isUser: false
           });
@@ -315,7 +337,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
           .replace(/&/g, '&') // Escapar `&`
           .replace(/</g, '<') // Escapar `<`
           .replace(/>/g, '>'); // Escapar `<`
-        return `<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><code class="language-json">${escapedContent}`;
+        return `<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><button class="mat-icon-button" onclick="copyCode(this)">       <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon></button><code class="language-json">${escapedContent}`;
       });
 
       var regex = /```xml/; 
@@ -325,10 +347,19 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       }
 
       // Procesar XML
-      const start_xml_code = [
-  `<div class="mat-mdc-tab-body-content" style="transform: none;">`,
-  `<pre class="language-xml"><code class="language-xml">`
+     const start_xml_code = [
+  `<div class="mat-mdc-tab-body-content">`,
+  ` <div class="code-toggle>`,
+  `   <button class="mat-button active">XML`,
+  `   </button>`,
+  ` </div>`,
+  ` <pre class="ng-star-inserted language-xml">`,
+  `   <button class="mat-icon-button" onclick="copyCode(this)">`,
+  `     <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon>`,
+  `   </button>`,
+  `   <code class="language-xml">`
 ].join('');
+
       formattedMessage = formattedMessage.replace(/```xml/g, start_xml_code);
       
       if (/```/.test(formattedMessage)) {
@@ -363,7 +394,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
         // `p1` es la clave JSON (sin comillas)
         return `<span class="token property">"${p1}":</span>`;
       });
-      formattedMessage = formattedMessage.replace(/(?<!div)(?<!pre)(?<!title)(?<!style)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
+      formattedMessage = formattedMessage.replace(/(?<!div)(?<!pre)(?<!title)(?<!style)(?<!button)(?<!class)(?<!onclick)(?<!<span class="token string">)([:=]\s*?)"([^"]+)"(?<!<\/span>)/g, (match, p1, p2) => {
         return `<span class="token string">${p1}"${p2}"</span>`;
       });
       
@@ -382,10 +413,10 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     e.preventDefault();
     const code = btn.parentElement?.querySelector('code');
     if (!code) return;
-    navigator.clipboard.writeText(code.textContent || '').then(() => {
-      btn.textContent = 'Copiado';
-      setTimeout(() => (btn.textContent = 'Copiar'), 2000);
-    });
+    // navigator.clipboard.writeText(code.textContent || '').then(() => {
+    //   btn.textContent = 'Copiado';
+    //   setTimeout(() => (btn.textContent = 'Copiar'), 2000);
+    // });
   }
 
   private scrollToBottom() {

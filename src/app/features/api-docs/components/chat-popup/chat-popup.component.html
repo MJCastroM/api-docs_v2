@@ -16,11 +16,11 @@
 
     <div class="chat-messages">
       <div
-        *ngFor="let m of messages"
+        *ngFor="let m of messagesHTML"
         [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
       >
         <!-- Uso correcto de binding de propiedad -->
-        <div [innerHTML]="m.text"></div>
+        <span [innerHTML]="m.text"></span>
       </div>
     </div>
 
