@@ -18,6 +18,8 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-y: auto; // permite scroll
+  scrollbar-width: thin; // barra de scroll del navegador
+  scrollbar-color: $red-1 $table-grey-columns; // color de la barra de
 }
 
 body {
@@ -73,6 +75,7 @@ a {
   &:hover {
     color: darken($red-1, 10%) !important;
     text-decoration: underline;
+    background-color: $red-2 !important;
+    border-radius: 0.5rem !important;
   }
 }
-

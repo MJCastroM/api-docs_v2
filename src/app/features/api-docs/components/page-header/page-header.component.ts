@@ -13,6 +13,6 @@ export class PageHeaderComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    this.isScrolled = scrollTop > 60;
+    this.isScrolled = scrollTop > 20;
   }
 }

@@ -2,11 +2,11 @@
 
 .chat-bubble {
   position: fixed !important;
-  bottom: 1.5rem;
+  bottom: 1rem;
   inset-inline-end: 2rem;
   z-index: 100;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: .5rem;
   border-width: 0;
   border-radius: 50%;
@@ -17,6 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.15);
+    background: darken($red-1, 10%) !important;
+  }
 }
 
 .chat-img {
@@ -31,10 +37,10 @@
   padding: 0.5rem;
   font-family: $font-family;
   position: fixed;
-  bottom: 7rem;
-  right: 1.5rem;
+  bottom: calc(2.5rem + 3.5rem); // 3rem del botón + espacio
+  right: 2rem;
   width: 50vw;
-  max-height: 75vh;
+  max-height: 70vh;
   background: $background-light;
   border-radius: $border-radius;
   box-shadow: 0 0 20px rgba(0,0,0,1);
@@ -42,56 +48,54 @@
   flex-direction: column;
   z-index: 10;
   cursor: default;
-  scrollbar-width: thin;
+  overflow: visible;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -9px; // Hace que sobresalga
-    right: 32px;
-    width: 18px;
-    height: 18px;
-    background: $background-light;
-    //border-right: solid 4px $red-1;
-    //border-bottom: solid 4px $red-1;
-    transform: rotate(45deg);
-    z-index: 0;
-    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.25);
+.chat-popup-punta {
+  content: '';
+  position: absolute;
+  bottom: -9px; // sobresale por debajo
+  right: 25px; // alineado con el chat-bubble
+  width: 18px;
+  height: 18px;
+  background: $background-light;
+  transform: rotate(45deg);
+  z-index: 11;
+  box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.25);
+}
+
+.clear-history-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  width: 35px;
+  height: 35px;
+  background: url('/assets/image/borrar-historial-negro.png') no-repeat center;
+  background-size: 60%;
+  background-color: $grey-hover; // 👈 Fondo visible detrás del ícono
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.15);
   }
 }
 
 
-.clear-history-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: url('/assets/borrar-historial-negro.png') no-repeat center;
-  width: 32px;
-  height: 32px;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-}
 .chat-messages {
-
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
-  background: var(--bg-note-color);
+  scrollbar-width: thin !important;
 
+  /*
   p {
     margin: 0.5em 0;
     line-height: 1.4;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0 0.5em;
-    font-weight: bold;
-    color: #333;
-  }
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.4em; }
-  h3 { font-size: 1.2em; }
 
   ul {
     margin: 0.5em 0 0.5em 1.5em;
@@ -102,7 +106,7 @@
   }
 
   strong {
-    font-weight: 600;
+    font-weight: 500;
   }
 
   a {
@@ -125,7 +129,9 @@
     overflow-x: auto;
     margin: 1em 0;
     position: relative;
+    scrollbar-width: thin !important;
   }
+
   .copy-button {
     position: absolute;
     top: 0.5em;
@@ -135,6 +141,7 @@
     cursor: pointer;
     color: #f8f8f2;
   }
+    */
 }
 
 .user-message, .bot-message {
@@ -143,6 +150,7 @@
   border-radius: 1rem;
   max-width: 80%;
 }
+
 .user-message {
   display: flex;
   justify-content: end;
@@ -158,6 +166,7 @@
   width: -moz-fit-content;
   width: fit-content;
 }
+
 .bot-message {
   background-color: $chat-grey;
   color: $text-color;
@@ -170,7 +179,30 @@
   width: -moz-fit-content;
   width: fit-content;
   line-height: 1.5;
+  scrollbar-width: thin !important;
 }
+
+::ng-deep .bot-message h1,
+::ng-deep .bot-message h2,
+::ng-deep .bot-message h3,
+::ng-deep .bot-message h4,
+::ng-deep .bot-message h5,
+::ng-deep .bot-message h6 {
+  margin: 1em 0 0.5em;
+  font-weight: 500;
+}
+
+::ng-deep .bot-message h1 { font-size: 1.6em; }
+::ng-deep .bot-message h2 { font-size: 1.4em; }
+::ng-deep .bot-message h3 { font-size: 1.2em; }
+
+::ng-deep pre[class*="language-"] {
+  font-size: 0.7rem !important;
+  color: $text-color !important;
+  //background: none !important;
+  scrollbar-width: thin !important;
+}
+
 .chat-input {
   display: flex;
   padding: 0.5rem;
@@ -183,8 +215,10 @@
   border-radius: 1rem;
   outline: none;
   background-color: $chat-grey;
-  font-size: 1rem;
+  color: $text-color;
+  //font-size: 1rem;
 }
+
 .chat-input button {
   margin-left: 0.5rem;
   padding: 0 1rem;
