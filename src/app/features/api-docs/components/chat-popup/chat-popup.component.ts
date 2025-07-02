@@ -27,13 +27,18 @@ interface ChatEntry { role: string; content: string /* raw text */; }
       transition(':leave', [
         animate('300ms ease-in', style({ opacity: 0, transform: 'translateY(20px)' }))
       ])
+    ]),
+    trigger('messageAnim', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'scale(0.95)' }),
+        animate('600ms ease', style({ opacity: 1, transform: 'scale(1)' }))
+      ])
     ])
   ]
 })
 export class ChatPopupComponent implements OnInit, AfterViewInit {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
   @ViewChild('chatMessages') chatMessagesRef!: ElementRef<HTMLElement>;
-
 
   readCode = false;
   afterNl = ''
@@ -125,7 +130,10 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   toggleChat() {
     this.showChat = !this.showChat;
     if (this.showChat) {
-      setTimeout(() => this.inputRef.nativeElement.focus(), 0);
+      setTimeout(() => {
+        this.inputRef.nativeElement.focus();
+        this.scrollToBottom(); // scroll al fondo cuando se abre
+      }, 0);
     }
   }
 
@@ -407,8 +415,6 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       return formattedMessage;
     };
 
-
-
   /** Handle copy button clicks */
   @HostListener('click', ['$event'])
   onHostClick(e: MouseEvent) {
@@ -425,12 +431,11 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   }
 
   private scrollToBottom() {
-  setTimeout(() => {
-    if (this.chatMessagesRef) {
-      const el = this.chatMessagesRef.nativeElement;
-      el.scrollTop = el.scrollHeight;
-    }
-  }, 0); // da tiempo al DOM a actualizarse
-}
-
+    setTimeout(() => {
+      if (this.chatMessagesRef) {
+        const el = this.chatMessagesRef.nativeElement;
+        el.scrollTop = el.scrollHeight;
+      }
+    }, 0); // asegura que el DOM esté listo
+  }
 }

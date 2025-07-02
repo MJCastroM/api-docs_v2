@@ -5,12 +5,15 @@
 
 <!-- Popup flotante arriba del botón -->
 <div class="chat-popup" *ngIf="showChat" @fadeSlide>
-
   <button class="clear-history-button" *ngIf="showChat" (click)="clearChatHistory()" title="Borrar historial"></button>
+
   <div class="chat-messages" #chatMessages>
-    <div *ngFor="let m of messagesHTML" [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }">
+    <div *ngFor="let m of messagesHTML"
+        [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
+        [@messageAnim]="m.isUser ? true : null">
       <span [innerHTML]="m.text"></span>
     </div>
+
   </div>
 
   <div class="chat-input">

@@ -1,29 +1,17 @@
-$primary-color:   #c62828;
-$text-color:       #333;
-$background-light: #fdfdfe;
-$grey-header:     #e0e0e0;
-$shadow-light:    rgba(0, 0, 0, .15);
-$border-radius:   1rem;
-$margin:          3rem 14rem;
+@import 'variables';
 
 // CONFIGURACIÓN BACKEND
 
-* {
-  letter-spacing: 0.01em !important;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  color: $text-color !important;
-  line-height: 1.5 !important;
-}
-
 .backend-card {
-  margin: $margin;
+  font-family: $font-family;
+  margin: $margin-backend;
   padding: 2rem;
-  box-shadow: 15px 15px 15px 10px $shadow-light;
+  box-shadow: $box-shadow;
   background: $background-light;
   border-radius: $border-radius;
 
   .custom-icon {
-    background-image: url(exclamation.svg); // Ruta desde "src"
+    background-image: url(exclamation.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
