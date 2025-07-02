@@ -1,40 +1,26 @@
+<!-- Ícono flotante -->
 <div class="chat-bubble" (click)="toggleChat()">
   <img src="../../../../../assets/image/chat-icon.png" class="chat-img" />
-  <span class="chat-icon" [ngClass]="{ active: showChat }"></span>
+</div>
 
-  <div
-    class="chat-popup"
-    *ngIf="showChat"
-    (click)="$event.stopPropagation()"
-    @fadeSlide
-  >
-    <button
-      class="clear-history-button"
-      (click)="clearChatHistory()"
-      title="Borrar historial"
-    ></button>
+<!-- Popup flotante arriba del botón -->
+<div class="chat-popup" *ngIf="showChat" @fadeSlide>
+  <button class="clear-history-button" *ngIf="showChat" (click)="clearChatHistory()" title="Borrar historial"></button>
 
-    <div class="chat-messages">
-      <div
-        *ngFor="let m of messagesHTML"
+  <div class="chat-messages" #chatMessages>
+    <div *ngFor="let m of messagesHTML"
         [ngClass]="{ 'user-message': m.isUser, 'bot-message': !m.isUser }"
-      >
-        <!-- Uso correcto de binding de propiedad -->
-        <span [innerHTML]="m.text"></span>
-      </div>
+        [@messageAnim]="m.isUser ? true : null">
+      <span [innerHTML]="m.text"></span>
     </div>
 
-    <div class="chat-input">
-      <input
-        #inputRef
-        [(ngModel)]="inputMessage"
-        (keydown.enter)="sendMessage()"
-        [disabled]="loading"
-        placeholder="Escribe un mensaje..."
-      />
-      <button (click)="sendMessage()" [disabled]="loading">Enviar</button>
-    </div>
   </div>
 
-  <span class="chat-popup-punta" *ngIf="showChat"></span>
+  <div class="chat-input">
+    <input #inputRef [(ngModel)]="inputMessage" (keydown.enter)="sendMessage()" [disabled]="loading"
+      placeholder="Escribe un mensaje..." />
+    <button (click)="sendMessage()" [disabled]="loading">Enviar</button>
+  </div>
+
+  <span class="chat-popup-punta"></span>
 </div>

@@ -3,7 +3,7 @@
 
 // SDT - ESTRUCTURAS DE DATOS Y ALGORITMOS
 
-.mat-accordion-BT {
+::ng-deep .mat-accordion-BT {
   margin: 2rem 0;
   font-family: $font-family;
 
@@ -34,14 +34,14 @@
     }
 
     .mat-expansion-panel-body {
-      padding: 0rem 2rem 2rem;
       background: $background-light;
-      //box-shadow: 15px 15px 15px 10px $shadow-light;
+      padding: 0rem 2rem 2rem 2rem !important;
     }
 
     .mat-expansion-panel-content {
       background: $background-light;
       border-radius: $border-radius;
+      padding: 0rem !important;
     }
 
     .mat-icon {

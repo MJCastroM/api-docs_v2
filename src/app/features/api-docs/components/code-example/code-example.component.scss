@@ -1,27 +1,30 @@
 @import '~prismjs/themes/prism.css';
 @import 'variables';
 
-// EJEMPLOS DE EJECUCIÓN
-
+// CONTENEDOR PRINCIPAL
 ::ng-deep .code-tabs {
-  margin: $margin-tabs;
+  margin: 0rem 40px;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
   font-family: $font-family;
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
-  // BARRA QUE CONTIENE LAS PESTAÑAS
+
+// TABS HEADER
 ::ng-deep .code-tabs .mat-mdc-tab-header {
   margin: 0;
   padding: 0;
   width: 100%;
   border-radius: $border-radius $border-radius 0 0;
-  list-style: none;
   display: flex;
   background: $table-grey-header;
   font-weight: 700;
 }
 
-// PESTAÑAS INACTIVAS
+// TABS HOVER
 ::ng-deep .code-tabs .mdc-tab {
   &:hover {
     border-radius: $border-radius $border-radius 0 0;
@@ -29,66 +32,77 @@
   }
 }
 
-// Pestaña activa
+// TAB ACTIVA
 ::ng-deep .code-tabs .mdc-tab.mdc-tab--active {
   background: $background-light;
   border-radius: $border-radius $border-radius 0 0;
   border-top: $red-border;
   &:hover {
-    border-radius: $border-radius $border-radius 0 0;
     background: $background-light !important;
     cursor: default;
   }
 }
 
-// CONTENIDO DE LA PESTAÑA ACTIVA
+// CUERPO DE LA TAB ACTIVA
+::ng-deep .code-tabs .mat-mdc-tab-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 ::ng-deep .code-tabs .mat-mdc-tab-body-wrapper {
   padding: 2rem;
   border-radius: 0 0 $border-radius $border-radius;
-  box-shadow: none;
   background-color: $background-light !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-// Esconder indicador de tinta inferior
+::ng-deep .code-tabs .mat-mdc-tab-body-content {
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden !important;
+}
+
+// OCULTAR INDICADOR
 ::ng-deep .code-tabs .mdc-tab-indicator {
   display: none !important;
 }
 
-// PESTAÑA QUE CONTIENE EL CÓDIGO
+// BARRA DE TABS DE CÓDIGO
 .code-toggle {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   background-color: #c3def3;
   border-radius: $border-radius $border-radius 0 0;
-  height: auto;
   position: relative;
   overflow: hidden;
   color: $text-color !important;
+  flex-shrink: 0; // para que no se achique
 
-  button[mat-button] { // BOTONES DE CÓDIGO
+  button[mat-button] {
     padding: 0.4rem 0.75rem;
     background: none;
     border-radius: 0.7rem 0.7rem 0 0;
     font-weight: 700;
 
-    // Hover solo si NO está activo
     &:not(.active):hover {
       background-color: darken(#ecf4fa, 5%);
     }
 
     &.active {
       background-color: #ecf4fa;
-
-      // Que no tenga efecto hover si ya está activo
       &:hover {
-        background-color: #ecf4fa;
         cursor: default;
       }
     }
   }
 
-  button[mat-icon-button] { // BOTÓN DE COPIAR
+  button[mat-icon-button] {
     margin-left: auto;
     height: 2rem;
     padding: 0;
@@ -103,49 +117,77 @@
     }
   }
 }
-// FIN - PESTAÑA QUE CONTIENE EL CÓDIGO
 
-// PROPIEDADES DEL CÓDIGO
-::ng-deep pre[class*="language-"],
+// PROPIEDADES DE CÓDIGO
 ::ng-deep code[class*="language-"] {
+  font-size: 0.7rem !important;
   color: $text-color !important;
-  background-color: #ecf4fa !important;
+  background: none !important;
 
-  .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
-    color:#e45649 !important;
+  .token.property, .token.tag, .token.boolean, .token.number,
+  .token.constant, .token.symbol, .token.deleted {
+    color: #e45649 !important;
   }
-  .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.url, .token.inserted {
-      color: #b76b01 !important;
+
+  .token.selector, .token.attr-name, .token.string, .token.char,
+  .token.builtin, .token.url, .token.inserted {
+    color: #b76b01 !important;
   }
 
   .token.atrule, .token.attr-value, .token.keyword {
-      color: #50a14f;
+    color: #50a14f;
   }
 }
-// FIN - PROPIEDADES DEL CÓDIGO
 
-// --- Ahora nuestro override:
-pre[class*="language-"] {
-  margin: 0rem !important;
+// CONTENEDOR DE SCROLL EXCLUSIVO DEL CÓDIGO
+.code-scroll {
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  max-height: 100%;
   background: #ecf4fa;
-  border-radius: 0 0 0.7rem 0.7rem;
-  code {
-    background: none;
+  border-radius: 0 0 $border-radius $border-radius;
+
+  scrollbar-width: thin;
+  scrollbar-color: $red-1 $table-grey-columns;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $red-1;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $table-grey-columns;
   }
 }
 
-// Cambiamos el color de los números
-:hos  t ::ng-deep .token.number {
-  color: #025c52 !important;   // verde oscuro
-  font-weight: 500;            // opcional, dar énfasis
+::ng-deep pre[class*="language-"] {
+  font-size: 0.7rem !important;
+  color: $text-color !important;
+  background: $code-background !important;
+  padding: 1rem;
+  margin: 0;
+  min-width: max-content;
+  scrollbar-width: thin !important;
+  overflow: visible
 }
 
+// NÚMEROS VERDES
+:host ::ng-deep .token.number {
+  color: #025c52 !important;
+  font-weight: 500;
+}
+
+// EXTRAS
 .accordion-container {
-  max-height: 400px;   /* ajusta a la altura deseada */
+  max-height: 400px;
   overflow-y: auto;
 }
-
-/* tu panel de código interno también scrollable si quieres */
 .code-container {
   max-height: 200px;
   overflow-y: auto;
