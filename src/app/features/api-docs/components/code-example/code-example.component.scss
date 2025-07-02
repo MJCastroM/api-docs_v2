@@ -164,14 +164,17 @@
   &::-webkit-scrollbar-track {
     background-color: $table-grey-columns;
   }
+}
 
-  pre {
-    margin: 0;
-    padding: 1rem;
-    min-width: max-content;
-    background: transparent;
-    overflow: visible;
-  }
+::ng-deep pre[class*="language-"] {
+  font-size: 0.7rem !important;
+  color: $text-color !important;
+  background: $code-background !important;
+  padding: 1rem;
+  margin: 0;
+  min-width: max-content;
+  scrollbar-width: thin !important;
+  overflow: visible
 }
 
 // NÚMEROS VERDES

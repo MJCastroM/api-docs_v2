@@ -32,6 +32,8 @@ interface ChatEntry { role: string; content: string /* raw text */; }
 })
 export class ChatPopupComponent implements OnInit, AfterViewInit {
   @ViewChild('inputRef') inputRef!: ElementRef<HTMLInputElement>;
+  @ViewChild('chatMessages') chatMessagesRef!: ElementRef<HTMLElement>;
+
 
   readCode = false;
   afterNl = ''
@@ -156,6 +158,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     if (savedHist) {
       this.chatHistory = JSON.parse(savedHist);
     }
+    this.scrollToBottom();
   }
 
   saveChatHistory() {
@@ -175,6 +178,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
     this.inputMessage = '';
     this.loading = true;
     this.typingIndicator = true;
+    this.scrollToBottom();
 
     const sid = localStorage.getItem('chatSessionId');
     if (sid) {
@@ -198,16 +202,14 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       return text
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
-        .replace(/\|\|/g, '<br>')
-        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // 4 espacios reales, no &nbsp;
     }
     else {
       return text
         .replace(/</g, '<')
         .replace(/>/g, '>')
         .replace(/\|\|/g, '<br>')
-        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
-
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // 4 espacios reales, no &nbsp;
     }
   };
 
@@ -333,7 +335,15 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
           .replace(/&/g, '&') // Escapar `&`
           .replace(/</g, '<') // Escapar `<`
           .replace(/>/g, '>'); // Escapar `<`
-        return `<div class="mat-mdc-tab-body-content" style="transform: none;"><pre class="language-json"><button class="mat-icon-button" onclick="copyCode(this)">       <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon></button><code class="language-json">${escapedContent}`;
+        this.readCode = true
+        return `<div class="mat-mdc-tab-body-content">
+          <div class="chat-code-wrapper">
+            <button class="mat-icon-button-chat" onclick="copyCode(this)">
+              <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon>
+            </button>
+            <pre class="language-json">
+              <code class="language-json">${escapedContent}`;
+
       });
 
       var regex = /```xml/;
@@ -343,18 +353,17 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
       }
 
       // Procesar XML
-     const start_xml_code = [
-  `<div class="mat-mdc-tab-body-content">`,
-  ` <div class="code-toggle>`,
-  `   <button class="mat-button active">XML`,
-  `   </button>`,
-  ` </div>`,
-  ` <pre class="ng-star-inserted language-xml">`,
-  `   <button class="mat-icon-button" onclick="copyCode(this)">`,
-  `     <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon>`,
-  `   </button>`,
-  `   <code class="language-xml">`
+    const start_xml_code = [
+      `<div class="mat-mdc-tab-body-content">`,
+      `  <div class="chat-code-wrapper">`,
+      `    <button class="mat-icon-button-chat" onclick="copyCode(this)">`,
+      `      <mat-icon class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color">content_copy</mat-icon>`,
+      `    </button>`,
+      `    <pre class="language-xml">`,
+      `      <code class="language-xml">`
 ].join('');
+
+
 
       formattedMessage = formattedMessage.replace(/```xml/g, start_xml_code);
 
@@ -362,7 +371,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
         //console.log('fin xml');
         //console.log('before replace:', formattedMessage);
 
-        const replacement = `</code></pre></div>`;
+        const replacement = `</code></pre></div></div>`;
 
         // split/join para forzar el reemplazo literal
         formattedMessage = formattedMessage.split('```').join(replacement);
@@ -416,7 +425,12 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   }
 
   private scrollToBottom() {
-    const c = document.querySelector('.chat-messages');
-    if (c) (c as HTMLElement).scrollTop = c.scrollHeight;
-  }
+  setTimeout(() => {
+    if (this.chatMessagesRef) {
+      const el = this.chatMessagesRef.nativeElement;
+      el.scrollTop = el.scrollHeight;
+    }
+  }, 0); // da tiempo al DOM a actualizarse
+}
+
 }
