@@ -1,39 +1,39 @@
 @import 'variables';
 
 .mat-mdc-tab-group.api-tabs {
-  margin: $margin-tabs;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  font-family: $font-family;
+  margin: var(--margin-tabs);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
 
   // BARRA QUE CONTIENE LAS PESTAÑAS
   .mat-mdc-tab-header {
     margin: 0;
     padding: 0;
     width: 100%;
-    border-radius: $border-radius $border-radius 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     list-style: none;
     display: flex;
-    background: $table-grey-header;
+    background: var(--table-header);
     font-weight: 700;
   }
 
   // PESTAÑAS INACTIVAS
   .mdc-tab {
     &:hover {
-      border-radius: $border-radius $border-radius 0 0;
-      background: $grey-hover !important;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      background: var(--grey-hover) !important;
     }
   }
 
   // Pestaña activa
   .mdc-tab.mdc-tab--active {
-    background: $background-light;
-    border-radius: $border-radius $border-radius 0 0;
-    border-top: $red-border;
+    background: var(--bg-elements);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-top: var(--red-border);
     &:hover {
-      border-radius: $border-radius $border-radius 0 0;
-      background: $background-light !important;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      background: var(--bg-elements) !important;
       cursor: default;
     }
   }
@@ -41,9 +41,9 @@
   // CONTENIDO DE LA PESTAÑA ACTIVA
   .mat-mdc-tab-body-wrapper {
     padding: 2rem;
-    border-radius: 0 0 $border-radius $border-radius;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     box-shadow: none;
-    background-color: $background-light !important;
+    background-color: var(--bg-elements) !important;
   }
 
   // Esconder indicador de tinta inferior

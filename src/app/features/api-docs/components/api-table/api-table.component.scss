@@ -1,25 +1,25 @@
 @import 'variables';
 
 * {
-  color: $text-color !important;
+  color: var(--text-color) !important;
 }
 
 // 1) Tablas genéricas
 table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: $border-radius !important;
+  border-radius: var(--border-radius) !important;
   overflow: hidden;
-  border: 1px solid $table-grey-header;
+  border: 1px solid var(--table-header);
   scrollbar-width: thin;
 
   thead {
-    background: $table-grey-header;
+    background: var(--table-header);
     th {
       padding: 0.75rem 1rem;
       text-align: left;
       font-weight: 600;
-      color: $text-color;
+      color: var(--text-color);
     }
   }
 
@@ -30,10 +30,10 @@ table {
       }
     }
     td, th {
-      background: $table-grey-columns;
+      background: var(--table-columns);
       padding: 0.6rem 1rem;
       border: none;
-      color: $text-color;
+      color: var(--text-color);
     }
   }
 

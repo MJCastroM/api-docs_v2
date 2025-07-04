@@ -4,9 +4,9 @@
 // CONTENEDOR PRINCIPAL
 ::ng-deep .code-tabs {
   margin: 0rem 40px;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  font-family: $font-family;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
   height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
@@ -18,27 +18,27 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  border-radius: $border-radius $border-radius 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   display: flex;
-  background: $table-grey-header;
+  background: var(--table-header);
   font-weight: 700;
 }
 
 // TABS HOVER
 ::ng-deep .code-tabs .mdc-tab {
   &:hover {
-    border-radius: $border-radius $border-radius 0 0;
-    background: $grey-hover !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    background: var(--grey-hover) !important;
   }
 }
 
 // TAB ACTIVA
 ::ng-deep .code-tabs .mdc-tab.mdc-tab--active {
-  background: $background-light;
-  border-radius: $border-radius $border-radius 0 0;
-  border-top: $red-border;
+  background: var(--bg-elements);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-top: var(--red-border);
   &:hover {
-    background: $background-light !important;
+    background: var(--bg-elements) !important;
     cursor: default;
   }
 }
@@ -52,8 +52,8 @@
 
 ::ng-deep .code-tabs .mat-mdc-tab-body-wrapper {
   padding: 2rem;
-  border-radius: 0 0 $border-radius $border-radius;
-  background-color: $background-light !important;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background-color: var(--bg-elements) !important;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
 }
 
 ::ng-deep .code-tabs .mat-mdc-tab-body-content {
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -77,11 +77,11 @@
 .code-toggle {
   display: flex;
   align-items: center;
-  background-color: #c3def3;
-  border-radius: $border-radius $border-radius 0 0;
+  background-color: var(--code-header);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   position: relative;
   overflow: hidden;
-  color: $text-color !important;
+  color: var(--text-color) !important;
   flex-shrink: 0; // para que no se achique
 
   button[mat-button] {
@@ -91,11 +91,11 @@
     font-weight: 700;
 
     &:not(.active):hover {
-      background-color: darken(#ecf4fa, 5%);
+      background-color: var(--code-bg-darken);
     }
 
     &.active {
-      background-color: #ecf4fa;
+      background-color: var(--code-bg);
       &:hover {
         cursor: default;
       }
@@ -113,7 +113,7 @@
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: var(--code-bg-darken);
     }
   }
 }
@@ -121,8 +121,9 @@
 // PROPIEDADES DE CÓDIGO
 ::ng-deep code[class*="language-"] {
   font-size: 0.7rem !important;
-  color: $text-color !important;
+  color: var(--text-color) !important;
   background: none !important;
+  text-shadow: none !important;
 
   .token.property, .token.tag, .token.boolean, .token.number,
   .token.constant, .token.symbol, .token.deleted {
@@ -141,15 +142,16 @@
 
 // CONTENEDOR DE SCROLL EXCLUSIVO DEL CÓDIGO
 .code-scroll {
+  padding: 0rem 1rem;
   overflow: auto;
   flex: 1;
   min-height: 0;
   max-height: 100%;
-  background: #ecf4fa;
-  border-radius: 0 0 $border-radius $border-radius;
+  background: var(--code-bg);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 
   scrollbar-width: thin;
-  scrollbar-color: $red-1 $table-grey-columns;
+  scrollbar-color: var(--red-1) var(--table-columns);
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -157,19 +159,19 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $red-1;
+    background-color: var(--red-1);
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: $table-grey-columns;
+    background-color: var(--table-columns);
   }
 }
 
 ::ng-deep pre[class*="language-"] {
   font-size: 0.7rem !important;
-  color: $text-color !important;
-  background: $code-background !important;
+  color: var(--text-color) !important;
+  background: var(--code-bg) !important;
   padding: 1rem;
   margin: 0;
   min-width: max-content;

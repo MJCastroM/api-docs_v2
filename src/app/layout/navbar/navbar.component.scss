@@ -14,8 +14,8 @@
   left: 0;
   right: 0;
   z-index: 175;
-  height: $navbar-height;
-  background-color: $background-color;
+  height: var(--navbar-height);
+  background-color:var(--bg-color);
 }
 
 .logo {
@@ -24,3 +24,32 @@
     margin-inline-end: .8rem;
     margin-left: -1rem;
 }
+
+.toggle-theme-button {
+  border: none;
+  background: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--grey-hover);
+  }
+}
+
+.toggle-theme-button .material-icons {
+  transition: transform 0.4s ease;
+}
+
+.toggle-theme-button:hover .material-icons {
+  transform: scale(1.2);
+}
+
+.toggle-theme-button.rotate {
+  .material-icons {
+    transform: rotate(180deg);
+  }
+}
+

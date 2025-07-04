@@ -7,26 +7,26 @@
 
 .main-container {
   display: flex;
-   height: auto; // ⬅ cambiamos 100vh por auto
-  background-color: $background-color; // si tenés uno
+  height: auto; // ⬅ cambiamos 100vh por auto
+  background-color: var(--bg-color); // si tenés uno
 }
 
 app-sidebar {
   flex-shrink: 0;
-  width: $sidebar-width; // o el ancho que uses para tu sidebar
+  width: var(--sidebar-width); // o el ancho que uses para tu sidebar
   height: 100%;
   border-right: 1px solid #eee;
-  background-color: #fff;
+  background-color: var(--bg-color);;
   z-index: 100;
 }
 
 .content-area {
   flex: 1;
   position: relative;
-  background-color: $background-color;
-  padding-top: $title-height;
+  background-color: var(--bg-color);
+  padding-top: var(--title-height);
   z-index: 1;
-  margin-top: $navbar-height;
+  margin-top: var(--navbar-height);
 }
 
 @media (max-width: 1024px) {

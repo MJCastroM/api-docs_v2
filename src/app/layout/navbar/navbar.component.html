@@ -1,4 +1,11 @@
 <nav class="navbar">
   <img class="logo" src="assets/image/logo_Bantotal.png" alt="Logo">
+  <button class="toggle-theme-button"
+          [class.rotate]="rotate"
+          (click)="toggleTheme()"
+          title="Cambiar tema">
+    <span class="material-icons">{{ isDarkMode ? 'dark_mode' : 'light_mode' }}</span>
+  </button>
+
   <app-search></app-search>
 </nav>
