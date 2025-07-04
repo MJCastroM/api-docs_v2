@@ -4,7 +4,12 @@
 </div>
 
 <!-- Popup flotante arriba del botón -->
-<div class="chat-popup" *ngIf="showChat" @fadeSlide>
+<div
+  class="chat-popup"
+  *ngIf="renderChat"
+  [@popupFromButton]="showChat ? 'open' : 'closed'"
+  (@popupFromButton.done)="onAnimationDone($event)">
+
   <button class="clear-history-button" title="Borrar historial" *ngIf="showChat" (click)="clearChatHistory()">
     <span class="material-icons">history</span>
   </button>

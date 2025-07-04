@@ -19,13 +19,18 @@ interface ChatEntry { role: string; content: string /* raw text */; }
   templateUrl: './chat-popup.component.html',
   styleUrls: ['./chat-popup.component.scss', '../code-example/code-example.component.scss'],
   animations: [
-    trigger('fadeSlide', [
+    trigger('popupFromButton', [
+      // Fallback para :enter (primer render)
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(20px)' }),
-        animate('300ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+        style({ opacity: 0, transform: 'scale(0)' }),
+        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
       ]),
-      transition(':leave', [
-        animate('300ms ease-in', style({ opacity: 0, transform: 'translateY(20px)' }))
+      transition('open => closed', [
+        animate('300ms ease-in', style({ opacity: 0, transform: 'scale(0)' }))
+      ]),
+      transition('closed => open', [
+        style({ opacity: 0, transform: 'scale(0)' }),
+        animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
       ])
     ]),
     trigger('messageAnim', [
@@ -42,6 +47,7 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
 
   readCode = false;
   afterNl = ''
+  renderChat = false;
   showChat = false;
   inputMessage = '';
   messages: Message[] = [];
@@ -128,12 +134,21 @@ export class ChatPopupComponent implements OnInit, AfterViewInit {
   }
 
   toggleChat() {
-    this.showChat = !this.showChat;
-    if (this.showChat) {
+    if (!this.renderChat) {
+      this.renderChat = true;
+      this.showChat = true;
       setTimeout(() => {
-        this.inputRef.nativeElement.focus();
-        this.scrollToBottom(); // scroll al fondo cuando se abre
+        this.inputRef?.nativeElement.focus();
+        this.scrollToBottom();
       }, 0);
+    } else {
+      this.showChat = !this.showChat;
+    }
+  }
+
+  onAnimationDone(event: any) {
+    if (event.toState === 'closed') {
+      this.renderChat = false;
     }
   }
 
