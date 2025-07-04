@@ -3,13 +3,13 @@
 // INFORMACIÓN INICIAL DEL MÉTODO
 .info-card {
   padding: 1.4rem 2rem 0.6rem;
-  background: $background-light;
-  margin: $margin-info;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  border-left: $red-border;
-  border-right: $red-border;
-  line-height: $line-height !important;
-  color: $text-color;
-  font-family: $font-family;
+  background: var(--bg-elements);
+  margin: var(--margin-info);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  border-left: var(--red-border);
+  border-right: var(--red-border);
+  line-height: var(--line-height) !important;
+  color: var(--text-color);
+  font-family: var(--font-family);
 }

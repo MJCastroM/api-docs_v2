@@ -1,37 +1,68 @@
-// ROJOS
-$red-1:    #c62828;
-$red-2:    #edd6d7;
+:root {
+  // ROJOS
+  --red-1: #c62828;
+  --red-1-darken: #9e2020;
+  --red-2: #edd6d7;
 
-// TEXTOS
-$text-color: #2c3e50;
-$title-underlined: 1px solid #eaecef !important;
-$font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  // TEXTOS
+  --text-color: #2c3e50;
+  --text-color-negative: #c9ced8;
+  --text-color-enviar: #fdfdfe;
+  --title-underlined: 1px solid #eaecef;
+  --font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-// COLORES DE FONDO
-$background-color:   #f5f5f7;
-$background-light:   #fdfdfe;
-$table-grey-header:  #cccccc;
-$table-grey-columns: #ededed;
-$chat-grey:          #ededed;
-$grey-hover:         #eeeeee;
-$shadow-light:       rgba(0, 0, 0, .15);
-$box-shadow:         15px 15px 10px 5px $shadow-light;
-$code-background:    #ecf4fa;
+  // COLORES DE FONDO
+  --bg-color:    #f5f5f7;
+  --bg-elements: #fdfdfe;
+  --table-header: #cccccc;
+  --table-columns: #ededed;
+  --grey-hover: #eeeeee;
+  --grey-1: #ededed;
+  --grey-2: darken(#ededed, 40%);
 
-// FORMA Y TAMAÑO DE LOS ELEMENTOS
-$border-radius:    1rem;
-$margin-title:     1rem 14rem 0rem 5rem !important;
-$margin-title-2:   4rem 14rem 0rem 5rem !important;
-$margin-info:      0rem 4rem 3rem 4rem !important;
-$margin-backend:   3rem 4rem !important;
-$margin-tabs:      0rem 4rem 3rem 4rem !important;
-$title-size-1:     2.5rem;
-$title-size-2:     2rem;
-$title-size-3:     1.5rem;
-$line-height:      1.5;
-$red-border:       4px solid $red-1;
-$navbar-height:    3.75rem;
-$sidebar-width:    15vw;
-$title-height:     6.25rem;
-$margin-tabs-y:    2rem; // o el valor que uses para top/bottom
+  --shadow-light: rgba(0, 0, 0, 0.15);
+  --box-shadow: 15px 15px 10px 5px var(--shadow-light);
+  --code-bg: #ecf4fa;
+  --code-bg-darken: #9cb2c2;
+  --code-header: #c3def3;
 
+  // FORMA Y TAMAÑO DE LOS ELEMENTOS (no cambian con el tema)
+  --border-radius: 1rem;
+  --margin-title: 1rem 14rem 0rem 5rem;
+  --margin-title-2: 4rem 14rem 0rem 5rem;
+  --margin-info: 0rem 4rem 3rem 4rem;
+  --margin-backend: 3rem 4rem;
+  --margin-tabs: 0rem 4rem 3rem 4rem;
+  --title-size-1: 2.5rem;
+  --title-size-2: 2rem;
+  --title-size-3: 1.5rem;
+  --line-height: 1.5;
+  --red-border: 4px solid var(--red-1);
+  --navbar-height: 3.75rem;
+  --sidebar-width: 15vw;
+  --title-height: 6.25rem;
+  --margin-tabs-y: 2rem;
+}
+
+body.dark-mode {
+  // TEXTOS
+  --text-color: #c9ced8;
+  --text-color-negative: #2c3e50;
+
+  // ELEMENTOS
+  --bg-color:    #0d1117;
+  --bg-elements: #20242d;
+  --code-bg: #282c34;
+
+  --border-color: #30363d;
+  --table-header: #111111;
+  --table-columns: #161b22;
+  --grey-1: #161b22;
+  --grey-2: #555;
+  --grey-hover: #2d2d38;
+  --shadow-dark: rgba(0, 0, 0, 3);
+  --box-shadow: 15px 15px 10px 5px var(--shadow-dark);
+  --code-bg: #282c34;
+  --code-bg-darken: #20232a;
+  --code-header: #343e51;
+}

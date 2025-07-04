@@ -24,20 +24,19 @@
   min-width: 0; // permite que se ajuste al espacio disponible
   max-width: 45vw;
   box-sizing: border-box;
-  top: calc($navbar-height + $title-height);
+  top: calc(var(--navbar-height) + var(--title-height));
 }
 
 .content-right {
   width: 40vw;
   position: fixed;
-  top: calc($navbar-height + $title-height); // altura de la barra de navegación + el título de la página convertido a rem
+  top: calc(var(--navbar-height) + var(--title-height)); // altura de la barra de navegación + el título de la página convertido a rem
   right: 0;
   height: 100vh;
   overflow: hidden;
-  //border-left: 1px solid #ddd; // opcional
   box-sizing: border-box;
   z-index: 10;
-  pointer-events: none; // bloquea scroll accidental (si querés)
+  pointer-events: none; // bloquea scroll accidental
   display: flex;
   flex-direction: column;
   justify-content: space-between;
