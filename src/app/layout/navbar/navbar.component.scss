@@ -38,23 +38,27 @@
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
-  transition: background-color 0.3s;
+  transition: background-color 200ms;
 
   &:hover {
     background-color: var(--grey-hover);
+    transition-duration: 400ms;
   }
 }
 
 .toggle-theme-button .material-icons {
-  transition: transform 0.4s ease;
+  transition: transform 200ms ease;
 }
 
 .toggle-theme-button:hover .material-icons {
+  color: var(--red-1);
   transform: scale(1.2);
+  transition-duration: 400ms;
 }
 
 .toggle-theme-button.rotate {
   .material-icons {
+    color: var(--red-1);
     transform: rotate(180deg);
   }
 }
