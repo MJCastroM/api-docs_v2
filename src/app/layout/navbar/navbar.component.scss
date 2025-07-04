@@ -25,6 +25,12 @@
     margin-left: -1rem;
 }
 
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .toggle-theme-button {
   border: none;
   background: none;
