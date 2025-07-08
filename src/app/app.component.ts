@@ -1,17 +1,41 @@
 import { Component, ElementRef } from '@angular/core';
+import {
+  trigger,
+  transition,
+  style,
+  animate
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('routeFade', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease-in-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in-out', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
+
 export class AppComponent {
   title = 'api-docs';
+  showZoom = false;
 
-  /**
-   * Se dispara cada vez que el router inserta un nuevo componente.
-   * Añade la clase .fade-in al contenedor y la quita tras 300ms.
-   */
-  
-  
+  triggerThemeTransition(callback: () => void) {
+    this.showZoom = true;
+
+    setTimeout(() => {
+      callback();
+    }, 200);
+
+    setTimeout(() => {
+      this.showZoom = false;
+    }, 600);
+  }
 }
