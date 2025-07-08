@@ -12,6 +12,7 @@
     background: var(--bg-elements);
     border-radius: var(--border-radius) !important;
     box-shadow: var(--box-shadow) !important;
+    transition: box-shadow 0s ease-in-out !important;
 
     .mat-expansion-panel-header {
       background: var(--bg-elements);
@@ -21,7 +22,7 @@
       padding: 1.5rem;
       border-radius: var(--border-radius);
       font-weight: 700;
-       box-shadow: none !important;
+      box-shadow: none !important;
 
       .mat-panel-title {
         font-weight: 500;

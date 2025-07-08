@@ -1,5 +1,7 @@
 <nav class="navbar">
-  <img class="logo" src="assets/image/logo_Bantotal.png" alt="Logo">
+  <img class="logo"
+     [src]="isDarkMode ? 'assets/image/logo-Bantotal-blanco.png' : 'assets/image/logo-Bantotal-negro.png'"
+     alt="Logo">
 
   <div class="right-section">
     <button class="toggle-theme-button"

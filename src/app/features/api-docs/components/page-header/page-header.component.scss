@@ -7,41 +7,41 @@
   left: var(--sidebar-width);
   right: 0;
   z-index: 1000;
-  background-color: transparent;
+  background-color: var(--bg-color);
   height: var(--title-height);
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
+  transition: height 0.4s ease;
 
   .page-title {
     font-size: 2rem;
     margin: 0;
     color: var(--text-color);
     font-family: var(--font-family);
-    transition: transform 0.3s ease, padding-left 0.3s ease;
     transform-origin: left center;
     padding-left: 4rem;
-
+    transition:
+      transform 0.4s ease,
+      padding-left 0.4s ease,
+      color 0.4s ease;
   }
 
   &.scrolled {
     height: 60px;
-    background-color: var(--bg-color);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-    transition-delay: 0s; // sin delay al achicar
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.4s ease, height 0.4s ease;
 
     .page-title {
-      transform: scale(0.8); // achica sin tocar el layout
+      transform: scale(0.8);
       padding-left: 2.4rem;
     }
   }
 
-  // cuando vuelve al estado normal (se expande), le damos delay
   &:not(.scrolled) {
-    transition-delay: 0.15s;
+    transition-delay: 0s;
+
     .page-title {
-      transition-delay: 0.15s;
+      transition-delay: 0s;
     }
   }
 }
-
