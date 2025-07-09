@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class InhabilitarIntegrantedeunGrupoComponent1750945333432 {
+export class InhabilitarIntegrantedeunGrupoComponent1751987197769 {
   pageTitle        = 'Inhabilitar Integrante de Grupo';
   description      = `Método para inhabilitar un integrante de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.InhabilitarIntegranteGrupo';
@@ -21,7 +21,7 @@ export class InhabilitarIntegrantedeunGrupoComponent1750945333432 {
 
   inputData  = [{ Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió código de grupo' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado' }, { Codigo: '40001', Descripcion: 'No se puede dar de baja integrante porque el grupo conforma una instancia' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió código de grupo' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente' }, { Código: '30014', Descripción: 'No existe registro con el identificador indicado' }, { Código: '40001', Descripción: 'No se puede dar de baja integrante porque el grupo conforma una instancia' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class InhabilitarIntegrantedeunGrupoComponent1750945333432 {
          <bts:clienteUId>156</bts:clienteUId>
       </bts:BTMicrofinanzas.InhabilitarIntegranteGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?InhabilitarIntegranteGrupo=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.InhabilitarIntegranteGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

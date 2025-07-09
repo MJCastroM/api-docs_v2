@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPerfilTransaccionalComponent1750945332936 {
+export class ActualizarPerfilTransaccionalComponent1751987197288 {
   pageTitle        = 'Actualizar Perfil Transaccional';
   description      = `Método para actualizar el perfil transaccional de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ActualizarPerfilTransaccional';
@@ -21,7 +21,7 @@ export class ActualizarPerfilTransaccionalComponent1750945332936 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'sdtPerfilTransaccional', Tipo: '[sBTDatosPerfilTransaccional](#sbtdatosperfiltransaccional)', Comentarios: 'Datos del perfil transaccional.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'UPD\' para este método].' }];
   outputData = [{ Nombre: 'totalCantidadDepositos', Tipo: 'Int', Comentarios: 'Total de movimientos de depósitos.' }, { Nombre: 'totalCantidadRetiros', Tipo: 'Int', Comentarios: 'Total de movimientos de retiros.' }, { Nombre: 'totalMontoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depósitos.' }, { Nombre: 'totalMontoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió la cantidad de depósitos en efectivo.' }, { Codigo: '30003', Descripcion: 'No se recibió el monto de depósitos en efectivo.' }, { Codigo: '30004', Descripcion: 'No se recibió la cantidad de retiros en efectivo.' }, { Codigo: '30005', Descripcion: 'No se recibió el monto de retiros en efectivo.' }, { Codigo: '30006', Descripcion: 'No se recibió el origen de los Fondos.' }, { Codigo: '30007', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30021', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Producto a consultar no existe.' }, { Codigo: '40002', Descripcion: 'El identificador de país [Número de identificador] no existe.' }, { Codigo: '40003', Descripcion: 'El identificador de orígenes de fondo [Número de identificador] no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recibió la cantidad de depósitos en efectivo.' }, { Código: '30003', Descripción: 'No se recibió el monto de depósitos en efectivo.' }, { Código: '30004', Descripción: 'No se recibió la cantidad de retiros en efectivo.' }, { Código: '30005', Descripción: 'No se recibió el monto de retiros en efectivo.' }, { Código: '30006', Descripción: 'No se recibió el origen de los Fondos.' }, { Código: '30007', Descripción: 'La operación ingresada no corresponde a una cuenta vista.' }, { Código: '30021', Descripción: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'Producto a consultar no existe.' }, { Código: '40002', Descripción: 'El identificador de país [Número de identificador] no existe.' }, { Código: '40003', Descripción: 'El identificador de orígenes de fondo [Número de identificador] no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -73,7 +73,7 @@ export class ActualizarPerfilTransaccionalComponent1750945332936 {
          </bts:sdtPerfilTransaccional>
       </bts:BTCuentasVista.ActualizarPerfilTransaccional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ActualizarPerfilTransaccional=\' \
@@ -151,7 +151,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ActualizarPerfilTransaccionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

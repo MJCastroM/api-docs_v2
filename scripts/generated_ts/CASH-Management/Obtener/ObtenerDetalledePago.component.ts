@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePagoComponent1750945331446 {
+export class ObtenerDetalledePagoComponent1751987195747 {
   pageTitle        = 'Obtener Detalle de Pago';
   description      = `Método para obtener la información de líneas de detalle de pago.`;
   pubName    = 'BTCASHManagement.ObtenerDetallePago';
@@ -21,7 +21,7 @@ export class ObtenerDetalledePagoComponent1750945331446 {
 
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo.' }];
   outputData = [{ Nombre: 'cuentaDebito', Tipo: 'Long', Comentarios: 'Operación de débito.' }, { Nombre: 'cantidadLineas', Tipo: 'Int', Comentarios: 'Cantidad de líneas del archivo.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe total.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del pago o cobro.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago o cobro.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del archivo.' }, { Nombre: 'erroresPago', Tipo: 'String', Comentarios: 'Lista de mensajes del cabezal de pago.' }, { Nombre: 'detallePagos', Tipo: '[sBTDetallePago](#sbtdetallepago)', Comentarios: 'Lista de información del archivo con su estado y mensaje.' }];
-  errors     = [{ Codigo: '1030711', Descripcion: 'No se recuperó informacion para el identificador de archivo recibido.' }];
+  errors     = [{ Código: '1030711', Descripción: 'No se recuperó informacion para el identificador de archivo recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetalledePagoComponent1750945331446 {
          <bts:archivoId>104</bts:archivoId>
       </bts:BTCASHManagement.ObtenerDetallePago>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/odwsbt_BTCASHManagement_v1?ObtenerDetallePago\' \
@@ -136,7 +136,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerDetallePagoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

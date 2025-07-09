@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearConyugeComponent1750945334155 {
+export class CrearConyugeComponent1751987198540 {
   pageTitle        = 'Crear Cónyuge';
   description      = `Método para crear una persona de forma reducida y asociarla en una relación de cónyuge con otra.`;
   pubName    = 'BTPersonas.CrearConyuge';
@@ -21,7 +21,7 @@ export class CrearConyugeComponent1750945334155 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'estadoCivilId', Tipo: 'String', Comentarios: 'Identificador del estado civil.' }, { Nombre: 'sdtPersona', Tipo: '[sBTDatosBasicosPersona](#sbtdatosbasicospersona)', Comentarios: 'Datos del cónyuge.' }];
   outputData = [{ Nombre: 'personaUIdConyuge', Tipo: 'Long', Comentarios: 'Identificador único del cónyuge.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el código de estado civil.' }, { Codigo: '40001', Descripcion: 'Debe ingresar País del Documento.' }, { Codigo: '40002', Descripcion: 'El País del Documento no existe.' }, { Codigo: '40003', Descripcion: 'Debe ingresar Tipo de Documento.' }, { Codigo: '40004', Descripcion: 'El Tipo de Documento no existe.' }, { Codigo: '40005', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '40006', Descripcion: 'Número de Documento incorrecto.' }, { Codigo: '40007', Descripcion: 'Debe ingresar Primer Apellido.' }, { Codigo: '40008', Descripcion: 'Debe ingresar Primer Nombre.' }, { Codigo: '40012', Descripcion: 'Debe ingresar Sexo.' }, { Codigo: '40016', Descripcion: 'Caracteres incorrectos en nombre/apellido.' }, { Codigo: '40051', Descripcion: 'La persona ya existe.' }, { Codigo: '70001', Descripcion: 'El estado civil ingresado no admite cónyuge.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió el código de estado civil.' }, { Código: '40001', Descripción: 'Debe ingresar País del Documento.' }, { Código: '40002', Descripción: 'El País del Documento no existe.' }, { Código: '40003', Descripción: 'Debe ingresar Tipo de Documento.' }, { Código: '40004', Descripción: 'El Tipo de Documento no existe.' }, { Código: '40005', Descripción: 'Debe ingresar Nro de Documento.' }, { Código: '40006', Descripción: 'Número de Documento incorrecto.' }, { Código: '40007', Descripción: 'Debe ingresar Primer Apellido.' }, { Código: '40008', Descripción: 'Debe ingresar Primer Nombre.' }, { Código: '40012', Descripción: 'Debe ingresar Sexo.' }, { Código: '40016', Descripción: 'Caracteres incorrectos en nombre/apellido.' }, { Código: '40051', Descripción: 'La persona ya existe.' }, { Código: '70001', Descripción: 'El estado civil ingresado no admite cónyuge.' }];
 
   examples = {
     invocation: { xml: `
@@ -52,7 +52,7 @@ export class CrearConyugeComponent1750945334155 {
          </bts:sdtPersona>
       </bts:BTPersonas.CrearConyuge>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?CrearConyuge=\' \
@@ -102,7 +102,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.CrearConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

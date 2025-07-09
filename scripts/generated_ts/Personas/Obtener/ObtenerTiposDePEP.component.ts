@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDePEPComponent1750945334535 {
+export class ObtenerTiposDePEPComponent1751987198921 {
   pageTitle        = 'Obtener Tipos de PEP';
   description      = `Método para obtener los tipos de personas expuestas políticamente.`;
   pubName    = 'BTPersonas.ObtenerTiposDePEP';
@@ -21,7 +21,7 @@ export class ObtenerTiposDePEPComponent1750945334535 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTiposPEP', Tipo: '[sBTTipoPEP](#sbttipospep)', Comentarios: 'Listado de los tipos de PEP.' }];
-  errors     = [{ Codigo: '40002', Descripcion: 'La guía 8260 no está parametrizada.' }];
+  errors     = [{ Código: '40002', Descripción: 'La guía 8260 no está parametrizada.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposDePEPComponent1750945334535 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerTiposDePEP>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTiposDePEP\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerTiposDePEPResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

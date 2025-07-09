@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBolsillosComponent1750945331787 {
+export class ObtenerBolsillosComponent1751987196159 {
   pageTitle        = 'Obtener Bolsillos';
   description      = `Método para obtener las cuentas bolsillo de un cliente.`;
   pubName    = 'BTClientes.ObtenerBolsillos';
@@ -21,7 +21,7 @@ export class ObtenerBolsillosComponent1750945331787 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtProductosPasivos', Tipo: '[sBTProductoPasivo](#sbtproductopasivo)', Comentarios: 'Listado de bolsillos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cuenta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de cuenta.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerBolsillosComponent1750945331787 {
          <bts:clienteUId>322</bts:clienteUId>
       </bts:BTClientes.ObtenerBolsillos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerBolsillos\' \
@@ -98,7 +98,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerBolsillosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

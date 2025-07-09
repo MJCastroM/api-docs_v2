@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDocumentoDigitalComponent1750945334175 {
+export class ActualizarDocumentoDigitalComponent1751987198557 {
   pageTitle        = 'Actualizar Documento Digital';
   description      = `Método para actualizar el documento digital de una persona.`;
   pubName    = 'BTPersonas.ActualizarDocumentoDigital';
@@ -21,7 +21,7 @@ export class ActualizarDocumentoDigitalComponent1750945334175 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador de instancia de documento.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del documento.' }, { Nombre: 'archivoCodificado', Tipo: 'String', Comentarios: 'Archivo a asociar codificado.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento (en caso que corresponda).' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento (en caso que corresponda).' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de instancia de documento digital.' }, { Codigo: '30002', Descripcion: 'No se recibió nombre.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de persona' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador indicado.' }, { Codigo: '30021', Descripcion: 'Debe ingresar la fecha de emisión del documento.' }, { Codigo: '30022', Descripcion: 'Debe ingresar la fecha de vencimiento del documento.' }, { Codigo: '30130', Descripcion: 'Ocurrió un error al recibir el archivo, puede que el mismo esté corrupto.' }, { Codigo: '31013', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Codigo: '31014', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de instancia de documento digital.' }, { Código: '30002', Descripción: 'No se recibió nombre.' }, { Código: '30004', Descripción: 'No se recibió el identificador de persona' }, { Código: '30013', Descripción: 'No existe registro para el identificador indicado.' }, { Código: '30021', Descripción: 'Debe ingresar la fecha de emisión del documento.' }, { Código: '30022', Descripción: 'Debe ingresar la fecha de vencimiento del documento.' }, { Código: '30130', Descripción: 'Ocurrió un error al recibir el archivo, puede que el mismo esté corrupto.' }, { Código: '31013', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Código: '31014', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ActualizarDocumentoDigitalComponent1750945334175 {
          <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>
       </bts:BTPersonas.ActualizarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarDocumentoDigital\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

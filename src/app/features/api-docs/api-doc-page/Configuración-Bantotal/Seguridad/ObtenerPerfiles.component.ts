@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilesComponent1750945332334 {
+export class ObtenerPerfilesComponent1751987196667 {
   pageTitle        = 'Obtener Perfiles';
   description      = `Método para obtener un listado de los perfiles ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPerfiles';
@@ -21,7 +21,7 @@ export class ObtenerPerfilesComponent1750945332334 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtPerfiles', Tipo: '[sBTPerfil](#sbtperfil)', Comentarios: 'Listado de perfiles.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No existen Perfiles ingresadas en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No existen Perfiles ingresadas en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerPerfilesComponent1750945332334 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerPerfiles>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPerfiles\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPerfilesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoFechaValorComponent1750945332460 {
+export class RegistrarAsientoFechaValorComponent1751987196815 {
   pageTitle        = 'Registrar Asiento Fecha Valor';
   description      = `Método para registrar en el sistema un asiento a una fecha valor determinada.`;
   pubName    = 'BTContabilidad.RegistrarAsientoFechaValor';
@@ -21,7 +21,7 @@ export class RegistrarAsientoFechaValorComponent1750945332460 {
 
   inputData  = [{ Nombre: 'sdtDatosAsiento', Tipo: '[sBTDatosAsiento](#sbtdatosasiento)', Comentarios: 'Datos del movimiento.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha valor del asiento.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos una operación.' }, { Codigo: '30002', Descripcion: 'Debe ingresar la fecha.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de Identificador].' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar al menos una operación.' }, { Código: '30002', Descripción: 'Debe ingresar la fecha.' }, { Código: '30004', Descripción: 'No se recuperó la operación origen para el Identificador: [Número de Identificador].' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -54,7 +54,7 @@ export class RegistrarAsientoFechaValorComponent1750945332460 {
          </bts:sdtDatosAsiento>
          <bts:fecha>2022-11-24</bts:fecha>
       </bts:BTContabilidad.RegistrarAsientoFechaValor>
-   </soapenv:Body>`, 
+   </soapenv:Body>`,
     json: `
 curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?RegistrarAsientoFechaValor=\' \ 
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq> 
       </BTContabilidad.RegistrarAsientoFechaValorResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

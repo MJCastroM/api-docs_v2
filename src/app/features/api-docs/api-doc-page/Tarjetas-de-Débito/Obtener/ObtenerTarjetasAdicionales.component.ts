@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasAdicionalesComponent1750945335625 {
+export class ObtenerTarjetasAdicionalesComponent1751987200229 {
   pageTitle        = 'Obtener Tarjetas Adicionales';
   description      = `Método para obtener las tarjetas adicionales que están asociadas a una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetasAdicionales';
@@ -21,7 +21,7 @@ export class ObtenerTarjetasAdicionalesComponent1750945335625 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }];
   outputData = [{ Nombre: 'sdtTarjetaDebitoAdicionales', Tipo: '[sBDTarjetasDebitoAdicionales](#sbdtarjetadebitoadicional)', Comentarios: 'Datos de la tarjeta de débito.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTarjetasAdicionalesComponent1750945335625 {
          <bts:tarjetaUId>3</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerTarjetasAdicionales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjetasAdicionales=\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTarjetasAdicionalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

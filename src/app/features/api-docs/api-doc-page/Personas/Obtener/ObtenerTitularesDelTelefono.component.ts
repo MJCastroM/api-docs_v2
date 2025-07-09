@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitularesDelTelefonoComponent1750945334543 {
+export class ObtenerTitularesDelTelefonoComponent1751987198929 {
   pageTitle        = 'Obtener Titulares de Teléfono';
   description      = `Método para obtener los titulares de un teléfono.`;
   pubName    = 'BTPersonas.ObtenerTitularesDelTelefono';
@@ -21,7 +21,7 @@ export class ObtenerTitularesDelTelefonoComponent1750945334543 {
 
   inputData  = [{ Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Número de teléfono de la persona.' }];
   outputData = [{ Nombre: 'sdtTitulares', Tipo: '[sBTTitularTelefono](#sbttitulartelefono)', Comentarios: 'Listado de titulares del teléfono.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el número de telefono.' }, { Codigo: '40001', Descripcion: 'No existe número de celular.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el número de telefono.' }, { Código: '40001', Descripción: 'No existe número de celular.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTitularesDelTelefonoComponent1750945334543 {
          <bts:numeroTelefono>099099890</bts:numeroTelefono>
       </bts:BTPersonas.ObtenerTitularesDelTelefono>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTitularesDelTelefono\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerTitularesDelTelefonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

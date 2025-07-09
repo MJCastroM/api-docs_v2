@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPersonaJuridicaComponent1750945333986 {
+export class ActualizarPersonaJuridicaComponent1751987198337 {
   pageTitle        = 'Actualizar Persona Jurídica';
   description      = `Método para actualizar una persona jurídica.`;
   pubName    = 'BTPersonas.ActualizarPersonaJuridica';
@@ -21,7 +21,7 @@ export class ActualizarPersonaJuridicaComponent1750945333986 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtPersonaJuridica', Tipo: '[sBTPersonaJuridica1](#sbtpersonajuridica1)', Comentarios: 'Datos de la persona jurídica.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'No existe persona con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'Debe ingresar país.' }, { Codigo: '40003', Descripcion: 'El país ingresado no existe.' }, { Codigo: '40004', Descripcion: 'Debe ingresar tipo de documento.' }, { Codigo: '40005', Descripcion: 'El tipo de documento ingresado no existe.' }, { Codigo: '40006', Descripcion: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Codigo: '40007', Descripcion: 'Debe ingresar número de documento.' }, { Codigo: '40008', Descripcion: 'Número de documento incorrecto.' }, { Codigo: '40009', Descripcion: 'Debe ingresar razón social.' }, { Codigo: '40010', Descripcion: 'Caracteres incorrectos en razón social.' }, { Codigo: '40011', Descripcion: 'Caracteres incorrectos en nombre reducido.' }, { Codigo: '40012', Descripcion: 'Debe ingresar naturaleza jurídica.' }, { Codigo: '40013', Descripcion: 'La naturaleza jurídica ingresada no existe.' }, { Codigo: '40014', Descripcion: 'Debe ingresar la fecha de constitución.' }, { Codigo: '40015', Descripcion: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Codigo: '40016', Descripcion: 'Debe ingresar tipo de actividad.' }, { Codigo: '40017', Descripcion: 'El tipo de actividad ingresado no existe.' }, { Codigo: '40018', Descripcion: 'Debe ingresar actividad.' }, { Codigo: '40019', Descripcion: 'La actividad ingresada no existe.' }, { Codigo: '40020', Descripcion: 'Debe ingresar país del domicilio.' }, { Codigo: '40021', Descripcion: 'El país del domicilio no existe.' }, { Codigo: '40022', Descripcion: 'Debe ingresar departamento.' }, { Codigo: '40023', Descripcion: 'El departamento no existe.' }, { Codigo: '40024', Descripcion: 'Debe ingresar localidad.' }, { Codigo: '40025', Descripcion: 'La localidad no existe.' }, { Codigo: '40026', Descripcion: 'El barrio no existe.' }, { Codigo: '40027', Descripcion: 'Correo electrónico no valido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30013', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'No existe persona con los datos ingresados.' }, { Código: '40002', Descripción: 'Debe ingresar país.' }, { Código: '40003', Descripción: 'El país ingresado no existe.' }, { Código: '40004', Descripción: 'Debe ingresar tipo de documento.' }, { Código: '40005', Descripción: 'El tipo de documento ingresado no existe.' }, { Código: '40006', Descripción: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Código: '40007', Descripción: 'Debe ingresar número de documento.' }, { Código: '40008', Descripción: 'Número de documento incorrecto.' }, { Código: '40009', Descripción: 'Debe ingresar razón social.' }, { Código: '40010', Descripción: 'Caracteres incorrectos en razón social.' }, { Código: '40011', Descripción: 'Caracteres incorrectos en nombre reducido.' }, { Código: '40012', Descripción: 'Debe ingresar naturaleza jurídica.' }, { Código: '40013', Descripción: 'La naturaleza jurídica ingresada no existe.' }, { Código: '40014', Descripción: 'Debe ingresar la fecha de constitución.' }, { Código: '40015', Descripción: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Código: '40016', Descripción: 'Debe ingresar tipo de actividad.' }, { Código: '40017', Descripción: 'El tipo de actividad ingresado no existe.' }, { Código: '40018', Descripción: 'Debe ingresar actividad.' }, { Código: '40019', Descripción: 'La actividad ingresada no existe.' }, { Código: '40020', Descripción: 'Debe ingresar país del domicilio.' }, { Código: '40021', Descripción: 'El país del domicilio no existe.' }, { Código: '40022', Descripción: 'Debe ingresar departamento.' }, { Código: '40023', Descripción: 'El departamento no existe.' }, { Código: '40024', Descripción: 'Debe ingresar localidad.' }, { Código: '40025', Descripción: 'La localidad no existe.' }, { Código: '40026', Descripción: 'El barrio no existe.' }, { Código: '40027', Descripción: 'Correo electrónico no valido.' }];
 
   examples = {
     invocation: { xml: `
@@ -72,7 +72,7 @@ export class ActualizarPersonaJuridicaComponent1750945333986 {
          </bts:sdtPersonaJuridica>
       </bts:BTPersonas.ActualizarPersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarPersonaJuridica\' \
@@ -145,7 +145,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarPersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
 	 "Btinreq": { 

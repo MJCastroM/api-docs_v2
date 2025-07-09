@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProgramaParticularComponent1750945333911 {
+export class ObtenerProgramaParticularComponent1751987198246 {
   pageTitle        = 'Obtener Programa Particular';
   description      = `Método para obtener el programa particular a ejecutar según el programa estándar ingresado.`;
   pubName    = 'BTParametrosBase.ObtenerProgramaParticular';
@@ -21,7 +21,7 @@ export class ObtenerProgramaParticularComponent1750945333911 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Código de empresa [Hidden].' }, { Nombre: 'programaStandard', Tipo: 'String', Comentarios: 'Nombre de programa Standard.' }];
   outputData = [{ Nombre: 'sdtProgramaParticular', Tipo: '[sBTProgramaParticular](#sbtprogramaparticular)', Comentarios: 'Datos del programa particular.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de empresa.' }, { Codigo: '30002', Descripcion: 'No se recibió el programa standard.' }, { Codigo: '40001', Descripcion: 'No existe programa particular para el programa standard ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de empresa.' }, { Código: '30002', Descripción: 'No se recibió el programa standard.' }, { Código: '40001', Descripción: 'No existe programa particular para el programa standard ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerProgramaParticularComponent1750945333911 {
          <bts:programaStandard>BLOCKING1</bts:programaStandard>
       </bts:BTParametrosBase.ObtenerProgramaParticular>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerProgramaParticular \
@@ -85,7 +85,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerProgramaParticularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

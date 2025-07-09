@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaComponent1750945332681 {
+export class ObtenerEstadodeCuentaComponent1751987197002 {
   pageTitle        = 'Obtener Estado de Cuenta';
   description      = `Método para obtener el estado de cuenta de un producto de cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerEstadoDeCuenta';
@@ -39,7 +39,7 @@ export class ObtenerEstadodeCuentaComponent1750945332681 {
          <bts:operacionUId>9</bts:operacionUId>
       </bts:BTCuentasCorrientes.ObtenerEstadoDeCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerEstadoDeCuenta=\' \
@@ -102,7 +102,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerEstadoDeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

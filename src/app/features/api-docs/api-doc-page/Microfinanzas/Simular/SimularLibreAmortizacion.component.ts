@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularLibreAmortizacionComponent1750945333574 {
+export class SimularLibreAmortizacionComponent1751987197892 {
   pageTitle        = 'Simular Libre Amortización';
   description      = `Método para simular el alta de un préstamo libre amortización para un crédito individual.`;
   pubName    = 'BTMicrofinanzas.SimularLibreAmortizacion';
@@ -21,7 +21,7 @@ export class SimularLibreAmortizacionComponent1750945333574 {
 
   inputData  = [{ Nombre: 'sBTSimulacionLibreAmortizacion', Tipo: '[sBTSimulacionLibreAmortizacion](#sbtsimulacionlibreamortizacion)', Comentarios: 'Datos de la simulación.' }, { Nombre: 'generaCuotaInteres', Tipo: 'String', Comentarios: '[Hidden: Valores \'S\'/\'N\' Indica si se generan cuotas de intereses].' }];
   outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionPrestamoLA](#sbtsimulacionprestamola)', Comentarios: 'Datos del préstamo simulado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador.' }, { Codigo: '30005', Descripcion: 'Debe ingresar el monto del préstamo.' }, { Codigo: '30006', Descripcion: 'No se recibió la lista de cuotas de capital.' }, { Codigo: '30007', Descripcion: 'No se recibió la lista de cuotas de interés.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de solicitud.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador.' }, { Código: '30005', Descripción: 'Debe ingresar el monto del préstamo.' }, { Código: '30006', Descripción: 'No se recibió la lista de cuotas de capital.' }, { Código: '30007', Descripción: 'No se recibió la lista de cuotas de interés.' }];
 
   examples = {
     invocation: { xml: `
@@ -60,7 +60,7 @@ export class SimularLibreAmortizacionComponent1750945333574 {
          </bts:sBTSimulacionLibreAmortizacion>
       </bts:BTMicrofinanzas.SimularLibreAmortizacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularLibreAmortizacion \
@@ -189,7 +189,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.SimularLibreAmortizacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

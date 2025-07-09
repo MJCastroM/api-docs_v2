@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeOtroBancoComponent1750945331103 {
+export class DepositarChequeElectronicodeOtroBancoComponent1751987195437 {
   pageTitle        = 'Depositar Cheque Electrónico de Otro Banco';
   description      = `Método para depositar un cheque electrónico de otro banco.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco';
@@ -21,7 +21,7 @@ export class DepositarChequeElectronicodeOtroBancoComponent1750945331103 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'numeroCheque', Tipo: 'Int', Comentarios: 'Número de cheque a emitir.' }, { Nombre: 'bancoLibradorId', Tipo: 'Short', Comentarios: 'Identificador de banco librador.' }, { Nombre: 'sucursalLibradoraId', Tipo: 'Short', Comentarios: 'Identificador de sucursal del banco librador.' }, { Nombre: 'cuentaDeCheque', Tipo: 'String', Comentarios: 'Cuenta del cheque a depositar.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class DepositarChequeElectronicodeOtroBancoComponent1750945331103 {
          <bts:cuentaDeCheque>32</bts:cuentaDeCheque> 
       </bts:BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBanco> 
    </soapenv:Body> 
-</soapenv:Envelope></soapenv:Envelope>`, 
+</soapenv:Envelope></soapenv:Envelope>`,
     json: `
 curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.?DepositarChequeElectronicoDeOtroBanco\' \ 
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq> 
       </BTCuentasCorrientes.DepositarChequeElectronicoDeOtroBancoResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

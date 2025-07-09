@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularConCronogramaComponent1750945333227 {
+export class SimularConCronogramaComponent1751987197596 {
   pageTitle        = 'Simular Con Cronograma';
   description      = `Método para simular el alta de un depósito a plazo con cronograma.`;
   pubName    = 'BTDepositoAPlazo.SimularConCronograma';
@@ -35,7 +35,7 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'capital', Tipo: 'Double', Comentarios: 'Importe capital.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'periodicidad', Tipo: 'Int', Comentarios: 'Período entre pagos de intereses.' }, { Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)' }];
   outputData = [{ Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'sBTSimulacionDepositoAPlazo', Tipo: '[sBTSimulacionDepositoAPlazo](#sbtsimulaciondepositoaplazo)', Comentarios: 'Datos de simulación del depósito.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del Producto.' }, { Codigo: '30003', Descripcion: 'No se recibió el capital del Producto.' }, { Codigo: '30004', Descripcion: 'No se recibió el plazo del Producto.' }, { Codigo: '40001', Descripcion: 'El plazo ingresado es menor al plazo mínimo parametrizado para el producto.' }, { Codigo: '40003', Descripcion: 'El plazo ingresado es mayor al plazo máximo parametrizado para el producto.' }, { Codigo: '40004', Descripcion: 'El monto ingresado es menor al monto mínimo parametrizado para el producto.' }, { Codigo: '40005', Descripcion: 'El monto ingresado es mayor al monto máximo parametrizado para el producto.' }, { Codigo: '40006', Descripcion: 'No se encontró Tasa para el producto a Simular.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador del Producto.' }, { Código: '30003', Descripción: 'No se recibió el capital del Producto.' }, { Código: '30004', Descripción: 'No se recibió el plazo del Producto.' }, { Código: '40001', Descripción: 'El plazo ingresado es menor al plazo mínimo parametrizado para el producto.' }, { Código: '40003', Descripción: 'El plazo ingresado es mayor al plazo máximo parametrizado para el producto.' }, { Código: '40004', Descripción: 'El monto ingresado es menor al monto mínimo parametrizado para el producto.' }, { Código: '40005', Descripción: 'El monto ingresado es mayor al monto máximo parametrizado para el producto.' }, { Código: '40006', Descripción: 'No se encontró Tasa para el producto a Simular.' }];
 
   examples = {
     invocation: { xml: `
@@ -58,7 +58,7 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          <bts:sBTDatosExtendidos/>
       </bts:BTDepositosAPlazo.SimularConCronograma>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -318,7 +318,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.SimularConCronograma>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarInstruccionComponent1750945333114 {
+export class ModificarInstruccionComponent1751987197456 {
   pageTitle        = 'Modificar Instrucción';
   description      = `Método para modificar la instrucción al vencimiento de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ModificarInstruccion';
@@ -28,7 +28,7 @@ Importe específico | 3.
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'depositoUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación del depósito.' }, { Nombre: 'cuentaUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de la cuenta.' }, { Nombre: 'accion', Tipo: 'Short', Comentarios: 'Especifica la nueva acción que tomará el depósito al vencimiento.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación del depósito.' }, { Codigo: '30003', Descripcion: 'No se recibió la instrucción al vencimiento.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del depósito para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'La operación asociada al identificador: [Número de identificador] no pertenece a un depósito a plazo.' }, { Codigo: '30007', Descripcion: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '30011', Descripcion: 'No se recibió el identificador de la operación de la cuenta.' }, { Codigo: '30012', Descripcion: 'No se recuperó la operación de la cuenta para el identificador: [Número de identificador].' }, { Codigo: '30013', Descripcion: 'La operación asociada al identificador: [Número de identificador] no pertenece a un producto cuenta.' }, { Codigo: '40001', Descripcion: 'Se debe indicar el código de instrucción al vencimiento aplicar.' }, { Codigo: '40002', Descripcion: 'El código de instrucción al vencimiento ingresado es incorrecto.' }, { Codigo: '40003', Descripcion: 'No se encontró instrucción al vencimiento para el depósito ingresado.' }, { Codigo: '40004', Descripcion: 'La instrucción al vencimiento a aplicar es igual a la que tiene el depósito.' }, { Codigo: '40005', Descripcion: 'La operación donde se abonarían los intereses no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la operación del depósito.' }, { Código: '30003', Descripción: 'No se recibió la instrucción al vencimiento.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación del depósito para el identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'La operación asociada al identificador: [Número de identificador] no pertenece a un depósito a plazo.' }, { Código: '30007', Descripción: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador].' }, { Código: '30011', Descripción: 'No se recibió el identificador de la operación de la cuenta.' }, { Código: '30012', Descripción: 'No se recuperó la operación de la cuenta para el identificador: [Número de identificador].' }, { Código: '30013', Descripción: 'La operación asociada al identificador: [Número de identificador] no pertenece a un producto cuenta.' }, { Código: '40001', Descripción: 'Se debe indicar el código de instrucción al vencimiento aplicar.' }, { Código: '40002', Descripción: 'El código de instrucción al vencimiento ingresado es incorrecto.' }, { Código: '40003', Descripción: 'No se encontró instrucción al vencimiento para el depósito ingresado.' }, { Código: '40004', Descripción: 'La instrucción al vencimiento a aplicar es igual a la que tiene el depósito.' }, { Código: '40005', Descripción: 'La operación donde se abonarían los intereses no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -49,7 +49,7 @@ Importe específico | 3.
          <bts:accion>2</bts:accion>
       </bts:BTDepositosAPlazo.ModificarInstruccion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ModificarInstruccion=\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ModificarInstruccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

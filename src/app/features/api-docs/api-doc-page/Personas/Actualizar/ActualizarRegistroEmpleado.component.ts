@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750945334010 {
+export class ActualizarRegistroEmpleadoComponent1751987198361 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si una persona es empleado de la institución, así como la fecha de ingreso si corresponde.`;
   pubName    = 'BTPersonas.ActualizarRegistroEmpleado';
@@ -21,7 +21,7 @@ export class ActualizarRegistroEmpleadoComponent1750945334010 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'empleado', Tipo: 'String', Comentarios: '¿Es empleado de la institución? (S/N).' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de ingreso.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de baja' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió si la persona es un empleado de la institución o no.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30005', Descripcion: 'El valor de empleado no es correcto.' }, { Codigo: '40001', Descripcion: 'La persona no existe.' }, { Codigo: '40002', Descripcion: 'No se encontró una cuenta válida para la persona ingresada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30002', Descripción: 'No se recibió si la persona es un empleado de la institución o no.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30005', Descripción: 'El valor de empleado no es correcto.' }, { Código: '40001', Descripción: 'La persona no existe.' }, { Código: '40002', Descripción: 'No se encontró una cuenta válida para la persona ingresada.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ActualizarRegistroEmpleadoComponent1750945334010 {
          <bts:fechaBaja></bts:fechaBaja>
       </bts:BTPersonas.ActualizarRegistroEmpleado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarRegistroEmpleado\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarRegistroEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneraldeProcesoComponent1750945333895 {
+export class ObtenerOpcionGeneraldeProcesoComponent1751987198225 {
   pageTitle        = 'Obtener Opción General de Proceso';
   description      = `Método para obtener los datos de una determinada opción general de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralDeProceso';
@@ -21,7 +21,7 @@ export class ObtenerOpcionGeneraldeProcesoComponent1750945333895 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Código de empresa [Hidden].' }, { Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de la opción general de procesos.' }];
   outputData = [{ Nombre: 'sdtOpcionGeneralDeProceso', Tipo: '[sBTOpcionGeneral](#sbtopciongeneral)', Comentarios: 'Datos de la opción general de procesos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de opción general.' }, { Codigo: '40001', Descripcion: 'No existe la opción general con el identificador ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de opción general.' }, { Código: '40001', Descripción: 'No existe la opción general con el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerOpcionGeneraldeProcesoComponent1750945333895 {
          <bts:codigo>2850</bts:codigo>
       </bts:BTParametrosBase.ObtenerOpcionGeneralDeProceso>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuia \
@@ -83,7 +83,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerOpcionGeneralDeProcesoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

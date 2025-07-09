@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BloquearSaldoComponent1750945332910 {
+export class BloquearSaldoComponent1751987197262 {
   pageTitle        = 'Bloquear Saldo';
   description      = `Método para realizar un bloqueo de saldo.`;
   pubName    = 'BTCuentasVista.BloquearSaldo';
@@ -21,7 +21,7 @@ export class BloquearSaldoComponent1750945332910 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe a bloquear.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha vencimiento de bloqueo.' }, { Nombre: 'motivo', Tipo: 'String', Comentarios: 'Motivo del bloqueo.' }];
   outputData = [{ Nombre: 'idBloqueo', Tipo: 'Long', Comentarios: 'Identificador de bloqueo.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }, { Nombre: 'saldo', Tipo: 'Double', Comentarios: 'Saldo disponible de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la Operación a bloquear.' }, { Codigo: '30002', Descripcion: 'No se encontró el Id de Operación para la Cuenta Vista a bloquear.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del Cliente.' }, { Codigo: '30004', Descripcion: 'No se encontró el Id del Cliente.' }, { Codigo: '30005', Descripcion: 'La Cuenta Vista a bloquear no pertenece al Cliente.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la Operación a bloquear.' }, { Código: '30002', Descripción: 'No se encontró el Id de Operación para la Cuenta Vista a bloquear.' }, { Código: '30003', Descripción: 'No se recibió el identificador del Cliente.' }, { Código: '30004', Descripción: 'No se encontró el Id del Cliente.' }, { Código: '30005', Descripción: 'La Cuenta Vista a bloquear no pertenece al Cliente.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class BloquearSaldoComponent1750945332910 {
          <bts:motivo>Motivo Bloqueo 01</bts:motivo>
       </bts:BTCuentasVista.BloquearSaldo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -72,7 +72,7 @@ export class BloquearSaldoComponent1750945332910 {
          </Btoutreq>
       </BTCuentasVista.BloquearSaldoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

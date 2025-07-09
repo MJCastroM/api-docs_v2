@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearListaComponent1750945333238 {
+export class CrearListaComponent1751987197613 {
   pageTitle        = 'Crear Lista';
   description      = `Método para crear una lista de documentos a descontar.`;
   pubName    = 'BTDescuentoDocumentos.CrearLista';
@@ -21,7 +21,7 @@ export class CrearListaComponent1750945333238 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'sdtListaDocumentos', Tipo: '[sBTDescuentoDocumento](#sbtdescuentodocumento)', Comentarios: 'Lista de documentos.' }, { Nombre: 'montoADescontar', Tipo: 'Double', Comentarios: 'Monto total a descontar.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa para aplicar.' }, { Nombre: 'porcentajeAforo', Tipo: 'Double', Comentarios: 'Porcentaje de aforo.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }];
   outputData = [{ Nombre: 'listaUId', Tipo: 'Long', Comentarios: 'Identificador de lista.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de cuenta.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -55,7 +55,7 @@ export class CrearListaComponent1750945333238 {
          <bts:fechaValor>2018-11-20</bts:fechaValor>
       </bts:BTDescuentoDocumentos.CrearLista>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?CrearLista=\' \
@@ -110,7 +110,7 @@ curl -X POST \
          </Btoutreq>
       </BTDescuentoDocumentos.CrearListaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

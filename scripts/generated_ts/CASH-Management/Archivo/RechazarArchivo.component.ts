@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarArchivoComponent1750945331387 {
+export class RechazarArchivoComponent1751987195698 {
   pageTitle        = 'Rechazar Archivo';
   description      = `Método para rechazar órdenes del archivo.`;
   pubName    = 'BTCASHManagement.RechazarArchivo';
@@ -21,7 +21,7 @@ export class RechazarArchivoComponent1750945331387 {
 
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo.' }];
   outputData = [];
-  errors     = [{ Codigo: '1030723', Descripcion: 'No se encontraron ordenes para rechazar para el identificador recibido.' }, { Codigo: '1030724', Descripcion: 'El estado de la orden, no permite rechazar.' }];
+  errors     = [{ Código: '1030723', Descripción: 'No se encontraron ordenes para rechazar para el identificador recibido.' }, { Código: '1030724', Descripción: 'El estado de la orden, no permite rechazar.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class RechazarArchivoComponent1750945331387 {
          <bts:archivoId>28</bts:archivoId>
       </bts:BTCASHManagement.RechazarArchivo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?RechazarArchivo=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.RechazarArchivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

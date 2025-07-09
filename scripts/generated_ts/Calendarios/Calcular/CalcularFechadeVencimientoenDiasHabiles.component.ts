@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularFechadeVencimientoenDiasHabilesComponent1750945331281 {
+export class CalcularFechadeVencimientoenDiasHabilesComponent1751987195590 {
   pageTitle        = 'Calcular Fecha de Vencimiento en Días Hábiles';
   description      = `Método para calcular la fecha de vencimiento en días hábiles de un plazo, a partir de la fecha de inicio.`;
   pubName    = 'BTCalendarios.CalcularFechaVencimientoDiasHabiles';
@@ -42,7 +42,7 @@ export class CalcularFechadeVencimientoenDiasHabilesComponent1750945331281 {
          <bts:tipoVencimiento>A</bts:tipoVencimiento>
       </bts:BTCalendarios.CalcularFechaVencimientoDiasHabiles>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?CalcularFechaVencimientoDiasHabiles\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.CalcularFechaVencimientoDiasHabilesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNaturalezasJuridicasComponent1750945334434 {
+export class ObtenerNaturalezasJuridicasComponent1751987198787 {
   pageTitle        = 'Obtener Naturalezas Jurídicas';
   description      = `Método para obtener un listado de las naturalezas jurídicas ingresadas.`;
   pubName    = 'BTPersonas.ObtenerNaturalezasJuridicas';
@@ -38,7 +38,7 @@ export class ObtenerNaturalezasJuridicasComponent1750945334434 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerNaturalezasJuridicas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerNaturalezasJuridicas\' \
@@ -115,7 +115,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerNaturalezasJuridicasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

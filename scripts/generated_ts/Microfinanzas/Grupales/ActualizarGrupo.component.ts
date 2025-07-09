@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarGrupoComponent1750945333395 {
+export class ActualizarGrupoComponent1751987197745 {
   pageTitle        = 'Actualizar Grupo';
   description      = `Método para actualizar la información de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ActualizarGrupo';
@@ -21,7 +21,7 @@ export class ActualizarGrupoComponent1750945333395 {
 
   inputData  = [{ Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo.' }, { Nombre: 'sdtDetalleGrupo', Tipo: '[sBTDetalleGrupo](#sbtdetallegrupo)', Comentarios: 'Datos del grupo.' }];
   outputData = [];
-  errors     = [{ Codigo: '40002', Descripcion: 'El tipo de grupo no existe.' }, { Codigo: '40003', Descripcion: 'Debe ingresar nombre de grupo.' }, { Codigo: '40013', Descripcion: 'El grupo ingresado no existe.' }, { Codigo: '40005', Descripcion: 'Fecha de Vigencia Desde debe ser mayor o igual a Fecha de Creación.' }, { Codigo: '40006', Descripcion: 'Debe ingresar Fecha de Vigencia Hasta.' }, { Codigo: '40007', Descripcion: 'Fecha de Vigencia Hasta debe ser mayor a Fecha Vigencia Desde.' }];
+  errors     = [{ Código: '40002', Descripción: 'El tipo de grupo no existe.' }, { Código: '40003', Descripción: 'Debe ingresar nombre de grupo.' }, { Código: '40013', Descripción: 'El grupo ingresado no existe.' }, { Código: '40005', Descripción: 'Fecha de Vigencia Desde debe ser mayor o igual a Fecha de Creación.' }, { Código: '40006', Descripción: 'Debe ingresar Fecha de Vigencia Hasta.' }, { Código: '40007', Descripción: 'Fecha de Vigencia Hasta debe ser mayor a Fecha Vigencia Desde.' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ export class ActualizarGrupoComponent1750945333395 {
          </bts:sdtDetalleGrupo>
       </bts:BTMicrofinanzas.ActualizarGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ActualizarGrupo=\' \
@@ -113,7 +113,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ActualizarGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

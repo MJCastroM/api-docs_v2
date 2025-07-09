@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerConceptoComponent1750945334276 {
+export class ObtenerConceptoComponent1751987198645 {
   pageTitle        = 'Obtener Concepto';
   description      = `Método para obtener los conceptos de los programas de personas.`;
   pubName    = 'BTPersonas.ObtenerConcepto';
@@ -21,7 +21,7 @@ export class ObtenerConceptoComponent1750945334276 {
 
   inputData  = [{ Nombre: 'programa', Tipo: 'String', Comentarios: 'Nombre del programa.' }, { Nombre: 'conceptoId', Tipo: 'Long', Comentarios: 'Identificador del concepto.' }];
   outputData = [{ Nombre: 'sdtValorCampo', Tipo: '[sBTValorCampo](#sbtvalorcampo)', Comentarios: 'Listado de conceptos del programa.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el nombre del programa.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del campo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el nombre del programa.' }, { Código: '30002', Descripción: 'No se recibió el identificador del campo.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerConceptoComponent1750945334276 {
          <bts:conceptoId>11</bts:conceptoId>
       </bts:BTPersonas.ObtenerConcepto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerConcepto=\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerConceptoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

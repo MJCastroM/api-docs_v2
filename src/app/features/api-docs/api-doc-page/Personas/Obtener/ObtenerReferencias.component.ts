@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerReferenciasComponent1750945334489 {
+export class ObtenerReferenciasComponent1751987198865 {
   pageTitle        = 'Obtener Referencias';
   description      = `Método para obtener los datos de las referencias de una persona.`;
   pubName    = 'BTPersonas.ObtenerReferencias';
@@ -21,7 +21,7 @@ export class ObtenerReferenciasComponent1750945334489 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtReferencias', Tipo: '[sBTReferencia](#sbtreferencia)', Comentarios: 'Listado de referencias.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Identificador de persona requerido.' }, { Codigo: '30002', Descripcion: 'No existe persona con el identificador ingresado.' }, { Codigo: '40001', Descripcion: 'No existe Referencias para la persona en consulta.' }];
+  errors     = [{ Código: '30001', Descripción: 'Identificador de persona requerido.' }, { Código: '30002', Descripción: 'No existe persona con el identificador ingresado.' }, { Código: '40001', Descripción: 'No existe Referencias para la persona en consulta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerReferenciasComponent1750945334489 {
          <bts:personaUId>51</bts:personaUId>
       </bts:BTPersonas.ObtenerReferencias>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerReferencias\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerReferenciasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

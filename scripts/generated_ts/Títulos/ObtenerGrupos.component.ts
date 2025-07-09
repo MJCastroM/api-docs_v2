@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGruposComponent1750945335758 {
+export class ObtenerGruposComponent1751987200394 {
   pageTitle        = 'Obtener Grupos';
   description      = `Método para obtener los grupos de papeles parametrizados.`;
   pubName    = 'BTTitulos.ObtenerGrupos';
@@ -21,7 +21,7 @@ export class ObtenerGruposComponent1750945335758 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtGrupos', Tipo: '[sBTGrupo](#sbtgrupo)', Comentarios: 'Listado de grupos.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No hay grupos de papeles parametrizados.' }];
+  errors     = [{ Código: '40001', Descripción: 'No hay grupos de papeles parametrizados.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerGruposComponent1750945335758 {
          </bts:Btinreq>
       </bts:BTTitulos.ObtenerGrupos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ObtenerGrupos=\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTTitulos.ObtenerGruposResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

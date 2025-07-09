@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentidadesdeGeneroComponent1750945334396 {
+export class ObtenerIdentidadesdeGeneroComponent1751987198762 {
   pageTitle        = 'Obtener Identidades de Género';
   description      = `Método para obtener un listado de las identidades de género ingresadas en el sistema.`;
   pubName    = 'BTPersonas.ObtenerIdentidadesDeGenero';
@@ -38,7 +38,7 @@ export class ObtenerIdentidadesdeGeneroComponent1750945334396 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerIdentidadesDeGenero>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -82,7 +82,7 @@ export class ObtenerIdentidadesdeGeneroComponent1750945334396 {
          </Btoutreq>
       </BTPersonas.ObtenerIdentidadesDeGeneroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

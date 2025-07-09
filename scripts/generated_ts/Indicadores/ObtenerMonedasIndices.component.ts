@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasIndicesComponent1750945333306 {
+export class ObtenerMonedasIndicesComponent1751987197698 {
   pageTitle        = 'Obtener Monedas Indices';
   description      = `Método para obtener las monedas e índices en funcionamiento.`;
   pubName    = 'BTIndicadores.ObtenerMonedasIndices';
@@ -38,7 +38,7 @@ export class ObtenerMonedasIndicesComponent1750945333306 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerMonedasIndices>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerMonedasIndices\' \
@@ -126,7 +126,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerMonedasIndicesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

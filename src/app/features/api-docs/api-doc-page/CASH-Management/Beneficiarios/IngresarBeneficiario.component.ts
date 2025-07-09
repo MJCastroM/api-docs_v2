@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class IngresarBeneficiarioComponent1750945331402 {
+export class IngresarBeneficiarioComponent1751987195704 {
   pageTitle        = 'Ingresar Beneficiario';
   description      = `Método para ingresar un beneficiario a la agenda.`;
   pubName    = 'BTCASHManagement.IngresarBeneficiario';
@@ -21,7 +21,7 @@ export class IngresarBeneficiarioComponent1750945331402 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del contrato CASH del cliente.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio de pago CASH.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'agendaId', Tipo: 'Short', Comentarios: 'Identificador del tipo de agenda.' }, { Nombre: 'beneficiarioDatos', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Datos de Beneficiario con sus valores.' }];
   outputData = [{ Nombre: 'contratoIdO', Tipo: 'Int', Comentarios: 'Identificador del Contrato CASH.' }, { Nombre: 'servicioIdO', Tipo: 'Short', Comentarios: 'Servicio de Pago CASH.' }, { Nombre: 'agendaIdO', Tipo: 'Short', Comentarios: 'Identificador del tipo de agenda.' }, { Nombre: 'beneficiarioId', Tipo: 'String', Comentarios: 'Se devuelve el Id que identifica el Beneficiario.' }, { Nombre: 'beneficiarioCorr', Tipo: 'Int', Comentarios: 'Correlativo asignado en la Agenda al nuevo Beneficiario.' }];
-  errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030770', Descripcion: 'No se recupero información para la cuenta recibida.' }, { Codigo: '1030774', Descripcion: 'No se recibió Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor.' }, { Codigo: '1030777', Descripcion: 'Error al validar Beneficiario.' }];
+  errors     = [{ Código: '1030701', Descripción: 'El Servicio no existe.' }, { Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030770', Descripción: 'No se recupero información para la cuenta recibida.' }, { Código: '1030774', Descripción: 'No se recibió Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor.' }, { Código: '1030777', Descripción: 'Error al validar Beneficiario.' }];
 
   examples = {
     invocation: { xml: `
@@ -80,7 +80,7 @@ export class IngresarBeneficiarioComponent1750945331402 {
 			</bts:beneficiarioDatos>
 		</bts:BTCASHManagement.IngresarBeneficiario>
 	</soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?IngresarBeneficiario=\' \
@@ -168,7 +168,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.IngresarBeneficiarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

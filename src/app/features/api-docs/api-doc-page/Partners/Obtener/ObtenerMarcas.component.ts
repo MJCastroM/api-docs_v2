@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMarcasComponent1750945333764 {
+export class ObtenerMarcasComponent1751987198065 {
   pageTitle        = 'Obtener Marcas';
   description      = `Método para retornar las marcas de los vehículos.`;
   pubName    = 'BTPartners.ObtenerMarcas';
@@ -21,7 +21,7 @@ export class ObtenerMarcasComponent1750945333764 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }];
   outputData = [{ Nombre: 'sdtMarcas', Tipo: '[sBTMarca](#sbtmarca)', Comentarios: 'Colección de las marcas de vehículos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30002', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30003', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30012', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30013', Descripcion: 'No se recibió vendedor.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió Partner ni canal.' }, { Código: '30002', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30003', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30012', Descripción: 'No se recibió punto de venta.' }, { Código: '30013', Descripción: 'No se recibió vendedor.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ObtenerMarcasComponent1750945333764 {
          </bts:sdtPartner>
       </bts:BTPartners.ObtenerMarcas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerMarcas\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerMarcasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750945332484 {
+export class ContratarComponent1751987196847 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar una nueva cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.Contratar';
@@ -21,7 +21,7 @@ export class ContratarComponent1750945332484 {
 
   inputData  = [{ Nombre: 'cuentaPrincipalUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cuenta principal.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único del producto.' }, { Nombre: 'nombreSubCuenta', Tipo: 'String', Comentarios: 'Nombre de la sub cuenta.' }, { Nombre: 'metaAhorro', Tipo: 'Double', Comentarios: 'Monto de la meta de ahorro.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de la Cuenta principal.' }, { Codigo: '30002', Descripcion: 'No se recuperó la clave de operación para el Identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de producto.' }, { Codigo: '30004', Descripcion: 'No existe registro para el identificador único de producto.' }, { Codigo: '30005', Descripcion: 'El producto ingresado no corresponde a una cuenta bolsillo.' }, { Codigo: '30011', Descripcion: 'Cuenta principal no es un producto admitido.' }, { Codigo: '30012', Descripcion: 'Debe indicar nombre de subcuenta.' }, { Codigo: '30013', Descripcion: 'Debe indicar meta de ahorro.' }, { Codigo: '30019', Descripcion: 'Superó cantidad máxima de cuentas bolsillos.' }, { Codigo: '30020', Descripcion: 'No existe cuenta de acreditación asociada.' }, { Codigo: '30021', Descripcion: 'Cuenta principal no permite operar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de la Cuenta principal.' }, { Código: '30002', Descripción: 'No se recuperó la clave de operación para el Identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'No se recibió el identificador único de producto.' }, { Código: '30004', Descripción: 'No existe registro para el identificador único de producto.' }, { Código: '30005', Descripción: 'El producto ingresado no corresponde a una cuenta bolsillo.' }, { Código: '30011', Descripción: 'Cuenta principal no es un producto admitido.' }, { Código: '30012', Descripción: 'Debe indicar nombre de subcuenta.' }, { Código: '30013', Descripción: 'Debe indicar meta de ahorro.' }, { Código: '30019', Descripción: 'Superó cantidad máxima de cuentas bolsillos.' }, { Código: '30020', Descripción: 'No existe cuenta de acreditación asociada.' }, { Código: '30021', Descripción: 'Cuenta principal no permite operar.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ContratarComponent1750945332484 {
          <bts:metaAhorro>10000</bts:metaAhorro>
       </bts:BTCuentasBolsillo.Contratar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Contratar\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.ContratarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

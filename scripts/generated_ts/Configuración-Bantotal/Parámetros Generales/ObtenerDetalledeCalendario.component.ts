@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendarioComponent1750945332202 {
+export class ObtenerDetalledeCalendarioComponent1751987196539 {
   pageTitle        = 'Obtener Detalle de Calendario';
   description      = `Método para obtener el detalle de los días de un determinado calendario.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendario';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeCalendarioComponent1750945332202 {
 
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha de inicio de visualización de calendario.' }, { Nombre: 'fechaFin', Tipo: 'Date', Comentarios: 'Fecha de fin de visualización de calendario.' }];
   outputData = [{ Nombre: 'descripcionCalendario', Tipo: 'String', Comentarios: 'Descripción del calendario.' }, { Nombre: 'sdtDetalleCalendario', Tipo: '[sBTDiaCalendario](#sbtdiacalendario)', Comentarios: 'Detalle de la consulta del calendario.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de calendario.' }, { Codigo: '30002', Descripcion: 'No se recibió fecha de inicio.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha de fin.' }, { Codigo: '40001', Descripcion: 'No existe calendario con el identificador ingresado.' }, { Codigo: '40002', Descripcion: 'No se pudo obtener detalle para los datos ingresados ingresados.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de calendario.' }, { Código: '30002', Descripción: 'No se recibió fecha de inicio.' }, { Código: '30003', Descripción: 'No se recibió fecha de fin.' }, { Código: '40001', Descripción: 'No existe calendario con el identificador ingresado.' }, { Código: '40002', Descripción: 'No se pudo obtener detalle para los datos ingresados ingresados.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerDetalledeCalendarioComponent1750945332202 {
          <bts:fechaFin>2020-10-31</bts:fechaFin>
       </bts:BTConfiguracionBantotal.ObtenerDetalleCalendario>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados\' \
@@ -94,7 +94,7 @@ curl -X GET \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleCalendarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPuntosdeVentaComponent1750945333808 {
+export class ObtenerPuntosdeVentaComponent1751987198122 {
   pageTitle        = 'Obtener Puntos de Venta';
   description      = `Método para retornar los puntos de venta del Partner.`;
   pubName    = 'BTPartners.ObtenerPuntosDeVenta';
@@ -43,7 +43,7 @@ export class ObtenerPuntosdeVentaComponent1750945333808 {
          </bts:sdtPartner>
       </bts:BTPartners.ObtenerPuntosDeVenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPuntosDeVenta\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerPuntosDeVentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionComponent1750945334683 {
+export class ObtenerCotizacionComponent1751987199067 {
   pageTitle        = 'Obtener Cotización';
   description      = `Método para obtener la cotización del día.`;
   pubName    = 'BTPrecios.ObtenerCotizacion';
@@ -21,7 +21,7 @@ export class ObtenerCotizacionComponent1750945334683 {
 
   inputData  = [{ Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda. Si es vacío devuelve las cotizaciones de todas las monedas.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de cotización. Si es vacía devuelve cotización al día de hoy.' }];
   outputData = [{ Nombre: 'sdtCotizaciones', Tipo: '[sBTCotizacion](#sbtcotizacion)', Comentarios: 'Listado de cotizaciones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Codigo: '30002', Descripcion: 'No se recuperó moneda para el identificador ingresado.' }, { Codigo: '30003', Descripcion: 'No se recuperaron monedas.' }];
+  errors     = [{ Código: '30001', Descripción: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Código: '30002', Descripción: 'No se recuperó moneda para el identificador ingresado.' }, { Código: '30003', Descripción: 'No se recuperaron monedas.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerCotizacionComponent1750945334683 {
          <bts:fecha></bts:fecha>
       </bts:BTPrecios.ObtenerCotizacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacion\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ObtenerCotizacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCampanasComponent1750945333491 {
+export class ObtenerCampanasComponent1751987197802 {
   pageTitle        = 'Obtener Campañas';
   description      = `Método para obtener las campañas de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerCampanias';
@@ -21,7 +21,7 @@ export class ObtenerCampanasComponent1750945333491 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente fiador.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de inicio de campaña.' }];
   outputData = [{ Nombre: 'sdtCampanias', Tipo: '[sBTCampania](#sbtcampania)', Comentarios: 'Listado de campañas.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente.' }, { Codigo: '30011', Descripcion: 'No se obtuvo el titular representativo de la cuenta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador de cliente.' }, { Código: '30011', Descripción: 'No se obtuvo el titular representativo de la cuenta.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerCampanasComponent1750945333491 {
          <bts:fecha>2019-01-01</bts:fecha>
       </bts:BTMicrofinanzas.ObtenerCampanias>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerCampanias \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerCampaniasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

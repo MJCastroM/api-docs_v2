@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class InhabilitarComponent1750945331734 {
+export class InhabilitarComponent1751987196107 {
   pageTitle        = 'Inhabilitar';
   description      = `Método para inhabilitar una cuenta cliente que se encuentra habilitada.`;
   pubName    = 'BTClientes.Inhabilitar';
@@ -21,7 +21,7 @@ export class InhabilitarComponent1750945331734 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'motivo', Tipo: 'Short', Comentarios: 'Código de motivo de inhabilitación.' }, { Nombre: 'justificacion', Tipo: 'String', Comentarios: 'Justificación de la inhabilitación' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar motivo de inhabilitación.' }, { Codigo: '30003', Descripcion: 'Debe ingresar justificación.' }, { Codigo: '40001', Descripcion: 'No se puede inhabilitar la cuenta porque está cerrada.' }, { Codigo: '40002', Descripcion: 'La cuenta ya se encuentra inhabilitada.' }, { Codigo: '40003', Descripcion: 'La cuenta ingresada no existe.' }, { Codigo: '40004', Descripcion: 'No se puede cambiar estado porque la cuenta tiene saldos.' }, { Codigo: '40005', Descripcion: 'El motivo ya se encuentra ingresado.' }, { Codigo: '40006', Descripcion: 'El motivo ingresado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de cliente.' }, { Código: '30002', Descripción: 'Debe ingresar motivo de inhabilitación.' }, { Código: '30003', Descripción: 'Debe ingresar justificación.' }, { Código: '40001', Descripción: 'No se puede inhabilitar la cuenta porque está cerrada.' }, { Código: '40002', Descripción: 'La cuenta ya se encuentra inhabilitada.' }, { Código: '40003', Descripción: 'La cuenta ingresada no existe.' }, { Código: '40004', Descripción: 'No se puede cambiar estado porque la cuenta tiene saldos.' }, { Código: '40005', Descripción: 'El motivo ya se encuentra ingresado.' }, { Código: '40006', Descripción: 'El motivo ingresado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class InhabilitarComponent1750945331734 {
          <bts:justificacion>Prueba</bts:justificacion>
       </bts:BTClientes.Inhabilitar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?Inhabilitar \
@@ -82,7 +82,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTClientes_
          </Btoutreq>
       </BTClientes.InhabilitarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

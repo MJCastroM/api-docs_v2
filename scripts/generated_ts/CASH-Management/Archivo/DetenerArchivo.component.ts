@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DetenerArchivoComponent1750945331380 {
+export class DetenerArchivoComponent1751987195695 {
   pageTitle        = 'Detener Archivo';
   description      = `Método para detener la ejecución de pagos o transferencias ya autorizados.`;
   pubName    = 'BTCASHManagement.DetenerArchivo';
@@ -21,7 +21,7 @@ export class DetenerArchivoComponent1750945331380 {
 
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo.' }];
   outputData = [];
-  errors     = [{ Codigo: '1030711', Descripcion: 'No se recuperó informacion para el identificador de archivo recibido.' }, { Codigo: '1030727', Descripcion: 'Solo se pueden detener ordenes autorizadas.' }, { Codigo: '1030728', Descripcion: 'No se recuperaron ordenes para el archivo recibido.' }];
+  errors     = [{ Código: '1030711', Descripción: 'No se recuperó informacion para el identificador de archivo recibido.' }, { Código: '1030727', Descripción: 'Solo se pueden detener ordenes autorizadas.' }, { Código: '1030728', Descripción: 'No se recuperaron ordenes para el archivo recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class DetenerArchivoComponent1750945331380 {
          <bts:archivoId>77</bts:archivoId>
       </bts:BTCASHManagement.DetenerArchivo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?DetenerArchivo=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.DetenerArchivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

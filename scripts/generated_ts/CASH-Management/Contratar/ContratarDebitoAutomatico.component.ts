@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarDebitoAutomaticoComponent1750945331429 {
+export class ContratarDebitoAutomaticoComponent1751987195731 {
   pageTitle        = 'Contratar Débito Automático';
   description      = `Método para contratar la afiliación a un débito automático.`;
   pubName    = 'BTCASHManagement.ContratarDebitoAutomatico';
@@ -21,7 +21,7 @@ export class ContratarDebitoAutomaticoComponent1750945331429 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Long', Comentarios: 'Identificador del contrato.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Código de Servicio CASH.' }, { Nombre: 'operacionUId_debito', Tipo: 'Long', Comentarios: 'Identificador único de la operación de débito.' }, { Nombre: 'clienteID', Tipo: 'String', Comentarios: 'Identificador de cliente.' }, { Nombre: 'dia1', Tipo: 'Byte', Comentarios: 'Dia 1 para intento de pago.' }, { Nombre: 'montoMax', Tipo: 'Double', Comentarios: 'Monto máximo a debitar.' }, { Nombre: 'alias', Tipo: 'String', Comentarios: 'Alias o comentarios.' }, { Nombre: 'accion', Tipo: 'String', Comentarios: 'Tipo de acción. Se pueden enviar los siguientes [valores.](#valores)' }];
   outputData = [];
-  errors     = [{ Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030706', Descripcion: 'El contrato no esta activo.' }, { Codigo: '1030714', Descripcion: 'El contrato consultado no corresponde al servicio recibido.' }, { Codigo: '1030760', Descripcion: 'No se pudo dar de alta el contrato.' }, { Codigo: '1030770', Descripcion: 'No se recupero información para la cuenta recibida.' }, { Codigo: '1030790', Descripcion: 'Acción desconocida para el alta de débito automático.' }, { Codigo: '1030791', Descripcion: 'Se requiere identificador de deuda para el alta de débito automático.' }, { Codigo: '1030792', Descripcion: 'No se identifica servicio de débito automático.' }, { Codigo: '1030793', Descripcion: 'No existe el contrato de débito automático la acción no puede realizarse.' }, { Codigo: '1030794', Descripcion: 'Estado del contrato de débito automático impide la acción.' }, { Codigo: '1030795', Descripcion: 'Acción no permitida para la afiliación.' }, { Codigo: '1030796', Descripcion: 'Valor incorrecto para primer dia de pago' }, { Codigo: '1030797', Descripcion: 'Debe indicar valor para monto máximo de pago.' }, { Codigo: '1030798', Descripcion: 'En servicio online debe indicar valor para primer dia de pago.' }, { Codigo: '1030799', Descripcion: 'Existe afiliación activa para el identificador de cliente recibido.' }, { Codigo: '1030800', Descripcion: 'Para la cuenta recibida no es posible la afiliación.' }];
+  errors     = [{ Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030706', Descripción: 'El contrato no esta activo.' }, { Código: '1030714', Descripción: 'El contrato consultado no corresponde al servicio recibido.' }, { Código: '1030760', Descripción: 'No se pudo dar de alta el contrato.' }, { Código: '1030770', Descripción: 'No se recupero información para la cuenta recibida.' }, { Código: '1030790', Descripción: 'Acción desconocida para el alta de débito automático.' }, { Código: '1030791', Descripción: 'Se requiere identificador de deuda para el alta de débito automático.' }, { Código: '1030792', Descripción: 'No se identifica servicio de débito automático.' }, { Código: '1030793', Descripción: 'No existe el contrato de débito automático la acción no puede realizarse.' }, { Código: '1030794', Descripción: 'Estado del contrato de débito automático impide la acción.' }, { Código: '1030795', Descripción: 'Acción no permitida para la afiliación.' }, { Código: '1030796', Descripción: 'Valor incorrecto para primer dia de pago' }, { Código: '1030797', Descripción: 'Debe indicar valor para monto máximo de pago.' }, { Código: '1030798', Descripción: 'En servicio online debe indicar valor para primer dia de pago.' }, { Código: '1030799', Descripción: 'Existe afiliación activa para el identificador de cliente recibido.' }, { Código: '1030800', Descripción: 'Para la cuenta recibida no es posible la afiliación.' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class ContratarDebitoAutomaticoComponent1750945331429 {
          <bts:accion>A</bts:accion>
       </bts:BTCASHManagement.ContratarDebitoAutomatico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ContratarDebitoAutomatico=\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ContratarDebitoAutomaticoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

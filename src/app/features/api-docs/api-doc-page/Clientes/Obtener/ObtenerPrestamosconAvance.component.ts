@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosconAvanceComponent1750945331979 {
+export class ObtenerPrestamosconAvanceComponent1751987196355 {
   pageTitle        = 'Obtener Préstamos con Avance';
   description      = `Método para obtener los productos de préstamo que tiene contratado un cliente, con su correspondiente avance.`;
   pubName    = 'BTClientes.ObtenerPrestamosConAvance';
@@ -38,7 +38,7 @@ Valor específico 2 | Tipo de operación a excluir.
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtPrestamos', Tipo: '[sBTProgresoPrestamo](#sbtprogresoprestamo)', Comentarios: 'Listado de préstamos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>1</bts:clienteUId>
       </bts:BTClientes.ObtenerPrestamosConAvance>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPrestamosConAvance=\' \
@@ -149,7 +149,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerPrestamosConAvanceResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarEstadoFinancieroComponent1750945334077 {
+export class AgregarEstadoFinancieroComponent1751987198452 {
   pageTitle        = 'Agregar Estado Financiero';
   description      = `Método para agregar los estados financieros a una persona.`;
   pubName    = 'BTPersonas.AgregarEstadoFinanciero';
@@ -21,7 +21,7 @@ export class AgregarEstadoFinancieroComponent1750945334077 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: 'sdtEstadoFinanciero', Tipo: '[sBTEstadoFinanciero ](#sbtestadofinanciero)', Comentarios: 'Datos del estado financiero.' }, { Nombre: 'sdtCondicionTributaria', Tipo: '[sBTCondicionTributaria ](#sbtcondiciontributaria)', Comentarios: 'Datos de la condición tributaria.' }, { Nombre: 'sdtConceptosEstadoFinanciero', Tipo: '[sBTDetallesEstadosFinancieros ](#sbtdetallesestadosfinancieros)', Comentarios: 'Listado de los conceptos financieros.' }];
   outputData = [{ Nombre: 'sdtEstadoFinanciero', Tipo: '[sBTEstadoFinanciero ](#sbtestadofinanciero)', Comentarios: 'Datos del estado financiero.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió la fecha de elaboración.' }, { Codigo: '30003', Descripcion: 'No se recibió el código de la moneda.' }, { Codigo: '30005', Descripcion: 'Ya existe un Estado Financiero con esa fecha de elaboración.' }, { Codigo: '30006', Descripcion: 'El código de moneda no coincide.' }, { Codigo: '30007', Descripcion: 'El valor de activo no corresponde.' }, { Codigo: '30008', Descripcion: 'La fecha de Elaborado en EEFF no puede ser mayor a la fecha de Hoy.' }, { Codigo: '30009', Descripcion: 'El concepto [Nombre del concepto] tiene valor [valor del concepto] el cual no está parametrizado.' }, { Codigo: '30010', Descripcion: 'El concepto [Identificador del concepto] no está parametrizado.' }, { Codigo: '30011', Descripcion: 'Los "Activos Totales" son diferente al "Total Pasivo + Patrimonio".' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió la fecha de elaboración.' }, { Código: '30003', Descripción: 'No se recibió el código de la moneda.' }, { Código: '30005', Descripción: 'Ya existe un Estado Financiero con esa fecha de elaboración.' }, { Código: '30006', Descripción: 'El código de moneda no coincide.' }, { Código: '30007', Descripción: 'El valor de activo no corresponde.' }, { Código: '30008', Descripción: 'La fecha de Elaborado en EEFF no puede ser mayor a la fecha de Hoy.' }, { Código: '30009', Descripción: 'El concepto [Nombre del concepto] tiene valor [valor del concepto] el cual no está parametrizado.' }, { Código: '30010', Descripción: 'El concepto [Identificador del concepto] no está parametrizado.' }, { Código: '30011', Descripción: 'Los "Activos Totales" son diferente al "Total Pasivo + Patrimonio".' }];
 
   examples = {
     invocation: { xml: `
@@ -59,7 +59,7 @@ export class AgregarEstadoFinancieroComponent1750945334077 {
          </bts:sdtConceptosEstadoFinanciero>
       </bts:BTPersonas.AgregarEstadoFinanciero>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarEstadoFinanciero\' \
@@ -127,7 +127,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarEstadoFinancieroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

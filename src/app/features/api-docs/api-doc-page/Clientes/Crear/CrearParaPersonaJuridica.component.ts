@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearParaPersonaJuridicaComponent1750945331764 {
+export class CrearParaPersonaJuridicaComponent1751987196138 {
   pageTitle        = 'Crear Para Persona Jurídica';
   description      = `Método para crear una persona jurídica y su cuenta cliente.`;
   pubName    = 'BTClientes.CrearParaPersonaJuridica';
@@ -21,7 +21,7 @@ export class CrearParaPersonaJuridicaComponent1750945331764 {
 
   inputData  = [{ Nombre: 'sdtPersonaJuridica', Tipo: '[sBTPersonaJuridica1](#sbtpersonajuridica1)', Comentarios: 'Datos de la persona jurídica.' }, { Nombre: 'sdtIntegrantesJuridicosAlta', Tipo: '[sBTIntegranteJuridicoAlta](#sbtintegrantejuridicoalta)', Comentarios: 'Listado de personas físicas integrantes de la persona jurídica.' }];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos un integrante.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de vínculo.' }, { Codigo: '30003', Descripcion: 'No se pudo obtener identificador único de la persona.' }, { Codigo: '30004', Descripcion: 'No se pudo recuperar el número de cuenta.' }, { Codigo: '30005', Descripcion: 'No se pudo obtener identificador único de la cuenta.' }, { Codigo: '40001', Descripcion: 'Ya existe persona con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'Debe ingresar país.' }, { Codigo: '40003', Descripcion: 'El país ingresado no existe.' }, { Codigo: '40004', Descripcion: 'Debe ingresar tipo de documento.' }, { Codigo: '40005', Descripcion: 'El tipo de documento ingresado no existe.' }, { Codigo: '40006', Descripcion: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Codigo: '40007', Descripcion: 'Debe ingresar número de documento.' }, { Codigo: '40008', Descripcion: 'Número de documento incorrecto.' }, { Codigo: '40009', Descripcion: 'Debe ingresar razón social.' }, { Codigo: '40010', Descripcion: 'Caracteres incorrectos en razón social.' }, { Codigo: '40011', Descripcion: 'Caracteres incorrectos en nombre reducido.' }, { Codigo: '40012', Descripcion: 'Debe ingresar naturaleza jurídica.' }, { Codigo: '40013', Descripcion: 'La naturaleza jurídica ingresada no existe.' }, { Codigo: '40014', Descripcion: 'Debe ingresar la fecha de constitución.' }, { Codigo: '40015', Descripcion: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Codigo: '40016', Descripcion: 'Debe ingresar tipo de actividad.' }, { Codigo: '40017', Descripcion: 'El tipo de actividad ingresado no existe.' }, { Codigo: '40018', Descripcion: 'Debe ingresar actividad.' }, { Codigo: '40019', Descripcion: 'La actividad ingresada no existe.' }, { Codigo: '40020', Descripcion: 'Debe ingresar país del domicilio.' }, { Codigo: '40021', Descripcion: 'El país del domicilio no existe.' }, { Codigo: '40022', Descripcion: 'Debe ingresar departamento.' }, { Codigo: '40023', Descripcion: 'El departamento no existe.' }, { Codigo: '40024', Descripcion: 'Debe ingresar localidad.' }, { Codigo: '40025', Descripcion: 'La localidad no existe.' }, { Codigo: '40026', Descripcion: 'El barrio no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar al menos un integrante.' }, { Código: '30002', Descripción: 'Debe ingresar identificador de vínculo.' }, { Código: '30003', Descripción: 'No se pudo obtener identificador único de la persona.' }, { Código: '30004', Descripción: 'No se pudo recuperar el número de cuenta.' }, { Código: '30005', Descripción: 'No se pudo obtener identificador único de la cuenta.' }, { Código: '40001', Descripción: 'Ya existe persona con los datos ingresados.' }, { Código: '40002', Descripción: 'Debe ingresar país.' }, { Código: '40003', Descripción: 'El país ingresado no existe.' }, { Código: '40004', Descripción: 'Debe ingresar tipo de documento.' }, { Código: '40005', Descripción: 'El tipo de documento ingresado no existe.' }, { Código: '40006', Descripción: 'El tipo de documento ingresado no aplica para una persona jurídica.' }, { Código: '40007', Descripción: 'Debe ingresar número de documento.' }, { Código: '40008', Descripción: 'Número de documento incorrecto.' }, { Código: '40009', Descripción: 'Debe ingresar razón social.' }, { Código: '40010', Descripción: 'Caracteres incorrectos en razón social.' }, { Código: '40011', Descripción: 'Caracteres incorrectos en nombre reducido.' }, { Código: '40012', Descripción: 'Debe ingresar naturaleza jurídica.' }, { Código: '40013', Descripción: 'La naturaleza jurídica ingresada no existe.' }, { Código: '40014', Descripción: 'Debe ingresar la fecha de constitución.' }, { Código: '40015', Descripción: 'La fecha de constitución no puede ser posterior a la fecha de apertura.' }, { Código: '40016', Descripción: 'Debe ingresar tipo de actividad.' }, { Código: '40017', Descripción: 'El tipo de actividad ingresado no existe.' }, { Código: '40018', Descripción: 'Debe ingresar actividad.' }, { Código: '40019', Descripción: 'La actividad ingresada no existe.' }, { Código: '40020', Descripción: 'Debe ingresar país del domicilio.' }, { Código: '40021', Descripción: 'El país del domicilio no existe.' }, { Código: '40022', Descripción: 'Debe ingresar departamento.' }, { Código: '40023', Descripción: 'El departamento no existe.' }, { Código: '40024', Descripción: 'Debe ingresar localidad.' }, { Código: '40025', Descripción: 'La localidad no existe.' }, { Código: '40026', Descripción: 'El barrio no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -98,7 +98,7 @@ export class CrearParaPersonaJuridicaComponent1750945331764 {
          </bts:sdtIntegrantesJuridicosAlta>
       </bts:BTClientes.CrearParaPersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?CrearParaPersonaJuridica\' \
@@ -198,7 +198,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.CrearParaPersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
 	 "Btinreq": { 

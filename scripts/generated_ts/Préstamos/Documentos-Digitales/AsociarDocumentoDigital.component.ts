@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750945334836 {
+export class AsociarDocumentoDigitalComponent1751987199265 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar documento digital a un préstamo.`;
   pubName    = 'BTPrestamos.AsociarDocumentoDigital';
@@ -23,7 +23,7 @@ export class AsociarDocumentoDigitalComponent1750945334836 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Long', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del documento.' }, { Nombre: 'archivoCodificado', Tipo: 'String', Comentarios: 'Archivo a asociar codificado.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento (en caso que corresponda).' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento (en caso que corresponda).' }];
   outputData = [{ Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador del documento asociado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de tipo de documento digital.' }, { Codigo: '30002', Descripcion: 'No se recibió nombre.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30041', Descripcion: 'Debe ingresar la fecha de emisión del documento.' }, { Codigo: '30042', Descripcion: 'Debe ingresar la fecha de vencimiento del documento.' }, { Codigo: '30044', Descripcion: 'La operación seleccionada no corresponde a un producto de Préstamos.' }, { Codigo: '31030', Descripcion: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Codigo: '31013', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Codigo: '31024', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de tipo de documento digital.' }, { Código: '30002', Descripción: 'No se recibió nombre.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30041', Descripción: 'Debe ingresar la fecha de emisión del documento.' }, { Código: '30042', Descripción: 'Debe ingresar la fecha de vencimiento del documento.' }, { Código: '30044', Descripción: 'La operación seleccionada no corresponde a un producto de Préstamos.' }, { Código: '31030', Descripción: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Código: '31013', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Código: '31024', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class AsociarDocumentoDigitalComponent1750945334836 {
          <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>
       </bts:BTPrestamos.AsociarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?AsociarDocumentoDigital\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.AsociarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

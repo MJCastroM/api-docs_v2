@@ -1,23 +1,30 @@
-<app-page-header [title]="pageTitle"></app-page-header>
-<div class="content">
-  <div class="content-left">
-    <app-info-card [description]="description" [pubName]="pubName" [programa]="programa" [scope]="scope">
-    </app-info-card>
+<app-page-header class="fade-only front" [title]="pageTitle"></app-page-header>
 
-    <app-backend-config *ngIf="hasBackendConfig" [text]="backendText" [backendData]="backendConfig">
-    </app-backend-config>
+<div class="content-left">
+  <app-info-card class="fade-only" [description]="description" [pubName]="pubName" [programa]="programa" [scope]="scope">
+  </app-info-card>
 
-    <app-api-tabs [inputCols]="['Nombre','Tipo','Comentarios']" [inputData]="inputData"
-      [outputCols]="['Nombre','Tipo','Comentarios']" [outputData]="outputData" [errorCols]="['Código', 'Descripción']"
+  <app-backend-config class="fade-only" *ngIf="hasBackendConfig" [text]="backendText" [backendData]="backendConfig">
+  </app-backend-config>
+
+  <ng-container *ngIf="readyToRenderTabs">
+    <app-api-tabs
+      class="fade-only"
+      [inputCols]="['Nombre','Tipo','Comentarios']"
+      [inputData]="inputData"
+      [outputCols]="['Nombre','Tipo','Comentarios']"
+      [outputData]="outputData"
+      [errorCols]="['Código', 'Descripción']"
       [errors]="errors">
     </app-api-tabs>
+  </ng-container> 
 
-    <app-structured-data [types]="structuredTypes"></app-structured-data>
-  </div>
-
-  <div class="content-right" appAnchorScroll>
-    <app-code-example [examples]="examples"></app-code-example>
-  </div>
-  <app-chat-popup></app-chat-popup>
-  <app-footer-space></app-footer-space>
+  <app-structured-data class="fade-only" [types]="structuredTypes"></app-structured-data>
 </div>
+
+<div class="content-right fade-only" appAnchorScroll>
+  <app-code-example [examples]="examples"></app-code-example>
+</div>
+
+<app-chat-popup></app-chat-popup>
+<app-footer-space></app-footer-space>

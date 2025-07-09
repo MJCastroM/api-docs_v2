@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumenporProductoaCierreAnoComponent1750945332008 {
+export class ObtenerResumenporProductoaCierreAnoComponent1751987196374 {
   pageTitle        = 'Obtener Resumen por Producto a Cierre Año';
   description      = `Método para obtener un resumen con el detalle de las operaciones de un cliente al cierre del año.`;
   pubName    = 'BTClientes.ObtenerResumenPorProductoACierreAnio';
@@ -21,7 +21,7 @@ export class ObtenerResumenporProductoaCierreAnoComponent1750945332008 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'anioConsulta', Tipo: 'Short', Comentarios: 'Año de consulta.' }];
   outputData = [{ Nombre: 'sdtOperaciones', Tipo: '[sBTDetalleOperacion](#sbtdetalleoperacion)', Comentarios: 'Listado de detalle de operaciones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para la operación.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para la operación.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerResumenporProductoaCierreAnoComponent1750945332008 {
          <bts:anioConsulta>2018</bts:anioConsulta>
       </bts:BTClientes.ObtenerResumenPorProductoACierreAnio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerResumenPorProductoACierreAnio \
@@ -113,7 +113,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerResumenPorProductoACierreAnioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosHabilitadosComponent1750945331049 {
+export class ObtenerPeriodosHabilitadosComponent1751987195390 {
   pageTitle        = 'Obtener Períodos Habilitados';
   description      = `Método para obtener un listado de períodos habilitados para los casos que el alta de ahorro programado se realice mediante selección de período como lista de valores.`;
   pubName    = 'BTAhorroProgramado.ObtenerPeriodosHabilitados';
@@ -21,7 +21,7 @@ export class ObtenerPeriodosHabilitadosComponent1750945331049 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }];
   outputData = [{ Nombre: 'sdtPeriodos', Tipo: '[sBTPlazo](#sbtplazo)', Comentarios: 'Listado de períodos habilitados.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del producto.' }, { Codigo: '30002', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Error de configuración: No se definió listado de períodos.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del producto.' }, { Código: '30002', Descripción: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'Error de configuración: No se definió listado de períodos.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPeriodosHabilitadosComponent1750945331049 {
          <bts:productoUId>41</bts:productoUId>
       </bts:BTAhorroProgramado.ObtenerPeriodosHabilitados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerPeriodosHabilitados\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerPeriodosHabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

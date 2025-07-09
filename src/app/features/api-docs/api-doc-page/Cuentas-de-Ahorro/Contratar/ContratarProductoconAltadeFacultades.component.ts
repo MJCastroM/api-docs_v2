@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoconAltadeFacultadesComponent1750945332716 {
+export class ContratarProductoconAltadeFacultadesComponent1751987197038 {
   pageTitle        = 'Contratar Producto con Alta de Facultades';
   description      = `Método para contratar un producto de cuenta de ahorro dando de alta las facultades.`;
   pubName    = 'BTCuentasDeAhorro.ContratarConFacultades';
@@ -21,7 +21,7 @@ export class ContratarProductoconAltadeFacultadesComponent1750945332716 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'nombreSubCuenta', Tipo: 'String', Comentarios: 'Nombre de la cuenta cliente.' }, { Nombre: 'tipoIntegracion', Tipo: 'String', Comentarios: 'Tipo de integración (B-Indistinta/C-Conjunta).' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ContratarProductoconAltadeFacultadesComponent1750945332716 {
          <bts:sucursalId>1</bts:sucursalId>
       </bts:BTCuentasDeAhorro.ContratarConFacultades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ContratarConFacultades=\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasDeAhorro.ContratarConFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

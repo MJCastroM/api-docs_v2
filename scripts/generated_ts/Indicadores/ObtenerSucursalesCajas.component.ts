@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesCajasComponent1750945333333 {
+export class ObtenerSucursalesCajasComponent1751987197717 {
   pageTitle        = 'Obtener Sucursales Cajas';
   description      = `Método para obtener porcentajes y listados de sucursales y cajas del sistema.`;
   pubName    = 'BTIndicadores.ObtenerSucursalesCajas';
@@ -38,7 +38,7 @@ export class ObtenerSucursalesCajasComponent1750945333333 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerSucursalesCajas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerSucursalesCajas\' \
@@ -82,7 +82,7 @@ curl -X POST \
          ...
       </BTIndicadores.ObtenerSucursalesCajasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

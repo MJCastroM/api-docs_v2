@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularOfertasComponent1750945333831 {
+export class SimularOfertasComponent1751987198150 {
   pageTitle        = 'Simular Ofertas';
   description      = `Método para simular ofertas del Partner.`;
   pubName    = 'BTPartners.SimularOfertas';
@@ -21,7 +21,7 @@ export class SimularOfertasComponent1750945333831 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'textoAux', Tipo: 'String', Comentarios: 'Texto auxiliar [Hidden].' }, { Nombre: 'sdtOfertaInput', Tipo: '[sBTOfertaInput](#sbtofertainput)', Comentarios: 'Datos de entrada de la oferta.' }];
   outputData = [{ Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador de la simulación.' }, { Nombre: 'sdtOfertasPrestamo', Tipo: '[sBTOfertaPrestamo](#sbtofertaprestamo)', Comentarios: 'Listado de ofertas de préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'No se recuperó el producto para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibió Lista de cuotas a simular.' }, { Codigo: '30007', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30008', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30009', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30018', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30019', Descripcion: 'No se recibió vendedor.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'No se recuperó el producto para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recibió Lista de cuotas a simular.' }, { Código: '30007', Descripción: 'No se recibió Partner ni canal.' }, { Código: '30008', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30009', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30018', Descripción: 'No se recibió punto de venta.' }, { Código: '30019', Descripción: 'No se recibió vendedor.' }];
 
   examples = {
     invocation: { xml: `
@@ -89,7 +89,7 @@ export class SimularOfertasComponent1750945333831 {
          </bts:sdtOfertaInput>
       </bts:BTPartners.SimularOfertas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?SimularOfertas\' \
@@ -200,7 +200,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.SimularOfertasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

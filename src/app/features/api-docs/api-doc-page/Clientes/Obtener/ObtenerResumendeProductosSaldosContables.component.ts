@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumendeProductosSaldosContablesComponent1750945331994 {
+export class ObtenerResumendeProductosSaldosContablesComponent1751987196368 {
   pageTitle        = 'Obtener Resumen de Productos (Saldos Contables)';
   description      = `Método para obtener un resumen de los productos de un cliente y su saldo contable correspondiente.`;
   pubName    = 'BTClientes.ObtenerResumenProductos';
@@ -21,7 +21,7 @@ export class ObtenerResumendeProductosSaldosContablesComponent1750945331994 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente' }];
   outputData = [{ Nombre: 'sdtResumenProductos', Tipo: '[sCTInfoProductos](#sctinfoproductos)', Comentarios: 'Listado de productos' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerResumendeProductosSaldosContablesComponent1750945331994 {
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTClientes.ObtenerResumenProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerResumenProductos=\' \
@@ -125,7 +125,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerResumenProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

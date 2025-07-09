@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750945331064 {
+export class ObtenerProductosComponent1751987195405 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de ahorro programado habilitados.`;
   pubName    = 'BTAhorroProgramado.ObtenerProductos';
@@ -21,7 +21,7 @@ export class ObtenerProductosComponent1750945331064 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtProductos', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Listado de los productos habilitados de ahorro programado.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No es posible determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.' }, { Codigo: '40002', Descripcion: 'No se recuperó productos habilitados para el producto de ahorro programado.' }];
+  errors     = [{ Código: '40001', Descripción: 'No es posible determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.' }, { Código: '40002', Descripción: 'No se recuperó productos habilitados para el producto de ahorro programado.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerProductosComponent1750945331064 {
          </bts:Btinreq>
       </bts:BTAhorroProgramado.ObtenerProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerProductos\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

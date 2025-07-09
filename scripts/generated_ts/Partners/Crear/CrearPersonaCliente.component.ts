@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearPersonaClienteComponent1750945333739 {
+export class CrearPersonaClienteComponent1751987198029 {
   pageTitle        = 'Crear Persona Cliente';
   description      = `Método para crear persona de Partner.`;
   pubName    = 'BTPartners.CrearPersonaCliente';
@@ -21,7 +21,7 @@ export class CrearPersonaClienteComponent1750945333739 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'sdtPersona', Tipo: '[sBTPersonaFisica](#sbtpersonafisica)', Comentarios: 'Datos de persona física.' }];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'La Contraparte ya está relacionada al Partner: [Número del Partner] - [Nombre del Partner].' }, { Codigo: '30003', Descripcion: 'No se pudo obtener identificador único de la cuenta.' }];
+  errors     = [{ Código: '30002', Descripción: 'La Contraparte ya está relacionada al Partner: [Número del Partner] - [Nombre del Partner].' }, { Código: '30003', Descripción: 'No se pudo obtener identificador único de la cuenta.' }];
 
   examples = {
     invocation: { xml: `
@@ -106,7 +106,7 @@ export class CrearPersonaClienteComponent1750945333739 {
          </bts:sdtPersona>
       </bts:BTPartners.CrearPersonaCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?CrearPersonaCliente\' \
@@ -214,7 +214,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.CrearPersonaClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

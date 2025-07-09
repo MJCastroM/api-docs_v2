@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularPagoDeudaComponent1750945331533 {
+export class AnularPagoDeudaComponent1751987195863 {
   pageTitle        = 'Anular Pago Deuda';
   description      = `Método para anular un pago realizado de una factura.`;
   pubName    = 'BTCASHManagement.AnularPagoDeuda';
@@ -21,7 +21,7 @@ export class AnularPagoDeudaComponent1750945331533 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }, { Nombre: 'nroLineaOrden', Tipo: 'Int', Comentarios: 'Número de línea de orden CASH.' }];
   outputData = [{ Nombre: 'transaccionId', Tipo: 'Long', Comentarios: 'Identificador de transacción.' }];
-  errors     = [{ Codigo: '1030610', Descripcion: 'Debe indicar el numero de la orden.' }, { Codigo: '1030611', Descripcion: 'Debe indicar el numero de linea en la orden.' }, { Codigo: '1030612', Descripcion: 'El valor recibido no corresponde a un numero de orden.' }, { Codigo: '1030616', Descripcion: 'Numero de linea de la orden no existe.' }, { Codigo: '1030622', Descripcion: 'Estado de la linea no permite anulación.' }, { Codigo: '1030623', Descripcion: 'Solo se permiten anulaciones en el mismo dia.' }, { Codigo: '1030624', Descripcion: 'Error al procesar la anulación.' }];
+  errors     = [{ Código: '1030610', Descripción: 'Debe indicar el numero de la orden.' }, { Código: '1030611', Descripción: 'Debe indicar el numero de linea en la orden.' }, { Código: '1030612', Descripción: 'El valor recibido no corresponde a un numero de orden.' }, { Código: '1030616', Descripción: 'Numero de linea de la orden no existe.' }, { Código: '1030622', Descripción: 'Estado de la linea no permite anulación.' }, { Código: '1030623', Descripción: 'Solo se permiten anulaciones en el mismo dia.' }, { Código: '1030624', Descripción: 'Error al procesar la anulación.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class AnularPagoDeudaComponent1750945331533 {
          <bts:nroLineaOrden>1</bts:nroLineaOrden>
       </bts:BTCASHManagement.AnularPagoDeuda>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?AnularPagoDeuda=\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.AnularPagoDeudaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

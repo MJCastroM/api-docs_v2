@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTareasdeProcesoComponent1750945335876 {
+export class ObtenerTareasdeProcesoComponent1751987200550 {
   pageTitle        = 'Obtener Tareas de Proceso';
   description      = `Método para obtener las tareas de un determinado proceso de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerTareasDeProceso';
@@ -21,7 +21,7 @@ export class ObtenerTareasdeProcesoComponent1750945335876 {
 
   inputData  = [{ Nombre: 'procesoId', Tipo: 'Int', Comentarios: 'Identificador de proceso Workflow.' }];
   outputData = [{ Nombre: 'sdtTareas', Tipo: '[sBTTareaWF](#sbttareawf)', Comentarios: 'Listado de tareas Workflow.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '40001', Descripcion: 'El proceso ingresado no existe.' }, { Codigo: '40002', Descripcion: 'No se encontraron tareas para el proceso ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de proceso.' }, { Código: '40001', Descripción: 'El proceso ingresado no existe.' }, { Código: '40002', Descripción: 'No se encontraron tareas para el proceso ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTareasdeProcesoComponent1750945335876 {
          <bts:procesoId>1</bts:procesoId>
       </bts:BTWorkflow.ObtenerTareasDeProceso>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerTareasDeProceso \
@@ -112,7 +112,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq>
       </BTWorkflow.ObtenerTareasDeProcesoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'
 {

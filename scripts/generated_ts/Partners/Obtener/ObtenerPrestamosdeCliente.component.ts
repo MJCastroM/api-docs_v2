@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosdeClienteComponent1750945333801 {
+export class ObtenerPrestamosdeClienteComponent1751987198112 {
   pageTitle        = 'Obtener Préstamos de Cliente';
   description      = `Método para obtener los préstamos de un cliente del Partner.`;
   pubName    = 'BTPartners.ObtenerPrestamosCliente';
@@ -21,7 +21,7 @@ export class ObtenerPrestamosdeClienteComponent1750945333801 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [{ Nombre: 'prestamos', Tipo: '[sBTProductoPrestamo](#sbtproductoprestamo)', Comentarios: 'Listado de préstamos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cuenta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30004', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30005', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30014', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30015', Descripcion: 'No se recibió vendedor.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de cuenta.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió Partner ni canal.' }, { Código: '30004', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30005', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30014', Descripción: 'No se recibió punto de venta.' }, { Código: '30015', Descripción: 'No se recibió vendedor.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerPrestamosdeClienteComponent1750945333801 {
          <bts:clienteUId>359</bts:clienteUId>
       </bts:BTPartners.ObtenerPrestamosCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerPrestamosCliente\' \
@@ -133,7 +133,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerPrestamosClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EmitirChequeElectronicodeChequeraComponent1750945331128 {
+export class EmitirChequeElectronicodeChequeraComponent1751987195453 {
   pageTitle        = 'Emitir Cheque Electrónico de Chequera';
   description      = `Método para emitir un cheque electrónico de una chequera existente.`;
   pubName    = 'BTCuentasCorrientes.EmitirChequeElectronicoDeChequera';
@@ -21,7 +21,7 @@ export class EmitirChequeElectronicodeChequeraComponent1750945331128 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'cantidadCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques a emitir.' }, { Nombre: 'CUITBeneficiario', Tipo: 'String', Comentarios: 'CUIT del beneficiario.' }, { Nombre: 'paisBeneficiarioId', Tipo: 'Short', Comentarios: 'Identificador de país del beneficiario.' }, { Nombre: 'tipoDocumentoBeneficiarioId', Tipo: 'Byte', Comentarios: 'Identificador de tipo de documento del beneficiario.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago' }];
   outputData = [{ Nombre: 'listaCheques', Tipo: '[sBTChequeElectronico](#sbtchequeelectronico)', Comentarios: 'Listado de cheques.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class EmitirChequeElectronicodeChequeraComponent1750945331128 {
          <bts:fechaPago></bts:fechaPago>
       </bts:BTCuentasCorrientes.EmitirChequeElectronicoDeChequera>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, 
+</soapenv:Envelope></soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?EmitirChequeElectronicoDeChequera\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.EmitirChequeElectronicoDeChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

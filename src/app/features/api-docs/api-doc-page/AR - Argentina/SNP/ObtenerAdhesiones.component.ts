@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAdhesionesComponent1750945331168 {
+export class ObtenerAdhesionesComponent1751987195473 {
   pageTitle        = 'Obtener Adhesiones';
   description      = `Método para obtener las adhesiones de un cliente a una determinada empresa originante.`;
   pubName    = 'BTSNP.ObtenerAdhesiones';
@@ -21,7 +21,7 @@ export class ObtenerAdhesionesComponent1750945331168 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }];
   outputData = [{ Nombre: 'sdtAdhesiones', Tipo: '[sBTAdhesion](#sbtadhesion)', Comentarios: 'Listado de adhesiones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió empresa originante.' }, { Codigo: '40001', Descripcion: 'No existe la empresa originante.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'No se recibió empresa originante.' }, { Código: '40001', Descripción: 'No existe la empresa originante.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerAdhesionesComponent1750945331168 {
          <bts:empresaOriginante>3050001626</bts:empresaOriginante>
       </bts:BTSNP.ObtenerAdhesiones>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes\' \
@@ -98,7 +98,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.ObtenerAdhesionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

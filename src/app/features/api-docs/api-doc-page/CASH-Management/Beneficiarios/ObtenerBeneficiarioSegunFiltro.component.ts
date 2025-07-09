@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiarioSegunFiltroComponent1750945331409 {
+export class ObtenerBeneficiarioSegunFiltroComponent1751987195711 {
   pageTitle        = 'Obtener Beneficiario Según Filtro';
   description      = `Método para obtener el beneficiario según el filtro.`;
   pubName    = 'BTCASHManagement.ObtenerBeneficiarioSegunFiltro';
@@ -21,7 +21,7 @@ export class ObtenerBeneficiarioSegunFiltroComponent1750945331409 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Short', Comentarios: 'Identificador del contrato.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'clienteUId', Tipo: 'String', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'agendaId', Tipo: 'Short', Comentarios: 'Identificador de la agenda.' }, { Nombre: 'sdtValorCampoCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Lista de valores de campos CASH a buscar.' }];
   outputData = [{ Nombre: 'sdtBeneficiario', Tipo: '[sBTResumenBeneficiario](#sbtresumenbeneficiario)', Comentarios: 'Listado de beneficiarios.' }];
-  errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificación de cuenta cliente' }, { Codigo: '1030713', Descripcion: 'El contrato no corresponde a la cuenta recibida.' }, { Codigo: '1030780', Descripcion: 'No se recupero Beneficiario para la identificación recibida.' }];
+  errors     = [{ Código: '1030701', Descripción: 'El Servicio no existe.' }, { Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030709', Descripción: 'Se requiere identificación de cuenta cliente' }, { Código: '1030713', Descripción: 'El contrato no corresponde a la cuenta recibida.' }, { Código: '1030780', Descripción: 'No se recupero Beneficiario para la identificación recibida.' }];
 
   examples = {
     invocation: { xml: `
@@ -48,7 +48,7 @@ export class ObtenerBeneficiarioSegunFiltroComponent1750945331409 {
          </bts:sdtValorCampoCash>
       </bts:BTCASHManagement.ObtenerBeneficiarioSegunFiltro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerBeneficiarioSegunFiltro=\' \
@@ -187,7 +187,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerBeneficiarioSegunFiltroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosReprocesablesComponent1750945331262 {
+export class ObtenerProcesosReprocesablesComponent1751987195577 {
   pageTitle        = 'Obtener Procesos Reprocesables';
   description      = `Método para obtener un listado de los procesos reprocesables de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosReprocesables';
@@ -38,7 +38,7 @@ export class ObtenerProcesosReprocesablesComponent1750945331262 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.ObtenerProcesosReprocesables>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosReprocesables\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosReprocesablesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

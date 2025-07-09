@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDebitosComponent1750945331177 {
+export class ObtenerDebitosComponent1751987195485 {
   pageTitle        = 'Obtener Débitos';
   description      = `Método para obtener los débitos de una adhesión, dado el estado ingresado.`;
   pubName    = 'BTSNP.ConsultarDebitos';
@@ -21,7 +21,7 @@ export class ObtenerDebitosComponent1750945331177 {
 
   inputData  = [{ Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del débito (PP=Para Procesar/PR=Procesado/RC=Rechazado).' }];
   outputData = [{ Nombre: 'sdtDebitos', Tipo: '[sBTDebito](#sbtdebito)', Comentarios: 'Listado de débitos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'El estado recibido no es correcto.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la empresa originante.' }, { Código: '30003', Descripción: 'No se recibió el tipo de débito.' }, { Código: '30004', Descripción: 'No se recibió la prestación.' }, { Código: '30005', Descripción: 'No se recibió el ID del cliente SNP.' }, { Código: '30006', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Código: '30007', Descripción: 'El tipo de débito no es correcto.' }, { Código: '30008', Descripción: 'El estado recibido no es correcto.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerDebitosComponent1750945331177 {
          <bts:estado>RC</bts:estado>
       </bts:BTSNP.ConsultarDebitos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ConsultarDebitos\' \
@@ -105,7 +105,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.ConsultarDebitosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

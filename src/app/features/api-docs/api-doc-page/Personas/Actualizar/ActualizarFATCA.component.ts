@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarFATCAComponent1750945333957 {
+export class ActualizarFATCAComponent1751987198300 {
   pageTitle        = 'Actualizar FATCA';
   description      = `Método para modificar la información FATCA de una persona.`;
   pubName    = 'BTPersonas.ActualizarFATCA';
@@ -21,7 +21,7 @@ export class ActualizarFATCAComponent1750945333957 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtInformacionFATCA', Tipo: '[sBTPCOInformacionFATCA](#sbtpcoinformacionfatca)', Comentarios: 'Datos FATCA de la persona.' }];
   outputData = [{ Nombre: 'resultado', Tipo: 'String', Comentarios: 'Resultado FATCA.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '30002', Descripcion: 'Error - Datos duplicados.' }, { Codigo: '40001', Descripcion: 'Debe ingresar al menos una Residencia Fiscal.' }, { Codigo: '40002', Descripcion: 'El país [Número de identificador] ingresado no es válido.' }, { Codigo: '40004', Descripcion: 'No se puede ingresar residencias fiscales.' }, { Codigo: '40005', Descripcion: 'No existe el registro.' }, { Codigo: '40006', Descripcion: 'No existe el país indicado.' }, { Codigo: '40007', Descripcion: 'No existe el tipo de documento indicado.' }, { Codigo: '40007', Descripcion: 'No debe ingresar correlativo para residencia.' }, { Codigo: '40007', Descripcion: 'Se ingresó la misma residencia dos veces.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de persona.' }, { Código: '30002', Descripción: 'Error - Datos duplicados.' }, { Código: '40001', Descripción: 'Debe ingresar al menos una Residencia Fiscal.' }, { Código: '40002', Descripción: 'El país [Número de identificador] ingresado no es válido.' }, { Código: '40004', Descripción: 'No se puede ingresar residencias fiscales.' }, { Código: '40005', Descripción: 'No existe el registro.' }, { Código: '40006', Descripción: 'No existe el país indicado.' }, { Código: '40007', Descripción: 'No existe el tipo de documento indicado.' }, { Código: '40007', Descripción: 'No debe ingresar correlativo para residencia.' }, { Código: '40007', Descripción: 'Se ingresó la misma residencia dos veces.' }];
 
   examples = {
     invocation: { xml: `
@@ -55,7 +55,7 @@ export class ActualizarFATCAComponent1750945333957 {
          </bts:sdtInformacionFATCA>
       </bts:BTPersonas.ActualizarFATCA>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarFATCA \
@@ -107,7 +107,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.ActualizarFATCAResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

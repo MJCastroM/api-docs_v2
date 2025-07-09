@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadoCompraComponent1750945335750 {
+export class ObtenerEstadoCompraComponent1751987200386 {
   pageTitle        = 'Obtener Estado de Compra';
   description      = `Método para obtener el estado de la compra de un título.`;
   pubName    = 'BTTitulos.ObtenerEstadoCompra';
@@ -21,7 +21,7 @@ export class ObtenerEstadoCompraComponent1750945335750 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'respuesta', Tipo: 'String', Comentarios: 'Estado de la compra.' }, { Nombre: 'codigo', Tipo: 'Short', Comentarios: 'Código de la respuesta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de la operación.' }, { Codigo: '30011', Descripcion: 'No se recupero el identificador para la operación recibida.' }, { Codigo: '40001', Descripcion: 'No existe registro para el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de la operación.' }, { Código: '30011', Descripción: 'No se recupero el identificador para la operación recibida.' }, { Código: '40001', Descripción: 'No existe registro para el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerEstadoCompraComponent1750945335750 {
          <bts:operacionUId>44</bts:operacionUId>
       </bts:BTTitulos.ObtenerEstadoCompra>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -67,7 +67,7 @@ export class ObtenerEstadoCompraComponent1750945335750 {
          </Btoutreq>
       </BTTitulos.ObtenerEstadoCompraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

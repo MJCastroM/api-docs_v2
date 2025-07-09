@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeModelosComponent1750945333711 {
+export class ObtenerTiposDeModelosComponent1751987197996 {
   pageTitle        = 'Obtener Tipos De Modelos';
   description      = `Método para obtener los diferentes tipos de modelos de evaluación.`;
   pubName    = 'BTPAE.ObtenerTiposDeModelos';
@@ -38,7 +38,7 @@ export class ObtenerTiposDeModelosComponent1750945333711 {
          </bts:Btinreq>
       </bts:BTPAE.ObtenerTiposDeModelos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?ObtenerTiposDeModelos \
@@ -108,7 +108,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
          </Btoutreq>
       </BTPAE.ObtenerTiposDeModelosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
   "Envelope": {

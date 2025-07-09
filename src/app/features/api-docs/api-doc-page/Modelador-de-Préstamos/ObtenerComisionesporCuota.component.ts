@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionesporCuotaComponent1750945333630 {
+export class ObtenerComisionesporCuotaComponent1751987197912 {
   pageTitle        = 'Obtener Comisiones por Cuota';
   description      = `Método para obtener las comisiones parametrizadas por cuota para un producto de préstamos.`;
   pubName    = 'BTModeladorPrestamos.ObtenerComisionesCuota';
@@ -39,7 +39,7 @@ export class ObtenerComisionesporCuotaComponent1750945333630 {
          <bts:productoUId>51</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerComisionesCuota>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisionesCuota\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerComisionesCuotaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

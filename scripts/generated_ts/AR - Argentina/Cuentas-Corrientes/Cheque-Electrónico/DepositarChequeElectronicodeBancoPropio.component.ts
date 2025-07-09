@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicodeBancoPropioComponent1750945331094 {
+export class DepositarChequeElectronicodeBancoPropioComponent1751987195426 {
   pageTitle        = 'Depositar Cheque Electrónico de Banco Propio';
   description      = `Método para depositar un cheque electrónico propio.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoPropio';
@@ -21,7 +21,7 @@ export class DepositarChequeElectronicodeBancoPropioComponent1750945331094 {
 
   inputData  = [{ Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador único de operación de origen.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador único de operación destino.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'numeroCheque', Tipo: 'Long', Comentarios: 'Número de cheque.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación origen.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación destino.' }, { Codigo: '30004', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación origen.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la operación destino.' }, { Código: '30004', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class DepositarChequeElectronicodeBancoPropioComponent1750945331094 {
          <bts:numeroCheque>5030</bts:numeroCheque>
       </bts:BTCuentasCorrientes.DepositarChequeElectronicoPropio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?DepositarChequeElectronicoPropio\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.DepositarChequeElectronicoPropioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

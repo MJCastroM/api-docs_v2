@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionAdicionalComponent1750945335162 {
+export class AgregarInformacionAdicionalComponent1751987199668 {
   pageTitle        = 'Agregar Información Adicional';
   description      = `Método para agregar la información adicional de un préstamo.`;
   pubName    = 'BTPrestamos.AgregarInformacionAdicional';
@@ -21,7 +21,7 @@ export class AgregarInformacionAdicionalComponent1750945335162 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de préstamo.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'INS\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de operación.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de operación.' }, { Código: '30004', Descripción: 'No se recuperó la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class AgregarInformacionAdicionalComponent1750945335162 {
          </bts:sdtInformacionAdicional>
       </bts:BTPrestamos.AgregarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AgregarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.AgregarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": {

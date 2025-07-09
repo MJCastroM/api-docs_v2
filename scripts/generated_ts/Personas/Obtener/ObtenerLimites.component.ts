@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750945334428 {
+export class ObtenerLimitesComponent1751987198783 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una persona.`;
   pubName    = 'BTPersonas.ObtenerLimites';
@@ -21,7 +21,7 @@ export class ObtenerLimitesComponent1750945334428 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtLimites', Tipo: '[sBTLimiteCliente](#sbtlimitecliente)', Comentarios: 'Listado de límites.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recuperó la persona para el identificador ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de persona.' }, { Código: '30002', Descripción: 'No se recuperó la persona para el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerLimitesComponent1750945334428 {
          <bts:personaUId>161</bts:personaUId>
       </bts:BTPersonas.ObtenerLimites>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerLimites\' \
@@ -145,7 +145,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

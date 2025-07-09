@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750945335106 {
+export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1751987199604 {
   pageTitle        = 'Obtener Préstamos Sin Mora';
   description      = `Método para retornar préstamos sin mora.`;
   pubName    = 'BTPrestamos.ObtenerPrestamosSinMora';
@@ -21,7 +21,7 @@ export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750945
 
   inputData  = [{ Nombre: 'diasMoraDesde', Tipo: 'Int', Comentarios: '[Hidden: Valor fijo \'0\' para este método].' }, { Nombre: 'diasMoraHasta', Tipo: 'Int', Comentarios: '[Hidden: Valor fijo \'0\' para este método].' }, { Nombre: 'stringAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'SIN_MORA\' para este método].' }, { Nombre: 'update912', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'N\' para este método].' }, { Nombre: 'offset', Tipo: 'Int', Comentarios: 'Valor desde donde empieza a contar la cantidad de préstamos.' }, { Nombre: 'limit', Tipo: 'int', Comentarios: 'Cantidad de préstamos que va a mostrar.' }, { Nombre: 'contarRegistros', Tipo: 'Sting', Comentarios: '¿Cuenta el total de préstamos? (S/N).' }];
   outputData = [{ Nombre: 'quedanRegistros', Tipo: 'String', Comentarios: '¿Quedan registros? (S/N).' }, { Nombre: 'countRegistros', Tipo: 'Int', Comentarios: 'Muestra el total de préstamos sin mora.' }, { Nombre: 'sdtDatosPrestamos', Tipo: '[sBTDatosPrestamo](#sbtdatosprestamo)', Comentarios: 'Listado de los préstamos sin mora.' }];
-  errors     = [{ Codigo: '30003', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30003', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerPrestamossinMoraDisponibleunicamenteparaV3R1Component1750945
          <bts:contarRegistros>S</bts:contarRegistros>
       </bts:BTPrestamos.ObtenerPrestamosSinMora>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosSinMora=\' \
@@ -247,7 +247,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerPrestamosSinMoraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SeleccionarOpcionDesembolsoComponent1750945333264 {
+export class SeleccionarOpcionDesembolsoComponent1751987197647 {
   pageTitle        = 'Seleccionar Opción Desembolso';
   description      = `Método para seleccionar una opción de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.SeleccionarOpcionDesembolso';
@@ -21,7 +21,7 @@ export class SeleccionarOpcionDesembolsoComponent1750945333264 {
 
   inputData  = [{ Nombre: 'listaUId', Tipo: 'Long', Comentarios: 'Identificador de lista.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de desembolso.' }, { Nombre: 'tipoDesembolso', Tipo: 'Short', Comentarios: 'Tipo de desembolso.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de lista.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30003', Descripcion: 'No se recibió tipo de desembolso.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de lista.' }, { Código: '30002', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30003', Descripción: 'No se recibió tipo de desembolso.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class SeleccionarOpcionDesembolsoComponent1750945333264 {
          <bts:tipoDesembolso>3</bts:tipoDesembolso>
       </bts:BTDescuentoDocumentos.SeleccionarOpcionDesembolso>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?SeleccionarOpcionDesembolso=\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTDescuentoDocumentos.SeleccionarOpcionDesembolsoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

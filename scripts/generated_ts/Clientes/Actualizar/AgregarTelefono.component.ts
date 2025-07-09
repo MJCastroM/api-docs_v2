@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTelefonoComponent1750945331690 {
+export class AgregarTelefonoComponent1751987196047 {
   pageTitle        = 'Agregar Teléfono';
   description      = `Método para agregar un teléfono a un cliente.`;
   pubName    = 'BTClientes.AgregarTelefono';
@@ -21,7 +21,7 @@ export class AgregarTelefonoComponent1750945331690 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'domicilioId', Tipo: 'Byte', Comentarios: 'Identificador de tipo de domicilio.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Número de teléfono.' }, { Nombre: 'tipoTelefonoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de teléfono.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "INS" para este método].' }];
   outputData = [{ Nombre: 'telefonoId', Tipo: 'Byte', Comentarios: 'Identificador correlativo de teléfono.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de Domicilio.' }, { Codigo: '30003', Descripcion: 'No se recibió Teléfono.' }, { Codigo: '30004', Descripcion: 'No se recibió Tipo de Teléfono.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de Domicilio.' }, { Código: '30003', Descripción: 'No se recibió Teléfono.' }, { Código: '30004', Descripción: 'No se recibió Tipo de Teléfono.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class AgregarTelefonoComponent1750945331690 {
          <bts:tipoTelefonoId>1</bts:tipoTelefonoId>
       </bts:BTClientes.AgregarTelefono>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?AgregarTelefono\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.AgregarTelefonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

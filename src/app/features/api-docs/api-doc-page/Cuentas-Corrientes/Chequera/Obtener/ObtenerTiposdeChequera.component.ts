@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraComponent1750945332598 {
+export class ObtenerTiposdeChequeraComponent1751987196930 {
   pageTitle        = 'Obtener Tipos de Chequera';
   description      = `Método para obtener un listado de los tipos de chequeras.`;
   pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequera';
@@ -38,7 +38,7 @@ export class ObtenerTiposdeChequeraComponent1750945332598 {
          </bts:Btinreq>
       </bts:BTCuentasCorrientes.ObtenerTiposDeChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerTiposDeChequera\' \
@@ -123,7 +123,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerTiposDeChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

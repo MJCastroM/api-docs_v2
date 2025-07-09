@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechadeSistemaComponent1750945332227 {
+export class ObtenerFechadeSistemaComponent1751987196569 {
   pageTitle        = 'Obtener Fecha de Sistema';
   description      = `Método para obtener la fecha del sistema.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerFechaDeSistema';
@@ -38,7 +38,7 @@ export class ObtenerFechadeSistemaComponent1750945332227 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerFechaDeSistema>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerFechaDeSistema\' \
@@ -78,7 +78,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerFechaDeSistemaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

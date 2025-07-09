@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentaPreferencialComponent1750945335540 {
+export class ObtenerCuentaPreferencialComponent1751987200122 {
   pageTitle        = 'Obtener Cuenta Preferencial';
   description      = `Método para obtener la operación de la cuenta preferencial de tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCuentaPreferencial';
@@ -21,7 +21,7 @@ export class ObtenerCuentaPreferencialComponent1750945335540 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de cuenta preferencial del cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCuentaPreferencialComponent1750945335540 {
          <bts:tarjetaId>109</bts:tarjetaId>
       </bts:BTTarjetasDeDebito.ObtenerCuentaPreferencial>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerCuentaPreferencial\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerCuentaPreferencialResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

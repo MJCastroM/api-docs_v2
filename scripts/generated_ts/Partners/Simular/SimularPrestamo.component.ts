@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoComponent1750945333849 {
+export class SimularPrestamoComponent1751987198171 {
   pageTitle        = 'Simular Préstamo';
   description      = `Método para simular un préstamo del Partner.`;
   pubName    = 'BTPartners.SimularPrestamo';
@@ -21,7 +21,7 @@ export class SimularPrestamoComponent1750945333849 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: 'Parámetros auxiliares [Hidden].' }, { Nombre: 'sdtSimulacionInput', Tipo: '[sBTSimulacionInput](#sbtsimulacioninput)', Comentarios: 'Datos de entrada de la simulación.' }];
   outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de producto ni operación.' }, { Codigo: '30002', Descripcion: 'No se puede indicar producto y operación al mismo tiempo.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'La cuenta para el Identificador [Número de Identificador] no coincide con el de la operación.\'' }, { Codigo: '30009', Descripcion: 'El Partner no tiene asociado un Tipo y Nivel.' }, { Codigo: '30010', Descripcion: 'El Tipo y Nivel asociado al Partner no existe.' }, { Codigo: '30011', Descripcion: 'El Tipo y Nivel asociado al Partner no está habilitado.' }, { Codigo: '30012', Descripcion: 'El Producto no está Activo para el Partner. No pertenece al Nivel y no tiene una Inclusión vigente.' }, { Codigo: '30014', Descripcion: 'El Producto no está Activo para el Partner. Está vigente en el Nivel pero tiene una Exclusión vigente.' }, { Codigo: '30015', Descripcion: 'El Producto no está Activo para el Partner. Está habilitado pero no vigente en el Nivel y no tiene una Inclusión vigente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de producto ni operación.' }, { Código: '30002', Descripción: 'No se puede indicar producto y operación al mismo tiempo.' }, { Código: '30003', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '30006', Descripción: 'La cuenta para el Identificador [Número de Identificador] no coincide con el de la operación.\'' }, { Código: '30009', Descripción: 'El Partner no tiene asociado un Tipo y Nivel.' }, { Código: '30010', Descripción: 'El Tipo y Nivel asociado al Partner no existe.' }, { Código: '30011', Descripción: 'El Tipo y Nivel asociado al Partner no está habilitado.' }, { Código: '30012', Descripción: 'El Producto no está Activo para el Partner. No pertenece al Nivel y no tiene una Inclusión vigente.' }, { Código: '30014', Descripción: 'El Producto no está Activo para el Partner. Está vigente en el Nivel pero tiene una Exclusión vigente.' }, { Código: '30015', Descripción: 'El Producto no está Activo para el Partner. Está habilitado pero no vigente en el Nivel y no tiene una Inclusión vigente.' }];
 
   examples = {
     invocation: { xml: `
@@ -102,7 +102,7 @@ export class SimularPrestamoComponent1750945333849 {
          </bts:sdtSimulacionInput>
       </bts:BTPartners.SimularPrestamo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?SimularPrestamo\' \
@@ -402,7 +402,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.SimularPrestamoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

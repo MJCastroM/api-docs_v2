@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechadeUltimoPagoComponent1750945335028 {
+export class ObtenerFechadeUltimoPagoComponent1751987199521 {
   pageTitle        = 'Obtener Fecha de Último Pago';
   description      = `Método para obtener la fecha de último pago de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerFechaUltimoPago';
@@ -21,7 +21,7 @@ export class ObtenerFechadeUltimoPagoComponent1750945335028 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación del préstamo.' }];
   outputData = [{ Nombre: 'fecha_ultimo_pago', Tipo: 'Date', Comentarios: 'Fecha de último pago.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerFechadeUltimoPagoComponent1750945335028 {
          <bts:operacionUId>121</bts:operacionUId>
       </bts:BTPrestamos.ObtenerFechaUltimoPago>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerFechaUltimoPago\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerFechaUltimoPagoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

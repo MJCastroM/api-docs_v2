@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarOrdendeNoPagodeChequeraComponent1750945332620 {
+export class RegistrarOrdendeNoPagodeChequeraComponent1751987196955 {
   pageTitle        = 'Registrar Orden de No Pago de Chequera';
   description      = `Método para registrar una orden de no pago de una chequera.`;
   pubName    = 'BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera';
@@ -21,7 +21,7 @@ export class RegistrarOrdendeNoPagodeChequeraComponent1750945332620 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de solicitud de chequera.' }, { Nombre: 'tipoDenunciante', Tipo: 'String', Comentarios: 'Tipo de denunciante.' }, { Nombre: 'tipoDenuncia', Tipo: 'String', Comentarios: 'Tipo de denuncia.' }, { Nombre: 'motivoDenuncia', Tipo: 'String', Comentarios: 'Motivo de la denuncia.' }, { Nombre: 'chequeDesde', Tipo: 'Long', Comentarios: 'Número de cheque inicial de la chequera.' }, { Nombre: 'chequeHasta', Tipo: 'Long', Comentarios: 'Número de cheque final de la chequera.' }];
   outputData = [{ Nombre: 'numeroDenuncia', Tipo: 'Long', Comentarios: 'Identificador de la denuncia.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió identificador de chequera.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '40002', Descripcion: 'No existe la operación indicada.' }, { Codigo: '40003', Descripcion: 'La chequera no pertenece a la operación.' }, { Codigo: '40004', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40005', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40006', Descripcion: 'Cuenta Cerrada, solo se permite consultas.' }, { Codigo: '40008', Descripcion: 'El cheque DESDE debe ser menor/igual que el HASTA.' }, { Codigo: '40009', Descripcion: 'El cheque DESDE debe ser mayor/igual que el INICIAL de la chequera.' }, { Codigo: '40010', Descripcion: 'El cheque HASTA debe ser mayor/igual que el INICIAL de la chequera.' }, { Codigo: '40011', Descripcion: 'El cheque DESDE debe ser menor/igual que el ULTIMO de la chequera.' }, { Codigo: '40012', Descripcion: 'El cheque HASTA debe ser menor/igual que el ULTIMO de la chequera.' }, { Codigo: '40013', Descripcion: 'El cheque [Número de cheque] ya está pago.' }, { Codigo: '40014', Descripcion: 'El cheque [Número de cheque] ya tiene O.N.P.' }, { Codigo: '40015', Descripcion: 'El cheque [Número de cheque] está rechazado.' }, { Codigo: '40016', Descripcion: 'El cheque [Número de cheque] esta certificado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió identificador de chequera.' }, { Código: '30011', Descripción: 'No se recupero la operación para el identificador recibido.' }, { Código: '40002', Descripción: 'No existe la operación indicada.' }, { Código: '40003', Descripción: 'La chequera no pertenece a la operación.' }, { Código: '40004', Descripción: 'La cuenta no esta habilitada.' }, { Código: '40005', Descripción: 'La chequera no se encuentra activa.' }, { Código: '40006', Descripción: 'Cuenta Cerrada, solo se permite consultas.' }, { Código: '40008', Descripción: 'El cheque DESDE debe ser menor/igual que el HASTA.' }, { Código: '40009', Descripción: 'El cheque DESDE debe ser mayor/igual que el INICIAL de la chequera.' }, { Código: '40010', Descripción: 'El cheque HASTA debe ser mayor/igual que el INICIAL de la chequera.' }, { Código: '40011', Descripción: 'El cheque DESDE debe ser menor/igual que el ULTIMO de la chequera.' }, { Código: '40012', Descripción: 'El cheque HASTA debe ser menor/igual que el ULTIMO de la chequera.' }, { Código: '40013', Descripción: 'El cheque [Número de cheque] ya está pago.' }, { Código: '40014', Descripción: 'El cheque [Número de cheque] ya tiene O.N.P.' }, { Código: '40015', Descripción: 'El cheque [Número de cheque] está rechazado.' }, { Código: '40016', Descripción: 'El cheque [Número de cheque] esta certificado.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class RegistrarOrdendeNoPagodeChequeraComponent1750945332620 {
          <bts:chequeHasta>1350</bts:chequeHasta>
       </bts:BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?RegistrarOrdenDeNoPagoChequera\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.RegistrarOrdenDeNoPagoChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

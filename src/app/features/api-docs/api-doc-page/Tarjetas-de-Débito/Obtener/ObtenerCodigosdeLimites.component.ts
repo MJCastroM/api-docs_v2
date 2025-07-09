@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCodigosdeLimitesComponent1750945335567 {
+export class ObtenerCodigosdeLimitesComponent1751987200158 {
   pageTitle        = 'Obtener Códigos de Límites';
   description      = `Método para obtener un listado de los códigos de límites disponibles para tarjetas de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerCodigosDeLimites';
@@ -38,7 +38,7 @@ export class ObtenerCodigosdeLimitesComponent1750945335567 {
          </bts:Btinreq>
       </bts:BTTarjetasDeDebito.ObtenerCodigosDeLimites>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerCodigosDeLimites\' \
@@ -113,7 +113,7 @@ curl -X GET \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerCodigosDeLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
 	"Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarVehicularComponent1750945333725 {
+export class ContratarVehicularComponent1751987198013 {
   pageTitle        = 'Contratar Vehicular';
   description      = `Método para contratar un préstamo vehicular.`;
   pubName    = 'BTPartners.ContratarVehicular';
@@ -21,7 +21,7 @@ export class ContratarVehicularComponent1750945333725 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'sdtDatosVehiculo', Tipo: '[sBTDatosAltaVeh](#sbtdatosaltaveh)', Comentarios: 'Datos del vehículo.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30007', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30009', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30010', Descripcion: 'No se obtuvo la persona para el identificador [Número de Identificador].' }, { Codigo: '30012', Descripcion: 'No se obtuvo el fiador para el identificador [Número de Identificador].' }, { Codigo: '30017', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30018', Descripcion: 'No se recibió vendedor.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Código: '30004', Descripción: 'No se recuperó el préstamo para el identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'El préstamo no pertenece al cliente.' }, { Código: '30007', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30009', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30010', Descripción: 'No se obtuvo la persona para el identificador [Número de Identificador].' }, { Código: '30012', Descripción: 'No se obtuvo el fiador para el identificador [Número de Identificador].' }, { Código: '30017', Descripción: 'No se recibió punto de venta.' }, { Código: '30018', Descripción: 'No se recibió vendedor.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -62,7 +62,7 @@ export class ContratarVehicularComponent1750945333725 {
          </bts:sdtDatosVehiculo>
       </bts:BTPartners.ContratarVehicular>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ContratarVehicular\' \
@@ -125,7 +125,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ContratarVehicularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

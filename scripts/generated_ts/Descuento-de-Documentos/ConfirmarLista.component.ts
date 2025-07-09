@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConfirmarListaComponent1750945333233 {
+export class ConfirmarListaComponent1751987197604 {
   pageTitle        = 'Confirmar Lista';
   description      = `Método para confirmar y contabilizar una lista de documentos.`;
   pubName    = 'BTDescuentoDocumentos.ConfirmarLista';
@@ -21,7 +21,7 @@ export class ConfirmarListaComponent1750945333233 {
 
   inputData  = [{ Nombre: 'listaUId', Tipo: 'Long', Comentarios: 'Identificador de lista.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento (Asiento).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de lista.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de lista.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ConfirmarListaComponent1750945333233 {
          <bts:listaUId>75</bts:listaUId>
       </bts:BTDescuentoDocumentos.ConfirmarLista>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?ConfirmarLista=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTDescuentoDocumentos.ConfirmarListaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

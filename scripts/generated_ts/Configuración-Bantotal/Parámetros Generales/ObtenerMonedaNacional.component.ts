@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedaNacionalComponent1750945332232 {
+export class ObtenerMonedaNacionalComponent1751987196572 {
   pageTitle        = 'Obtener Moneda Nacional';
   description      = `Método para obtener los datos de la moneda nacional.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerMonedaNacional';
@@ -21,7 +21,7 @@ export class ObtenerMonedaNacionalComponent1750945332232 {
 
   inputData  = [{ Nombre: 'tipoMoneda', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "MN" para este método].' }];
   outputData = [{ Nombre: 'sdtMoneda', Tipo: '[sBTMoneda](#sbtmoneda)', Comentarios: 'Datos de la moneda.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Monedas ingresadas en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Monedas ingresadas en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerMonedaNacionalComponent1750945332232 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerMonedaNacional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerMonedaNacional=\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerMonedaNacionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

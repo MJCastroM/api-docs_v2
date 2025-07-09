@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequeraComponent1750945332556 {
+export class ObtenerChequeraComponent1751987196892 {
   pageTitle        = 'Obtener Chequera';
   description      = `Método para obtener los datos de una chequera de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequera';
@@ -21,7 +21,7 @@ export class ObtenerChequeraComponent1750945332556 {
 
   inputData  = [{ Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera' }];
   outputData = [{ Nombre: 'sdtDatosChequera', Tipo: '[sBTDatosChequera](#sbtdatoschequera)', Comentarios: 'Datos de la chequera' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de chequera' }, { Codigo: '30002', Descripcion: 'No existe chequera con el identificador ingresado' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de chequera' }, { Código: '30002', Descripción: 'No existe chequera con el identificador ingresado' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerChequeraComponent1750945332556 {
          <bts:chequeraId>37</bts:chequeraId>
       </bts:BTCuentasCorrientes.ObtenerChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerChequera\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

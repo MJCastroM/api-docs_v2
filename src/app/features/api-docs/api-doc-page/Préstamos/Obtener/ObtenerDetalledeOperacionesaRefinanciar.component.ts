@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOperacionesaRefinanciarComponent1750945334953 {
+export class ObtenerDetalledeOperacionesaRefinanciarComponent1751987199403 {
   pageTitle        = 'Obtener Detalle de Operaciones a Refinanciar';
   description      = `Método para obtener detalle de las operaciones a refinanciar.`;
   pubName    = 'BTPrestamos.ObtenerDetalleOperacionesARefinanciar';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeOperacionesaRefinanciarComponent1750945334953 {
 
   inputData  = [{ Nombre: 'sdtOperacionesARefinanciar', Tipo: '[sBTPrestamos](#sbtprestamos)', Comentarios: 'Datos de las operaciones a refinanciar.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único del producto.' }];
   outputData = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'sdtPrestamosACancelar', Tipo: '[sBTPrestamoACancelar](#sbtprestamoacancelar)', Comentarios: 'Listado de préstamos a cancelar.' }, { Nombre: 'sdtConceptosPrestamo', Tipo: '[sBTConceptosPrestamo](#sbtconceptosprestamo)', Comentarios: 'Conceptos del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'No se recuperó el producto para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se indicaron operaciones a refinanciar.' }, { Codigo: '30013', Descripcion: 'El producto indicado es incorrecto' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30004', Descripción: 'No se recuperó el producto para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se indicaron operaciones a refinanciar.' }, { Código: '30013', Descripción: 'El producto indicado es incorrecto' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class ObtenerDetalledeOperacionesaRefinanciarComponent1750945334953 {
          <bts:productoUId>60</bts:productoUId>
       </bts:BTPrestamos.ObtenerDetalleOperacionesARefinanciar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
    \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleOperacionesARefinanciar\' \
@@ -143,7 +143,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleOperacionesARefinanciarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

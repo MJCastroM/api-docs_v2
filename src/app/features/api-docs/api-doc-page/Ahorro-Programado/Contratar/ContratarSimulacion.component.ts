@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { fadeInOut } from '../../../../../route-animations';
+import { fadeAnimation } from 'src/app/route-animations';
 
 @Component({
   selector: 'app-ContratarSimulacion',
   templateUrl: '../../DocTemplate.component.html',
   styleUrls: ['../../DocTemplate.component.scss'],
-  animations: [ fadeInOut ],
-  host: { '[@fadeInOut]': '' }
+  animations: [ fadeAnimation ],
+  host: { '[@fadeAnimation]': '' }
 })
-export class ContratarSimulacionComponent1750945330910 {
+export class ContratarSimulacionComponent1751987195230 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un ahorro programado a partir de una simulación.`;
   pubName    = 'BTAhorroProgramado.ContratarSimulacion';
   programa   = 'RBTPG445';
   scope      = 'Global';
+  trigger = true;
 
   hasBackendConfig = false;
   backendText      = ``;
@@ -21,7 +23,7 @@ export class ContratarSimulacionComponent1750945330910 {
 
   inputData  = [{ Nombre: 'sdtDatos', Tipo: '[sBTCrearSolicitudAhorro](#sbtcrearsolicitudahorro)', Comentarios: 'Datos de la solicitud de ahorro programado.' }];
   outputData = [{ Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador de ahorro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30009', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30010', Descripcion: 'No se recuperó la cuenta origen del ahorro para el identificador: [Número de Identificador].' }, { Codigo: '30011', Descripcion: 'No se recuperó la cuenta destino del ahorro para el identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la simulación.' }, { Código: '30002', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30009', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Código: '30010', Descripción: 'No se recuperó la cuenta origen del ahorro para el identificador: [Número de Identificador].' }, { Código: '30011', Descripción: 'No se recuperó la cuenta destino del ahorro para el identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +47,7 @@ export class ContratarSimulacionComponent1750945330910 {
          </bts:sdtDatos>
       </bts:BTAhorroProgramado.ContratarSimulacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ContratarSimulacion\' \
@@ -92,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ContratarSimulacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarAsientoComponent1750945332452 {
+export class RegistrarAsientoComponent1751987196808 {
   pageTitle        = 'Registrar Asiento';
   description      = `Método para registrar en el sistema un movimiento entre dos operaciones genéricas.`;
   pubName    = 'BTContabilidad.RegistrarAsiento';
@@ -25,7 +25,7 @@ export class RegistrarAsientoComponent1750945332452 {
 
   inputData  = [{ Nombre: 'sdtDatosAsiento', Tipo: '[sBTDatosAsiento](#sbtdatosasiento)', Comentarios: 'Datos del movimiento' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar al menos una operación.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador:' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar al menos una operación.' }, { Código: '30004', Descripción: 'No se recuperó la operación origen para el Identificador:' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -57,7 +57,7 @@ export class RegistrarAsientoComponent1750945332452 {
             <bts:concepto></bts:concepto>
          </bts:sdtDatosAsiento>
       </bts:BTContabilidad.RegistrarAsiento>
-   </soapenv:Body>`, 
+   </soapenv:Body>`,
     json: `
 curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?RegistrarAsiento=\' \ 
@@ -113,7 +113,7 @@ curl -X POST \
          </Btoutreq> 
       </BTContabilidad.RegistrarAsientoResponse> 
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

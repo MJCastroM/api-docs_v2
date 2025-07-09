@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCalendariosComponent1750945332197 {
+export class ObtenerCalendariosComponent1751987196532 {
   pageTitle        = 'Obtener Calendarios';
   description      = `Método para obtener los calendarios ingresados en el sistema.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCalendarios';
@@ -21,7 +21,7 @@ export class ObtenerCalendariosComponent1750945332197 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtCalendarios', Tipo: '[sBTCalendario](#sbtcalendario)', Comentarios: 'Colección de calendarios.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se encontraron calendarios en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se encontraron calendarios en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerCalendariosComponent1750945332197 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerCalendarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerCalendarios\' \
@@ -86,7 +86,7 @@ curl -X GET \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerCalendariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

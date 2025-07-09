@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresComponent1750945333269 {
+export class ObtenerAgrupadoresComponent1751987197656 {
   pageTitle        = 'Obtener Agrupadores';
   description      = `Método para obtener los agrupadores de indicadores ingresados en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerAgrupadores';
@@ -21,7 +21,7 @@ export class ObtenerAgrupadoresComponent1750945333269 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtAgrupadores', Tipo: '[sBTAgrupador](#sbtagrupador)', Comentarios: 'Listado de Agrupadores.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Agrupadores.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Agrupadores.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerAgrupadoresComponent1750945333269 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerAgrupadores>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerAgrupadores\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerAgrupadoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

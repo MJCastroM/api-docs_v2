@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetallePagoOrdenComponent1750945331461 {
+export class ObtenerDetallePagoOrdenComponent1751987195765 {
   pageTitle        = 'Obtener Detalle de Pago de una Orden';
   description      = `Método para obtener la información de las lineas del detalle del pago para una orden.`;
   pubName    = 'BTCASHManagement.ObtenerDetallePagoOrden';
@@ -21,7 +21,7 @@ export class ObtenerDetallePagoOrdenComponent1750945331461 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }];
   outputData = [{ Nombre: 'cuentaDebito', Tipo: 'Long', Comentarios: 'Operación de débito.' }, { Nombre: 'cantidadLineas', Tipo: 'Int', Comentarios: 'Cantidad de líneas del archivo.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe total.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del pago o cobro.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago o cobro.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del archivo.' }, { Nombre: 'erroresPago', Tipo: 'String', Comentarios: 'Lista de mensajes del cabezal de pago.' }, { Nombre: 'detallePagos', Tipo: '[sBTDetallePago](#sbtdetallepago)', Comentarios: 'Lista de información del archivo con su estado y mensaje.' }];
-  errors     = [{ Codigo: '1030753', Descripcion: 'No se encontró la orden para el identificador recibido.' }];
+  errors     = [{ Código: '1030753', Descripción: 'No se encontró la orden para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetallePagoOrdenComponent1750945331461 {
          <bts:ordenId>345</bts:ordenId>
       </bts:BTCASHManagement.ObtenerDetallePagoOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetallePagoOrden=\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerDetallePagoOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

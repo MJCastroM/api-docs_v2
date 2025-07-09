@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarUsuarioComponent1750945335792 {
+export class EliminarUsuarioComponent1751987200437 {
   pageTitle        = 'Eliminar Usuario';
   description      = `Método para eliminar un usuario.`;
   pubName    = 'BTUsuarios.EliminarUsuario';
@@ -21,7 +21,7 @@ export class EliminarUsuarioComponent1750945335792 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador del usuario.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar usuario.' }, { Codigo: '30002', Descripcion: 'No existe el usuario ingresado.' }, { Codigo: '30003', Descripcion: 'No es posible eliminar el usuario. Existen datos relacionados de Perfil/Usuario.' }, { Codigo: '30004', Descripcion: 'El Usuario no existe. (Tabla FST746)' }, { Codigo: '30005', Descripcion: 'La Empresa para el Usuario no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar usuario.' }, { Código: '30002', Descripción: 'No existe el usuario ingresado.' }, { Código: '30003', Descripción: 'No es posible eliminar el usuario. Existen datos relacionados de Perfil/Usuario.' }, { Código: '30004', Descripción: 'El Usuario no existe. (Tabla FST746)' }, { Código: '30005', Descripción: 'La Empresa para el Usuario no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class EliminarUsuarioComponent1750945335792 {
          <bts:usuario>GPONTES</bts:usuario>
       </bts:BTUsuarios.EliminarUsuario>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?EliminarUsuario\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.EliminarUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": {

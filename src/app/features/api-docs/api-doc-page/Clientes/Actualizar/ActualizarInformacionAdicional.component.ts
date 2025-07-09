@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarInformacionAdicionalComponent1750945331641 {
+export class ActualizarInformacionAdicionalComponent1751987196002 {
   pageTitle        = 'Actualizar Información Adicional';
   description      = `Método para actualizar la información adicional de una cuenta cliente.`;
   pubName    = 'BTClientes.ActualizarInformacionAdicional';
@@ -21,7 +21,7 @@ export class ActualizarInformacionAdicionalComponent1750945331641 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos adicionales.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'UPD\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '40002', Descripcion: 'El atributo [Identificador de información adicional] no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '40002', Descripción: 'El atributo [Identificador de información adicional] no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class ActualizarInformacionAdicionalComponent1750945331641 {
          </bts:sdtInformacionAdicional>
       </bts:BTClientes.ActualizarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ActualizarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ActualizarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

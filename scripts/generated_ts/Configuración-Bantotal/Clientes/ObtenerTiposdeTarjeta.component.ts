@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTarjetaComponent1750945332147 {
+export class ObtenerTiposdeTarjetaComponent1751987196480 {
   pageTitle        = 'Obtener Tipos de Tarjeta';
   description      = `Método para obtener un listado de los tipos de tarjeta ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposTarjeta';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeTarjetaComponent1750945332147 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTipos', Tipo: '[sBTTipoTarjeta](#sbttipotarjeta)', Comentarios: 'Listado de tipos de tarjeta.' }];
-  errors     = [{ Codigo: '30011', Descripcion: 'No existen Tipos de tarjeta ingresados en el sistema.' }];
+  errors     = [{ Código: '30011', Descripción: 'No existen Tipos de tarjeta ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposdeTarjetaComponent1750945332147 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerTiposTarjeta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposTarjeta\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerTiposTarjetaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

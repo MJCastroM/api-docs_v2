@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorrelativoGuiaComponent1750945333866 {
+export class ObtenerCorrelativoGuiaComponent1751987198189 {
   pageTitle        = 'Obtener Correlativo Guía';
   description      = `Método para obtener los datos de un correlativo de una determinada guía de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerCorrelativoGuia';
@@ -21,7 +21,7 @@ export class ObtenerCorrelativoGuiaComponent1750945333866 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Código de empresa [Hidden].' }, { Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código de la Guía de Procesos.' }, { Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo.' }];
   outputData = [{ Nombre: 'sdtCorrelativo', Tipo: '[sBTCorrelativoGuia](#sbtcorrelativoguia)', Comentarios: 'Datos de la guía de proceso.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió código de guía.' }, { Codigo: '40001', Descripcion: 'No existe el correlativo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió código de guía.' }, { Código: '40001', Descripción: 'No existe el correlativo.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerCorrelativoGuiaComponent1750945333866 {
          <bts:correlativo>1</bts:correlativo>
       </bts:BTParametrosBase.ObtenerCorrelativoGuia>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuia \
@@ -86,7 +86,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerCorrelativoGuiaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

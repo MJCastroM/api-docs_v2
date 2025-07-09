@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ComprarComponent1750945335744 {
+export class ComprarComponent1751987200378 {
   pageTitle        = 'Comprar';
   description      = `Método para comprar un título.`;
   pubName    = 'BTTitulos.Comprar';
@@ -21,7 +21,7 @@ export class ComprarComponent1750945335744 {
 
   inputData  = [{ Nombre: 'sdtCompra', Tipo: '[sBTCompraTitulo](#sbtcompratitulo)', Comentarios: 'Datos del título a comprar.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del mercado.' }, { Codigo: '30002', Descripcion: 'El valor del campo compra tiene que ser C o V.' }, { Codigo: '30003', Descripcion: 'El valor del campo ingresa tiene que ser I o V.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de la especie.' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30006', Descripcion: 'El valor del campo precio tiene que ser L o C.' }, { Codigo: '30007', Descripcion: 'Se tiene que ingresar plazo o vigencia hasta.' }, { Codigo: '30008', Descripcion: 'Se tiene que ingresar tasa o comisión.' }, { Codigo: '30009', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30010', Descripcion: 'La forma de pago tiene que ser CC o CA.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '30012', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30013', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente.' }, { Codigo: '30014', Descripcion: 'La operación ingresada no corresponde a una cuenta de ahorro.' }, { Codigo: '30015', Descripcion: 'La operación no pertenece al cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del mercado.' }, { Código: '30002', Descripción: 'El valor del campo compra tiene que ser C o V.' }, { Código: '30003', Descripción: 'El valor del campo ingresa tiene que ser I o V.' }, { Código: '30004', Descripción: 'No se recibió el identificador de la especie.' }, { Código: '30005', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30006', Descripción: 'El valor del campo precio tiene que ser L o C.' }, { Código: '30007', Descripción: 'Se tiene que ingresar plazo o vigencia hasta.' }, { Código: '30008', Descripción: 'Se tiene que ingresar tasa o comisión.' }, { Código: '30009', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30010', Descripción: 'La forma de pago tiene que ser CC o CA.' }, { Código: '30011', Descripción: 'No se recuperó la operación para el identificador recibido.' }, { Código: '30012', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Código: '30013', Descripción: 'La operación ingresada no corresponde a una cuenta corriente.' }, { Código: '30014', Descripción: 'La operación ingresada no corresponde a una cuenta de ahorro.' }, { Código: '30015', Descripción: 'La operación no pertenece al cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -65,7 +65,7 @@ export class ComprarComponent1750945335744 {
          </bts:sdtComprarTitulo>
       </bts:BTTitulos.ComprarTitulo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ComprarTitulo\' \
@@ -133,7 +133,7 @@ curl -X POST \
          </Btoutreq>
       </BTTitulos.ComprarTituloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldoBloqueadoComponent1750945332865 {
+export class ObtenerSaldoBloqueadoComponent1751987197203 {
   pageTitle        = 'Obtener Saldo Bloqueado';
   description      = `Método para obtener el total de saldo bloqueado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldoBloqueado';
@@ -21,7 +21,7 @@ export class ObtenerSaldoBloqueadoComponent1750945332865 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'saldoBloqueado', Tipo: 'Double', Comentarios: 'Total de saldo bloqueado.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se encontró el Id de Operación para la Cuenta Vista Bloqueada' }];
+  errors     = [{ Código: '30002', Descripción: 'No se encontró el Id de Operación para la Cuenta Vista Bloqueada' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerSaldoBloqueadoComponent1750945332865 {
          <bts:operacionUId>3</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerSaldoBloqueado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerSaldoBloqueado=\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerSaldoBloqueadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

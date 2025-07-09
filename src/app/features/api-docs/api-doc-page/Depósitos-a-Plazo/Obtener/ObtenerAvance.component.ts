@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAvanceComponent1750945333124 {
+export class ObtenerAvanceComponent1751987197464 {
   pageTitle        = 'Obtener Avance';
   description      = `Método para obtener el avance de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerAvance';
@@ -21,7 +21,7 @@ export class ObtenerAvanceComponent1750945333124 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'depositoUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de depósito.' }];
   outputData = [{ Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta del depósito.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del depósito.' }, { Nombre: 'plazoTranscurrido', Tipo: 'Int', Comentarios: 'Plazo transcurrido del depósito.' }, { Nombre: 'plazoTotal', Tipo: 'Int', Comentarios: 'Plazo total del depósito.' }, { Nombre: 'porcentajeAvance', Tipo: 'Double', Comentarios: 'Porcentaje de avance del depósito (según el plazo).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la Cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del depósito.' }, { Codigo: '30003', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '30005', Descripcion: 'La operación de depósito no pertenece al cliente ingresado.' }, { Codigo: '40001', Descripcion: 'La operación de depósito ingresada no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la Cuenta.' }, { Código: '30002', Descripción: 'No se recibió el identificador del depósito.' }, { Código: '30003', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30004', Descripción: 'No se recuperó la operación para el identificador recibido.' }, { Código: '30005', Descripción: 'La operación de depósito no pertenece al cliente ingresado.' }, { Código: '40001', Descripción: 'La operación de depósito ingresada no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerAvanceComponent1750945333124 {
          <bts:depositoUId>10121</bts:depositoUId>
       </bts:BTDepositoAPlazo.ObtenerAvance>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositoAPlazo_v1?ObtenerAvance \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositoAPlazo.ObtenerAvanceResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

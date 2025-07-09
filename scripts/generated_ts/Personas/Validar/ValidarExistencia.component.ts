@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarExistenciaComponent1750945334625 {
+export class ValidarExistenciaComponent1751987199010 {
   pageTitle        = 'Validar Existencia';
   description      = `Método para validar la existencia de una persona.`;
   pubName    = 'BTPersonas.ValidarExistencia';
@@ -21,7 +21,7 @@ export class ValidarExistenciaComponent1750945334625 {
 
   inputData  = [{ Nombre: 'paisId', Tipo: 'Short', Comentarios: 'Identificador del país de origen del documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento de la persona.' }];
   outputData = [{ Nombre: 'existe', Tipo: 'String', Comentarios: '¿Existe? (S/N).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de país.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibió el número de documento.' }, { Codigo: '30004', Descripcion: 'La persona no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de país.' }, { Código: '30002', Descripción: 'No se recibió el identificador de tipo de documento.' }, { Código: '30003', Descripción: 'No se recibió el número de documento.' }, { Código: '30004', Descripción: 'La persona no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ValidarExistenciaComponent1750945334625 {
          <bts:numeroDocumento>10587456</bts:numeroDocumento>
       </bts:BTPersonas.ValidarExistencia>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ValidarExistencia\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ValidarExistenciaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

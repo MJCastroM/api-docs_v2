@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearconPersonaExistenteComponent1750945331758 {
+export class CrearconPersonaExistenteComponent1751987196132 {
   pageTitle        = 'Crear con Persona Existente';
   description      = `Método para crear una cuenta cliente a partir de una persona existente.`;
   pubName    = 'BTClientes.CrearConPersonaExistente';
@@ -21,7 +21,7 @@ export class CrearconPersonaExistenteComponent1750945331758 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona titular de la cuenta.' }, { Nombre: 'sectorId', Tipo: 'Short', Comentarios: 'Identificador de sector.' }, { Nombre: 'clasificacionInternaId', Tipo: 'Short', Comentarios: 'Identificador de clasificación interna.' }, { Nombre: 'ejecutivoId', Tipo: 'Short', Comentarios: 'Identificador de ejecutivo de cuenta.' }, { Nombre: 'sdtDatosAdicionales', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos adicionales. Se pueden enviar los siguientes [valores.](#valores)' }];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cuenta creada.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del sector.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la clasificación interna.' }, { Codigo: '30005', Descripcion: 'Ya existe la cuenta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador del sector.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la clasificación interna.' }, { Código: '30005', Descripción: 'Ya existe la cuenta.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class CrearconPersonaExistenteComponent1750945331758 {
          <bts:sdtDatosAdicionales></bts:sdtDatosAdicionales>
       </bts:BTClientes.CrearConPersonaExistente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?CrearConPersonaExistente\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.CrearConPersonaExistenteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750945334356 {
+export class ObtenerFacultadesComponent1751987198720 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una persona.`;
   pubName    = 'BTPersonas.ObtenerFacultades';
@@ -21,7 +21,7 @@ export class ObtenerFacultadesComponent1750945334356 {
 
   inputData  = [{ Nombre: 'personasUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtFacultades', Tipo: '[sBTFacultadesPersona](#sbtfacultadespersona)', Comentarios: 'Listado de datos de facultades.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30006', Descripcion: 'No se recuperó la persona  para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30006', Descripción: 'No se recuperó la persona  para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerFacultadesComponent1750945334356 {
          <bts:personasUId>183</bts:personasUId>
       </bts:BTPersonas.ObtenerFacultades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerDatos\' \
@@ -127,7 +127,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

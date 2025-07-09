@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTextosdeMovimientoComponent1750945332447 {
+export class ObtenerTextosdeMovimientoComponent1751987196800 {
   pageTitle        = 'Obtener Textos de Movimiento';
   description      = `Método para obtener un listado de los textos asociados a un movimiento.`;
   pubName    = 'BTContabilidad.ObtenerTextosMovimiento';
@@ -21,7 +21,7 @@ export class ObtenerTextosdeMovimientoComponent1750945332447 {
 
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
   outputData = [{ Nombre: 'sdtTextosMovimiento', Tipo: '[sBTTextoMovimiento](#sbttextomovimiento)', Comentarios: 'Listado de textos del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '40003', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de movimiento.' }, { Código: '40003', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTextosdeMovimientoComponent1750945332447 {
          <bts:movimientoUId>1</bts:movimientoUId>
       </bts:BTContabilidad.ObtenerTextosMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerTextosMovimiento\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerTextosMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

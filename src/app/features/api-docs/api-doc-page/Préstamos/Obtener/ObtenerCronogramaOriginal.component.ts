@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaOriginalComponent1750945334897 {
+export class ObtenerCronogramaOriginalComponent1751987199334 {
   pageTitle        = 'Obtener Cronograma Original';
   description      = `Método que devuelve el cronograma original de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaOriginal';
@@ -21,7 +21,7 @@ export class ObtenerCronogramaOriginalComponent1750945334897 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la operación.' }];
   outputData = [{ Nombre: 'sdtPrestamoOriginal', Tipo: '[sBTPrestamoOriginal](#sbtprestamooriginal)', Comentarios: 'Información del préstamo original.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó préstamo para el identificador:' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó préstamo para el identificador:' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCronogramaOriginalComponent1750945334897 {
          <bts:operacionUId>10118</bts:operacionUId>
       </bts:BTPrestamos.ObtenerCronogramaOriginal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ObtenerCronogramaOriginal\' \
@@ -277,7 +277,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerCronogramaOriginalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
 	"Btinreq": { 

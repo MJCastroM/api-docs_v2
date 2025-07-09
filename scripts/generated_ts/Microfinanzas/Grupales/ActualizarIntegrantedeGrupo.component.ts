@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarIntegrantedeGrupoComponent1750945333402 {
+export class ActualizarIntegrantedeGrupoComponent1751987197748 {
   pageTitle        = 'Actualizar Integrante de Grupo';
   description      = `Método para actualizar un integrante de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ActualizarIntegranteGrupo';
@@ -21,7 +21,7 @@ export class ActualizarIntegrantedeGrupoComponent1750945333402 {
 
   inputData  = [{ Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo' }, { Nombre: 'sdtIntegranteGrupo', Tipo: '[sBTIntegranteGrupo](#sbtintegrantegrupo)', Comentarios: 'Datos del integrante' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de grupo' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado' }, { Codigo: '40005', Descripcion: 'Debe ingresar un tipo de integrante válido para el grupo' }, { Codigo: '40006', Descripcion: 'Excedió la cantidad de integrantes Coordinador permitidos para el tipo de grupo' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de grupo' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente' }, { Código: '30014', Descripción: 'No existe registro con el identificador indicado' }, { Código: '40005', Descripción: 'Debe ingresar un tipo de integrante válido para el grupo' }, { Código: '40006', Descripción: 'Excedió la cantidad de integrantes Coordinador permitidos para el tipo de grupo' }];
 
   examples = {
     invocation: { xml: `
@@ -49,7 +49,7 @@ export class ActualizarIntegrantedeGrupoComponent1750945333402 {
          </bts:sdtIntegranteGrupo>
       </bts:BTMicrofinanzas.ActualizarIntegranteGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ActualizarIntegranteGrupo=\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ActualizarIntegranteGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

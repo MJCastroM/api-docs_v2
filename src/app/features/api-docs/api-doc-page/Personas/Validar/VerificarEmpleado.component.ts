@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEmpleadoComponent1750945334641 {
+export class VerificarEmpleadoComponent1751987199023 {
   pageTitle        = 'Verificar Empleado';
   description      = `Método para verificar si una persona es empleada de la institución.`;
   pubName    = 'BTPersonas.VerificarEmpleado';
@@ -21,7 +21,7 @@ export class VerificarEmpleadoComponent1750945334641 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }];
   outputData = [{ Nombre: 'empleado', Tipo: 'String', Comentarios: '¿Es empleado de la institución? (S/N).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'La persona no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'La persona no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class VerificarEmpleadoComponent1750945334641 {
          <bts:personaUId>227</bts:personaUId>
       </bts:BTPersonas.VerificarEmpleado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?VerificarEmpleado\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.VerificarEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

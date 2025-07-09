@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregaraListaNegraComponent1750945334036 {
+export class AgregaraListaNegraComponent1751987198397 {
   pageTitle        = 'Agregar a Lista Negra';
   description      = `Método para agregar una persona a una lista negra.`;
   pubName    = 'BTPersonas.AgregarAListaNegra';
@@ -21,7 +21,7 @@ export class AgregaraListaNegraComponent1750945334036 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'codigoDeLista', Tipo: 'Short', Comentarios: 'Identificador de lista negra.' }, { Nombre: 'motivo', Tipo: 'String', Comentarios: 'Motivo por el cual la persona debe estar en la lista.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Identificador de persona requerido.' }, { Codigo: '30002', Descripcion: 'No existe persona con el identificador ingresado.' }, { Codigo: '40001', Descripcion: 'Código Lista no puede ser vacío.' }, { Codigo: '40002', Descripcion: 'Código Lista Inválido.' }, { Codigo: '40003', Descripcion: 'Motivo no puede ser vacío.' }, { Codigo: '40004', Descripcion: 'La persona ya se encuentra inhabilitada.' }];
+  errors     = [{ Código: '30001', Descripción: 'Identificador de persona requerido.' }, { Código: '30002', Descripción: 'No existe persona con el identificador ingresado.' }, { Código: '40001', Descripción: 'Código Lista no puede ser vacío.' }, { Código: '40002', Descripción: 'Código Lista Inválido.' }, { Código: '40003', Descripción: 'Motivo no puede ser vacío.' }, { Código: '40004', Descripción: 'La persona ya se encuentra inhabilitada.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class AgregaraListaNegraComponent1750945334036 {
          <bts:motivo>Lavado de dinero</bts:motivo>
       </bts:BTPersonas.AgregarAListaNegra>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarAListaNegra\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarAListaNegraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

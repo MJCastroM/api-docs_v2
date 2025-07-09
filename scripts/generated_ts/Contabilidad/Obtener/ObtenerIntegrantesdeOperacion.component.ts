@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesdeOperacionComponent1750945332440 {
+export class ObtenerIntegrantesdeOperacionComponent1751987196791 {
   pageTitle        = 'Obtener Integrantes de Operación';
   description      = `Método para obtener los integrantes de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIntegrantesOperacion';
@@ -21,7 +21,7 @@ export class ObtenerIntegrantesdeOperacionComponent1750945332440 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'sdtIntegrantes', Tipo: '[sBTIntegrante](#sbtintegrante)', Comentarios: 'Listado de integrantes de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador de operación: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador de operación: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIntegrantesdeOperacionComponent1750945332440 {
          <bts:operacionUId>21</bts:operacionUId>
       </bts:BTContabilidad.ObtenerIntegrantesOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIntegrantesOperacion=\' \
   -H \'cache-control: no-cache\' \
@@ -92,7 +92,7 @@ export class ObtenerIntegrantesdeOperacionComponent1750945332440 {
          </Btoutreq>
       </BTContabilidad.ObtenerIntegrantesOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

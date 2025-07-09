@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetallePosicionComponent1750945331848 {
+export class ObtenerDetallePosicionComponent1751987196231 {
   pageTitle        = 'Obtener Detalle de Posición';
   description      = `Método para obtener el detalle de una posición de los títulos de un cliente.`;
   pubName    = 'BTClientes.ObtenerDetallePosicion';
@@ -21,7 +21,7 @@ export class ObtenerDetallePosicionComponent1750945331848 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha.' }, { Nombre: 'identificadorClaseActivo', Tipo: 'Int', Comentarios: 'Identificador de la clase del activo.' }, { Nombre: 'numeradorConsulta', Tipo: 'Int', Comentarios: 'Numerador de la consulta.' }];
   outputData = [{ Nombre: 'totalGeneral', Tipo: 'Double', Comentarios: 'Total general.' }, { Nombre: 'sdtDetalleClaseActivo', Tipo: '[sBTDetalleClaseActivo](#sbtdetalleclaseactivo)', Comentarios: 'Datos del detalle de la clase del activo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar la fecha.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la clase de activo.' }, { Codigo: '30004', Descripcion: 'No se recibió el numerador de la consulta.' }, { Codigo: '30013', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40001', Descripcion: 'No se recuperó el componente del portafolio para el identificador: [Número de Identificador].' }, { Codigo: '40002', Descripcion: 'No se encontraron datos de la posición del cliente, ejecutar el servicio de consultar posición del cliente.' }, { Codigo: '40021', Descripcion: 'Error - No hay precio para el papel [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'Debe ingresar la fecha.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la clase de activo.' }, { Código: '30004', Descripción: 'No se recibió el numerador de la consulta.' }, { Código: '30013', Descripción: 'No existe registro con la cuenta indicada.' }, { Código: '40001', Descripción: 'No se recuperó el componente del portafolio para el identificador: [Número de Identificador].' }, { Código: '40002', Descripción: 'No se encontraron datos de la posición del cliente, ejecutar el servicio de consultar posición del cliente.' }, { Código: '40021', Descripción: 'Error - No hay precio para el papel [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ObtenerDetallePosicionComponent1750945331848 {
          <bts:numeradorConsulta>12928</bts:numeradorConsulta>
       </bts:BTClientes.ObtenerDetallePosicion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDetallePosicion=\' \
@@ -120,7 +120,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerDetallePosicionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

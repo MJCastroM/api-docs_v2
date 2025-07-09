@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasVinculadasComponent1750945334470 {
+export class ObtenerPersonasVinculadasComponent1751987198839 {
   pageTitle        = 'Obtener Personas Vinculadas';
   description      = `Método para obtener un listado de los vínculos de la persona.`;
   pubName    = 'BTPersonas.ObtenerPersonasVinculadas';
@@ -21,7 +21,7 @@ export class ObtenerPersonasVinculadasComponent1750945334470 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtPersonasVinculadas', Tipo: '[sBTPersonaVinculada](#sbtpersonavinculada)', Comentarios: 'Datos de la persona vinculada.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '31003', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPersonasVinculadasComponent1750945334470 {
          <bts:personaUId>1</bts:personaUId>
       </bts:BTPersonas.ObtenerPersonasVinculadas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasVinculadas\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerPersonasVinculadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

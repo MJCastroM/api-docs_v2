@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoSegurosComponent1750945335358 {
+export class SimularIngresandoSegurosComponent1751987199887 {
   pageTitle        = 'Simular Ingresando Seguros';
   description      = `Método para simular el alta de un préstamo ingresando los seguros a aplicar.`;
   pubName    = 'BTPrestamos.SimularIngresandoSeguros';
@@ -21,7 +21,7 @@ export class SimularIngresandoSegurosComponent1750945335358 {
 
   inputData  = [{ Nombre: 'sdtPrestamoAlta', Tipo: '[sBTPrestamoAlta](#sbtprestamoalta)', Comentarios: 'Datos de la simulación.' }, { Nombre: 'sinSeguros', Tipo: 'String', Comentarios: 'Acción a tomar cuando la lista de seguros a aplicar es vacía (S: Simula sin tener en cuenta ningún seguro, N: Simula con los seguros preseteados).' }, { Nombre: 'sdtSeguros', Tipo: '[sBTSegurosSimulacion](#sbtsegurossimulacion)', Comentarios: 'Listado de códigos de seguros a aplicar.' }];
   outputData = [{ Nombre: 'sBTSimulacionPrestamo', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos de simulación del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -55,7 +55,7 @@ export class SimularIngresandoSegurosComponent1750945335358 {
          </bts:sdtSeguros>
       </bts:BTPrestamos.SimularIngresandoSeguros>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -189,7 +189,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.SimularIngresandoSegurosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DetenerOrdenComponent1750945331506 {
+export class DetenerOrdenComponent1751987195823 {
   pageTitle        = 'Detener Orden';
   description      = `Método para detener el procesamiento de una orden CASH autorizada.`;
   pubName    = 'BTCASHManagement.DetenerOrden';
@@ -21,7 +21,7 @@ export class DetenerOrdenComponent1750945331506 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }];
   outputData = [];
-  errors     = [{ Codigo: '1030727', Descripcion: 'Solo se pueden detener ordenes autorizadas.' }, { Codigo: '1030729', Descripcion: 'No se recupero la orden para el identificador recibido.' }];
+  errors     = [{ Código: '1030727', Descripción: 'Solo se pueden detener ordenes autorizadas.' }, { Código: '1030729', Descripción: 'No se recupero la orden para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class DetenerOrdenComponent1750945331506 {
          <bts:ordenId>365</bts:ordenId>
       </bts:BTCASHManagement.DetenerOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?DetenerOrden=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.DetenerOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionesHabilitadosComponent1750945333155 {
+export class ObtenerInstruccionesHabilitadosComponent1751987197504 {
   pageTitle        = 'Obtener Instrucciones Habilitados';
   description      = `Método para obtener un listado de las instrucciones de un producto.`;
   pubName    = 'BTDepositoAPlazo.ObtenerInstruccionesHabilitados';
@@ -32,7 +32,7 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'tipoProducto', Tipo: 'String', Comentarios: 'Tipo de producto (VTO: Vencimiento, PP: Pago periódico).' }];
   outputData = [{ Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'sdtCodigoInstrucciones', Tipo: '[sBTCodigoInstrucciones](#sbtcodigoinstrucciones)', Comentarios: 'Listado de códigos de instrucciones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del Producto.' }, { Codigo: '30006', Descripcion: 'No existe registro para el producto indicado.' }, { Codigo: '40001', Descripcion: 'No existen Instrucciones ingresados en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del Producto.' }, { Código: '30006', Descripción: 'No existe registro para el producto indicado.' }, { Código: '40001', Descripción: 'No existen Instrucciones ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
          <bts:tipoProducto></bts:tipoProducto>
       </bts:BTDepositosAPlazo.ObtenerInstruccionesHaiblitadas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -142,7 +142,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerInstruccionesHaiblitadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

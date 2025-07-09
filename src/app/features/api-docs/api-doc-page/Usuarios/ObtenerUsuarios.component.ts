@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerUsuariosComponent1750945335837 {
+export class ObtenerUsuariosComponent1751987200495 {
   pageTitle        = 'Obtener Usuarios';
   description      = `Método para obtener un listado de los usuarios ingresados en el sistema.`;
   pubName    = 'BTUsuarios.ObtenerUsuarios';
@@ -38,7 +38,7 @@ export class ObtenerUsuariosComponent1750945335837 {
          </bts:Btinreq>
       </bts:BTUsuarios.ObtenerUsuarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?ObtenerUsuarios\' \
@@ -109,7 +109,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerUsuariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

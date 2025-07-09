@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRequiereSegurodeVidaObligatorioComponent1750945333673 {
+export class ObtenerRequiereSegurodeVidaObligatorioComponent1751987197953 {
   pageTitle        = 'Obtener Requiere Seguro de Vida Obligatorio';
   description      = `Método para obtener si un producto de préstamo requiere seguro de vida obligatorio.`;
   pubName    = 'BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio';
@@ -21,7 +21,7 @@ export class ObtenerRequiereSegurodeVidaObligatorioComponent1750945333673 {
 
   inputData  = [{ Nombre: 'productoUID', Tipo: 'Long', Comentarios: 'Identificador de producto.' }, { Nombre: 'parametro', Tipo: 'Short', Comentarios: '[Hidden: Valor \'350\' definido por defecto].' }];
   outputData = [{ Nombre: 'valor', Tipo: 'String', Comentarios: 'Requiere o no seguro de vida obligatorio.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Existe registro con la cuenta indicada.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerRequiereSegurodeVidaObligatorioComponent1750945333673 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -68,7 +68,7 @@ export class ObtenerRequiereSegurodeVidaObligatorioComponent1750945333673 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerRequiereSeguroDeVidaObligatorioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

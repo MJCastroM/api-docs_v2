@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarDocumentoAdicionalComponent1750945334031 {
+export class ModificarDocumentoAdicionalComponent1751987198388 {
   pageTitle        = 'Modificar Documento Adicional';
   description      = `Método para modificar un documento adicional de una persona.`;
   pubName    = 'BTPersonas.ModificarDocumentoAdicional';
@@ -21,7 +21,7 @@ export class ModificarDocumentoAdicionalComponent1750945334031 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de Persona.' }, { Nombre: 'sdtDocumentoAdicional', Tipo: '[sBTDocumentoAdicional](#sbtdocumentoadicional)', Comentarios: 'Datos de documento adicional.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'UPD\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30011', Descripcion: 'El país del documento adicional no es válido.' }, { Codigo: '30012', Descripcion: 'El tipo de documento adicional no es válido.' }, { Codigo: '30013', Descripcion: 'Número de Documento incorrecto.' }, { Codigo: '30014', Descripcion: 'La fecha de emisión del documento no puede ser anterior a hoy.' }, { Codigo: '30015', Descripcion: 'No se recibió fecha de vencimiento del documento' }, { Codigo: '30016', Descripcion: 'La fecha de vencimiento del documento no puede ser anterior a hoy' }, { Codigo: '30018', Descripcion: 'La persona no posee ese documento adicional.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30011', Descripción: 'El país del documento adicional no es válido.' }, { Código: '30012', Descripción: 'El tipo de documento adicional no es válido.' }, { Código: '30013', Descripción: 'Número de Documento incorrecto.' }, { Código: '30014', Descripción: 'La fecha de emisión del documento no puede ser anterior a hoy.' }, { Código: '30015', Descripción: 'No se recibió fecha de vencimiento del documento' }, { Código: '30016', Descripción: 'La fecha de vencimiento del documento no puede ser anterior a hoy' }, { Código: '30018', Descripción: 'La persona no posee ese documento adicional.' }];
 
   examples = {
     invocation: { xml: `
@@ -48,7 +48,7 @@ export class ModificarDocumentoAdicionalComponent1750945334031 {
          </bts:sdtDocumentoAdicional>
       </bts:BTPersonas.ModificarDocumentoAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ModificarDocumentoAdicional=\' \
@@ -97,7 +97,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ModificarDocumentoAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

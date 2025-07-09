@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarDocumentoComponent1750945334609 {
+export class ValidarDocumentoComponent1751987198992 {
   pageTitle        = 'Validar Documento';
   description      = `Método para validar el documento de una persona.`;
   pubName    = 'BTPersonas.ValidarDocumento';
@@ -21,7 +21,7 @@ export class ValidarDocumentoComponent1750945334609 {
 
   inputData  = [{ Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de país del documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'nroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }];
   outputData = [{ Nombre: 'valido', Tipo: 'String', Comentarios: '¿Válido? (S/N).' }, { Nombre: 'mensaje', Tipo: 'String', Comentarios: 'Mensaje de salida cuando el documento no es válido.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de país.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibió el número de documento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de país.' }, { Código: '30002', Descripción: 'No se recibió el identificador de tipo de documento.' }, { Código: '30003', Descripción: 'No se recibió el número de documento.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ValidarDocumentoComponent1750945334609 {
          <bts:numeroDocumento>52116325</bts:numeroDocumento>
       </bts:BTPersonas.ValidarDocumento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarDocumento=\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ValidarDocumentoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

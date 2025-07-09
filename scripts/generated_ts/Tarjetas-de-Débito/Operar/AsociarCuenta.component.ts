@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarCuentaComponent1750945335657 {
+export class AsociarCuentaComponent1751987200272 {
   pageTitle        = 'Asociar Cuenta';
   description      = `Método para asociar una cuenta vista a una tarjeta de débito dada.`;
   pubName    = 'BTTarjetasDeDebito.AsociarCuenta';
@@ -21,7 +21,7 @@ export class AsociarCuentaComponent1750945335657 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'tipoDeCuenta', Tipo: 'Short', Comentarios: 'Tipo de la cuenta a asociar.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta de débito.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de tarjeta de débito.' }, { Codigo: '30002', Descripcion: 'No se recibió el Identificador de operación a asociar.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de cuenta a asociar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el Identificador de tarjeta de débito.' }, { Código: '30002', Descripción: 'No se recibió el Identificador de operación a asociar.' }, { Código: '30003', Descripción: 'No se recibió el tipo de cuenta a asociar.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class AsociarCuentaComponent1750945335657 {
          <bts:tarjetaUId>1</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.AsociarCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -79,7 +79,7 @@ export class AsociarCuentaComponent1750945335657 {
          </Btoutreq>
       </BTTarjetasDeDebito.AsociarCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

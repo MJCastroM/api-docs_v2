@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeConsanguinidadComponent1750945334573 {
+export class ObtenerVinculosdeConsanguinidadComponent1751987198962 {
   pageTitle        = 'Obtener Vínculos de Consanguinidad';
   description      = `Método para obtener un listado de los vínculos de consanguinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosConsanguinidad';
@@ -21,7 +21,7 @@ export class ObtenerVinculosdeConsanguinidadComponent1750945334573 {
 
   inputData  = [{ Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vínculo [Hidden: Valor fijo \'C\' para este método].' }];
   outputData = [{ Nombre: 'sdtVinculos', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Listado de vínculos.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Vínculos ingresados en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Vínculos ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerVinculosdeConsanguinidadComponent1750945334573 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerVinculosConsanguinidad>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVinculosConsanguinidad=\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerVinculosConsanguinidadResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

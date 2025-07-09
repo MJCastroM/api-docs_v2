@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumenOrdenComponent1750945331474 {
+export class ObtenerResumenOrdenComponent1751987195779 {
   pageTitle        = 'Obtener Resumen de una Orden';
   description      = `Método para obtener el resumen de la información de la orden recibida.`;
   pubName    = 'BTCASHManagement.ObtenerResumenOrden';
@@ -21,7 +21,7 @@ export class ObtenerResumenOrdenComponent1750945331474 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }];
   outputData = [{ Nombre: 'sdtResumenCabezal', Tipo: '[sBTResumenCabezal](#sbtresumencabezal)', Comentarios: 'Listado de cabezales de los resúmenes.' }];
-  errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030708', Descripcion: 'Estado de archivo desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificación de cuenta cliente.' }, { Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la información.' }, { Codigo: '1030714', Descripcion: 'El contrato consultado no corresponde al servicio recibido.' }];
+  errors     = [{ Código: '1030705', Descripción: 'Cuenta cliente sin contrato vinculado.' }, { Código: '1030708', Descripción: 'Estado de archivo desconocido.' }, { Código: '1030709', Descripción: 'Se requiere identificación de cuenta cliente.' }, { Código: '1030712', Descripción: 'Se requiere cuenta para recuperar la información.' }, { Código: '1030714', Descripción: 'El contrato consultado no corresponde al servicio recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerResumenOrdenComponent1750945331474 {
          <bts:ordenId>345</bts:ordenId>
       </bts:BTCASHManagement.ObtenerResumenOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerResumenOrden=\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerResumenOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

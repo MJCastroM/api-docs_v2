@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarInformacionAdicionalComponent1750945334235 {
+export class EliminarInformacionAdicionalComponent1751987198608 {
   pageTitle        = 'Eliminar Información Adicional';
   description      = `Método para eliminar la información adicional de una persona.`;
   pubName    = 'BTPersonas.EliminarInformacionAdicional';
@@ -21,7 +21,7 @@ export class EliminarInformacionAdicionalComponent1750945334235 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'DLT\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '40001', Descripcion: 'La persona ingresada no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '40001', Descripción: 'La persona ingresada no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class EliminarInformacionAdicionalComponent1750945334235 {
          </bts:sdtInformacionAdicional>
       </bts:BTPersonas.EliminarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?EliminarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

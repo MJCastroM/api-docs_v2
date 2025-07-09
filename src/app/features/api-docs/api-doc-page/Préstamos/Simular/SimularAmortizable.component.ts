@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularAmortizableComponent1750945335267 {
+export class SimularAmortizableComponent1751987199786 {
   pageTitle        = 'Simular Amortizable';
   description      = `Método para simular un préstamo amortizable.`;
   pubName    = 'BTPrestamos.SimularAmortizable';
@@ -21,7 +21,7 @@ export class SimularAmortizableComponent1750945335267 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: '[Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores](#valores).]' }, { Nombre: 'sdtSimulacionInput', Tipo: '[sBTSimulacionInput](#sbtsimulacioninput)', Comentarios: 'Datos necesarios para la simulación.' }];
   outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de producto ni operación.' }, { Codigo: '30002', Descripcion: 'No se puede indicar producto y operación al mismo tiempo.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'La cuenta para el Identificador [Número de Identificador] no coincide con el de la operación.' }, { Codigo: '40001', Descripcion: 'La fecha valor no puede ser anterior a la de apertura.' }, { Codigo: '40002', Descripcion: 'No se puede indicar capital y valor cuota en una simulación.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de producto ni operación.' }, { Código: '30002', Descripción: 'No se puede indicar producto y operación al mismo tiempo.' }, { Código: '30003', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '30006', Descripción: 'La cuenta para el Identificador [Número de Identificador] no coincide con el de la operación.' }, { Código: '40001', Descripción: 'La fecha valor no puede ser anterior a la de apertura.' }, { Código: '40002', Descripción: 'No se puede indicar capital y valor cuota en una simulación.' }];
 
   examples = {
     invocation: { xml: `
@@ -97,7 +97,7 @@ export class SimularAmortizableComponent1750945335267 {
          </bts:sdtSimulacionInput>
       </bts:BTPrestamos.SimularAmortizable>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularAmortizable\' \
@@ -392,7 +392,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.SimularAmortizableResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

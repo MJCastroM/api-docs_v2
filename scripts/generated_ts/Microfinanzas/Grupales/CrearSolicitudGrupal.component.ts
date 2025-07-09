@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudGrupalComponent1750945333419 {
+export class CrearSolicitudGrupalComponent1751987197760 {
   pageTitle        = 'Crear Solicitud Grupal';
   description      = `Método para crear una solicitud de crédito grupal.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudGrupal';
@@ -21,7 +21,7 @@ export class CrearSolicitudGrupalComponent1750945333419 {
 
   inputData  = [{ Nombre: 'procesoId', Tipo: 'Short', Comentarios: '[Hidden: Identificador de proceso Workflow].' }, { Nombre: 'tareaId', Tipo: 'Short', Comentarios: '[Hidden: Identificador de tarea Workflow].' }, { Nombre: 'usuarioIngreso', Tipo: 'String', Comentarios: 'Usuario que ingresa la solicitud. En caso de no especificarse, se asigna el usuario conectado.' }, { Nombre: 'fechaIngreso', Tipo: 'Date', Comentarios: 'Fecha en la que se ingresa la solicitud. En caso de no especificarse, se asigna fecha apertura.' }, { Nombre: 'usuarioAsignacion', Tipo: 'String', Comentarios: 'Usuario al que queda asignada la tarea de solicitud. En caso de no especificarse, se asigna al Asesor de créditos.' }, { Nombre: 'sdtDatosSolicitud', Tipo: '[sBTSolicitudGrupal](#sbtsolicitudgrupal)', Comentarios: 'Datos de entrada de la solicitud.' }];
   outputData = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de grupo.' }, { Codigo: '30011', Descripcion: 'El Grupo seleccionado no está vigente.' }, { Codigo: '30012', Descripcion: 'El Tipo de Grupo no existe.' }, { Codigo: '30013', Descripcion: 'No se pudo determinar el coordinador del grupo.' }, { Codigo: '30014', Descripcion: 'No se encontró registro en la FSD008 para la cuenta [Número de cuenta].' }, { Codigo: '30015', Descripcion: 'No se obtuvo el titular representativo de la cuenta [Número de cuenta].' }, { Codigo: '30016', Descripcion: 'No se pudo determinar la sucursal de la solicitud.' }, { Codigo: '30017', Descripcion: 'No se pudo determinar el asesor de la solicitud.' }, { Codigo: '30018', Descripcion: 'El código de campaña no existe.' }, { Codigo: '30019', Descripcion: 'El código de origen de captación no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de proceso.' }, { Código: '30002', Descripción: 'No se recibió el identificador de tarea.' }, { Código: '30003', Descripción: 'No se recibió el identificador de grupo.' }, { Código: '30011', Descripción: 'El Grupo seleccionado no está vigente.' }, { Código: '30012', Descripción: 'El Tipo de Grupo no existe.' }, { Código: '30013', Descripción: 'No se pudo determinar el coordinador del grupo.' }, { Código: '30014', Descripción: 'No se encontró registro en la FSD008 para la cuenta [Número de cuenta].' }, { Código: '30015', Descripción: 'No se obtuvo el titular representativo de la cuenta [Número de cuenta].' }, { Código: '30016', Descripción: 'No se pudo determinar la sucursal de la solicitud.' }, { Código: '30017', Descripción: 'No se pudo determinar el asesor de la solicitud.' }, { Código: '30018', Descripción: 'El código de campaña no existe.' }, { Código: '30019', Descripción: 'El código de origen de captación no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class CrearSolicitudGrupalComponent1750945333419 {
          </bts:sdtDatosSolicitud>
       </bts:BTMicrofinanzas.CrearSolicitudGrupal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudGrupal \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.CrearSolicitudGrupalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

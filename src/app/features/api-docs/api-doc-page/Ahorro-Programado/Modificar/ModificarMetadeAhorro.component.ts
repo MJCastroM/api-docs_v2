@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarMetadeAhorroComponent1750945330994 {
+export class ModificarMetadeAhorroComponent1751987195326 {
   pageTitle        = 'Modificar Meta de Ahorro';
   description      = `Método para modificar la meta de ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarMetaDeAhorro';
@@ -21,7 +21,7 @@ export class ModificarMetadeAhorroComponent1750945330994 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de ahorro.' }, { Nombre: 'motivoAhorro', Tipo: 'String', Comentarios: 'Descripción del motivo por el cual se ahorra [Ingreso opcional].' }, { Nombre: 'montoMetaAhorro', Tipo: 'Double', Comentarios: 'Monto propuesto como meta para el ahorro [Discriminante el ingreso según si se definió "Meta de ahorro por monto" o "Meta de ahorro por fecha"].' }, { Nombre: 'fechaMetaAhorro', Tipo: 'Date', Comentarios: 'Fecha propuesta como meta para el ahorro [Discriminante el ingreso según si se definió "Meta de ahorro por monto" o "Meta de ahorro por fecha"].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del ahorro.' }, { Codigo: '30003', Descripcion: 'El monto indicado no puede ser menor que cero.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente.' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No existe la operación de ahorro seleccionada.' }, { Codigo: '40002', Descripcion: 'El producto seleccionado no es un producto con meta de ahorro.' }, { Codigo: '40003', Descripcion: 'La fecha seleccionada como meta de ahorro no puede ser inferior a la del día.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador del ahorro.' }, { Código: '30003', Descripción: 'El monto indicado no puede ser menor que cero.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador de cliente.' }, { Código: '30005', Descripción: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Código: '40001', Descripción: 'No existe la operación de ahorro seleccionada.' }, { Código: '40002', Descripción: 'El producto seleccionado no es un producto con meta de ahorro.' }, { Código: '40003', Descripción: 'La fecha seleccionada como meta de ahorro no puede ser inferior a la del día.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ModificarMetadeAhorroComponent1750945330994 {
          <bts:fechaMetaAhorro></bts:fechaMetaAhorro>
       </bts:BTAhorroProgramado.ModificarMetaDeAhorro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ModificarMetaDeAhorro\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ModificarMetaDeAhorroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

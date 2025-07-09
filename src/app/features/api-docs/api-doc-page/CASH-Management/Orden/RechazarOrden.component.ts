@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarOrdenComponent1750945331527 {
+export class RechazarOrdenComponent1751987195850 {
   pageTitle        = 'Rechazar Orden';
   description      = `Método para rechazar una orden de pago determinada.`;
   pubName    = 'BTCASHManagement.RechazarOrden';
@@ -21,7 +21,7 @@ export class RechazarOrdenComponent1750945331527 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }];
   outputData = [];
-  errors     = [{ Codigo: '1030726', Descripcion: 'No se encontro orden a rechazar.' }, { Codigo: '1030724', Descripcion: 'El estado de la orden, no permite rechazar.' }];
+  errors     = [{ Código: '1030726', Descripción: 'No se encontro orden a rechazar.' }, { Código: '1030724', Descripción: 'El estado de la orden, no permite rechazar.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class RechazarOrdenComponent1750945331527 {
          <bts:ordenId>1417</bts:ordenId>
       </bts:BTCASHManagement.RechazarOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?RechazarOrden=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.RechazarOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

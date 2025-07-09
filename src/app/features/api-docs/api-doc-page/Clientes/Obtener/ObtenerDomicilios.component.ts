@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDomiciliosComponent1750945331867 {
+export class ObtenerDomiciliosComponent1751987196254 {
   pageTitle        = 'Obtener Domicilios';
   description      = `Método para obtener los datos del domicilio de un cliente.`;
   pubName    = 'BTClientes.ObtenerDomicilios';
@@ -21,7 +21,7 @@ export class ObtenerDomiciliosComponent1750945331867 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sbtDomicilioCompleto', Tipo: '[sBTDomicilioCompleto](#sbtdomiciliocompleto)', Comentarios: 'Datos de domicilio.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30002', Descripcion: 'El identificador de la cuenta no es correcto.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la cuenta.' }, { Código: '30002', Descripción: 'El identificador de la cuenta no es correcto.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDomiciliosComponent1750945331867 {
          <bts:clienteUID>322</bts:clienteUID>
       </bts:BTClientes.ObtenerDomicilios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDomicilios=\' \
@@ -112,7 +112,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerDomiciliosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDomicilios=\' \

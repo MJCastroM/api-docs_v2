@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DebitarEnCuentaComponent1750945332921 {
+export class DebitarEnCuentaComponent1751987197270 {
   pageTitle        = 'Debitar en Cuenta';
   description      = `Método para realizar un débito de una cuenta vista determinada.`;
   pubName    = 'BTCuentasVista.DebitarEnCuenta ';
@@ -35,7 +35,7 @@ export class DebitarEnCuentaComponent1750945332921 {
 
   inputData  = [{ Nombre: 'sdtDatosDebitar', Tipo: '[sBTDatosAcreditarDebitar](#sbtdatosacreditardebitar)', Comentarios: 'Datos del débito.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador del movimiento realizado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar una operación.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: X.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta cliente origen para el Identificador: X.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar una operación.' }, { Código: '30002', Descripción: 'Debe ingresar al menos un importe.' }, { Código: '30004', Descripción: 'No se recuperó la operación origen para el Identificador: X.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta cliente origen para el Identificador: X.' }];
 
   examples = {
     invocation: { xml: `
@@ -63,7 +63,7 @@ export class DebitarEnCuentaComponent1750945332921 {
             <bts:concepto4></bts:concepto4>
          </bts:sdtDatosDebitar>
       </bts:BTCuentasVista.DebitarEnCuenta>
-   </soapenv:Body>`, 
+   </soapenv:Body>`,
     json: `
 curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?DebitarEnCuenta=\' \ 
@@ -145,7 +145,7 @@ curl -X POST \
             </Btoutreq>
         </BTCuentasVista.DebitarEnCuentaResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

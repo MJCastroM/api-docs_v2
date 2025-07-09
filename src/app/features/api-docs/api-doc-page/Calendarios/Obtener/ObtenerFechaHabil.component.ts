@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabilComponent1750945331300 {
+export class ObtenerFechaHabilComponent1751987195616 {
   pageTitle        = 'Obtener Fecha Hábil';
   description      = `Método para obtener si la fecha ingresada es una fecha hábil.`;
   pubName    = 'BTCalendarios.ObtenerFechaHabil';
@@ -40,7 +40,7 @@ export class ObtenerFechaHabilComponent1750945331300 {
          <bts:fecha>2020-11-14</bts:fecha>
       </bts:BTCalendarios.ObtenerFechaHabil>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerFechaHabil\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerFechaHabilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
  	"Btinreq": { 

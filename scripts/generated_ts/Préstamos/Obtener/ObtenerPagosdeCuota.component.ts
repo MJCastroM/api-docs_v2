@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeCuotaComponent1750945335069 {
+export class ObtenerPagosdeCuotaComponent1751987199567 {
   pageTitle        = 'Obtener Pagos de Cuota';
   description      = `Método para obtener el detalle de pagos de una cuota de préstamo.`;
   pubName    = 'BTPrestamos.ObtenerPagosCuota';
@@ -21,7 +21,7 @@ export class ObtenerPagosdeCuotaComponent1750945335069 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación del préstamo.' }, { Nombre: 'numeroCuota', Tipo: 'Int', Comentarios: 'Número de cuota.' }];
   outputData = [{ Nombre: 'sdtPagoDeCuota', Tipo: '[sBTPagoDeCuota](#sbtpagodecuota)', Comentarios: 'Identificador único de movimiento [Asiento].' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '40001', Descripcion: 'La cuota indicada no es válida.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '40001', Descripción: 'La cuota indicada no es válida.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerPagosdeCuotaComponent1750945335069 {
          <bts:numeroCuota>1</bts:numeroCuota>
       </bts:BTPrestamos.ObtenerPagosCuota>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPagosCuota=\' \
@@ -98,7 +98,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerPagosCuotaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularPlazoenDiasHabilesComponent1750945331294 {
+export class CalcularPlazoenDiasHabilesComponent1751987195606 {
   pageTitle        = 'Calcular Plazo en Días Hábiles';
   description      = `Método para calcular el plazo en días hábiles entre una fecha de inicio y una fecha de fin dadas.`;
   pubName    = 'BTCalendarios.CalcularPlazoDiasHabiles';
@@ -42,7 +42,7 @@ export class CalcularPlazoenDiasHabilesComponent1750945331294 {
          <bts:tipoVencimiento>A</bts:tipoVencimiento>
       </bts:BTCalendarios.CalcularPlazoDiasHabiles>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?CalcularPlazoDiasHabiles\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.CalcularPlazoDiasHabilesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "-xmlns": "http://uy.com.dlya.bantotal/BTSOA/",

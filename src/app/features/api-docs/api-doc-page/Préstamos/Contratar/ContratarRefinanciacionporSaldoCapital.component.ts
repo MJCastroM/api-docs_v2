@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionporSaldoCapitalComponent1750945334824 {
+export class ContratarRefinanciacionporSaldoCapitalComponent1751987199244 {
   pageTitle        = 'Contratar Refinanciación por Saldo Capital';
   description      = `Método para contratar un préstamo refinanciado, cancelando las operaciones indicadas en la simulación.`;
   pubName    = 'BTPrestamos.ContratarRefinanciacionSaldoCapital';
@@ -35,7 +35,7 @@ export class ContratarRefinanciacionporSaldoCapitalComponent1750945334824 {
 
   inputData  = [{ Nombre: 'refinanciacionId', Tipo: 'Long', Comentarios: 'Identificador de la refinanciación simulada.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'accion', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'REFIS\' para este método].' }, { Nombre: 'operacionUId_dif', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta vista de donde se cobrará la diferencia entre la deuda total de los préstamos a refinanciar y el capital del nuevo préstamo.' }, { Nombre: 'operacionUId_cobro', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta vista de donde se cobrará el préstamo.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento [Asiento].' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de refinanciación.' }, { Codigo: '30002', Descripcion: 'El identificador de refinanciación no es válido.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de operación de la cuenta vista.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta vista para el identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de operación de la instrucción de cobro.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30008', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30011', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30012', Descripcion: 'No se recuperó la operación para el identificador [Número de Identificador].' }, { Codigo: '30013', Descripcion: 'No se recuperó la operación simulada con identificador.' }, { Codigo: '40001', Descripcion: 'en adelante, errores de contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de refinanciación.' }, { Código: '30002', Descripción: 'El identificador de refinanciación no es válido.' }, { Código: '30003', Descripción: 'No se recibió el identificador de operación de la cuenta vista.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta vista para el identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recibió el identificador de operación de la instrucción de cobro.' }, { Código: '30006', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Código: '30007', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30008', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Código: '30009', Descripción: 'El préstamo no pertenece al cliente.' }, { Código: '30010', Descripción: 'La operación de cobro no pertenece al cliente.' }, { Código: '30011', Descripción: 'La operación de cobro no pertenece al cliente.' }, { Código: '30012', Descripción: 'No se recuperó la operación para el identificador [Número de Identificador].' }, { Código: '30013', Descripción: 'No se recuperó la operación simulada con identificador.' }, { Código: '40001', Descripción: 'en adelante, errores de contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ export class ContratarRefinanciacionporSaldoCapitalComponent1750945334824 {
          <bts:operacionUId_cobro>211</bts:operacionUId_cobro>
       </bts:BTPrestamos.ContratarRefinanciacionSaldoCapital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ContratarRefinanciacionSaldoCapital\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ContratarRefinanciacionSaldoCapitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMontosDeUnSeguroComponent1750945335513 {
+export class ObtenerMontosDeUnSeguroComponent1751987200090 {
   pageTitle        = 'Obtener Montos de Seguro';
   description      = `Método para obtener los montos de un seguro.`;
   pubName    = 'BTSegurosVoluntarios.ObtenerMontosDeUnSeguro';
@@ -21,7 +21,7 @@ export class ObtenerMontosDeUnSeguroComponent1750945335513 {
 
   inputData  = [{ Nombre: 'seguroUId', Tipo: 'Long', Comentarios: 'Identificador único del seguro.' }];
   outputData = [{ Nombre: 'montoAdeudado', Tipo: 'Double', Comentarios: 'Monto adeudado.' }, { Nombre: 'montoMinimo', Tipo: 'Double', Comentarios: 'Monto mínimo.' }, { Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelación.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador de operación del seguro.' }, { Codigo: '30003', Descripcion: 'No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].' }];
+  errors     = [{ Código: '30002', Descripción: 'No se recibió el identificador de operación del seguro.' }, { Código: '30003', Descripción: 'No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerMontosDeUnSeguroComponent1750945335513 {
          <bts:seguroUId>107</bts:seguroUId>
       </bts:BTSegurosVoluntarios.ObtenerMontosDeUnSeguro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSegurosVoluntarios?ObtenerMontosDeUnSeguro\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTSegurosVoluntarios.ObtenerMontosDeUnSeguroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarRegladeNegocioComponent1750945335452 {
+export class EvaluarRegladeNegocioComponent1751987200008 {
   pageTitle        = 'Evaluar Regla de Negocio';
   description      = `Método para evaluar una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.EvaluarReglaNegocio';
@@ -21,7 +21,7 @@ export class EvaluarRegladeNegocioComponent1750945335452 {
 
   inputData  = [{ Nombre: 'reglaId', Tipo: 'Long', Comentarios: 'Código de regla de negocio.' }, { Nombre: 'sdtVariables', Tipo: '[sBTVariable](#sbtvariable)', Comentarios: 'Listado de variables.' }];
   outputData = [{ Nombre: 'resultado', Tipo: 'String', Comentarios: 'Resultado de la evaluación.' }, { Nombre: 'retorno', Tipo: 'String', Comentarios: 'Retorno de la evaluación.' }];
-  errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió ID de Regla.' }, { Codigo: '40001', Descripcion: 'Error de Parametrización' }];
+  errors     = [{ Código: '1011050', Descripción: 'No se recibió ID de Regla.' }, { Código: '40001', Descripción: 'Error de Parametrización' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class EvaluarRegladeNegocioComponent1750945335452 {
          </bts:sdtVariables>
       </bts:BTReglasNegocio.EvaluarReglaNegocio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?EvaluarReglaNegocio\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTReglasNegocio.EvaluarReglaNegocioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

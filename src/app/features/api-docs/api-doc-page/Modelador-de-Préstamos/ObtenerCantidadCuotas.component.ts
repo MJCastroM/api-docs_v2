@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCantidadCuotasComponent1750945333610 {
+export class ObtenerCantidadCuotasComponent1751987197905 {
   pageTitle        = 'Obtener Cantidad Cuotas';
   description      = `Método para obtener la cantidad de cuotas parametrizadas de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerCantidadCuotas';
@@ -21,7 +21,7 @@ export class ObtenerCantidadCuotasComponent1750945333610 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de producto.' }, { Nombre: 'parametro', Tipo: 'Short', Comentarios: '[Hidden: Valor \'409\' definido por defecto].' }];
   outputData = [{ Nombre: 'minimo', Tipo: 'Long', Comentarios: 'Valor mínimo de cantidad de cuotas.' }, { Nombre: 'maximo', Tipo: 'Long', Comentarios: 'Valor máximo de cantidad de cuotas.' }, { Nombre: 'valorPorDefecto', Tipo: 'Long', Comentarios: 'Valor por defecto de cantidad de cuotas.' }, { Nombre: 'tipo', Tipo: 'Long', Comentarios: 'Tipo de cuotas.' }, { Nombre: 'sdtListaValores', Tipo: '[sBTValor](#sbtvalor)', Comentarios: 'Listado de valores.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Existe registro con la cuenta indicada.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCantidadCuotasComponent1750945333610 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerCantidadCuotas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -119,7 +119,7 @@ export class ObtenerCantidadCuotasComponent1750945333610 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerCantidadCuotasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

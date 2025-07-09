@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarFiadorComponent1750945333382 {
+export class AgregarFiadorComponent1751987197739 {
   pageTitle        = 'Agregar Fiador';
   description      = `Método para agregar un fiador a una solicitud de crédito individual.`;
   pubName    = 'BTMicrofinanzas.AgregarFiador';
@@ -21,7 +21,7 @@ export class AgregarFiadorComponent1750945333382 {
 
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente fiador.' }, { Nombre: 'tipoFiador', Tipo: 'Short', Comentarios: '[Hidden: Identificador del tipo de fiador].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente' }, { Codigo: '30011', Descripcion: 'El número de solicitud ingresado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de solicitud.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador de cliente' }, { Código: '30011', Descripción: 'El número de solicitud ingresado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class AgregarFiadorComponent1750945333382 {
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTMicrofinanzas.AgregarFiador>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarFiador \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.AgregarFiadorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

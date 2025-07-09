@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerHobbiesComponent1750945334374 {
+export class ObtenerHobbiesComponent1751987198739 {
   pageTitle        = 'Obtener Hobbies';
   description      = `Método para obtener un listado de los hobbies ingresados en el sistema.`;
   pubName    = 'BTPersonas.ObtenerHobbies';
@@ -38,7 +38,7 @@ export class ObtenerHobbiesComponent1750945334374 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerHobbies>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerHobbies\' \
@@ -259,7 +259,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerHobbiesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

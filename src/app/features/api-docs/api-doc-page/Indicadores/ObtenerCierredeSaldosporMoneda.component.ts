@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCierredeSaldosporMonedaComponent1750945333278 {
+export class ObtenerCierredeSaldosporMonedaComponent1751987197664 {
   pageTitle        = 'Obtener Cierre de Saldos por Moneda';
   description      = `Método para obtener el cierre de saldos por moneda.`;
   pubName    = 'BTIndicadores.ObtenerCierreSaldosPorMoneda';
@@ -38,7 +38,7 @@ export class ObtenerCierredeSaldosporMonedaComponent1750945333278 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerCierreSaldosPorMoneda>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerCierreSaldosPorMoneda\' \
@@ -121,7 +121,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerCierreSaldosPorMonedaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoAdicionalComponent1750945334219 {
+export class EliminarDocumentoAdicionalComponent1751987198597 {
   pageTitle        = 'Eliminar Documento Adicional';
   description      = `Método para eliminar un documento adicional de una persona.`;
   pubName    = 'BTPersonas.EliminarDocumentoAdicional';
@@ -21,7 +21,7 @@ export class EliminarDocumentoAdicionalComponent1750945334219 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30019', Descripcion: 'La persona no posee ese documento adicional.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30019', Descripción: 'La persona no posee ese documento adicional.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarDocumentoAdicionalComponent1750945334219 {
          <bts:tipoDocumentoId>3</bts:tipoDocumentoId>
       </bts:BTPersonas.EliminarDocumentoAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarDocumentoAdicional=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarDocumentoAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

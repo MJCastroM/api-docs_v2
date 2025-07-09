@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750945335087 {
+export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1751987199584 {
   pageTitle        = 'Obtener Préstamos a Vencer';
   description      = `Método para obtener los préstamos que están por vencer dentro de determinados días.`;
   pubName    = 'BTPrestamos.ObtenerPrestamosAVencer';
@@ -21,7 +21,7 @@ export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750945
 
   inputData  = [{ Nombre: 'diasVtoCuota', Tipo: 'Int', Comentarios: 'Días que faltan para el vencimiento de los préstamos.' }, { Nombre: 'actualiza', Tipo: 'String', Comentarios: 'Habilita la actualización en la tabla SNG912 con los datos del préstamo [Hidden: Valor fijo \'S\'].' }];
   outputData = [{ Nombre: 'sdtDatosPrestamos', Tipo: '[sBTDatosPrestamo](#sbtdatosprestamo)', Comentarios: 'Listado de los préstamos que están por vencer en determinados días.' }];
-  errors     = [{ Codigo: '30003', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30003', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPrestamosaVencerDisponibleunicamenteparaV3R1Component1750945
          <bts:diasVtoCuota>2</bts:diasVtoCuota>
       </bts:BTPrestamos.ObtenerPrestamosAVencer>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosAVencer=\' \
@@ -119,7 +119,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerPrestamosAVencerResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

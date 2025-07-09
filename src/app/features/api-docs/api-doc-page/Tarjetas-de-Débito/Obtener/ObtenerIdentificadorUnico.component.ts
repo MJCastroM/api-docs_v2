@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750945335588 {
+export class ObtenerIdentificadorUnicoComponent1751987200184 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerIdentificadorUnico';
@@ -21,7 +21,7 @@ export class ObtenerIdentificadorUnicoComponent1750945335588 {
 
   inputData  = [{ Nombre: 'nroTarjeta', Tipo: 'String', Comentarios: 'Número de tarjeta.' }];
   outputData = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió la tarjeta de débito.' }, { Codigo: '30002', Descripcion: 'No se recuperó el identificador para la tarjeta de débito: [Número de Tarjeta].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió la tarjeta de débito.' }, { Código: '30002', Descripción: 'No se recuperó el identificador para la tarjeta de débito: [Número de Tarjeta].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIdentificadorUnicoComponent1750945335588 {
          <bts:nroTarjeta>4517720800000029</bts:nroTarjeta>
       </bts:BTTarjetasDeDebito.ObtenerIdentificadorUnico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerIdentificadorUnico\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerIdentificadorUnicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

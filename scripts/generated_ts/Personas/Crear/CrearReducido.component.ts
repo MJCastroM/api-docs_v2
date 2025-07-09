@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearReducidoComponent1750945334167 {
+export class CrearReducidoComponent1751987198548 {
   pageTitle        = 'Crear Reducido';
   description      = `Método para crear una persona de forma reducida.`;
   pubName    = 'BTPersonas.CrearReducido';
@@ -21,7 +21,7 @@ export class CrearReducidoComponent1750945334167 {
 
   inputData  = [{ Nombre: 'sdtPersona', Tipo: '[sBTPersona1](#sbtpersona1)', Comentarios: 'Datos de la persona.' }];
   outputData = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar País del Documento.' }, { Codigo: '30002', Descripcion: 'Debe ingresar Tipo de Documento.' }, { Codigo: '30003', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '30004', Descripcion: 'Debe ingresar apellido paterno.' }, { Codigo: '30005', Descripcion: 'Debe ingresar primer nombre.' }, { Codigo: '30006', Descripcion: 'Debe ingresar fecha de nacimiento.' }, { Codigo: '30007', Descripcion: 'Debe ingresar sexo.' }, { Codigo: '30008', Descripcion: 'Debe ingresar estado civil.' }, { Codigo: '30009', Descripcion: 'Debe ingresar ocupación.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar País del Documento.' }, { Código: '30002', Descripción: 'Debe ingresar Tipo de Documento.' }, { Código: '30003', Descripción: 'Debe ingresar Nro de Documento.' }, { Código: '30004', Descripción: 'Debe ingresar apellido paterno.' }, { Código: '30005', Descripción: 'Debe ingresar primer nombre.' }, { Código: '30006', Descripción: 'Debe ingresar fecha de nacimiento.' }, { Código: '30007', Descripción: 'Debe ingresar sexo.' }, { Código: '30008', Descripción: 'Debe ingresar estado civil.' }, { Código: '30009', Descripción: 'Debe ingresar ocupación.' }];
 
   examples = {
     invocation: { xml: `
@@ -83,7 +83,7 @@ export class CrearReducidoComponent1750945334167 {
          </bts:sdtPersona>
       </bts:BTPersonas.CrearReducido>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?CrearReducido=\' \
@@ -169,7 +169,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.CrearReducidoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

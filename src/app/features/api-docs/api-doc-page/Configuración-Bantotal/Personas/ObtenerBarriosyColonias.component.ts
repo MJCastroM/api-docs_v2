@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBarriosyColoniasComponent1750945332261 {
+export class ObtenerBarriosyColoniasComponent1751987196605 {
   pageTitle        = 'Obtener Barrios y Colonias';
   description      = `Método para obtener un listado de los barrios/colonias ingresados en Bantotal para una determinada ciudad de un país.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerBarriosColonias';
@@ -41,7 +41,7 @@ export class ObtenerBarriosyColoniasComponent1750945332261 {
          <bts:ciudad>10</bts:ciudad>
       </bts:BTConfiguracionBantotal.ObtenerBarriosColonias>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerBarriosColonias=\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq> 
       </BTConfiguracionBantotal.ObtenerBarriosColoniasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

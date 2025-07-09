@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosCVComponent1750945332521 {
+export class ObtenerProductosCVComponent1751987196888 {
   pageTitle        = 'Obtener Productos CV';
   description      = `Método para obtener un listado de los productos de cuenta bolsillo habilitados para una cuenta vista.`;
   pubName    = 'BTCuentasBolsillo.ObtenerProductosCV';
@@ -21,7 +21,7 @@ export class ObtenerProductosCVComponent1750945332521 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cuenta vista.' }];
   outputData = [{ Nombre: 'sdtProductos', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Datos de estado de cuenta.' }];
-  errors     = [{ Codigo: '30003', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '40001', Descripcion: 'No se pudo determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.' }, { Codigo: '40002', Descripcion: 'No se recuperaron productos habilitados para la cuenta vista.' }];
+  errors     = [{ Código: '30003', Descripción: 'No se recibió el identificador de operación.' }, { Código: '40001', Descripción: 'No se pudo determinar los productos habilitados ya que ocurrió un error al recuperar la fecha del día.' }, { Código: '40002', Descripción: 'No se recuperaron productos habilitados para la cuenta vista.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerProductosCVComponent1750945332521 {
          <bts:operacionUId>904</bts:operacionUId>
       </bts:BTCuentasBolsillo.ObtenerProductosCV>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerProductosCV\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.ObtenerProductosCVResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

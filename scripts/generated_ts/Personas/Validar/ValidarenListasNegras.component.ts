@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarenListasNegrasComponent1750945334617 {
+export class ValidarenListasNegrasComponent1751987199002 {
   pageTitle        = 'Validar en Listas Negras';
   description      = `Método para validar si una persona pertenece a alguna lista negra.`;
   pubName    = 'BTPersonas.ValidarEnListasNegras';
@@ -21,7 +21,7 @@ export class ValidarenListasNegrasComponent1750945334617 {
 
   inputData  = [{ Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de país.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido.' }, { Nombre: 'nombreEmpresa', Tipo: 'String', Comentarios: 'Nombre de empresa.' }];
   outputData = [{ Nombre: 'existeEnLista', Tipo: 'String', Comentarios: '¿Existe en lista? (S/N).' }, { Nombre: 'sdtListasInhabilitados', Tipo: '[sBTListaInhabilitados](#sbtlistainhabilitados)', Comentarios: 'Listado de listas negras.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó código de país.' }, { Codigo: '30002', Descripcion: 'No se ingresó código de tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se ingresó número de documento.' }, { Codigo: '30004', Descripcion: 'No se ingresó primer nombre.' }, { Codigo: '30005', Descripcion: 'No se ingresó primer apellido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se ingresó código de país.' }, { Código: '30002', Descripción: 'No se ingresó código de tipo de documento.' }, { Código: '30003', Descripción: 'No se ingresó número de documento.' }, { Código: '30004', Descripción: 'No se ingresó primer nombre.' }, { Código: '30005', Descripción: 'No se ingresó primer apellido.' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class ValidarenListasNegrasComponent1750945334617 {
          <bts:nombreEmpresa></bts:nombreEmpresa>
       </bts:BTPersonas.ValidarEnListasNegras>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarEnListasNegras=\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ValidarEnListasNegrasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

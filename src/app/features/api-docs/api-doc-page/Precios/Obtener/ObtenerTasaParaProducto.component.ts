@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasaParaProductoComponent1750945334740 {
+export class ObtenerTasaParaProductoComponent1751987199142 {
   pageTitle        = 'Obtener Tasa Para Producto';
   description      = `Método para obtener la tasa parametrizada para el producto, junto con la fecha de vigencia.`;
   pubName    = 'BTPrecios.ObtenerTasaProducto';
@@ -21,7 +21,7 @@ export class ObtenerTasaParaProductoComponent1750945334740 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador del producto.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de la consulta.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }];
   outputData = [{ Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaMinima', Tipo: 'Double', Comentarios: 'Tasa mínima.' }, { Nombre: 'tasaMaxima', Tipo: 'Double', Comentarios: 'Tasa máxima.' }, { Nombre: 'fechaVigencia', Tipo: 'Date', Comentarios: 'Fecha de vigencia.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de producto.' }, { Codigo: '30002', Descripcion: 'Debe ingresar fecha.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'Debe ingresar plazo.' }, { Codigo: '40003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '50001', Descripcion: 'El registro no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de producto.' }, { Código: '30002', Descripción: 'Debe ingresar fecha.' }, { Código: '30003', Descripción: 'Debe ingresar importe.' }, { Código: '30004', Descripción: 'Debe ingresar plazo.' }, { Código: '40003', Descripción: 'No existe registro para el identificador único.' }, { Código: '50001', Descripción: 'El registro no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerTasaParaProductoComponent1750945334740 {
          <bts:plazo>30</bts:plazo>
       </bts:BTPrecios.ObtenerTasaProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTasaProducto\' \
@@ -90,7 +90,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ObtenerTasaProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

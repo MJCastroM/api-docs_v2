@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerUsuariosParaPerfilComponent1750945335844 {
+export class ObtenerUsuariosParaPerfilComponent1751987200503 {
   pageTitle        = 'Obtener Usuarios Para Perfil';
   description      = `Método para obtener un listado de los usuarios que tiene asociados un determinado perfil.`;
   pubName    = 'BTUsuarios.ObtenerUsuariosParaPerfil';
@@ -21,7 +21,7 @@ export class ObtenerUsuariosParaPerfilComponent1750945335844 {
 
   inputData  = [{ Nombre: 'perfil', Tipo: 'String', Comentarios: 'Perfil de usuario.' }];
   outputData = [{ Nombre: 'sdtUsuarios', Tipo: '[sBTDetalleUsuario](#sbtdetalleusuario)', Comentarios: 'Listado de usuarios.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar perfil.' }, { Codigo: '40001', Descripcion: 'No existe el perfil ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar perfil.' }, { Código: '40001', Descripción: 'No existe el perfil ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerUsuariosParaPerfilComponent1750945335844 {
          <bts:usuario>CAJERO</bts:usuario>
       </bts:BTUsuarios.ObtenerUsuariosParaPerfil>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?ObtenerUsuariosParaPerfil\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerUsuariosParaPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

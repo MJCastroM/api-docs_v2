@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesComponent1750945335863 {
+export class ObtenerRolesComponent1751987200532 {
   pageTitle        = 'Obtener Roles';
   description      = `Método para obtener un listado de los roles de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerRoles ';
@@ -21,7 +21,7 @@ export class ObtenerRolesComponent1750945335863 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtRoles', Tipo: '[sBTRolWF](#sbtrolwf)', Comentarios: 'Listado de roles de Workflow.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen roles ingresados en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen roles ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerRolesComponent1750945335863 {
          </bts:Btinreq> 
       </bts:BTWorkflow.ObtenerRoles> 
    </soapenv:Body> 
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \ 
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerRoles \ 
@@ -294,7 +294,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerRolesResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

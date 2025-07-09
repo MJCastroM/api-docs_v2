@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarIntegrantedeunGrupoComponent1750945333427 {
+export class HabilitarIntegrantedeunGrupoComponent1751987197766 {
   pageTitle        = 'Habilitar Integrante de Grupo';
   description      = `Método para habilitar un integrante de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.HabilitarIntegranteGrupo';
@@ -21,7 +21,7 @@ export class HabilitarIntegrantedeunGrupoComponent1750945333427 {
 
   inputData  = [{ Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió código de grupo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '40001', Descripcion: 'No se puede habilitar el integrante.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió código de grupo.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30014', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '40001', Descripción: 'No se puede habilitar el integrante.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class HabilitarIntegrantedeunGrupoComponent1750945333427 {
          <bts:clienteUId>156</bts:clienteUId>
       </bts:BTMicrofinanzas.HabilitarIntegranteGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -66,7 +66,7 @@ export class HabilitarIntegrantedeunGrupoComponent1750945333427 {
          </Btoutreq>
       </BTMicrofinanzas.HabilitarIntegranteGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

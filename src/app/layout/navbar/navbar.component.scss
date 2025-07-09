@@ -19,10 +19,16 @@
 }
 
 .logo {
-    vertical-align: middle;
-    height: calc( 3.25rem - .5rem);
-    margin-inline-end: .8rem;
-    margin-left: -1rem;
+  vertical-align: middle;
+  height: calc( 3.25rem - .5rem);
+  margin-inline-end: .8rem;
+  margin-left: -1rem;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+  }
 }
 
 .right-section {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750945330931 {
+export class SimularComponent1751987195259 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.Simular';
@@ -21,7 +21,7 @@ export class SimularComponent1750945330931 {
 
   inputData  = [{ Nombre: 'sBTSolicitudSimulacionAhorroProgramado', Tipo: '[sBTSolicitudSimulacionAhorro](#sbtsolicitudsimulacionahorro)', Comentarios: 'Datos de la simulación.' }];
   outputData = [{ Nombre: 'sBTSimulacionAhorroProgramado', Tipo: '[sBTSimulacionAhorroProgramado](#sbtsimulacionahorroprogramado)', Comentarios: 'Simulación de ahorro programado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del producto.' }, { Codigo: '30008', Descripcion: 'No se recuperó la persona para el identificador: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de Identificador].' }, { Codigo: '40150', Descripcion: 'Ocurrio un error al actualizar la información del ahorro.' }, { Codigo: '40955', Descripcion: 'El deposito inicial es superior al total a ahorrar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30003', Descripción: 'No se recibió el identificador del producto.' }, { Código: '30008', Descripción: 'No se recuperó la persona para el identificador: [Número de Identificador].' }, { Código: '30009', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Código: '30012', Descripción: 'No se recuperó el producto de ahorro para el identificador: [Número de Identificador].' }, { Código: '40150', Descripción: 'Ocurrio un error al actualizar la información del ahorro.' }, { Código: '40955', Descripción: 'El deposito inicial es superior al total a ahorrar.' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class SimularComponent1750945330931 {
          </bts:sdtDatos>
       </bts:BTAhorroProgramado.Simular>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?Simular\' \
@@ -142,7 +142,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.SimularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarConyugeComponent1750945334211 {
+export class EliminarConyugeComponent1751987198589 {
   pageTitle        = 'Eliminar Cónyuge';
   description      = `Método para eliminar el cónyuge de una persona.`;
   pubName    = 'BTPersonas.EliminarConyuge';
@@ -21,7 +21,7 @@ export class EliminarConyugeComponent1750945334211 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '31003', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class EliminarConyugeComponent1750945334211 {
          <bts:personaUId>1</bts:personaUId>
       </bts:BTPersonas.EliminarConyuge>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?EliminarConyuge\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

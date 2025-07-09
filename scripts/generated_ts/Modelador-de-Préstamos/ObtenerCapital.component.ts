@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCapitalComponent1750945333617 {
+export class ObtenerCapitalComponent1751987197907 {
   pageTitle        = 'Obtener Capital';
   description      = `Método para obtener capital mínimo, máximo y promedio de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerCapital';
@@ -21,7 +21,7 @@ export class ObtenerCapitalComponent1750945333617 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de producto.' }];
   outputData = [{ Nombre: 'minimo', Tipo: 'Double', Comentarios: 'Capital mínimo posible para el producto.' }, { Nombre: 'maximo', Tipo: 'Double', Comentarios: 'Capital máximo posible para el producto.' }, { Nombre: 'valorPorDefecto', Tipo: 'Double', Comentarios: 'Capital por defecto para el producto.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Existe registro con la cuenta indicada.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCapitalComponent1750945333617 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerCapital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -68,7 +68,7 @@ export class ObtenerCapitalComponent1750945333617 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerCapitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

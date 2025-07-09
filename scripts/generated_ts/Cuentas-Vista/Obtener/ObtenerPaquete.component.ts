@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaqueteComponent1750945332841 {
+export class ObtenerPaqueteComponent1751987197175 {
   pageTitle        = 'Obtener Paquete';
   description      = `Método para obtener los datos de un paquete.`;
   pubName    = 'BTCuentasVista.ObtenerPaquete';
@@ -21,7 +21,7 @@ export class ObtenerPaqueteComponent1750945332841 {
 
   inputData  = [{ Nombre: 'paqueteId', Tipo: 'Int', Comentarios: 'Identificador de paquete.' }];
   outputData = [{ Nombre: 'sdtPaquete', Tipo: '[sBTPaquete](#sbtpaquete)', Comentarios: 'Datos del paquete.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se encontraron paquetes para el identificador ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se encontraron paquetes para el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPaqueteComponent1750945332841 {
          <bts:paqueteId>1</bts:paqueteId>
       </bts:BTCuentasVista.ObtenerPaquete>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?ObtenerPaquete=\' \
@@ -107,7 +107,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerPaqueteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMenusComponent1750945332329 {
+export class ObtenerMenusComponent1751987196657 {
   pageTitle        = 'Obtener Menús';
   description      = `Método para obtener un listado de los menús ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerMenues';
@@ -21,7 +21,7 @@ export class ObtenerMenusComponent1750945332329 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtMenus', Tipo: '[sBTMenu](#sbtmenu)', Comentarios: 'Listado de menús.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No existen menús ingresados en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No existen menús ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerMenusComponent1750945332329 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerMenues>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerMenues\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerMenuesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

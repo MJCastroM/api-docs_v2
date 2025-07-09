@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVersionesComponent1750945333822 {
+export class ObtenerVersionesComponent1751987198140 {
   pageTitle        = 'Obtener Versiones';
   description      = `Método para retornar las versiones del modelo.`;
   pubName    = 'BTPartners.ObtenerVersiones';
@@ -21,7 +21,7 @@ export class ObtenerVersionesComponent1750945333822 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'modeloUId', Tipo: 'Long', Comentarios: 'Identificador del modelo.' }];
   outputData = [{ Nombre: 'sdtVersiones', Tipo: '[sBTVersion](#sbtversion)', Comentarios: 'Listado de versiones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30002', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30003', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30012', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30013', Descripcion: 'No se recibió vendedor.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió Partner ni canal.' }, { Código: '30002', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30003', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30012', Descripción: 'No se recibió punto de venta.' }, { Código: '30013', Descripción: 'No se recibió vendedor.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerVersionesComponent1750945333822 {
          <bts:modeloUId>1</bts:modeloUId>
       </bts:BTPartners.ObtenerVersiones>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerVersiones\' \
@@ -108,7 +108,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerVersionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextosComponent1750945335426 {
+export class AgregarTextosComponent1751987199976 {
   pageTitle        = 'Agregar Textos';
   description      = `Método para agregar textos de un préstamo.`;
   pubName    = 'BTPrestamos.AgregarTextos';
@@ -21,7 +21,7 @@ export class AgregarTextosComponent1750945335426 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'sdtTextos', Tipo: '[sBTTextoOperacion](#sbttextooperacion)', Comentarios: 'Listado de textos de la operación.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "INS" para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '40001', Descripcion: 'No existe texto para el código [Número de identificador].' }, { Codigo: '40002', Descripcion: 'No se ingresó el código del texto.' }, { Codigo: '40003', Descripcion: 'No se ingresó el reglón del texto.' }, { Codigo: '40004', Descripcion: 'No se ingresó el texto.' }, { Codigo: '40005', Descripcion: 'El código [Número del código] y renglón [Número del renglón] ya tiene texto ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30011', Descripción: 'No se recupero la operación para el identificador recibido.' }, { Código: '40001', Descripción: 'No existe texto para el código [Número de identificador].' }, { Código: '40002', Descripción: 'No se ingresó el código del texto.' }, { Código: '40003', Descripción: 'No se ingresó el reglón del texto.' }, { Código: '40004', Descripción: 'No se ingresó el texto.' }, { Código: '40005', Descripción: 'El código [Número del código] y renglón [Número del renglón] ya tiene texto ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -53,7 +53,7 @@ export class AgregarTextosComponent1750945335426 {
          </bts:sdtTextos>
       </bts:BTPrestamos.AgregarTextos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AgregarTextos=\' \
@@ -109,7 +109,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.AgregarTextosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

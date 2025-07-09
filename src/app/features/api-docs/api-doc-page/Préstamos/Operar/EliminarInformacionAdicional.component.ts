@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarInformacionAdicionalComponent1750945335173 {
+export class EliminarInformacionAdicionalComponent1751987199685 {
   pageTitle        = 'Eliminar Información Adicional';
   description      = `Método para eliminar la información adicional de un préstamo.`;
   pubName    = 'BTPrestamos.EliminarInformacionAdicional';
@@ -21,7 +21,7 @@ export class EliminarInformacionAdicionalComponent1750945335173 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de prestamo.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'DLT\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de operación.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un valor de metadata.' }, { Codigo: '30002', Descripcion: 'Debe ingresar un dato en el campo atributo.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de operación.' }, { Código: '30002', Descripción: 'Debe ingresar al menos un valor de metadata.' }, { Código: '30002', Descripción: 'Debe ingresar un dato en el campo atributo.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class EliminarInformacionAdicionalComponent1750945335173 {
          </bts:sdtInformacionAdicional>
       </bts:BTPrestamos.EliminarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.EliminarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

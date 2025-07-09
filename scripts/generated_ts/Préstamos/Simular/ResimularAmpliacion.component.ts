@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ResimularAmpliacionComponent1750945335240 {
+export class ResimularAmpliacionComponent1751987199762 {
   pageTitle        = 'Resimular Ampliación';
   description      = `Método para resimular la ampliación de un préstamo.`;
   pubName    = 'BTPrestamos.ResimularAmpliacion';
@@ -21,7 +21,7 @@ export class ResimularAmpliacionComponent1750945335240 {
 
   inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'sdtSimulacionUpdate', Tipo: '[sBTSimulacionUpdate](#sbtsimulacionupdate)', Comentarios: 'Datos de la resimulación.' }, { Nombre: 'accion', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "AMPLI" para este método].' }];
   outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de Ampliación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'El identificador de Ampliación no es válido.' }, { Codigo: '30005', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operacionUId de la operación a ampliar.' }, { Codigo: '30007', Descripcion: 'No se recuperó la operación a cancelar para el identificador [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de Ampliación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'El identificador de Ampliación no es válido.' }, { Código: '30005', Descripción: 'El préstamo no pertenece al cliente.' }, { Código: '30006', Descripción: 'No se recuperó la operacionUId de la operación a ampliar.' }, { Código: '30007', Descripción: 'No se recuperó la operación a cancelar para el identificador [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class ResimularAmpliacionComponent1750945335240 {
          </bts:sdtSimulacionUpdate>
       </bts:BTPrestamos.ResimularAmpliacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ResimularAmpliacion=\' \
@@ -1003,7 +1003,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ResimularAmpliacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

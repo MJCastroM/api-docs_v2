@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CompletarTareaComponent1750945333355 {
+export class CompletarTareaComponent1751987197726 {
   pageTitle        = 'Completar Tarea';
   description      = `Método para completar la tarea de solicitud de créditos y pasar a la etapa de evaluación.`;
   pubName    = 'BTMicrofinanzas.CompletarTarea';
@@ -21,7 +21,7 @@ export class CompletarTareaComponent1750945333355 {
 
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud' }, { Codigo: '30011', Descripcion: 'No es posible completar la tarea. Se debe validar políticas previamente' }, { Codigo: '30012', Descripcion: 'No es posible completar la tarea. Existen políticas incumplidas' }, { Codigo: '30013', Descripcion: 'No es posible completar la tarea. No se pudo determinar el modelo de evaluación crediticia' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de solicitud' }, { Código: '30011', Descripción: 'No es posible completar la tarea. Se debe validar políticas previamente' }, { Código: '30012', Descripción: 'No es posible completar la tarea. Existen políticas incumplidas' }, { Código: '30013', Descripción: 'No es posible completar la tarea. No se pudo determinar el modelo de evaluación crediticia' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class CompletarTareaComponent1750945333355 {
          <bts:solicitudUId>11109</bts:solicitudUId>
       </bts:BTMicrofinanzas.CompletarTarea>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CompletarTarea \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.CompletarTareaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq": {

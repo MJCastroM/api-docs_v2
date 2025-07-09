@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarCuentadeCobroComponent1750945335167 {
+export class EliminarCuentadeCobroComponent1751987199675 {
   pageTitle        = 'Eliminar Cuenta de Cobro';
   description      = `Método para eliminar una cuenta de cobro de un préstamo.`;
   pubName    = 'BTPrestamos.EliminarCuentaDeCobro';
@@ -21,7 +21,7 @@ export class EliminarCuentadeCobroComponent1750945335167 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de préstamo.' }, { Nombre: 'operacionUId_cobro', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta de cobro.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación de cobro para el identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió el identificador único de operación de cobro.' }, { Código: '30004', Descripción: 'No se recuperó la operación de cobro para el identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarCuentadeCobroComponent1750945335167 {
          <bts:operacionUId_cobro>3</bts:operacionUId_cobro>
       </bts:BTPrestamos.EliminarCuentaDeCobro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?EliminarCuentaDeCobro\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.EliminarCuentaDeCobroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

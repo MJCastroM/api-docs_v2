@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarrasComponent1750945332323 {
+export class ObtenerPizarrasComponent1751987196649 {
   pageTitle        = 'Obtener Pizarras';
   description      = `Método para obtener un listado de los tipos de pizarras ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPizarras';
@@ -38,7 +38,7 @@ export class ObtenerPizarrasComponent1750945332323 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerPizarras>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPizarras=\' \
@@ -147,7 +147,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPizarrasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

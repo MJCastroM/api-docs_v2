@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750945332996 {
+export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1751987197338 {
   pageTitle        = 'Traspasar Entre Cuentas Propias (diferentes monedas)';
   description      = `Método para realizar un traspaso entre cuentas propias de diferente moneda.`;
   pubName    = 'BTCuentasVista.TraspasarCuentasPropiasDiferentesMonedas';
@@ -35,7 +35,7 @@ export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750945332996
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'sdtTraspaso', Tipo: '[sBTTraspaso](#sbttraspaso)', Comentarios: 'Datos del Traspaso.' }];
   outputData = [{ Nombre: 'sdtResultadoTraspaso', Tipo: '[sBTResultadoTraspasoDatos](#sbtresultadotraspasodatos)', Comentarios: 'Resultado del traspaso.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de origen' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30008', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30009', Descripcion: 'Debe ingresar importe a debitar.' }, { Codigo: '30010', Descripcion: 'La cuenta destino debe coincidir con la cuenta origen.' }, { Codigo: '30011', Descripcion: 'Debe ingresar importe a acreditar.' }, { Codigo: '51008', Descripcion: 'Error de configuración: No se definió transacción a ejecutar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de origen' }, { Código: '30002', Descripción: 'No se recibió el identificador único de operación de destino.' }, { Código: '30004', Descripción: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Código: '30005', Descripción: 'La operación origen no pertenece al cliente.' }, { Código: '30006', Descripción: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Código: '30007', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30008', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Código: '30009', Descripción: 'Debe ingresar importe a debitar.' }, { Código: '30010', Descripción: 'La cuenta destino debe coincidir con la cuenta origen.' }, { Código: '30011', Descripción: 'Debe ingresar importe a acreditar.' }, { Código: '51008', Descripción: 'Error de configuración: No se definió transacción a ejecutar.' }];
 
   examples = {
     invocation: { xml: `
@@ -61,7 +61,7 @@ export class TraspasarEntreCuentasPropiasdiferentesmonedasComponent1750945332996
             </bts:sdtTraspaso>
         </bts:BTCuentasVista.TraspasarCuentasPropiasDiferentesMonedas>
     </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarCuentasPropiasConCotizacion \
@@ -117,7 +117,7 @@ curl -X POST \
             </Btoutreq>
         </BTCuentasVista.TraspasarCuentasPropiasDiferentesMonedasResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

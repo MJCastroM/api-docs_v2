@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetallePagoPrestamoComponent1750945334971 {
+export class ObtenerDetallePagoPrestamoComponent1751987199456 {
   pageTitle        = 'Obtener Detalle Pago Préstamo';
   description      = `Método para obtener el detalle de un pago de préstamo a partir del movimiento.`;
   pubName    = 'BTPrestamos.ObtenerDetallePagoPrestamo';
@@ -21,7 +21,7 @@ export class ObtenerDetallePagoPrestamoComponent1750945334971 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
   outputData = [{ Nombre: 'sdtDetallePagoPrestamo', Tipo: '[sBTDetallePagoPrestamo](#sbtdetallepagoprestamo)', Comentarios: 'Detalle del pago del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de movimiento.' }, { Codigo: '30003', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30103', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30104', Descripcion: 'No existe registro para el movimiento indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de movimiento.' }, { Código: '30003', Descripción: 'No se recuperó el préstamo para el identificador: [Número de Identificador].' }, { Código: '30103', Descripción: 'No existe registro para el identificador único.' }, { Código: '30104', Descripción: 'No existe registro para el movimiento indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDetallePagoPrestamoComponent1750945334971 {
          <bts:movimientoUId>981</bts:movimientoUId>
       </bts:BTPrestamos.ObtenerDetallePagoPrestamo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetallePagoPrestamo\' \
@@ -341,7 +341,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetallePagoPrestamoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

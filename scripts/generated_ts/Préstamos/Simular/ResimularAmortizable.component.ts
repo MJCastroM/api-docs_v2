@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ResimularAmortizableComponent1750945335231 {
+export class ResimularAmortizableComponent1751987199753 {
   pageTitle        = 'Resimular Amortizable';
   description      = `Método para resimular un préstamo amortizable.`;
   pubName    = 'BTPrestamos.ResimularAmortizable';
@@ -21,7 +21,7 @@ export class ResimularAmortizableComponent1750945335231 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'sdtSimulacionUpdate', Tipo: '[sBTSimulacionUpdate](#sbtsimulacionupdate)', Comentarios: 'Datos de la resimulación.' }, { Nombre: 'paramAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "" para este método].' }];
   outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class ResimularAmortizableComponent1750945335231 {
          </bts:sdtSimulacionUpdate>
       </bts:BTPrestamos.ResimularAmortizable>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ResimularAmortizable=\' \
@@ -1003,7 +1003,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ResimularAmortizableResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

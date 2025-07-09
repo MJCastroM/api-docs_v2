@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosJuridicosComponent1750945334582 {
+export class ObtenerVinculosJuridicosComponent1751987198965 {
   pageTitle        = 'Obtener Vínculos Juridicos';
   description      = `Método para obtener un listado de los vínculos jurídicos registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosJuridicos';
@@ -21,7 +21,7 @@ export class ObtenerVinculosJuridicosComponent1750945334582 {
 
   inputData  = [{ Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vínculo [Hidden: Valor fijo \'S\' para este método].' }];
   outputData = [{ Nombre: 'sdtVinculos', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Listado de vínculos.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Vínculos ingresados en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Vínculos ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerVinculosJuridicosComponent1750945334582 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerVinculosJuridicos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVinculosJuridicos=\' \
@@ -108,7 +108,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerVinculosJuridicosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

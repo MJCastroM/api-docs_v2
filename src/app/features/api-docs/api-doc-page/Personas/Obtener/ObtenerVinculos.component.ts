@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosComponent1750945334557 {
+export class ObtenerVinculosComponent1751987198942 {
   pageTitle        = 'Obtener Vínculos';
   description      = `Método para obtener un listado de los vínculos registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculos';
@@ -21,7 +21,7 @@ export class ObtenerVinculosComponent1750945334557 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtVinculos', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Listado de vínculos.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Vínculos ingresados en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Vínculos ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerVinculosComponent1750945334557 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerVinculos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerVinculos=\' \
@@ -129,7 +129,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerVinculosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

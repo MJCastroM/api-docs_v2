@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoPlazoFijoComponent1750945333592 {
+export class SimularPrestamoPlazoFijoComponent1751987197900 {
   pageTitle        = 'Simular Plazo Fijo';
   description      = `Método para simular el alta de un préstamo plazo fijo para un crédito individual.`;
   pubName    = 'BTMicrofinanzas.SimularPlazoFijo';
@@ -21,7 +21,7 @@ export class SimularPrestamoPlazoFijoComponent1750945333592 {
 
   inputData  = [{ Nombre: 'sBTSimulacionPlazoFijo', Tipo: '[sBTSimulacionPlazoFijo](#sbtsimulacionplazofijo)', Comentarios: 'Datos de la simulación.' }];
   outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos del préstamo simulado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'El producto indicado no es válido.' }, { Codigo: '30005', Descripcion: 'No se recuperó la cuenta para el Identificador.' }, { Codigo: '30006', Descripcion: 'El monto solicitado no puede ser 0.' }, { Codigo: '30007', Descripcion: 'Debe ingresar plazo o fecha de vencimiento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la solicitud.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30004', Descripción: 'El producto indicado no es válido.' }, { Código: '30005', Descripción: 'No se recuperó la cuenta para el Identificador.' }, { Código: '30006', Descripción: 'El monto solicitado no puede ser 0.' }, { Código: '30007', Descripción: 'Debe ingresar plazo o fecha de vencimiento.' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class SimularPrestamoPlazoFijoComponent1750945333592 {
          </bts:sBTSimulacionPlazoFijo>
       </bts:BTMicrofinanzas.SimularPlazoFijo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularPlazoFijo \
@@ -126,7 +126,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.SimularPlazoFijoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

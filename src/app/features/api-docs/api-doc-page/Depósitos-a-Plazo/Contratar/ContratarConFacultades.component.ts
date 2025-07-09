@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarConFacultadesComponent1750945333056 {
+export class ContratarConFacultadesComponent1751987197383 {
   pageTitle        = 'Contratar con Facultades';
   description      = `Método para contratar un depósito a plazo fijo dando de alta las facultades correspondientes.`;
   pubName    = 'BTDepositosAPlazo.ContratarConFacultades';
@@ -21,7 +21,7 @@ export class ContratarConFacultadesComponent1750945333056 {
 
   inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'operacionUIdOrigen', Tipo: 'Long', Comentarios: 'Identificador único de la operación de donde se retira el monto del DPF.' }, { Nombre: 'operacionUIdDestino', Tipo: 'Long', Comentarios: 'Identificador único de la operación de acreditación (Capital y/o intereses según instrucción).' }, { Nombre: 'instruccionAlVencimiento', Tipo: 'Short', Comentarios: 'Identificador de instrucción al vencimiento.' }, { Nombre: 'controlaMismoCliente', Tipo: 'String', Comentarios: '¿Controla correspondencia de cuenta de débito contra cuenta cliente originante? [Hidden: Valores \'S\'/\'N\'].' }, { Nombre: 'tipoIntegracionCuenta', Tipo: 'String', Comentarios: 'Tipo de integración de la cuenta (Ej: Conjunta, Individual).' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'transaccionUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la Cuenta.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la Simulación.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación a utilizar para el débito.' }, { Codigo: '30007', Descripcion: 'La simulación ya no se encuentra habilitada para su contratación.' }, { Codigo: '30008', Descripcion: 'La simulación ingresada no pertenece al cliente ingresado.' }, { Codigo: '30010', Descripcion: 'La operación del débito no pertenece al cliente ingresado.' }, { Codigo: '30012', Descripcion: 'La operación de acreditación no pertenece al cliente ingresado.' }, { Codigo: '30014', Descripcion: 'Error de configuración: No se definió control de CAC.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la Cuenta.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la Simulación.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la operación a utilizar para el débito.' }, { Código: '30007', Descripción: 'La simulación ya no se encuentra habilitada para su contratación.' }, { Código: '30008', Descripción: 'La simulación ingresada no pertenece al cliente ingresado.' }, { Código: '30010', Descripción: 'La operación del débito no pertenece al cliente ingresado.' }, { Código: '30012', Descripción: 'La operación de acreditación no pertenece al cliente ingresado.' }, { Código: '30014', Descripción: 'Error de configuración: No se definió control de CAC.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class ContratarConFacultadesComponent1750945333056 {
          <bts:tipoIntegracionCuenta>A</bts:tipoIntegracionCuenta>
       </bts:BTDepositosAPlazo.ContratarConFacultades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ContratarConFacultades=\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ContratarConFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
   "Btinreq": {

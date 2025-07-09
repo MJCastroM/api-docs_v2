@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerGuiadeProcesoComponent1750945333880 {
+export class ObtenerGuiadeProcesoComponent1751987198207 {
   pageTitle        = 'Obtener Guía de Proceso';
   description      = `Método para obtener los datos de una determinada guía de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerGuiaDeProceso';
@@ -21,7 +21,7 @@ export class ObtenerGuiadeProcesoComponent1750945333880 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Código de empresa [Hidden].' }, { Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código de la Guía de Procesos.' }];
   outputData = [{ Nombre: 'sdtGuiaDeProceso', Tipo: '[sBTCorrelativoGuia](#sbtcorrelativoguia)', Comentarios: 'Listado de datos de la guía de proceso.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió código de guía.' }, { Codigo: '40001', Descripcion: 'No existe la guía.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió código de guía.' }, { Código: '40001', Descripción: 'No existe la guía.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerGuiadeProcesoComponent1750945333880 {
          <bts:codigo>50</bts:codigo>
       </bts:BTParametrosBase.ObtenerGuiaDeProceso>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerGuiaDeProceso \
@@ -98,7 +98,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerGuiaDeProcesoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

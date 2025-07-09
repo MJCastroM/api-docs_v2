@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechadeIncumplimientoComponent1750945335019 {
+export class ObtenerFechadeIncumplimientoComponent1751987199514 {
   pageTitle        = 'Obtener Fecha de Incumplimiento';
   description      = `Método para obtener la fecha de incumplimiento de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerFechaDeIncumplimiento';
@@ -21,7 +21,7 @@ export class ObtenerFechadeIncumplimientoComponent1750945335019 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de préstamo.' }];
   outputData = [{ Nombre: 'fecha_incumplimiento', Tipo: 'Date', Comentarios: 'Fecha de incumplimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerFechadeIncumplimientoComponent1750945335019 {
          <bts:operacionUId>121</bts:operacionUId>
       </bts:BTPrestamos.ObtenerFechaDeIncumplimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerFechaDeIncumplimiento\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerFechaDeIncumplimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

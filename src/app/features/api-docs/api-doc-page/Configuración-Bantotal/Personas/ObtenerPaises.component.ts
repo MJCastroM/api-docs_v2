@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaisesComponent1750945332292 {
+export class ObtenerPaisesComponent1751987196631 {
   pageTitle        = 'Obtener Países';
   description      = `Método para obtener un listado de los países ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPaises';
@@ -38,7 +38,7 @@ export class ObtenerPaisesComponent1750945332292 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerPaises>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerPaises=\' \
@@ -261,7 +261,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPaisesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

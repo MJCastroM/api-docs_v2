@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750945331873 {
+export class ObtenerFacultadesComponent1751987196261 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerFacultades';
@@ -21,7 +21,7 @@ export class ObtenerFacultadesComponent1750945331873 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [{ Nombre: 'sdtFacultades', Tipo: '[sBTFacultad](#sbtfacultad)', Comentarios: 'Listado de datos de facultades.' }, { Nombre: 'sdtFirmantes', Tipo: '[sBTFacultadFirmante](#sbtfacultadfirmante)', Comentarios: 'Listado de datos de firmantes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cliente.' }, { Codigo: '30006', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Codigo: '40003', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40004', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '40005', Descripcion: 'No se recibió identificador de cuenta a consultar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de cliente.' }, { Código: '30006', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Código: '40003', Descripción: 'No existe registro con la cuenta indicada.' }, { Código: '40004', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '40005', Descripción: 'No se recibió identificador de cuenta a consultar.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerFacultadesComponent1750945331873 {
          <bts:clienteUId>342</bts:clienteUId>
       </bts:BTClientes.ObtenerFacultades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -123,7 +123,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

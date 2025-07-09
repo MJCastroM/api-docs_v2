@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750945333178 {
+export class ObtenerProductosComponent1751987197543 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerProductos';
@@ -50,7 +50,7 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          </bts:Btinreq>
       </bts:BTDepositosAPlazo.ObtenerProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerProductos=\' \
@@ -103,7 +103,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarComponent1750945335818 {
+export class ModificarComponent1751987200469 {
   pageTitle        = 'Modificar';
   description      = `Método para modificar un usuario.`;
   pubName    = 'BTUsuarios.Modificar';
@@ -21,7 +21,7 @@ export class ModificarComponent1750945335818 {
 
   inputData  = [{ Nombre: 'sdtUsuario', Tipo: '[sBTUsuarioBT](#sbtusuariobt)', Comentarios: 'Datos de usuario Bantotal.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'UPD\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30000', Descripcion: 'Parámetro modo incorrecto.' }, { Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30003', Descripcion: 'No existe Usuario.' }, { Codigo: '30004', Descripcion: 'Debe ingresar Nombre.' }, { Codigo: '30005', Descripcion: 'Debe ingresar Email.' }, { Codigo: '30006', Descripcion: 'Debe ingresar Nro de Caja.' }, { Codigo: '30007', Descripcion: 'Valor incorrecto para cantidad de sesiones abiertas.' }, { Codigo: '30008', Descripcion: 'Valor incorrecto para Nivel.' }, { Codigo: '30009', Descripcion: 'Debe ingresar Programa Inicial.' }, { Codigo: '30010', Descripcion: 'El Programa Inicial no existe.' }, { Codigo: '30011', Descripcion: 'Debe ingresar Sucursal.' }, { Codigo: '30012', Descripcion: 'La Sucursal no existe.' }, { Codigo: '40011', Descripcion: 'La Empresa para el Usuario no existe.' }, { Codigo: '40012', Descripcion: 'Número de Cajero ya asignado.' }];
+  errors     = [{ Código: '30000', Descripción: 'Parámetro modo incorrecto.' }, { Código: '30001', Descripción: 'Debe ingresar Usuario.' }, { Código: '30003', Descripción: 'No existe Usuario.' }, { Código: '30004', Descripción: 'Debe ingresar Nombre.' }, { Código: '30005', Descripción: 'Debe ingresar Email.' }, { Código: '30006', Descripción: 'Debe ingresar Nro de Caja.' }, { Código: '30007', Descripción: 'Valor incorrecto para cantidad de sesiones abiertas.' }, { Código: '30008', Descripción: 'Valor incorrecto para Nivel.' }, { Código: '30009', Descripción: 'Debe ingresar Programa Inicial.' }, { Código: '30010', Descripción: 'El Programa Inicial no existe.' }, { Código: '30011', Descripción: 'Debe ingresar Sucursal.' }, { Código: '30012', Descripción: 'La Sucursal no existe.' }, { Código: '40011', Descripción: 'La Empresa para el Usuario no existe.' }, { Código: '40012', Descripción: 'Número de Cajero ya asignado.' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class ModificarComponent1750945335818 {
          </bts:sdtUsuario>
       </bts:BTUsuarios.Modificar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Modificar\' \
@@ -103,7 +103,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.ModificarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarConTipoDeCambioEspecialComponent1750945332955 {
+export class TraspasarConTipoDeCambioEspecialComponent1751987197309 {
   pageTitle        = 'Traspasar con Tipo de Cambio Especial';
   description      = `Método para realizar un traspaso entre cuentas de diferente moneda ingresando un tipo de cambio especial.`;
   pubName    = 'BTCuentasVista.TraspasarConTipoDeCambioEspecial ';
@@ -35,7 +35,7 @@ export class TraspasarConTipoDeCambioEspecialComponent1750945332955 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'sdtTraspaso', Tipo: '[sBTTraspasoMoneda](#sbttraspasomoneda)', Comentarios: 'Datos de traspaso.' }, { Nombre: 'tipoCambioEspecial', Tipo: 'Short', Comentarios: 'Identificador del tipo de cambio especial a aplicar.' }, { Nombre: 'modoCambio', Tipo: 'String', Comentarios: 'Modo del tipo de cambio a aplicar (\'CC\': Compra cierre, \'VC\': Venta cierre).' }];
   outputData = [{ Nombre: 'sdtResultadoTraspaso', Tipo: '[sBTResultadoTraspaso](#sbtresultadotraspaso)', Comentarios: 'Resultado del traspaso.' }];
-  errors     = [{ Codigo: '31001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '31002', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '31003', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '31004', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '31011', Descripcion: 'La operación origen y operación destino no pueden ser iguales.' }, { Codigo: '31007', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '31008', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '31009', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '31005', Descripcion: 'Debe ingresar importe.' }, { Codigo: '31012', Descripcion: 'Debe ingresar importe a debitar o a acreditar, pero no ambos.' }, { Codigo: '30001', Descripcion: 'Moneda Origen y Moneda Destino no pueden ser la misma.' }, { Codigo: '30002', Descripcion: 'Debe ingresar tipo de cotización.' }, { Codigo: '30003', Descripcion: 'El tipo de cotización ingresado no es correcto.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '31001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '31002', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Código: '31003', Descripción: 'No se recibió el identificador único de operación de origen.' }, { Código: '31004', Descripción: 'No se recibió el identificador único de operación de destino.' }, { Código: '31011', Descripción: 'La operación origen y operación destino no pueden ser iguales.' }, { Código: '31007', Descripción: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Código: '31008', Descripción: 'La operación origen no pertenece al cliente.' }, { Código: '31009', Descripción: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Código: '31005', Descripción: 'Debe ingresar importe.' }, { Código: '31012', Descripción: 'Debe ingresar importe a debitar o a acreditar, pero no ambos.' }, { Código: '30001', Descripción: 'Moneda Origen y Moneda Destino no pueden ser la misma.' }, { Código: '30002', Descripción: 'Debe ingresar tipo de cotización.' }, { Código: '30003', Descripción: 'El tipo de cotización ingresado no es correcto.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -63,7 +63,7 @@ export class TraspasarConTipoDeCambioEspecialComponent1750945332955 {
 			<modoCambio>CC</modoCambio>
         </bts:BTCuentasVista.TraspasarConTipoDeCambioEspecial>
     </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarConTipoDeCambioEspecial \
@@ -121,7 +121,7 @@ curl -X POST \
             </Btoutreq>
         </BTCuentasVista.TraspasarConTipoDeCambioEspecialResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

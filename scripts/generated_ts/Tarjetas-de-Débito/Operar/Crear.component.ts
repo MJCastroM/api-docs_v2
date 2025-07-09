@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearComponent1750945335685 {
+export class CrearComponent1751987200305 {
   pageTitle        = 'Crear';
   description      = `Método para dar de alta una tarjeta de débito para un cliente.`;
   pubName    = 'BTTarjetasDeDebito.Crear';
@@ -21,7 +21,7 @@ export class CrearComponent1750945335685 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de tarjeta.' }];
   outputData = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Número de tarjeta.' }, { Nombre: 'fechaExpiracion', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'estadoTarjeta', Tipo: 'String', Comentarios: 'Estado de la tarjeta.' }, { Nombre: 'estadoPlastico', Tipo: 'String', Comentarios: 'Estado del plástico.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar el identificador de cuenta.' }, { Codigo: '40001', Descripcion: 'Tipo de tarjeta inexistente TDD015.' }, { Codigo: '40002', Descripcion: 'El titular excede la cantidad máxima de tarjetas activas.' }, { Codigo: '40003', Descripcion: 'El titular no existe en FSD001.' }, { Codigo: '40004', Descripcion: 'Cuenta de costo no pertenece al titular.' }, { Codigo: '40005', Descripcion: 'Cuenta de costo no existe en FSD011.' }, { Codigo: '40006', Descripcion: 'Código de domicilio invalido para el titular.' }, { Codigo: '40007', Descripcion: 'Cuenta a asociar a tarjeta no pertenece al titular.' }, { Codigo: '40010', Descripcion: 'Número de tarjeta no es válido.' }, { Codigo: '40011', Descripcion: 'TD nominada, no se debe informar TDD003TAR.' }, { Codigo: '40020', Descripcion: 'Funcionalidad inexistente en TDD025.' }, { Codigo: '40021', Descripcion: 'Funcionalidad inhabilitada en TDD025.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar el identificador de cuenta.' }, { Código: '40001', Descripción: 'Tipo de tarjeta inexistente TDD015.' }, { Código: '40002', Descripción: 'El titular excede la cantidad máxima de tarjetas activas.' }, { Código: '40003', Descripción: 'El titular no existe en FSD001.' }, { Código: '40004', Descripción: 'Cuenta de costo no pertenece al titular.' }, { Código: '40005', Descripción: 'Cuenta de costo no existe en FSD011.' }, { Código: '40006', Descripción: 'Código de domicilio invalido para el titular.' }, { Código: '40007', Descripción: 'Cuenta a asociar a tarjeta no pertenece al titular.' }, { Código: '40010', Descripción: 'Número de tarjeta no es válido.' }, { Código: '40011', Descripción: 'TD nominada, no se debe informar TDD003TAR.' }, { Código: '40020', Descripción: 'Funcionalidad inexistente en TDD025.' }, { Código: '40021', Descripción: 'Funcionalidad inhabilitada en TDD025.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class CrearComponent1750945335685 {
          <bts:nombreTarjeta>AV</bts:nombreTarjeta>
       </bts:BTTarjetasDeDebito.Crear>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Crear=\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.CrearResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

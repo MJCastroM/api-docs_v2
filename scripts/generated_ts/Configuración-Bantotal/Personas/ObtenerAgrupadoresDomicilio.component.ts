@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAgrupadoresDomicilioComponent1750945332253 {
+export class ObtenerAgrupadoresDomicilioComponent1751987196596 {
   pageTitle        = 'Obtener Agrupadores de Domicilio';
   description      = `Método para obtener los diferentes niveles de agrupadores de domicilios.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio';
@@ -21,7 +21,7 @@ export class ObtenerAgrupadoresDomicilioComponent1750945332253 {
 
   inputData  = [{ Nombre: 'agrupadorId1', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 1.' }, { Nombre: 'agrupadorId2', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 2.' }, { Nombre: 'agrupadorId3', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 3.' }, { Nombre: 'agrupadorId4', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 4.' }, { Nombre: 'agrupadorId5', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 5.' }, { Nombre: 'agrupadorId6', Tipo: 'Short', Comentarios: 'Identificador del nivel de agrupador 6.' }];
   outputData = [{ Nombre: 'sdtAgrupadores', Tipo: '[sBTAgrupadores](#sbtagrupadores)', Comentarios: 'Listado de agrupadores.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se encontraron agrupadores.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se encontraron agrupadores.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerAgrupadoresDomicilioComponent1750945332253 {
          <bts:agrupadorId6></bts:agrupadorId6>
       </bts:BTConfiguracionBantotal.ObtenerAgrupadoresDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerAgrupadoresDomicilio\' \
@@ -122,7 +122,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerAgrupadoresDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
   "Btinreq": {

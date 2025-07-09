@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiariosComponent1750945333038 {
+export class ObtenerBeneficiariosComponent1751987197367 {
   pageTitle        = 'Obtener Beneficiarios';
   description      = `Método para obtener los beneficiarios de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerBeneficiarios';
@@ -21,7 +21,7 @@ export class ObtenerBeneficiariosComponent1750945333038 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtBeneficiarios', Tipo: '[sBTBeneficiario](#sbtbeneficiario)', Comentarios: 'Listado de beneficiarios del depósito a plazo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30003', Descripcion: 'No se recupero la operación para el identificador [Número de Identificador].' }, { Codigo: '40001', Descripcion: 'No se encontraron beneficiaros para el identificador ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30003', Descripción: 'No se recupero la operación para el identificador [Número de Identificador].' }, { Código: '40001', Descripción: 'No se encontraron beneficiaros para el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerBeneficiariosComponent1750945333038 {
          <bts:operacionUId>790</bts:operacionUId>
       </bts:BTDepositosAPlazo.ObtenerBeneficiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerBeneficiarios=\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerBeneficiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

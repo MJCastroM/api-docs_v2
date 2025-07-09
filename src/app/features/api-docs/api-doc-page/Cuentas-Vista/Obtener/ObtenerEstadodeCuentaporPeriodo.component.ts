@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaporPeriodoComponent1750945332821 {
+export class ObtenerEstadodeCuentaporPeriodoComponent1751987197148 {
   pageTitle        = 'Obtener Estado de Cuenta por Período';
   description      = `Método para obtener el estado de cuenta y los movimientos realizados para una cuenta vista en determinado rango de fechas.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo';
@@ -21,7 +21,7 @@ export class ObtenerEstadodeCuentaporPeriodoComponent1750945332821 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la cual se emite el estado de cuenta.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la cual se emite el estado de cuenta.' }, { Nombre: 'cantidadMovimientos', Tipo: 'Int', Comentarios: 'Cantidad de movimientos [Hidden: Valor fijo \'20\' para este método].' }];
   outputData = [{ Nombre: 'sdtEstadoDeCuenta', Tipo: '[sBTEstadoCuentaCV](#sbtestadocuentacv)', Comentarios: 'Datos de Estado de Cuenta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30005', Descripcion: 'Debe ingresar cantidad de movimientos.' }, { Codigo: '30006', Descripcion: 'Debe ingresar la fecha desde.' }, { Codigo: '30007', Descripcion: 'Debe ingresar la fecha hasta.' }, { Codigo: '30008', Descripcion: 'Fecha desde tiene que ser menor a fecha hasta.' }, { Codigo: '40001', Descripcion: 'No existe una empresa con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'No se pudo resolver la empresa del usuario.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Código: '30004', Descripción: 'La operación ingresada no corresponde a una cuenta vista.' }, { Código: '30005', Descripción: 'Debe ingresar cantidad de movimientos.' }, { Código: '30006', Descripción: 'Debe ingresar la fecha desde.' }, { Código: '30007', Descripción: 'Debe ingresar la fecha hasta.' }, { Código: '30008', Descripción: 'Fecha desde tiene que ser menor a fecha hasta.' }, { Código: '40001', Descripción: 'No existe una empresa con los datos ingresados.' }, { Código: '40002', Descripción: 'No se pudo resolver la empresa del usuario.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerEstadodeCuentaporPeriodoComponent1750945332821 {
          <bts:cantidadMovimientos>2</bts:cantidadMovimientos>
       </bts:BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?ObtenerEstadoDeCuentaPorPeriodo \
@@ -123,7 +123,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerEstadoDeCuentaPorPeriodoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerNivelesEducativosComponent1750945334441 {
+export class ObtenerNivelesEducativosComponent1751987198795 {
   pageTitle        = 'Obtener Niveles Educativos';
   description      = `Método para obtener un listado de los niveles educativos.`;
   pubName    = 'BTPersonas.ObtenerNivelesEducativos';
@@ -38,7 +38,7 @@ export class ObtenerNivelesEducativosComponent1750945334441 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerNivelesEducativos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -94,7 +94,7 @@ export class ObtenerNivelesEducativosComponent1750945334441 {
          </Btoutreq>
       </BTPersonas.ObtenerNivelesEducativosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

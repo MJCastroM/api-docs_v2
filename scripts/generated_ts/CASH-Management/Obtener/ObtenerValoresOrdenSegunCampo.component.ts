@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresOrdenSegunCampoComponent1750945331493 {
+export class ObtenerValoresOrdenSegunCampoComponent1751987195804 {
   pageTitle        = 'Obtener Valores de Orden Según Campo';
   description      = `Método para obtener los valores de los campos CASH recibidos para la orden que pertenezca al campo/valor recibido.`;
   pubName    = 'BTCASHManagement.ObtenerValoresOrdenSegunCampo';
@@ -21,7 +21,7 @@ export class ObtenerValoresOrdenSegunCampoComponent1750945331493 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del Contrato CASH del Cliente.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'campoBusqueda', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Lista de valores de campos CASH a buscar.' }, { Nombre: 'camposCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Lista de campos CASH a devolver valor.' }];
   outputData = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden CASH.' }, { Nombre: 'numeroLineaOrden', Tipo: 'Int', Comentarios: 'Número de línea de orden CASH.' }, { Nombre: 'valoresCampoCASH', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Lista de valores de campos CASH.' }];
-  errors     = [{ Codigo: '1030754', Descripcion: 'El campo de búsqueda no existe en el servicio recibido.' }, { Codigo: '1030755', Descripcion: 'No se encontró la orden para el campo/valor recibido.' }];
+  errors     = [{ Código: '1030754', Descripción: 'El campo de búsqueda no existe en el servicio recibido.' }, { Código: '1030755', Descripción: 'No se encontró la orden para el campo/valor recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class ObtenerValoresOrdenSegunCampoComponent1750945331493 {
          </bts:camposCash>
       </bts:BTCASHManagement.ObtenerValoresOrdenSegunCampo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerValoresOrdenSegunCampo=\' \
@@ -109,7 +109,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerValoresOrdenSegunCampoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

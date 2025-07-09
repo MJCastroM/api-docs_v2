@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPrecancelacionComponent1750945333141 {
+export class ObtenerDatosPrecancelacionComponent1751987197484 {
   pageTitle        = 'Obtener Datos de Precancelación';
   description      = `Método para obtener la simulación de la precancelación de un depósito a plazo para una fecha dada.`;
   pubName    = 'BTDepositosAPlazo.ObtenerDatosPrecancelacion';
@@ -21,7 +21,7 @@ export class ObtenerDatosPrecancelacionComponent1750945333141 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de la precancelación.' }];
   outputData = [{ Nombre: 'sdtPrecancelar', Tipo: '[sBTDatoPrecancelar](#sbtdatoprecancelar)', Comentarios: 'Datos de la precancelación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió la fecha.' }, { Codigo: '40003', Descripcion: 'La operación no corresponde a un depósito a plazo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió la fecha.' }, { Código: '40003', Descripción: 'La operación no corresponde a un depósito a plazo.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDatosPrecancelacionComponent1750945333141 {
          <bts:fecha>2024-11-11</bts:fecha>
       </bts:BTDepositosAPlazo.ObtenerDatosPrecancelacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDatosPrecancelacion=\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerDatosPrecancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

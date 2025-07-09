@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosHabilitadosComponent1750945335857 {
+export class ObtenerProcesosHabilitadosComponent1751987200522 {
   pageTitle        = 'Obtener Procesos Habilitados';
   description      = `Método para obtener un listado de los procesos habilitados de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerProcesosHabilitados';
@@ -38,7 +38,7 @@ export class ObtenerProcesosHabilitadosComponent1750945335857 {
          </bts:Btinreq> 
       </bts:BTWorkflow.ObtenerProcesosHabilitados> 
    </soapenv:Body> 
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \ 
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerProcesosHabilitados \ 
@@ -168,7 +168,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerProcesosHabilitadosResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
   "Btinreq": { 

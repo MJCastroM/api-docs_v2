@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDomicilioComponent1750945334226 {
+export class EliminarDomicilioComponent1751987198605 {
   pageTitle        = 'Eliminar Domicilio';
   description      = `Método para eliminar los datos del domicilio de una persona.`;
   pubName    = 'BTPersonas.EliminarDomicilio';
@@ -21,7 +21,7 @@ export class EliminarDomicilioComponent1750945334226 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Código de domicilio.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'El identificador de la persona no es correcto.' }, { Codigo: '30011', Descripcion: 'Código de domicilio no válido.' }, { Codigo: '31011', Descripcion: 'No existe el domicilio de la persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'El identificador de la persona no es correcto.' }, { Código: '30011', Descripción: 'Código de domicilio no válido.' }, { Código: '31011', Descripción: 'No existe el domicilio de la persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarDomicilioComponent1750945334226 {
          <bts:codigoDomicilio>1</bts:codigoDomicilio>
       </bts:BTPersonas.EliminarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarDomicilio=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

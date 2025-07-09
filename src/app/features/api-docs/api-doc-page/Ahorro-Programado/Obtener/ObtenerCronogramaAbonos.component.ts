@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaAbonosComponent1750945331019 {
+export class ObtenerCronogramaAbonosComponent1751987195350 {
   pageTitle        = 'Obtener Cronograma de Abonos';
   description      = `Método para obtener el cronograma de abonos de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.ObtenerCronogramaDeAbonos';
@@ -21,7 +21,7 @@ export class ObtenerCronogramaAbonosComponent1750945331019 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'filtroAbono', Tipo: 'Byte', Comentarios: 'Tipo de filtro de abono. Se pueden enviar los siguientes [valores](#valores1).' }];
   outputData = [{ Nombre: 'sdtSituacionAhorro', Tipo: '[sBTSituacionAhorro ](#sbtsituacionahorro)', Comentarios: 'Datos de la situación del cronograma.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el valor de filtroCuota.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }, { Codigo: '40001', Descripcion: 'El filtro de la cuota no es válido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió el valor de filtroCuota.' }, { Código: '30011', Descripción: 'No se recupero la operación para el identificador recibido.' }, { Código: '40001', Descripción: 'El filtro de la cuota no es válido.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerCronogramaAbonosComponent1750945331019 {
          <bts:filtroAbono>1</bts:filtroAbono>
       </bts:BTAhorroProgramado.ObtenerCronogramaDeAbonos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCronogramaDeAbonos\' \
@@ -206,7 +206,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerCronogramaDeAbonosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

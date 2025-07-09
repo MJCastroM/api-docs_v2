@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeChequeraporProductoComponent1750945332605 {
+export class ObtenerTiposdeChequeraporProductoComponent1751987196938 {
   pageTitle        = 'Obtener Tipos de Chequera por Producto';
   description      = `Método para obtener un listado de las chequeras que se pueden asignar a un determinado producto.`;
   pubName    = 'BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeChequeraporProductoComponent1750945332605 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }];
   outputData = [{ Nombre: 'sdtTiposChequera', Tipo: '[sBTTipoChequera](#sbttipochequera)', Comentarios: 'Listado de tipos de chequera.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de producto.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'El producto no tiene habilitado el manejo de chequeras.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de producto.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'El producto no tiene habilitado el manejo de chequeras.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTiposdeChequeraporProductoComponent1750945332605 {
          <bts:productoUId>43</bts:productoUId>
       </bts:BTCuentasCorrientes.ObtenerTiposDeChequeraPorProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerTiposDeChequeraPorProducto\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerTiposDeChequeraPorProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

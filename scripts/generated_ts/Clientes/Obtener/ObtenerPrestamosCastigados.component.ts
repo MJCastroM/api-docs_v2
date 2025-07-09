@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosCastigadosComponent1750945331970 {
+export class ObtenerPrestamosCastigadosComponent1751987196351 {
   pageTitle        = 'Obtener Préstamos Castigados';
   description      = `Método para obtener los productos de préstamo castigados de un cliente.`;
   pubName    = 'BTClientes.ObtenerPrestamosCastigados';
@@ -30,7 +30,7 @@ Valor específico 2 | 67 (Estado de operación castigada).
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'correlativo', Tipo: 'Int', Comentarios: 'Correlativo en el que se guardó el módulo correspondiente a préstamos castigados [Hidden].' }];
   outputData = [{ Nombre: 'sdtProductosPrestamos', Tipo: '[sBTProductoPrestamo](#sbtproductoprestamo)', Comentarios: 'Listado de préstamos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -48,7 +48,7 @@ Valor específico 2 | 67 (Estado de operación castigada).
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTClientes.ObtenerPrestamosCastigados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPrestamosCastigados=\' \
@@ -104,7 +104,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerPrestamosCastigadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

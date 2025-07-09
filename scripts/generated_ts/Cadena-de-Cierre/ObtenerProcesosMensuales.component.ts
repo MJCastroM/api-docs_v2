@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosMensualesComponent1750945331251 {
+export class ObtenerProcesosMensualesComponent1751987195566 {
   pageTitle        = 'Obtener Procesos Mensuales';
   description      = `Método para obtener un listado de los procesos mensuales de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosMensuales';
@@ -38,7 +38,7 @@ export class ObtenerProcesosMensualesComponent1750945331251 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.ObtenerProcesosMensuales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ProcesosMensuales\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosMensualesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

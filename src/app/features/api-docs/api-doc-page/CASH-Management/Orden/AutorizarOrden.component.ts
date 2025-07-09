@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutorizarOrdenComponent1750945331500 {
+export class AutorizarOrdenComponent1751987195814 {
   pageTitle        = 'Autorizar Orden';
   description      = `Método para autorizar una orden determinada.`;
   pubName    = 'BTCASHManagement.AutorizarOrden';
@@ -21,7 +21,7 @@ export class AutorizarOrdenComponent1750945331500 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden.' }];
   outputData = [];
-  errors     = [{ Codigo: '1030725', Descripcion: 'No se encontro orden a autorizar.' }, { Codigo: '1030722', Descripcion: 'El estado de la orden, no permite autorizar.' }];
+  errors     = [{ Código: '1030725', Descripción: 'No se encontro orden a autorizar.' }, { Código: '1030722', Descripción: 'El estado de la orden, no permite autorizar.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class AutorizarOrdenComponent1750945331500 {
          <bts:ordenId>1414</bts:ordenId>
       </bts:BTCASHManagement.AutorizarOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?AutorizarOrden=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.AutorizarOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDatosPEPComponent1750945334055 {
+export class AgregarDatosPEPComponent1751987198424 {
   pageTitle        = 'Agregar Datos PEP';
   description      = `Método para agregar los datos de una persona expuesta políticamente.`;
   pubName    = 'BTPersonas.AgregarDatosPEP';
@@ -21,7 +21,7 @@ export class AgregarDatosPEPComponent1750945334055 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'esPEP', Tipo: 'String', Comentarios: 'Es persona políticamente expuesta? (S/N).' }, { Nombre: 'sdtDatosPEP', Tipo: '[sBTDatosPEP](#sbtdatospep)', Comentarios: 'Datos de la PEP.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió si la persona es políticamente expuesta.' }, { Codigo: '30003', Descripcion: 'No se pudo determinar si la persona es políticamente expuesta. (¿Es PEP? S / N).' }, { Codigo: '50001', Descripcion: 'Fecha Inicio cargo PEP es de ingreso obligatorio.' }, { Codigo: '50002', Descripcion: 'Entidad es de ingreso obligatorio.' }, { Codigo: '50003', Descripcion: 'Cargo y Relación es de ingreso obligatorio.' }, { Codigo: '50004', Descripcion: 'Fecha Salida cargo PEP debe de ser mayor a Fecha Inicio cargo PEP.' }, { Codigo: '50005', Descripcion: 'Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'No se recibió si la persona es políticamente expuesta.' }, { Código: '30003', Descripción: 'No se pudo determinar si la persona es políticamente expuesta. (¿Es PEP? S / N).' }, { Código: '50001', Descripción: 'Fecha Inicio cargo PEP es de ingreso obligatorio.' }, { Código: '50002', Descripción: 'Entidad es de ingreso obligatorio.' }, { Código: '50003', Descripción: 'Cargo y Relación es de ingreso obligatorio.' }, { Código: '50004', Descripción: 'Fecha Salida cargo PEP debe de ser mayor a Fecha Inicio cargo PEP.' }, { Código: '50005', Descripción: 'Fecha Inicio cargo PEP debe de ser anterior a la Fecha de Hoy.' }];
 
   examples = {
     invocation: { xml: `
@@ -52,7 +52,7 @@ export class AgregarDatosPEPComponent1750945334055 {
          </sdtDatosPEP>
 	   </bts:BTPersonas.AgregarDatosPEP>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarDatosPEP\' \
@@ -105,7 +105,7 @@ curl -X POST \
 		   </Btoutreq>
       </BTPersonas.AgregarDatosPEPResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

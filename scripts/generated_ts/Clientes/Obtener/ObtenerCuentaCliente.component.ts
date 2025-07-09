@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentaClienteComponent1750945331802 {
+export class ObtenerCuentaClienteComponent1751987196177 {
   pageTitle        = 'Obtener Cuenta Cliente';
   description      = `Método para obtener la empresa y número de cuenta de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerCuentaCliente';
@@ -21,7 +21,7 @@ export class ObtenerCuentaClienteComponent1750945331802 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Short', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de la empresa del cliente.' }, { Nombre: 'cuentaBT', Tipo: 'Long', Comentarios: 'Identificador de la cuenta cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCuentaClienteComponent1750945331802 {
          <bts:clienteUId>21</bts:clienteUId>
       </bts:BTClientes.ObtenerCuentaCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerCuentaCliente\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerCuentaClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

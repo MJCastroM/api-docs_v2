@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularChequeElectronicoComponent1750945331072 {
+export class AnularChequeElectronicoComponent1751987195408 {
   pageTitle        = 'Anular Cheque Electrónico';
   description      = `Método para anular un cheque electrónico de una chequera.`;
   pubName    = 'BTCuentasCorrientes.AnularChequeElectronico';
@@ -21,7 +21,7 @@ export class AnularChequeElectronicoComponent1750945331072 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'numeroCheque', Tipo: 'Int', Comentarios: 'Número de cheque a anular.' }];
   outputData = [{ Nombre: 'listaCheques', Tipo: '[sBTChequeElectronico](#sbtchequeelectronico)', Comentarios: 'Listado de cheques electrónicos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class AnularChequeElectronicoComponent1750945331072 {
          <bts:numeroCheque>1</bts:numeroCheque>
       </bts:BTCuentasCorrientes.AnularChequeElectronico>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, 
+</soapenv:Envelope></soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?AnularChequeElectronico\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.AnularChequeElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

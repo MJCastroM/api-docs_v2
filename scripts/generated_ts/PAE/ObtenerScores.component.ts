@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerScoresComponent1750945333704 {
+export class ObtenerScoresComponent1751987197988 {
   pageTitle        = 'Obtener Scores';
   description      = `Método para obtener los scores de los modelos de evaluación.`;
   pubName    = 'BTPAE.ObtenerScores';
@@ -39,7 +39,7 @@ export class ObtenerScoresComponent1750945333704 {
          <bts:modeloEvaluacionId>101</bts:modeloEvaluacionId>
       </bts:BTPAE.ObtenerScores>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?ObtenerScores \
@@ -97,7 +97,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPAE_v1?Ob
          </Btoutreq>
       </BTPAE.ObtenerScoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
   "Envelope": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosComponent1750945331955 {
+export class ObtenerPrestamosComponent1751987196339 {
   pageTitle        = 'Obtener Préstamos';
   description      = `Método para obtener los préstamos de un cliente.`;
   pubName    = 'BTClientes.ObtenerPrestamos';
@@ -21,7 +21,7 @@ export class ObtenerPrestamosComponent1750945331955 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'cancelado', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'\' para este método].' }];
   outputData = [{ Nombre: 'sdtPrestamos', Tipo: '[sBTPrestamoItem](#sbtprestamoitem)', Comentarios: 'Listado de prestamos del cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cuenta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'El cliente no tiene operaciones.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de cuenta.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'El cliente no tiene operaciones.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPrestamosComponent1750945331955 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTClientes.ObtenerPrestamos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPrestamos=\' \
@@ -529,7 +529,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerPrestamosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

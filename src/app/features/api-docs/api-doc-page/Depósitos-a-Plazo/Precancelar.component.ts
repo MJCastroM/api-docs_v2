@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PrecancelarComponent1750945333207 {
+export class PrecancelarComponent1751987197575 {
   pageTitle        = 'Precancelar';
   description      = `Método para precancelar una operación de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Precancelar';
@@ -27,7 +27,7 @@ export class PrecancelarComponent1750945333207 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'cuentaAcreditacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de cuenta vista de cobro.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30003', Descripcion: 'No se recuperó la operación origen para el Identificador ingresado.' }, { Codigo: '30004', Descripcion: 'La operación recuperada no tiene relación con la cuenta.' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de operación de acreditación.' }, { Codigo: '30006', Descripcion: 'La operación a precancelar y de acreditación no pueden ser la misma.' }, { Codigo: '30007', Descripcion: 'No se recuperó la operación de acreditación para el Identificador ingresado.' }, { Codigo: '30008', Descripcion: 'La operación de acreditación no tiene relación con la cuenta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30003', Descripción: 'No se recuperó la operación origen para el Identificador ingresado.' }, { Código: '30004', Descripción: 'La operación recuperada no tiene relación con la cuenta.' }, { Código: '30005', Descripción: 'No se recibió el identificador de operación de acreditación.' }, { Código: '30006', Descripción: 'La operación a precancelar y de acreditación no pueden ser la misma.' }, { Código: '30007', Descripción: 'No se recuperó la operación de acreditación para el Identificador ingresado.' }, { Código: '30008', Descripción: 'La operación de acreditación no tiene relación con la cuenta.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class PrecancelarComponent1750945333207 {
          <bts:cuentaAcreditacionUId>12</bts:cuentaAcreditacionUId>
       </bts:BTDepositosAPlazo.Precancelar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDatosPrecancelacion=\' \
@@ -90,7 +90,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.PrecancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

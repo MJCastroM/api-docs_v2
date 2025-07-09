@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750945332466 {
+export class CancelarComponent1751987196824 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la liquidación y cierre de una cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.Cancelar';
@@ -21,7 +21,7 @@ export class CancelarComponent1750945332466 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'bolsilloUId', Tipo: 'Long', Comentarios: 'Identificador único del bolsillo.' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'La cuenta indicada no existe.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30004', Descripcion: 'La cuenta indicada no existe.' }, { Codigo: '30005', Descripcion: 'La cuenta a liquidar y la cuenta de acreditación no pueden ser la misma.' }, { Codigo: '30006', Descripcion: 'La cuenta de cobro indicada no existe.' }, { Codigo: '30007', Descripcion: 'La cuenta indicada no pertenece al cliente.' }, { Codigo: '30008', Descripcion: 'Las monedas de la cuenta a liquidar y la cuenta de acreditación deben ser la misma.' }, { Codigo: '30009', Descripcion: 'No se pudo obtener el identificador para el movimiento realizado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'La cuenta indicada no existe.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la cuenta.' }, { Código: '30004', Descripción: 'La cuenta indicada no existe.' }, { Código: '30005', Descripción: 'La cuenta a liquidar y la cuenta de acreditación no pueden ser la misma.' }, { Código: '30006', Descripción: 'La cuenta de cobro indicada no existe.' }, { Código: '30007', Descripción: 'La cuenta indicada no pertenece al cliente.' }, { Código: '30008', Descripción: 'Las monedas de la cuenta a liquidar y la cuenta de acreditación deben ser la misma.' }, { Código: '30009', Descripción: 'No se pudo obtener el identificador para el movimiento realizado.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class CancelarComponent1750945332466 {
          <bts:operacionCobroUId>1133</bts:operacionCobroUId>
       </bts:BTCuentasBolsillo.Cancelar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?Cancelar\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.Cancelar>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

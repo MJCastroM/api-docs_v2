@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSesionesPorUsuarioComponent1750945333326 {
+export class ObtenerSesionesPorUsuarioComponent1751987197714 {
   pageTitle        = 'Obtener Sesiones Por Usuario';
   description      = `Método para obtener la cantidad de sesiones abiertas por usuario.`;
   pubName    = 'BTIndicadores.ObtenerSesionesPorUsuario';
@@ -38,7 +38,7 @@ export class ObtenerSesionesPorUsuarioComponent1750945333326 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerSesionesPorUsuario>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerSesionesPorUsuario\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerSesionesPorUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVinculosdeAfinidadComponent1750945334563 {
+export class ObtenerVinculosdeAfinidadComponent1751987198953 {
   pageTitle        = 'Obtener Vínculos de Afinidad';
   description      = `Método para obtener un listado de los vínculos de afinidad registrados.`;
   pubName    = 'BTPersonas.ObtenerVinculosAfinidad';
@@ -21,7 +21,7 @@ export class ObtenerVinculosdeAfinidadComponent1750945334563 {
 
   inputData  = [{ Nombre: 'tipo', Tipo: 'String', Comentarios: 'Tipo de vínculo [Hidden: Valor fijo \'A\' para este método].' }];
   outputData = [{ Nombre: 'sdtVinculos', Tipo: '[sBTVinculo](#sbtvinculo)', Comentarios: 'Listado de vínculos.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Vínculos ingresados en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Vínculos ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerVinculosdeAfinidadComponent1750945334563 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerVinculosAfinidad>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -76,7 +76,7 @@ export class ObtenerVinculosdeAfinidadComponent1750945334563 {
          </Btoutreq>
       </BTPersonas.ObtenerVinculosAfinidadResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

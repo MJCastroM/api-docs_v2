@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarChequeraComponent1750945332612 {
+export class EliminarChequeraComponent1751987196948 {
   pageTitle        = 'Eliminar Chequera';
   description      = `Método para eliminar una chequera.`;
   pubName    = 'BTCuentasCorrientes.EliminarChequera';
@@ -21,7 +21,7 @@ export class EliminarChequeraComponent1750945332612 {
 
   inputData  = [{ Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de chequera.' }, { Codigo: '40001', Descripcion: 'La cuenta no esta habilitada.' }, { Codigo: '40002', Descripcion: 'La chequera no se encuentra activa.' }, { Codigo: '40003', Descripcion: 'La chequera contiene cheques utilizados; no puede ser eliminada.' }, { Codigo: '40004', Descripcion: 'Cuenta Cerrada, solo se permite consulta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de chequera.' }, { Código: '40001', Descripción: 'La cuenta no esta habilitada.' }, { Código: '40002', Descripción: 'La chequera no se encuentra activa.' }, { Código: '40003', Descripción: 'La chequera contiene cheques utilizados; no puede ser eliminada.' }, { Código: '40004', Descripción: 'Cuenta Cerrada, solo se permite consulta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class EliminarChequeraComponent1750945332612 {
          <bts:chequeraId>37</bts:chequeraId>
       </bts:BTCuentasCorrientes.EliminarChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?EliminarChequera\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.EliminarChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

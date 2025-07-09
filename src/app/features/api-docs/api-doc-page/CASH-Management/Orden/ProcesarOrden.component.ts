@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ProcesarOrdenComponent1750945331520 {
+export class ProcesarOrdenComponent1751987195840 {
   pageTitle        = 'Procesar Orden';
   description      = `Método para procesar una orden de pago.`;
   pubName    = 'BTCASHManagement.ProcesarOrden';
@@ -21,7 +21,7 @@ export class ProcesarOrdenComponent1750945331520 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden CASH.' }];
   outputData = [];
-  errors     = [{ Codigo: '1030750', Descripcion: 'No se encontro la orden a procesar.' }, { Codigo: '1030751', Descripcion: 'Estado de la orden no permite procesar.' }, { Codigo: '1030752', Descripcion: 'Fecha de proceso no corresponde a fecha actual.' }];
+  errors     = [{ Código: '1030750', Descripción: 'No se encontro la orden a procesar.' }, { Código: '1030751', Descripción: 'Estado de la orden no permite procesar.' }, { Código: '1030752', Descripción: 'Fecha de proceso no corresponde a fecha actual.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ProcesarOrdenComponent1750945331520 {
          <bts:ordenId>123</bts:ordenId>
       </bts:BTCASHManagement.ProcesarOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/odwsbt_BTCASHManagement_v1?ProcesarOrden\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ProcesarOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

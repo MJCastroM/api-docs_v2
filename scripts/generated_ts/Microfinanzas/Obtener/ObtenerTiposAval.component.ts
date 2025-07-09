@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposAvalComponent1750945333540 {
+export class ObtenerTiposAvalComponent1751987197866 {
   pageTitle        = 'Obtener Tipos Aval';
   description      = `Método para obtener una lista de los tipos de aval.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposAval';
@@ -38,7 +38,7 @@ export class ObtenerTiposAvalComponent1750945333540 {
          </bts:Btinreq>
       </bts:BTMicrofinanzas.ObtenerTiposAval>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerTiposAval \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerTiposAvalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

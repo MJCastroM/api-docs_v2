@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerImpuestosComponent1750945332152 {
+export class ObtenerImpuestosComponent1751987196486 {
   pageTitle        = 'Obtener Impuestos';
   description      = `Método para obtener un listado de los impuestos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerImpuestos';
@@ -38,7 +38,7 @@ export class ObtenerImpuestosComponent1750945332152 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerImpuestos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerImpuestos\' \
@@ -148,7 +148,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerImpuestosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

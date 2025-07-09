@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledePrestamoCanceladoComponent1750945334963 {
+export class ObtenerDetalledePrestamoCanceladoComponent1751987199424 {
   pageTitle        = 'Obtener Detalle de Préstamo Cancelado';
   description      = `Devuelve el detalle del préstamo cancelado indicado.`;
   pubName    = 'BTPrestamos.ObtenerDetallePrestamoCancelado';
@@ -21,7 +21,7 @@ export class ObtenerDetalledePrestamoCanceladoComponent1750945334963 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtPrestamo', Tipo: '[sBTPrestamoCancelado](#sbtprestamocancelado)', Comentarios: 'Datos del préstamo cancelado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'El préstamo no se encuentra cancelado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'El préstamo no se encuentra cancelado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetalledePrestamoCanceladoComponent1750945334963 {
          <bts:operacionUId>10118</bts:operacionUId>
       </bts:BTPrestamos.ObtenerDetallePrestamoCancelado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ObtenerDetallePrestamoCancelado\' \
@@ -169,7 +169,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetallePrestamoCanceladoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

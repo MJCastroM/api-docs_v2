@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDocumentoDigitalComponent1750945332760 {
+export class ActualizarDocumentoDigitalComponent1751987197074 {
   pageTitle        = 'Actualizar Documento Digital';
   description      = `Método para actualizar un documento digital para una cuenta vista.`;
   pubName    = 'BTCuentasVista.ActualizarDocumentoDigital';
@@ -23,7 +23,7 @@ export class ActualizarDocumentoDigitalComponent1750945332760 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador del documento digital.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del documento.' }, { Nombre: 'archivoCodificado', Tipo: 'String', Comentarios: 'Archivo a asociar codificado en Base 64.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento (en caso que corresponda).' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento (en caso que corresponda).' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de instancia de documento digital.' }, { Codigo: '30002', Descripcion: 'No se recibió nombre.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30021', Descripcion: 'No se recuperó el identificador para la operación recibida.' }, { Codigo: '30051', Descripcion: 'Debe ingresar la fecha de emisión del documento.' }, { Codigo: '30052', Descripcion: 'Debe ingresar la fecha de vencimiento del documento.' }, { Codigo: '30054', Descripcion: 'El documento ingresado no pertenece a la operación.' }, { Codigo: '30130', Descripcion: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Codigo: '31023', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Codigo: '31024', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de instancia de documento digital.' }, { Código: '30002', Descripción: 'No se recibió nombre.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30021', Descripción: 'No se recuperó el identificador para la operación recibida.' }, { Código: '30051', Descripción: 'Debe ingresar la fecha de emisión del documento.' }, { Código: '30052', Descripción: 'Debe ingresar la fecha de vencimiento del documento.' }, { Código: '30054', Descripción: 'El documento ingresado no pertenece a la operación.' }, { Código: '30130', Descripción: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Código: '31023', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Código: '31024', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class ActualizarDocumentoDigitalComponent1750945332760 {
          <bts:fechaEmision>2010-10-10</bts:fechaEmision>
       </bts:BTCuentasVista.ActualizarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ActualizarDocumentoDigital=\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ActualizarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

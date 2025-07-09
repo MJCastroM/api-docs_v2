@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaComponent1750945332731 {
+export class ObtenerEstadodeCuentaComponent1751987197046 {
   pageTitle        = 'Obtener Estado de Cuenta';
   description      = `Método para obtener el estado de cuenta de un producto de cuenta de ahorro.`;
   pubName    = 'BTCuentasDeAhorro.ObtenerEstadoDeCuenta';
@@ -21,7 +21,7 @@ export class ObtenerEstadodeCuentaComponent1750945332731 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'cantidadDias', Tipo: 'Int', Comentarios: 'Cantidad de días para atrás (Se puede parametrizar como parámetro Hidden para que el servicio siempre tome el mismo valor por defecto, o se puede dejar editable para que el usuario ingrese el valor).' }, { Nombre: 'cantidadMovimientos', Tipo: 'Int', Comentarios: 'Cantidad de movimientos (Se puede parametrizar como parámetro Hidden para que el servicio siempre tome el mismo valor por defecto, o se puede dejar editable para que el usuario ingrese el valor).' }];
   outputData = [{ Nombre: 'sdtEstadoDeCuenta', Tipo: '[sBTEstadoCuentaCV](#sbtestadocuentacv)', Comentarios: 'Datos de estado de cuenta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó operación para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta de ahorro.' }, { Codigo: '30004', Descripcion: 'No se recibió la cantidad de días.' }, { Codigo: '30005', Descripcion: 'No se recibió la cantidad de movimientos.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó operación para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a una cuenta de ahorro.' }, { Código: '30004', Descripción: 'No se recibió la cantidad de días.' }, { Código: '30005', Descripción: 'No se recibió la cantidad de movimientos.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerEstadodeCuentaComponent1750945332731 {
          <bts:operacionUId>281</bts:operacionUId>
       </bts:BTCuentasDeAhorro.ObtenerEstadoDeCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerEstadoDeCuenta=\' \
@@ -115,7 +115,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasDeAhorro.ObtenerEstadoDeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

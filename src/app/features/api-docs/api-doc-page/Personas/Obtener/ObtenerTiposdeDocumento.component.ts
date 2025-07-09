@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeDocumentoComponent1750945334522 {
+export class ObtenerTiposdeDocumentoComponent1751987198902 {
   pageTitle        = 'Obtener Tipos de Documento';
   description      = `Método para obtener un listado de los tipos de documento registrados.`;
   pubName    = 'BTPersonas.ObtenerTiposdeDocumento';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeDocumentoComponent1750945334522 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTipoDocumentos', Tipo: '[sBTTipoDocumento](#sbttipodocumento)', Comentarios: 'Listado de tipos de documento.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen Tipos de Documentos ingresados en el sistema.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen Tipos de Documentos ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposdeDocumentoComponent1750945334522 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerTiposdeDocumento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerTiposdeDocumento=\' \
@@ -124,7 +124,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerTiposdeDocumentoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

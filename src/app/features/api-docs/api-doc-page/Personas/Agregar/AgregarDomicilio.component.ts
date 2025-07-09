@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDomicilioComponent1750945334069 {
+export class AgregarDomicilioComponent1751987198442 {
   pageTitle        = 'Agregar Domicilio';
   description      = `Método para agregar domicilio a una persona.`;
   pubName    = 'BTPersonas.AgregarDomicilio';
@@ -21,7 +21,7 @@ export class AgregarDomicilioComponent1750945334069 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sbtDomicilio', Tipo: '[sBTDomicilioCompleto](#sbtdomiciliocompleto)', Comentarios: 'Datos de domicilio.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'El identificador de la persona no es correcto.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'El identificador de la persona no es correcto.' }];
 
   examples = {
     invocation: { xml: `
@@ -69,7 +69,7 @@ export class AgregarDomicilioComponent1750945334069 {
          </bts:domicilio>
       </bts:BTPersonas.AgregarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarDomicilio=\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

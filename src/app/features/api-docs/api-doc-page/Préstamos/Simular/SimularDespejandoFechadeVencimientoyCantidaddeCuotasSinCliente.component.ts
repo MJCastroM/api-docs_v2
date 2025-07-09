@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1750945335321 {
+export class SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteComponent1751987199843 {
   pageTitle        = 'Simular Despejando Fecha de Vencimiento y Cantidad de Cuotas Sin Cliente';
   description      = `Método para simular un préstamo sin cliente despejando fecha de vencimiento y cantidad de cuotas.`;
   pubName    = 'BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC';
@@ -21,7 +21,7 @@ export class SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteCompo
 
   inputData  = [{ Nombre: 'sdtPrestamoAlta', Tipo: '[sBTDatosDespejeSinCliente](#sbtdatosdespejesincliente)', Comentarios: 'Datos del préstamo a dar de alta.' }, { Nombre: 'modoDespeje', Tipo: 'Short', Comentarios: '[Hidden: Valor fijo \'4\' para este método].' }];
   outputData = [{ Nombre: 'sdtSimulacionPrestamo', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class SimularDespejandoFechadeVencimientoyCantidaddeCuotasSinClienteCompo
          </bts:sdtPrestamoAlta>
       </bts:BTPrestamos.SimularDespejandoFechaVtoCantCuotasSC>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularDespejandoFechaVtoCantCuotasSC\' \
@@ -154,7 +154,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.SimularDespejandoFechaVtoCantCuotasSCResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

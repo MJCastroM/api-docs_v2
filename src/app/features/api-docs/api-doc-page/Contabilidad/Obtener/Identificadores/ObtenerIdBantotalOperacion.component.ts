@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalOperacionComponent1750945332379 {
+export class ObtenerIdBantotalOperacionComponent1751987196723 {
   pageTitle        = 'Obtener Identificador Bantotal de Operación';
   description      = `Método para obtener la clave de identificación Bantotal de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIdBantotalOperacion';
@@ -21,7 +21,7 @@ export class ObtenerIdBantotalOperacionComponent1750945332379 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'empresa', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Identificador de módulo.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'cuenta', Tipo: 'Int', Comentarios: 'Número de cuenta.' }, { Nombre: 'operacionId', Tipo: 'Int', Comentarios: 'Identificador de operación.' }, { Nombre: 'subOperacionId', Tipo: 'Int', Comentarios: 'Identificador de sub operación.' }, { Nombre: 'tipoOperacionId', Tipo: 'Short', Comentarios: 'Identificador de tipo de operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No existe registro para el identificador de operación ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No existe registro para el identificador de operación ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIdBantotalOperacionComponent1750945332379 {
          <bts:operacionUId>3</bts:operacionUId>
       </bts:BTContabilidad.ObtenerIdBantotalOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalOperacion\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerIdBantotalOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

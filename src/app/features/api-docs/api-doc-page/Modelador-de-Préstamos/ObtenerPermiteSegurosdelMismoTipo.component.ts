@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPermiteSegurosdelMismoTipoComponent1750945333645 {
+export class ObtenerPermiteSegurosdelMismoTipoComponent1751987197927 {
   pageTitle        = 'Obtener Permite Seguros del Mismo Tipo';
   description      = `Método para obtener si un producto de préstamo permite seguros del mismo tipo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerPermiteSegurosDelMismoTipo';
@@ -21,7 +21,7 @@ export class ObtenerPermiteSegurosdelMismoTipoComponent1750945333645 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de producto.' }, { Nombre: 'parametro', Tipo: 'Short', Comentarios: '[Hidden: Valor \'362\' definido por defecto].' }];
   outputData = [{ Nombre: 'valor', Tipo: 'String', Comentarios: 'Permite o no seguros del mismo tipo.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Existe registro con la cuenta indicada.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPermiteSegurosdelMismoTipoComponent1750945333645 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerPermiteSegurosDelMismoTipo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -66,7 +66,7 @@ export class ObtenerPermiteSegurosdelMismoTipoComponent1750945333645 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerPermiteSegurosDelMismoTipoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

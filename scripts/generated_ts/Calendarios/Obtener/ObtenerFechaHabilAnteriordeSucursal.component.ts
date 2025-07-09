@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabilAnteriordeSucursalComponent1750945331314 {
+export class ObtenerFechaHabilAnteriordeSucursalComponent1751987195634 {
   pageTitle        = 'Obtener Fecha Hábil Anterior de Sucursal';
   description      = `Método para obtener la fecha hábil anterior a la fecha ingresada, para la sucursal recibida por parámetro.`;
   pubName    = 'BTCalendario.ObtenerFechaHabilAnteriorSucursal';
@@ -21,7 +21,7 @@ export class ObtenerFechaHabilAnteriordeSucursalComponent1750945331314 {
 
   inputData  = [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'sentido', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'D\' para este método].' }];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'Date', Comentarios: 'Fecha hábil anterior.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar fecha a consultar.' }, { Código: '30002', Descripción: 'Debe ingresar identificador de sucursal.' }, { Código: '40001', Descripción: 'La Sucursal no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerFechaHabilAnteriordeSucursalComponent1750945331314 {
          <bts:sucursalId>1000</bts:sucursalId>
       </bts:BTCalendarios.ObtenerFechaHabilAnteriorSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerFechaHabilAnteriorSucursal\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerFechaHabilAnteriorSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

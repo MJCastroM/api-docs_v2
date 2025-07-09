@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegurosAPagarComponent1750945335527 {
+export class ObtenerSegurosAPagarComponent1751987200106 {
   pageTitle        = 'Obtener Seguros a Pagar';
   description      = `Método para obtener un listado de los seguros a pagar.`;
   pubName    = 'BTSegurosVoluntarios.ObtenerSegurosAPagar';
@@ -21,7 +21,7 @@ export class ObtenerSegurosAPagarComponent1750945335527 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [{ Nombre: 'sdtSegurosAPagar', Tipo: '[sBTProductosSeguro](#sbtproductosseguro)', Comentarios: 'Listado de seguros a pagar.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador de cuenta cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }];
+  errors     = [{ Código: '30002', Descripción: 'No se recibió el identificador de cuenta cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerSegurosAPagarComponent1750945335527 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTSegurosVoluntarios.ObtenerSegurosAPagar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSegurosVoluntarios?ObtenerSegurosAPagar\' \
@@ -130,7 +130,7 @@ curl -X POST \
          </Btoutreq>
       </BTSegurosVoluntarios.ObtenerSegurosAPagarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

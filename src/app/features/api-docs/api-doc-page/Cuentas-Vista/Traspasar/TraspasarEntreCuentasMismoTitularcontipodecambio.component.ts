@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750945332971 {
+export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1751987197327 {
   pageTitle        = 'Traspasar Entre Cuentas Mismo Titular (con tipo de cambio)';
   description      = `Método para realizar un traspaso con cotización entre cuentas cuyo titular sea la misma persona.`;
   pubName    = 'BTCuentasVista.TraspasarMismoTitularConCotizacion';
@@ -35,7 +35,7 @@ export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750945332
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de cliente.' }, { Nombre: 'sdtTraspaso', Tipo: '[sBTTraspaso](#sbttraspaso)', Comentarios: 'Datos del traspaso.' }, { Nombre: 'tipoDeCambio', Tipo: 'Double', Comentarios: 'Cotización.' }];
   outputData = [{ Nombre: 'sdtResultadoTraspaso', Tipo: '[sBTResultadoTraspasoDatos](#sbtresultadotraspasodatos)', Comentarios: 'Resultado del traspaso.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30005', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30007', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '30010', Descripcion: 'Debe ingresar tipo de cambio a aplicar.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador.' }, { Código: '30003', Descripción: 'No se recibió el identificador único de operación de origen.' }, { Código: '30004', Descripción: 'No se recibió el identificador único de operación de destino.' }, { Código: '30005', Descripción: 'Debe ingresar importe.' }, { Código: '30006', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30007', Descripción: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Código: '30008', Descripción: 'La operación origen no pertenece al cliente.' }, { Código: '30009', Descripción: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Código: '30010', Descripción: 'Debe ingresar tipo de cambio a aplicar.' }, { Código: '31003', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -61,7 +61,7 @@ export class TraspasarEntreCuentasMismoTitularcontipodecambioComponent1750945332
             <bts:tipoDeCambio>31.5</bts:tipoDeCambio>  
         </bts:BTCuentasVista.TraspasarMismoTitularConCotizacion>  
     </soapenv:Body> 
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?TraspasarMismoTitularConCotizacion \ 
@@ -117,7 +117,7 @@ curl -X POST \
             </Btoutreq>       
         </BTCuentasVista.TraspasarMismoTitularConCotizacionResponse> 
     </SOAP-ENV:Body>  
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
     "Btinreq": { 

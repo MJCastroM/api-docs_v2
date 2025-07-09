@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAcuerdosComponent1750945332663 {
+export class ObtenerAcuerdosComponent1751987196992 {
   pageTitle        = 'Obtener Acuerdos';
   description      = `Método para obtener los acuerdos de sobregiro de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerAcuerdos';
@@ -21,7 +21,7 @@ export class ObtenerAcuerdosComponent1750945332663 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [{ Nombre: 'sdtAcuerdosCliente', Tipo: '[sBTAcuerdoClienteCC](#sbtacuerdoclientecc)', Comentarios: 'Listado de acuerdos del cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30101', Descripcion: 'No se recupero la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30004', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30101', Descripción: 'No se recupero la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerAcuerdosComponent1750945332663 {
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTCuentasCorrientes.ObtenerAcuerdos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerAcuerdos=\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerAcuerdosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

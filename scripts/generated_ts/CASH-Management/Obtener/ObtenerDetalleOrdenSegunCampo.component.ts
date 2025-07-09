@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOrdenSegunCampoComponent1750945331453 {
+export class ObtenerDetalleOrdenSegunCampoComponent1751987195754 {
   pageTitle        = 'Obtener Detalle de Orden Según Campo';
   description      = `Método para obtener la información de las líneas del detalle de pago para la orden que coincida con el campo/valor recibido.`;
   pubName    = 'BTCASHManagement.ObtenerDetalleOrdenSegunCampo';
@@ -21,7 +21,7 @@ export class ObtenerDetalleOrdenSegunCampoComponent1750945331453 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del Contrato CASH del Cliente.' }, { Nombre: 'servicioId', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'sdtValorCampoBusqueda', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Valor del campo CASH a buscar.' }];
   outputData = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden CASH.' }, { Nombre: 'numeroLineaOrden', Tipo: 'Int', Comentarios: 'Número de línea de orden CASH.' }, { Nombre: 'cuentaDebito', Tipo: 'Long', Comentarios: 'Operación de débito.' }, { Nombre: 'cantidadLineas', Tipo: 'Int', Comentarios: 'Cantidad de lineas.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe total.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del pago o cobro.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha del pago.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado.' }, { Nombre: 'erroresPago', Tipo: 'String', Comentarios: 'Lista de mensajes de error del cabezal de pago.' }, { Nombre: 'detallePagos', Tipo: '[sBTDetallePago](#sbtdetallepago)', Comentarios: 'Listado del detalle de pago.' }];
-  errors     = [{ Codigo: '1030754', Descripcion: 'El campo de búsqueda no existe en el servicio recibido.' }, { Codigo: '1030755', Descripcion: 'No se encontró la orden para el campo/valor recibido.' }];
+  errors     = [{ Código: '1030754', Descripción: 'El campo de búsqueda no existe en el servicio recibido.' }, { Código: '1030755', Descripción: 'No se encontró la orden para el campo/valor recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerDetalleOrdenSegunCampoComponent1750945331453 {
 			</bts:sdtValorCampoBusqueda>
 		</bts:BTCASHManagement.ObtenerDetalleOrdenSegunCampo>
 	</soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDetalleOrdenSegunCampo=\' \
@@ -150,7 +150,7 @@ curl -X POST \
 			</Btoutreq>
 		</BTCASHManagement.ObtenerDetalleOrdenSegunCampoResponse>
 	</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

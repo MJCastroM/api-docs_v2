@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarBeneficiariosComponent1750945331396 {
+export class CargarBeneficiariosComponent1751987195701 {
   pageTitle        = 'Cargar Beneficiarios';
   description      = `Método para cargar un archivo con los beneficiarios de los pagos.`;
   pubName    = 'BTCASHManagement.CargarBeneficiarios';
@@ -21,7 +21,7 @@ export class CargarBeneficiariosComponent1750945331396 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del contrato CASH del cliente.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio de pago CASH.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'agendaId', Tipo: 'Short', Comentarios: 'Identificador del tipo de agenda.' }, { Nombre: 'nomArchBeneficiarios', Tipo: 'String', Comentarios: 'Nombre del Archivo de beneficiarios a subir.' }];
   outputData = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo subido.' }, { Nombre: 'lineasCant', Tipo: 'Int', Comentarios: 'Cantidad de líneas del archivo recibido.' }];
-  errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030713', Descripcion: 'El contrato consultado no corresponde a la cuenta recibida.' }, { Codigo: '1030770', Descripcion: 'No se recupero información para la cuenta recibida.' }, { Codigo: '1030774', Descripcion: 'No se recibió Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor.' }, { Codigo: '1030775', Descripcion: 'No se identifico servicio para la Agenda.' }, { Codigo: '1030776', Descripcion: 'No se identifico la Agenda para la cual se realiza la Carga.' }, { Codigo: '1030702', Descripcion: 'El archivo esta vacío.' }, { Codigo: '1030703', Descripcion: 'No hay información en el archivo.' }, { Codigo: '1030707', Descripcion: 'Error al abrir el archivo.' }];
+  errors     = [{ Código: '1030701', Descripción: 'El Servicio no existe.' }, { Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030713', Descripción: 'El contrato consultado no corresponde a la cuenta recibida.' }, { Código: '1030770', Descripción: 'No se recupero información para la cuenta recibida.' }, { Código: '1030774', Descripción: 'No se recibió Identificador de Cliente ni de Contrato. Por lo menos uno debe tener valor.' }, { Código: '1030775', Descripción: 'No se identifico servicio para la Agenda.' }, { Código: '1030776', Descripción: 'No se identifico la Agenda para la cual se realiza la Carga.' }, { Código: '1030702', Descripción: 'El archivo esta vacío.' }, { Código: '1030703', Descripción: 'No hay información en el archivo.' }, { Código: '1030707', Descripción: 'Error al abrir el archivo.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class CargarBeneficiariosComponent1750945331396 {
          <bts:nomArchBeneficiarios>Agenda_8_240.xls</bts:nomArchBeneficiarios>
       </bts:BTCASHManagement.CargarBeneficiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?CargarBeneficiarios=\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.CargarBeneficiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarArchivoComponent1750945331366 {
+export class CargarArchivoComponent1751987195679 {
   pageTitle        = 'Cargar Archivo';
   description      = `Método para realizar la carga de un archivo.`;
   pubName    = 'BTCASHManagement.CargarArchivo';
@@ -21,7 +21,7 @@ export class CargarArchivoComponent1750945331366 {
 
   inputData  = [{ Nombre: 'contrato', Tipo: 'Int', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'archivo', Tipo: 'String', Comentarios: 'Nombre del archivo a subir.' }];
   outputData = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del archivo.' }, { Nombre: 'cantidadLineas', Tipo: 'Int', Comentarios: 'Cantidad de líneas del archivo.' }];
-  errors     = [{ Codigo: '1030701', Descripcion: 'El servicio no existe.' }, { Codigo: '1030702', Descripcion: 'El archivo esta vacío.' }, { Codigo: '1030703', Descripcion: 'No hay informacion en el archivo.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030706', Descripcion: 'El contrato no esta activo.' }, { Codigo: '1030707', Descripcion: 'Error al abrir el archivo.' }, { Codigo: '1030710', Descripcion: 'Error interno al procesar.' }, { Codigo: '1030715', Descripcion: 'No se procesa, este archivo ya fue recibido y procesado.' }, { Codigo: '1030720', Descripcion: 'Error procesando el archivo. Ver detalle.' }];
+  errors     = [{ Código: '1030701', Descripción: 'El servicio no existe.' }, { Código: '1030702', Descripción: 'El archivo esta vacío.' }, { Código: '1030703', Descripción: 'No hay informacion en el archivo.' }, { Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030706', Descripción: 'El contrato no esta activo.' }, { Código: '1030707', Descripción: 'Error al abrir el archivo.' }, { Código: '1030710', Descripción: 'Error interno al procesar.' }, { Código: '1030715', Descripción: 'No se procesa, este archivo ya fue recibido y procesado.' }, { Código: '1030720', Descripción: 'Error procesando el archivo. Ver detalle.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class CargarArchivoComponent1750945331366 {
          <bts:archivo>nomina201903.txt</bts:archivo>
       </bts:BTCASHManagement.CargarArchivo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?CargarArchivo=\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.CargarArchivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq":{

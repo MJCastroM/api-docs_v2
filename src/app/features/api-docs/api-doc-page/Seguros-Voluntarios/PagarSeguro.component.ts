@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class PagarSeguroComponent1750945335533 {
+export class PagarSeguroComponent1751987200114 {
   pageTitle        = 'Pagar Seguro';
   description      = `Método para pagar un seguro.`;
   pubName    = 'BTSegurosVoluntarios.PagarSeguro';
@@ -21,7 +21,7 @@ export class PagarSeguroComponent1750945335533 {
 
   inputData  = [{ Nombre: 'seguroUId', Tipo: 'Long', Comentarios: 'Identificador único del seguro.' }, { Nombre: 'montoPago', Tipo: 'Double', Comentarios: 'Monto a pagar.' }, { Nombre: 'operacionUIdCobro', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador de operación del seguro.' }, { Codigo: '30003', Descripcion: 'Se debe ingresar un monto.' }, { Codigo: '30004', Descripcion: 'No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la clave de operación de cobro para el identificador: [Número de Identificador].' }, { Codigo: '50002', Descripcion: 'La operación no existe.' }, { Codigo: '50003', Descripcion: 'La operación de cobro no existe.' }, { Codigo: '50005', Descripcion: 'Atención: No se pudo obtener el numerador para la transacción.' }, { Codigo: '50006', Descripcion: 'La operación esta cancelada.' }, { Codigo: '50008', Descripcion: 'La operación de cobro esta cancelada.' }, { Codigo: '50010', Descripcion: 'El monto ingresado supera al monto total de la deuda.' }];
+  errors     = [{ Código: '30002', Descripción: 'No se recibió el identificador de operación del seguro.' }, { Código: '30003', Descripción: 'Se debe ingresar un monto.' }, { Código: '30004', Descripción: 'No se recuperó la clave de operación para el identificador del seguro: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recuperó la clave de operación de cobro para el identificador: [Número de Identificador].' }, { Código: '50002', Descripción: 'La operación no existe.' }, { Código: '50003', Descripción: 'La operación de cobro no existe.' }, { Código: '50005', Descripción: 'Atención: No se pudo obtener el numerador para la transacción.' }, { Código: '50006', Descripción: 'La operación esta cancelada.' }, { Código: '50008', Descripción: 'La operación de cobro esta cancelada.' }, { Código: '50010', Descripción: 'El monto ingresado supera al monto total de la deuda.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class PagarSeguroComponent1750945335533 {
          <bts:operacionUIdCobro>22</bts:operacionUIdCobro>
       </bts:BTSegurosVoluntarios.PagarSeguro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSegurosVoluntarios?ObtenerSeguros\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTSegurosVoluntarios.PagarSeguroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

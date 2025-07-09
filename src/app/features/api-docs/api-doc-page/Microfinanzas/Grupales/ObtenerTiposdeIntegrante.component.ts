@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeIntegranteComponent1750945333467 {
+export class ObtenerTiposdeIntegranteComponent1751987197786 {
   pageTitle        = 'Obtener Tipos de Integrante';
   description      = `Método para obtener los tipos de integrante correspondientes a un tipo de grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerTiposDeIntegrante';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeIntegranteComponent1750945333467 {
 
   inputData  = [{ Nombre: 'tipoGrupoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de grupo.' }];
   outputData = [{ Nombre: 'sdtTiposIntegrantesGrupo', Tipo: '[sBTTipoIntegranteGrupo](#sbttipointegrantegrupo)', Comentarios: 'Listado de tipos de integrantes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No existen Tipos de Grupo ingresados en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No existen Tipos de Grupo ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTiposdeIntegranteComponent1750945333467 {
          <bts:tipoGrupoId>1</bts:tipoGrupoId>
       </bts:BTMicrofinanzas.ObtenerTiposDeIntegrante>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerTiposDeIntegrante=\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerTiposDeIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

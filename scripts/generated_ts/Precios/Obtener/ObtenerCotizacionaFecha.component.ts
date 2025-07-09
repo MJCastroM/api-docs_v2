@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCotizacionaFechaComponent1750945334691 {
+export class ObtenerCotizacionaFechaComponent1751987199076 {
   pageTitle        = 'Obtener Cotización a Fecha';
   description      = `Método para obtener un listado de las cotizaciones de las monedas ingresadas.`;
   pubName    = 'BTPrecios.ObtenerCotizacionAFecha';
@@ -21,7 +21,7 @@ export class ObtenerCotizacionaFechaComponent1750945334691 {
 
   inputData  = [{ Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda. [Si es vacío devuelve las cotizaciones de todas las monedas].' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de cotización. [Si es vacía devuelve cotización al día de hoy].' }];
   outputData = [{ Nombre: 'sdtCotizacion', Tipo: '[sBTCotizacion](#sbtcotizacion)', Comentarios: 'Listado de cotizaciones.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Codigo: '40002', Descripcion: 'No se recuperó moneda para el identificador ingresado.' }, { Codigo: '40003', Descripcion: 'No se recuperaron monedas.' }];
+  errors     = [{ Código: '40001', Descripción: 'El identificador de moneda se corresponde con la moneda nacional.' }, { Código: '40002', Descripción: 'No se recuperó moneda para el identificador ingresado.' }, { Código: '40003', Descripción: 'No se recuperaron monedas.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCotizacionaFechaComponent1750945334691 {
          <bts:fecha></bts:fecha>  
       </bts:BTPrecios.ObtenerCotizacionAFecha> 
    </soapenv:Body> 
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \ 
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerCotizacionAFecha\' \ 
@@ -112,7 +112,7 @@ curl -X POST \
 			 </Btoutreq> 
         </BTPrecios.ObtenerCotizacionAFechaResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

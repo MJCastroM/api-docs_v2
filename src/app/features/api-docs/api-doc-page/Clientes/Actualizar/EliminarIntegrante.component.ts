@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegranteComponent1750945331720 {
+export class EliminarIntegranteComponent1751987196094 {
   pageTitle        = 'Eliminar Integrante';
   description      = `Método para eliminar un integrante de una cuenta cliente.`;
   pubName    = 'BTClientes.EliminarIntegrantes';
@@ -21,7 +21,7 @@ export class EliminarIntegranteComponent1750945331720 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30003', Descripcion: 'No existe cuenta para el identificador único: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'No existe persona para el identificador único: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'La persona ingresada no integra la cuenta.' }, { Codigo: '40002', Descripcion: 'No se puede realizar esta acción para este tipo de titular.' }, { Codigo: '40003', Descripcion: 'No se pueden realizar cambios de integrantes cuando la cuenta cliente tiene productos activos.' }, { Codigo: '40004', Descripcion: 'No se puede eliminar el titular representativo.' }, { Codigo: '40005', Descripcion: 'No se puede eliminar el representante legal.' }, { Codigo: '40006', Descripcion: 'Error: La Autorización a sido negada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30003', Descripción: 'No existe cuenta para el identificador único: [Número de identificador].' }, { Código: '30004', Descripción: 'No existe persona para el identificador único: [Número de identificador].' }, { Código: '40001', Descripción: 'La persona ingresada no integra la cuenta.' }, { Código: '40002', Descripción: 'No se puede realizar esta acción para este tipo de titular.' }, { Código: '40003', Descripción: 'No se pueden realizar cambios de integrantes cuando la cuenta cliente tiene productos activos.' }, { Código: '40004', Descripción: 'No se puede eliminar el titular representativo.' }, { Código: '40005', Descripción: 'No se puede eliminar el representante legal.' }, { Código: '40006', Descripción: 'Error: La Autorización a sido negada.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarIntegranteComponent1750945331720 {
       <bts:clienteUId>1</bts:clienteUId>
       <bts:personaUId>853</bts:personaUId>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?EliminarIntegrante\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.EliminarIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

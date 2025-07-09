@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadoDeOperacionComponent1750945332828 {
+export class ObtenerEstadoDeOperacionComponent1751987197156 {
   pageTitle        = 'Obtener Estado De Operación';
   description      = `Método para obtener el estado de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerEstadoDeOperacion';
@@ -21,7 +21,7 @@ export class ObtenerEstadoDeOperacionComponent1750945332828 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtEstadoOperacion', Tipo: '[sBTEstadoOperacion](#sbtestadooperacion)', Comentarios: 'Listado de estados.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de la operación.' }, { Codigo: '30002', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30003', Descripcion: 'No se recuperó la operación para el identificador ingresado.' }, { Codigo: '30004', Descripcion: 'No fue posible recuperar el estado para la operación ingresada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de la operación.' }, { Código: '30002', Descripción: 'La operación ingresada no corresponde a una cuenta vista.' }, { Código: '30003', Descripción: 'No se recuperó la operación para el identificador ingresado.' }, { Código: '30004', Descripción: 'No fue posible recuperar el estado para la operación ingresada.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerEstadoDeOperacionComponent1750945332828 {
          <bts:operacionUId>210</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerEstadoDeOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerEstadoDeOperacion\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerEstadoDeOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarStopDebitComponent1750945331160 {
+export class EliminarStopDebitComponent1751987195471 {
   pageTitle        = 'Eliminar Stop Debit';
   description      = `Método para eliminar un stop debit.`;
   pubName    = 'BTSNP.EliminarStopDebit';
@@ -21,7 +21,7 @@ export class EliminarStopDebitComponent1750945331160 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'correlativo', Tipo: 'Short', Comentarios: 'Correlativo del stop debit.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió correlativo del Stop Debit.' }, { Codigo: '40001', Descripcion: 'El Stop Debit ya está dado de baja.' }, { Codigo: '40002', Descripcion: 'El Stop Debit no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'No se recibió correlativo del Stop Debit.' }, { Código: '40001', Descripción: 'El Stop Debit ya está dado de baja.' }, { Código: '40002', Descripción: 'El Stop Debit no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarStopDebitComponent1750945331160 {
          <bts:correlativo>4</bts:correlativo>
       </bts:BTSNP.EliminarStopDebit>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?SolicitarBajaDeAdhesion\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.EliminarStopDebitResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

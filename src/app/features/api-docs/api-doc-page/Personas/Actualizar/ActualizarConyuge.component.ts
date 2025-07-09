@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarConyugeComponent1750945333944 {
+export class ActualizarConyugeComponent1751987198281 {
   pageTitle        = 'Actualizar Cónyuge';
   description      = `Método para actualizar el cónyuge de una persona.`;
   pubName    = 'BTPersonas.ActualizarConyuge';
@@ -21,7 +21,7 @@ export class ActualizarConyugeComponent1750945333944 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'conyugeUId', Tipo: 'Long', Comentarios: 'Identificador único del cónyuge de la persona.' }, { Nombre: 'estadoCivilId', Tipo: 'String', Comentarios: 'Identificador del estado civil de la persona.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cónyuge de la persona.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '32003', Descripcion: 'Error en identificador del cónyuge de la persona: No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador del cónyuge de la persona.' }, { Código: '31003', Descripción: 'No existe registro para el identificador único.' }, { Código: '32003', Descripción: 'Error en identificador del cónyuge de la persona: No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ActualizarConyugeComponent1750945333944 {
          <bts:estadoCivilId>2</bts:estadoCivilId>
       </bts:BTPersonas.ActualizarConyuge>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarConyuge\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalProductoComponent1750945332386 {
+export class ObtenerIdBantotalProductoComponent1751987196731 {
   pageTitle        = 'Obtener Identificador Bantotal de Producto';
   description      = `Método para obtener la clave de identificación Bantotal de un producto.`;
   pubName    = 'BTContabilidad.ObtenerIdBantotalProducto';
@@ -21,7 +21,7 @@ export class ObtenerIdBantotalProductoComponent1750945332386 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }];
   outputData = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Módulo Bantotal.' }, { Nombre: 'tipoOperacionBT', Tipo: 'Short', Comentarios: 'Tipo de operación Bantotal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió productoUId.' }, { Codigo: '40001', Descripcion: 'No existe una empresa con los datos ingresados.' }, { Codigo: '40002', Descripcion: 'No se pudo resolver la empresa del usuario.' }, { Codigo: '40003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió productoUId.' }, { Código: '40001', Descripción: 'No existe una empresa con los datos ingresados.' }, { Código: '40002', Descripción: 'No se pudo resolver la empresa del usuario.' }, { Código: '40003', Descripción: 'No existe registro para el identificador único.' }, { Código: '40004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIdBantotalProductoComponent1750945332386 {
          <bts:productoUId>187</bts:productoUId>
       </bts:BTContabilidad.ObtenerIdBantotalProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalProducto\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerIdBantotalProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
         "Btinreq": {

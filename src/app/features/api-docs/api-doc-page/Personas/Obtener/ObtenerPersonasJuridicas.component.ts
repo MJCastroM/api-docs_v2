@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasJuridicasComponent1750945334465 {
+export class ObtenerPersonasJuridicasComponent1751987198830 {
   pageTitle        = 'Obtener Personas Jurídicas';
   description      = `Método para obtener un listado de personas jurídicas (10 máximo), dada una razón social.`;
   pubName    = 'BTPersonas.ObtenerPersonasJuridicas';
@@ -21,7 +21,7 @@ export class ObtenerPersonasJuridicasComponent1750945334465 {
 
   inputData  = [{ Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razón social.' }];
   outputData = [{ Nombre: 'sdtPersonasJuridicas', Tipo: '[sBTPersonaJuridica](#sbtpersonajuridica)', Comentarios: 'Listado de personas jurídicas.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Campo Razón Social requerido.' }, { Codigo: '40001', Descripcion: 'No se encontró ninguna persona jurídica con el patrón de búsqueda ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'Campo Razón Social requerido.' }, { Código: '40001', Descripción: 'No se encontró ninguna persona jurídica con el patrón de búsqueda ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPersonasJuridicasComponent1750945334465 {
          <bts:razonSocial>BANCO</bts:razonSocial>
       </bts:BTPersonas.ObtenerPersonasJuridicas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerPersonasJuridicas\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerPersonasJuridicasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

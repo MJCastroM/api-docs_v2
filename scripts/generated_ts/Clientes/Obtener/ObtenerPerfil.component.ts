@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilComponent1750945331916 {
+export class ObtenerPerfilComponent1751987196313 {
   pageTitle        = 'Obtener Perfil';
   description      = `Método para obtener los datos de la persona titular de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerPerfil';
@@ -21,7 +21,7 @@ export class ObtenerPerfilComponent1750945331916 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sCTPersona', Tipo: '[sCTPersona](#sctpersona)', Comentarios: 'Datos de cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPerfilComponent1750945331916 {
          <bts:clienteUId>181</bts:clienteUId>
       </bts:BTClientes.Obtener>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPerfil=\' \
@@ -118,7 +118,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCancelacionTotalComponent1750945334930 {
+export class ObtenerDetalledeCancelacionTotalComponent1751987199373 {
   pageTitle        = 'Obtener Detalle de Cancelación Total';
   description      = `Método para obtener el detalle de la cancelación total de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerDetalleCancelacionTotal';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeCancelacionTotalComponent1750945334930 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha.' }, { Nombre: 'perdonaIntereses', Tipo: 'String', Comentarios: '¿Perdona intereses? (S/N).' }, { Nombre: 'cancelacionTotal', Tipo: 'String', Comentarios: '¿Es cancelación total? (S/N).' }, { Nombre: 'expresadoEn', Tipo: 'String', Comentarios: '[M-Moneda / E-Especie].' }];
   outputData = [{ Nombre: 'sdtConceptosPrestamo', Tipo: '[sBTConceptosPrestamo](#sbtconceptosprestamo)', Comentarios: 'Datos de la cancelación total del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el modo expresado.' }, { Codigo: '30004', Descripcion: 'El valor de expresadoEn no es correcto.' }, { Codigo: '30005', Descripcion: 'No se recibió si es cancelacion total.' }, { Codigo: '30006', Descripcion: 'El valor de cancelacionTotal no es correcto.' }, { Codigo: '30007', Descripcion: 'No se recibió si se perdona intereses.' }, { Codigo: '30008', Descripcion: 'El valor de perdonaIntereses no es correcto.' }, { Codigo: '40001', Descripcion: 'La Fecha para Consultas es anterior a la de la Operación.' }, { Codigo: '40002', Descripcion: 'La Operación no es válida para la Solicitud realizada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó préstamo para el identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió el modo expresado.' }, { Código: '30004', Descripción: 'El valor de expresadoEn no es correcto.' }, { Código: '30005', Descripción: 'No se recibió si es cancelacion total.' }, { Código: '30006', Descripción: 'El valor de cancelacionTotal no es correcto.' }, { Código: '30007', Descripción: 'No se recibió si se perdona intereses.' }, { Código: '30008', Descripción: 'El valor de perdonaIntereses no es correcto.' }, { Código: '40001', Descripción: 'La Fecha para Consultas es anterior a la de la Operación.' }, { Código: '40002', Descripción: 'La Operación no es válida para la Solicitud realizada.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ObtenerDetalledeCancelacionTotalComponent1750945334930 {
          <bts:expresadoEn>M</bts:expresadoEn>
       </bts:BTPrestamos.ObtenerDetalleCancelacionTotal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleCancelacionTotal\' \
@@ -126,7 +126,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleCancelacionTotalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

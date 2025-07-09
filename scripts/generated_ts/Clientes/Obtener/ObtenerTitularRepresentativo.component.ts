@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitularRepresentativoComponent1750945332064 {
+export class ObtenerTitularRepresentativoComponent1751987196439 {
   pageTitle        = 'Obtener Titular Representativo';
   description      = `Método para obtener el identificador del titular representativo de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerTitularRepresentativo';
@@ -21,7 +21,7 @@ export class ObtenerTitularRepresentativoComponent1750945332064 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona titular representativa.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30011', Descripcion: 'No existe el cliente seleccionado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '30011', Descripción: 'No existe el cliente seleccionado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTitularRepresentativoComponent1750945332064 {
          <bts:clienteUId>21</bts:clienteUId>
       </bts:BTClientes.ObtenerTitularRepresentativo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerTitularRepresentativo=\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerTitularRepresentativoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosHabilitadosComponent1750945331056 {
+export class ObtenerPlazosHabilitadosComponent1751987195399 {
   pageTitle        = 'Obtener Plazos Habilitados';
   description      = `Método para obtener un listado de plazos habilitados para los casos que el alta de ahorro programado se realice mediante selección de plazo como lista de valores.`;
   pubName    = 'BTAhorroProgramado.ObtenerPlazosHabilitados';
@@ -21,7 +21,7 @@ export class ObtenerPlazosHabilitadosComponent1750945331056 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }];
   outputData = [{ Nombre: 'sdtPlazos', Tipo: '[sBTPlazo](#sbtplazo)', Comentarios: 'Listado de plazos habilitados.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del producto.' }, { Codigo: '30002', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Error de configuración: No se definió listado de plazos.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del producto.' }, { Código: '30002', Descripción: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'Error de configuración: No se definió listado de plazos.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPlazosHabilitadosComponent1750945331056 {
          <bts:productoUId>41</bts:productoUId>
       </bts:BTAhorroProgramado.ObtenerPlazosHabilitados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerPlazosHabilitados\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerPlazosHabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

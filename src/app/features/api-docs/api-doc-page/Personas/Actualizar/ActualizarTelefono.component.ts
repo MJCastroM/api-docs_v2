@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarTelefonoComponent1750945334017 {
+export class ActualizarTelefonoComponent1751987198370 {
   pageTitle        = 'Actualizar Teléfono';
   description      = `Método para actualizar el teléfono de una persona.`;
   pubName    = 'BTPersonas.ActualizarTelefono';
@@ -21,7 +21,7 @@ export class ActualizarTelefonoComponent1750945334017 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'numeroTelefono', Tipo: 'String', Comentarios: 'Número de teléfono.' }, { Nombre: 'tipoTelefonoId', Tipo: 'Short', Comentarios: 'Identificador de tipo de teléfono.' }, { Nombre: 'domicilioId', Tipo: 'Byte', Comentarios: 'Identificador de tipo de domicilio.' }, { Nombre: 'telefonoId', Tipo: 'Byte', Comentarios: 'Identificador correlativo de teléfono.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30002', Descripcion: 'Debe ingresar al menos un teléfono.' }, { Codigo: '30005', Descripcion: 'No se recibió el tipo del telefono.' }, { Codigo: '30006', Descripcion: 'No se recibió el código del domicilio.' }, { Codigo: '40002', Descripcion: 'No existe persona con los datos ingresados.' }, { Codigo: '40003', Descripcion: 'El número del teléfono es incorrecto (es muy corto).' }, { Codigo: '40004', Descripcion: 'El número del teléfono es incorrecto (es muy largo).' }, { Codigo: '40005', Descripcion: 'El número del teléfono no acepta caracteres.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30002', Descripción: 'Debe ingresar al menos un teléfono.' }, { Código: '30005', Descripción: 'No se recibió el tipo del telefono.' }, { Código: '30006', Descripción: 'No se recibió el código del domicilio.' }, { Código: '40002', Descripción: 'No existe persona con los datos ingresados.' }, { Código: '40003', Descripción: 'El número del teléfono es incorrecto (es muy corto).' }, { Código: '40004', Descripción: 'El número del teléfono es incorrecto (es muy largo).' }, { Código: '40005', Descripción: 'El número del teléfono no acepta caracteres.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ActualizarTelefonoComponent1750945334017 {
          <bts:telefonoId>1</bts:telefonoId>
       </bts:BTPersonas.ActualizarTelefono>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarTelefono\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarTelefonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": {

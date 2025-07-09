@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSegmentosComponent1750945332034 {
+export class ObtenerSegmentosComponent1751987196417 {
   pageTitle        = 'Obtener Segmentos';
   description      = `Método para obtener un listado de los segmentos ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerSegmentos';
@@ -38,7 +38,7 @@ export class ObtenerSegmentosComponent1750945332034 {
          </bts:Btinreq>
       </bts:BTClientes.ObtenerSegmentos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerSegmentos\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerSegmentosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

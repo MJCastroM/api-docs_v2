@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadodeCuentaComponent1750945331043 {
+export class ObtenerEstadodeCuentaComponent1751987195381 {
   pageTitle        = 'Obtener Estado de Cuenta';
   description      = `Método para obtener el estado de cuenta del ahorro.`;
   pubName    = 'BTAhorroProgramado.ObtenerEstadoDeCuenta';
@@ -21,7 +21,7 @@ export class ObtenerEstadodeCuentaComponent1750945331043 {
 
   inputData  = [{ Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador único del ahorro.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la cual se emite el estado de cuenta' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la cual se emite el estado de cuenta' }];
   outputData = [{ Nombre: 'sdtEstadoCuentaAhorro', Tipo: '[sBTEstadoCuentaAhorro](#sbtestadocuentaahorro)', Comentarios: 'Estado de cuenta del ahorro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de la operación.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de la operación.' }, { Código: '30011', Descripción: 'No se recupero la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerEstadodeCuentaComponent1750945331043 {
          <bts:fechaHasta>2017-11-30</bts:fechaHasta>
       </bts:BTAhorroProgramado.ObtenerEstadoDeCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerEstadoDeCuenta=\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerEstadoDeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

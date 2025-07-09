@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750945332508 {
+export class ObtenerProductosComponent1751987196876 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para obtener un listado de los productos de cuentas bolsillo habilitados.`;
   pubName    = 'BTCuentasBolsillo.ObtenerProductos';
@@ -38,7 +38,7 @@ export class ObtenerProductosComponent1750945332508 {
          </bts:Btinreq>
       </bts:BTCuentasBolsillo.ObtenerProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerProductos\' \
@@ -103,7 +103,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.ObtenerProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

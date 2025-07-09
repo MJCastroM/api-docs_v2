@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesComponent1750945331893 {
+export class ObtenerIntegrantesComponent1751987196286 {
   pageTitle        = 'Obtener Integrantes';
   description      = `Método para obtener los integrantes de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerIntegrantes';
@@ -21,7 +21,7 @@ export class ObtenerIntegrantesComponent1750945331893 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtIntegrantes', Tipo: '[sBTIntegrante](#sbtintegrante)', Comentarios: 'Datos de integrantes del cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: ?' }, { Codigo: '30011', Descripcion: 'No existe el cliente seleccionado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador de cliente: ?' }, { Código: '30011', Descripción: 'No existe el cliente seleccionado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIntegrantesComponent1750945331893 {
          <bts:clienteUId>21</bts:clienteUId>
       </bts:BTClientes.ObtenerIntegrantes>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerIntegrantes=\' \
   -H \'cache-control: no-cache\' \
@@ -92,7 +92,7 @@ export class ObtenerIntegrantesComponent1750945331893 {
          </Btoutreq>
       </BTClientes.ObtenerIntegrantesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

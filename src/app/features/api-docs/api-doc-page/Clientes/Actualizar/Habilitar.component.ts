@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarComponent1750945331728 {
+export class HabilitarComponent1751987196099 {
   pageTitle        = 'Habilitar';
   description      = `Método para habilitar una cuenta cliente que se encuentra inhabilitada.`;
   pubName    = 'BTClientes.Habilitar';
@@ -21,7 +21,7 @@ export class HabilitarComponent1750945331728 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de cliente.' }, { Codigo: '40001', Descripcion: 'No se puede habilitar la cuenta porque está cerrada.' }, { Codigo: '40002', Descripcion: 'La cuenta ya se encuentra habilitada.' }, { Codigo: '40003', Descripcion: 'La cuenta ingresada no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de cliente.' }, { Código: '40001', Descripción: 'No se puede habilitar la cuenta porque está cerrada.' }, { Código: '40002', Descripción: 'La cuenta ya se encuentra habilitada.' }, { Código: '40003', Descripción: 'La cuenta ingresada no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class HabilitarComponent1750945331728 {
          <bts:clienteUId>882</bts:clienteUId>
       </bts:BTClientes.Habilitar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?Habilitar\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.HabilitarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	 "Btinreq": {

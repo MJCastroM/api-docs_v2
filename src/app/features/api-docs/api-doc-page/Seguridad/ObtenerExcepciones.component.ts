@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerExcepcionesComponent1750945335489 {
+export class ObtenerExcepcionesComponent1751987200060 {
   pageTitle        = 'Obtener Excepciones';
   description      = `Método para obtener un listado de las excepciones por usuario.`;
   pubName    = 'BTSeguridad.ObtenerExcepciones';
@@ -21,7 +21,7 @@ export class ObtenerExcepcionesComponent1750945335489 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario.' }];
   outputData = [{ Nombre: 'excepciones', Tipo: '[sBTExcepcion](#sbtexcepcion)', Comentarios: 'Listado de excepciones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el usuario.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el usuario.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerExcepcionesComponent1750945335489 {
          <bts:usuario>BANTOTAL</bts:usuario>
       </bts:BTSeguridad.ObtenerExcepciones>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?ObtenerExcepciones=\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTSeguridad.ObtenerExcepcionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

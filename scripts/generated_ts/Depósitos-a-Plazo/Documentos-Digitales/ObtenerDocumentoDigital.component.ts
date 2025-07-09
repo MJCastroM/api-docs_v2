@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750945333091 {
+export class ObtenerDocumentoDigitalComponent1751987197429 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerDocumentoDigital';
@@ -23,7 +23,7 @@ export class ObtenerDocumentoDigitalComponent1750945333091 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador de documento.' }];
   outputData = [{ Nombre: 'sdtDocumentoDigital', Tipo: '[sBTVersionDocumentoDigital](#sbtversiondocumentodigital)', Comentarios: 'Versión de documento digital.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de documento.' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a un depósito a plazo.' }, { Codigo: '30021', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '30031', Descripcion: 'El documento digital no existe.' }, { Codigo: '30032', Descripcion: 'Ocurrió un error al obtener la última versión del documento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de documento.' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a un depósito a plazo.' }, { Código: '30021', Descripción: 'No se recuperó la operación para el identificador recibido.' }, { Código: '30031', Descripción: 'El documento digital no existe.' }, { Código: '30032', Descripción: 'Ocurrió un error al obtener la última versión del documento.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerDocumentoDigitalComponent1750945333091 {
          <bts:documentoId>87</bts:documentoId>
       </bts:BTDepositosAPlazo.ObtenerDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerDocumentoDigital=\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

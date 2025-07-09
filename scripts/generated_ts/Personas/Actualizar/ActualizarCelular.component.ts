@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCelularComponent1750945333925 {
+export class ActualizarCelularComponent1751987198254 {
   pageTitle        = 'Actualizar Celular';
   description      = `Método para actualizar el celular de una persona.`;
   pubName    = 'BTPersonas.ActualizarCelular';
@@ -21,7 +21,7 @@ export class ActualizarCelularComponent1750945333925 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: 'celular', Tipo: 'String', Comentarios: 'Número de celular.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el número de celular.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30006', Descripcion: 'La persona no existe.' }, { Codigo: '30009', Descripcion: 'No existe número de celular.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30002', Descripción: 'No se recibió el número de celular.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30006', Descripción: 'La persona no existe.' }, { Código: '30009', Descripción: 'No existe número de celular.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ActualizarCelularComponent1750945333925 {
          <bts:celular>097277501</bts:celular>
       </bts:BTPersonas.ActualizarCelular>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarCelular\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarCelularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {
