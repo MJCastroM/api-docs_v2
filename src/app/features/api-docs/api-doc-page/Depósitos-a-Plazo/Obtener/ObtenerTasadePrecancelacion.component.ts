@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasadePrecancelacionComponent1750945333197 {
+export class ObtenerTasadePrecancelacionComponent1751987197567 {
   pageTitle        = 'Obtener Tasa de Precancelación';
   description      = `Método para obtener la tasa de precancelación de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerTasaPrecancelacion';
@@ -21,7 +21,7 @@ export class ObtenerTasadePrecancelacionComponent1750945333197 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de operación del depósito a plazo.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha.' }];
   outputData = [{ Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa de precancelación.' }, { Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerTasadePrecancelacionComponent1750945333197 {
          <bts:fecha>2020-10-10</bts:fecha>
       </bts:BTDepositosAPlazo.ObtenerTasaPrecancelacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -68,7 +68,7 @@ export class ObtenerTasadePrecancelacionComponent1750945333197 {
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerTasaPrecancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

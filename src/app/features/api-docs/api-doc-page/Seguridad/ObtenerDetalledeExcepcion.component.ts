@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeExcepcionComponent1750945335482 {
+export class ObtenerDetalledeExcepcionComponent1751987200052 {
   pageTitle        = 'Obtener Detalle de Excepción';
   description      = `Método para obtener el detalle de una excepción.`;
   pubName    = 'BTSeguridad.ObtenerDetalleExcepcion';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeExcepcionComponent1750945335482 {
 
   inputData  = [{ Nombre: 'idExcepcion', Tipo: 'Int', Comentarios: 'Identificador de excepción' }];
   outputData = [{ Nombre: 'excepciones', Tipo: '[sBTDetalleExcepcion](#sbtdetalleexcepcion)', Comentarios: 'Datos detallados de la excepción' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de excepción.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de excepción.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetalledeExcepcionComponent1750945335482 {
          <bts:idExcepcion>1850</bts:idExcepcion>
       </bts:BTSeguridad.ObtenerDetalleExcepcion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?ObtenerDetalleExcepcion=\' \
@@ -122,7 +122,7 @@ curl -X POST \
          </Btoutreq>
       </BTSeguridad.ObtenerDetalleExcepcionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

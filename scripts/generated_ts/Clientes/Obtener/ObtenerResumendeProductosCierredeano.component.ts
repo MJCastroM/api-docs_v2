@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerResumendeProductosCierredeanoComponent1750945331986 {
+export class ObtenerResumendeProductosCierredeanoComponent1751987196359 {
   pageTitle        = 'Obtener Resumen de Productos (Cierre de Año)';
   description      = `Método para obtener un resumen de los productos de un cliente al cierre del año.`;
   pubName    = 'BTClientes.ObtenerResumenProductosACierreAnio';
@@ -21,7 +21,7 @@ export class ObtenerResumendeProductosCierredeanoComponent1750945331986 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'anioConsulta', Tipo: 'Short', Comentarios: 'Año a consultar.' }];
   outputData = [{ Nombre: 'sdtResumenProductos', Tipo: '[sCTInfoProductos](#sctinfoproductos)', Comentarios: 'Listado de productos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerResumendeProductosCierredeanoComponent1750945331986 {
          <bts:anioConsulta>2016</bts:anioConsulta>
       </bts:BTClientes.ObtenerResumenProductosACierreAnioACierreAnio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerResumenProductosACierreAnio=\' \
@@ -127,7 +127,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerResumenProductosACierreAnioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

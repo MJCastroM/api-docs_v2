@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750945334850 {
+export class ObtenerDocumentoDigitalComponent1751987199281 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerDocumentoDigital';
@@ -23,7 +23,7 @@ export class ObtenerDocumentoDigitalComponent1750945334850 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador del documento.' }];
   outputData = [{ Nombre: 'sdtDocumentosDigitales', Tipo: '[sBTVersionDocumentoDigital](#sbtversiondocumentodigital)', Comentarios: 'Datos de versión de documento digital.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de documento.' }, { Codigo: '30024', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '30031', Descripcion: 'El documento digital no existe.' }, { Codigo: '30032', Descripcion: 'Ocurrió un error al obtener la última versión del documento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de documento.' }, { Código: '30024', Descripción: 'No se recuperó la operación para el identificador recibido.' }, { Código: '30031', Descripción: 'El documento digital no existe.' }, { Código: '30032', Descripción: 'Ocurrió un error al obtener la última versión del documento.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerDocumentoDigitalComponent1750945334850 {
          <bts:documentoId>35</bts:documentoId>
       </bts:BTPrestamos.ObtenerDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDocumentoDigital\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

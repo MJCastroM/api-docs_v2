@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerActividadesComponent1750945332121 {
+export class ObtenerActividadesComponent1751987196468 {
   pageTitle        = 'Obtener Actividades';
   description      = `Método para obtener un listado de las actividades ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerActividades';
@@ -38,7 +38,7 @@ export class ObtenerActividadesComponent1750945332121 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerActividades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerActividades=\' \
@@ -244,7 +244,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerActividadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

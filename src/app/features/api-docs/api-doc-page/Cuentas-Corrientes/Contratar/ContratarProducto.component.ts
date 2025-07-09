@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoComponent1750945332649 {
+export class ContratarProductoComponent1751987196987 {
   pageTitle        = 'Contratar Producto';
   description      = `Método para contratar un producto de cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ContratarProducto';
@@ -23,7 +23,7 @@ export class ContratarProductoComponent1750945332649 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'nombreSubCuenta', Tipo: 'String', Comentarios: 'Nombre de la cuenta cliente.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de producto.' }, { Codigo: '30004', Descripcion: 'No existe registro para el identificador único de producto.' }, { Codigo: '30005', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente.' }, { Codigo: '30006', Descripcion: 'Cuenta cliente no puede ser vacío.' }, { Codigo: '30007', Descripcion: 'No se encuentra definida la moneda.' }, { Codigo: '30008', Descripcion: 'No existe el producto seleccionado.' }, { Codigo: '30009', Descripcion: 'No se pudo crear la cuenta vista.' }, { Codigo: '30010', Descripcion: 'El cliente no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador.' }, { Código: '30003', Descripción: 'No se recibió el identificador único de producto.' }, { Código: '30004', Descripción: 'No existe registro para el identificador único de producto.' }, { Código: '30005', Descripción: 'La operación ingresada no corresponde a una cuenta corriente.' }, { Código: '30006', Descripción: 'Cuenta cliente no puede ser vacío.' }, { Código: '30007', Descripción: 'No se encuentra definida la moneda.' }, { Código: '30008', Descripción: 'No existe el producto seleccionado.' }, { Código: '30009', Descripción: 'No se pudo crear la cuenta vista.' }, { Código: '30010', Descripción: 'El cliente no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ContratarProductoComponent1750945332649 {
          <bts:sucursalId>0</bts:sucursalId>
       </bts:BTCuentasCorrientes.ContratarProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ContratarProducto=\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ContratarProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

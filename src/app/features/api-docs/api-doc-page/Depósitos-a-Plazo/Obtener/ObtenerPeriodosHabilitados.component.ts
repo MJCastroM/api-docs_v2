@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosHabilitadosComponent1750945333173 {
+export class ObtenerPeriodosHabilitadosComponent1751987197533 {
   pageTitle        = 'Obtener Períodos Habilitados';
   description      = `Método para obtener los períodos habilitados de un deposito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerPeriodosHabilitados';
@@ -21,7 +21,7 @@ export class ObtenerPeriodosHabilitadosComponent1750945333173 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único del producto.' }];
   outputData = [{ Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'sdtPeriodos', Tipo: '[sBTPeriodoHabilitado](#sbtperiodohabilitado)', Comentarios: 'Listado de períodos habilitados.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del Producto.' }, { Codigo: '30006', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'El producto no corresponde a un producto de depósito a plazo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del Producto.' }, { Código: '30006', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'El producto no corresponde a un producto de depósito a plazo.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPeriodosHabilitadosComponent1750945333173 {
          <bts:productoUId>184</bts:productoUId>
       </bts:BTDepositosAPlazo.ObtenerPeriodosHabilitados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerPeriodosHabilitados=\' \
@@ -127,7 +127,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerPeriodosHabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

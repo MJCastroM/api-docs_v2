@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSolicitudesClienteComponent1750945333532 {
+export class ObtenerSolicitudesClienteComponent1751987197848 {
   pageTitle        = 'Obtener Solicitudes Cliente';
   description      = `Método para obtener un listado de las solicitudes activas de préstamos de un cliente.`;
   pubName    = 'BTMicrofinanzas.ObtenerSolicitudesCliente';
@@ -21,7 +21,7 @@ export class ObtenerSolicitudesClienteComponent1750945333532 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtDatosInstancias', Tipo: '[sBTDatosInstancia](#sbtdatosinstancia)', Comentarios: 'Listado de solicitudes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerSolicitudesClienteComponent1750945333532 {
          <bts:clienteUId>3</bts:clienteUId>
       </bts:BTMicrofinanzas.ObtenerSolicitudesCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerSolicitudesCliente \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerSolicitudesClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

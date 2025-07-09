@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriododeAcreditacionComponent1750945332856 {
+export class ObtenerPeriododeAcreditacionComponent1751987197193 {
   pageTitle        = 'Obtener Período de Acreditación';
   description      = `Método para obtener el período de acreditación de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerPeriodoDeAcreditacion';
@@ -21,7 +21,7 @@ export class ObtenerPeriododeAcreditacionComponent1750945332856 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de Subcuenta con acreditación.' }];
   outputData = [{ Nombre: 'sdtPeriodoAcreditacion', Tipo: '[sBTPeriodoDeAcreditacion](#sbtperiododeacreditacion)', Comentarios: 'Datos de la acreditación de la subcuenta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de Operacion.' }, { Codigo: '30003', Descripcion: 'No se recuperó la Operacion para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de Operacion.' }, { Código: '30003', Descripción: 'No se recuperó la Operacion para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPeriododeAcreditacionComponent1750945332856 {
          <bts:operacionUId>10211</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerPeriodoDeAcreditacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -78,7 +78,7 @@ export class ObtenerPeriododeAcreditacionComponent1750945332856 {
          </Btoutreq>
       </BTCuentasVista.ObtenerPeriodoDeAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

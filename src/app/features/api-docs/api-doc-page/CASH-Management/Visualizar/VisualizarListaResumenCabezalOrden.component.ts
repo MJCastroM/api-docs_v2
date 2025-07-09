@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarListaResumenCabezalOrdenComponent1750945331568 {
+export class VisualizarListaResumenCabezalOrdenComponent1751987195920 {
   pageTitle        = 'Visualizar Lista de Órdenes con su Resumen';
   description      = `Método para obtener la lista de órdenes con su resumen de información de un archivo CASH.`;
   pubName    = 'BTCASHManagement.VisualizarListaResumenCabezalOrden';
@@ -39,7 +39,7 @@ export class VisualizarListaResumenCabezalOrdenComponent1750945331568 {
          <bts:archivoId>279</bts:archivoId>
       </bts:BTCASHManagement.VisualizarListaResumenCabezalOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?VisualizarListaResumenCabezalOrden=\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.VisualizarListaResumenCabezalOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

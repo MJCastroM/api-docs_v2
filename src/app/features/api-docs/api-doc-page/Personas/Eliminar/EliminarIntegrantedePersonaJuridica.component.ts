@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarIntegrantedePersonaJuridicaComponent1750945334242 {
+export class EliminarIntegrantedePersonaJuridicaComponent1751987198612 {
   pageTitle        = 'Eliminar Integrante de Persona Jurídica';
   description      = `Método para eliminar un integrante de una persona jurídica.`;
   pubName    = 'BTPersonas.EliminarIntegrantePersonaJuridica';
@@ -40,7 +40,7 @@ export class EliminarIntegrantedePersonaJuridicaComponent1750945334242 {
          <bts:personaIntegranteUId>1</bts:personaIntegranteUId>
       </bts:BTPersonas.EliminarIntegrantePersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarIntegrantePersonaJuridica\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarIntegrantePersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
 	 "Btinreq": { 

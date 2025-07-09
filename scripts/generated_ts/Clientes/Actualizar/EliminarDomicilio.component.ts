@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDomicilioComponent1750945331709 {
+export class EliminarDomicilioComponent1751987196073 {
   pageTitle        = 'Eliminar Domicilio';
   description      = `Método para eliminar los datos del domicilio de un cliente.`;
   pubName    = 'BTClientes.EliminarDomicilio';
@@ -21,7 +21,7 @@ export class EliminarDomicilioComponent1750945331709 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'codigoDomicilio', Tipo: 'Byte', Comentarios: 'Código de domicilio.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la cliente.' }, { Codigo: '30002', Descripcion: 'El identificador de la cliente no es correcto.' }, { Codigo: '30011', Descripcion: 'Código de domicilio no válido.' }, { Codigo: '31011', Descripcion: 'No existe el domicilio de la cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la cliente.' }, { Código: '30002', Descripción: 'El identificador de la cliente no es correcto.' }, { Código: '30011', Descripción: 'Código de domicilio no válido.' }, { Código: '31011', Descripción: 'No existe el domicilio de la cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarDomicilioComponent1750945331709 {
          <bts:codigoDomicilio>1</bts:codigoDomicilio>
       </bts:BTClientes.EliminarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?EliminarDomicilio=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.EliminarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

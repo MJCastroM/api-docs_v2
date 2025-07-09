@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalMovimientoComponent1750945332369 {
+export class ObtenerIdBantotalMovimientoComponent1751987196716 {
   pageTitle        = 'Obtener Identificador Bantotal de Movimiento';
   description      = `Método para obtener la clave de identificación Bantotal de un movimiento.`;
   pubName    = 'BTContabilidad.ObtenerIdBantotalMovimiento';
@@ -21,7 +21,7 @@ export class ObtenerIdBantotalMovimientoComponent1750945332369 {
 
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
   outputData = [{ Nombre: 'empresa', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Identificador de módulo.' }, { Nombre: 'transaccionId', Tipo: 'Int', Comentarios: 'Identificador de transacción.' }, { Nombre: 'relacion', Tipo: 'Int', Comentarios: 'Relación.' }, { Nombre: 'fechaContabilizacion', Tipo: 'Date', Comentarios: 'Fecha de contabilización.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de movimiento.' }, { Codigo: '30002', Descripcion: 'No existe registro para el identificador de movimiento ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de movimiento.' }, { Código: '30002', Descripción: 'No existe registro para el identificador de movimiento ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIdBantotalMovimientoComponent1750945332369 {
          <bts:movimientoUId>2</bts:movimientoUId>
       </bts:BTContabilidad.ObtenerIdBantotalMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?ObtenerIdBantotalMovimiento\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerIdBantotalMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

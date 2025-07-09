@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarEjecutivoComponent1750945331742 {
+export class ModificarEjecutivoComponent1751987196111 {
   pageTitle        = 'Modificar Ejecutivo';
   description      = `Método para modificar el ejecutivo de una cuenta cliente.`;
   pubName    = 'BTClientes.ModificarEjecutivo';
@@ -21,7 +21,7 @@ export class ModificarEjecutivoComponent1750945331742 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'ejecutivoId', Tipo: 'Short', Comentarios: 'Identificador de ejecutivo a modificar.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el Identificador del ejecutivo.' }, { Codigo: '30011', Descripcion: 'El identificador de ejecutivo no es válido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el Identificador del ejecutivo.' }, { Código: '30011', Descripción: 'El identificador de ejecutivo no es válido.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ModificarEjecutivoComponent1750945331742 {
          <bts:ejecutivoId>1</bts:ejecutivoId>
       </bts:BTClientes.ModificarEjecutivo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -66,7 +66,7 @@ export class ModificarEjecutivoComponent1750945331742 {
          </Btoutreq>
       </BTClientes.ModificarEjecutivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

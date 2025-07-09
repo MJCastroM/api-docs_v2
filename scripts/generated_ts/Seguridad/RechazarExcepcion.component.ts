@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RechazarExcepcionComponent1750945335496 {
+export class RechazarExcepcionComponent1751987200067 {
   pageTitle        = 'Rechazar Excepción';
   description      = `Método para rechazar una excepción.`;
   pubName    = 'BTSeguridad.RechazarExcepcion';
@@ -21,7 +21,7 @@ export class RechazarExcepcionComponent1750945335496 {
 
   inputData  = [{ Nombre: 'idExcepcion', Tipo: 'Int', Comentarios: 'Identificador de excepción.' }, { Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario.' }, { Nombre: 'contraseña', Tipo: 'String', Comentarios: 'Contraseña.' }, { Nombre: 'autoriza', Tipo: 'String', Comentarios: 'Autoriza [Hidden: Valor fijo \'N\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Excepción asignada a otro Usuario.' }, { Codigo: '30011', Descripcion: 'No se recibió el identificador de excepción.' }, { Codigo: '30012', Descripcion: 'No se recibió Usuario.' }];
+  errors     = [{ Código: '30001', Descripción: 'Excepción asignada a otro Usuario.' }, { Código: '30011', Descripción: 'No se recibió el identificador de excepción.' }, { Código: '30012', Descripción: 'No se recibió Usuario.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class RechazarExcepcionComponent1750945335496 {
          <bts:contraseña>z0na#1357</bts:contraseña>
       </bts:BTSeguridad.RechazarExcepcion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?AutorizarExcepcion=\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTSeguridad.RechazarExcepcionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

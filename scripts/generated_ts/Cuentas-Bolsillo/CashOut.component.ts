@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CashOutComponent1750945332479 {
+export class CashOutComponent1751987196838 {
   pageTitle        = 'Cash Out';
   description      = `Método para realizar un traspaso hacia la cuenta principal.`;
   pubName    = 'BTCuentasBolsillo.CashOut';
@@ -21,7 +21,7 @@ export class CashOutComponent1750945332479 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'sdtTraspaso', Tipo: '[sBTTraspaso](#sbttraspaso)', Comentarios: 'Datos del traspaso.' }];
   outputData = [{ Nombre: 'sdtResultadoTraspaso', Tipo: '[sBTResultadoTraspaso](#sbtresultadotraspaso)', Comentarios: 'Datos resultado del traspaso.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de origen.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de destino.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'La cuenta destino no pertenece al cliente [Número de identificador].' }, { Codigo: '30009', Descripcion: 'La operación origen no pertenece al cliente.' }, { Codigo: '30020', Descripcion: 'El estado de la operación origen no permite operar.' }, { Codigo: '30021', Descripcion: 'El estado de la operación destino no permite operar.' }, { Codigo: '30023', Descripcion: 'La cuenta origen y cuenta destino son diferentes.' }, { Codigo: '30024', Descripcion: 'La cuenta bolsillo no pertenece a la operación principal.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de origen.' }, { Código: '30002', Descripción: 'No se recibió el identificador único de operación de destino.' }, { Código: '30003', Descripción: 'Debe ingresar importe.' }, { Código: '30004', Descripción: 'No se recuperó la operación origen para el Identificador: [Número de identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación destino para el Identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30007', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Código: '30008', Descripción: 'La cuenta destino no pertenece al cliente [Número de identificador].' }, { Código: '30009', Descripción: 'La operación origen no pertenece al cliente.' }, { Código: '30020', Descripción: 'El estado de la operación origen no permite operar.' }, { Código: '30021', Descripción: 'El estado de la operación destino no permite operar.' }, { Código: '30023', Descripción: 'La cuenta origen y cuenta destino son diferentes.' }, { Código: '30024', Descripción: 'La cuenta bolsillo no pertenece a la operación principal.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -48,7 +48,7 @@ export class CashOutComponent1750945332479 {
          </bts:sdtTraspaso>
       </bts:BTCuentasBolsillo.CashOut>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?CashOut\' \
@@ -104,7 +104,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.CashOutResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

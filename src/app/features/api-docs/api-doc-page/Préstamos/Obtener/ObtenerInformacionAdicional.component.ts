@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionAdicionalComponent1750945335045 {
+export class ObtenerInformacionAdicionalComponent1751987199539 {
   pageTitle        = 'Obtener Información Adicional';
   description      = `Método para obtener la información adicional de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerInformacionAdicional';
@@ -21,7 +21,7 @@ export class ObtenerInformacionAdicionalComponent1750945335045 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Información Adicional de datos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de operación.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de operación.' }, { Código: '30013', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerInformacionAdicionalComponent1750945335045 {
          <bts:operacionUId>61</bts:operacionUId>
       </bts:BTPrestamos.ObtenerInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerInformacionAdicional\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

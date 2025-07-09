@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOperacionesClienteComponent1750945333510 {
+export class ObtenerOperacionesClienteComponent1751987197820 {
   pageTitle        = 'Obtener Operaciones Cliente';
   description      = `Método para obtener las operaciones elegibles a cancelar para una solicitud de créditos.`;
   pubName    = 'BTMicrofinanzas.ObtenerOperacionesCliente';
@@ -21,7 +21,7 @@ export class ObtenerOperacionesClienteComponent1750945333510 {
 
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [{ Nombre: 'sdtOperaciones', Tipo: '[sBTOperacionWF](#sbtoperacionwf)', Comentarios: 'Listado de operaciones.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'La solicitud ingresada no existe.' }, { Codigo: '40002', Descripcion: 'El cliente ingresado no corresponde con la solicitud.' }, { Codigo: '40003', Descripcion: 'No se encontraron operaciones seleccionables para cancelar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de solicitud.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '40001', Descripción: 'La solicitud ingresada no existe.' }, { Código: '40002', Descripción: 'El cliente ingresado no corresponde con la solicitud.' }, { Código: '40003', Descripción: 'No se encontraron operaciones seleccionables para cancelar.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerOperacionesClienteComponent1750945333510 {
          <bts:clienteUId>862</bts:clienteUId>
       </bts:BTMicrofinanzas.ObtenerOperacionesCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?ObtenerOperacionesCliente\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerOperacionesClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

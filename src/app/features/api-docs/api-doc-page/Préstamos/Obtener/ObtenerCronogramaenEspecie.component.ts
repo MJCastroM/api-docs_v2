@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaenEspecieComponent1750945334889 {
+export class ObtenerCronogramaenEspecieComponent1751987199324 {
   pageTitle        = 'Obtener Cronograma en Especie';
   description      = `Método para obtener el cronograma de un préstamo expresado en especie.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaEnEspecie';
@@ -21,7 +21,7 @@ export class ObtenerCronogramaenEspecieComponent1750945334889 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'expresadoEn', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'E\' para este método].' }];
   outputData = [{ Nombre: 'sdtCuotaPrestamo', Tipo: '[sBTCuotaPrestamo](#sbtcuotaprestamo)', Comentarios: 'Cronograma del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCronogramaenEspecieComponent1750945334889 {
          <bts:operacionUId>361</bts:operacionUId>
       </bts:BTPrestamos.ObtenerCronogramaEnEspecie>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerCronogramaEnEspecie=\' \
@@ -257,7 +257,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerCronogramaEnEspecieResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

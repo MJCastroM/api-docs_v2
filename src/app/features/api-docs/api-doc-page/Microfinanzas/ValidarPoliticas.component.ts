@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarPoliticasComponent1750945333602 {
+export class ValidarPoliticasComponent1751987197903 {
   pageTitle        = 'Validar Políticas';
   description      = `Método para validar las políticas crediticias de una determinada etapa del proceso de otorgamiento de créditos.`;
   pubName    = 'BTMicrofinanzas.ValidarPoliticas';
@@ -21,7 +21,7 @@ export class ValidarPoliticasComponent1750945333602 {
 
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }];
   outputData = [{ Nombre: 'controlOK', Tipo: 'String', Comentarios: 'Devuelve "N" si existen políticas que no permiten continuar. "S" en caso contrario.' }, { Nombre: 'sdtValidacionesPoliticas', Tipo: '[sBTValidacionPoliticas](#sbtvalidacionpoliticas)', Comentarios: 'Listado de validación de políticas.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de solicitud.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ValidarPoliticasComponent1750945333602 {
          <bts:solicitudUId>10972</bts:solicitudUId>
       </bts:BTMicrofinanzas.ValidarPoliticas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ValidarPoliticas \
@@ -130,7 +130,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ValidarPoliticasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq": {

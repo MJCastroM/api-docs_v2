@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionAdicionalComponent1750945331677 {
+export class AgregarInformacionAdicionalComponent1751987196037 {
   pageTitle        = 'Agregar Información Adicional';
   description      = `Método para agregar información adicional a un cliente.`;
   pubName    = 'BTClientes.AgregarInformacionAdicional';
@@ -21,7 +21,7 @@ export class AgregarInformacionAdicionalComponent1750945331677 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos adicionales.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'INS\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class AgregarInformacionAdicionalComponent1750945331677 {
          </bts:sdtInformacionAdicional>
       </bts:BTClientes.AgregarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTclientes?AgregarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.AgregarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

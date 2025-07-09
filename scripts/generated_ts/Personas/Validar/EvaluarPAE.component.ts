@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EvaluarPAEComponent1750945334591 {
+export class EvaluarPAEComponent1751987198974 {
   pageTitle        = 'Evaluar PAE';
   description      = `Método para retornar el resultado de evaluar el PAE de una persona.`;
   pubName    = 'BTPersonas.EvaluarPAE';
@@ -21,7 +21,7 @@ export class EvaluarPAEComponent1750945334591 {
 
   inputData  = [{ Nombre: 'modeloId', Tipo: 'Int', Comentarios: 'Identificador del modelo.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único del producto.' }, { Nombre: 'sdtValores', Tipo: '[sBTPAEValorItem](#sbtpaevaloritem)', Comentarios: 'Colección de valores PAE.' }];
   outputData = [{ Nombre: 'valor', Tipo: 'Double', Comentarios: 'Valor.' }, { Nombre: 'mensaje', Tipo: 'String', Comentarios: 'Mensaje.' }, { Nombre: 'sdtPoliticas', Tipo: '[sBTPoliticaIncumplida](#sbtpoliticaincumplida)', Comentarios: 'Colección de políticas incumplidas.' }, { Nombre: 'numeroEjecucion', Tipo: 'Long', Comentarios: 'Número de la ejecución.' }];
-  errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió modelo de evaluación PAE.' }, { Codigo: '1011051', Descripcion: 'No se recuperó la persona para el Id recibido.' }, { Codigo: '1011052', Descripcion: 'No se recuperó el producto para el Id recibido.' }, { Codigo: '1011053', Descripcion: 'El modelo de evaluación no está definido.' }, { Codigo: '1011054', Descripcion: 'El modelo de evaluación no tiene tipo definido.' }, { Codigo: '1011055', Descripcion: 'No hay ítems a resolver para la evaluación solicitada.' }, { Codigo: '1011056', Descripcion: 'No es posible evaluar reglas en la plataforma de ejecución.' }, { Codigo: '1011056', Descripcion: 'Error en la parametrización del modelo de evaluación.' }, { Codigo: '1011057', Descripcion: 'Error en la ejecución del modelo de evaluación.' }];
+  errors     = [{ Código: '1011050', Descripción: 'No se recibió modelo de evaluación PAE.' }, { Código: '1011051', Descripción: 'No se recuperó la persona para el Id recibido.' }, { Código: '1011052', Descripción: 'No se recuperó el producto para el Id recibido.' }, { Código: '1011053', Descripción: 'El modelo de evaluación no está definido.' }, { Código: '1011054', Descripción: 'El modelo de evaluación no tiene tipo definido.' }, { Código: '1011055', Descripción: 'No hay ítems a resolver para la evaluación solicitada.' }, { Código: '1011056', Descripción: 'No es posible evaluar reglas en la plataforma de ejecución.' }, { Código: '1011056', Descripción: 'Error en la parametrización del modelo de evaluación.' }, { Código: '1011057', Descripción: 'Error en la ejecución del modelo de evaluación.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class EvaluarPAEComponent1750945334591 {
          </bts:sdtValores>
       </bts:BTPersonas.EvaluarPAE>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EvaluarPAE=\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EvaluarPAEResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldosdeOtrosProductosComponent1750945332022 {
+export class ObtenerSaldosdeOtrosProductosComponent1751987196393 {
   pageTitle        = 'Obtener Saldos de Otros Productos';
   description      = `Método para obtener los saldos de los productos de un cliente.`;
   pubName    = 'BTClientes.ObtenerSaldosProducto';
@@ -29,7 +29,7 @@ Valor específico 1 | Identificador del módulo a incluir.
 
   inputData  = [{ Nombre: 'cuentaUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'correlativo', Tipo: 'Long', Comentarios: 'Correlativo 2 de la guía especial.' }];
   outputData = [{ Nombre: 'sdtSaldosProducto', Tipo: '[sBTSaldoProducto](#sbtsaldoproducto)', Comentarios: 'Listado de productos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -48,7 +48,7 @@ Valor específico 1 | Identificador del módulo a incluir.
          <bts:correlativo>1</bts:correlativo>
       </bts:BTClientes.ObtenerSaldosProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerSaldosProducto=\' \
@@ -127,7 +127,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerSaldosProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarInformacionAdicionalComponent1750945333964 {
+export class ActualizarInformacionAdicionalComponent1751987198309 {
   pageTitle        = 'Actualizar Información Adicional';
   description      = `Método para actualizar la información adicional de una persona.`;
   pubName    = 'BTPersonas.ActualizarInformacionAdicional';
@@ -21,7 +21,7 @@ export class ActualizarInformacionAdicionalComponent1750945333964 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '40002', Descripcion: 'El atributo [Identificador de información adicional] no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '40002', Descripción: 'El atributo [Identificador de información adicional] no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class ActualizarInformacionAdicionalComponent1750945333964 {
          </bts:sdtInformacionAdicional>
       </bts:BTPersonas.ActualizarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ActualizarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarTextoAsientoComponent1750945332342 {
+export class AgregarTextoAsientoComponent1751987196676 {
   pageTitle        = 'Agregar Texto Asiento';
   description      = `Método para agregar un texto a un asiento.`;
   pubName    = 'BTContabilidad.AgregarTextoAsiento';
@@ -21,7 +21,7 @@ export class AgregarTextoAsientoComponent1750945332342 {
 
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del asiento.' }, { Nombre: 'textoMovimiento', Tipo: '[sBTTextoMovimiento](#sbttextomovimiento)', Comentarios: 'Datos del texto del movimiento.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '50001', Descripcion: 'El código de texto ingresado no existe.' }, { Codigo: '50002', Descripcion: 'Ya existe el texto ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de movimiento.' }, { Código: '50001', Descripción: 'El código de texto ingresado no existe.' }, { Código: '50002', Descripción: 'Ya existe el texto ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class AgregarTextoAsientoComponent1750945332342 {
          </bts:textoMovimiento>
       </bts:BTContabilidad.AgregarTextoAsiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AgregarTextoAsiento\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.AgregarTextoAsientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProximaFechaHabildeSucursalComponent1750945331351 {
+export class ObtenerProximaFechaHabildeSucursalComponent1751987195660 {
   pageTitle        = 'Obtener Próxima Fecha Hábil de Sucursal';
   description      = `Método para obtener la próxima fecha hábil a la fecha ingresada, para la sucursal recibida por parámetro.`;
   pubName    = 'BTCalendario.ObtenerProximaFechaHabilSucursal';
@@ -21,7 +21,7 @@ export class ObtenerProximaFechaHabildeSucursalComponent1750945331351 {
 
   inputData  = [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'sentido', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'A\' para este método].' }];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'Date', Comentarios: 'Próxima fecha hábil.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar fecha a consultar.' }, { Código: '30002', Descripción: 'Debe ingresar identificador de sucursal.' }, { Código: '40001', Descripción: 'La Sucursal no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerProximaFechaHabildeSucursalComponent1750945331351 {
          <bts:sucursalId>1000</bts:sucursalId>
       </bts:BTCalendarios.ObtenerProximaFechaHabilSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerProximaFechaHabilSucursal\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerProximaFechaHabilSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarProductoconAltadeFacultadesComponent1750945332655 {
+export class ContratarProductoconAltadeFacultadesComponent1751987196989 {
   pageTitle        = 'Contratar Producto con Alta de Facultades';
   description      = `Método para contratar un producto de cuenta corriente dando de alta las facultades.`;
   pubName    = 'BTCuentasCorrientes.ContratarConFacultades';
@@ -21,7 +21,7 @@ export class ContratarProductoconAltadeFacultadesComponent1750945332655 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'nombreSubCuenta', Tipo: 'String', Comentarios: 'Nombre de la cuenta cliente.' }, { Nombre: 'tipoIntegracion', Tipo: 'String', Comentarios: 'Tipo de integración  (B-Indistinta/C-Conjunta).' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ContratarProductoconAltadeFacultadesComponent1750945332655 {
          <bts:tipoIntegracion>B</bts:tipoIntegracion>
       </bts:BTCuentasCorrientes.ContratarConFacultades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ContratarConFacultades=\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ContratarConFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

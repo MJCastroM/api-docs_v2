@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarSituacionLineasComponent1750945331600 {
+export class VisualizarSituacionLineasComponent1751987195966 {
   pageTitle        = 'Visualizar Situación Lineas';
   description      = `Método para visualizar las líneas del archivo con su estado.`;
   pubName    = 'BTCASHManagement.VisualizarSituacionLineas';
@@ -21,7 +21,7 @@ export class VisualizarSituacionLineasComponent1750945331600 {
 
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador del archivo.' }];
   outputData = [{ Nombre: 'situacionLineas', Tipo: '[sBTSituacionLinea](#sbtsituacionlinea)', Comentarios: 'Listado de líneas del archivo con su estado y mensaje.' }];
-  errors     = [{ Codigo: '1030711', Descripcion: 'No se recuperó información para el identificador de archivo recibido.' }];
+  errors     = [{ Código: '1030711', Descripción: 'No se recuperó información para el identificador de archivo recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class VisualizarSituacionLineasComponent1750945331600 {
          <bts:archivoId>102</bts:archivoId>
       </bts:BTCASHManagement.VisualizarSituacionLineas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarSituacionLineas=\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.VisualizarSituacionLineasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerActividadesporTipoComponent1750945332128 {
+export class ObtenerActividadesporTipoComponent1751987196471 {
   pageTitle        = 'Obtener Actividades por Tipo';
   description      = `Método para obtener un listado de las actividades por tipo ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerActividadesPorTipo';
@@ -21,7 +21,7 @@ export class ObtenerActividadesporTipoComponent1750945332128 {
 
   inputData  = [{ Nombre: 'tipoActividadId', Tipo: 'Long', Comentarios: 'Identificador de tipo de actividad.' }];
   outputData = [{ Nombre: 'sdtActividades', Tipo: '[sBTActividad](#sbtactividad)', Comentarios: 'Listado de actividades.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió código de actividad.' }, { Codigo: '40001', Descripcion: 'No existen actividades ingresadas en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió código de actividad.' }, { Código: '40001', Descripción: 'No existen actividades ingresadas en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerActividadesporTipoComponent1750945332128 {
          <bts:tipoActividadId>1</bts:tipoActividadId>
       </bts:BTConfiguracionBantotal.ObtenerActividadesPorTipo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerActividadesPorTipo\' \
@@ -246,7 +246,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerActividadesPorTipoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

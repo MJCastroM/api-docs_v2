@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProximaFechaHabilComponent1750945331345 {
+export class ObtenerProximaFechaHabilComponent1751987195652 {
   pageTitle        = 'Obtener Próxima Fecha Hábil';
   description      = `Método para obtener la próxima fecha hábil a la fecha ingresada.`;
   pubName    = 'BTCalendario.ObtenerProximaFechaHabil';
@@ -21,7 +21,7 @@ export class ObtenerProximaFechaHabilComponent1750945331345 {
 
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'sentido', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'A\' para este método].' }];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'Date', Comentarios: 'Próxima fecha hábil.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar fecha a consultar.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerProximaFechaHabilComponent1750945331345 {
          <bts:fecha>2021-03-26</bts:fecha>
       </bts:BTCalendarios.ObtenerProximaFechaHabil>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerProximaFechaHabil\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerProximaFechaHabilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

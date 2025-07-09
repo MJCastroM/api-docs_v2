@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeIntegracionComponent1750945332055 {
+export class ObtenerTiposdeIntegracionComponent1751987196434 {
   pageTitle        = 'Obtener Tipos de Integración';
   description      = `Método para obtener un listado de los tipos de integración ingresados en Bantotal.`;
   pubName    = 'BTClientes.ObtenerTiposDeIntegracion';
@@ -38,7 +38,7 @@ export class ObtenerTiposdeIntegracionComponent1750945332055 {
          </bts:Btinreq>
       </bts:BTClientes.ObtenerTiposDeIntegracion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerTiposDeIntegracion=\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerTiposDeIntegracionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

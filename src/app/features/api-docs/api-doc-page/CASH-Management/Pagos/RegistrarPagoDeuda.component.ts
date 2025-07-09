@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoDeudaComponent1750945331544 {
+export class RegistrarPagoDeudaComponent1751987195881 {
   pageTitle        = 'Registrar Pago de Deuda';
   description      = `Método para registrar el pago de una factura realizado en canal externo.`;
   pubName    = 'BTCASHManagement.RegistrarPagoDeuda';
@@ -21,7 +21,7 @@ export class RegistrarPagoDeudaComponent1750945331544 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }, { Nombre: 'nroLineaOrden', Tipo: 'Int', Comentarios: 'Número de línea de orden CASH.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'importePago', Tipo: 'Double', Comentarios: 'Importe pagado.' }];
   outputData = [{ Nombre: 'transaccionId', Tipo: 'Long', Comentarios: 'Identificador de transacción.' }];
-  errors     = [{ Codigo: '1030610', Descripcion: 'Debe indicar el numero de la orden.' }, { Codigo: '1030611', Descripcion: 'Debe indicar el numero de linea en la orden.' }, { Codigo: '1030612', Descripcion: 'El valor recibido no corresponde a un numero de orden.' }, { Codigo: '1030614', Descripcion: 'Canal no habilitado para el servicio.' }, { Codigo: '1030615', Descripcion: 'Canal no habilitado para el contrato.' }, { Codigo: '1030616', Descripcion: 'Numero de linea de la orden no existe.' }, { Codigo: '1030617', Descripcion: 'Estado de la linea de la orden no permite pago.' }, { Codigo: '1030618', Descripcion: 'El importe debe ser mayor a cero.' }, { Codigo: '1030619', Descripcion: 'Código de Moneda desconocido.' }, { Codigo: '1030620', Descripcion: 'El importe del pago es inferior a la deuda.' }, { Codigo: '1030621', Descripcion: 'El importe del pago supera a la deuda.' }, { Codigo: '1030751', Descripcion: 'Estado de la orden no permite procesar.' }, { Codigo: '1030761', Descripcion: 'No se obtuvo Canal CASH para el canal que invoca.' }, { Codigo: '1039999', Descripcion: 'No se obtuvo Regla para determinar la Transacción a ejecutar.' }];
+  errors     = [{ Código: '1030610', Descripción: 'Debe indicar el numero de la orden.' }, { Código: '1030611', Descripción: 'Debe indicar el numero de linea en la orden.' }, { Código: '1030612', Descripción: 'El valor recibido no corresponde a un numero de orden.' }, { Código: '1030614', Descripción: 'Canal no habilitado para el servicio.' }, { Código: '1030615', Descripción: 'Canal no habilitado para el contrato.' }, { Código: '1030616', Descripción: 'Numero de linea de la orden no existe.' }, { Código: '1030617', Descripción: 'Estado de la linea de la orden no permite pago.' }, { Código: '1030618', Descripción: 'El importe debe ser mayor a cero.' }, { Código: '1030619', Descripción: 'Código de Moneda desconocido.' }, { Código: '1030620', Descripción: 'El importe del pago es inferior a la deuda.' }, { Código: '1030621', Descripción: 'El importe del pago supera a la deuda.' }, { Código: '1030751', Descripción: 'Estado de la orden no permite procesar.' }, { Código: '1030761', Descripción: 'No se obtuvo Canal CASH para el canal que invoca.' }, { Código: '1039999', Descripción: 'No se obtuvo Regla para determinar la Transacción a ejecutar.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class RegistrarPagoDeudaComponent1750945331544 {
          <bts:importePago>100</bts:importePago>
       </bts:BTCASHManagement.RegistrarPagoDeuda>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?RegistrarPagoDeuda=\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.RegistrarPagoDeudaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

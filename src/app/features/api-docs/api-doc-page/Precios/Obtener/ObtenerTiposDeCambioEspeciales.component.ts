@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeCambioEspecialesComponent1750945334755 {
+export class ObtenerTiposDeCambioEspecialesComponent1751987199162 {
   pageTitle        = 'Obtener Tipos de Cambio Especiales';
   description      = `Método para obtener un listado de los tipos de cambio especiales.`;
   pubName    = 'BTPrecios.ObtenerTiposDeCambioEspeciales ';
@@ -38,7 +38,7 @@ export class ObtenerTiposDeCambioEspecialesComponent1750945334755 {
             </bts:Btinreq>
         </bts:BTPrecios.ObtenerTiposDeCambioEspeciales>
     </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTiposDeCambioEspeciales \
@@ -94,7 +94,7 @@ curl -X POST \
             </Btoutreq>
         </BTPrecios.ObtenerTiposDeCambioEspecialesResponse>
     </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

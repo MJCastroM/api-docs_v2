@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaPrestamoCastigadoComponent1750945335002 {
+export class ObtenerDeudaPrestamoCastigadoComponent1751987199498 {
   pageTitle        = 'Obtener Deuda Préstamo Castigado';
   description      = `Método para obtener la deuda de un préstamo castigado.`;
   pubName    = 'BTPrestamos.ObtenerDeudaPrestamoCastigado';
@@ -21,7 +21,7 @@ export class ObtenerDeudaPrestamoCastigadoComponent1750945335002 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación simulada.' }];
   outputData = [{ Nombre: 'sdtPrestamoCastigado', Tipo: '[sBTPrestamoCastigado](#sbtprestamocastigado)', Comentarios: 'Datos del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDeudaPrestamoCastigadoComponent1750945335002 {
          <bts:operacionUId>10164</bts:operacionUId>
       </bts:BTPrestamos.ObtenerDeudaPrestamoCastigado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDeudaPrestamoCastigado=\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDeudaPrestamoCastigadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

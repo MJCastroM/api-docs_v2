@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSaldoDisponibleComponent1750945332872 {
+export class ObtenerSaldoDisponibleComponent1751987197215 {
   pageTitle        = 'Obtener Saldo Disponible';
   description      = `Método para obtener el total de saldo disponible de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerSaldoDisponible';
@@ -21,7 +21,7 @@ export class ObtenerSaldoDisponibleComponent1750945332872 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'estado', Tipo: 'Byte', Comentarios: 'Estado de la operación.' }, { Nombre: 'saldoDisponible', Tipo: 'Double', Comentarios: 'Saldo disponible de la operación.' }, { Nombre: 'moneda', Tipo: 'String', Comentarios: 'Signo de la moneda de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '30101', Descripcion: 'No se recuperó la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'La operación ingresada no corresponde a una cuenta vista.' }, { Código: '30101', Descripción: 'No se recuperó la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerSaldoDisponibleComponent1750945332872 {
          <bts:operacionUId>1</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerSaldoDisponible>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista_v1?ObtenerSaldoDisponible \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerSaldoDisponibleResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

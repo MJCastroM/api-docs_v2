@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarReferenciaComponent1750945334125 {
+export class AgregarReferenciaComponent1751987198504 {
   pageTitle        = 'Agregar Referencia';
   description      = `Método para agregar una referencia a una persona.`;
   pubName    = 'BTPersonas.AgregarReferencia';
@@ -21,7 +21,7 @@ export class AgregarReferenciaComponent1750945334125 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtReferencia', Tipo: '[sBTReferencia](#sbtreferencia)', Comentarios: 'Datos de referencia de la persona.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Identificador de persona requerido.' }, { Codigo: '30002', Descripcion: 'No existe persona con el identificador ingresada.' }, { Codigo: '40001', Descripcion: 'Correlativo no puede ser vacío.' }, { Codigo: '40002', Descripcion: 'Correlativo ya existe.' }, { Codigo: '40003', Descripcion: 'Tipo Código no puede ser vacío.' }, { Codigo: '40004', Descripcion: 'Tipo Código Incorrecto.' }, { Codigo: '40005', Descripcion: 'Vínculo Código no puede ser vacío.' }, { Codigo: '40006', Descripcion: 'Vínculo Código Incorrecto.' }, { Codigo: '40007', Descripcion: 'Nombre no puede ser vacío.' }, { Codigo: '40008', Descripcion: 'Domicilio1 no puede ser vacío' }, { Codigo: '40009', Descripcion: 'El teléfono no puede estar vacío.' }];
+  errors     = [{ Código: '30001', Descripción: 'Identificador de persona requerido.' }, { Código: '30002', Descripción: 'No existe persona con el identificador ingresada.' }, { Código: '40001', Descripción: 'Correlativo no puede ser vacío.' }, { Código: '40002', Descripción: 'Correlativo ya existe.' }, { Código: '40003', Descripción: 'Tipo Código no puede ser vacío.' }, { Código: '40004', Descripción: 'Tipo Código Incorrecto.' }, { Código: '40005', Descripción: 'Vínculo Código no puede ser vacío.' }, { Código: '40006', Descripción: 'Vínculo Código Incorrecto.' }, { Código: '40007', Descripción: 'Nombre no puede ser vacío.' }, { Código: '40008', Descripción: 'Domicilio1 no puede ser vacío' }, { Código: '40009', Descripción: 'El teléfono no puede estar vacío.' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class AgregarReferenciaComponent1750945334125 {
          </bts:sdtReferencia>
       </bts:BTPersonas.AgregarReferencia>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarReferencia\' \
@@ -103,7 +103,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarReferenciaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

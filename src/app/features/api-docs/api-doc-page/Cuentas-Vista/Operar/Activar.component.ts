@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActivarComponent1750945332896 {
+export class ActivarComponent1751987197247 {
   pageTitle        = 'Activar';
   description      = `Método para activar una cuenta vista.`;
   pubName    = 'BTCuentasVista.Activar';
@@ -21,7 +21,7 @@ export class ActivarComponent1750945332896 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'nuevoEstado', Tipo: 'Short', Comentarios: 'Nuevo estado [Hidden: Valor fijo \'0\'].' }, { Nombre: 'fechaVencimientoEstado', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del estado.' }, { Nombre: 'observaciones', Tipo: 'String', Comentarios: 'Observaciones.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ActivarComponent1750945332896 {
          <bts:observaciones>Cuenta Activa</bts:observaciones>
       </bts:BTCuentasVista.Activar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Activar\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ActivarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1750945335147 {
+export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component1751987199653 {
   pageTitle        = 'Actualizar Prestamos con Evento';
   description      = `Método para actualizar préstamos con eventos de la tabla SNG912.`;
   pubName    = 'BTPrestamos.ActualizarPrestamosConEvento';
@@ -38,7 +38,7 @@ export class ActualizarPrestamosconEventoDisponibleunicamenteparaV3R1Component17
          </bts:Btinreq>
       </bts:BTPrestamos.ActualizarPrestamosConEvento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ActualizarPrestamosConEvento=\' \
@@ -77,7 +77,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ActualizarPrestamosConEvento>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

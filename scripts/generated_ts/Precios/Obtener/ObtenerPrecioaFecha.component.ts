@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrecioaFechaComponent1750945334711 {
+export class ObtenerPrecioaFechaComponent1751987199108 {
   pageTitle        = 'Obtener Precio a Fecha';
   description      = `Método para obtener la cotización en moneda nacional de una especie en la fecha recibida.`;
   pubName    = 'BTPrecios.ObtenerPrecioAFecha';
@@ -21,7 +21,7 @@ export class ObtenerPrecioaFechaComponent1750945334711 {
 
   inputData  = [{ Nombre: 'especie', Tipo: 'Long', Comentarios: 'Identificador de la especie.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha a consultar.' }];
   outputData = [{ Nombre: 'precio', Tipo: 'Double', Comentarios: 'Cotización.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió una especie.' }, { Codigo: '40001', Descripcion: 'La especie no es un índice.' }, { Codigo: '40002', Descripcion: 'La especie no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió una especie.' }, { Código: '40001', Descripción: 'La especie no es un índice.' }, { Código: '40002', Descripción: 'La especie no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerPrecioaFechaComponent1750945334711 {
          <bts:fecha>2017-11-11</bts:fecha>
       </bts:BTPrecios.ObtenerPrecioAFecha>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerPrecioAFecha=\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ObtenerPrecioAFechaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

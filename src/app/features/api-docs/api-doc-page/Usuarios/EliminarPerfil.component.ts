@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarPerfilComponent1750945335784 {
+export class EliminarPerfilComponent1751987200430 {
   pageTitle        = 'Eliminar Perfil';
   description      = `Método para eliminar un perfil asociado a un usuario.`;
   pubName    = 'BTUsuarios.EliminarPerfil';
@@ -21,7 +21,7 @@ export class EliminarPerfilComponent1750945335784 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador de usuario.' }, { Nombre: 'perfil', Tipo: 'String', Comentarios: 'Identificador de perfil.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30002', Descripcion: 'No existe Usuario.' }, { Codigo: '30003', Descripcion: 'Debe ingresar Perfil.' }, { Codigo: '30004', Descripcion: 'No existe Perfil.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar Usuario.' }, { Código: '30002', Descripción: 'No existe Usuario.' }, { Código: '30003', Descripción: 'Debe ingresar Perfil.' }, { Código: '30004', Descripción: 'No existe Perfil.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarPerfilComponent1750945335784 {
          <bts:perfil>COMEX</bts:perfil>
       </bts:BTUsuarios.EliminarPerfil>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?EliminarPerfil\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.EliminarPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

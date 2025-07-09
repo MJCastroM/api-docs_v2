@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarOrdendeArchivoParaCuentaComponent1750945331576 {
+export class VisualizarOrdendeArchivoParaCuentaComponent1751987195928 {
   pageTitle        = 'Visualizar Orden de Archivo Para Cuenta';
   description      = `Método para visualizar las ordenes de un archivo de una cuenta.`;
   pubName    = 'BTCASHManagement.VisualizarOrdenArchivoCuenta';
@@ -21,7 +21,7 @@ export class VisualizarOrdendeArchivoParaCuentaComponent1750945331576 {
 
   inputData  = [{ Nombre: 'idArchivo', Tipo: 'Long', Comentarios: 'Identificador de archivo.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'listaResumenOrdenes', Tipo: '[sBTResumenCabezal](#sbtresumencabezal)', Comentarios: 'Listados de resumen de ordenes.' }];
-  errors     = [{ Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la información.' }, { Codigo: '1030770', Descripcion: 'No se recuperó información para la cuenta recibida.' }];
+  errors     = [{ Código: '1030712', Descripción: 'Se requiere cuenta para recuperar la información.' }, { Código: '1030770', Descripción: 'No se recuperó información para la cuenta recibida.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class VisualizarOrdendeArchivoParaCuentaComponent1750945331576 {
          <bts:clienteUId>376</bts:clienteUId>
       </bts:BTCASHManagement.VisualizarOrdenArchivoCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarOrdenArchivoCuenta=\' \
@@ -130,7 +130,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.VisualizarOrdenArchivoCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

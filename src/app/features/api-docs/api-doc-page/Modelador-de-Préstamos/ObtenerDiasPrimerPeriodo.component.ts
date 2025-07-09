@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDiasPrimerPeriodoComponent1750945333636 {
+export class ObtenerDiasPrimerPeriodoComponent1751987197920 {
   pageTitle        = 'Obtener Días Primer Período';
   description      = `Método para obtener cantidad mínima y máxima de días para el primer período de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerDiasPrimerPeriodo';
@@ -21,7 +21,7 @@ export class ObtenerDiasPrimerPeriodoComponent1750945333636 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de producto.' }];
   outputData = [{ Nombre: 'minimo', Tipo: 'Long', Comentarios: 'Mínimo de días posibles para el primer período.' }, { Nombre: 'maximo', Tipo: 'Long', Comentarios: 'Máximo de días posibles para el primer período.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Existe registro con la cuenta indicada.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDiasPrimerPeriodoComponent1750945333636 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerDiasPrimerPeriodo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -67,7 +67,7 @@ export class ObtenerDiasPrimerPeriodoComponent1750945333636 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerDiasPrimerPeriodoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionComponent1750945334483 {
+export class ObtenerProfesionComponent1751987198856 {
   pageTitle        = 'Obtener Profesión';
   description      = `Método para obtener la profesión de una persona física.`;
   pubName    = 'BTPersonas.ObtenerProfesion';
@@ -39,7 +39,7 @@ export class ObtenerProfesionComponent1750945334483 {
          <bts:personaUId>10003</bts:personaUId>
       </bts:BTPersonas.ObtenerProfesion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -70,7 +70,7 @@ export class ObtenerProfesionComponent1750945334483 {
          </Btoutreq>
       </BTPersonas.ObtenerProfesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

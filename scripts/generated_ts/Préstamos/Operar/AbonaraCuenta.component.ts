@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AbonaraCuentaComponent1750945335134 {
+export class AbonaraCuentaComponent1751987199638 {
   pageTitle        = 'Abonar a Cuenta';
   description      = `Método para recibir un pago a un préstamo en el que por alguna condición no se pudiere operar en ese momento. El pago se realiza a un pasivo transitorio u otro rubro a definir, el cual luego deberá ser volcado al préstamo.`;
   pubName    = 'BTPrestamos.AbonarACuenta';
@@ -32,7 +32,7 @@ export class AbonaraCuentaComponent1750945335134 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación simulada.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe a pagar.' }, { Nombre: 'recibeOperacionCobro', Tipo: 'String', Comentarios: '[Hidden: Recibe o no operación de cobro (S/N)].' }, { Nombre: 'operacionUId_cobro', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta vista de donde se cobrará el préstamo.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento [Asiento].' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de operación de cobro.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operacion para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operacion para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'La operación no pertenece al cliente.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }, { Codigo: '40001', Descripcion: 'La Cuenta indicada es incorrecta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recibió el identificador de operación de cobro.' }, { Código: '30003', Descripción: 'Debe ingresar importe.' }, { Código: '30004', Descripción: 'No se recuperó la operacion para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operacion para el Identificador: [Número de Identificador].' }, { Código: '30006', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30007', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Código: '30008', Descripción: 'El préstamo no pertenece al cliente.' }, { Código: '30009', Descripción: 'La operación no pertenece al cliente.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }, { Código: '40001', Descripción: 'La Cuenta indicada es incorrecta.' }];
 
   examples = {
     invocation: { xml: `
@@ -54,7 +54,7 @@ export class AbonaraCuentaComponent1750945335134 {
          <bts:referencia>AbonarACuenta</bts:referencia>
       </bts:BTPrestamos.AbonarACuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AbonarACuenta=\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.AbonarACuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerVariablesReglaComponent1750945335464 {
+export class ObtenerVariablesReglaComponent1751987200026 {
   pageTitle        = 'Obtener Variables Regla';
   description      = `Método para obtener las variables de una determinada regla de negocio.`;
   pubName    = 'BTReglasNegocio.ObtenerVariablesRegla';
@@ -21,7 +21,7 @@ export class ObtenerVariablesReglaComponent1750945335464 {
 
   inputData  = [{ Nombre: 'reglaId', Tipo: 'Long', Comentarios: 'Código de regla de negocio.' }];
   outputData = [{ Nombre: 'sdtVariablesRegla', Tipo: '[sBTVariableRegla](#sbtvariableregla)', Comentarios: 'Listado de variables.' }];
-  errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió ID de Regla.' }];
+  errors     = [{ Código: '1011050', Descripción: 'No se recibió ID de Regla.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerVariablesReglaComponent1750945335464 {
          <bts:reglaId>1</bts:reglaId>
       </bts:BTReglasNegocio.ObtenerVariablesRegla>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTReglasNegocio?ObtenerVariablesRegla\' \
@@ -104,7 +104,7 @@ curl -X POST \
          </Btoutreq>
       </BTReglasNegocio.ObtenerVariablesReglaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

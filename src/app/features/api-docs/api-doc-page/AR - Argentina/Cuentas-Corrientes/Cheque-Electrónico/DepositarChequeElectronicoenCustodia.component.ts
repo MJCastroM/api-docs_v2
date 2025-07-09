@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DepositarChequeElectronicoenCustodiaComponent1750945331112 {
+export class DepositarChequeElectronicoenCustodiaComponent1751987195440 {
   pageTitle        = 'Depositar Cheque Electrónico en Custodia';
   description      = `Método para depositar un cheque electrónico bajo custodia.`;
   pubName    = 'BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia';
@@ -21,7 +21,7 @@ export class DepositarChequeElectronicoenCustodiaComponent1750945331112 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'numeroCheque', Tipo: 'Int', Comentarios: 'Número de cheque a emitir.' }, { Nombre: 'bancoLibradorId', Tipo: 'Short', Comentarios: 'Identificador de banco librador.' }, { Nombre: 'sucursalLibradoraId', Tipo: 'Short', Comentarios: 'Identificador de sucursal del banco librador.' }, { Nombre: 'CUITBeneficiario', Tipo: 'String', Comentarios: 'CUIT beneficiario.' }, { Nombre: 'paisBeneficiarioId', Tipo: 'Long', Comentarios: 'Identificador del país del beneficiario.' }, { Nombre: 'tipoDocumentoBeneficiarioId', Tipo: 'Long', Comentarios: 'Identificador del tipo de documento del beneficiario.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class DepositarChequeElectronicoenCustodiaComponent1750945331112 {
          <bts:fechaVencimiento></bts:fechaVencimiento>
       </bts:BTCuentasCorrientes.DepositarChequeElectronicoEnCustodia>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, 
+</soapenv:Envelope></soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?DepositarChequeElectronicoEnCustodia\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.DepositarChequeElectronicoEnCustodiaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

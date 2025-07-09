@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularIngresandoSegurosSinClienteComponent1750945335365 {
+export class SimularIngresandoSegurosSinClienteComponent1751987199897 {
   pageTitle        = 'Simular Ingresando Seguros Sin Cliente';
   description      = `Método para simular el alta de un préstamo sin cliente ingresando los seguros a aplicar.`;
   pubName    = 'BTPrestamos.SimularIngresandoSegurosSC';
@@ -21,7 +21,7 @@ export class SimularIngresandoSegurosSinClienteComponent1750945335365 {
 
   inputData  = [{ Nombre: 'sdtPrestamoAlta', Tipo: '[sBTDatosDespejeSinCliente](#sbtdatosdespejesincliente)', Comentarios: 'Datos de la simulación.' }, { Nombre: 'sinSeguros', Tipo: 'String', Comentarios: 'Acción a tomar cuando la lista de seguros a aplicar es vacía (S: Simula sin tener en cuenta ningún seguro, N: Simula con los seguros preseteados).' }, { Nombre: 'sdtSeguros', Tipo: '[sBTSegurosSimulacion](#sbtsegurossimulacion)', Comentarios: 'Listado de códigos de seguros a aplicar.' }];
   outputData = [{ Nombre: 'sBTSimulacionPrestamo', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos de simulación del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ export class SimularIngresandoSegurosSinClienteComponent1750945335365 {
          </bts:sdtSeguros>
       </bts:BTPrestamos.SimularIngresandoSegurosSC>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularIngresandoSegurosSC\' \
@@ -207,7 +207,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.SimularIngresandoSegurosSCResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarCuentadeCobroComponent1750945335154 {
+export class AgregarCuentadeCobroComponent1751987199660 {
   pageTitle        = 'Agregar Cuenta de Cobro';
   description      = `Método para agregar una cuenta de cobro de un préstamo.`;
   pubName    = 'BTPrestamos.AgregarCuentaDeCobro';
@@ -21,7 +21,7 @@ export class AgregarCuentadeCobroComponent1750945335154 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación del préstamo.' }, { Nombre: 'operacionUId_cobro', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta de cobro.' }, { Nombre: 'permite_sobregirar', Tipo: 'String', Comentarios: 'Define si la cuenta de cobro puede sobregirar o no (S/N).' }, { Nombre: 'permite_pago_parcial', Tipo: 'String', Comentarios: 'Define si se permiten pagos parciales de la cuenta de cobro (S/N).' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de Préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación de cobro para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de Préstamo.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió el identificador único de operación de cobro.' }, { Código: '30004', Descripción: 'No se recuperó la operación de cobro para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class AgregarCuentadeCobroComponent1750945335154 {
          <bts:permite_pago_parcial>S</bts:permite_pago_parcial>
       </bts:BTPrestamos.AgregarCuentaDeCobro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AgregarCuentaDeCobro\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.AgregarCuentaDeCobroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

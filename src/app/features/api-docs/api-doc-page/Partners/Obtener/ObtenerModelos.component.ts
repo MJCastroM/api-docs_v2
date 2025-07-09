@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosComponent1750945333769 {
+export class ObtenerModelosComponent1751987198073 {
   pageTitle        = 'Obtener Modelos';
   description      = `Método para retornar los modelos de una marca.`;
   pubName    = 'BTPartners.ObtenerModelos';
@@ -21,7 +21,7 @@ export class ObtenerModelosComponent1750945333769 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'marcaUId', Tipo: 'Long', Comentarios: 'Identificador de la marca.' }];
   outputData = [{ Nombre: 'sdtModelos', Tipo: '[sBTModelo](#sbtmodelo)', Comentarios: 'Listado de los modelos de una marca.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30002', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30003', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30012', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30013', Descripcion: 'No se recibió vendedor.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió Partner ni canal.' }, { Código: '30002', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30003', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30012', Descripción: 'No se recibió punto de venta.' }, { Código: '30013', Descripción: 'No se recibió vendedor.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerModelosComponent1750945333769 {
          <bts:marcaUId>1</bts:marcaUId>
       </bts:BTPartners.ObtenerModelos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerModelos\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerModelosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

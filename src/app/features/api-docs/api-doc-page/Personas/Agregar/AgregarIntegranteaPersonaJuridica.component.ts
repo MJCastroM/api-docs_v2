@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteaPersonaJuridicaComponent1750945334112 {
+export class AgregarIntegranteaPersonaJuridicaComponent1751987198487 {
   pageTitle        = 'Agregar Integrante a Persona Jurídica';
   description      = `Método para agregar un integrante a una persona jurídica.`;
   pubName    = 'BTPersonas.AgregarIntegrantePersonaJuridica';
@@ -21,7 +21,7 @@ export class AgregarIntegranteaPersonaJuridicaComponent1750945334112 {
 
   inputData  = [{ Nombre: 'personaJuridicaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona jurídica.' }, { Nombre: 'sdtIntegranteAlta', Tipo: '[sBTIntegranteJuridicoAlta](#sbtintegrantejuridicoalta)', Comentarios: 'Datos de la persona física integrante de la persona jurídica indicada.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'INS\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador único de persona jurídica.' }, { Codigo: '30002', Descripcion: 'No se recibió identificador único de integrante de persona jurídica.' }, { Codigo: '30003', Descripcion: 'No se recibió identificador de vínculo del integrante de persona jurídica.' }, { Codigo: '40001', Descripcion: 'La sumatoria de porcentajes asociados a los integrantes de la persona jurídica es mayor al 100 %.' }, { Codigo: '40003', Descripcion: 'Debe ingresar el % de participación del accionista.' }, { Codigo: '40004', Descripcion: 'El % de participación no puede ser mayor al 100 %.' }, { Codigo: '40005', Descripcion: 'Si la persona no es Accionista, tiene que haber sido ingresada con Alta Normal para poder integrar a la persona.' }, { Codigo: '40006', Descripcion: 'Debe ingresar al menos un representante legal.' }, { Codigo: '40007', Descripcion: 'No se puede cambiar el vínculo, ya que es el único Representante Legal.' }, { Codigo: '40008', Descripcion: 'La persona a vincular no puede ser la misma.' }, { Codigo: '40009', Descripcion: 'No puede asociar una persona jurídica como representante legal.' }, { Codigo: '40010', Descripcion: 'No existe el identificador de vínculo ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador único de persona jurídica.' }, { Código: '30002', Descripción: 'No se recibió identificador único de integrante de persona jurídica.' }, { Código: '30003', Descripción: 'No se recibió identificador de vínculo del integrante de persona jurídica.' }, { Código: '40001', Descripción: 'La sumatoria de porcentajes asociados a los integrantes de la persona jurídica es mayor al 100 %.' }, { Código: '40003', Descripción: 'Debe ingresar el % de participación del accionista.' }, { Código: '40004', Descripción: 'El % de participación no puede ser mayor al 100 %.' }, { Código: '40005', Descripción: 'Si la persona no es Accionista, tiene que haber sido ingresada con Alta Normal para poder integrar a la persona.' }, { Código: '40006', Descripción: 'Debe ingresar al menos un representante legal.' }, { Código: '40007', Descripción: 'No se puede cambiar el vínculo, ya que es el único Representante Legal.' }, { Código: '40008', Descripción: 'La persona a vincular no puede ser la misma.' }, { Código: '40009', Descripción: 'No puede asociar una persona jurídica como representante legal.' }, { Código: '40010', Descripción: 'No existe el identificador de vínculo ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class AgregarIntegranteaPersonaJuridicaComponent1750945334112 {
          </bts:sdtIntegranteAlta>
       </bts:BTPersonas.AgregarIntegrantePersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarIntegrantePersonaJuridica\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarIntegrantePersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
 	"Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPeriodosdeAcreditacionComponent1750945332849 {
+export class ObtenerPeriodosdeAcreditacionComponent1751987197184 {
   pageTitle        = 'Obtener Períodos de Acreditación';
   description      = `Método para obtener los períodos de acreditación cargados en el sistema.`;
   pubName    = 'BTCuentasVista.ObtenerPeriodosDeAcreditacion';
@@ -38,7 +38,7 @@ export class ObtenerPeriodosdeAcreditacionComponent1750945332849 {
          </bts:Btinreq>
       </bts:BTCuentasVista.ObtenerPeriodosDeAcreditacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -102,7 +102,7 @@ export class ObtenerPeriodosdeAcreditacionComponent1750945332849 {
          </Btoutreq>
       </BTCuentasVista.ObtenerPeriodosDeAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

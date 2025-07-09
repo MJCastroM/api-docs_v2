@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarPagoEnLineaDesdeCuentaComponent1750945331557 {
+export class RegistrarPagoEnLineaDesdeCuentaComponent1751987195898 {
   pageTitle        = 'Registrar Pago En Linea Desde Cuenta';
   description      = `Método para registrar el pago en linea de una factura, debitando desde la cuenta.`;
   pubName    = 'BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta';
@@ -21,7 +21,7 @@ export class RegistrarPagoEnLineaDesdeCuentaComponent1750945331557 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Short', Comentarios: 'Identificador del contrato.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'deudaId', Tipo: 'String', Comentarios: 'Identificador de la deuda.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'importePago', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'sdtValoresCamposCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Lista de valores de campos CASH a buscar.' }];
   outputData = [{ Nombre: 'transaccionId', Tipo: 'Long', Comentarios: 'Identificador de transacción.' }, { Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de la orden.' }, { Nombre: 'nroLineaOrden', Tipo: 'Int', Comentarios: 'Número de línea de orden CASH.' }];
-  errors     = [{ Codigo: '1030614', Descripcion: 'Canal no habilitado para el servicio.' }, { Codigo: '1030615', Descripcion: 'Canal no habilitado para el contrato.' }, { Codigo: '1030618', Descripcion: 'El importe debe ser mayor a cero.' }, { Codigo: '1030619', Descripcion: 'Código de Moneda desconocido.' }, { Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030706', Descripcion: 'El contrato no esta activo.' }, { Codigo: '1030761', Descripcion: 'No se obtuvo Canal CASH para el canal que invoca.' }, { Codigo: '1030762', Descripcion: 'El servicio no es de recaudos.' }, { Codigo: '1030763', Descripcion: 'Debe indicar el identificador de la deuda.' }, { Codigo: '1030764', Descripcion: 'El servicio no es en linea, no se crea el cobro.' }, { Codigo: '1030765', Descripcion: 'La moneda del pago difiere con la del convenio.' }, { Codigo: '1030770', Descripcion: 'No se recupero información para la cuenta recibida.' }, { Codigo: '1030801', Descripcion: 'Saldo insuficiente para realizar el pago.' }, { Codigo: '1039999', Descripcion: 'No se determino módulo/transacción en la regla: [Número de regla].' }];
+  errors     = [{ Código: '1030614', Descripción: 'Canal no habilitado para el servicio.' }, { Código: '1030615', Descripción: 'Canal no habilitado para el contrato.' }, { Código: '1030618', Descripción: 'El importe debe ser mayor a cero.' }, { Código: '1030619', Descripción: 'Código de Moneda desconocido.' }, { Código: '1030701', Descripción: 'El Servicio no existe.' }, { Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030706', Descripción: 'El contrato no esta activo.' }, { Código: '1030761', Descripción: 'No se obtuvo Canal CASH para el canal que invoca.' }, { Código: '1030762', Descripción: 'El servicio no es de recaudos.' }, { Código: '1030763', Descripción: 'Debe indicar el identificador de la deuda.' }, { Código: '1030764', Descripción: 'El servicio no es en linea, no se crea el cobro.' }, { Código: '1030765', Descripción: 'La moneda del pago difiere con la del convenio.' }, { Código: '1030770', Descripción: 'No se recupero información para la cuenta recibida.' }, { Código: '1030801', Descripción: 'Saldo insuficiente para realizar el pago.' }, { Código: '1039999', Descripción: 'No se determino módulo/transacción en la regla: [Número de regla].' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class RegistrarPagoEnLineaDesdeCuentaComponent1750945331557 {
          </bts:sdtValoresCamposCash>
       </bts:BTCASHManagement.RegistrarPagoEnLineaDesdeCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?RegistrarPagoEnLineaDesdeCuenta=\' \
@@ -104,7 +104,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.RegistrarPagoEnLineaDesdeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

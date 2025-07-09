@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarLimiteComponent1750945335736 {
+export class ModificarLimiteComponent1751987200369 {
   pageTitle        = 'Modificar Límite';
   description      = `Método para modificar el límite de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ModificarLimite';
@@ -21,7 +21,7 @@ export class ModificarLimiteComponent1750945335736 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador de la tarjeta de débito.' }, { Nombre: 'codigoDeLimiteId', Tipo: 'Short', Comentarios: 'Código de límite.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recibió código de límite' }, { Codigo: '40001', Descripcion: 'No existe el tipo de límite' }, { Codigo: '40002', Descripcion: 'No existe la tarjeta' }, { Codigo: '40014', Descripcion: 'No se pudo confirmar la funcionalidad.' }, { Codigo: '40001', Descripcion: 'No existe la tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de tarjeta.' }, { Código: '30002', Descripción: 'No se recibió código de límite' }, { Código: '40001', Descripción: 'No existe el tipo de límite' }, { Código: '40002', Descripción: 'No existe la tarjeta' }, { Código: '40014', Descripción: 'No se pudo confirmar la funcionalidad.' }, { Código: '40001', Descripción: 'No existe la tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ModificarLimiteComponent1750945335736 {
          <bts:codigoDeLimiteId>1</bts:codigoDeLimiteId>
       </bts:BTTarjetasDeDebito.ModificarLimite>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ModificarLimite\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ModificarLimiteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

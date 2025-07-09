@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeDocumentoDigitalComponent1750945332160 {
+export class ObtenerTiposdeDocumentoDigitalComponent1751987196489 {
   pageTitle        = 'Obtener Tipos de Documento Digital';
   description      = `Método para obtener un listado de los tipos de documento digital ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeDocumentosDigitales';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeDocumentoDigitalComponent1750945332160 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTiposDeDocumentoDigital', Tipo: '[sBTTipoDocumentoDigital](#sbttipodocumentodigital)', Comentarios: 'Listado de tipos de documento digital.' }];
-  errors     = [{ Codigo: '30011', Descripcion: 'No existen tipos de documentos digitales ingresados en el sistema.' }];
+  errors     = [{ Código: '30011', Descripción: 'No existen tipos de documentos digitales ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposdeDocumentoDigitalComponent1750945332160 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposDeDocumentoDigital=\' \
@@ -235,7 +235,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerTiposDeDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

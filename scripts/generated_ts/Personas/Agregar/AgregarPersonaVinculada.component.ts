@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPersonaVinculadaComponent1750945334118 {
+export class AgregarPersonaVinculadaComponent1751987198494 {
   pageTitle        = 'Agregar Persona Vinculada';
   description      = `Método para agregar un vínculo de afinidad a una persona.`;
   pubName    = 'BTPersonas.AgregarPersonaVinculada';
@@ -21,7 +21,7 @@ export class AgregarPersonaVinculadaComponent1750945334118 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'personaVinculadaUId', Tipo: 'Long', Comentarios: 'Identificador único del vínculo de la persona.' }, { Nombre: 'vinculoId', Tipo: 'Short', Comentarios: 'Identificador del vínculo de consanguinidad.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de persona a relacionar.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '32003', Descripcion: 'Error en identificador de la persona a relacionar: No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'No se recibió el código de vínculo.' }, { Codigo: '41001', Descripcion: 'Registro de relación de personas existente.' }, { Codigo: '42000', Descripcion: 'El código de vínculo ingresado es inválido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador de persona a relacionar.' }, { Código: '31003', Descripción: 'No existe registro para el identificador único.' }, { Código: '32003', Descripción: 'Error en identificador de la persona a relacionar: No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'No se recibió el código de vínculo.' }, { Código: '41001', Descripción: 'Registro de relación de personas existente.' }, { Código: '42000', Descripción: 'El código de vínculo ingresado es inválido.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class AgregarPersonaVinculadaComponent1750945334118 {
          <bts:vinculoId>53</bts:vinculoId>
       </bts:BTPersonas.AgregarPersonaVinculada>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarPersonaVinculada\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarPersonaVinculadaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosComponent1750945332165 {
+export class ObtenerEstadosComponent1751987196497 {
   pageTitle        = 'Obtener Estados';
   description      = `Método para obtener un listado de los estados de producto ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstados';
@@ -21,7 +21,7 @@ export class ObtenerEstadosComponent1750945332165 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtEstados', Tipo: '[sBTEstadoOperacion](#sbtestadooperacion)', Comentarios: 'Listado de estados.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No hay estados parametrizados.' }];
+  errors     = [{ Código: '30001', Descripción: 'No hay estados parametrizados.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerEstadosComponent1750945332165 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerEstados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerEstados\' \
@@ -133,7 +133,7 @@ curl -X GET \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEstadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

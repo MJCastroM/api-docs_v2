@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularOfertasComponent1750945335386 {
+export class SimularOfertasComponent1751987199928 {
   pageTitle        = 'Simular Ofertas';
   description      = `Método para simular ofertas de préstamos.`;
   pubName    = 'BTPrestamos.SimularOfertas';
@@ -23,7 +23,7 @@ export class SimularOfertasComponent1750945335386 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'sdtSimulacion', Tipo: '[sBTDatosSimulacion](#sbtdatossimulacion)', Comentarios: 'Datos necesarios para la simulación.' }];
   outputData = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'sdtOfertasPrestamo', Tipo: '[sBTOfertaPrestamo](#sbtofertaprestamo)', Comentarios: 'Colección de ofertas de préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'El Identificador único de Producto es incorrecto' }, { Codigo: '30005', Descripcion: 'No se recibió Lista de cuotas a simular.' }, { Codigo: '30006', Descripcion: 'No se recibió el Monto de Capital desde el origen.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'El Identificador único de Producto es incorrecto' }, { Código: '30005', Descripción: 'No se recibió Lista de cuotas a simular.' }, { Código: '30006', Descripción: 'No se recibió el Monto de Capital desde el origen.' }];
 
   examples = {
     invocation: { xml: `
@@ -52,7 +52,7 @@ export class SimularOfertasComponent1750945335386 {
          </bts:sdtSimulacion>
       </bts:BTPrestamos.SimularOfertas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SimularOfertas=\' \
@@ -124,7 +124,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.SimularOfertasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearCondicionImpositivaComponent1750945332364 {
+export class CrearCondicionImpositivaComponent1751987196707 {
   pageTitle        = 'Crear Condición Impositiva';
   description      = `Método para dar de alta una condición impositiva para una persona.`;
   pubName    = 'BTContabilidad.CrearCondicionImpositiva';
@@ -21,7 +21,7 @@ export class CrearCondicionImpositivaComponent1750945332364 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'codigoImpuesto', Tipo: 'Short', Comentarios: 'Código de impuesto.' }, { Nombre: 'codigoCondicion', Tipo: 'Short', Comentarios: 'Código de condición.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class CrearCondicionImpositivaComponent1750945332364 {
          <bts:codigoCondicion>2</bts:codigoCondicion>
       </bts:BTContabilidad.CrearCondicionImpositiva>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?CrearCondicionImpositiva=\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.CrearCondicionImpositivaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

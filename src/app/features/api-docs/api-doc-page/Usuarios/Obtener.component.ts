@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComponent1750945335825 {
+export class ObtenerComponent1751987200478 {
   pageTitle        = 'Obtener';
   description      = `Método para obtener los datos de un usuario.`;
   pubName    = 'BTUsuarios.Obtener';
@@ -21,7 +21,7 @@ export class ObtenerComponent1750945335825 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Usuario a consultar.' }];
   outputData = [{ Nombre: 'sdtDatosUsuario', Tipo: '[sBTDatosUsuario](#sbtdatosusuario)', Comentarios: 'Datos del usuario.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió Usuario.' }, { Codigo: '40001', Descripcion: 'No existe el usuario ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió Usuario.' }, { Código: '40001', Descripción: 'No existe el usuario ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerComponent1750945335825 {
          <bts:usuario>INSTALADOR</bts:usuario>
       </bts:BTUsuarios.Obtener>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?Obtener=\' \
@@ -115,7 +115,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.ObtenerResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

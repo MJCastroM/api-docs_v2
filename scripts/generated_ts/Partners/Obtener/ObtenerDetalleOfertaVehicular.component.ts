@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleOfertaVehicularComponent1750945333759 {
+export class ObtenerDetalleOfertaVehicularComponent1751987198056 {
   pageTitle        = 'Obtener Detalle de Oferta Vehicular';
   description      = `Método para obtener el detalle de una oferta vehicular.`;
   pubName    = 'BTPartners.ObtenerDetalleOfertaVehicular';
@@ -21,7 +21,7 @@ export class ObtenerDetalleOfertaVehicularComponent1750945333759 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'destinoCredito', Tipo: 'Long', Comentarios: 'Destino del crédito' }];
   outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de simulación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de simulación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Código: '30005', Descripción: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class ObtenerDetalleOfertaVehicularComponent1750945333759 {
          <bts:destinoCredito>12</bts:destinoCredito>
       </bts:BTPartners.ObtenerDetalleOfertaVehicular>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerDetalleOfertaVehicular\' \
@@ -292,7 +292,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerDetalleOfertaVehicularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

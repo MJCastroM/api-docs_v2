@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBolsillosComponent1750945332796 {
+export class ObtenerBolsillosComponent1751987197114 {
   pageTitle        = 'Obtener Bolsillos';
   description      = `Método para obtener un listado de las cuentas bolsillo asociadas a una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerBolsillos';
@@ -21,7 +21,7 @@ export class ObtenerBolsillosComponent1750945332796 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtInformacionBolsillos', Tipo: '[sBTInfRBolsillo](#sbtinfrbolsillo)', Comentarios: 'Listado de la información del bolsillo.' }];
-  errors     = [{ Codigo: '30003', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30005', Descripcion: 'OperacionUID no corresponde a CA.' }, { Codigo: '30006', Descripcion: 'La cuenta no existe o no se encuentra activa.' }];
+  errors     = [{ Código: '30003', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30005', Descripción: 'OperacionUID no corresponde a CA.' }, { Código: '30006', Descripción: 'La cuenta no existe o no se encuentra activa.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerBolsillosComponent1750945332796 {
          <bts:operacionUId>9</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerBolsillos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerBolsillos\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerBolsillosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

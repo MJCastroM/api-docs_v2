@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosComponent1750945333784 {
+export class ObtenerProductosComponent1751987198092 {
   pageTitle        = 'Obtener Productos';
   description      = `Método para retornar los productos de la concesionaria.`;
   pubName    = 'BTPartners.ObtenerProductos';
@@ -21,7 +21,7 @@ export class ObtenerProductosComponent1750945333784 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'sdtVehiculo', Tipo: '[sBTVehiculo](#sbtvehiculo)', Comentarios: 'Datos del vehículo.' }, { Nombre: 'stringAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'S\' para este método].' }];
   outputData = [{ Nombre: 'sdtProductos', Tipo: '[sBTProducto](#sbtproducto)', Comentarios: 'Listado de los productos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió Partner ni canal.' }, { Codigo: '30002', Descripcion: 'El Partner no se encuentra habilitado.' }, { Codigo: '30003', Descripcion: 'No existe Partner con ese identificador.' }, { Codigo: '30012', Descripcion: 'No se recibió punto de venta.' }, { Codigo: '30013', Descripcion: 'No se recibió vendedor.' }, { Codigo: '30020', Descripcion: 'No se recibió identificador de la versión.' }, { Codigo: '30021', Descripcion: 'No se recibió estado del vehículo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió Partner ni canal.' }, { Código: '30002', Descripción: 'El Partner no se encuentra habilitado.' }, { Código: '30003', Descripción: 'No existe Partner con ese identificador.' }, { Código: '30012', Descripción: 'No se recibió punto de venta.' }, { Código: '30013', Descripción: 'No se recibió vendedor.' }, { Código: '30020', Descripción: 'No se recibió identificador de la versión.' }, { Código: '30021', Descripción: 'No se recibió estado del vehículo.' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ export class ObtenerProductosComponent1750945333784 {
          </bts:sdtVehiculo>
       </bts:BTPartners.ObtenerProductos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerProductos\' \
@@ -141,7 +141,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerProductosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

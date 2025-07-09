@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequesdeChequeraComponent1750945332573 {
+export class ObtenerChequesdeChequeraComponent1751987196901 {
   pageTitle        = 'Obtener Cheques de Chequera';
   description      = `Método para obtener un listado de los cheques de una chequera.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequesDeChequera';
@@ -21,7 +21,7 @@ export class ObtenerChequesdeChequeraComponent1750945332573 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de solicitud de chequera.' }];
   outputData = [{ Nombre: 'sdtCheques', Tipo: '[sBTCheque](#sbtcheque)', Comentarios: 'Listado de cheques.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió identificador de chequera.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación para el identificador recibido.' }, { Codigo: '40003', Descripcion: 'La chequera no pertenece a la operación.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió identificador de chequera.' }, { Código: '30011', Descripción: 'No se recuperó la operación para el identificador recibido.' }, { Código: '40003', Descripción: 'La chequera no pertenece a la operación.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerChequesdeChequeraComponent1750945332573 {
          <bts:chequeraId>21</bts:chequeraId>
       </bts:BTCuentasCorrientes.ObtenerChequesDeChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerChequesDeChequera\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerChequesDeChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

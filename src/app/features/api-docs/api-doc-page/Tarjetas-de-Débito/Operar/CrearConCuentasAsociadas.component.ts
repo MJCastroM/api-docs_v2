@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearConCuentasAsociadasComponent1750945335693 {
+export class CrearConCuentasAsociadasComponent1751987200317 {
   pageTitle        = 'Crear Con Cuentas Asociadas';
   description      = `Método para dar de alta una tarjeta con cuentas asociadas.`;
   pubName    = 'BTTarjetasDeDebito.CrearConCuentasAsociadas';
@@ -21,7 +21,7 @@ export class CrearConCuentasAsociadasComponent1750945335693 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'tipoTarjeta', Tipo: 'String', Comentarios: 'Tipo de tarjeta.' }, { Nombre: 'nombreTarjeta', Tipo: 'String', Comentarios: 'Nombre de tarjeta.' }, { Nombre: 'sdtIdOperaciones', Tipo: '[sBTIdOperacion](#sbtidoperacion)', Comentarios: 'Listado de identificadores únicos de operaciones de las cuentas a asociar.' }];
   outputData = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: 'numeroTarjeta', Tipo: 'String', Comentarios: 'Número de tarjeta.' }, { Nombre: 'fechaExpiracion', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'estadoTarjeta', Tipo: 'String', Comentarios: 'Estado de la tarjeta.' }, { Nombre: 'estadoPlastico', Tipo: 'String', Comentarios: 'Estado del plástico.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibieron los Identificadores de las operaciones a asociar.' }, { Codigo: '30005', Descripcion: 'La cuenta a asociar de la operacionUId [Número de Identificador] es incorrecta.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación para el identificador de operación: [Número de Identificador].' }, { Codigo: '40001', Descripcion: 'Tipo de tarjeta inexistente TDD015.' }, { Codigo: '40002', Descripcion: 'El titular excede la cantidad máxima de tarjetas activas.' }, { Codigo: '40003', Descripcion: 'El titular no existe en FSD001.' }, { Codigo: '40004', Descripcion: 'Cuenta de costo no pertenece al titular.' }, { Codigo: '40005', Descripcion: 'Cuenta de costo no existe en FSD011.' }, { Codigo: '40006', Descripcion: 'Código de domicilio inválido para el titular.' }, { Codigo: '40007', Descripcion: 'Cuenta a asociar a tarjeta no pertenece al titular.' }, { Codigo: '40010', Descripcion: 'Número de tarjeta no es válido.' }, { Codigo: '40011', Descripcion: 'TD nominada, no se debe informar TDD003TAR.' }, { Codigo: '40020', Descripcion: 'Funcionalidad inexistente en TDD025.' }, { Codigo: '40021', Descripcion: 'Funcionalidad inhabilitada en TDD025.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibieron los Identificadores de las operaciones a asociar.' }, { Código: '30005', Descripción: 'La cuenta a asociar de la operacionUId [Número de Identificador] es incorrecta.' }, { Código: '30011', Descripción: 'No se recuperó la operación para el identificador de operación: [Número de Identificador].' }, { Código: '40001', Descripción: 'Tipo de tarjeta inexistente TDD015.' }, { Código: '40002', Descripción: 'El titular excede la cantidad máxima de tarjetas activas.' }, { Código: '40003', Descripción: 'El titular no existe en FSD001.' }, { Código: '40004', Descripción: 'Cuenta de costo no pertenece al titular.' }, { Código: '40005', Descripción: 'Cuenta de costo no existe en FSD011.' }, { Código: '40006', Descripción: 'Código de domicilio inválido para el titular.' }, { Código: '40007', Descripción: 'Cuenta a asociar a tarjeta no pertenece al titular.' }, { Código: '40010', Descripción: 'Número de tarjeta no es válido.' }, { Código: '40011', Descripción: 'TD nominada, no se debe informar TDD003TAR.' }, { Código: '40020', Descripción: 'Funcionalidad inexistente en TDD025.' }, { Código: '40021', Descripción: 'Funcionalidad inhabilitada en TDD025.' }];
 
   examples = {
     invocation: { xml: `
@@ -49,7 +49,7 @@ export class CrearConCuentasAsociadasComponent1750945335693 {
          </bts:sdtIdOperaciones>
       </bts:BTTarjetasDeDebito.CrearConCuentasAsociadas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?CrearConCuentasAsociadas\' \
@@ -106,7 +106,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.CrearConCuentasAsociadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

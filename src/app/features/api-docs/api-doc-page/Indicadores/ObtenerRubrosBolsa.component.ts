@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRubrosBolsaComponent1750945333312 {
+export class ObtenerRubrosBolsaComponent1751987197707 {
   pageTitle        = 'Obtener Rubros Bolsa';
   description      = `Método para obtener posibles rubros de bolsa ingresados en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerRubrosBolsa';
@@ -38,7 +38,7 @@ export class ObtenerRubrosBolsaComponent1750945333312 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerRubrosBolsa>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerRubrosBolsa\' \
@@ -100,7 +100,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerRubrosBolsaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
   "Btinreq": {

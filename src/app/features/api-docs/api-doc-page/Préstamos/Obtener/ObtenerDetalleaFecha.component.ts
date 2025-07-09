@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleaFechaComponent1750945334924 {
+export class ObtenerDetalleaFechaComponent1751987199365 {
   pageTitle        = 'Obtener Detalle a Fecha';
   description      = `Método para obtener los datos de un préstamo a una fecha especifica.`;
   pubName    = 'BTPrestamos.ObtenerDetalleAFecha';
@@ -21,7 +21,7 @@ export class ObtenerDetalleaFechaComponent1750945334924 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación simulada.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha a consultar.' }];
   outputData = [{ Nombre: 'sdtPrestamo', Tipo: '[sBTPrestamo](#sbtprestamo)', Comentarios: 'Datos del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador.' }, { Código: '30003', Descripción: 'No se recibió fecha.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDetalleaFechaComponent1750945334924 {
          <bts:fecha>2018-11-15</bts:fecha>
       </bts:BTPrestamos.ObtenerDetalleAFecha>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleAFecha=\' \
@@ -143,7 +143,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleAFechaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

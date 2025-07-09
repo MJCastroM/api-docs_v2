@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class RegistrarDispositivoComponent1750945335501 {
+export class RegistrarDispositivoComponent1751987200074 {
   pageTitle        = 'Registrar Dispositivo';
   description      = `Método para registrar un dispositivo en el sistema.`;
   pubName    = 'BTSeguridad.RegistrarDispositivo';
@@ -21,7 +21,7 @@ export class RegistrarDispositivoComponent1750945335501 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Nombre identificador de usuario.' }, { Nombre: 'idDispositivo', Tipo: 'String', Comentarios: 'Identificador de dispositivo.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el usuario.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador para notificaciones.' }, { Codigo: '30003', Descripcion: 'Usuario no válido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el usuario.' }, { Código: '30002', Descripción: 'No se recibió el identificador para notificaciones.' }, { Código: '30003', Descripción: 'Usuario no válido.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class RegistrarDispositivoComponent1750945335501 {
          <bts:idDispositivo>MFYCE9TC1215TP56789</bts:idDispositivo>
       </bts:BTSeguridad.RegistrarDispositivo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSeguridad?RegistrarDispositivo=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTSeguridad.RegistrarDispositivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

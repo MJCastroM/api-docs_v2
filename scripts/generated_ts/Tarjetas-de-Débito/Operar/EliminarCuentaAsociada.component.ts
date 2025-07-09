@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarCuentaAsociadaComponent1750945335728 {
+export class EliminarCuentaAsociadaComponent1751987200362 {
   pageTitle        = 'Eliminar Cuenta Asociada';
   description      = `Método para eliminar una cuenta asociada de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.EliminarCuentaAsociada';
@@ -21,7 +21,7 @@ export class EliminarCuentaAsociadaComponent1750945335728 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta de débito.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de tarjeta de débito.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación a eliminar.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el Identificador de tarjeta de débito.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la operación a eliminar.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarCuentaAsociadaComponent1750945335728 {
          <bts:tarjetaUId>1</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.EliminarCuentaAsociada>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -77,7 +77,7 @@ export class EliminarCuentaAsociadaComponent1750945335728 {
          </Btoutreq>
       </BTTarjetasDeDebito.EliminarCuentaAsociadaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

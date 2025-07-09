@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosPEPComponent1750945334319 {
+export class ObtenerDatosPEPComponent1751987198688 {
   pageTitle        = 'Obtener Datos PEP';
   description      = `Método para obtener los datos de una persona expuesta políticamente.`;
   pubName    = 'BTPersonas.ObtenerDatosPEP';
@@ -21,7 +21,7 @@ export class ObtenerDatosPEPComponent1750945334319 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'esPEP', Tipo: 'String', Comentarios: 'Es persona políticamente expuesta? (S/N).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDatosPEPComponent1750945334319 {
          <bts:personaUId>1</bts:personaUId>
       </bts:BTPersonas.ObtenerDatosPEP>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDatosPEP=\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerDatosPEPResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

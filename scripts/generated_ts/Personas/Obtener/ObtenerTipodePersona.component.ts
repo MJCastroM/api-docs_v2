@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTipodePersonaComponent1750945334511 {
+export class ObtenerTipodePersonaComponent1751987198892 {
   pageTitle        = 'Obtener Tipo de Persona';
   description      = `Método para obtener el tipo de una persona (Física o Jurídica).`;
   pubName    = 'BTPersonas.ObtenerTipoDePersona';
@@ -21,7 +21,7 @@ export class ObtenerTipodePersonaComponent1750945334511 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'tipoPersona', Tipo: 'String', Comentarios: 'Tipo de Persona. (F/J)' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'La persona no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30013', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'La persona no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTipodePersonaComponent1750945334511 {
          <bts:personaUId>61</bts:personaUId>
       </bts:BTPersonas.ObtenerTipoDePersona>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -66,7 +66,7 @@ export class ObtenerTipodePersonaComponent1750945334511 {
          </Btoutreq>
       </BTPersonas.ObtenerTipoDePersonaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

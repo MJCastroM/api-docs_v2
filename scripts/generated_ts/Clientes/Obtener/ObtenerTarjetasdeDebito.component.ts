@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetasdeDebitoComponent1750945332041 {
+export class ObtenerTarjetasdeDebitoComponent1751987196420 {
   pageTitle        = 'Obtener Tarjetas de Débito';
   description      = `Método para obtener los productos de tarjeta de débito que tiene contratado un cliente.`;
   pubName    = 'BTClientes.ObtenerTarjetasDebito';
@@ -23,7 +23,7 @@ export class ObtenerTarjetasdeDebitoComponent1750945332041 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtProductosTarjeta', Tipo: '[sBDProductoTarjeta](#sbdproductotarjeta)', Comentarios: 'Listado de tarjetas.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerTarjetasdeDebitoComponent1750945332041 {
          <bts:clienteUId>81</bts:clienteUId>
       </bts:BTClientes.ObtenerTarjetasDebito>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerTarjetasDebito=\' \
@@ -119,7 +119,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerTarjetasDebitoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentoDigitalComponent1750945334197 {
+export class ObtenerDocumentoDigitalComponent1751987198584 {
   pageTitle        = 'Obtener Documento Digital';
   description      = `Método para obtener los datos de un documento digital de una persona.`;
   pubName    = 'BTPersonas.ObtenerDocumentoDigital';
@@ -21,7 +21,7 @@ export class ObtenerDocumentoDigitalComponent1750945334197 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador de documento.' }];
   outputData = [{ Nombre: 'sdtDocumentosDigitales', Tipo: '[sBTVersionDocumentoDigital](#sbtversiondocumentodigital)', Comentarios: 'Datos de documento digital.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de documento.' }, { Codigo: '30024', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30031', Descripcion: 'El documento digital no existe.' }, { Codigo: '30032', Descripcion: 'Ocurrió un error al obtener la última versión del documento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador de documento.' }, { Código: '30024', Descripción: 'No existe registro para el identificador único.' }, { Código: '30031', Descripción: 'El documento digital no existe.' }, { Código: '30032', Descripción: 'Ocurrió un error al obtener la última versión del documento.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDocumentoDigitalComponent1750945334197 {
          <bts:documentoId>115</bts:documentoId>
       </bts:BTPersonas.ObtenerDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDocumentoDigital=\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

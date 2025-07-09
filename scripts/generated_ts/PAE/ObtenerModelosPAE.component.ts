@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerModelosPAEComponent1750945333697 {
+export class ObtenerModelosPAEComponent1751987197979 {
   pageTitle        = 'Obtener Modelos PAE';
   description      = `Método para obtener los modelos PAE.`;
   pubName    = 'BTPAE.ObtenerModelosPAE';
@@ -38,7 +38,7 @@ export class ObtenerModelosPAEComponent1750945333697 {
          </bts:Btinreq>
       </bts:BTPAE.ObtenerModelosPAE>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerModelosPAE\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTPAE.ObtenerModelosPAEResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

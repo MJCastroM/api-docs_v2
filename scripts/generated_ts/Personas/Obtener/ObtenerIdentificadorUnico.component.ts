@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750945334403 {
+export class ObtenerIdentificadorUnicoComponent1751987198765 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único de una persona.`;
   pubName    = 'BTPersonas.ObtenerIdentificadorUnico';
@@ -21,7 +21,7 @@ export class ObtenerIdentificadorUnicoComponent1750945334403 {
 
   inputData  = [{ Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del país de origen del documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento de la persona.' }];
   outputData = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del país de documento.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibió el número de documento.' }, { Codigo: '30004', Descripcion: 'No existe registro de la Persona.' }, { Codigo: '30005', Descripcion: 'No se pudo obtener identificador único de la persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del país de documento.' }, { Código: '30002', Descripción: 'No se recibió el identificador del tipo de documento.' }, { Código: '30003', Descripción: 'No se recibió el número de documento.' }, { Código: '30004', Descripción: 'No existe registro de la Persona.' }, { Código: '30005', Descripción: 'No se pudo obtener identificador único de la persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerIdentificadorUnicoComponent1750945334403 {
          <bts:numeroDocumento>49670628</bts:numeroDocumento>
       </bts:BTPersonas.ObtenerIdentificadorUnico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerIdentificadorUnico\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerIdentificadorUnicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

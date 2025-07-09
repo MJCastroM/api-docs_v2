@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDomicilioComponent1750945331631 {
+export class ActualizarDomicilioComponent1751987195993 {
   pageTitle        = 'Actualizar Domicilio';
   description      = `Método para actualizar los datos del domicilio de un cliente.`;
   pubName    = 'BTClientes.ActualizarDomicilio';
@@ -21,7 +21,7 @@ export class ActualizarDomicilioComponent1750945331631 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'domicilio', Tipo: '[sBTDomicilioCompleto](#sbtdomiciliocompleto)', Comentarios: 'Datos del domicilio.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30002', Descripcion: 'El identificador de la cuenta no es correcto.' }, { Codigo: '30011', Descripcion: 'Código de domicilio no válido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la cuenta.' }, { Código: '30002', Descripción: 'El identificador de la cuenta no es correcto.' }, { Código: '30011', Descripción: 'Código de domicilio no válido.' }];
 
   examples = {
     invocation: { xml: `
@@ -69,7 +69,7 @@ export class ActualizarDomicilioComponent1750945331631 {
          </bts:domicilio>
       </bts:BTClientes.ActualizarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ActualizarDomicilio=\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ActualizarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

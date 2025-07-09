@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasOrigenHabilitadasComponent1750945331035 {
+export class ObtenerCuentasOrigenHabilitadasComponent1751987195371 {
   pageTitle        = 'Obtener Cuentas Origen Habilitadas';
   description      = `Método para obtener un listado de cuentas habilitadas para debitar periódicamente.`;
   pubName    = 'BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas';
@@ -21,7 +21,7 @@ export class ObtenerCuentasOrigenHabilitadasComponent1750945331035 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }];
   outputData = [{ Nombre: 'sdtCuentas', Tipo: '[sBTProductoPasivo](#sbtproductopasivo)', Comentarios: 'Listado de cuentas habilitadas para origen del ahorro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del producto de ahorro.' }, { Codigo: '30004', Descripcion: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la persona para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'El producto seleccionado no corresponde a un producto de ahorro.' }, { Codigo: '40002', Descripcion: 'La persona seleccionada no integra la cuenta-cliente.' }, { Codigo: '40101', Descripcion: 'El cliente no se encuentra facultado para operar con cuenta vista.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30003', Descripción: 'No se recibió el identificador del producto de ahorro.' }, { Código: '30004', Descripción: 'No se recuperó el producto de ahorro para el identificador: [Número de identificador].' }, { Código: '30005', Descripción: 'No se recuperó la persona para el identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '40001', Descripción: 'El producto seleccionado no corresponde a un producto de ahorro.' }, { Código: '40002', Descripción: 'La persona seleccionada no integra la cuenta-cliente.' }, { Código: '40101', Descripción: 'El cliente no se encuentra facultado para operar con cuenta vista.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerCuentasOrigenHabilitadasComponent1750945331035 {
          <bts:productoUId>41</bts:productoUId>
       </bts:BTAhorroProgramado.ObtenerCuentasOrigenHabilitadas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ObtenerCuentasOrigenHabilitadas\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerCuentasOrigenHabilitadasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

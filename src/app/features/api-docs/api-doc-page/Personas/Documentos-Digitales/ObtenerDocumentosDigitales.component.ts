@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750945334204 {
+export class ObtenerDocumentosDigitalesComponent1751987198587 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener un listado de los documentos digitales de una persona.`;
   pubName    = 'BTPersonas.ObtenerDocumentosDigitales';
@@ -21,7 +21,7 @@ export class ObtenerDocumentosDigitalesComponent1750945334204 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtDocumentosDigitales', Tipo: '[sBTDocumentoDigital](#sbtdocumentodigital)', Comentarios: 'Listado de Documentos Digitales.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30023', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30050', Descripcion: 'La persona indicada no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30023', Descripción: 'No existe registro para el identificador único.' }, { Código: '30050', Descripción: 'La persona indicada no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDocumentosDigitalesComponent1750945334204 {
          <bts:personaUId>22</bts:personaUId>
       </bts:BTPersonas.ObtenerDocumentosDigitales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDocumentosDigitales=\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerDocumentosDigitalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

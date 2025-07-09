@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerItemsModeloComponent1750945333689 {
+export class ObtenerItemsModeloComponent1751987197971 {
   pageTitle        = 'Obtener Items Modelo';
   description      = `Método para obtener los items de un determinado modelo PAE.`;
   pubName    = 'BTPAE.ObtenerItemsModelo';
@@ -21,7 +21,7 @@ export class ObtenerItemsModeloComponent1750945333689 {
 
   inputData  = [{ Nombre: 'modeloId', Tipo: 'Short', Comentarios: 'Código de modelo.' }];
   outputData = [{ Nombre: 'sdtItems', Tipo: '[sBTItemPAE](#sbtitempae)', Comentarios: 'Listado de items de modelo PAE.' }];
-  errors     = [{ Codigo: '1011050', Descripcion: 'No se recibió modelo de evaluación PAE.' }];
+  errors     = [{ Código: '1011050', Descripción: 'No se recibió modelo de evaluación PAE.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerItemsModeloComponent1750945333689 {
          <bts:modeloId>2</bts:modeloId>
       </bts:BTPAE.ObtenerItemsModelo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPAE?ObtenerItemsModelo\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPAE.ObtenerItemsModeloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

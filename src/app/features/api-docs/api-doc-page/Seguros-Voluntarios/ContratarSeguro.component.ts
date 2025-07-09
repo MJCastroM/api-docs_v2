@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSeguroComponent1750945335508 {
+export class ContratarSeguroComponent1751987200083 {
   pageTitle        = 'Contratar Seguro';
   description      = `Método para contratar un seguro.`;
   pubName    = 'BTSegurosVoluntarios.ContratarSeguro';
@@ -21,7 +21,7 @@ export class ContratarSeguroComponent1750945335508 {
 
   inputData  = [{ Nombre: 'seguroUId', Tipo: 'Int', Comentarios: 'Identificador único del seguro.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'numeroAfiliacion', Tipo: 'Int', Comentarios: 'Número de afiliación.' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }, { Nombre: 'stringAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo vacío para este método].' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó código de seguro.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30003', Descripcion: 'El importe ingresado no puede ser nulo.' }, { Codigo: '30004', Descripcion: 'El importe ingresado no puede ser negativo.' }, { Codigo: '30005', Descripcion: 'La cantidad de Cuotas es menor a la indicada.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador]' }, { Codigo: '40044', Descripcion: 'Error de configuración: No se definió transacción a ejecutar.' }, { Codigo: '60001', Descripcion: 'El código del seguro no es válido para la contratación.' }, { Codigo: '60008', Descripcion: 'La cantidad de Cuotas debe ser menor a la indicada.' }, { Codigo: '60009', Descripcion: 'El código de moneda ingresado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se ingresó código de seguro.' }, { Código: '30002', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30003', Descripción: 'El importe ingresado no puede ser nulo.' }, { Código: '30004', Descripción: 'El importe ingresado no puede ser negativo.' }, { Código: '30005', Descripción: 'La cantidad de Cuotas es menor a la indicada.' }, { Código: '30006', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador]' }, { Código: '40044', Descripción: 'Error de configuración: No se definió transacción a ejecutar.' }, { Código: '60001', Descripción: 'El código del seguro no es válido para la contratación.' }, { Código: '60008', Descripción: 'La cantidad de Cuotas debe ser menor a la indicada.' }, { Código: '60009', Descripción: 'El código de moneda ingresado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class ContratarSeguroComponent1750945335508 {
          <bts:operacionCobroUId>47</bts:operacionCobroUId>
       </bts:BTSegurosVoluntarios.ContratarSeguro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSegurosVoluntarios?ContratarSeguro\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTSegurosVoluntarios.ContratarSeguroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

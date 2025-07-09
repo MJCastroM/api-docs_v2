@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarProfesionComponent1750945333995 {
+export class ActualizarProfesionComponent1751987198345 {
   pageTitle        = 'Actualizar Profesión';
   description      = `Método para actualizar la profesión de una persona física.`;
   pubName    = 'BTPersonas.ActualizarProfesion';
@@ -21,7 +21,7 @@ export class ActualizarProfesionComponent1750945333995 {
 
   inputData  = [];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'El identificador no corresponde a una persona física.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha de inicio de profesión.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de profesión.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'El identificador no corresponde a una persona física.' }, { Código: '30003', Descripción: 'No se recibió fecha de inicio de profesión.' }, { Código: '30004', Descripción: 'No se recibió el identificador de profesión.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ActualizarProfesionComponent1750945333995 {
          <bts:fechaInicioProfesion>2012-03-01</bts:fechaInicioProfesion>
       </bts:BTPersonas.ActualizarProfesion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarProfesion=\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarProfesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

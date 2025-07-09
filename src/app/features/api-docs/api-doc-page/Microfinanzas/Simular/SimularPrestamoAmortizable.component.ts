@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoAmortizableComponent1750945333582 {
+export class SimularPrestamoAmortizableComponent1751987197897 {
   pageTitle        = 'Simular Amortizable';
   description      = `Método para simular el alta de un préstamo amortizable para un crédito individual.`;
   pubName    = 'BTMicrofinanzas.SimularAmortizable';
@@ -21,7 +21,7 @@ export class SimularPrestamoAmortizableComponent1750945333582 {
 
   inputData  = [{ Nombre: 'sBTSimulacionAmortizable', Tipo: '[sBTSimulacionAmortizable](#sbtsimulacionamortizable)', Comentarios: 'Datos de la simulación.' }];
   outputData = [{ Nombre: 'sdtSimulacion', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos del préstamo simulado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la solicitud.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el Identificador [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class SimularPrestamoAmortizableComponent1750945333582 {
          </bts:sBTSimulacionAmortizable>
       </bts:BTMicrofinanzas.SimularAmortizable>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularAmortizable \
@@ -144,7 +144,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.SimularAmortizableResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

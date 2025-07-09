@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosInhabilitacionComponent1750945331907 {
+export class ObtenerMotivosInhabilitacionComponent1751987196304 {
   pageTitle        = 'Obtener Motivos Inhabilitación';
   description      = `Método para obtener un listado de los motivos de inhabilitación.`;
   pubName    = 'BTClientes.ObtenerMotivosInhabilitacion';
@@ -21,7 +21,7 @@ export class ObtenerMotivosInhabilitacionComponent1750945331907 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtMotivosInhabilitacion', Tipo: '[sBTMotivoInhabilitacion](#sbtmotivoinhabilitacion)', Comentarios: 'Listado de motivos de inhabilitación.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No existen motivos de inhabilitación.' }];
+  errors     = [{ Código: '40001', Descripción: 'No existen motivos de inhabilitación.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerMotivosInhabilitacionComponent1750945331907 {
          </bts:Btinreq>
       </bts:BTClientes.ObtenerMotivosInhabilitacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerMotivosInhabilitacion\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </Prueba.ObtenerMotivosInhabilitacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

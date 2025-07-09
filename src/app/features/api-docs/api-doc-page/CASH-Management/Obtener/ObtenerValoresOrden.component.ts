@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresOrdenComponent1750945331486 {
+export class ObtenerValoresOrdenComponent1751987195795 {
   pageTitle        = 'Obtener Valores Orden';
   description      = `Método para obtener los valores de los campos CASH recibidos como parámetros.`;
   pubName    = 'BTCASHManagement.ObtenerValoresOrden';
@@ -21,7 +21,7 @@ export class ObtenerValoresOrdenComponent1750945331486 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden CASH.' }, { Nombre: 'numeroLineaOrden', Tipo: 'Int', Comentarios: 'Número de línea de orden CASH.' }, { Nombre: 'camposCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Listado de campos CASH a devolver valor (Si no se ingresan items en la colección, se devuelven todos los valores).' }];
   outputData = [{ Nombre: 'valoresCamposCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Listado de valores de campos CASH.' }];
-  errors     = [{ Codigo: '1030753', Descripcion: 'No se encontró la orden para el identificador recibido.' }];
+  errors     = [{ Código: '1030753', Descripción: 'No se encontró la orden para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class ObtenerValoresOrdenComponent1750945331486 {
          </bts:camposCash>
       </bts:BTCASHManagement.ObtenerValoresOrden>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement.ObtenerValoresOrden\' \
@@ -110,7 +110,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerValoresOrdenResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

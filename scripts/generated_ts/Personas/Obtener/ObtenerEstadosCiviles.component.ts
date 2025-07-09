@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosCivilesComponent1750945334347 {
+export class ObtenerEstadosCivilesComponent1751987198710 {
   pageTitle        = 'Obtener Estados Civiles';
   description      = `Método para obtener un listado de los estados civiles registrados.`;
   pubName    = 'BTPersonas.ObtenerEstadoCiviles';
@@ -21,7 +21,7 @@ export class ObtenerEstadosCivilesComponent1750945334347 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtEstadosCiviles', Tipo: '[sBTEstadoCivil](#sbtestadocivil)', Comentarios: 'Listado de estados civiles.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No existen Estados Civiles ingresados en el sistema.' }];
+  errors     = [{ Código: '30001', Descripción: 'No existen Estados Civiles ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerEstadosCivilesComponent1750945334347 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerEstadoCiviles>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerEstadoCiviles=\' \
@@ -115,7 +115,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerEstadoCivilesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

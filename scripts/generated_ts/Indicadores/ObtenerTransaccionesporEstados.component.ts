@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTransaccionesporEstadosComponent1750945333342 {
+export class ObtenerTransaccionesporEstadosComponent1751987197720 {
   pageTitle        = 'Obtener Transacciones por Estados';
   description      = `Método para obtener las transacciones por estado ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerTransaccionesEstados';
@@ -38,7 +38,7 @@ export class ObtenerTransaccionesporEstadosComponent1750945333342 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerTransaccionesEstados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerTransaccionesEstados\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerTransaccionesEstadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

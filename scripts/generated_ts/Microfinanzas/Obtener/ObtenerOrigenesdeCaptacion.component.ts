@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOrigenesdeCaptacionComponent1750945333518 {
+export class ObtenerOrigenesdeCaptacionComponent1751987197828 {
   pageTitle        = 'Obtener Orígenes de Captación';
   description      = `Método para obtener los orígenes de captación.`;
   pubName    = 'BTMicrofinanzas.ObtenerOrigenesCaptacion';
@@ -38,7 +38,7 @@ export class ObtenerOrigenesdeCaptacionComponent1750945333518 {
          </bts:Btinreq>
       </bts:BTMicrofinanzas.ObtenerOrigenesCaptacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerOrigenesCaptacion\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerOrigenesCaptacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

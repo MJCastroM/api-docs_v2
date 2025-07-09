@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComponent1750945331010 {
+export class ObtenerComponent1751987195345 {
   pageTitle        = 'Obtener';
   description      = `Método para obtener los datos de un ahorro programado.`;
   pubName    = 'BTAhorroProgramado.Obtener';
@@ -21,7 +21,7 @@ export class ObtenerComponent1750945331010 {
 
   inputData  = [{ Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador único del ahorro.' }];
   outputData = [{ Nombre: 'sdtDetalleAhorro', Tipo: '[sBTDetalleAhorro](#sbtdetalleahorro)', Comentarios: 'Datos del ahorro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de la operación.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de la operación.' }, { Código: '30011', Descripción: 'No se recupero la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerComponent1750945331010 {
          <bts:ahorroUId>205</bts:ahorroUId>
       </bts:BTAhorroProgramado.Obtener>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?Obtener=\' \
@@ -110,7 +110,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ObtenerResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

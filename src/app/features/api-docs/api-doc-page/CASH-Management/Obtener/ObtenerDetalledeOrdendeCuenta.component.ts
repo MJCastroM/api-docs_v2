@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdendeCuentaComponent1750945331437 {
+export class ObtenerDetalledeOrdendeCuentaComponent1751987195738 {
   pageTitle        = 'Obtener Detalle de Orden de Cuenta';
   description      = `Método para obtener la información de las líneas del detalle de orden de cuenta.`;
   pubName    = 'BTCASHManagement.ObtenerDetalleOrdenCuenta';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeOrdendeCuentaComponent1750945331437 {
 
   inputData  = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'cuentaDebito', Tipo: 'Long', Comentarios: 'Operación de débito.' }, { Nombre: 'cantidadLineas', Tipo: 'Int', Comentarios: 'Cantidad de líneas del archivo.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe total.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del pago o cobro.' }, { Nombre: 'fechaPago', Tipo: 'Date', Comentarios: 'Fecha de pago o cobro.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del archivo.' }, { Nombre: 'erroresPago', Tipo: 'String', Comentarios: 'Lista de mensajes del cabezal de pago.' }, { Nombre: 'detallePagos', Tipo: '[sBTDetallePago](#sbtdetallepago)', Comentarios: 'Lista de información del archivo con su estado y mensaje.' }];
-  errors     = [{ Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la información.' }, { Codigo: '1030713', Descripcion: 'El contrato consultado no corresponde a la cuenta recibida.' }, { Codigo: '1030770', Descripcion: 'No se recuperó información para la cuenta recibida.' }, { Codigo: '1039999', Descripcion: 'Error no clasificado' }];
+  errors     = [{ Código: '1030712', Descripción: 'Se requiere cuenta para recuperar la información.' }, { Código: '1030713', Descripción: 'El contrato consultado no corresponde a la cuenta recibida.' }, { Código: '1030770', Descripción: 'No se recuperó información para la cuenta recibida.' }, { Código: '1039999', Descripción: 'Error no clasificado' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDetalledeOrdendeCuentaComponent1750945331437 {
          <bts:clienteUId>376</bts:clienteUId>
       </bts:BTCASHManagement.ObtenerDetalleOrdenCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?ObtenerDetalleOrdenCuenta=\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerDetalleOrdenCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

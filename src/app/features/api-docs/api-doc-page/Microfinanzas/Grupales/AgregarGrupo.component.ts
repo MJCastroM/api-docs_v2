@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarGrupoComponent1750945333408 {
+export class AgregarGrupoComponent1751987197751 {
   pageTitle        = 'Agregar Grupo';
   description      = `Método para agregar un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.AgregarGrupo';
@@ -21,7 +21,7 @@ export class AgregarGrupoComponent1750945333408 {
 
   inputData  = [{ Nombre: 'sdtDetalleGrupo', Tipo: '[sBTDetalleGrupo](#sbtdetallegrupo)', Comentarios: 'Datos del grupo.' }];
   outputData = [{ Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Identificador de grupo.' }];
-  errors     = [{ Codigo: '40002', Descripcion: 'El tipo de grupo no existe.' }, { Codigo: '40003', Descripcion: 'Debe ingresar nombre de grupo.' }, { Codigo: '40005', Descripcion: 'Fecha de Vigencia Desde debe ser mayor o igual a Fecha de Creación.' }, { Codigo: '40006', Descripcion: 'Debe ingresar Fecha de Vigencia Hasta.' }, { Codigo: '40007', Descripcion: 'Fecha de Vigencia Hasta debe ser mayor a Fecha Vigencia Desde.' }];
+  errors     = [{ Código: '40002', Descripción: 'El tipo de grupo no existe.' }, { Código: '40003', Descripción: 'Debe ingresar nombre de grupo.' }, { Código: '40005', Descripción: 'Fecha de Vigencia Desde debe ser mayor o igual a Fecha de Creación.' }, { Código: '40006', Descripción: 'Debe ingresar Fecha de Vigencia Hasta.' }, { Código: '40007', Descripción: 'Fecha de Vigencia Hasta debe ser mayor a Fecha Vigencia Desde.' }];
 
   examples = {
     invocation: { xml: `
@@ -55,7 +55,7 @@ export class AgregarGrupoComponent1750945333408 {
          </bts:sdtDetalleGrupo>
       </bts:BTMicrofinanzas.AgregarGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?AgregarGrupo=\' \
@@ -112,7 +112,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.AgregarGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

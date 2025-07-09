@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrecioEspecieComponent1750945334718 {
+export class ObtenerPrecioEspecieComponent1751987199118 {
   pageTitle        = 'Obtener Precio Especie';
   description      = `Método para obtener la cotización de una especie en moneda nacional.`;
   pubName    = 'BTPrecios.ObtenerPrecioEspecie';
@@ -21,7 +21,7 @@ export class ObtenerPrecioEspecieComponent1750945334718 {
 
   inputData  = [{ Nombre: 'especie', Tipo: 'Long', Comentarios: 'Identificador de la especie.' }];
   outputData = [{ Nombre: 'precio', Tipo: 'Double', Comentarios: 'Cotización.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió una especie.' }, { Codigo: '40001', Descripcion: 'La especie no es un índice.' }, { Codigo: '40002', Descripcion: 'La especie no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió una especie.' }, { Código: '40001', Descripción: 'La especie no es un índice.' }, { Código: '40002', Descripción: 'La especie no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPrecioEspecieComponent1750945334718 {
          <bts:especie>50</bts:especie>
       </bts:BTPrecios.ObtenerPrecioEspecie>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -66,7 +66,7 @@ export class ObtenerPrecioEspecieComponent1750945334718 {
          </Btoutreq>
       </BTPrecios.ObtenerPrecioEspecieResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

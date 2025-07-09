@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMontodeCancelacionComponent1750945335054 {
+export class ObtenerMontodeCancelacionComponent1751987199548 {
   pageTitle        = 'Obtener Monto de Cancelación';
   description      = `Método para obtener el monto de cancelación de una operación.`;
   pubName    = 'BTPrestamos.ObtenerMontoCancelacion';
@@ -21,7 +21,7 @@ export class ObtenerMontodeCancelacionComponent1750945335054 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la operación.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha a consultar.' }];
   outputData = [{ Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelación de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el Identificador de la operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerMontodeCancelacionComponent1750945335054 {
          <bts:fecha>2019-07-26</bts:fecha>
       </bts:BTPrestamos.ObtenerMontoCancelacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerFechaUltimoPago\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerMontoCancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

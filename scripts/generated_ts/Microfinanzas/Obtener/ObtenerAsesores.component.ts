@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerAsesoresComponent1750945333484 {
+export class ObtenerAsesoresComponent1751987197792 {
   pageTitle        = 'Obtener Asesores';
   description      = `Método para obtener los usuarios asesores.`;
   pubName    = 'BTMicrofinanzas.ObtenerAsesores';
@@ -38,7 +38,7 @@ export class ObtenerAsesoresComponent1750945333484 {
          </bts:Btinreq>
       </bts:BTMicrofinanzas.ObtenerAsesores>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerAsesores\' \
@@ -123,7 +123,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerAsesoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

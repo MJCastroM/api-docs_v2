@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEmpleadoComponent1750945332083 {
+export class VerificarEmpleadoComponent1751987196455 {
   pageTitle        = 'Verificar Empleado';
   description      = `Método para obtener si el cliente ingresado es o no empleado de la institución.`;
   pubName    = 'BTClientes.VerificarEmpleado';
@@ -21,7 +21,7 @@ export class VerificarEmpleadoComponent1750945332083 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'esEmpleado', Tipo: 'String', Comentarios: '¿Es empleado de la institución? (S/N)' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30021', Descripcion: 'La cuenta no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30014', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30021', Descripción: 'La cuenta no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class VerificarEmpleadoComponent1750945332083 {
          <bts:clienteUId>1</bts:clienteUId>
       </bts:BTClientes.VerificarEmpleado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?VerificarEmpleado\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.VerificarEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

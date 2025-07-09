@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoDigitalComponent1750945334844 {
+export class EliminarDocumentoDigitalComponent1751987199272 {
   pageTitle        = 'Eliminar Documento Digital';
   description      = `Método para eliminar un documento digital de un préstamo.`;
   pubName    = 'BTPrestamos.EliminarDocumentoDigital';
@@ -21,7 +21,7 @@ export class EliminarDocumentoDigitalComponent1750945334844 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador del documento asociado.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de instancia de documento digital.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30421', Descripcion: 'El registro no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de instancia de documento digital.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30421', Descripción: 'El registro no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarDocumentoDigitalComponent1750945334844 {
          <bts:documentoId>115</bts:documentoId>
       </bts:BTPrestamos.EliminarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?EliminarDocumentoDigital\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.EliminarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

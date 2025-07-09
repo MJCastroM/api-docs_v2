@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDomicilioComponent1750945333949 {
+export class ActualizarDomicilioComponent1751987198290 {
   pageTitle        = 'Actualizar Domicilio';
   description      = `Método para actualizar los datos del domicilio de una persona.`;
   pubName    = 'BTPersonas.ActualizarDomicilio';
@@ -21,7 +21,7 @@ export class ActualizarDomicilioComponent1750945333949 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sbtDomicilio', Tipo: '[sBTDomicilioCompleto](#sbtdomiciliocompleto)', Comentarios: 'Datos de domicilio.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la persona.' }, { Codigo: '30002', Descripcion: 'El identificador de la persona no es correcto.' }, { Codigo: '30011', Descripcion: 'Código de domicilio no válido.' }, { Codigo: '31011', Descripcion: 'No existe el domicilio de la persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la persona.' }, { Código: '30002', Descripción: 'El identificador de la persona no es correcto.' }, { Código: '30011', Descripción: 'Código de domicilio no válido.' }, { Código: '31011', Descripción: 'No existe el domicilio de la persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -69,7 +69,7 @@ export class ActualizarDomicilioComponent1750945333949 {
          </bts:sbtDomicilio>
       </bts:BTPersonas.ActualizarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarDomicilio=\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

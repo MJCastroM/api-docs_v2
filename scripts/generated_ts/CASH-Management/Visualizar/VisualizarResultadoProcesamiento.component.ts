@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarResultadoProcesamientoComponent1750945331581 {
+export class VisualizarResultadoProcesamientoComponent1751987195937 {
   pageTitle        = 'Visualizar Resultado Procesamiento';
   description      = `Método para visualizar el resultado del procesamiento de un archivo.`;
   pubName    = 'BTCASHManagement.VisualizarResultadoProcesamiento';
@@ -21,7 +21,7 @@ export class VisualizarResultadoProcesamientoComponent1750945331581 {
 
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo.' }];
   outputData = [{ Nombre: 'cantidadLineas', Tipo: 'Int', Comentarios: 'Cantidad de líneas del archivo.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Moneda del archivo.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe total del pago.' }, { Nombre: 'cantidadProcesadasOK', Tipo: 'Int', Comentarios: 'Cantidad de líneas procesadas.' }, { Nombre: 'importePagado', Tipo: 'Double', Comentarios: 'Importe total efectivamente pago.' }, { Nombre: 'cantidadLineasError', Tipo: 'Int', Comentarios: 'Cantidad de líneas en error.' }, { Nombre: 'cantidadPendientes', Tipo: 'Int', Comentarios: 'Cantidad de líneas pendientes de procesar.' }, { Nombre: 'estado', Tipo: 'String', Comentarios: 'Estado del archivo.' }, { Nombre: 'situacionLineas', Tipo: '[sBTSituacionLinea](#sbtsituacionlinea)', Comentarios: 'Lista de las líneas con su estado.' }];
-  errors     = [{ Codigo: '1030711', Descripcion: 'No se recuperó información para el identificador de archivo recibido.' }];
+  errors     = [{ Código: '1030711', Descripción: 'No se recuperó información para el identificador de archivo recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class VisualizarResultadoProcesamientoComponent1750945331581 {
          <bts:archivoId>95</bts:archivoId>
       </bts:BTCASHManagement.VisualizarResultadoProcesamiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarResultadoProcesamiento=\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.VisualizarResultadoProcesamientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

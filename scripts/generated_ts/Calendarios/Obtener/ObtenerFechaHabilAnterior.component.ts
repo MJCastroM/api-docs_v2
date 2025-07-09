@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabilAnteriorComponent1750945331308 {
+export class ObtenerFechaHabilAnteriorComponent1751987195625 {
   pageTitle        = 'Obtener Fecha Hábil Anterior';
   description      = `Método para obtener la fecha hábil anterior a la fecha ingresada.`;
   pubName    = 'BTCalendario.ObtenerFechaHabilAnterior';
@@ -21,7 +21,7 @@ export class ObtenerFechaHabilAnteriorComponent1750945331308 {
 
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario (Si no se recibe, devuelve para el calendario de la sucursal central).' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'sentido', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'D\' para este método].' }];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'Date', Comentarios: 'Fecha hábil anterior.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar fecha a consultar.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar fecha a consultar.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerFechaHabilAnteriorComponent1750945331308 {
          <bts:fecha>2021-03-27</bts:fecha>
       </bts:BTCalendarios.ObtenerFechaHabilAnterior>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerFechaHabilAnterior\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerFechaHabilAnteriorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

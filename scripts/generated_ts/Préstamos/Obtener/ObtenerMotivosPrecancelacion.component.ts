@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMotivosPrecancelacionComponent1750945335062 {
+export class ObtenerMotivosPrecancelacionComponent1751987199558 {
   pageTitle        = 'Obtener Motivos de Precancelación';
   description      = `Método para obtener los motivos de precancelación.`;
   pubName    = 'BTPrestamos.ObtenerMotivosPrecancelacion';
@@ -21,7 +21,7 @@ export class ObtenerMotivosPrecancelacionComponent1750945335062 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único del producto.' }, { Nombre: 'tipoPrecancelacion', Tipo: 'String', Comentarios: 'Tipo de precancelación. Se pueden enviar los siguientes [valores](#valores1).' }];
   outputData = [{ Nombre: 'sdtMotivosPrecancelacion', Tipo: '[sBTValorCampo](#sbtvalorcampo)', Comentarios: 'Listado de motivos de precancelación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único del producto.' }, { Codigo: '30002', Descripcion: 'El identificador único del producto es incorrecto.' }, { Codigo: '30010', Descripcion: 'No se ingresó el tipo de precancelación.' }, { Codigo: '30011', Descripcion: 'El valor del campo tipoPrecancelacion tiene que ser P o T.' }, { Codigo: '40001', Descripcion: 'No se encontró el registro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único del producto.' }, { Código: '30002', Descripción: 'El identificador único del producto es incorrecto.' }, { Código: '30010', Descripción: 'No se ingresó el tipo de precancelación.' }, { Código: '30011', Descripción: 'El valor del campo tipoPrecancelacion tiene que ser P o T.' }, { Código: '40001', Descripción: 'No se encontró el registro.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerMotivosPrecancelacionComponent1750945335062 {
          <bts:tipoPrecancelacion>T</bts:tipoPrecancelacion>
       </bts:prueba.ObtenerMotivosPreCancelacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerMotivosPreCancelacion=\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </prueba.ObtenerMotivosPreCancelacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

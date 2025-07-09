@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionChequeraComponent1750945332579 {
+export class ObtenerComisionChequeraComponent1751987196914 {
   pageTitle        = 'Obtener Comisión Chequera';
   description      = `Método para obtener el importe de comisión que se cobrará para una determinada cuenta y un tipo de chequera.`;
   pubName    = 'BTCuentasCorrientes.ObtenerComisionChequera';
@@ -21,7 +21,7 @@ export class ObtenerComisionChequeraComponent1750945332579 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'tipoChequeraId', Tipo: 'Short', Comentarios: 'Identificador de tipo de chequera.' }, { Nombre: 'cantidadChequeras', Tipo: 'Int', Comentarios: 'Cantidad de chequeras.' }];
   outputData = [{ Nombre: 'moneda', Tipo: 'String', Comentarios: 'Moneda de la cuenta.' }, { Nombre: 'comision', Tipo: 'Double', Comentarios: 'Importe de comisión a cobrar.' }, { Nombre: 'impuestos', Tipo: 'Double', Comentarios: 'Importe de impuestos a cobrar.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió un tipo de chequera.' }, { Codigo: '40001', Descripcion: 'El tipo de chequera indicado no cobra comisión.' }, { Codigo: '40002', Descripcion: 'El código de comisión asignado al tipo de chequera no existe.' }, { Codigo: '40003', Descripcion: 'El tipo de chequera indicado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de operación.' }, { Código: '30002', Descripción: 'No se recibió un tipo de chequera.' }, { Código: '40001', Descripción: 'El tipo de chequera indicado no cobra comisión.' }, { Código: '40002', Descripción: 'El código de comisión asignado al tipo de chequera no existe.' }, { Código: '40003', Descripción: 'El tipo de chequera indicado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerComisionChequeraComponent1750945332579 {
          <bts:cantidadChequeras>1</bts:cantidadChequeras>
       </bts:BTCuentasCorrientes.ObtenerComisionChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerComisionChequera \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerComisionChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

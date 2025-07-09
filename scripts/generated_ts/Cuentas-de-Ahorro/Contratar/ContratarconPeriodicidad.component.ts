@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarconPeriodicidadComponent1750945332703 {
+export class ContratarconPeriodicidadComponent1751987197024 {
   pageTitle        = 'Contratar con Periodicidad';
   description      = `Método para contratar un producto de cuenta de ahorro ingresando un período de acreditación.`;
   pubName    = 'BTCuentasDeAhorro.ContratarConPeriodicidad';
@@ -21,7 +21,7 @@ export class ContratarconPeriodicidadComponent1750945332703 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de Cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de Producto.' }, { Nombre: 'nombreSubcuenta', Tipo: 'String', Comentarios: 'Nombre de la Subcuenta.' }, { Nombre: 'periodoAcreditacion', Tipo: 'Long', Comentarios: 'Período de Acreditación de Intereses.' }, { Nombre: 'producto', Tipo: 'String', Comentarios: '[Hidden: Valor \'CA\' por defecto].' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la subcuenta contratada.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de producto.' }, { Codigo: '30003', Descripcion: 'El período de acreditación ingresado es inválido.' }, { Codigo: '31003', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador único de producto.' }, { Código: '30003', Descripción: 'El período de acreditación ingresado es inválido.' }, { Código: '31003', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ContratarconPeriodicidadComponent1750945332703 {
          <bts:periodoAcreditacion>1</bts:periodoAcreditacion>
       </bts:BTCuentasCorrientes.ContratarConPeriodicidad>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -69,7 +69,7 @@ export class ContratarconPeriodicidadComponent1750945332703 {
          </Btoutreq>
       </BTCuentasDeAhorro.ContratarConPeriodicidadResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

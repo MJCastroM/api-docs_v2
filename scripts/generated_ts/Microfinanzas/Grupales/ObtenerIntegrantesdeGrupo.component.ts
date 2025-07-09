@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesdeGrupoComponent1750945333452 {
+export class ObtenerIntegrantesdeGrupoComponent1751987197780 {
   pageTitle        = 'Obtener Integrantes de Grupo';
   description      = `Método para obtener los integrantes de un grupo de crédito.`;
   pubName    = 'BTMicrofinanzas.ObtenerIntegrantesGrupo';
@@ -21,7 +21,7 @@ export class ObtenerIntegrantesdeGrupoComponent1750945333452 {
 
   inputData  = [{ Nombre: 'grupoId', Tipo: 'Int', Comentarios: 'Código de grupo' }];
   outputData = [{ Nombre: 'sdtIntegrantesGrupo', Tipo: '[sBTIntegranteGrupo](#sbtintegrantegrupo)', Comentarios: 'Listado de integrantes.' }];
-  errors     = [{ Codigo: '30011', Descripcion: 'No se recibió código de grupo.' }, { Codigo: '30012', Descripcion: 'El grupo ingresado no contiene integrantes.' }];
+  errors     = [{ Código: '30011', Descripción: 'No se recibió código de grupo.' }, { Código: '30012', Descripción: 'El grupo ingresado no contiene integrantes.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIntegrantesdeGrupoComponent1750945333452 {
          <bts:grupoId>3</bts:grupoId>
       </bts:BTMicrofinanzas.ObtenerIntegrantesGrupo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?ObtenerIntegrantesGrupo=\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.ObtenerIntegrantesGrupoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

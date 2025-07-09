@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarSimulacionComponent1750945333063 {
+export class ContratarSimulacionComponent1751987197393 {
   pageTitle        = 'Contratar Simulación';
   description      = `Método para contratar un depósito a plazo fijo a partir de una simulación existente.`;
   pubName    = 'BTDepositoAPlazo.ContratarSimulacion';
@@ -33,7 +33,7 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'simulacionId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'instruccionVTO', Tipo: 'Short', Comentarios: 'Identificador de la instrucción al vencimiento' }, { Nombre: 'cuentaUIdDestinoVTO', Tipo: 'Long', Comentarios: 'Identificador único de la operación de la cuenta destino al vencimiento.' }, { Nombre: 'InstruccionPP', Tipo: 'Long', Comentarios: 'Identificador de la instrucción de pago periódico.' }, { Nombre: 'cuentaUIdDestinoPP', Tipo: 'Short', Comentarios: 'Identificador único de la operación de la cuenta destino del pago periódico.' }, { Nombre: 'cuentaUIdDebito', Tipo: 'Long', Comentarios: 'Identificador único de la operación de la cuenta de débito.' }, { Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios. Se pueden enviar los siguientes [valores.](#valores)' }];
   outputData = [{ Nombre: 'sdtDatosExtendidos', Tipo: '[sBTDatoExtendido](#sbtdatoextendido)', Comentarios: 'Listado de datos complementarios.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30003', Descripcion: 'No se recibió la instrucción de acreditación al vencimiento.' }, { Codigo: '30005', Descripcion: 'No se recibió la instrucción de acreditación periódica.' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de cuenta de débito.' }, { Codigo: '30010', Descripcion: 'No se recuperaron datos para el identificador de cliente: [Número de identificador].' }, { Codigo: '30011', Descripcion: 'No se recuperaron datos para el identificador de cuenta de acreditación al vencimiento: [Número de identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperaron datos para el identificador de cuenta de acreditación periódica: [Número de identificador].' }, { Codigo: '30013', Descripcion: 'No se recuperaron datos para el identificador de cuenta de débito: [Número de identificador].' }, { Codigo: '30015', Descripcion: 'La simulación no está disponible para su contratación.' }, { Codigo: '30016', Descripcion: 'La simulación no se encuentra vigente para su contratación.' }, { Codigo: '30017', Descripcion: 'La simulación no corresponde al cliente.' }, { Codigo: '30020', Descripcion: 'Ocurrió un error al generar el Identificador de movimiento.' }, { Codigo: '30021', Descripcion: 'Ocurrió un error al generar el Identificador de operación de depósito.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la simulación.' }, { Código: '30003', Descripción: 'No se recibió la instrucción de acreditación al vencimiento.' }, { Código: '30005', Descripción: 'No se recibió la instrucción de acreditación periódica.' }, { Código: '30007', Descripción: 'No se recibió el identificador de cuenta de débito.' }, { Código: '30010', Descripción: 'No se recuperaron datos para el identificador de cliente: [Número de identificador].' }, { Código: '30011', Descripción: 'No se recuperaron datos para el identificador de cuenta de acreditación al vencimiento: [Número de identificador].' }, { Código: '30012', Descripción: 'No se recuperaron datos para el identificador de cuenta de acreditación periódica: [Número de identificador].' }, { Código: '30013', Descripción: 'No se recuperaron datos para el identificador de cuenta de débito: [Número de identificador].' }, { Código: '30015', Descripción: 'La simulación no está disponible para su contratación.' }, { Código: '30016', Descripción: 'La simulación no se encuentra vigente para su contratación.' }, { Código: '30017', Descripción: 'La simulación no corresponde al cliente.' }, { Código: '30020', Descripción: 'Ocurrió un error al generar el Identificador de movimiento.' }, { Código: '30021', Descripción: 'Ocurrió un error al generar el Identificador de operación de depósito.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -58,7 +58,7 @@ Importe específico 1 | Tipo de depósito (1- Depósito al vencimiento, 2- Pago 
          <bts:sBTDatosExtendidos/>
       </bts:BTDepositosAPlazo.ContratarSimulacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -108,7 +108,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ContratarSimulacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

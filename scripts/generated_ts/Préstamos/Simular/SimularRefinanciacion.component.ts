@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularRefinanciacionComponent1750945335400 {
+export class SimularRefinanciacionComponent1751987199946 {
   pageTitle        = 'Simular Refinanciación';
   description      = `Método para simular la refinanciación de un préstamo.`;
   pubName    = 'BTPrestamos.SimularRefinanciacion';
@@ -21,7 +21,7 @@ export class SimularRefinanciacionComponent1750945335400 {
 
   inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'sdtSimulacionRefinanciacion', Tipo: '[sBTSimulacionRefinanciacion](#sbtsimulacionrefinanciacion)', Comentarios: 'Datos para simular la refinanciación.' }, { Nombre: 'modoIngreso', Tipo: 'Byte', Comentarios: '[Hidden: Valor fijo \'0\' para este método].' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: '[Hidden: Valor fijo vacío para este método].' }];
   outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de salida de la simulación.' }, { Nombre: 'montoPerdon', Tipo: 'Double', Comentarios: 'Monto de perdón.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30004', Descripcion: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'El cliente ingresado no coincide con el de la simulación.' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'La simulación no retornó nº de operación.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió el identificador de la simulación.' }, { Código: '30004', Descripción: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }, { Código: '30005', Descripción: 'El cliente ingresado no coincide con el de la simulación.' }, { Código: '30006', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Código: '30007', Descripción: 'La simulación no retornó nº de operación.' }];
 
   examples = {
     invocation: { xml: `
@@ -117,7 +117,7 @@ export class SimularRefinanciacionComponent1750945335400 {
          </bts:sdtSimulacionRefinanciacion>
       </bts:BTPrestamos.SimularRefinanciacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
    \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?SimularRefinanciacion\' \
@@ -433,7 +433,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.SimularRefinanciacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

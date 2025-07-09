@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarCorreoElectronicoComponent1750945334598 {
+export class ValidarCorreoElectronicoComponent1751987198983 {
   pageTitle        = 'Validar Correo electrónico';
   description      = `Método para validar un correo electrónico.`;
   pubName    = 'BTPersonas.ValidarCorreoElectronico';
@@ -21,7 +21,7 @@ export class ValidarCorreoElectronicoComponent1750945334598 {
 
   inputData  = [{ Nombre: 'correoElectronico', Tipo: 'String', Comentarios: 'Correo electrónico.' }];
   outputData = [{ Nombre: 'valido', Tipo: 'String', Comentarios: '¿Es válido? (S/N).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó el usuario del correo electrónico.' }, { Codigo: '30002', Descripcion: 'Caracteres inválidos en el dominio.' }, { Codigo: '30003', Descripcion: 'No se ingresó dominio.' }, { Codigo: '30004', Descripcion: 'Dominio inválido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se ingresó el usuario del correo electrónico.' }, { Código: '30002', Descripción: 'Caracteres inválidos en el dominio.' }, { Código: '30003', Descripción: 'No se ingresó dominio.' }, { Código: '30004', Descripción: 'Dominio inválido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ValidarCorreoElectronicoComponent1750945334598 {
          <bts:correoElectronico>AABB@GMAIL.COM</bts:correoElectronico>
       </bts:BTPersonas.ValidarCorreoElectronico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ValidarCorreoElectronico\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ValidarCorreoElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

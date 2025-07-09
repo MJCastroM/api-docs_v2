@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CalcularPlazoComponent1750945331287 {
+export class CalcularPlazoComponent1751987195598 {
   pageTitle        = 'Calcular Plazo';
   description      = `Método para calcular el plazo entre una fecha de inicio y una fecha de fin dadas.`;
   pubName    = 'BTCalendarios.CalcularPlazo';
@@ -42,7 +42,7 @@ export class CalcularPlazoComponent1750945331287 {
          <bts:tipoVencimiento>A</bts:tipoVencimiento>
       </bts:BTCalendarios.CalcularPlazo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?CalcularPlazo\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.CalcularPlazoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

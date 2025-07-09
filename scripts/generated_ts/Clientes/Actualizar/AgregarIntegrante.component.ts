@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarIntegranteComponent1750945331683 {
+export class AgregarIntegranteComponent1751987196042 {
   pageTitle        = 'Agregar Integrante';
   description      = `Método para agregar un integrante a una cuenta cliente.`;
   pubName    = 'BTClientes.AgregarIntegrante';
@@ -21,7 +21,7 @@ export class AgregarIntegranteComponent1750945331683 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'codigoDeTitularidad', Tipo: 'Byte', Comentarios: 'Código de titularidad.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30003', Descripcion: 'No se recibió código de titularidad.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30014', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30023', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30032', Descripcion: 'La persona tiene que haber sido ingresado con Alta Normal para poder integrar una cuenta.' }, { Codigo: '30033', Descripcion: 'Persona inhabilitada por Banco Central.' }, { Codigo: '30034', Descripcion: 'La persona seleccionada no tiene segmento asociado.' }, { Codigo: '30036', Descripcion: 'La persona se encuentra en la lista de inhabilitados: [Número de identificador].' }, { Codigo: '30037', Descripcion: 'La persona se encuentra en la lista de inhabilitados: [Número de identificador].' }, { Codigo: '30038', Descripcion: 'La persona seleccionada figura como fallecida.' }, { Codigo: '30039', Descripcion: 'Persona seleccionada no tiene domicilio legal.' }, { Codigo: '30040', Descripcion: 'Código de Titularidad Incorrecto.' }, { Codigo: '30041', Descripcion: 'La persona no tiene condición ante el impuesto.' }, { Codigo: '30042', Descripcion: 'La persona tiene alta inconclusa no puede asociarse.' }, { Codigo: '30043', Descripcion: 'La persona seleccionada no tiene actividad económica.' }, { Codigo: '30046', Descripcion: 'La cuenta [Número de identificador] tiene la misma integración que la cuenta actual.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30003', Descripción: 'No se recibió código de titularidad.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '30014', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30023', Descripción: 'No existe registro para el identificador único.' }, { Código: '30032', Descripción: 'La persona tiene que haber sido ingresado con Alta Normal para poder integrar una cuenta.' }, { Código: '30033', Descripción: 'Persona inhabilitada por Banco Central.' }, { Código: '30034', Descripción: 'La persona seleccionada no tiene segmento asociado.' }, { Código: '30036', Descripción: 'La persona se encuentra en la lista de inhabilitados: [Número de identificador].' }, { Código: '30037', Descripción: 'La persona se encuentra en la lista de inhabilitados: [Número de identificador].' }, { Código: '30038', Descripción: 'La persona seleccionada figura como fallecida.' }, { Código: '30039', Descripción: 'Persona seleccionada no tiene domicilio legal.' }, { Código: '30040', Descripción: 'Código de Titularidad Incorrecto.' }, { Código: '30041', Descripción: 'La persona no tiene condición ante el impuesto.' }, { Código: '30042', Descripción: 'La persona tiene alta inconclusa no puede asociarse.' }, { Código: '30043', Descripción: 'La persona seleccionada no tiene actividad económica.' }, { Código: '30046', Descripción: 'La cuenta [Número de identificador] tiene la misma integración que la cuenta actual.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class AgregarIntegranteComponent1750945331683 {
          <bts:codigoDeTitularidad>1</bts:codigoDeTitularidad>
       </bts:BTClientes.AgregarIntegrante>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?AgregarIntegrante=\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.AgregarIntegranteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

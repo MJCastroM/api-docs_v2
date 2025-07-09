@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarDomicilioComponent1750945331665 {
+export class AgregarDomicilioComponent1751987196029 {
   pageTitle        = 'Agregar Domicilio';
   description      = `Método para agregar un domicilio a un cliente.`;
   pubName    = 'BTClientes.AgregarDomicilio';
@@ -21,7 +21,7 @@ export class AgregarDomicilioComponent1750945331665 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'domicilio', Tipo: '[sBTDomicilioCompleto](#sbtdomiciliocompleto)', Comentarios: 'Datos del domicilio.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30006', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '40001', Descripcion: 'Código de domicilio no válido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la cuenta.' }, { Código: '30006', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '40001', Descripción: 'Código de domicilio no válido.' }];
 
   examples = {
     invocation: { xml: `
@@ -69,7 +69,7 @@ export class AgregarDomicilioComponent1750945331665 {
 		</bts:domicilio>
       </bts:BTClientes.AgregarDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?AgregarDomicilio\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.AgregarDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

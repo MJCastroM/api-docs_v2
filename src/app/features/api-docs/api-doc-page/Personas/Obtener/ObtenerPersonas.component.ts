@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPersonasComponent1750945334460 {
+export class ObtenerPersonasComponent1751987198822 {
   pageTitle        = 'Obtener Personas';
   description      = `Método para obtener los datos de la/s persona/s con el nombre ingresado.`;
   pubName    = 'BTPersonas.ObtenerPersonas';
@@ -21,7 +21,7 @@ export class ObtenerPersonasComponent1750945334460 {
 
   inputData  = [{ Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido.' }];
   outputData = [{ Nombre: 'sdtPersonas', Tipo: '[sBTPersonaBusqueda](#sbtpersonabusqueda)', Comentarios: 'Listado de datos de persona.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Campo primer nombre requerido.' }, { Codigo: '30003', Descripcion: 'Campo primer apellido requerido.' }, { Codigo: '40001', Descripcion: 'No se encontró persona(s) con el patron de búsqueda ingresado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Campo primer nombre requerido.' }, { Código: '30003', Descripción: 'Campo primer apellido requerido.' }, { Código: '40001', Descripción: 'No se encontró persona(s) con el patron de búsqueda ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerPersonasComponent1750945334460 {
          <bts:segundoApellido>SZENTANDRASI</bts:segundoApellido>
       </bts:BTPersonas.ObtenerPersonas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerPersonas=\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerPersonasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOfertaAmortizableComponent1750945334946 {
+export class ObtenerDetalledeOfertaAmortizableComponent1751987199395 {
   pageTitle        = 'Obtener Detalle de Oferta Amortizable';
   description      = `Método para obtener el detalle de la oferta amortizable de un préstamo simulado.`;
   pubName    = 'BTPrestamos.ObtenerDetalleOfertaAmortizable';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeOfertaAmortizableComponent1750945334946 {
 
   inputData  = [{ Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'cantidadCuotas', Tipo: 'Int', Comentarios: 'Cantidad de cuotas.' }, { Nombre: 'destinoCredito', Tipo: 'Long', Comentarios: 'Código de destino del crédito.' }];
   outputData = [{ Nombre: 'sdtSimulacionOutput', Tipo: '[sBTSimulacionOutput](#sbtsimulacionoutput)', Comentarios: 'Datos de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de simulación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }, { Codigo: '30011', Descripcion: 'La simulación con identificador [Número de Identificador] no está vigente.' }, { Codigo: '30012', Descripcion: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de simulación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'La simulación no corresponde al cliente: [Número de Identificador].' }, { Código: '30005', Descripción: 'La cantidad de cuotas indicada no forma parte de las ofertas.' }, { Código: '30011', Descripción: 'La simulación con identificador [Número de Identificador] no está vigente.' }, { Código: '30012', Descripción: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerDetalledeOfertaAmortizableComponent1750945334946 {
          <bts:destinoCredito></bts:destinoCredito>
       </bts:BTPrestamos.ObtenerDetalleOfertaAmortizable>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDetalleOfertaAmortizable\' \
@@ -282,7 +282,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleOfertaAmortizableResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

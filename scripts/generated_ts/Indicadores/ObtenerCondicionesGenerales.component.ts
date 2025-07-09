@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCondicionesGeneralesComponent1750945333284 {
+export class ObtenerCondicionesGeneralesComponent1751987197672 {
   pageTitle        = 'Obtener Condiciones Generales';
   description      = `Método para obtener las condiciones generales ingresadas en el sistema.`;
   pubName    = 'BTIndicadores.ObtenerCondicionesGenerales';
@@ -38,7 +38,7 @@ export class ObtenerCondicionesGeneralesComponent1750945333284 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerCondicionesGenerales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerCondicionesGenerales\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerCondicionesGeneralesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeDesembolsoComponent1750945333258 {
+export class ObtenerTiposDeDesembolsoComponent1751987197639 {
   pageTitle        = 'Obtener Tipos de Desembolso';
   description      = `Método para obtener los tipos de desembolso.`;
   pubName    = 'BTDescuentoDocumentos.ObtenerTiposDeDesembolso';
@@ -21,7 +21,7 @@ export class ObtenerTiposDeDesembolsoComponent1750945333258 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTiposDesembolso', Tipo: '[sBTTipoDesembolso](#sbttipodesembolso)', Comentarios: 'Listado de tipos de desembolso.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No hay tipos de desembolsos parametrizados.' }];
+  errors     = [{ Código: '40001', Descripción: 'No hay tipos de desembolsos parametrizados.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposDeDesembolsoComponent1750945333258 {
          </bts:Btinreq>
       </bts:BTDescuentoDocumentos.ObtenerTiposDeDesembolso>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?ObtenerTiposDeDesembolso=\' \
@@ -143,7 +143,7 @@ curl -X POST \
          </Btoutreq>
       </BTDescuentoDocumentos.ObtenerTiposDeDesembolsoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeMovimientoComponent1750945332393 {
+export class ObtenerIdentificadorUnicodeMovimientoComponent1751987196737 {
   pageTitle        = 'Obtener Identificador Único de Movimiento';
   description      = `Método para obtener el identificador único de un movimiento contable.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoMovimiento';
@@ -21,7 +21,7 @@ export class ObtenerIdentificadorUnicodeMovimientoComponent1750945332393 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Módulo Bantotal.' }, { Nombre: 'transaccionId', Tipo: 'Int', Comentarios: 'Identificador de transacción Bantotal.' }, { Nombre: 'relacion', Tipo: 'Int', Comentarios: 'Relación.' }, { Nombre: 'fechaContabilizacion', Tipo: 'Date', Comentarios: 'Fecha de contabilización.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento (asiento).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió empresa.' }, { Codigo: '30002', Descripcion: 'No se recibió sucursal.' }, { Codigo: '30003', Descripcion: 'No se recibió módulo.' }, { Codigo: '30004', Descripcion: 'No se recibió transacción.' }, { Codigo: '30005', Descripcion: 'No se recibió relación.' }, { Codigo: '30006', Descripcion: 'No se recibió fecha de contabilización.' }, { Codigo: '30007', Descripcion: 'Movimiento no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió empresa.' }, { Código: '30002', Descripción: 'No se recibió sucursal.' }, { Código: '30003', Descripción: 'No se recibió módulo.' }, { Código: '30004', Descripción: 'No se recibió transacción.' }, { Código: '30005', Descripción: 'No se recibió relación.' }, { Código: '30006', Descripción: 'No se recibió fecha de contabilización.' }, { Código: '30007', Descripción: 'Movimiento no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ObtenerIdentificadorUnicodeMovimientoComponent1750945332393 {
          <bts:fechaContabilizacion>2013-01-02</bts:fechaContabilizacion>
       </bts:BTContabilidad.ObtenerIdentificadorUnicoMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoMovimiento\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

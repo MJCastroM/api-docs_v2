@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleBloqueoComponent1750945332815 {
+export class ObtenerDetalleBloqueoComponent1751987197137 {
   pageTitle        = 'Obtener Detalle Bloqueo';
   description      = `Método para obtener el detalle de un bloqueo.`;
   pubName    = 'BTCuentasVista.ObtenerDetalleBloqueo';
@@ -21,7 +21,7 @@ export class ObtenerDetalleBloqueoComponent1750945332815 {
 
   inputData  = [{ Nombre: 'idBloqueo', Tipo: 'Long', Comentarios: 'Identificador de bloqueo.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe bloqueado.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha vencimiento de bloqueo.' }, { Nombre: 'motivo', Tipo: 'String', Comentarios: 'Motivo del bloqueo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del bloqueo.' }, { Codigo: '40001', Descripcion: 'No se pudo encontrar el registro correspondiente al Id de Bloqueo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del bloqueo.' }, { Código: '40001', Descripción: 'No se pudo encontrar el registro correspondiente al Id de Bloqueo.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetalleBloqueoComponent1750945332815 {
          <bts:idBloqueo>23</bts:idBloqueo>
       </bts:BTCuentasVista.ObtenerDetalleBloqueo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerDetalleBloqueo=\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerDetalleBloqueoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

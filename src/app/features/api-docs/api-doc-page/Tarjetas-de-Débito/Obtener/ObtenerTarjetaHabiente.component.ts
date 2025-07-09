@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTarjetaHabienteComponent1750945335617 {
+export class ObtenerTarjetaHabienteComponent1751987200220 {
   pageTitle        = 'Obtener Tarjeta Habiente';
   description      = `Método para obtener el habiente de una tarjeta.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTarjetaHabiente';
@@ -21,7 +21,7 @@ export class ObtenerTarjetaHabienteComponent1750945335617 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta de débito.' }];
   outputData = [{ Nombre: 'sdtTarjetaHabiente', Tipo: '[sBTTitularTarjeta](#sbttitulartarjeta)', Comentarios: 'Datos del titular de la tarjeta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de tarjeta.' }, { Codigo: '40001', Descripcion: 'No existe registro para el número de tarjeta.' }, { Codigo: '40002', Descripcion: 'No existe registro de país.' }, { Codigo: '40003', Descripcion: 'No existe registro para el tipo de documento de la persona.' }, { Codigo: '40004', Descripcion: 'No existe registro para el titular de la tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el Identificador de tarjeta.' }, { Código: '40001', Descripción: 'No existe registro para el número de tarjeta.' }, { Código: '40002', Descripción: 'No existe registro de país.' }, { Código: '40003', Descripción: 'No existe registro para el tipo de documento de la persona.' }, { Código: '40004', Descripción: 'No existe registro para el titular de la tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTarjetaHabienteComponent1750945335617 {
          <bts:tarjetaUId>2000001942</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerTarjetaHabiente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \   
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerTarjetaHabiente\' \ 
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTarjetaHabienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

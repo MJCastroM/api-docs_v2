@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionAdicionalComponent1750945334093 {
+export class AgregarInformacionAdicionalComponent1751987198470 {
   pageTitle        = 'Agregar Información Adicional';
   description      = `Método para agregar la información adicional de una persona.`;
   pubName    = 'BTPersonas.AgregarInformacionAdicional';
@@ -21,7 +21,7 @@ export class AgregarInformacionAdicionalComponent1750945334093 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Listado de datos.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class AgregarInformacionAdicionalComponent1750945334093 {
          </bts:sdtInformacionAdicional>
       </bts:BTPersonas.AgregarInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarInformacionAdicional\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": {

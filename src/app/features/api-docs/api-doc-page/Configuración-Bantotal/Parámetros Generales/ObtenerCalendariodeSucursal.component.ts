@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCalendariodeSucursalComponent1750945332190 {
+export class ObtenerCalendariodeSucursalComponent1751987196525 {
   pageTitle        = 'Obtener Calendario de Sucursal';
   description      = `Método para obtener el calendario de una sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCalendarioDeSucursal';
@@ -21,7 +21,7 @@ export class ObtenerCalendariodeSucursalComponent1750945332190 {
 
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }];
   outputData = [{ Nombre: 'descripcionSucursal', Tipo: 'String', Comentarios: 'Descripción de la sucursal.' }, { Nombre: 'sdtCalendario', Tipo: '[sBTCalendario](#sbtcalendario)', Comentarios: 'Calendario de la sucursal.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'No existe sucursal con el identificador ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de sucursal.' }, { Código: '40001', Descripción: 'No existe sucursal con el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCalendariodeSucursalComponent1750945332190 {
          <bts:sucursalId>1000</bts:sucursalId>
       </bts:BTConfiguracionBantotal.ObtenerCalendarioDeSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X GET \
    \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerCalendarioDeSucursal\' \
@@ -83,7 +83,7 @@ curl -X GET \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerCalendarioDeSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

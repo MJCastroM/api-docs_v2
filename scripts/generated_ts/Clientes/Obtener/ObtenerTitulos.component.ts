@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTitulosComponent1750945332070 {
+export class ObtenerTitulosComponent1751987196447 {
   pageTitle        = 'Obtener Títulos';
   description      = `Método para obtener los títulos de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerTitulos';
@@ -21,7 +21,7 @@ export class ObtenerTitulosComponent1750945332070 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtTitulos', Tipo: '[sBTTitulo](#sbttitulo)', Comentarios: 'Listado de títulos del cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió cliente.' }, { Codigo: '30002', Descripcion: 'No se logró verificar al cliente con el identificador ingresado.' }, { Codigo: '30003', Descripcion: 'No se pudieron obtener los títulos para el cliente ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió cliente.' }, { Código: '30002', Descripción: 'No se logró verificar al cliente con el identificador ingresado.' }, { Código: '30003', Descripción: 'No se pudieron obtener los títulos para el cliente ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTitulosComponent1750945332070 {
          <bts:clienteUId>6</bts:clienteUId>
       </bts:BTClientes.ObtenerTitulos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerTitulos\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerTitulosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentadeCobroComponent1750945334903 {
+export class ObtenerCuentadeCobroComponent1751987199341 {
   pageTitle        = 'Obtener Cuentas de Cobro';
   description      = `Método para obtener un listado de las cuentas de cobro de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerCuentasDeCobro';
@@ -21,7 +21,7 @@ export class ObtenerCuentadeCobroComponent1750945334903 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de préstamo.' }];
   outputData = [{ Nombre: 'sdtCuentasDeCobro', Tipo: '[sBTCuentaDeCobro](#sbtcuentadecobro)', Comentarios: 'Listado de cuentas de cobro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '40101', Descripcion: 'El Préstamo no existe.' }, { Codigo: '40102', Descripcion: 'No se encuentra Cuenta de Cobro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Código: '40101', Descripción: 'El Préstamo no existe.' }, { Código: '40102', Descripción: 'No se encuentra Cuenta de Cobro.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCuentadeCobroComponent1750945334903 {
          <bts:operacionUId>74</bts:operacionUId>
       </bts:BTPrestamos.ObtenerCuentaDeCobro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerCuentaDeCobro\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerCuentasDeCobroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

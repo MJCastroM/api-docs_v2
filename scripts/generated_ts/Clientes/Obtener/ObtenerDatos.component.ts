@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750945331842 {
+export class ObtenerDatosComponent1751987196221 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener datos de un cliente.`;
   pubName    = 'BTClientes.ObtenerDatos';
@@ -21,7 +21,7 @@ export class ObtenerDatosComponent1750945331842 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtDatosCuentaCliente', Tipo: '[sBTDatosCuentaCliente](#sbtdatoscuentacliente)', Comentarios: 'Datos de la cuenta cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No existe titular representativo para la cuenta.' }, { Codigo: '40099', Descripcion: 'La cuenta fue dada de baja.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Código: '40001', Descripción: 'No existe titular representativo para la cuenta.' }, { Código: '40099', Descripción: 'La cuenta fue dada de baja.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDatosComponent1750945331842 {
          <bts:clienteUID>10010</bts:clienteUID>
       </bts:BTCliente.ObtenerDatos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -107,7 +107,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrueba.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdBantotalComponent1750945334388 {
+export class ObtenerIdBantotalComponent1751987198758 {
   pageTitle        = 'Obtener Id Bantotal';
   description      = `Método para obtener la clave de identificación Bantotal de una persona.`;
   pubName    = 'BTPersonas.ObtenerIdBantotal';
@@ -21,7 +21,7 @@ export class ObtenerIdBantotalComponent1750945334388 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del país de documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No existe registro para el identificador de persona ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No existe registro para el identificador de persona ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIdBantotalComponent1750945334388 {
          <bts:personaUId>1</bts:personaUId>
       </bts:BTPersonas.ObtenerIdBantotal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -68,7 +68,7 @@ export class ObtenerIdBantotalComponent1750945334388 {
          </Btoutreq>
       </BTPersonas.ObtenerIdBantotalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

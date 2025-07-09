@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIntegrantesPersonaJuridicaComponent1750945334423 {
+export class ObtenerIntegrantesPersonaJuridicaComponent1751987198780 {
   pageTitle        = 'Obtener Integrantes Persona Jurídica';
   description      = `Método para obtener un listado de los integrantes de una persona jurídica.`;
   pubName    = 'BTPersonas.ObtenerIntegrantesPersonaJuridica';
@@ -21,7 +21,7 @@ export class ObtenerIntegrantesPersonaJuridicaComponent1750945334423 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtIntegrantesJuridicos', Tipo: '[sBTIntegranteJuridico](#sbtintegrantejuridico)', Comentarios: 'Listado de integrantes jurídicos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '40001', Descripcion: 'La persona jurídica no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de persona.' }, { Código: '40001', Descripción: 'La persona jurídica no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIntegrantesPersonaJuridicaComponent1750945334423 {
          <bts:personaUId>10017</bts:personaUId>
       </bts:BTPersonas.ObtenerIntegrantesPersonaJuridica>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerIntegrantesPersonaJuridica\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerIntegrantesPersonaJuridicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

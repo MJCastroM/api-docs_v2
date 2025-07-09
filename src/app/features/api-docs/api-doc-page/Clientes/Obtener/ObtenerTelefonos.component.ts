@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTelefonosComponent1750945332049 {
+export class ObtenerTelefonosComponent1751987196423 {
   pageTitle        = 'Obtener Telefonos';
   description      = `Método para obtener los teléfonos de un cliente.`;
   pubName    = 'BTClientes.ObtenerTelefonos';
@@ -21,7 +21,7 @@ export class ObtenerTelefonosComponent1750945332049 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtTelefonos', Tipo: '[sBTTelefono](#sbttelefono)', Comentarios: 'Listado de teléfonos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTelefonosComponent1750945332049 {
          <bts:clienteUId>21</bts:clienteUId>
       </bts:BTClientes.ObtenerTelefonos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerTelefonos\' \
@@ -105,7 +105,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerTelefonosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750945332491 {
+export class ObtenerDatosComponent1751987196855 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener los datos de una cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.ObtenerDatos';
@@ -21,7 +21,7 @@ export class ObtenerDatosComponent1750945332491 {
 
   inputData  = [{ Nombre: 'bolsilloUId', Tipo: 'Long', Comentarios: 'Identificador único del bolsillo.' }];
   outputData = [{ Nombre: 'sdtInformacionBolsillo', Tipo: '[sBTInfBolsillo](#sbtinfbolsillo)', Comentarios: 'Información del bolsillo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta bolsillo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a una cuenta bolsillo.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDatosComponent1750945332491 {
          <bts:bolsilloUId>18843</bts:BolsilloUID>
       </bts:BTCuentasBolsillo.ObtenerDatos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerDatos\' \
@@ -97,7 +97,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

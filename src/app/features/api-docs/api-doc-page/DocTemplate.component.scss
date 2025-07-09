@@ -50,3 +50,22 @@
     z-index: 1;
   }
 }
+
+.fade-only {
+  opacity: 0;
+  animation: fadeOnly 300ms ease-out forwards;
+}
+
+.front {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes fadeOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

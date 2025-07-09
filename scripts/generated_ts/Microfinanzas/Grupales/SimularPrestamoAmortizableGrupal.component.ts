@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularPrestamoAmortizableGrupalComponent1750945333474 {
+export class SimularPrestamoAmortizableGrupalComponent1751987197789 {
   pageTitle        = 'Simular Amortizable Grupal';
   description      = `Método para simular la solicitud de un préstamo amortizable grupal.`;
   pubName    = 'BTMicrofinanzas.SimularAmortizableGrupal';
@@ -21,7 +21,7 @@ export class SimularPrestamoAmortizableGrupalComponent1750945333474 {
 
   inputData  = [{ Nombre: 'sdtSimulacionAmortizableGrupal', Tipo: '[sBTSimulacionAmortizableGrupal](#sbtsimulacionamortizablegrupal)', Comentarios: 'Datos de la simulación grupal.' }];
   outputData = [{ Nombre: 'sdtSimulacionPrestamo', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos del préstamo simulado.' }, { Nombre: 'sdtIntegrantesGrupo', Tipo: '[sBTIntegranteGrupoSolicitud](#sbtintegrantegruposolicitud)', Comentarios: 'Datos de los integrantes del grupo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la solicitud.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'No se recibió ningún integrante del grupo.' }, { Codigo: '40001', Descripcion: 'El integrante no pertenece al grupo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la solicitud.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }, { Código: '30004', Descripción: 'No se recibió ningún integrante del grupo.' }, { Código: '40001', Descripción: 'El integrante no pertenece al grupo.' }];
 
   examples = {
     invocation: { xml: `
@@ -78,7 +78,7 @@ export class SimularPrestamoAmortizableGrupalComponent1750945333474 {
          </bts:sdtSimulacionAmortizableGrupal>
       </bts:BTMicrofinanzas.SimulaAmortizableGrupal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?SimularAmortizableGrupal \
@@ -196,7 +196,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.SimulaAmortizableGrupalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq": {

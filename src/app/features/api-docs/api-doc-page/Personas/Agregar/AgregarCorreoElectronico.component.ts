@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarCorreoElectronicoComponent1750945334048 {
+export class AgregarCorreoElectronicoComponent1751987198415 {
   pageTitle        = 'Agregar Correo Electrónico';
   description      = `Método para agregar un correo electrónico a una persona.`;
   pubName    = 'BTPersonas.AgregarCorreoElectronico';
@@ -21,7 +21,7 @@ export class AgregarCorreoElectronicoComponent1750945334048 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: 'sdtCorreoElectronico', Tipo: '[sBTCorreoElectronico](#sbtcorreoelectronico)', Comentarios: 'Datos del correo electrónico.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó el usuario del correo electrónico.' }, { Codigo: '30002', Descripcion: 'Caracteres inválidos en el dominio.' }, { Codigo: '30003', Descripcion: 'No se ingresó dominio.' }, { Codigo: '30004', Descripcion: 'Dominio inválido.' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30006', Descripcion: 'El correo electrónico ya existe (Correlativo [Número del correlativo]).' }, { Codigo: '40003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '60001', Descripcion: 'El registro ya existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se ingresó el usuario del correo electrónico.' }, { Código: '30002', Descripción: 'Caracteres inválidos en el dominio.' }, { Código: '30003', Descripción: 'No se ingresó dominio.' }, { Código: '30004', Descripción: 'Dominio inválido.' }, { Código: '30005', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30006', Descripción: 'El correo electrónico ya existe (Correlativo [Número del correlativo]).' }, { Código: '40003', Descripción: 'No existe registro para el identificador único.' }, { Código: '60001', Descripción: 'El registro ya existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class AgregarCorreoElectronicoComponent1750945334048 {
          </bts:sdtCorreoElectronico>
       </bts:BTPersonas.AgregarCorreoElectronico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?AgregarCorreoElectronico\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.AgregarCorreoElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

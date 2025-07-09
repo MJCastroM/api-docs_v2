@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarFechadeAbonoComponent1750945330986 {
+export class ModificarFechadeAbonoComponent1751987195317 {
   pageTitle        = 'Modificar Fecha de Abono';
   description      = `Método para modificar la fecha del abono para el ahorro.`;
   pubName    = 'BTAhorroProgramado.ModificarFechaDeAbono';
@@ -21,7 +21,7 @@ export class ModificarFechadeAbonoComponent1750945330986 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de ahorro.' }, { Nombre: 'diaIncremento', Tipo: 'Int', Comentarios: 'Nuevo día de incremento.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del ahorro.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No existe registro para el producto de ahorro seleccionado.' }, { Codigo: '40050', Descripcion: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40706', Descripcion: 'Debe indicar día de incremento.' }, { Codigo: '40709', Descripcion: 'El día de incremento debe ser un día hábil según el calendario.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador del ahorro.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Código: '40001', Descripción: 'No existe registro para el producto de ahorro seleccionado.' }, { Código: '40050', Descripción: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Código: '40706', Descripción: 'Debe indicar día de incremento.' }, { Código: '40709', Descripción: 'El día de incremento debe ser un día hábil según el calendario.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ModificarFechadeAbonoComponent1750945330986 {
          <bts:diaIncremento>13</bts:diaIncremento>
       </bts:BTAhorroProgramado.ModificarFechaDeAbono>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ModificarFechaDeAbono\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ModificarFechaDeAbonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

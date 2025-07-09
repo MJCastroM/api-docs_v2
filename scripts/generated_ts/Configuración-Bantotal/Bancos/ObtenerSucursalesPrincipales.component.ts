@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSucursalesPrincipalesComponent1750945332113 {
+export class ObtenerSucursalesPrincipalesComponent1751987196466 {
   pageTitle        = 'Obtener Sucursales Principales';
   description      = `Método para obtener un listado de las sucursales principales.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerSucursalesPrincipales';
@@ -38,7 +38,7 @@ export class ObtenerSucursalesPrincipalesComponent1750945332113 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerSucursalesPrincipales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerSucursalesPrincipales=\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerSucursalesPrincipalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
   "Btinreq": {

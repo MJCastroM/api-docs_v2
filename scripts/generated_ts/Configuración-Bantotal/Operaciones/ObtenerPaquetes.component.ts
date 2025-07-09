@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPaquetesComponent1750945332177 {
+export class ObtenerPaquetesComponent1751987196509 {
   pageTitle        = 'Obtener Paquetes';
   description      = `Método para obtener un listado de los paquetes ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPaquetes';
@@ -38,7 +38,7 @@ export class ObtenerPaquetesComponent1750945332177 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerPaquetes>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerPaquetes=\' \
@@ -114,7 +114,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPaquetesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

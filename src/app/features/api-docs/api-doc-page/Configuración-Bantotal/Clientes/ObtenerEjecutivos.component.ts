@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEjecutivosComponent1750945332134 {
+export class ObtenerEjecutivosComponent1751987196473 {
   pageTitle        = 'Obtener Ejecutivos';
   description      = `Método para obtener un listado de los ejecutivos ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEjecutivos';
@@ -38,7 +38,7 @@ export class ObtenerEjecutivosComponent1750945332134 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerEjecutivos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerEjecutivos=\' \
@@ -155,7 +155,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEjecutivosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

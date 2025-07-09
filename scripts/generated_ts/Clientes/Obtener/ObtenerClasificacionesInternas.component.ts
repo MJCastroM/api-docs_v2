@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerClasificacionesInternasComponent1750945331796 {
+export class ObtenerClasificacionesInternasComponent1751987196168 {
   pageTitle        = 'Obtener Clasificaciones Internas';
   description      = `Método para obtener un listado de las clasificaciones internas ingresadas en Bantotal.`;
   pubName    = 'BTClientes.ObtenerClasificacionesInternas';
@@ -38,7 +38,7 @@ export class ObtenerClasificacionesInternasComponent1750945331796 {
          </bts:Btinreq>
       </bts:BTClientes.ObtenerClasificacionesInternas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerClasificacionesInternas=\' \
@@ -119,7 +119,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerClasificacionesInternasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

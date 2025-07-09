@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarPerfilComponent1750945335772 {
+export class AgregarPerfilComponent1751987200413 {
   pageTitle        = 'Agregar Perfil';
   description      = `Método para agregar un perfil a un usuario.`;
   pubName    = 'BTUsuarios.AgregarPerfil';
@@ -21,7 +21,7 @@ export class AgregarPerfilComponent1750945335772 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador del usuario.' }, { Nombre: 'sdtPerfil', Tipo: '[sBTPerfilBT](#sbtperfilbt)', Comentarios: 'Datos del perfil.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar Usuario.' }, { Codigo: '30002', Descripcion: 'No existe Usuario.' }, { Codigo: '30003', Descripcion: 'Debe ingresar Perfil.' }, { Codigo: '30004', Descripcion: 'No existe Perfil.' }, { Codigo: '30005', Descripcion: 'Debe ingresar Fecha de Alta.' }, { Codigo: '30006', Descripcion: 'Fecha de Alta debe ser posterior a Fecha de Apertura.' }, { Codigo: '30007', Descripcion: 'Debe ingresar Fecha de Vencimiento.' }, { Codigo: '30008', Descripcion: 'Fecha de Vencimiento debe ser posterior a Fecha de Apertura.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar Usuario.' }, { Código: '30002', Descripción: 'No existe Usuario.' }, { Código: '30003', Descripción: 'Debe ingresar Perfil.' }, { Código: '30004', Descripción: 'No existe Perfil.' }, { Código: '30005', Descripción: 'Debe ingresar Fecha de Alta.' }, { Código: '30006', Descripción: 'Fecha de Alta debe ser posterior a Fecha de Apertura.' }, { Código: '30007', Descripción: 'Debe ingresar Fecha de Vencimiento.' }, { Código: '30008', Descripción: 'Fecha de Vencimiento debe ser posterior a Fecha de Apertura.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class AgregarPerfilComponent1750945335772 {
          </bts:sdtPerfil>
       </bts:BTUsuarios.AgregarPerfil>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?AgregarPerfil\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.AgregarPerfilResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

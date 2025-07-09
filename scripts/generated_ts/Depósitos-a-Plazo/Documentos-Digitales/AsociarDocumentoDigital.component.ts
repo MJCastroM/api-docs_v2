@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsociarDocumentoDigitalComponent1750945333078 {
+export class AsociarDocumentoDigitalComponent1751987197412 {
   pageTitle        = 'Asociar Documento Digital';
   description      = `Método para asociar un documento digital a un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.AsociarDocumentoDigital';
@@ -23,7 +23,7 @@ export class AsociarDocumentoDigitalComponent1750945333078 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Long', Comentarios: 'Identificador del tipo de documento digital.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre del documento.' }, { Nombre: 'archivoCodificado', Tipo: 'String', Comentarios: 'Archivo a asociar codificado en Base 64.' }, { Nombre: 'fechaEmision', Tipo: 'Date', Comentarios: 'Fecha de emisión del documento (en caso que corresponda).' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento del documento (en caso que corresponda).' }];
   outputData = [{ Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador del documento asociado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de tipo de documento digital.' }, { Codigo: '30002', Descripcion: 'No se recibió nombre.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30004', Descripcion: 'No se recibió archivo codificado.' }, { Codigo: '30005', Descripcion: 'La operación ingresada no corresponde a un depósito a plazo.' }, { Codigo: '30021', Descripcion: 'No se recuperó el identificador para la operación recibida.' }, { Codigo: '40101', Descripcion: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Codigo: '40993', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Codigo: '40994', Descripcion: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de tipo de documento digital.' }, { Código: '30002', Descripción: 'No se recibió nombre.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30004', Descripción: 'No se recibió archivo codificado.' }, { Código: '30005', Descripción: 'La operación ingresada no corresponde a un depósito a plazo.' }, { Código: '30021', Descripción: 'No se recuperó el identificador para la operación recibida.' }, { Código: '40101', Descripción: 'Ocurrió un error al recibir el archivo, puede que el mismo este corrupto.' }, { Código: '40993', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede estar vacío.' }, { Código: '40994', Descripción: 'Error de configuración: El vínculo de un tipo de documento digital no puede ser distinto al de la entidad invocadora.' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class AsociarDocumentoDigitalComponent1750945333078 {
          <bts:fechaVencimiento>2020-10-10</bts:fechaVencimiento>
       </bts:BTDepositosAPlazo.AsociarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?AsociarDocumentoDigital=\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.AsociarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

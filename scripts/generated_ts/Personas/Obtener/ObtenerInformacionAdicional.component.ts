@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionAdicionalComponent1750945334410 {
+export class ObtenerInformacionAdicionalComponent1751987198773 {
   pageTitle        = 'Obtener Información Adicional';
   description      = `Método para obtener la información adicional de una persona.`;
   pubName    = 'BTPersonas.ObtenerInformacionAdicional';
@@ -21,7 +21,7 @@ export class ObtenerInformacionAdicionalComponent1750945334410 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtInformacionAdicional', Tipo: '[sBTDatoLista](#sbtdatolista)', Comentarios: 'Información Adicional de datos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30013', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerInformacionAdicionalComponent1750945334410 {
          <bts:personaUId>101</bts:personaUId>
       </bts:BTPersonas.ObtenerInformacionAdicional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerInformacionAdicional\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerInformacionAdicionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

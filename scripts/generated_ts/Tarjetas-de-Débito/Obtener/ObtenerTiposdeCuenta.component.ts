@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeCuentaComponent1750945335630 {
+export class ObtenerTiposdeCuentaComponent1751987200238 {
   pageTitle        = 'Obtener Tipos de Cuenta';
   description      = `Método para obtener los tipos de cuenta de tarjetas de débito ingresados en el sistema.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerTiposDeCuenta';
@@ -38,7 +38,7 @@ export class ObtenerTiposdeCuentaComponent1750945335630 {
          </bts:Btinreq>
       </bts:BTTarjetasDeDebito.ObtenerTiposDeCuenta>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -82,7 +82,7 @@ export class ObtenerTiposdeCuentaComponent1750945335630 {
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerTiposDeCuentaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

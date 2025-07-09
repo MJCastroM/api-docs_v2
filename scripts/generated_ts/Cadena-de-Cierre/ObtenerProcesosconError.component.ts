@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosconErrorComponent1750945331230 {
+export class ObtenerProcesosconErrorComponent1751987195540 {
   pageTitle        = 'Obtener Procesos con Error';
   description      = `Método para obtener un listado de los procesos con error en la cadena de cierre para una fecha dada.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosConError';
@@ -39,7 +39,7 @@ export class ObtenerProcesosconErrorComponent1750945331230 {
          <bts:fecha>2018-05-07</bts:fecha>
       </bts:BTCadenaCierre.ObtenerProcesosConError>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosConError\' \
@@ -233,7 +233,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosConErrorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicoComponent1750945331880 {
+export class ObtenerIdentificadorUnicoComponent1751987196269 {
   pageTitle        = 'Obtener Identificador Único';
   description      = `Método para obtener el identificador único correspondiente a una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerIdentificadorUnico';
@@ -21,7 +21,7 @@ export class ObtenerIdentificadorUnicoComponent1750945331880 {
 
   inputData  = [{ Nombre: 'cuentaBT', Tipo: 'Int', Comentarios: 'Cuenta Bantotal.' }];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'tipoDocumento', Tipo: 'String', Comentarios: 'Tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'nombre', Tipo: 'String', Comentarios: 'Nombre.' }, { Nombre: 'ejecutivo', Tipo: 'String', Comentarios: 'Ejecutivo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió la Cuenta BT.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió la Cuenta BT.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerIdentificadorUnicoComponent1750945331880 {
          <bts:cuentaBT>40</bts:cuentaBT>
       </bts:BTClientes.ObtenerIdentificadorUnico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerIdentificadorUnico=\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerIdentificadorUnicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

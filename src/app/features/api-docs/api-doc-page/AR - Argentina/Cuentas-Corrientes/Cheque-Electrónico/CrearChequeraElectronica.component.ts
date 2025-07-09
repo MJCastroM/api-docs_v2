@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearChequeraElectronicaComponent1750945331086 {
+export class CrearChequeraElectronicaComponent1751987195416 {
   pageTitle        = 'Crear Chequera Electrónica';
   description      = `Método para crear una chequera electrónica.`;
   pubName    = 'BTCuentasCorrientes.CrearChequeaElectronica';
@@ -21,7 +21,7 @@ export class CrearChequeraElectronicaComponent1750945331086 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'cantidadCheques', Tipo: 'Short', Comentarios: 'Cantidad de cheques.' }];
   outputData = [{ Nombre: 'listaCheques', Tipo: '[sBTChequeElectronico](#sbtchequeelectronico)', Comentarios: 'Listado de cheques.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class CrearChequeraElectronicaComponent1750945331086 {
          <bts:cantidadCheques>1</bts:cantidadCheques>
       </bts:BTCuentasCorrientes.CrearChequeraElectronica>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, 
+</soapenv:Envelope></soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?CrearChequeaElectronica\' \
@@ -90,7 +90,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.CrearChequeraElectronicaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

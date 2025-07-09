@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarDocumentoDigitalComponent1750945334190 {
+export class EliminarDocumentoDigitalComponent1751987198575 {
   pageTitle        = 'Eliminar Documento Digital';
   description      = `Método para eliminar un documento digital de una persona.`;
   pubName    = 'BTPersonas.EliminarDocumentoDigital';
@@ -21,7 +21,7 @@ export class EliminarDocumentoDigitalComponent1750945334190 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'documentoId', Tipo: 'Long', Comentarios: 'Identificador de instancia de documento digital asociado.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de instancia de documento digital.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador indicado.' }, { Codigo: '30421', Descripcion: 'El registro no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de instancia de documento digital.' }, { Código: '30004', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30013', Descripción: 'No existe registro para el identificador indicado.' }, { Código: '30421', Descripción: 'El registro no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class EliminarDocumentoDigitalComponent1750945334190 {
          <bts:documentoId>112</bts:documentoId>
       </bts:BTPersonas.EliminarDocumentoDigital>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarDocumentoDigital\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarDocumentoDigitalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

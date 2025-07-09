@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarVictimaHechoViolentoComponent1750945334140 {
+export class AgregarVictimaHechoViolentoComponent1751987198521 {
   pageTitle        = 'Agregar Víctima Hecho Violento';
   description      = `Método para agregar la información de una persona víctima de un hecho violento.`;
   pubName    = 'BTPersonas.AgregarVictimaHechoViolento';
@@ -21,7 +21,7 @@ export class AgregarVictimaHechoViolentoComponent1750945334140 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'esVictima', Tipo: 'String', Comentarios: 'Es víctima de hecho violento (S/N).' }, { Nombre: 'sdtVictimaHechoViolento', Tipo: '[sBTPCOVictimaHechoViolento](#sbtpcovictimahechoviolento)', Comentarios: 'Datos de persona víctima de hecho violento (Se ingresa solo si el campo esVictima = S).' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '40001', Descripcion: 'Debe ingresar entidad.' }, { Codigo: '40002', Descripcion: 'La entidad ingresada no es válida.' }, { Codigo: '40003', Descripcion: 'Debe ingresar fecha del hecho.' }, { Codigo: '40004', Descripcion: 'La fecha del hecho no puede ser posterior a la fecha de apertura.' }, { Codigo: '40005', Descripcion: 'Debe ingresar fecha de certificación.' }, { Codigo: '40006', Descripcion: 'La fecha de certificación no puede ser anterior a la fecha del hecho.' }, { Codigo: '40007', Descripcion: 'Debe ingresar fecha de vencimiento.' }, { Codigo: '40008', Descripcion: 'La fecha de vencimiento no puede ser anterior a la fecha del hecho.' }, { Codigo: '40009', Descripcion: 'La fecha de vencimiento no puede ser anterior a la fecha de certificación.' }, { Codigo: '40010', Descripcion: 'Debe ingresar departamento.' }, { Codigo: '40011', Descripcion: 'El departamento ingresado no es válido.' }, { Codigo: '40012', Descripcion: 'Debe ingresar municipio.' }, { Codigo: '40013', Descripcion: 'El municipio ingresado no es válido.' }, { Codigo: '40014', Descripcion: 'Debe ingresar corregimiento.' }, { Codigo: '40015', Descripcion: 'Debe ingresar inspección de policía.' }, { Codigo: '40016', Descripcion: 'Debe ingresar vereda.' }, { Codigo: '40017', Descripcion: 'Debe ingresar sitio.' }, { Codigo: '40018', Descripcion: 'Debe ingresar tipo de hecho.' }, { Codigo: '40019', Descripcion: 'El tipo de hecho ingresado no es válido.' }, { Codigo: '40020', Descripcion: 'Ya existe registro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de persona.' }, { Código: '40001', Descripción: 'Debe ingresar entidad.' }, { Código: '40002', Descripción: 'La entidad ingresada no es válida.' }, { Código: '40003', Descripción: 'Debe ingresar fecha del hecho.' }, { Código: '40004', Descripción: 'La fecha del hecho no puede ser posterior a la fecha de apertura.' }, { Código: '40005', Descripción: 'Debe ingresar fecha de certificación.' }, { Código: '40006', Descripción: 'La fecha de certificación no puede ser anterior a la fecha del hecho.' }, { Código: '40007', Descripción: 'Debe ingresar fecha de vencimiento.' }, { Código: '40008', Descripción: 'La fecha de vencimiento no puede ser anterior a la fecha del hecho.' }, { Código: '40009', Descripción: 'La fecha de vencimiento no puede ser anterior a la fecha de certificación.' }, { Código: '40010', Descripción: 'Debe ingresar departamento.' }, { Código: '40011', Descripción: 'El departamento ingresado no es válido.' }, { Código: '40012', Descripción: 'Debe ingresar municipio.' }, { Código: '40013', Descripción: 'El municipio ingresado no es válido.' }, { Código: '40014', Descripción: 'Debe ingresar corregimiento.' }, { Código: '40015', Descripción: 'Debe ingresar inspección de policía.' }, { Código: '40016', Descripción: 'Debe ingresar vereda.' }, { Código: '40017', Descripción: 'Debe ingresar sitio.' }, { Código: '40018', Descripción: 'Debe ingresar tipo de hecho.' }, { Código: '40019', Descripción: 'El tipo de hecho ingresado no es válido.' }, { Código: '40020', Descripción: 'Ya existe registro.' }];
 
   examples = {
     invocation: { xml: `
@@ -57,7 +57,7 @@ export class AgregarVictimaHechoViolentoComponent1750945334140 {
          </bts:sdtVictimaHechoViolento>
       </bts:BTPersonas.AgregarVictimaHechoViolento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarVictimaHechoViolento \
@@ -110,7 +110,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.AgregarVictimaHechoViolentoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

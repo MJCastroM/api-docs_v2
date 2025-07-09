@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPagosdeunPrestamoComponent1750945335078 {
+export class ObtenerPagosdeunPrestamoComponent1751987199575 {
   pageTitle        = 'Obtener Pagos de un Préstamo';
   description      = `Método para obtener el detalle de pagos de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerPagos';
@@ -38,7 +38,7 @@ Valor específico 2 | Tipo de operación a excluir.
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación del préstamo.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la cual buscar pagos.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la cual buscar pagos.' }];
   outputData = [{ Nombre: 'sdtPagos', Tipo: '[sBTPagoPrestamo](#sbtpagoprestamo)', Comentarios: 'Listado de pagos del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30011', Descripcion: 'No se recuperó la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30011', Descripción: 'No se recuperó la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -58,7 +58,7 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:fechaDesde>2019-03-05</bts:fechaDesde>
       </bts:BTPrestamos.ObtenerPagos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPagos=\' \
@@ -130,7 +130,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerPagosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

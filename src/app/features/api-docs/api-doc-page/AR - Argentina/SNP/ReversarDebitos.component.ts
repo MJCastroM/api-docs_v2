@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ReversarDebitosComponent1750945331199 {
+export class ReversarDebitosComponent1751987195506 {
   pageTitle        = 'Reversar Débitos';
   description      = `Método para solicitar el reverso de un débito indicado.`;
   pubName    = 'BTSNP.ReversarDebitos';
@@ -21,7 +21,7 @@ export class ReversarDebitosComponent1750945331199 {
 
   inputData  = [{ Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha de vencimiento.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia del débito.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se recibió la fecha de vencimiento.' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No se puede realizar el reverso debido al tiempo de transcurrido desde la fecha de vencimiento.' }, { Codigo: '40002', Descripcion: 'No se puede reversar el débito el mismo dia de contabilizado.' }, { Codigo: '40003', Descripcion: 'Débito no contabilizado.' }, { Codigo: '40004', Descripcion: 'No existe el débito recibido.' }, { Codigo: '40011', Descripcion: 'Ya existe un reverso en curso' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la empresa originante.' }, { Código: '30003', Descripción: 'No se recibió el tipo de débito.' }, { Código: '30004', Descripción: 'No se recibió la prestación.' }, { Código: '30005', Descripción: 'No se recibió el ID del cliente SNP.' }, { Código: '30006', Descripción: 'No se recibió la fecha de vencimiento.' }, { Código: '30007', Descripción: 'El tipo de débito no es correcto.' }, { Código: '30008', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'No se puede realizar el reverso debido al tiempo de transcurrido desde la fecha de vencimiento.' }, { Código: '40002', Descripción: 'No se puede reversar el débito el mismo dia de contabilizado.' }, { Código: '40003', Descripción: 'Débito no contabilizado.' }, { Código: '40004', Descripción: 'No existe el débito recibido.' }, { Código: '40011', Descripción: 'Ya existe un reverso en curso' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class ReversarDebitosComponent1750945331199 {
          <bts:referencia>015984900000216</bts:referencia>
       </bts:BTSNP.ReversarDebito>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.ReversarDebitoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

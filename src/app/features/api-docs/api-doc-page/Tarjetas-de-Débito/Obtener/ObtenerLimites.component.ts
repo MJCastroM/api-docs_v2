@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750945335596 {
+export class ObtenerLimitesComponent1751987200192 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerLimites';
@@ -21,7 +21,7 @@ export class ObtenerLimitesComponent1750945335596 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de la tarjeta de débito.' }];
   outputData = [{ Nombre: 'sdtLimites', Tipo: '[sBTLimiteTarjeta](#sbtlimitetarjeta)', Comentarios: 'Datos de los límites de la tarjeta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de tarjeta.' }, { Codigo: '40001', Descripcion: 'No existe la tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de tarjeta.' }, { Código: '40001', Descripción: 'No existe la tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerLimitesComponent1750945335596 {
          <bts:tarjetaUId>2000002050</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerLimites>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerLimites\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

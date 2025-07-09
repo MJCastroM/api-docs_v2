@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearSolicitudAmpliacionComponent1750945333362 {
+export class CrearSolicitudAmpliacionComponent1751987197730 {
   pageTitle        = 'Crear Solicitud Ampliación';
   description      = `Método para crear una solicitud de ampliación de crédito.`;
   pubName    = 'BTMicrofinanzas.CrearSolicitudAmpliacion';
@@ -21,7 +21,7 @@ export class CrearSolicitudAmpliacionComponent1750945333362 {
 
   inputData  = [{ Nombre: 'procesoId', Tipo: 'Short', Comentarios: '[Hidden: Identificador de proceso Workflow].' }, { Nombre: 'tareaId', Tipo: 'Short', Comentarios: '[Hidden: Identificador de tarea Workflow].' }, { Nombre: 'tipoSolicitud', Tipo: 'Byte', Comentarios: '[Hidden: Identificador de tipo de solicitud \'Ampliación\'].' }, { Nombre: 'usuarioIngreso', Tipo: 'String', Comentarios: 'Usuario que ingresa la solicitud. En caso de no especificarse, se asigna el usuario conectado.' }, { Nombre: 'fechaIngreso', Tipo: 'Date', Comentarios: 'Fecha en la que se ingresa la solicitud. En caso de no especificarse, se asigna fecha apertura.' }, { Nombre: 'usuarioAsignacion', Tipo: 'String', Comentarios: 'Usuario al que queda asignada la tarea de solicitud. En caso de no especificarse, se asigna al Asesor de créditos.' }, { Nombre: 'datosSolicitud', Tipo: '[sBTSolicitudIndividual](#sbtsolicitudindividual)', Comentarios: 'Datos de la solicitud.' }];
   outputData = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente.' }, { Codigo: '30011', Descripcion: 'No existe FSD008 para la cuenta [Número de cuenta].' }, { Codigo: '30012', Descripcion: 'No se obtuvo el titular representativo de la cuenta [Número de cuenta].' }, { Codigo: '30013', Descripcion: 'No se pudo determinar la sucursal de la solicitud.' }, { Codigo: '30014', Descripcion: 'No se pudo determinar el asesor de la solicitud.' }, { Codigo: '30015', Descripcion: 'El código de campaña no existe.' }, { Codigo: '30016', Descripcion: 'El código de origen de captación no existe.' }, { Codigo: '30020 en adelante', Descripcion: 'Controles de regla de negocio.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de proceso.' }, { Código: '30002', Descripción: 'No se recibió el identificador de tarea.' }, { Código: '30003', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el Identificador de cliente.' }, { Código: '30011', Descripción: 'No existe FSD008 para la cuenta [Número de cuenta].' }, { Código: '30012', Descripción: 'No se obtuvo el titular representativo de la cuenta [Número de cuenta].' }, { Código: '30013', Descripción: 'No se pudo determinar la sucursal de la solicitud.' }, { Código: '30014', Descripción: 'No se pudo determinar el asesor de la solicitud.' }, { Código: '30015', Descripción: 'El código de campaña no existe.' }, { Código: '30016', Descripción: 'El código de origen de captación no existe.' }, { Código: '30020 en adelante', Descripción: 'Controles de regla de negocio.' }];
 
   examples = {
     invocation: { xml: `
@@ -49,7 +49,7 @@ export class CrearSolicitudAmpliacionComponent1750945333362 {
          </bts:datosSolicitud>
       </bts:BTMicrofinanzas.CrearSolicitudAmpliacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?CrearSolicitudAmpliacion \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.CrearSolicitudAmpliacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeCalendariodeSucursalComponent1750945332209 {
+export class ObtenerDetalledeCalendariodeSucursalComponent1751987196548 {
   pageTitle        = 'Obtener Detalle de Calendario de Sucursal';
   description      = `Método para obtener el detalle de los días del calendario de una determinada sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeCalendariodeSucursalComponent1750945332209 {
 
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }, { Nombre: 'fechaInicio', Tipo: 'Date', Comentarios: 'Fecha inicio de la consulta.' }, { Nombre: 'fechaFin', Tipo: 'Date', Comentarios: 'Fecha fin de la consulta.' }];
   outputData = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario' }, { Nombre: 'descripcionCalendario', Tipo: 'String', Comentarios: 'Descripción del calendario' }, { Nombre: 'sdtDetalleCalendario', Tipo: '[sBTDiaCalendario](#sbtdiacalendario)', Comentarios: 'Detalle de la consulta del calendario.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se encontró un calendario para la sucursal indicada.' }, { Codigo: '30002', Descripcion: 'No se recibió fecha de inicio.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha de fin.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se encontró un calendario para la sucursal indicada.' }, { Código: '30002', Descripción: 'No se recibió fecha de inicio.' }, { Código: '30003', Descripción: 'No se recibió fecha de fin.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerDetalledeCalendariodeSucursalComponent1750945332209 {
          <bts:fechaFin>2020-12-12</bts:fechaFin>
       </bts:BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerDetalleCalendarioDeSucursal\' \
@@ -215,7 +215,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleCalendarioDeSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

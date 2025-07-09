@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarDatosContactoComponent1750945335649 {
+export class ActualizarDatosContactoComponent1751987200266 {
   pageTitle        = 'Actualizar Datos de Contacto';
   description      = `Método para actualizar los datos de contacto de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ActualizarDatosContacto';
@@ -21,7 +21,7 @@ export class ActualizarDatosContactoComponent1750945335649 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: 'sdtDatosContacto', Tipo: '[sBTDatosContacto](#sbtdatoscontacto)', Comentarios: 'Datos del contacto de tarjeta.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de tarjeta de débito' }, { Codigo: '30001', Descripcion: 'No se recibió código de domicilio a actualizar.' }, { Codigo: '30001', Descripcion: 'No se recibió correo electrónico a actualizar.' }, { Codigo: '30001', Descripcion: 'No se recibió numero de teléfono a actualizar.' }, { Codigo: '40001', Descripcion: 'El código de domicilio ingresado no es válido.' }, { Codigo: '40002', Descripcion: 'No existe una tarjeta con el identificador ingresado.' }, { Codigo: '40003', Descripcion: 'El tarjeta habiente no tiene un domicilio con el código ingresado.' }, { Codigo: '42005', Descripcion: 'Funcionalidad inexistente TDD025.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de tarjeta de débito' }, { Código: '30001', Descripción: 'No se recibió código de domicilio a actualizar.' }, { Código: '30001', Descripción: 'No se recibió correo electrónico a actualizar.' }, { Código: '30001', Descripción: 'No se recibió numero de teléfono a actualizar.' }, { Código: '40001', Descripción: 'El código de domicilio ingresado no es válido.' }, { Código: '40002', Descripción: 'No existe una tarjeta con el identificador ingresado.' }, { Código: '40003', Descripción: 'El tarjeta habiente no tiene un domicilio con el código ingresado.' }, { Código: '42005', Descripción: 'Funcionalidad inexistente TDD025.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class ActualizarDatosContactoComponent1750945335649 {
          </bts:sdtDatosContacto>
       </bts:BTTarjetasDeDebito.ActualizarDatosContacto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ActualizarDatosContacto\' \
@@ -94,7 +94,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ActualizarDatosContactoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq": {

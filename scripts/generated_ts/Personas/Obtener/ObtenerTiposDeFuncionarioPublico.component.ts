@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposDeFuncionarioPublicoComponent1750945334530 {
+export class ObtenerTiposDeFuncionarioPublicoComponent1751987198911 {
   pageTitle        = 'Obtener Tipos de Funcionario Público';
   description      = `Método para obtener los tipos de funcionario público.`;
   pubName    = 'BTPersonas.ObtenerTiposDeFuncionarioPublico';
@@ -21,7 +21,7 @@ export class ObtenerTiposDeFuncionarioPublicoComponent1750945334530 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTiposFuncionarios', Tipo: '[sBTTipoFuncionario](#sbttipofuncionario)', Comentarios: 'Listado de los tipos de funcionario público.' }];
-  errors     = [{ Codigo: '40002', Descripcion: 'La guía 8260 no está parametrizada.' }];
+  errors     = [{ Código: '40002', Descripción: 'La guía 8260 no está parametrizada.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposDeFuncionarioPublicoComponent1750945334530 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerTiposDeFuncionarioPublico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTiposDeFuncionarioPublico\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerTiposDeFuncionarioPublicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

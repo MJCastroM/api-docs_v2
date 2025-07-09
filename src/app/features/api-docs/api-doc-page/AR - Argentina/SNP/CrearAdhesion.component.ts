@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearAdhesionComponent1750945331142 {
+export class CrearAdhesionComponent1751987195460 {
   pageTitle        = 'Crear Adhesión';
   description      = `Método para crear una adhesión.`;
   pubName    = 'BTSNP.CrearAdhesion';
@@ -21,7 +21,7 @@ export class CrearAdhesionComponent1750945331142 {
 
   inputData  = [{ Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'avisoRechazo', Tipo: 'String', Comentarios: '¿Aviso rechazo? (S/N)' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'montoMaximoDebito', Tipo: 'String', Comentarios: 'Monto máximo de débito (M=Mensual/F=Factura)' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe del Stop Debit.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se encontró un cliente para el identificador: [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se recibió importe.' }, { Codigo: '30021', Descripcion: 'La operación no corresponde al cliente.' }, { Codigo: '40001', Descripcion: 'El largo del ID no coincide con el esperado.' }, { Codigo: '40002', Descripcion: 'El código de moneda no es válido.' }, { Codigo: '40003', Descripcion: 'La prestación para la empresa seleccionada no está disponible.' }, { Codigo: '40004', Descripcion: 'No existe prestación para la empresa seleccionada.' }, { Codigo: '40005', Descripcion: 'Empresa Originante Inexistente.' }, { Codigo: '40006', Descripcion: 'No se pudieron generar los bloques de CBU a partir de la operación dada.' }, { Codigo: '40007', Descripcion: 'La operación recibida para obtener el CBU no pertenece al cliente especificado.' }, { Codigo: '40008', Descripcion: 'No existe la cuenta.' }, { Codigo: '40009', Descripcion: 'Cuenta bloqueada, no permite la adhesión.' }, { Codigo: '40010', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '40011', Descripcion: 'El código de monto máximo de débito es incorrecto.' }, { Codigo: '40012', Descripcion: 'El monto no puede ser nulo.' }, { Codigo: '40013', Descripcion: 'Ya existe un alta activa o pendiente de proceso.' }, { Codigo: '40014', Descripcion: 'Cargar Programa de generación de CBU.' }, { Codigo: '40102', Descripcion: 'Cuenta Vinculada debe ser distinto de cero.' }, { Codigo: '40104', Descripcion: 'Cuenta BT inexistente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la empresa originante.' }, { Código: '30003', Descripción: 'No se recibió el tipo de débito.' }, { Código: '30004', Descripción: 'No se recibió la prestación.' }, { Código: '30005', Descripción: 'No se recibió el ID del cliente SNP.' }, { Código: '30006', Descripción: 'No se encontró un cliente para el identificador: [Número de Identificador].' }, { Código: '30007', Descripción: 'El tipo de débito no es correcto.' }, { Código: '30008', Descripción: 'No se recibió importe.' }, { Código: '30021', Descripción: 'La operación no corresponde al cliente.' }, { Código: '40001', Descripción: 'El largo del ID no coincide con el esperado.' }, { Código: '40002', Descripción: 'El código de moneda no es válido.' }, { Código: '40003', Descripción: 'La prestación para la empresa seleccionada no está disponible.' }, { Código: '40004', Descripción: 'No existe prestación para la empresa seleccionada.' }, { Código: '40005', Descripción: 'Empresa Originante Inexistente.' }, { Código: '40006', Descripción: 'No se pudieron generar los bloques de CBU a partir de la operación dada.' }, { Código: '40007', Descripción: 'La operación recibida para obtener el CBU no pertenece al cliente especificado.' }, { Código: '40008', Descripción: 'No existe la cuenta.' }, { Código: '40009', Descripción: 'Cuenta bloqueada, no permite la adhesión.' }, { Código: '40010', Descripción: 'El tipo de débito no es correcto.' }, { Código: '40011', Descripción: 'El código de monto máximo de débito es incorrecto.' }, { Código: '40012', Descripción: 'El monto no puede ser nulo.' }, { Código: '40013', Descripción: 'Ya existe un alta activa o pendiente de proceso.' }, { Código: '40014', Descripción: 'Cargar Programa de generación de CBU.' }, { Código: '40102', Descripción: 'Cuenta Vinculada debe ser distinto de cero.' }, { Código: '40104', Descripción: 'Cuenta BT inexistente.' }];
 
   examples = {
     invocation: { xml: `
@@ -48,7 +48,7 @@ export class CrearAdhesionComponent1750945331142 {
          <bts:importe>1000</bts:importe>
       </bts:BTSNP.CrearAdhesion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearAdhesion\' \
@@ -97,7 +97,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.CrearAdhesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class IngresarOrdenPagoComponent1750945331515 {
+export class IngresarOrdenPagoComponent1751987195832 {
   pageTitle        = 'Ingresar Orden Pago';
   description      = `Método para ingresar una orden de pago.`;
   pubName    = 'BTCASHManagement.IngresarOrdenPago';
@@ -21,7 +21,7 @@ export class IngresarOrdenPagoComponent1750945331515 {
 
   inputData  = [{ Nombre: 'contrato', Tipo: 'Int', Comentarios: 'Identificador del contrato CASH del cliente.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio de pago CASH.' }, { Nombre: 'operacionUId_debito', Tipo: 'Long', Comentarios: 'Operación de débito.' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe total.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de pago.' }, { Nombre: 'listaCampoValor', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Listado de valores de campos CASH.' }];
   outputData = [{ Nombre: 'ordenId', Tipo: 'Long', Comentarios: 'Identificador de orden CASH.' }];
-  errors     = [{ Codigo: '1030770', Descripcion: 'No se recupero informacion para la cuenta recibida.' }, { Codigo: '1030771', Descripcion: 'No se recibio importe para la orden.' }, { Codigo: '1030772', Descripcion: 'No se recibio moneda para la orden.' }, { Codigo: '1030773', Descripcion: 'No se recibio fecha para la orden.' }];
+  errors     = [{ Código: '1030770', Descripción: 'No se recupero informacion para la cuenta recibida.' }, { Código: '1030771', Descripción: 'No se recibio importe para la orden.' }, { Código: '1030772', Descripción: 'No se recibio moneda para la orden.' }, { Código: '1030773', Descripción: 'No se recibio fecha para la orden.' }];
 
   examples = {
     invocation: { xml: `
@@ -50,7 +50,7 @@ export class IngresarOrdenPagoComponent1750945331515 {
          </bts:listaCampoValor>
       </bts:BTCASHManagement.IngresarOrdenPago>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_CASHManagement_v1?IngresarOrdenPago\' \
@@ -105,7 +105,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.IngresarOrdenPagoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCodigosdeDomicilioComponent1750945332276 {
+export class ObtenerCodigosdeDomicilioComponent1751987196623 {
   pageTitle        = 'Obtener Códigos de Domicilio';
   description      = `Método para obtener un listado de los códigos de domicilio ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCodigosDeDomicilio';
@@ -21,7 +21,7 @@ export class ObtenerCodigosdeDomicilioComponent1750945332276 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtCodigos', Tipo: '[sBTCodigoDomicilio](#sbtcodigodomicilio)', Comentarios: 'Listado de códigos de domicilio.' }];
-  errors     = [{ Codigo: '30011', Descripcion: 'No existen Códigos de domicilio ingresados en el sistema.' }];
+  errors     = [{ Código: '30011', Descripción: 'No existen Códigos de domicilio ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerCodigosdeDomicilioComponent1750945332276 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerCodigosDeDomicilio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerCodigosDeDomicilio\' \
@@ -119,7 +119,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerCodigosDeDomicilioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

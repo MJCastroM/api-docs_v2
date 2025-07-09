@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class QuitarOperacionesaCancelarComponent1750945333564 {
+export class QuitarOperacionesaCancelarComponent1751987197889 {
   pageTitle        = 'Quitar Operaciones a Cancelar';
   description      = `Método para quitar operaciones a cancelar para una solicitud de créditos.`;
   pubName    = 'BTMicrofinanzas.QuitarOperacionesACancelar';
@@ -21,7 +21,7 @@ export class QuitarOperacionesaCancelarComponent1750945333564 {
 
   inputData  = [{ Nombre: 'solicitudUId', Tipo: 'Long', Comentarios: 'Identificador de instancia Workflow' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente' }, { Nombre: 'sdtOperaciones', Tipo: '[sBTOperacionId](#sbtoperacionid)', Comentarios: 'Listado de operaciones' }];
   outputData = [{ Nombre: 'montoCancelacion', Tipo: 'Double', Comentarios: 'Monto de cancelación de la operación' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de solicitud' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30003', Descripcion: 'No se recibió ninguna operación para cancelar' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador]' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador]' }, { Codigo: '40001', Descripcion: 'La solicitud ingresada no existe' }, { Codigo: '40002', Descripcion: 'El cliente ingresado no corresponde con la solicitud' }, { Codigo: '40004', Descripcion: 'No existe registro para la operación ingresada' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de solicitud' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente' }, { Código: '30003', Descripción: 'No se recibió ninguna operación para cancelar' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador]' }, { Código: '30005', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador]' }, { Código: '40001', Descripción: 'La solicitud ingresada no existe' }, { Código: '40002', Descripción: 'El cliente ingresado no corresponde con la solicitud' }, { Código: '40004', Descripción: 'No existe registro para la operación ingresada' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class QuitarOperacionesaCancelarComponent1750945333564 {
          </bts:sdtOperaciones>
       </bts:BTMicrofinanzas.QuitarOparacionesACancelar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas?QuitarOperacionesACancelar\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.QuitarOparacionesACancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": {

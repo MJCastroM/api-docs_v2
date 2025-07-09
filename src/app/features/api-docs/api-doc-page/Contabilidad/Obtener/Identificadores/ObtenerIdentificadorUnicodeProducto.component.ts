@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeProductoComponent1750945332406 {
+export class ObtenerIdentificadorUnicodeProductoComponent1751987196750 {
   pageTitle        = 'Obtener Identificador Único de Producto';
   description      = `Método para obtener el identificador único de un producto.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoProducto';
@@ -21,7 +21,7 @@ export class ObtenerIdentificadorUnicodeProductoComponent1750945332406 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Módulo Bantotal.' }, { Nombre: 'tipoOperacionBT', Tipo: 'Short', Comentarios: 'Tipo de operación Bantotal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }];
   outputData = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió módulo.' }, { Codigo: '30002', Descripcion: 'No se recibió tipo de operación.' }, { Codigo: '30003', Descripcion: 'Moneda no existe.' }, { Codigo: '30004', Descripcion: 'Papel no existe.' }, { Codigo: '30005', Descripcion: 'No se recibió empresa.' }, { Codigo: '30006', Descripcion: 'Producto no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió módulo.' }, { Código: '30002', Descripción: 'No se recibió tipo de operación.' }, { Código: '30003', Descripción: 'Moneda no existe.' }, { Código: '30004', Descripción: 'Papel no existe.' }, { Código: '30005', Descripción: 'No se recibió empresa.' }, { Código: '30006', Descripción: 'Producto no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ObtenerIdentificadorUnicodeProductoComponent1750945332406 {
          <bts:papelId>0</bts:papelId>
       </bts:BTContabilidad.ObtenerIdentificadorUnicoProducto>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoProducto\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoProductoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

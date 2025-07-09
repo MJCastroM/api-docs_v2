@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerBeneficiariosComponent1750945332752 {
+export class ObtenerBeneficiariosComponent1751987197067 {
   pageTitle        = 'Obtener Beneficiarios';
   description      = `Método para obtener los beneficiarios de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerBeneficiarios';
@@ -21,7 +21,7 @@ export class ObtenerBeneficiariosComponent1750945332752 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtBeneficiarios', Tipo: '[sBTBeneficiario](#sbtbeneficiario)', Comentarios: 'Listado de los beneficiarios.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador único de la operación.' }, { Codigo: '30003', Descripcion: 'No se recuperó la operación origen para el Identificador: [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'La operación ingresada no corresponde a una cuenta vista.' }, { Codigo: '40001', Descripcion: 'No se encontraron beneficiaros para el identificador ingresado.' }];
+  errors     = [{ Código: '30002', Descripción: 'No se recibió el identificador único de la operación.' }, { Código: '30003', Descripción: 'No se recuperó la operación origen para el Identificador: [Número de Identificador].' }, { Código: '30004', Descripción: 'La operación ingresada no corresponde a una cuenta vista.' }, { Código: '40001', Descripción: 'No se encontraron beneficiaros para el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerBeneficiariosComponent1750945332752 {
          <bts:operacionUId>789</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerBeneficiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerBeneficiarios=\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerBeneficiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

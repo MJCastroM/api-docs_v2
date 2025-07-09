@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarListasInhabilitadosComponent1750945334634 {
+export class ValidarListasInhabilitadosComponent1751987199014 {
   pageTitle        = 'Validar Listas Inhabilitados';
   description      = `Método para obtener todas las listas de inhabilitados en las que se encuentra una persona a partir de los datos ingresados. (Es mandatorio ingresar al menos una de las siguientes claves: país, tipo de documento y número de documento, o primer nombre y primer apellido)`;
   pubName    = 'BTPersonas.ValidarListasInhabilitados';
@@ -21,7 +21,7 @@ export class ValidarListasInhabilitadosComponent1750945334634 {
 
   inputData  = [{ Nombre: 'pais', Tipo: 'Short', Comentarios: 'Identificador de país.' }, { Nombre: 'tipoDocumento', Tipo: 'Short', Comentarios: 'Identificador de tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento.' }, { Nombre: 'tipoPersona', Tipo: 'String', Comentarios: 'Tipo de persona (Física / Jurídica).' }, { Nombre: 'primerNombre', Tipo: 'String', Comentarios: 'Primer nombre.' }, { Nombre: 'segundoNombre', Tipo: 'String', Comentarios: 'Segundo nombre.' }, { Nombre: 'primerApellido', Tipo: 'String', Comentarios: 'Primer apellido.' }, { Nombre: 'segundoApellido', Tipo: 'String', Comentarios: 'Segundo apellido.' }, { Nombre: 'razonSocial', Tipo: 'String', Comentarios: 'Razón social' }];
   outputData = [{ Nombre: 'listaInhabilitados', Tipo: '[sBTListaInhabilitados](#sbtlistainhabilitados)', Comentarios: 'Listado de lista de inhabilitados.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se ingresó primer nombre de la persona.' }, { Codigo: '30002', Descripcion: 'No se ingresó primer apellido de la persona.' }, { Codigo: '30003', Descripcion: 'No se ingresó país de la persona.' }, { Codigo: '30004', Descripcion: 'No se ingresó tipo de documento de la persona.' }, { Codigo: '30005', Descripcion: 'No se ingresó documento de la persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se ingresó primer nombre de la persona.' }, { Código: '30002', Descripción: 'No se ingresó primer apellido de la persona.' }, { Código: '30003', Descripción: 'No se ingresó país de la persona.' }, { Código: '30004', Descripción: 'No se ingresó tipo de documento de la persona.' }, { Código: '30005', Descripción: 'No se ingresó documento de la persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class ValidarListasInhabilitadosComponent1750945334634 {
          <bts:razonSocial></bts:razonSocial>
       </bts:BTPersonas.ValidarListasInhabilitados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ValidarListasInhabilitados\' \
@@ -104,7 +104,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ValidarListasInhabilitadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

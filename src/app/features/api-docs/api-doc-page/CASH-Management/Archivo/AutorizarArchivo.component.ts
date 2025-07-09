@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AutorizarArchivoComponent1750945331359 {
+export class AutorizarArchivoComponent1751987195671 {
   pageTitle        = 'Autorizar Archivo';
   description      = `Método para autorizar órdenes del archivo indicado.`;
   pubName    = 'BTCASHManagement.AutorizarArchivo';
@@ -21,7 +21,7 @@ export class AutorizarArchivoComponent1750945331359 {
 
   inputData  = [{ Nombre: 'archivoId', Tipo: 'Long', Comentarios: 'Identificador de archivo' }];
   outputData = [];
-  errors     = [{ Codigo: '1030721', Descripcion: 'No se encontraron ordenes para autorizar para el identificador recibido' }, { Codigo: '1030722', Descripcion: 'El estado de la orden, no permite autorizar' }];
+  errors     = [{ Código: '1030721', Descripción: 'No se encontraron ordenes para autorizar para el identificador recibido' }, { Código: '1030722', Descripción: 'El estado de la orden, no permite autorizar' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class AutorizarArchivoComponent1750945331359 {
          <bts:archivoId>97</bts:archivoId>
       </bts:BTCASHManagement.AutorizarArchivo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?AutorizarArchivo=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.AutorizarArchivoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

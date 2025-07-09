@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarPrestamoComponent1750945333716 {
+export class ContratarPrestamoComponent1751987198004 {
   pageTitle        = 'Contratar Préstamo';
   description      = `Método para contratar un préstamo de Partner.`;
   pubName    = 'BTPartners.ContratarPrestamo';
@@ -21,7 +21,7 @@ export class ContratarPrestamoComponent1750945333716 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'cuentaUId', Tipo: 'Long', Comentarios: 'Identificador único de la cuenta.' }, { Nombre: 'operacionAcreditacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de acreditación.' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de operación de Acreditación' }, { Codigo: '30004', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de identificador]' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador]' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente' }, { Codigo: '30009', Descripcion: 'La operación de cobro no pertenece al cliente' }, { Codigo: '30010', Descripcion: 'No se recibió el identificador único de operación de cobro' }, { Codigo: '30014', Descripcion: 'No existe una empresa con los datos ingresados' }, { Codigo: '30015', Descripcion: 'No se pudo resolver la empresa del usuario' }, { Codigo: '30100', Descripcion: 'Error en la contabilización' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación de préstamo' }, { Código: '30002', Descripción: 'No se recibió el identificador de operación de Acreditación' }, { Código: '30004', Descripción: 'No se recuperó el préstamo para el identificador: [Número de identificador]' }, { Código: '30005', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador]' }, { Código: '30006', Descripción: 'No se recibió el identificador de cliente' }, { Código: '30007', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador]' }, { Código: '30008', Descripción: 'El préstamo no pertenece al cliente' }, { Código: '30009', Descripción: 'La operación de cobro no pertenece al cliente' }, { Código: '30010', Descripción: 'No se recibió el identificador único de operación de cobro' }, { Código: '30014', Descripción: 'No existe una empresa con los datos ingresados' }, { Código: '30015', Descripción: 'No se pudo resolver la empresa del usuario' }, { Código: '30100', Descripción: 'Error en la contabilización' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class ContratarPrestamoComponent1750945333716 {
          <bts:operacionCobroUId>8412</bts:operacionCobroUId>
       </bts:BTPartners.ContratarPrestamo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ContratarPrestamo\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ContratarPrestamoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

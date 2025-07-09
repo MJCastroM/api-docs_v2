@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerConyugeComponent1750945334312 {
+export class ObtenerConyugeComponent1751987198680 {
   pageTitle        = 'Obtener Cónyuge';
   description      = `Método para obtener los datos del cónyuge de una persona física.`;
   pubName    = 'BTPersonas.ObtenerConyuge';
@@ -21,7 +21,7 @@ export class ObtenerConyugeComponent1750945334312 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador de persona.' }];
   outputData = [{ Nombre: 'apellidoMatrimonio', Tipo: 'String', Comentarios: 'Apellido de matrimonio' }, { Nombre: 'sdtDatosConyuge', Tipo: '[sBTDatosConyuge](#sbtdatosconyuge)', Comentarios: 'Datos del cónyuge.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'El identificador no corresponde a una persona física.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'El identificador no corresponde a una persona física.' }, { Código: '30013', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerConyugeComponent1750945334312 {
          <bts:personaUId>2</bts:personaUId>
       </bts:BTPersonas.ObtenerConyuge>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerConyuge\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerConyugeResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

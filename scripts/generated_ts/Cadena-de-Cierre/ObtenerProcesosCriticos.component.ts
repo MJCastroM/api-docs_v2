@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosCriticosComponent1750945331238 {
+export class ObtenerProcesosCriticosComponent1751987195551 {
   pageTitle        = 'Obtener Procesos Críticos';
   description      = `Método para obtener un listado de los procesos críticos de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosCriticos';
@@ -38,7 +38,7 @@ export class ObtenerProcesosCriticosComponent1750945331238 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.ObtenerProcesosCriticos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerProcesosCriticos\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosCriticosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

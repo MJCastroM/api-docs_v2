@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ConvertirTasaMensualLinealaEfectivaComponent1750945334675 {
+export class ConvertirTasaMensualLinealaEfectivaComponent1751987199056 {
   pageTitle        = 'Convertir Tasa Mensual Lineal a Efectiva';
   description      = `Método para convertir una tasa lineal mensual a tasa efectiva mensual.`;
   pubName    = 'BTPrecios.ConvertirTasaMensualLinealAEfectiva';
@@ -21,7 +21,7 @@ export class ConvertirTasaMensualLinealaEfectivaComponent1750945334675 {
 
   inputData  = [{ Nombre: 'tipoTasaOrigen', Tipo: 'Short', Comentarios: 'Tipo de tasa origen [Hidden: Valor fijo \'4\' para este método].' }, { Nombre: 'tasaOrigen', Tipo: 'Double', Comentarios: 'Tasa a convertir.' }, { Nombre: 'tipoAnio', Tipo: 'Short', Comentarios: 'Tipo de año [1 - Comercial / 2 - Calendario].' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }, { Nombre: 'tipoTasaDestino', Tipo: 'Short', Comentarios: 'Tipo de tasa destino [Hidden: Valor fijo \'3\' para este método].' }];
   outputData = [{ Nombre: 'tasaDestino', Tipo: 'Double', Comentarios: 'Tasa convertida.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar la tasa a convertir.' }, { Codigo: '30002', Descripcion: 'Debe ingresar un tipo de año válido [1 - Comercial / 2 - Calendario].' }, { Codigo: '30003', Descripcion: 'Debe ingresar un plazo.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar la tasa a convertir.' }, { Código: '30002', Descripción: 'Debe ingresar un tipo de año válido [1 - Comercial / 2 - Calendario].' }, { Código: '30003', Descripción: 'Debe ingresar un plazo.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ConvertirTasaMensualLinealaEfectivaComponent1750945334675 {
          <bts:plazo>365</bts:plazo>
       </bts:BTPrecios.ConvertirTasaMensualLinealAEfectiva>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ConvertirTasaMensualLinealAEfectiva=\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ConvertirTasaMensualLinealAEfectivaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

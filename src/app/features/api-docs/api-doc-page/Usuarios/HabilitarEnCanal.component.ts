@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class HabilitarEnCanalComponent1750945335799 {
+export class HabilitarEnCanalComponent1751987200446 {
   pageTitle        = 'Habilitar en Canal';
   description      = `Método para habilitar un usuario para los servicios de un canal.`;
   pubName    = 'BTUsuarios.HabilitarEnCanal';
@@ -21,7 +21,7 @@ export class HabilitarEnCanalComponent1750945335799 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador del usuario.' }, { Nombre: 'canal', Tipo: 'String', Comentarios: 'Identificador del canal.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió usuario.' }, { Codigo: '30002', Descripcion: 'No se recibió canal.' }, { Codigo: '40001', Descripcion: 'El canal ingresado mapea usuarios y no se encontró el usuario externo recibido.' }, { Codigo: '40002', Descripcion: 'El usuario ingresado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió usuario.' }, { Código: '30002', Descripción: 'No se recibió canal.' }, { Código: '40001', Descripción: 'El canal ingresado mapea usuarios y no se encontró el usuario externo recibido.' }, { Código: '40002', Descripción: 'El usuario ingresado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class HabilitarEnCanalComponent1750945335799 {
          <bts:canal>BTDIGITAL</bts:canal>
       </bts:BTUsuarios.HabilitarEnCanal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?HabilitarEnCanal=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.HabilitarEnCanalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

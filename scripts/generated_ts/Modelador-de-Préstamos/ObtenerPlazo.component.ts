@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazoComponent1750945333664 {
+export class ObtenerPlazoComponent1751987197944 {
   pageTitle        = 'Obtener Plazo';
   description      = `Método para obtener los plazos parametrizados de un producto de préstamo.`;
   pubName    = 'BTModeladorPrestamos.ObtenerPlazo';
@@ -21,7 +21,7 @@ export class ObtenerPlazoComponent1750945333664 {
 
   inputData  = [{ Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador de producto.' }, { Nombre: 'parametro', Tipo: 'Short', Comentarios: '[Hidden: Valor \'410\' definido por defecto].' }];
   outputData = [{ Nombre: 'minimo', Tipo: 'Long', Comentarios: 'Valor mínimo de plazo de cuotas.' }, { Nombre: 'maximo', Tipo: 'Long', Comentarios: 'Valor máximo de plazo de cuotas.' }, { Nombre: 'valorPorDefecto', Tipo: 'Long', Comentarios: 'Valor por defecto de plazo de cuotas.' }, { Nombre: 'tipo', Tipo: 'Long', Comentarios: 'Tipo de cuotas.' }, { Nombre: 'sdtListaValores', Tipo: '[sBTValor](#sbtvalor)', Comentarios: 'Listado de valores posibles.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'Existe registro con la cuenta indicada.' }, { Codigo: '30003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '30004', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30002', Descripción: 'Existe registro con la cuenta indicada.' }, { Código: '30003', Descripción: 'No existe registro para el identificador único.' }, { Código: '30004', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPlazoComponent1750945333664 {
          <bts:productoUId>105</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerPlazo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -79,7 +79,7 @@ export class ObtenerPlazoComponent1750945333664 {
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerPlazoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

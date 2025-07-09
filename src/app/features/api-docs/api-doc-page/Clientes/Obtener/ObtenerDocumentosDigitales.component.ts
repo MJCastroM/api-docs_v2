@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosDigitalesComponent1750945331860 {
+export class ObtenerDocumentosDigitalesComponent1751987196246 {
   pageTitle        = 'Obtener Documentos Digitales';
   description      = `Método para obtener un listado de los documentos digitales asociados a una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerDocumentosDigitales';
@@ -21,7 +21,7 @@ export class ObtenerDocumentosDigitalesComponent1750945331860 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtDocumentosDigitales', Tipo: '[sBTDocumentoDigital](#sbtdocumentodigital)', Comentarios: 'Listado de documentos digitales.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30024', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30033', Descripcion: 'El cliente indicado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la cuenta.' }, { Código: '30024', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30033', Descripción: 'El cliente indicado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDocumentosDigitalesComponent1750945331860 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTClientes.ObtenerDocumentosDigitales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerDocumentosDigitales=\' \
@@ -123,7 +123,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerDocumentosDigitalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

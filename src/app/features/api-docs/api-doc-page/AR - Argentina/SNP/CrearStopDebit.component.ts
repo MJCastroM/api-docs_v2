@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitComponent1750945331149 {
+export class CrearStopDebitComponent1751987195465 {
   pageTitle        = 'Crear Stop Debit';
   description      = `Método para crear un stop debit sin importe.`;
   pubName    = 'BTSNP.CrearStopDebit';
@@ -21,7 +21,7 @@ export class CrearStopDebitComponent1750945331149 {
 
   inputData  = [{ Nombre: 'sdtStopDebit', Tipo: '[sBTStopDebit](#sbtstopdebit)', Comentarios: 'Datos del alta de Stop Debits.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '30008', Descripcion: 'No se encontró un cliente para el identificador: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'Se indicó fecha de inicio del rango de fechas pero no de fin.' }, { Codigo: '40001', Descripcion: 'No existe la empresa originante.' }, { Codigo: '40002', Descripcion: 'No existe el tipo de débito.' }, { Codigo: '40003', Descripcion: 'No existe la prestación.' }, { Codigo: '40004', Descripcion: 'El largo del ID del cliente no es correcto.' }, { Codigo: '40005', Descripcion: 'No existe la moneda.' }, { Codigo: '40006', Descripcion: 'Aviso: ID del cliente no pertenece a la adhesión.' }, { Codigo: '40007', Descripcion: 'Si ingresa tipo de débito, debe ingresar la empresa originante.' }, { Codigo: '40008', Descripcion: 'Si ingresa Prestación, debe ingresar el tipo de débito.' }, { Codigo: '40009', Descripcion: 'Si ingresa el ID Cliente, debe ingresar la prestación.' }, { Codigo: '40010', Descripcion: 'Es posible indicar Fecha de Vencimiento ó Rango de fecha de vencimiento, pero no ambas.' }, { Codigo: '40011', Descripcion: 'La fecha desde debe ser menor o igual que la fecha hasta.' }, { Codigo: '40012', Descripcion: 'Si ingresa monto máximo, debe ingresar empresa, tipo de débito, prestación, cliente, moneda e importe.' }, { Codigo: '40013', Descripcion: 'Si ingresa monto máximo, no debe ingresar fecha de vencimiento ni referencia.' }, { Codigo: '40014', Descripcion: 'Si ingresa Id Cliente, la cantidad de caracteres debe corresponderse con el Largo Id.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la empresa originante.' }, { Código: '30003', Descripción: 'No se recibió el tipo de débito.' }, { Código: '30007', Descripción: 'El tipo de débito no es correcto.' }, { Código: '30008', Descripción: 'No se encontró un cliente para el identificador: [Número de Identificador].' }, { Código: '30009', Descripción: 'Se indicó fecha de inicio del rango de fechas pero no de fin.' }, { Código: '40001', Descripción: 'No existe la empresa originante.' }, { Código: '40002', Descripción: 'No existe el tipo de débito.' }, { Código: '40003', Descripción: 'No existe la prestación.' }, { Código: '40004', Descripción: 'El largo del ID del cliente no es correcto.' }, { Código: '40005', Descripción: 'No existe la moneda.' }, { Código: '40006', Descripción: 'Aviso: ID del cliente no pertenece a la adhesión.' }, { Código: '40007', Descripción: 'Si ingresa tipo de débito, debe ingresar la empresa originante.' }, { Código: '40008', Descripción: 'Si ingresa Prestación, debe ingresar el tipo de débito.' }, { Código: '40009', Descripción: 'Si ingresa el ID Cliente, debe ingresar la prestación.' }, { Código: '40010', Descripción: 'Es posible indicar Fecha de Vencimiento ó Rango de fecha de vencimiento, pero no ambas.' }, { Código: '40011', Descripción: 'La fecha desde debe ser menor o igual que la fecha hasta.' }, { Código: '40012', Descripción: 'Si ingresa monto máximo, debe ingresar empresa, tipo de débito, prestación, cliente, moneda e importe.' }, { Código: '40013', Descripción: 'Si ingresa monto máximo, no debe ingresar fecha de vencimiento ni referencia.' }, { Código: '40014', Descripción: 'Si ingresa Id Cliente, la cantidad de caracteres debe corresponderse con el Largo Id.' }];
 
   examples = {
     invocation: { xml: `
@@ -49,7 +49,7 @@ export class CrearStopDebitComponent1750945331149 {
          </bts:sdtStopDebit>
       </bts:BTSNP.CrearStopDebit>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearStopDebit\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.CrearStopDebitResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

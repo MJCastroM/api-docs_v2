@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarRegistroEmpleadoComponent1750945331648 {
+export class ActualizarRegistroEmpleadoComponent1751987196009 {
   pageTitle        = 'Actualizar Registro Empleado';
   description      = `Método para actualizar si un cliente es empleado de la institución, junto con su fecha de ingreso si es requerido.`;
   pubName    = 'BTClientes.ActualizarRegistroEmpleado';
@@ -21,7 +21,7 @@ export class ActualizarRegistroEmpleadoComponent1750945331648 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'empleado', Tipo: 'String', Comentarios: '¿Es empleado de la institución? (S/N).' }, { Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de ingreso.' }, { Nombre: 'fechaBaja', Tipo: 'Date', Comentarios: 'Fecha de baja.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió si el cliente es un empleado de la institución o no.' }, { Codigo: '30005', Descripcion: 'El valor de empleado no es correcto.' }, { Codigo: '30013', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40001', Descripcion: 'La cuenta no existe.' }, { Codigo: '40002', Descripcion: 'La integración de la cuenta ingresada no es válida.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió si el cliente es un empleado de la institución o no.' }, { Código: '30005', Descripción: 'El valor de empleado no es correcto.' }, { Código: '30013', Descripción: 'No existe registro con la cuenta indicada.' }, { Código: '40001', Descripción: 'La cuenta no existe.' }, { Código: '40002', Descripción: 'La integración de la cuenta ingresada no es válida.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ActualizarRegistroEmpleadoComponent1750945331648 {
          <bts:fechaBaja></bts:fechaBaja>
       </bts:BTClientes.ActualizarRegistroEmpleado>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ActualizarRegistroEmpleado\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ActualizarRegistroEmpleadoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

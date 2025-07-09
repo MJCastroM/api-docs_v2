@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class EliminarProfesionComponent1750945334257 {
+export class EliminarProfesionComponent1751987198628 {
   pageTitle        = 'Eliminar Profesión';
   description      = `Método para eliminar la profesión de una persona física.`;
   pubName    = 'BTPersonas.EliminarProfesion';
@@ -21,7 +21,7 @@ export class EliminarProfesionComponent1750945334257 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'El identificador no corresponde a una persona física.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'El identificador no corresponde a una persona física.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class EliminarProfesionComponent1750945334257 {
          <bts:personaUId>10003</bts:personaUId>
       </bts:BTPersonas.EliminarProfesion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?EliminarProfesion=\' \
@@ -79,7 +79,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.EliminarProfesionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosdeUsuarioComponent1750945333744 {
+export class ObtenerDatosdeUsuarioComponent1751987198037 {
   pageTitle        = 'Obtener Datos de Usuario';
   description      = `Método para obtener el Partner, punto de venta e identificador de vendedor de usuario.`;
   pubName    = 'BTPartners.ObtenerDatosUsuario';
@@ -21,7 +21,7 @@ export class ObtenerDatosdeUsuarioComponent1750945333744 {
 
   inputData  = [{ Nombre: 'usuarioUId', Tipo: 'String', Comentarios: 'Identificador único de usuario.' }];
   outputData = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el usuario.' }, { Codigo: '30002', Descripcion: 'Usuario no registrado en Bantotal.' }, { Codigo: '30003', Descripcion: 'Usuario no registrado como vendedor.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el usuario.' }, { Código: '30002', Descripción: 'Usuario no registrado en Bantotal.' }, { Código: '30003', Descripción: 'Usuario no registrado como vendedor.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDatosdeUsuarioComponent1750945333744 {
          <bts:usuarioUId>INSTALADOR</bts:usuarioUId>
       </bts:BTPartners.ObtenerDatosUsuario>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?ObtenerDatosUsuario\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.ObtenerDatosUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

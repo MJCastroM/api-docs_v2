@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AltaAutomaticaContratoComponent1750945331416 {
+export class AltaAutomaticaContratoComponent1751987195715 {
   pageTitle        = 'Alta Automática Contrato';
   description      = `Método para dar de alta un contrato para el cliente.`;
   pubName    = 'BTCASHManagement.AltaAutomaticaContrato';
@@ -21,7 +21,7 @@ export class AltaAutomaticaContratoComponent1750945331416 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador de la Cuenta Cliente.' }, { Nombre: 'servicioId', Tipo: 'Short', Comentarios: 'Codigo de Servicio CASH.' }];
   outputData = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del Contrato CASH.' }];
-  errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }, { Codigo: '1030760', Descripcion: 'No se pudo dar de alta el contrato.' }];
+  errors     = [{ Código: '1030701', Descripción: 'El Servicio no existe.' }, { Código: '1030709', Descripción: 'Se requiere identificacion de cuenta cliente.' }, { Código: '1030760', Descripción: 'No se pudo dar de alta el contrato.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class AltaAutomaticaContratoComponent1750945331416 {
          <bts:servicioId>10</bts:servicioId>
       </bts:BTCASHManagement.AltaAutomaticaContrato>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?AltaAutomaticaContrato\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.AltaAutomaticaContratoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

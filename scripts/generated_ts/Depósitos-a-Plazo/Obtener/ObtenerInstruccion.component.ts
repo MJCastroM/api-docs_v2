@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInstruccionComponent1750945333162 {
+export class ObtenerInstruccionComponent1751987197514 {
   pageTitle        = 'Obtener Instrucción';
   description      = `Método para obtener una lista de las instrucciones de un depósito.`;
   pubName    = 'BTDepositosAPlazo.ObtenerInstruccion';
@@ -21,7 +21,7 @@ export class ObtenerInstruccionComponent1750945333162 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'depositoUId', Tipo: 'Long', Comentarios: 'Identificador único de operación del depósito.' }];
   outputData = [{ Nombre: 'instruccionVencimiento', Tipo: '[sBTInstruccion](#sbtinstruccion)', Comentarios: 'Datos de instrucción al vencimiento.' }, { Nombre: 'instruccionAcreditacion', Tipo: '[sBTInstruccion](#sbtinstruccion)', Comentarios: 'Datos de instrucción de acreditación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la operación del depósito.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación del depósito para el identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'La operación asociada al identificador: ? no pertenece a un depósito a plazo' }, { Codigo: '30006', Descripcion: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'No se encontró instrucción de acreditación para el depósito ingresado' }, { Codigo: '30008', Descripcion: 'No se encontró código de instrucción.' }, { Codigo: '30009', Descripcion: 'No se recuperó la operación de la instrucción para el identificador: [Número de identificador].' }, { Codigo: '30012', Descripcion: 'No se recuperó la sucursal de la cuenta.' }, { Codigo: '30015', Descripcion: 'No se recuperó la sucursal de la cuenta.' }, { Codigo: '30016', Descripcion: 'No se encontró instrucción de acreditación para el depósito ingresado.' }, { Codigo: '30017', Descripcion: 'No se encontró código de instrucción.' }, { Codigo: '30018', Descripcion: 'No se recuperó la operación de la instrucción para el identificador: [Número de identificador].' }, { Codigo: '30021', Descripcion: 'No se recuperó la sucursal de la cuenta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la operación del depósito.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '30004', Descripción: 'No se recuperó la operación del depósito para el identificador: [Número de identificador].' }, { Código: '30005', Descripción: 'La operación asociada al identificador: ? no pertenece a un depósito a plazo' }, { Código: '30006', Descripción: 'La cuenta del depósito no pertenece al identificador del cliente: [Número de identificador].' }, { Código: '30007', Descripción: 'No se encontró instrucción de acreditación para el depósito ingresado' }, { Código: '30008', Descripción: 'No se encontró código de instrucción.' }, { Código: '30009', Descripción: 'No se recuperó la operación de la instrucción para el identificador: [Número de identificador].' }, { Código: '30012', Descripción: 'No se recuperó la sucursal de la cuenta.' }, { Código: '30015', Descripción: 'No se recuperó la sucursal de la cuenta.' }, { Código: '30016', Descripción: 'No se encontró instrucción de acreditación para el depósito ingresado.' }, { Código: '30017', Descripción: 'No se encontró código de instrucción.' }, { Código: '30018', Descripción: 'No se recuperó la operación de la instrucción para el identificador: [Número de identificador].' }, { Código: '30021', Descripción: 'No se recuperó la sucursal de la cuenta.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerInstruccionComponent1750945333162 {
          <bts:depositoUId>4</bts:depositoUId>
       </bts:BTDepositosAPlazo.ObtenerInstruccion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerInstruccion=\' \
@@ -109,7 +109,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerInstruccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

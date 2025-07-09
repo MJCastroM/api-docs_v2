@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInformacionFinancieraComponent1750945334416 {
+export class ObtenerInformacionFinancieraComponent1751987198777 {
   pageTitle        = 'Obtener Información Financiera';
   description      = `Método para obtener la información financiera de una persona.`;
   pubName    = 'BTPersonas.ObtenerInformacionFinanciera';
@@ -21,7 +21,7 @@ export class ObtenerInformacionFinancieraComponent1750945334416 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtInformacionFinanciera', Tipo: '[sBTPCOInformacionFinanciera](#sbtpcoinformacionfinanciera)', Comentarios: 'Datos de información financiera de la persona.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '30002', Descripcion: 'No existe el Registro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de persona.' }, { Código: '30002', Descripción: 'No existe el Registro.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerInformacionFinancieraComponent1750945334416 {
          <bts:personaUId>21</bts:personaUId>
       </bts:BTPersonas.ObtenerInformacionFinanciera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerInformacionFinanciera \
@@ -104,7 +104,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.ObtenerInformacionFinancieraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

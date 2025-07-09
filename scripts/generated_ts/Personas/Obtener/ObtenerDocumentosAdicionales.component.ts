@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDocumentosAdicionalesComponent1750945334330 {
+export class ObtenerDocumentosAdicionalesComponent1751987198692 {
   pageTitle        = 'Obtener Documentos Adicionales';
   description      = `Método para obtener un listado de los documentos adicionales de una persona.`;
   pubName    = 'BTPersonas.ObtenerDocumentosAdicionales';
@@ -21,7 +21,7 @@ export class ObtenerDocumentosAdicionalesComponent1750945334330 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona' }];
   outputData = [{ Nombre: 'sdtDocumentosAdicionales', Tipo: '[sBTDocumentoAdicional](#sbtdocumentoadicional)', Comentarios: 'Listado de documentos adicionales' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDocumentosAdicionalesComponent1750945334330 {
          <bts:personaUId>21</bts:personaUId>
       </bts:BTPersonas.ObtenerDocumentosAdicionales>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerDocumentosAdicionales=\' \
@@ -90,7 +90,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerDocumentosAdicionalesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

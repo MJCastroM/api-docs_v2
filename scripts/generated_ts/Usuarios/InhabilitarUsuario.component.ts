@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class InhabilitarUsuarioComponent1750945335813 {
+export class InhabilitarUsuarioComponent1751987200461 {
   pageTitle        = 'Inhabilitar Usuario';
   description      = `Método para inhabilitar un usuario.`;
   pubName    = 'BTUsuarios.InhabilitarUsuario';
@@ -21,7 +21,7 @@ export class InhabilitarUsuarioComponent1750945335813 {
 
   inputData  = [{ Nombre: 'usuario', Tipo: 'String', Comentarios: 'Identificador del usuario.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la que se quiere inhabilitar.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la que se quiere inhabilitar.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar usuario a inhabilitar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar fecha desde.' }, { Codigo: '30003', Descripcion: 'Debe ingresar fecha hasta.' }, { Codigo: '40002', Descripcion: 'Registro ya existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar usuario a inhabilitar.' }, { Código: '30002', Descripción: 'Debe ingresar fecha desde.' }, { Código: '30003', Descripción: 'Debe ingresar fecha hasta.' }, { Código: '40002', Descripción: 'Registro ya existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class InhabilitarUsuarioComponent1750945335813 {
          <bts:fechaHasta>2022-06-01</bts:fechaHasta>
       </bts:BTUsuarios.InhabilitarUsuario>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTUsuarios?InhabilitarUsuario\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTUsuarios.InhabilitarUsuarioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

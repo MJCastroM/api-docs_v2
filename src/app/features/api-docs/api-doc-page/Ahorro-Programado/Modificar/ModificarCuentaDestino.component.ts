@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ModificarCuentaDestinoComponent1750945330972 {
+export class ModificarCuentaDestinoComponent1751987195297 {
   pageTitle        = 'Modificar Cuenta Destino';
   description      = `Método para modificar la cuenta destino donde se acreditarán los ahorros al vencimiento.`;
   pubName    = 'BTAhorroProgramado.ModificarCuentaDestino';
@@ -21,7 +21,7 @@ export class ModificarCuentaDestinoComponent1750945330972 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'ahorroUId', Tipo: 'Long', Comentarios: 'Identificador de operación de ahorro.' }, { Nombre: 'cuentaUId', Tipo: 'Int', Comentarios: 'Identificador único de la operación de cuenta vista destino.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del ahorro.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de operación de la cuenta destino.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recuperó la operación de la cuenta vista para el identificador: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'La operación seleccionada no corresponde a un producto de ahorro.' }, { Codigo: '40002', Descripcion: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40003', Descripcion: 'El producto de la cuenta de origen seleccionado no se encuentra habilitado para operar.' }, { Codigo: '40004', Descripcion: 'El producto del ahorro no permite operar con cuentas de distinta moneda.' }, { Codigo: '40005', Descripcion: 'El producto acredita una cuenta externa, no es posible modificar la misma.' }, { Codigo: '40006', Descripcion: 'El producto del ahorro no permite operar con cuentas vistas de distintos clientes.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador del ahorro.' }, { Código: '30003', Descripción: 'No se recibió el identificador de operación de la cuenta destino.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el identificador de cliente: [Número de identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación del ahorro para el identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'No se recuperó la operación de la cuenta vista para el identificador: [Número de identificador].' }, { Código: '30007', Descripción: 'El ahorro no pertenece al identificador del cliente: [Número de identificador].' }, { Código: '40001', Descripción: 'La operación seleccionada no corresponde a un producto de ahorro.' }, { Código: '40002', Descripción: 'El ahorro seleccionado no se encuentra habilitado para operar.' }, { Código: '40003', Descripción: 'El producto de la cuenta de origen seleccionado no se encuentra habilitado para operar.' }, { Código: '40004', Descripción: 'El producto del ahorro no permite operar con cuentas de distinta moneda.' }, { Código: '40005', Descripción: 'El producto acredita una cuenta externa, no es posible modificar la misma.' }, { Código: '40006', Descripción: 'El producto del ahorro no permite operar con cuentas vistas de distintos clientes.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ModificarCuentaDestinoComponent1750945330972 {
          <bts:cuentaUId>81</bts:cuentaUId>
       </bts:BTAhorroProgramado.ModificarCuentaDestino>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTAhorroProgramado?ModificarCuentaDestino\' \
@@ -83,7 +83,7 @@ curl -X POST \
          </Btoutreq>
       </BTAhorroProgramado.ModificarCuentaDestinoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

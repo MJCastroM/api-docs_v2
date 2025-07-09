@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeMovimientoComponent1750945332426 {
+export class ObtenerDetalledeMovimientoComponent1751987196774 {
   pageTitle        = 'Obtener Detalle de Movimiento';
   description      = `Método para obtener el detalle de un movimiento contable.`;
   pubName    = 'BTContabilidad.ObtenerDetalleMovimiento';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeMovimientoComponent1750945332426 {
 
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }];
   outputData = [{ Nombre: 'sdtDetalleAsiento', Tipo: '[sBTDetalleAsiento](#sbtdetalleasiento)', Comentarios: 'Datos del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '30103', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'No existe el asiento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de movimiento.' }, { Código: '30103', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'No existe el asiento.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetalledeMovimientoComponent1750945332426 {
          <bts:movimientoUId>8</bts:movimientoUId>
       </bts:BTContabilidad.ObtenerDetalleMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleMovimiento\' \
@@ -141,7 +141,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerDetalleMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

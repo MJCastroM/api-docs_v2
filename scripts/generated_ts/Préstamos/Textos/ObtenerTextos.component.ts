@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTextosComponent1750945335440 {
+export class ObtenerTextosComponent1751987199994 {
   pageTitle        = 'Obtener Textos';
   description      = `Método para obtener los textos de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerTextos';
@@ -21,7 +21,7 @@ export class ObtenerTextosComponent1750945335440 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtTextos', Tipo: '[sBTTextoOperacion](#sbttextooperacion)', Comentarios: 'Listado de textos de la operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30011', Descripcion: 'No se recupero la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30011', Descripción: 'No se recupero la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTextosComponent1750945335440 {
          <bts:operacionUId>49</bts:operacionUId>
       </bts:BTPrestamos.ObtenerTextos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerTextos=\' \
@@ -98,7 +98,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerTextosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750945332500 {
+export class ObtenerMovimientosComponent1751987196867 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener los movimientos de una cuenta bolsillo.`;
   pubName    = 'BTCuentasBolsillo.ObtenerMovimientos';
@@ -21,7 +21,7 @@ export class ObtenerMovimientosComponent1750945332500 {
 
   inputData  = [{ Nombre: 'bolsilloUId', Tipo: 'Long', Comentarios: 'Identificador único del bolsillo.' }, { Nombre: 'cantDias', Tipo: 'Int', Comentarios: 'Cantidad de días.' }, { Nombre: 'cantMov', Tipo: 'Int', Comentarios: 'Cantidad de movimientos.' }];
   outputData = [{ Nombre: 'sdtEstadoDeCuenta', Tipo: '[sBTEstadoCuentaCV](#sbtestadocuentacv)', Comentarios: 'Datos de estado de cuenta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta bolsillo.' }, { Codigo: '30004', Descripcion: 'No se recibió la cantidad de días.' }, { Codigo: '30005', Descripcion: 'No se recibió la cantidad de movimientos.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a una cuenta bolsillo.' }, { Código: '30004', Descripción: 'No se recibió la cantidad de días.' }, { Código: '30005', Descripción: 'No se recibió la cantidad de movimientos.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerMovimientosComponent1750945332500 {
          <bts:CantMov>3</bts:CantMov>
       </bts:BTCuentasBolsillo.ObtenerMovimientos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasBolsillo?ObtenerMovimientos\' \
@@ -107,7 +107,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasBolsillo.ObtenerMovimientosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

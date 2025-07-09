@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DesbloquearSaldoComponent1750945332928 {
+export class DesbloquearSaldoComponent1751987197277 {
   pageTitle        = 'Desbloquear Saldo';
   description      = `Método para realizar la baja de un bloqueo de saldo.`;
   pubName    = 'BTCuentasVista.DesbloquearSaldo';
@@ -21,7 +21,7 @@ export class DesbloquearSaldoComponent1750945332928 {
 
   inputData  = [{ Nombre: 'idBloqueo', Tipo: 'Long', Comentarios: 'Identificador de bloqueo.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del Bloqueo.' }, { Codigo: '30002', Descripcion: 'No se encontró el ID del bloqueo.' }, { Codigo: '30003', Descripcion: 'El Bloqueo ya no está Activo, no se puede dar de baja.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador del Cliente.' }, { Codigo: '30005', Descripcion: 'No se encontró el ID del Cliente.' }, { Codigo: '30006', Descripcion: 'El Bloqueo no pertenece al Cliente.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del Bloqueo.' }, { Código: '30002', Descripción: 'No se encontró el ID del bloqueo.' }, { Código: '30003', Descripción: 'El Bloqueo ya no está Activo, no se puede dar de baja.' }, { Código: '30004', Descripción: 'No se recibió el identificador del Cliente.' }, { Código: '30005', Descripción: 'No se encontró el ID del Cliente.' }, { Código: '30006', Descripción: 'El Bloqueo no pertenece al Cliente.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class DesbloquearSaldoComponent1750945332928 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTCuentasVista.DesbloquearSaldo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?BloquearSaldo=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.DesbloquearSaldoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

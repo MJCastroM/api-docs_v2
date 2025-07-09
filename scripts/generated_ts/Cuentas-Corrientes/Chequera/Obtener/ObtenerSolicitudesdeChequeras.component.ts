@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerSolicitudesdeChequerasComponent1750945332592 {
+export class ObtenerSolicitudesdeChequerasComponent1751987196920 {
   pageTitle        = 'Obtener Solicitudes de Chequeras';
   description      = `Método para obtener todas las chequeras y solicitudes de chequeras asociadas a una operación.`;
   pubName    = 'BTCuentasCorrientes.ObtenerSolicitudesChequera';
@@ -21,7 +21,7 @@ export class ObtenerSolicitudesdeChequerasComponent1750945332592 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de la operación.' }];
   outputData = [{ Nombre: 'sdtSolicitudesChequeras', Tipo: '[sBTSolicitudesChequeras](#sbtsolicitudeschequeras)', Comentarios: 'Listado de chequeras.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el Identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe la operación indicada.' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el Identificador de la operación.' }, { Código: '30002', Descripción: 'No existe la operación indicada.' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a una cuenta corriente.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerSolicitudesdeChequerasComponent1750945332592 {
          <bts:operacionUId>101</bts:operacionUId>
       </bts:BTCuentasCorrientes.ObtenerSolicitudesChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?ObtenerSolicitudesChequera \
@@ -150,7 +150,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerSolicitudesChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeOrdinalComponent1750945332433 {
+export class ObtenerDetalledeOrdinalComponent1751987196785 {
   pageTitle        = 'Obtener Detalle de Ordinal';
   description      = `Método para obtener el detalle de un determinado ordinal de un movimiento.`;
   pubName    = 'BTContabilidad.ObtenerDetalleOrdinal';
@@ -21,7 +21,7 @@ export class ObtenerDetalledeOrdinalComponent1750945332433 {
 
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }, { Nombre: 'ordinal', Tipo: 'Short', Comentarios: 'Ordinal del movimiento.' }, { Nombre: 'subOrdinal', Tipo: 'Short', Comentarios: 'Subordinal del movimiento.' }];
   outputData = [{ Nombre: 'sdtOrdinal', Tipo: '[sBTOrdinal](#sbtordinal)', Comentarios: 'Ordinales del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de movimiento.' }, { Codigo: '30103', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '40001', Descripcion: 'No existe el asiento.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de movimiento.' }, { Código: '30103', Descripción: 'No existe registro para el identificador único.' }, { Código: '40001', Descripción: 'No existe el asiento.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerDetalledeOrdinalComponent1750945332433 {
          <bts:subOrdinal>1</bts:subOrdinal>
       </bts:BTContabilidad.ObtenerDetalleOrdinal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerDetalleOrdinal\' \
@@ -95,7 +95,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerDetalleOrdinalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

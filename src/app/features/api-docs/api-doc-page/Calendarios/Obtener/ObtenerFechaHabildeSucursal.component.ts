@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFechaHabildeSucursalComponent1750945331323 {
+export class ObtenerFechaHabildeSucursalComponent1751987195637 {
   pageTitle        = 'Obtener Fecha Hábil de Sucursal';
   description      = `Método para obtener si una fecha es hábil en la sucursal ingresada.`;
   pubName    = 'BTCalendario.ObtenerFechaHabilSucursal';
@@ -21,7 +21,7 @@ export class ObtenerFechaHabildeSucursalComponent1750945331323 {
 
   inputData  = [{ Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha a consultar.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de Sucursal a consultar.' }];
   outputData = [{ Nombre: 'fechaHabil', Tipo: 'String', Comentarios: '¿Es hábil? (S/N)' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
+  errors     = [{ Código: '40001', Descripción: 'La Sucursal no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerFechaHabildeSucursalComponent1750945331323 {
          <bts:sucursalId>1000</bts:sucursalId>
       </bts:BTConfiguracionBantotal.ObtenerFechaHabilSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerFechaHabilSucursal\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerFechaHabilSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
  	"Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEmpresasOriginantesComponent1750945331183 {
+export class ObtenerEmpresasOriginantesComponent1751987195488 {
   pageTitle        = 'Obtener Empresas Originantes';
   description      = `Método para obtener las empresas originantes para las cuales tiene adhesiones activas un cliente.`;
   pubName    = 'BTSNP.ObtenerEmpresasOriginantes';
@@ -21,7 +21,7 @@ export class ObtenerEmpresasOriginantesComponent1750945331183 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtEmpresas', Tipo: '[sBTEmpresaOriginante](#sbtempresaoriginante)', Comentarios: 'Listado de empresas originantes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No se encontraron empresas originantes para este cliente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'No se encontraron empresas originantes para este cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerEmpresasOriginantesComponent1750945331183 {
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTSNP.ObtenerEmpresasOriginantes>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerEmpresasOriginantes\' \
@@ -99,7 +99,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.ObtenerEmpresasOriginantesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

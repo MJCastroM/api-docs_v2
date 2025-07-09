@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AdelantarCapitalConReduccionDeCuotaComponent1750945335188 {
+export class AdelantarCapitalConReduccionDeCuotaComponent1751987199704 {
   pageTitle        = 'Adelantar Capital Con Reducción De Cuota';
   description      = `Método para realizar el pago de cuota de un préstamo con adelanto de capital.`;
   pubName    = 'BTPrestamos.AdelantarCapitalConReduccionDeCuota';
@@ -21,7 +21,7 @@ export class AdelantarCapitalConReduccionDeCuotaComponent1750945335188 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe.' }, { Nombre: 'operacionUId_Cobro', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }, { Nombre: 'referencia', Tipo: 'String', Comentarios: 'Referencia.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'A\' para este método].' }, { Nombre: 'modalidadIntereses', Tipo: 'String', Comentarios: 'Modalidad de intereses. Se pueden enviar los siguientes [valores](#valores).' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '30003', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se ingresó la modalidad de intereses.' }, { Codigo: '30011', Descripcion: 'El valor del campo modalidadIntereses tiene que ser CP o SP.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }, { Codigo: '51002', Descripcion: 'La operación no existe.' }, { Codigo: '51003', Descripcion: 'La operación de cobro no existe.' }, { Codigo: '51012', Descripcion: 'La operación esta cancelada.' }, { Codigo: '51013', Descripcion: 'La operación de cobro esta cancelada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recibió el identificador único de operación de cobro.' }, { Código: '30003', Descripción: 'Debe ingresar importe.' }, { Código: '30004', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación para el Identificador: [Número de Identificador].' }, { Código: '30006', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30007', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de Identificador].' }, { Código: '30008', Descripción: 'El préstamo no pertenece al cliente.' }, { Código: '30009', Descripción: 'La operación de cobro no pertenece al cliente.' }, { Código: '30010', Descripción: 'No se ingresó la modalidad de intereses.' }, { Código: '30011', Descripción: 'El valor del campo modalidadIntereses tiene que ser CP o SP.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }, { Código: '51002', Descripción: 'La operación no existe.' }, { Código: '51003', Descripción: 'La operación de cobro no existe.' }, { Código: '51012', Descripción: 'La operación esta cancelada.' }, { Código: '51013', Descripción: 'La operación de cobro esta cancelada.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class AdelantarCapitalConReduccionDeCuotaComponent1750945335188 {
          <bts:modalidadIntereses>SP</bts:modalidadIntereses>
       </bts:BTPrestamos.AdelantarCapitalConReduccionDeCuota>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?AdelantarCapitalConReduccionDeCuota\' \
@@ -90,7 +90,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.AdelantarCapitalConReduccionDeCuotaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

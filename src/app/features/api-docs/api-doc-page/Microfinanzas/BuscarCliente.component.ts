@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class BuscarClienteComponent1750945333349 {
+export class BuscarClienteComponent1751987197723 {
   pageTitle        = 'Buscar Cliente';
   description      = `Método para buscar una persona y sus cuentas cliente.`;
   pubName    = 'BTMicrofinanzas.BuscarCliente';
@@ -21,7 +21,7 @@ export class BuscarClienteComponent1750945333349 {
 
   inputData  = [{ Nombre: 'paisDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del país de origen del documento.' }, { Nombre: 'tipoDocumentoId', Tipo: 'Short', Comentarios: 'Identificador del tipo de documento.' }, { Nombre: 'numeroDocumento', Tipo: 'String', Comentarios: 'Número de documento de la persona.' }];
   outputData = [{ Nombre: 'sdtCuentas', Tipo: '[sBTCuentasCliente](#sbtcuentascliente)', Comentarios: 'Listado de cuentas de la persona.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del País de documento.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del Tipo de documento.' }, { Codigo: '30003', Descripcion: 'No se recibió el número de documento.' }, { Codigo: '30004', Descripcion: 'No existe registro de la Persona.' }, { Codigo: '30005', Descripcion: 'No se pudo obtener identificador único de la persona.' }, { Codigo: '30006', Descripcion: 'No se pudo obtener identificador único de la cuenta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del País de documento.' }, { Código: '30002', Descripción: 'No se recibió el identificador del Tipo de documento.' }, { Código: '30003', Descripción: 'No se recibió el número de documento.' }, { Código: '30004', Descripción: 'No existe registro de la Persona.' }, { Código: '30005', Descripción: 'No se pudo obtener identificador único de la persona.' }, { Código: '30006', Descripción: 'No se pudo obtener identificador único de la cuenta.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class BuscarClienteComponent1750945333349 {
          <bts:numeroDocumento>2131248150408</bts:numeroDocumento>
       </bts:BTMicrofinanzas.BuscarCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTMicrofinanzas_v1?BuscarCliente \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTMicrofinanzas.BuscarClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

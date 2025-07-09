@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaComponent1750945331467 {
+export class ObtenerDeudaComponent1751987195771 {
   pageTitle        = 'Obtener Deuda';
   description      = `Método para obtener información de la deuda de un identificador para un contrato y servicio.`;
   pubName    = 'BTCASHManagement.ObtenerDeuda';
@@ -21,7 +21,7 @@ export class ObtenerDeudaComponent1750945331467 {
 
   inputData  = [{ Nombre: 'contratoId', Tipo: 'Int', Comentarios: 'Identificador del contrato CASH.' }, { Nombre: 'servicio', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'deudaId', Tipo: 'String', Comentarios: 'Identificador de la deuda.' }, { Nombre: 'sdtValorCampoCash', Tipo: '[sBTValorCampoCASH](#sbtvalorcampocash)', Comentarios: 'Datos de valores de campos CASH.' }];
   outputData = [{ Nombre: 'sdtInfoDetalleCash', Tipo: '[sBTInfoDetalleCASH](#sbtinfodetallecash)', Comentarios: 'Listado de cabezales de los resúmenes.' }];
-  errors     = [{ Codigo: '1030701', Descripcion: 'El Servicio no existe.' }, { Codigo: '1030704', Descripcion: 'Id de contrato cliente desconocido.' }, { Codigo: '1030706', Descripcion: 'El convenio no está activo.' }, { Codigo: '1030762', Descripcion: 'El servicio no es de recaudos.' }, { Codigo: '1030763', Descripcion: 'Debe indicar el identificador de la deuda.' }];
+  errors     = [{ Código: '1030701', Descripción: 'El Servicio no existe.' }, { Código: '1030704', Descripción: 'Id de contrato cliente desconocido.' }, { Código: '1030706', Descripción: 'El convenio no está activo.' }, { Código: '1030762', Descripción: 'El servicio no es de recaudos.' }, { Código: '1030763', Descripción: 'Debe indicar el identificador de la deuda.' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class ObtenerDeudaComponent1750945331467 {
          </bts:sdtValorCampoCash>
       </bts:BTCASHManagement.ObtenerDeuda>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement?ObtenerDeuda=\' \
@@ -107,7 +107,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerDeudaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

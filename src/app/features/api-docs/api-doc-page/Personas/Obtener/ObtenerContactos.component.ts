@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerContactosComponent1750945334284 {
+export class ObtenerContactosComponent1751987198654 {
   pageTitle        = 'Obtener Contactos';
   description      = `Método para obtener los contactos de una persona.`;
   pubName    = 'BTPersonas.ObtenerContactos';
@@ -21,7 +21,7 @@ export class ObtenerContactosComponent1750945334284 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtContactos', Tipo: '[sBTContactoJuridico](#sbtcontactojuridico)', Comentarios: 'Listado de contactos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Identificador de persona requerido.' }, { Codigo: '30002', Descripcion: 'No existe persona con el identificador ingresado.' }, { Codigo: '40001', Descripcion: 'No existe Contactos para la persona en consulta.' }];
+  errors     = [{ Código: '30001', Descripción: 'Identificador de persona requerido.' }, { Código: '30002', Descripción: 'No existe persona con el identificador ingresado.' }, { Código: '40001', Descripción: 'No existe Contactos para la persona en consulta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerContactosComponent1750945334284 {
          <bts:personaUId>51</bts:personaUId>
       </bts:BTPersonas.ObtenerContactos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerContactos\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerContactosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

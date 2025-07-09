@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CancelarComponent1750945332916 {
+export class CancelarComponent1751987197265 {
   pageTitle        = 'Cancelar';
   description      = `Método para realizar la liquidación de una cuenta vista.`;
   pubName    = 'BTCuentasVista.Cancelar';
@@ -21,7 +21,7 @@ export class CancelarComponent1750945332916 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cuenta cliente.' }, { Nombre: 'cuentaLiquidacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la cuenta vista a cancelar.' }, { Nombre: 'cuentaAcreditacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la cuenta vista de acreditación/cobro de la liquidación.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento realizado.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del cliente.' }, { Codigo: '30002', Descripcion: 'La cuenta indicada no existe.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la cuenta.' }, { Codigo: '30004', Descripcion: 'La cuenta indicada no existe.' }, { Codigo: '30005', Descripcion: 'La cuenta a liquidar y la cuenta de acreditación no pueden ser la misma.' }, { Codigo: '30007', Descripcion: 'La cuenta indicada no pertenece al cliente.' }, { Codigo: '30006', Descripcion: 'La cuenta de cobro indicada no existe.' }, { Codigo: '30008', Descripcion: 'Las monedas de la cuenta a liquidar y la cuenta de acreditación deben ser la misma.' }, { Codigo: '30009', Descripcion: 'No se pudo obtener el identificador para el movimiento realizado.' }, { Codigo: '30100', Descripcion: 'Error en la contabilización.' }, { Codigo: '40001', Descripcion: 'Operativa fuera de horario' }, { Codigo: '40003', Descripcion: 'Producto cancelado.' }, { Codigo: '40004', Descripcion: 'No se definió transacción a ejecutar.' }, { Codigo: '40006', Descripcion: 'La Operación tiene Bloqueos; no puede ser liquidada.' }, { Codigo: '40007', Descripcion: 'El producto se encuentra sobregirado, no es posible realizar la liquidación.' }, { Codigo: '40008', Descripcion: 'La cuenta tiene Tarjeta de débito asociada; no puede ser liquidada.' }, { Codigo: '40009', Descripcion: 'El producto paga la comisión del paquete, debe modificarse la instrucción.' }, { Codigo: '40010', Descripcion: 'NO SE DEFINIÓ LA CARPETA EN LA QUE SE GUARDARÁ EL ARCHIVO.' }, { Codigo: '40013', Descripcion: 'Usuario no autorizado a consultar esta Cuenta.' }, { Codigo: '40014', Descripcion: 'Usuario no autorizado a consultar esta Cuenta.' }, { Codigo: '40015', Descripcion: 'No es posible realizar la liquidación.' }, { Codigo: '40016', Descripcion: 'El titular de la cuenta no es una persona física.' }, { Codigo: '40017', Descripcion: 'No es posible operar con una cuenta conjunta.' }, { Codigo: '40018', Descripcion: 'La operación no permite operar.' }, { Codigo: '40019', Descripcion: 'La operación de acreditación no permite operar.' }, { Codigo: '40020', Descripcion: 'No se indicó cuenta de cobro/acreditación.' }, { Codigo: '40021', Descripcion: 'La operación a liquidar no puede ser CTS.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del cliente.' }, { Código: '30002', Descripción: 'La cuenta indicada no existe.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la cuenta.' }, { Código: '30004', Descripción: 'La cuenta indicada no existe.' }, { Código: '30005', Descripción: 'La cuenta a liquidar y la cuenta de acreditación no pueden ser la misma.' }, { Código: '30007', Descripción: 'La cuenta indicada no pertenece al cliente.' }, { Código: '30006', Descripción: 'La cuenta de cobro indicada no existe.' }, { Código: '30008', Descripción: 'Las monedas de la cuenta a liquidar y la cuenta de acreditación deben ser la misma.' }, { Código: '30009', Descripción: 'No se pudo obtener el identificador para el movimiento realizado.' }, { Código: '30100', Descripción: 'Error en la contabilización.' }, { Código: '40001', Descripción: 'Operativa fuera de horario' }, { Código: '40003', Descripción: 'Producto cancelado.' }, { Código: '40004', Descripción: 'No se definió transacción a ejecutar.' }, { Código: '40006', Descripción: 'La Operación tiene Bloqueos; no puede ser liquidada.' }, { Código: '40007', Descripción: 'El producto se encuentra sobregirado, no es posible realizar la liquidación.' }, { Código: '40008', Descripción: 'La cuenta tiene Tarjeta de débito asociada; no puede ser liquidada.' }, { Código: '40009', Descripción: 'El producto paga la comisión del paquete, debe modificarse la instrucción.' }, { Código: '40010', Descripción: 'NO SE DEFINIÓ LA CARPETA EN LA QUE SE GUARDARÁ EL ARCHIVO.' }, { Código: '40013', Descripción: 'Usuario no autorizado a consultar esta Cuenta.' }, { Código: '40014', Descripción: 'Usuario no autorizado a consultar esta Cuenta.' }, { Código: '40015', Descripción: 'No es posible realizar la liquidación.' }, { Código: '40016', Descripción: 'El titular de la cuenta no es una persona física.' }, { Código: '40017', Descripción: 'No es posible operar con una cuenta conjunta.' }, { Código: '40018', Descripción: 'La operación no permite operar.' }, { Código: '40019', Descripción: 'La operación de acreditación no permite operar.' }, { Código: '40020', Descripción: 'No se indicó cuenta de cobro/acreditación.' }, { Código: '40021', Descripción: 'La operación a liquidar no puede ser CTS.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class CancelarComponent1750945332916 {
          <bts:cuentaAcreditacionUId>311</bts:cuentaAcreditacionUId>
       </bts:BTCuentasVista.Cancelar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \   
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?Cancelar\' \ 
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.CancelarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

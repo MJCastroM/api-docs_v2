@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerValoresComponent1750945335765 {
+export class ObtenerValoresComponent1751987200403 {
   pageTitle        = 'Obtener Valores';
   description      = `Método para obtener los títulos disponibles para un grupo y sus respectivos valores.`;
   pubName    = 'BTTitulos.ObtenerValores';
@@ -21,7 +21,7 @@ export class ObtenerValoresComponent1750945335765 {
 
   inputData  = [{ Nombre: 'grupoId', Tipo: 'Byte', Comentarios: 'Identificador del grupo.' }];
   outputData = [{ Nombre: 'sdtTitulos', Tipo: '[sBTTitulo](#sbttitulo)', Comentarios: 'Listado de títulos del cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador del grupo.' }, { Codigo: '30002', Descripcion: 'No se pudieron obtener los títulos con el identificador ingresado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador del grupo.' }, { Código: '30002', Descripción: 'No se pudieron obtener los títulos con el identificador ingresado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerValoresComponent1750945335765 {
          <bts:grupoId>1</bts:grupoId>
       </bts:BTTitulos.ObtenerValores>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTitulos?ObtenerValores\' \
@@ -115,7 +115,7 @@ curl -X POST \
          </Btoutreq>
       </BTTitulos.ObtenerValoresResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

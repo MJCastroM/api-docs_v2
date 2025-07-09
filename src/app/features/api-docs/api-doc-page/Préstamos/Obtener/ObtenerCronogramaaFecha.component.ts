@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCronogramaaFechaComponent1750945334874 {
+export class ObtenerCronogramaaFechaComponent1751987199305 {
   pageTitle        = 'Obtener Cronograma a Fecha';
   description      = `Método para obtener el cronograma de un préstamo respecto a una fecha dada.`;
   pubName    = 'BTPrestamos.ObtenerCronogramaAFecha';
@@ -21,7 +21,7 @@ export class ObtenerCronogramaaFechaComponent1750945334874 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha a consultar.' }];
   outputData = [{ Nombre: 'sdtCuotaPrestamo', Tipo: '[sBTCuotaPrestamo](#sbtcuotaprestamo)', Comentarios: 'Cronograma del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador.' }, { Codigo: '30003', Descripcion: 'No se recibió fecha para consulta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador.' }, { Código: '30003', Descripción: 'No se recibió fecha para consulta.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerCronogramaaFechaComponent1750945334874 {
          <bts:fecha>2019-08-26</bts:fecha>
       </bts:BTPrestamos.ObtenerCronogramaAFecha>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?ObtenerCronogramaAFecha=\' \
@@ -294,7 +294,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerCronogramaAFechaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

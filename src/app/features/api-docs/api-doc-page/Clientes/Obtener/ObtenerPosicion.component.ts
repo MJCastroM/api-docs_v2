@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPosicionComponent1750945331946 {
+export class ObtenerPosicionComponent1751987196336 {
   pageTitle        = 'Obtener Posición';
   description      = `Método para obtener las posiciones de los títulos de un cliente.`;
   pubName    = 'BTClientes.ObtenerPosicion';
@@ -21,7 +21,7 @@ export class ObtenerPosicionComponent1750945331946 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de la moneda.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha.' }];
   outputData = [{ Nombre: 'totalGeneral', Tipo: 'Double', Comentarios: 'Total general.' }, { Nombre: 'totalDisponible', Tipo: 'Double', Comentarios: 'Total disponible.' }, { Nombre: 'numeradorConsulta', Tipo: 'Int', Comentarios: 'Numerador de la consulta.' }, { Nombre: 'sdtClasesActivos', Tipo: '[sBTClaseActivo](#sbtclaseactivo)', Comentarios: 'Datos de las clases de activos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar la fecha.' }, { Codigo: '30013', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40001', Descripcion: 'El Portafolio A no está definido.' }, { Codigo: '40002', Descripcion: 'El Portafolio A no está habilitado.' }, { Codigo: '40003', Descripcion: 'Error: Cuenta inexistente.' }, { Codigo: '40004', Descripcion: 'En la generación de la información se han encontrado inconsistencias subsanadas automáticamente. Favor de contactar a soporte indicando cuenta y números de sesión.' }, { Codigo: '40005', Descripcion: 'Error: No tiene autorización para consultar la cuenta ingresada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'Debe ingresar la fecha.' }, { Código: '30013', Descripción: 'No existe registro con la cuenta indicada.' }, { Código: '40001', Descripción: 'El Portafolio A no está definido.' }, { Código: '40002', Descripción: 'El Portafolio A no está habilitado.' }, { Código: '40003', Descripción: 'Error: Cuenta inexistente.' }, { Código: '40004', Descripción: 'En la generación de la información se han encontrado inconsistencias subsanadas automáticamente. Favor de contactar a soporte indicando cuenta y números de sesión.' }, { Código: '40005', Descripción: 'Error: No tiene autorización para consultar la cuenta ingresada.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerPosicionComponent1750945331946 {
          <bts:fecha>2020-08-06</bts:fecha>
       </bts:BTClientes.ObtenerPosicion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerPosicion=\' \
@@ -106,7 +106,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerPosicionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

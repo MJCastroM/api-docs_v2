@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AnularMovimientoComponent1750945332352 {
+export class AnularMovimientoComponent1751987196691 {
   pageTitle        = 'Anular Movimiento';
   description      = `Método para anular un movimiento.`;
   pubName    = 'BTContabilidad.AnularMovimiento';
@@ -21,7 +21,7 @@ export class AnularMovimientoComponent1750945332352 {
 
   inputData  = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha de anulación.' }];
   outputData = [{ Nombre: 'movimientoUIdAnulacion', Tipo: 'Long', Comentarios: 'Identificador único de la anulación de movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de movimiento.' }, { Codigo: '30002', Descripcion: 'No se recibió fecha de anulación.' }, { Codigo: '40003', Descripcion: 'No se permite ingresar operaciones anteriores al último cierre.' }, { Codigo: '40004', Descripcion: 'Usuario no autorizado a cambiar la Fecha Valor Contable.' }, { Codigo: '40071', Descripcion: 'La fecha valor contable no puede ser un feriado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de movimiento.' }, { Código: '30002', Descripción: 'No se recibió fecha de anulación.' }, { Código: '40003', Descripción: 'No se permite ingresar operaciones anteriores al último cierre.' }, { Código: '40004', Descripción: 'Usuario no autorizado a cambiar la Fecha Valor Contable.' }, { Código: '40071', Descripción: 'La fecha valor contable no puede ser un feriado.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class AnularMovimientoComponent1750945332352 {
          <bts:fecha>2018-08-10</bts:fecha>
       </bts:BTContabilidad.AnularMovimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad?AnularMovimiento\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.AnularMovimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

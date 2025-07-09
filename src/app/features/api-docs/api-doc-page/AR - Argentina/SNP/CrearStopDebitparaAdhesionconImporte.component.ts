@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearStopDebitparaAdhesionconImporteComponent1750945331154 {
+export class CrearStopDebitparaAdhesionconImporteComponent1751987195468 {
   pageTitle        = 'Crear Stop Debit para Adhesión con Importe';
   description      = `Método para crear un stop debit con importe dada una adhesión.`;
   pubName    = 'BTSNP.CrearStopDebitParaAdhesionConImporte';
@@ -21,7 +21,7 @@ export class CrearStopDebitparaAdhesionconImporteComponent1750945331154 {
 
   inputData  = [{ Nombre: 'prestacion', Tipo: 'String', Comentarios: 'Identificador de prestación.' }, { Nombre: 'empresaOriginante', Tipo: 'String', Comentarios: 'Identificador de la empresa originante.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }, { Nombre: 'idCliente', Tipo: 'String', Comentarios: 'Identificador del Cliente SNP.' }, { Nombre: 'tipoDeDebito', Tipo: 'Byte', Comentarios: 'Tipo de débito (1=Abierto/2=Cerrado).' }, { Nombre: 'moneda', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'montoMaximoDebito', Tipo: 'String', Comentarios: 'Monto máximo de débito (M=Mensual/F=Factura).' }, { Nombre: 'importe', Tipo: 'Double', Comentarios: 'Importe del Stop Debit.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de la empresa originante.' }, { Codigo: '30003', Descripcion: 'No se recibió el tipo de débito.' }, { Codigo: '30004', Descripcion: 'No se recibió la prestación.' }, { Codigo: '30005', Descripcion: 'No se recibió el ID del cliente SNP.' }, { Codigo: '30006', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Codigo: '30007', Descripcion: 'El tipo de débito no es correcto.' }, { Codigo: '40001', Descripcion: 'El código de moneda no es válido.' }, { Codigo: '40002', Descripcion: 'El código de monto máximo de débito es incorrecto.' }, { Codigo: '40003', Descripcion: 'El monto no puede ser nulo.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de la empresa originante.' }, { Código: '30003', Descripción: 'No se recibió el tipo de débito.' }, { Código: '30004', Descripción: 'No se recibió la prestación.' }, { Código: '30005', Descripción: 'No se recibió el ID del cliente SNP.' }, { Código: '30006', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }, { Código: '30007', Descripción: 'El tipo de débito no es correcto.' }, { Código: '40001', Descripción: 'El código de moneda no es válido.' }, { Código: '40002', Descripción: 'El código de monto máximo de débito es incorrecto.' }, { Código: '40003', Descripción: 'El monto no puede ser nulo.' }];
 
   examples = {
     invocation: { xml: `
@@ -46,7 +46,7 @@ export class CrearStopDebitparaAdhesionconImporteComponent1750945331154 {
          <bts:importe>2000</bts:importe>
       </bts:BTSNP.CrearStopDebitParaAdhesionConImporte>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?CrearStopDebitParaAdhesionConImporte\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.CrearStopDebitParaAdhesionConImporteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

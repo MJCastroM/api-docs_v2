@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DesbloquearComponent1750945335715 {
+export class DesbloquearComponent1751987200345 {
   pageTitle        = 'Desbloquear';
   description      = `Método para desbloquear una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.Desbloquear';
@@ -21,7 +21,7 @@ export class DesbloquearComponent1750945335715 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30004', Descripcion: 'La Tarjeta no pertenece al cliente.' }, { Codigo: '40001', Descripcion: 'Error: El código de situación actual y/o el estado de la tarjeta son incorrectos.' }, { Codigo: '40002', Descripcion: 'Error: Tarjeta inexistente.' }, { Codigo: '40003', Descripcion: 'Error devuelto por la rutina PTDD0017.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la tarjeta.' }, { Código: '30002', Descripción: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30004', Descripción: 'La Tarjeta no pertenece al cliente.' }, { Código: '40001', Descripción: 'Error: El código de situación actual y/o el estado de la tarjeta son incorrectos.' }, { Código: '40002', Descripción: 'Error: Tarjeta inexistente.' }, { Código: '40003', Descripción: 'Error devuelto por la rutina PTDD0017.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class DesbloquearComponent1750945335715 {
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTTarjetasDeDebito.Desbloquear>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Desbloquear=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.DesbloquearResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

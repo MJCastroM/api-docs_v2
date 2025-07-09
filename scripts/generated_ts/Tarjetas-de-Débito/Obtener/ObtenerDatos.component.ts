@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750945335575 {
+export class ObtenerDatosComponent1751987200167 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener los datos de un producto de tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerDatos';
@@ -21,7 +21,7 @@ export class ObtenerDatosComponent1750945335575 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }];
   outputData = [{ Nombre: 'sdtEntidadTarjetaDebito', Tipo: '[sBDTarjetaDebito](#sbdtarjetadebito)', Comentarios: 'Datos de tarjeta de débito.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDatosComponent1750945335575 {
          <bts:tarjetaUId>3</bts:tarjetaUId>
       </bts:BTTarjetasDeDebito.ObtenerDatos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?ObtenerDatos=\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

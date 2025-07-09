@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarRefinanciacionComponent1750945334811 {
+export class ContratarRefinanciacionComponent1751987199230 {
   pageTitle        = 'Contratar Refinanciación';
   description      = `Método para contratar la refinanciación de un préstamo.`;
   pubName    = 'BTPrestamos.ContratarRefinanciacion';
@@ -21,7 +21,7 @@ export class ContratarRefinanciacionComponent1750945334811 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'simulacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la simulación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'parmsAux', Tipo: 'String', Comentarios: '[Hidden: Parámetros auxiliares. Se pueden enviar los siguientes [valores](#valores)].' }, { Nombre: 'operacionCobroUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación de cobro.' }, { Nombre: 'operacionUIdIns', Tipo: 'Long', Comentarios: '[Hidden: Valor fijo vacío para este método].' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único del movimiento.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación a contratar.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación a contratar para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30004', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30005', Descripcion: 'No se recibió el identificador de la simulación.' }, { Codigo: '30006', Descripcion: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }, { Codigo: '30007', Descripcion: 'El cliente ingresado no coincide con el de la operación.' }, { Codigo: '30008', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Codigo: '30009', Descripcion: 'No se recuperó la operación de cobro para el identificador: [Número de Identificador].' }, { Codigo: '30010', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30011', Descripcion: 'No se recibió identificador de la operación de cuenta vista.' }, { Codigo: '30012', Descripcion: 'No se recibió identificador de la operación de instrucción de cobro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación a contratar.' }, { Código: '30002', Descripción: 'No se recuperó la operación a contratar para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30004', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30005', Descripción: 'No se recibió el identificador de la simulación.' }, { Código: '30006', Descripción: 'No se recuperaron datos de la simulación para el identificador [Número de Identificador].' }, { Código: '30007', Descripción: 'El cliente ingresado no coincide con el de la operación.' }, { Código: '30008', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }, { Código: '30009', Descripción: 'No se recuperó la operación de cobro para el identificador: [Número de Identificador].' }, { Código: '30010', Descripción: 'La operación de cobro no pertenece al cliente.' }, { Código: '30011', Descripción: 'No se recibió identificador de la operación de cuenta vista.' }, { Código: '30012', Descripción: 'No se recibió identificador de la operación de instrucción de cobro.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ContratarRefinanciacionComponent1750945334811 {
          <bts:operacionCobroUId>23</bts:operacionCobroUId>
       </bts:BTPrestamos.ContratarRefinanciacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ContratarRefinanciacion\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ContratarRefinanciacion>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

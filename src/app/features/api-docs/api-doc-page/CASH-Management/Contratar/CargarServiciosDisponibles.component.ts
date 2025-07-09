@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CargarServiciosDisponiblesComponent1750945331421 {
+export class CargarServiciosDisponiblesComponent1751987195721 {
   pageTitle        = 'Cargar Servicios Disponibles';
   description      = `Método para obtener los servicios disponibles para el cliente.`;
   pubName    = 'BTCASHManagement.CargarServiciosDisponibles';
@@ -21,7 +21,7 @@ export class CargarServiciosDisponiblesComponent1750945331421 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtServicios', Tipo: '[sBTConvServicioCASH](#sbtconvserviciocash)', Comentarios: 'Lista de servicios del contrato.' }];
-  errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }];
+  errors     = [{ Código: '1030705', Descripción: 'Cuenta cliente sin contrato vinculado.' }, { Código: '1030709', Descripción: 'Se requiere identificacion de cuenta cliente.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class CargarServiciosDisponiblesComponent1750945331421 {
          <bts:clienteUId>1</bts:clienteUId>
       </bts:BTCASHManagement.CargarServiciosDisponibles>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.CargarServiciosDisponiblesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

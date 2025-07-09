@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProfesionesComponent1750945334477 {
+export class ObtenerProfesionesComponent1751987198849 {
   pageTitle        = 'Obtener Profesiones';
   description      = `Método para obtener un listado de las profesiones registradas.`;
   pubName    = 'BTPersonas.ObtenerProfesiones';
@@ -38,7 +38,7 @@ export class ObtenerProfesionesComponent1750945334477 {
          </bts:Btinreq>
       </bts:BTPersonas.ObtenerProfesiones>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerProfesiones=\' \
@@ -119,7 +119,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerProfesionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

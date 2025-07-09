@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeListasNegrasComponent1750945332298 {
+export class ObtenerTiposdeListasNegrasComponent1751987196635 {
   pageTitle        = 'Obtener Tipos de Listas Negras';
   description      = `Método para obtener un listado de los tipos de listas negras ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposListasNegras';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeListasNegrasComponent1750945332298 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTiposListaNegra', Tipo: '[sBTTipoListaNegra](#sbttipolistanegra)', Comentarios: 'Listado de tipos de listas negras.' }];
-  errors     = [{ Codigo: '30011', Descripcion: 'No existen Tipos de Lista Negra ingresados en el sistema.' }];
+  errors     = [{ Código: '30011', Descripción: 'No existen Tipos de Lista Negra ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposdeListasNegrasComponent1750945332298 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerTiposListasNegras>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposListasNegras\' \
@@ -103,7 +103,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerTiposListasNegrasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

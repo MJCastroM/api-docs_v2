@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ContratarComponent1750945334792 {
+export class ContratarComponent1751987199209 {
   pageTitle        = 'Contratar';
   description      = `Método para contratar un préstamo amortizable.`;
   pubName    = 'BTPrestamos.Contratar';
@@ -35,7 +35,7 @@ export class ContratarComponent1750945334792 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación simulada.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'operacionUId_desembolso', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta vista donde se acreditará el monto solicitado.' }, { Nombre: 'operacionUId_cobro', Tipo: 'Long', Comentarios: 'Identificador único de operación de la cuenta vista de donde se cobrará el préstamo. En caso de no solicitarse una operación de cobro, enviar valor 999999999.' }];
   outputData = [{ Nombre: 'movimientoUId', Tipo: 'Long', Comentarios: 'Identificador único de movimiento [Asiento].' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación de préstamo.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de operación de Acreditación.' }, { Codigo: '30004', Descripcion: 'No se recuperó el préstamo para el identificador: [Número de identificador].' }, { Codigo: '30005', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Codigo: '30006', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30007', Descripcion: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Codigo: '30008', Descripcion: 'El préstamo no pertenece al cliente.' }, { Codigo: '30009', Descripcion: 'La operación de cobro no pertenece al cliente.' }, { Codigo: '30010', Descripcion: 'No se recibió el identificador único de operación de cobro.' }, { Codigo: '51001', Descripcion: 'No se recibió número de cliente.' }, { Codigo: '51002', Descripcion: 'La operación no existe.' }, { Codigo: '51003', Descripcion: 'La operación de cobro no existe.' }, { Codigo: '51005', Descripcion: 'Atención: No se pudo obtener el numerador para la transacción.' }, { Codigo: '51006', Descripcion: 'La operación esta cancelada.' }, { Codigo: '51007', Descripcion: 'La operación ya existe.' }, { Codigo: '51013', Descripcion: 'La operación de cobro esta cancelada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación de préstamo.' }, { Código: '30002', Descripción: 'No se recibió el identificador de operación de Acreditación.' }, { Código: '30004', Descripción: 'No se recuperó el préstamo para el identificador: [Número de identificador].' }, { Código: '30005', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Código: '30006', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30007', Descripción: 'No se recuperó la cuenta para el Identificador de cliente: [Número de identificador].' }, { Código: '30008', Descripción: 'El préstamo no pertenece al cliente.' }, { Código: '30009', Descripción: 'La operación de cobro no pertenece al cliente.' }, { Código: '30010', Descripción: 'No se recibió el identificador único de operación de cobro.' }, { Código: '51001', Descripción: 'No se recibió número de cliente.' }, { Código: '51002', Descripción: 'La operación no existe.' }, { Código: '51003', Descripción: 'La operación de cobro no existe.' }, { Código: '51005', Descripción: 'Atención: No se pudo obtener el numerador para la transacción.' }, { Código: '51006', Descripción: 'La operación esta cancelada.' }, { Código: '51007', Descripción: 'La operación ya existe.' }, { Código: '51013', Descripción: 'La operación de cobro esta cancelada.' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ export class ContratarComponent1750945334792 {
          <bts:operacionUId_cobro>281</bts:operacionUId_cobro>
       </bts:BTPrestamos.Contratar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?Contratar=\' \
@@ -100,7 +100,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ContratarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerComisionesComponent1750945333625 {
+export class ObtenerComisionesComponent1751987197909 {
   pageTitle        = 'Obtener Comisiones';
   description      = `Método para obtener las comisiones parametrizadas de un producto de préstamos.`;
   pubName    = 'BTModeladorPrestamos.ObtenerComisiones';
@@ -39,7 +39,7 @@ export class ObtenerComisionesComponent1750945333625 {
          <bts:productoUId>48</bts:productoUId>
       </bts:BTModeladorPrestamos.ObtenerComisiones>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTModeladorPrestamos?ObtenerComisiones\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTModeladorPrestamos.ObtenerComisionesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

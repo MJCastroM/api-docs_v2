@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerFacultadesComponent1750945332833 {
+export class ObtenerFacultadesComponent1751987197165 {
   pageTitle        = 'Obtener Facultades';
   description      = `Método para obtener un listado de las facultades de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerFacultades';
@@ -21,11 +21,11 @@ export class ObtenerFacultadesComponent1750945332833 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'sdtFacultades', Tipo: '[sBTFacultad](#sbtfacultad)', Comentarios: 'Listado de datos de facultades.' }, { Nombre: 'sdtFirmantes', Tipo: '[sBTFacultadFirmantes](#sbtfacultadfirmantes)', Comentarios: 'Listado de datos de firmantes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta corriente / cuenta de ahorro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a una cuenta corriente / cuenta de ahorro.' }];
 
   examples = {
     invocation: { xml: `
-`, 
+`,
     json: `
 ` },
     response:   { xml: `
@@ -95,7 +95,7 @@ export class ObtenerFacultadesComponent1750945332833 {
          </Btoutreq>
       </BTCuentasVista.ObtenerFacultadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

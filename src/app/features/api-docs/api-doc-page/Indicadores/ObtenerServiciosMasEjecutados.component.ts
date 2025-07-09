@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerServiciosMasEjecutadosComponent1750945333319 {
+export class ObtenerServiciosMasEjecutadosComponent1751987197710 {
   pageTitle        = 'Obtener Servicios Más Ejecutados';
   description      = `Método para obtener un listado de los servicios más ejecutados y sus estadísticas.`;
   pubName    = 'BTIndicadores.ObtenerServiciosMasEjecutados';
@@ -38,7 +38,7 @@ export class ObtenerServiciosMasEjecutadosComponent1750945333319 {
          </bts:Btinreq>
       </bts:BTIndicadores.ObtenerServiciosMasEjecutados>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTIndicadores?ObtenerServiciosMasEjecutados\' \
@@ -159,7 +159,7 @@ curl -X POST \
          </Btoutreq>
       </BTIndicadores.ObtenerServiciosMasEjecutadosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

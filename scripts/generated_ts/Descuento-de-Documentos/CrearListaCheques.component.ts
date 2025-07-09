@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearListaChequesComponent1750945333244 {
+export class CrearListaChequesComponent1751987197622 {
   pageTitle        = 'Crear Lista Cheques';
   description      = `Método para crear una lista de cheques a descontar.`;
   pubName    = 'BTDescuentoDocumentos.CrearListaCheques';
@@ -21,7 +21,7 @@ export class CrearListaChequesComponent1750945333244 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'sdtListaCheques', Tipo: '[sBTDescuentoCheque](#sbtdescuentocheque)', Comentarios: 'Lista de documentos.' }, { Nombre: 'montoADescontar', Tipo: 'Long', Comentarios: 'Monto total a descontar.' }, { Nombre: 'tasa', Tipo: 'Long', Comentarios: 'Tasa para aplicar.' }, { Nombre: 'porcentajeAforo', Tipo: 'Long', Comentarios: 'Porcentaje de aforo.' }, { Nombre: 'fechaValor', Tipo: 'Date', Comentarios: 'Fecha valor.' }];
   outputData = [{ Nombre: 'listaUId', Tipo: 'Long', Comentarios: 'Identificador de lista.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -60,7 +60,7 @@ export class CrearListaChequesComponent1750945333244 {
          <bts:fechaValor>2018-11-20</bts:fechaValor>
       </bts:BTDescuentoDocumentos.CrearListaCheques>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDescuentoDocumentos?CrearListaCheques=\' \
@@ -121,7 +121,7 @@ curl -X POST \
          </Btoutreq>
       </BTDescuentoDocumentos.CrearListaChequesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalledeProcesoComponent1750945331223 {
+export class ObtenerDetalledeProcesoComponent1751987195537 {
   pageTitle        = 'Obtener Detalle de Proceso';
   description      = `Método para obtener el detalle de un proceso de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerDetalleProceso';
@@ -39,7 +39,7 @@ export class ObtenerDetalledeProcesoComponent1750945331223 {
          <bts:identificador>93</bts:identificador>
       </bts:BTCadenaCierre.ObtenerDetalleProceso>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ObtenerDetalleProceso\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.ObtenerDetalleProcesoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

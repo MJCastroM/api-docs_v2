@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarCorreoElectronicoComponent1750945333938 {
+export class ActualizarCorreoElectronicoComponent1751987198272 {
   pageTitle        = 'Actualizar Correo Electrónico';
   description      = `Método para actualizar el correo electrónico de una persona.`;
   pubName    = 'BTPersonas.ActualizarCorreoElectronico';
@@ -21,7 +21,7 @@ export class ActualizarCorreoElectronicoComponent1750945333938 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtCorreoElectronico', Tipo: '[sBTCorreoElectronico](#sbtcorreoelectronico)', Comentarios: 'Datos de correo electrónico.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '40015', Descripcion: 'El registro no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '40015', Descripción: 'El registro no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ActualizarCorreoElectronicoComponent1750945333938 {
          </bts:sdtCorreoElectronico>
       </bts:BTPersonas.ActualizarCorreoElectronico>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ActualizarCorreoElectronico=\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ActualizarCorreoElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

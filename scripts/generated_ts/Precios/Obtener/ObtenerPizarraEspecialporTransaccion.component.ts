@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraEspecialporTransaccionComponent1750945334705 {
+export class ObtenerPizarraEspecialporTransaccionComponent1751987199098 {
   pageTitle        = 'Obtener Pizarra Especial por Transacción';
   description      = `Método para obtener la pizarra especial para una transacción.`;
   pubName    = 'BTPrecios.ObtenerPizarraEspecialPorTransaccion';
@@ -21,7 +21,7 @@ export class ObtenerPizarraEspecialporTransaccionComponent1750945334705 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Código de módulo Bantotal.' }, { Nombre: 'transaccion', Tipo: 'Int', Comentarios: 'Código de transacción Bantotal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }];
   outputData = [{ Nombre: 'arbitrajeCompra', Tipo: 'Double', Comentarios: 'Valor del arbitraje (Compra).' }, { Nombre: 'arbitrajeVenta', Tipo: 'Double', Comentarios: 'Valor del arbitraje (Venta).' }, { Nombre: 'tipoCambioCompra', Tipo: 'Double', Comentarios: 'Valor del tipo de cambio (Compra).' }, { Nombre: 'tipoCambioVenta', Tipo: 'Double', Comentarios: 'Valor del tipo de cambio (Venta).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar transacción Bantotal.' }, { Codigo: '30002', Descripcion: 'Debe ingresar módulo Bantotal.' }, { Codigo: '30003', Descripcion: 'La moneda ingresada no existe.' }, { Codigo: '30004', Descripcion: 'El módulo ingresado no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar transacción Bantotal.' }, { Código: '30002', Descripción: 'Debe ingresar módulo Bantotal.' }, { Código: '30003', Descripción: 'La moneda ingresada no existe.' }, { Código: '30004', Descripción: 'El módulo ingresado no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerPizarraEspecialporTransaccionComponent1750945334705 {
          <bts:monedaId>2222</bts:monedaId>
       </bts:BTPrecios.ObtenerPizarraEspecialPorTransaccion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios?ObtenerPizarraEspecialPorTransaccion=\' \
@@ -89,7 +89,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ObtenerPizarraEspecialPorTransaccionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

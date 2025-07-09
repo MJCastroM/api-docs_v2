@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentaVistadeCBUComponent1750945332808 {
+export class ObtenerCuentaVistadeCBUComponent1751987197128 {
   pageTitle        = 'Obtener Cuenta Vista de CBU';
   description      = `Método para obtener el identificador de operación de una cuenta vista a partir del CBU.`;
   pubName    = 'BTCuentasVista.ObtenerCuentaVistaDeCBU';
@@ -21,7 +21,7 @@ export class ObtenerCuentaVistadeCBUComponent1750945332808 {
 
   inputData  = [{ Nombre: 'CBU', Tipo: 'String', Comentarios: 'Clave Bancaria Uniforme.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación CC o CA.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió CBU.' }, { Codigo: '40001', Descripcion: 'No se encontró operación correspondiente al CBU.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió CBU.' }, { Código: '40001', Descripción: 'No se encontró operación correspondiente al CBU.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCuentaVistadeCBUComponent1750945332808 {
 		<CBU>3220001800000831740016</CBU>
       </bts:BTCuentasVista.ObtenerCuentaVistaDeCBU>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -66,7 +66,7 @@ export class ObtenerCuentaVistadeCBUComponent1750945332808 {
 		</Btoutreq>
       </BTCuentasVista.ObtenerCuentaVistaDeCBUResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1750945335096 {
+export class ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component1751987199593 {
   pageTitle        = 'Obtener Préstamos por Rango Mora';
   description      = `Método para obtener los préstamos que estén dentro del rango de mora ingresado.`;
   pubName    = 'BTPrestamos.ObtenerPrestamosPorRangoMora';
@@ -21,7 +21,7 @@ export class ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component17
 
   inputData  = [{ Nombre: 'diasMoraDesde', Tipo: 'Int', Comentarios: 'Días de mora desde.' }, { Nombre: 'diasMoraHasta', Tipo: 'Int', Comentarios: 'Días de mora hasta.' }, { Nombre: 'actualiza', Tipo: 'String', Comentarios: 'Habilita la actualización en la tabla SNG912 con los datos del préstamo [Hidden: Valor fijo \'S\'].' }];
   outputData = [{ Nombre: 'sdtDatosPrestamos', Tipo: '[sBTDatosPrestamo](#sbtdatosprestamo)', Comentarios: 'Listado de los préstamos que están dentro del rango de días de mora.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Días Mora Hasta no puede ser menor a Días Mora Desde.' }, { Codigo: '30003', Descripcion: 'No existe registro para el producto indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'Días Mora Hasta no puede ser menor a Días Mora Desde.' }, { Código: '30003', Descripción: 'No existe registro para el producto indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerPrestamosporRangoMoraDisponibleunicamenteparaV3R1Component17
          <bts:diasMoraHasta>100</bts:diasMoraHasta>
       </bts:BTPrestamos.ObtenerPrestamosPorRangoMora>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerPrestamosPorRangoMora=\' \
@@ -159,7 +159,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerPrestamosPorRangoMoraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

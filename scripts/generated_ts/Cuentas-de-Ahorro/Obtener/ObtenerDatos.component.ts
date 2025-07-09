@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosComponent1750945332723 {
+export class ObtenerDatosComponent1751987197041 {
   pageTitle        = 'Obtener Datos';
   description      = `Método para obtener los datos de un producto de cuenta de ahorro.`;
   pubName    = 'BTCuentasDeAhorro.ObtenerDatos';
@@ -21,7 +21,7 @@ export class ObtenerDatosComponent1750945332723 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'sdtCajaAhorro', Tipo: '[sBTCajaAhorro](#sbtcajaahorro)', Comentarios: 'Datos de caja de ahorro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó operación para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'La operación ingresada no corresponde a una cuenta de ahorro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó operación para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'La operación ingresada no corresponde a una cuenta de ahorro.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDatosComponent1750945332723 {
          <bts:operacionUId>281</bts:operacionUId>
       </bts:BTCuentasDeAhorro.ObtenerDatos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasDeAhorro?ObtenerDatos=\' \
@@ -108,7 +108,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasDeAhorro.ObtenerDatosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

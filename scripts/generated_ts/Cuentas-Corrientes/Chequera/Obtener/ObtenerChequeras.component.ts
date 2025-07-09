@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerChequerasComponent1750945332563 {
+export class ObtenerChequerasComponent1751987196897 {
   pageTitle        = 'Obtener Chequeras';
   description      = `Método para obtener un listado de las chequeras activas de una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.ObtenerChequeras';
@@ -21,7 +21,7 @@ export class ObtenerChequerasComponent1750945332563 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
   outputData = [{ Nombre: 'sdtChequeras', Tipo: '[sBTChequerasCC](#sbtchequerascc)', Comentarios: 'Listado de chequeras.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de Operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de Operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerChequerasComponent1750945332563 {
          <bts:operacionUId>81</bts:operacionUId>
       </bts:BTCuentasCorrientes.ObtenerChequeras>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes?ObtenerChequeras=\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.ObtenerChequerasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

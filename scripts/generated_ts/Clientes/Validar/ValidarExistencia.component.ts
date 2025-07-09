@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ValidarExistenciaComponent1750945332076 {
+export class ValidarExistenciaComponent1751987196453 {
   pageTitle        = 'Validar Existencia';
   description      = `Método para validar la existencia de un número de cuenta en Bantotal.`;
   pubName    = 'BTClientes.ValidarExistencia';
@@ -21,7 +21,7 @@ export class ValidarExistenciaComponent1750945332076 {
 
   inputData  = [{ Nombre: 'cuentaBT', Tipo: 'Int', Comentarios: 'Número de cuenta Bantotal.' }];
   outputData = [{ Nombre: 'existe', Tipo: 'String', Comentarios: '¿Existe? (S/N).' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió la Cuenta BT.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió la Cuenta BT.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ValidarExistenciaComponent1750945332076 {
          <bts:cuentaBT>27</bts:cuentaBT>
       </bts:BTClientes.ValidarExistencia>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ValidarExistencia=\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ValidarExistenciaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750945335604 {
+export class ObtenerMovimientosComponent1751987200202 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener los movimientos de una tarjeta de débito.`;
   pubName    = 'BTTarjetasDeDebito.ObtenerMovimientos';
@@ -21,7 +21,7 @@ export class ObtenerMovimientosComponent1750945335604 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de la tarjeta.' }, { Nombre: 'fechaDesde', Tipo: 'Date', Comentarios: 'Fecha desde la cual se emite el estado de cuenta.' }, { Nombre: 'fechaHasta', Tipo: 'Date', Comentarios: 'Fecha hasta la cual se emite el estado de cuenta.' }];
   outputData = [{ Nombre: 'sdtEstadoDeCuenta', Tipo: '[sBTEstadoCuentaDebito](#sbtestadocuentadebito)', Comentarios: 'Datos del estado de cuenta de la tarjeta de débito.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de tarjeta.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de tarjeta.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerMovimientosComponent1750945335604 {
          <bts:fechaHasta>2020-01-01</bts:fechaHasta>
       </bts:BTTarjetasDeDebito.ObtenerMovimientos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito_v1?ObtenerMovimientos=\' \
@@ -158,7 +158,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ObtenerMovimientosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

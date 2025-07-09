@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularComponent1750945333214 {
+export class SimularComponent1751987197585 {
   pageTitle        = 'Simular';
   description      = `Método para simular el alta de un depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.Simular';
@@ -33,7 +33,7 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'monto', Tipo: 'Double', Comentarios: 'Monto del depósito.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador único de producto.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo del DPF.' }];
   outputData = [{ Nombre: 'fechaAlta', Tipo: 'Date', Comentarios: 'Fecha de alta.' }, { Nombre: 'fechaVencimiento', Tipo: 'Date', Comentarios: 'Fecha en que vencería el DPF.' }, { Nombre: 'intereses', Tipo: 'Double', Comentarios: 'Intereses.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'El monto es de ingreso obligatorio.' }, { Codigo: '30002', Descripcion: 'El Plazo es de ingreso obligatorio.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la Cuenta.' }, { Codigo: '30004', Descripcion: 'No se recibió el identificador del Producto.' }];
+  errors     = [{ Código: '30001', Descripción: 'El monto es de ingreso obligatorio.' }, { Código: '30002', Descripción: 'El Plazo es de ingreso obligatorio.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la Cuenta.' }, { Código: '30004', Descripción: 'No se recibió el identificador del Producto.' }];
 
   examples = {
     invocation: { xml: `
@@ -54,7 +54,7 @@ Importe específico 3 | Ajuste de día al vencimiento (0 - No ajusta, 1 - Ajuste
          <bts:plazo>360</bts:plazo>
       </bts:BTDepositosAPlazo.Simular>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?Simular=\' \
@@ -102,7 +102,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.SimularResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

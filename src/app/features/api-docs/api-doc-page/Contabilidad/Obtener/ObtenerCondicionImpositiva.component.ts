@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCondicionImpositivaComponent1750945332419 {
+export class ObtenerCondicionImpositivaComponent1751987196766 {
   pageTitle        = 'Obtener Condición Impositiva';
   description      = `Método para obtener una condición impositiva de una persona.`;
   pubName    = 'BTContabilidad.ObtenerCondicionImpositiva';
@@ -21,7 +21,7 @@ export class ObtenerCondicionImpositivaComponent1750945332419 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'codigoImpuesto', Tipo: 'Short', Comentarios: 'Código de impuesto.' }];
   outputData = [{ Nombre: 'codigoCondicion', Tipo: 'Short', Comentarios: 'Código de condición.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el código del impuesto.' }, { Codigo: '40004', Descripcion: 'Condición por Impuesto/Persona inexistente.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió el código del impuesto.' }, { Código: '40004', Descripción: 'Condición por Impuesto/Persona inexistente.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerCondicionImpositivaComponent1750945332419 {
          <bts:codigoImpuesto>1</bts:codigoImpuesto>
       </bts:BTContabilidad.ObtenerCondicionImpositiva>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerCondicionImpositiva=\' \
@@ -82,7 +82,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerCondicionImpositivaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerRolesdeTareaComponent1750945335868 {
+export class ObtenerRolesdeTareaComponent1751987200540 {
   pageTitle        = 'Obtener Roles de Tarea';
   description      = `Método para obtener los roles de una determinada tarea de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerRolesDeTarea';
@@ -21,7 +21,7 @@ export class ObtenerRolesdeTareaComponent1750945335868 {
 
   inputData  = [{ Nombre: 'procesoId', Tipo: 'Int', Comentarios: 'Identificador de proceso Workflow.' }, { Nombre: 'tareaId', Tipo: 'Int', Comentarios: 'Identificador de tarea Workflow.' }];
   outputData = [{ Nombre: 'sdtRoles', Tipo: '[sBTRolWF](#sbtrolwf)', Comentarios: 'Listado de roles de Workflow.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '40001', Descripcion: 'El proceso ingresado no existe.' }, { Codigo: '40002', Descripcion: 'La tarea ingresada no existe para el proceso.' }, { Codigo: '40003', Descripcion: 'No existen roles en el sistema para la tarea ingresada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de proceso.' }, { Código: '30002', Descripción: 'No se recibió el identificador de tarea.' }, { Código: '40001', Descripción: 'El proceso ingresado no existe.' }, { Código: '40002', Descripción: 'La tarea ingresada no existe para el proceso.' }, { Código: '40003', Descripción: 'No existen roles en el sistema para la tarea ingresada.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerRolesdeTareaComponent1750945335868 {
          <bts:tareaId>11</bts:tareaId>
       </bts:BTWorkflow.ObtenerRolesDeTarea>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerRolesDeTarea \
@@ -106,7 +106,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq>
       </BTWorkflow.ObtenerRolesDeTareaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
    "Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDeudaVencidaComponent1750945335011 {
+export class ObtenerDeudaVencidaComponent1751987199506 {
   pageTitle        = 'Obtener Deuda Vencida';
   description      = `Método para obtener la deuda vencida de un préstamo a una determinada fecha.`;
   pubName    = 'BTPrestamos.ObtenerDeudaVencida';
@@ -21,7 +21,7 @@ export class ObtenerDeudaVencidaComponent1750945335011 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación simulada.' }, { Nombre: 'fechaDeCalculo', Tipo: 'Date', Comentarios: 'Fecha a la que se calcula la deuda.' }];
   outputData = [{ Nombre: 'deuda', Tipo: 'Double', Comentarios: 'Deuda a la fecha.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDeudaVencidaComponent1750945335011 {
          <bts:fechaDeCalculo>2020-11-11</bts:fechaDeCalculo>
       </bts:BTPrestamos.ObtenerDeudaVencida>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 ` },
     response:   { xml: `
@@ -67,7 +67,7 @@ export class ObtenerDeudaVencidaComponent1750945335011 {
          </Btoutreq>
       </BTPrestamos.ObtenerDeudaVencidaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 ` }
   };

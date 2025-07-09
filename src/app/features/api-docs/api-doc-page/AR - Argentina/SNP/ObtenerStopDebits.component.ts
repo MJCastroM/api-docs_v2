@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerStopDebitsComponent1750945331192 {
+export class ObtenerStopDebitsComponent1751987195497 {
   pageTitle        = 'Obtener Stop Debits';
   description      = `Método para obtener los stop debits asociados a un cliente.`;
   pubName    = 'BTSNP.ObtenerStopDebits';
@@ -21,7 +21,7 @@ export class ObtenerStopDebitsComponent1750945331192 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único del cliente.' }];
   outputData = [{ Nombre: 'sdtConsultaStopDebit', Tipo: '[sBTConsultaStopDebit](#sbtconsultastopdebit)', Comentarios: 'Datos del alta de Stop Debits.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador del cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador del cliente.' }, { Código: '30002', Descripción: 'No se encontró un cliente para el identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerStopDebitsComponent1750945331192 {
          <bts:clienteUId>4</bts:clienteUId>
       </bts:BTSNP.ObtenerStopDebits>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTSNP_v1?ObtenerStopDebits\' \
@@ -121,7 +121,7 @@ curl -X POST \
          </Btoutreq>
       </BTSNP.ObtenerStopDebitsResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

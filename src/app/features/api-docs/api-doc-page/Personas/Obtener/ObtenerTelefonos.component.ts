@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTelefonosComponent1750945334502 {
+export class ObtenerTelefonosComponent1751987198883 {
   pageTitle        = 'Obtener Teléfonos';
   description      = `Método para obtener los teléfonos de una persona.`;
   pubName    = 'BTPersonas.ObtenerTelefonos';
@@ -21,7 +21,7 @@ export class ObtenerTelefonosComponent1750945334502 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtTelefonos', Tipo: '[sBTTelefono](#sbttelefono)', Comentarios: 'Listado de Teléfonos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de persona.' }, { Codigo: '30013', Descripcion: 'No existe registro para el identificador único.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de persona.' }, { Código: '30013', Descripción: 'No existe registro para el identificador único.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerTelefonosComponent1750945334502 {
          <bts:personaUId>189</bts:personaUId>
       </bts:BTPersonas.ObtenerTelefonos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas?ObtenerTelefonos\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerTelefonosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

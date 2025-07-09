@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleSimulacionComponent1750945334986 {
+export class ObtenerDetalleSimulacionComponent1751987199482 {
   pageTitle        = 'Obtener Detalle Simulación';
   description      = `Método para obtener el detalle de la simulación de un préstamo.`;
   pubName    = 'BTPrestamos.ObtenerDetalleSimulacion';
@@ -21,7 +21,7 @@ export class ObtenerDetalleSimulacionComponent1750945334986 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtDetalleSimulacion', Tipo: '[sBTDetalleSimulacion](#sbtdetallesimulacion)', Comentarios: 'Detalles de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDetalleSimulacionComponent1750945334986 {
          <bts:clienteUId>342</bts:clienteUId>
       </bts:BTPrestamos.ObtenerDetalleSimulacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes?ObtenerDatos\' \
@@ -248,7 +248,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDetalleSimulacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
 	"Btinreq": { 

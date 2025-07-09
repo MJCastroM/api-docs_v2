@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActivarComponent1750945335637 {
+export class ActivarComponent1751987200247 {
   pageTitle        = 'Activar';
   description      = `Método para activar una tarjeta de débito física.`;
   pubName    = 'BTTarjetasDeDebito.Activar';
@@ -21,7 +21,7 @@ export class ActivarComponent1750945335637 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Codigo: '30003', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '30004', Descripcion: 'La tarjeta no pertenece al cliente.' }, { Codigo: '40001', Descripcion: 'Error interno.' }, { Codigo: '40002', Descripcion: 'Error en parámetros de input.' }, { Codigo: '40003', Descripcion: 'No existen tarjetas de débito para los datos ingresados [Número de Tarjeta].' }, { Codigo: '40004', Descripcion: 'No Existe la funcionalidad en TDD025.' }, { Codigo: '40005', Descripcion: 'Funcionalidad TDD025 inhabilitada.' }, { Codigo: '40006', Descripcion: 'Motivo de cancelación no válido.' }, { Codigo: '40007', Descripcion: 'Error al ejecutar la funcionalidad en PTDD0017.' }, { Codigo: '40008', Descripcion: 'El servicio se encuentra en ejecución.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la tarjeta.' }, { Código: '30002', Descripción: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Código: '30003', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '30004', Descripción: 'La tarjeta no pertenece al cliente.' }, { Código: '40001', Descripción: 'Error interno.' }, { Código: '40002', Descripción: 'Error en parámetros de input.' }, { Código: '40003', Descripción: 'No existen tarjetas de débito para los datos ingresados [Número de Tarjeta].' }, { Código: '40004', Descripción: 'No Existe la funcionalidad en TDD025.' }, { Código: '40005', Descripción: 'Funcionalidad TDD025 inhabilitada.' }, { Código: '40006', Descripción: 'Motivo de cancelación no válido.' }, { Código: '40007', Descripción: 'Error al ejecutar la funcionalidad en PTDD0017.' }, { Código: '40008', Descripción: 'El servicio se encuentra en ejecución.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ActivarComponent1750945335637 {
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTTarjetasDeDebito.Activar>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?Activar=\' \
@@ -81,7 +81,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.ActivarResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SimularDespejandoFechadeVencimientoyTasaComponent1750945335328 {
+export class SimularDespejandoFechadeVencimientoyTasaComponent1751987199852 {
   pageTitle        = 'Simular Despejando Fecha de Vencimiento y Tasa';
   description      = `Método para simular un préstamo despejando fecha de vencimiento y tasa.`;
   pubName    = 'BTPrestamos.SimularDespejandoFechaVtoTasa';
@@ -21,7 +21,7 @@ export class SimularDespejandoFechadeVencimientoyTasaComponent1750945335328 {
 
   inputData  = [{ Nombre: 'sdtPrestamoAlta', Tipo: '[sBTPrestamoAltaConDespeje](#sbtprestamoaltacondespeje)', Comentarios: 'Datos del préstamo a dar de alta.' }, { Nombre: 'modoDespeje', Tipo: 'Short', Comentarios: '[Hidden: Valor fijo \'7\' para este método].' }];
   outputData = [{ Nombre: 'sdtSimulacionPrestamo', Tipo: '[sBTSimulacionPrestamo](#sbtsimulacionprestamo)', Comentarios: 'Datos de la simulación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de producto.' }, { Codigo: '30003', Descripcion: 'No se recuperó la cuenta para el Identificador:' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recibió el identificador de producto.' }, { Código: '30003', Descripción: 'No se recuperó la cuenta para el Identificador:' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class SimularDespejandoFechadeVencimientoyTasaComponent1750945335328 {
          </bts:sdtPrestamoAlta>
       </bts:BTPrestamos.SimularDespejandoFechaVtoTasa>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos_v1?SSimularDespejandoFechaVtoTasa\' \
@@ -157,7 +157,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.SimularDespejandoFechaVtoTasaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
    "Btinreq": { 

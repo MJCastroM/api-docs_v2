@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProductosRefinanciacionComponent1750945335118 {
+export class ObtenerProductosRefinanciacionComponent1751987199621 {
   pageTitle        = 'Obtener Productos Refinanciación';
   description      = `Método para obtener los productos de refinanciación.`;
   pubName    = 'BTPrestamos.ObtenerProductosRefinanciacion';
@@ -21,7 +21,7 @@ export class ObtenerProductosRefinanciacionComponent1750945335118 {
 
   inputData  = [{ Nombre: 'sdtOperacionesARefinanciar', Tipo: '[sBTPrestamos](#sBTPrestamos)', Comentarios: 'Datos de las operaciones a refinanciar.' }];
   outputData = [{ Nombre: 'sdtProductos', Tipo: '[sBTProducto](#sBTProducto)', Comentarios: 'Listados de los datos de producto.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Codigo: '30003', Descripcion: 'No se indicaron operaciones a refinanciar.' }, { Codigo: '30004', Descripcion: 'No se recuperó la operación para el identificador: [Número de Identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de Identificador].' }, { Código: '30003', Descripción: 'No se indicaron operaciones a refinanciar.' }, { Código: '30004', Descripción: 'No se recuperó la operación para el identificador: [Número de Identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -45,7 +45,7 @@ export class ObtenerProductosRefinanciacionComponent1750945335118 {
          </bts:sdtOperacionesARefinanciar>
       </bts:BTPrestamos.ObtenerProductosRefinanciacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerProductosRefinanciacion\' \
@@ -111,7 +111,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerProductosRefinanciacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

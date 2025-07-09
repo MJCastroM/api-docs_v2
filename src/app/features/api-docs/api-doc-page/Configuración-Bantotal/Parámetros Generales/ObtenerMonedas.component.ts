@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMonedasComponent1750945332239 {
+export class ObtenerMonedasComponent1751987196576 {
   pageTitle        = 'Obtener Monedas';
   description      = `Método para obtener un listado de las monedas ingresadas en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerMonedas';
@@ -38,7 +38,7 @@ export class ObtenerMonedasComponent1750945332239 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerMonedas>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerMonedas=\' \
@@ -214,7 +214,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerMonedasResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

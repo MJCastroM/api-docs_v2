@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMetadataDeTareaComponent1750945335850 {
+export class ObtenerMetadataDeTareaComponent1751987200512 {
   pageTitle        = 'Obtener Metadata De Tarea';
   description      = `Método para obtener la metadata de una determinada tarea de Workflow.`;
   pubName    = 'BTWorkflow.ObtenerMetadataDeTarea';
@@ -21,7 +21,7 @@ export class ObtenerMetadataDeTareaComponent1750945335850 {
 
   inputData  = [{ Nombre: 'procesoId', Tipo: 'Int', Comentarios: 'Identificador de proceso Workflow.' }, { Nombre: 'tareaId', Tipo: 'Int', Comentarios: 'Identificador de tarea Workflow.' }];
   outputData = [{ Nombre: 'sdtMetadatas', Tipo: '[sBTMetadataWF](#sbtmetadatawf)', Comentarios: 'Listado de datos de metadata Workflow.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de proceso.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador de tarea.' }, { Codigo: '40001', Descripcion: 'El proceso ingresado no existe.' }, { Codigo: '40002', Descripcion: 'La tarea ingresada no existe para el proceso.' }, { Codigo: '40003', Descripcion: 'No existe metadata para la tarea ingresada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de proceso.' }, { Código: '30002', Descripción: 'No se recibió el identificador de tarea.' }, { Código: '40001', Descripción: 'El proceso ingresado no existe.' }, { Código: '40002', Descripción: 'La tarea ingresada no existe para el proceso.' }, { Código: '40003', Descripción: 'No existe metadata para la tarea ingresada.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerMetadataDeTareaComponent1750945335850 {
          <bts:tareaId>11</bts:tareaId> 
       </bts:BTWorkflow.ObtenerMetadataDeTarea> 
    </soapenv:Body> 
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \ 
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_v1?ObtenerMetadataDeTarea \ 
@@ -106,7 +106,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTWorkflow_
          </Btoutreq> 
       </BTWorkflow.ObtenerMetadataDeTareaResponse> 
    </SOAP-ENV:Body> 
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{ 
     "Btinreq": { 

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDatosdelProximoVencimientoComponent1750945334910 {
+export class ObtenerDatosdelProximoVencimientoComponent1751987199349 {
   pageTitle        = 'Obtener Datos del Próximo Vencimiento';
   description      = `Método para obtener los datos de próximo vencimiento de cuota.`;
   pubName    = 'BTPrestamos.ObtenerDatosProxVencimiento';
@@ -21,7 +21,7 @@ export class ObtenerDatosdelProximoVencimientoComponent1750945334910 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de préstamo.' }, { Nombre: 'fechaConsulta', Tipo: 'Date', Comentarios: 'Fecha de consulta.' }, { Nombre: 'modoConsulta', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'\' para este método].' }];
   outputData = [{ Nombre: 'sdtProxVencimiento', Tipo: '[sBTProximoVto](#sbtproximovto)', Comentarios: 'Datos del próximo vencimiento del préstamo.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó préstamo para el identificador: [Número de Identificador].' }, { Codigo: '30006', Descripcion: 'La Fecha para Consultas es anterior a la de la Operación.' }, { Codigo: '30007', Descripcion: 'La Operación no es válida para la Solicitud realizada.' }, { Codigo: '30008', Descripcion: 'La Operación se encuentra cancelada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de operación.' }, { Código: '30002', Descripción: 'No se recuperó préstamo para el identificador: [Número de Identificador].' }, { Código: '30006', Descripción: 'La Fecha para Consultas es anterior a la de la Operación.' }, { Código: '30007', Descripción: 'La Operación no es válida para la Solicitud realizada.' }, { Código: '30008', Descripción: 'La Operación se encuentra cancelada.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerDatosdelProximoVencimientoComponent1750945334910 {
          <bts:fechaConsulta>2020-08-09</bts:fechaConsulta>
       </bts:BTPrestamos.ObtenerDatosProxVencimiento>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrestamos?ObtenerDatosProxVencimiento\' \
@@ -93,7 +93,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrestamos.ObtenerDatosProxVencimientoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

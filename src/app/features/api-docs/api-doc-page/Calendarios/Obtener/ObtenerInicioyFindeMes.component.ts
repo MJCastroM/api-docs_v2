@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInicioyFindeMesComponent1750945331331 {
+export class ObtenerInicioyFindeMesComponent1751987195646 {
   pageTitle        = 'Obtener Inicio y Fin de Mes';
   description      = `Método para obtener la primer y última fecha hábil para el mes indicado.`;
   pubName    = 'BTCalendario.ObtenerInicioYFinMes';
@@ -21,7 +21,7 @@ export class ObtenerInicioyFindeMesComponent1750945331331 {
 
   inputData  = [{ Nombre: 'calendarioId', Tipo: 'Short', Comentarios: 'Identificador de calendario (Si no se recibe, devuelve para el calendario de la sucursal central).' }, { Nombre: 'mesConsulta', Tipo: 'Short', Comentarios: 'Mes de consulta.' }, { Nombre: 'anioConsulta', Tipo: 'Int', Comentarios: 'Año de consulta.' }];
   outputData = [{ Nombre: 'fechaHabilInicio', Tipo: 'Date', Comentarios: 'Primera fecha hábil del mes.' }, { Nombre: 'fechaHabilFin', Tipo: 'Date', Comentarios: 'Última fecha hábil del mes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar mes a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar año a consultar.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar mes a consultar.' }, { Código: '30002', Descripción: 'Debe ingresar año a consultar.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerInicioyFindeMesComponent1750945331331 {
          <bts:anioConsulta>2020</bts:anioConsulta>
       </bts:BTCalendarios.ObtenerInicioYFinMes>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerInicioYFinMes\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerInicioYFinMesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

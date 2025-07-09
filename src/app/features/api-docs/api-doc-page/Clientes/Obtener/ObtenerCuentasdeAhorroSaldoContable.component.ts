@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCuentasdeAhorroSaldoContableComponent1750945331825 {
+export class ObtenerCuentasdeAhorroSaldoContableComponent1751987196202 {
   pageTitle        = 'Obtener Cuentas de Ahorro (Saldo Contable)';
   description      = `Método para obtener los productos de cuenta de ahorro que tiene contratado un cliente, junto con su saldo contable.`;
   pubName    = 'BTClientes.ObtenerCuentasAhorro';
@@ -38,7 +38,7 @@ Valor específico 2 | Tipo de operación a excluir.
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtProductosPasivos', Tipo: '[sBTProductoPasivo](#sbtproductopasivo)', Comentarios: 'Listado de cajas de ahorro.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador.' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTClientes.ObtenerCuentasAhorro>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerCuentasAhorro=\' \
@@ -130,7 +130,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerCuentasAhorroResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCiudadesyLocalidadesComponent1750945332268 {
+export class ObtenerCiudadesyLocalidadesComponent1751987196614 {
   pageTitle        = 'Obtener Ciudades y Localidades';
   description      = `Método para obtener un listado de las ciudades/localidades ingresadas en Bantotal para un determinado estado de un país.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerCiudadesLocalidades';
@@ -40,7 +40,7 @@ export class ObtenerCiudadesyLocalidadesComponent1750945332268 {
          <bts:estado>10</bts:estado>
       </bts:BTConfiguracionBantotal.ObtenerCiudadesLocalidades>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerCiudadesLocalidades=\' \
@@ -87,7 +87,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerCiudadesLocalidadesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCBUdeCuentaVistaComponent1750945332802 {
+export class ObtenerCBUdeCuentaVistaComponent1751987197120 {
   pageTitle        = 'Obtener CBU de Cuenta Vista';
   description      = `Método para obtener el CBU de una vista.`;
   pubName    = 'BTCuentasVista.ObtenerCBUdeCuentaVista';
@@ -21,7 +21,7 @@ export class ObtenerCBUdeCuentaVistaComponent1750945332802 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'long', Comentarios: 'Identificador único de operación CC o CA.' }];
   outputData = [{ Nombre: 'CBU', Tipo: 'String', Comentarios: 'Clave Bancaria Uniforme.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'No se encontró CBU para la operación.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'No se encontró CBU para la operación.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCBUdeCuentaVistaComponent1750945332802 {
          <bts:operacionUId>161</bts:operacionUId>
       </bts:BTCuentasVista.ObtenerCBUdeCuentaVista>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerCBUdeCuentaVista=\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerCBUdeCuentaVistaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorreosElectronicosComponent1750945334292 {
+export class ObtenerCorreosElectronicosComponent1751987198663 {
   pageTitle        = 'Obtener Correos Electrónicos';
   description      = `Método para obtener un listado de los correos electrónicos de una persona.`;
   pubName    = 'BTPersonas.ObtenerCorreosElectronicos';
@@ -21,7 +21,7 @@ export class ObtenerCorreosElectronicosComponent1750945334292 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }];
   outputData = [{ Nombre: 'sdtCorreoElectronicos', Tipo: '[sBTCorreoElectronico](#sbtcorreoelectronico)', Comentarios: 'Listado de correos electrónicos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerCorreosElectronicosComponent1750945334292 {
          <bts:personaUId>41</bts:personaUId>
       </bts:BTPersonas.ObtenerCorreosElectronicos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?ObtenerCorreosElectronicos=\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTPersonas.ObtenerCorreosElectronicosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

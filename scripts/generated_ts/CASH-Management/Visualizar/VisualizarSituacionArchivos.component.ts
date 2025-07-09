@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VisualizarSituacionArchivosComponent1750945331595 {
+export class VisualizarSituacionArchivosComponent1751987195954 {
   pageTitle        = 'Visualizar Situación Archivos';
   description      = `Método para visualizar la situación de los archivos subidos por el cliente.`;
   pubName    = 'BTCASHManagement.VisualizarSituacionArchivos';
@@ -21,7 +21,7 @@ export class VisualizarSituacionArchivosComponent1750945331595 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'contratoF', Tipo: 'Int', Comentarios: 'Lista de identificadores de contratos CASH del cliente.' }, { Nombre: 'servicioF', Tipo: 'Short', Comentarios: 'Servicio CASH.' }, { Nombre: 'estadoF', Tipo: 'String', Comentarios: 'Estado del archivo.' }, { Nombre: 'fechaDesdeF', Tipo: 'Date', Comentarios: 'Fecha de pago o cobro, desde.' }, { Nombre: 'fechaHastaF', Tipo: 'Date', Comentarios: 'Fecha de pago o cobro, hasta.' }];
   outputData = [{ Nombre: 'listaArchivos', Tipo: '[sBTSituacionArchivo](#sbtsituacionarchivo)', Comentarios: 'Listado de archivos solicitado.' }];
-  errors     = [{ Codigo: '1030705', Descripcion: 'Cuenta cliente sin contrato vinculado.' }, { Codigo: '1030708', Descripcion: 'Estado de archivo desconocido.' }, { Codigo: '1030709', Descripcion: 'Se requiere identificacion de cuenta cliente.' }, { Codigo: '1030712', Descripcion: 'Se requiere cuenta para recuperar la informacion.' }, { Codigo: '1030714', Descripcion: 'El contrato consultado no corresponde al servicio recibido.' }];
+  errors     = [{ Código: '1030705', Descripción: 'Cuenta cliente sin contrato vinculado.' }, { Código: '1030708', Descripción: 'Estado de archivo desconocido.' }, { Código: '1030709', Descripción: 'Se requiere identificacion de cuenta cliente.' }, { Código: '1030712', Descripción: 'Se requiere cuenta para recuperar la informacion.' }, { Código: '1030714', Descripción: 'El contrato consultado no corresponde al servicio recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -44,7 +44,7 @@ export class VisualizarSituacionArchivosComponent1750945331595 {
          <bts:fechaHastaF></bts:fechaHastaF>
       </bts:BTCASHManagement.VisualizarSituacionArchivos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?VisualizarSituacionArchivos=\' \
@@ -139,7 +139,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.VisualizarSituacionArchivosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

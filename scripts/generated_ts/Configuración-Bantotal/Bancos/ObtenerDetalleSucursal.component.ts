@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerDetalleSucursalComponent1750945332106 {
+export class ObtenerDetalleSucursalComponent1751987196464 {
   pageTitle        = 'Obtener Detalle de Sucursal';
   description      = `Método para obtener el detalle de una sucursal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerDetalleSucursal';
@@ -21,7 +21,7 @@ export class ObtenerDetalleSucursalComponent1750945332106 {
 
   inputData  = [{ Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de la sucursal.' }];
   outputData = [{ Nombre: 'sdtDetalleSucursal', Tipo: '[sBTDetalleSucursal](#sbtdetallesucursal)', Comentarios: 'Detalle de la sucursal.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de sucursal.' }, { Codigo: '41001', Descripcion: 'La Sucursal no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de sucursal.' }, { Código: '41001', Descripción: 'La Sucursal no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerDetalleSucursalComponent1750945332106 {
          <bts:sucursalId>1</bts:sucursalId>
       </bts:BTConfiguracionBantotal.ObtenerDetalleSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerDetalleSucursal=\' \
@@ -101,7 +101,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerDetalleSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

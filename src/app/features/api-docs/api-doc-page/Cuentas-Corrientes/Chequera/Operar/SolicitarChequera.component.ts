@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class SolicitarChequeraComponent1750945332635 {
+export class SolicitarChequeraComponent1751987196970 {
   pageTitle        = 'Solicitar Chequera';
   description      = `Método para solicitar una chequera para una cuenta corriente.`;
   pubName    = 'BTCuentasCorrientes.SolicitarChequera';
@@ -21,7 +21,7 @@ export class SolicitarChequeraComponent1750945332635 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'tipoCheque', Tipo: 'Double', Comentarios: 'Tipo de chequera a solicitar.' }, { Nombre: 'cantidadLibretas', Tipo: 'Double', Comentarios: 'Cantidad de libretas a solicitar.' }, { Nombre: 'datosSolicitud', Tipo: '[sBTSolicitudChequera](#sbtsolicitudchequera)', Comentarios: 'Datos de solicitud de chequera.' }];
   outputData = [{ Nombre: 'chequeraId', Tipo: 'Long', Comentarios: 'Identificador de la solicitud de chequera.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de operación.' }, { Codigo: '40003', Descripcion: 'El tipo de chequera a agregar es incorrecto.' }, { Codigo: '40004', Descripcion: 'El tipo de chequera a agregar es incorrecto para el módulo.' }, { Codigo: '40005', Descripcion: 'La subcuenta no tiene estado normal.' }, { Codigo: '40007', Descripcion: 'El tipo de chequera a agregar es incorrecto para el producto.' }, { Codigo: '40008', Descripcion: 'Usuario no autorizado.' }, { Codigo: '40010', Descripcion: 'La cuenta no tiene habilitada la entrega de chequeras.' }, { Codigo: '40011', Descripcion: 'Debe indicar la cantidad de libretas.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de operación.' }, { Código: '40003', Descripción: 'El tipo de chequera a agregar es incorrecto.' }, { Código: '40004', Descripción: 'El tipo de chequera a agregar es incorrecto para el módulo.' }, { Código: '40005', Descripción: 'La subcuenta no tiene estado normal.' }, { Código: '40007', Descripción: 'El tipo de chequera a agregar es incorrecto para el producto.' }, { Código: '40008', Descripción: 'Usuario no autorizado.' }, { Código: '40010', Descripción: 'La cuenta no tiene habilitada la entrega de chequeras.' }, { Código: '40011', Descripción: 'Debe indicar la cantidad de libretas.' }];
 
   examples = {
     invocation: { xml: `
@@ -51,7 +51,7 @@ export class SolicitarChequeraComponent1750945332635 {
          </bts:datosSolicitud>
       </bts:BTCuentasCorrientes.SolicitarChequera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?SolicitarChequera\' \
@@ -103,7 +103,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.SolicitarChequeraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

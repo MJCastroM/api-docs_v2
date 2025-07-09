@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AgregarInformacionFinancieraComponent1750945334105 {
+export class AgregarInformacionFinancieraComponent1751987198478 {
   pageTitle        = 'Agregar Información Financiera';
   description      = `Método para agregar la información financiera de una persona.`;
   pubName    = 'BTPersonas.AgregarInformacionFinanciera';
@@ -21,7 +21,7 @@ export class AgregarInformacionFinancieraComponent1750945334105 {
 
   inputData  = [{ Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de persona.' }, { Nombre: 'sdtInformacionFinanciera', Tipo: '[sBTPCOInformacionFinanciera](#sbtpcoinformacionfinanciera)', Comentarios: 'Datos de información financiera de la persona.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de persona.' }, { Codigo: '40001', Descripcion: 'Debe ingresar ingresos mensuales.' }, { Codigo: '40002', Descripcion: 'Los ingresos mensuales deben ser mayor a [Importe parametrizado].' }, { Codigo: '40003', Descripcion: 'El campo ¿Cuales? debe ser [alfabético / numérico].' }, { Codigo: '40004', Descripcion: 'Debe ingresar valor en campo ¿Cuales?.' }, { Codigo: '40005', Descripcion: 'Debe ingresar total de egresos.' }, { Codigo: '40006', Descripcion: 'El total de egresos debe ser mayor a [Importe parametrizado].' }, { Codigo: '40007', Descripcion: 'Debe ingresar total de activos.' }, { Codigo: '40008', Descripcion: 'El total de activos debe ser mayor a [Importe parametrizado].' }, { Codigo: '40009', Descripcion: 'Debe ingresar valor en origen de recursos.' }, { Codigo: '40010', Descripcion: 'Debe ingresar cual es el país de origen de recursos.' }, { Codigo: '40011', Descripcion: 'El país de origen de recursos ingresado no es válido.' }, { Codigo: '40012', Descripcion: 'El valor ingresado en el campo Origen Recursos no es válido.' }, { Codigo: '40013', Descripcion: 'Debe ingresar si opera o no en moneda extranjera.' }, { Codigo: '40014', Descripcion: 'Debe ingresar tipo de operación.' }, { Codigo: '40015', Descripcion: 'El campo tipo de operación debe ser [alfabético / numérico].' }, { Codigo: '40016', Descripcion: 'Debe ingresar tipo de producto.' }, { Codigo: '40017', Descripcion: 'El campo tipo de producto debe ser [alfabético / numérico].' }, { Codigo: '40018', Descripcion: 'El tipo de producto ingresado no es válido.' }, { Codigo: '40019', Descripcion: 'Debe ingresar número de producto.' }, { Codigo: '40020', Descripcion: 'El campo número de producto debe ser [alfabético / numérico].' }, { Codigo: '40021', Descripcion: 'Debe ingresar nombre de entidad.' }, { Codigo: '40022', Descripcion: 'El campo nombre de entidad debe ser [alfabético / numérico].' }, { Codigo: '40023', Descripcion: 'Debe ingresar moneda.' }, { Codigo: '40024', Descripcion: 'La moneda ingresada no es válida.' }, { Codigo: '40025', Descripcion: 'Debe ingresar monto.' }, { Codigo: '40026', Descripcion: 'El monto no puede ser menor a 0.' }, { Codigo: '40027', Descripcion: 'Debe ingresar país de operaciones internacionales.' }, { Codigo: '40028', Descripcion: 'El país de operaciones internacionales ingresado no es válido.' }, { Codigo: '40029', Descripcion: 'Debe ingresar ciudad de operaciones internacionales.' }, { Codigo: '40030', Descripcion: 'La ciudad ingresada no es válida.' }, { Codigo: '40031', Descripcion: 'El valor ingresado en Opera en Moneda Extranjera no es válido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de persona.' }, { Código: '40001', Descripción: 'Debe ingresar ingresos mensuales.' }, { Código: '40002', Descripción: 'Los ingresos mensuales deben ser mayor a [Importe parametrizado].' }, { Código: '40003', Descripción: 'El campo ¿Cuales? debe ser [alfabético / numérico].' }, { Código: '40004', Descripción: 'Debe ingresar valor en campo ¿Cuales?.' }, { Código: '40005', Descripción: 'Debe ingresar total de egresos.' }, { Código: '40006', Descripción: 'El total de egresos debe ser mayor a [Importe parametrizado].' }, { Código: '40007', Descripción: 'Debe ingresar total de activos.' }, { Código: '40008', Descripción: 'El total de activos debe ser mayor a [Importe parametrizado].' }, { Código: '40009', Descripción: 'Debe ingresar valor en origen de recursos.' }, { Código: '40010', Descripción: 'Debe ingresar cual es el país de origen de recursos.' }, { Código: '40011', Descripción: 'El país de origen de recursos ingresado no es válido.' }, { Código: '40012', Descripción: 'El valor ingresado en el campo Origen Recursos no es válido.' }, { Código: '40013', Descripción: 'Debe ingresar si opera o no en moneda extranjera.' }, { Código: '40014', Descripción: 'Debe ingresar tipo de operación.' }, { Código: '40015', Descripción: 'El campo tipo de operación debe ser [alfabético / numérico].' }, { Código: '40016', Descripción: 'Debe ingresar tipo de producto.' }, { Código: '40017', Descripción: 'El campo tipo de producto debe ser [alfabético / numérico].' }, { Código: '40018', Descripción: 'El tipo de producto ingresado no es válido.' }, { Código: '40019', Descripción: 'Debe ingresar número de producto.' }, { Código: '40020', Descripción: 'El campo número de producto debe ser [alfabético / numérico].' }, { Código: '40021', Descripción: 'Debe ingresar nombre de entidad.' }, { Código: '40022', Descripción: 'El campo nombre de entidad debe ser [alfabético / numérico].' }, { Código: '40023', Descripción: 'Debe ingresar moneda.' }, { Código: '40024', Descripción: 'La moneda ingresada no es válida.' }, { Código: '40025', Descripción: 'Debe ingresar monto.' }, { Código: '40026', Descripción: 'El monto no puede ser menor a 0.' }, { Código: '40027', Descripción: 'Debe ingresar país de operaciones internacionales.' }, { Código: '40028', Descripción: 'El país de operaciones internacionales ingresado no es válido.' }, { Código: '40029', Descripción: 'Debe ingresar ciudad de operaciones internacionales.' }, { Código: '40030', Descripción: 'La ciudad ingresada no es válida.' }, { Código: '40031', Descripción: 'El valor ingresado en Opera en Moneda Extranjera no es válido.' }];
 
   examples = {
     invocation: { xml: `
@@ -65,7 +65,7 @@ export class AgregarInformacionFinancieraComponent1750945334105 {
          </bts:sdtInformacionFinanciera>
       </bts:BTPersonas.AgregarInformacionFinanciera>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_v1?AgregarInformacionFinanciera \
@@ -125,7 +125,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTPersonas_
          </Btoutreq>
       </BTPersonas.AgregarInformacionFinancieraResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

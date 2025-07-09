@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerMovimientosComponent1750945333167 {
+export class ObtenerMovimientosComponent1751987197523 {
   pageTitle        = 'Obtener Movimientos';
   description      = `Método para obtener un listado de los movimientos realizados para un producto depósito a plazo.`;
   pubName    = 'BTDepositosAPlazo.ObtenerMovimientos';
@@ -21,7 +21,7 @@ export class ObtenerMovimientosComponent1750945333167 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }, { Nombre: 'cantidadDias', Tipo: 'Int', Comentarios: 'Cantidad de días para atrás (Se puede parametrizar como parámetro Hidden para que el servicio siempre tome el mismo valor por defecto, o se puede dejar editable para que el usuario ingrese el valor).' }, { Nombre: 'cantidadMovimientos', Tipo: 'Int', Comentarios: 'Cantidad de movimientos (Se puede parametrizar como parámetro Hidden para que el servicio siempre tome el mismo valor por defecto, o se puede dejar editable para que el usuario ingrese el valor).' }];
   outputData = [{ Nombre: 'sdtEstadoDeCuenta', Tipo: '[sBTEstadoCuentaCV](#sbtestadocuentacv)', Comentarios: 'Datos de estado de cuenta.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Codigo: '30004', Descripcion: 'No se recibió la cantidad de días.' }, { Codigo: '30005', Descripcion: 'No se recibió la cantidad de movimientos.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'No se recuperó la operación para el identificador: [Número de identificador].' }, { Código: '30004', Descripción: 'No se recibió la cantidad de días.' }, { Código: '30005', Descripción: 'No se recibió la cantidad de movimientos.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerMovimientosComponent1750945333167 {
          <bts:operacionUId>5</bts:operacionUId>
       </bts:BTDepositosAPlazo.ObtenerMovimientos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ObtenerMovimientos=\' \
@@ -86,7 +86,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ObtenerMovimientosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

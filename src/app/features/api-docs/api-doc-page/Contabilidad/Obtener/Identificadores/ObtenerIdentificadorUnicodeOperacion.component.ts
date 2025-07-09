@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerIdentificadorUnicodeOperacionComponent1750945332400 {
+export class ObtenerIdentificadorUnicodeOperacionComponent1751987196743 {
   pageTitle        = 'Obtener Identificador Único de Operación';
   description      = `Método para obtener el identificador único de una operación.`;
   pubName    = 'BTContabilidad.ObtenerIdentificadorUnicoOperacion';
@@ -23,7 +23,7 @@ export class ObtenerIdentificadorUnicodeOperacionComponent1750945332400 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Identificador de empresa.' }, { Nombre: 'moduloId', Tipo: 'Int', Comentarios: 'Módulo Bantotal.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }, { Nombre: 'monedaId', Tipo: 'Short', Comentarios: 'Identificador de moneda.' }, { Nombre: 'papelId', Tipo: 'Int', Comentarios: 'Identificador de papel.' }, { Nombre: 'cuentaBT', Tipo: 'Int', Comentarios: 'Cuenta Bantotal.' }, { Nombre: 'operacionBT', Tipo: 'Int', Comentarios: 'Operación Bantotal.' }, { Nombre: 'subOperacionBT', Tipo: 'Int', Comentarios: 'Sub Operación Bantotal.' }, { Nombre: 'tipoOperacionBT', Tipo: 'Short', Comentarios: 'Tipo de operación Bantotal.' }];
   outputData = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió empresaId.' }, { Codigo: '30002', Descripcion: 'No se recibió módulo.' }, { Codigo: '30003', Descripcion: 'No se recibió sucursal.' }, { Codigo: '30004', Descripcion: 'Moneda no existe.' }, { Codigo: '30005', Descripcion: 'Papel no existe.' }, { Codigo: '30006', Descripcion: 'No se recibió cuenta de cliente.' }, { Codigo: '30007', Descripcion: 'No se recibió operación.' }, { Codigo: '30008', Descripcion: 'No se recibió sub operación.' }, { Codigo: '30009', Descripcion: 'No se recibió tipo de operación.' }, { Codigo: '30010', Descripcion: 'Operación no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió empresaId.' }, { Código: '30002', Descripción: 'No se recibió módulo.' }, { Código: '30003', Descripción: 'No se recibió sucursal.' }, { Código: '30004', Descripción: 'Moneda no existe.' }, { Código: '30005', Descripción: 'Papel no existe.' }, { Código: '30006', Descripción: 'No se recibió cuenta de cliente.' }, { Código: '30007', Descripción: 'No se recibió operación.' }, { Código: '30008', Descripción: 'No se recibió sub operación.' }, { Código: '30009', Descripción: 'No se recibió tipo de operación.' }, { Código: '30010', Descripción: 'Operación no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -49,7 +49,7 @@ export class ObtenerIdentificadorUnicodeOperacionComponent1750945332400 {
          <bts:tipoOperacionBT>48</bts:tipoOperacionBT>
       </bts:BTContabilidad.ObtenerIdentificadorUnicoOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://appjava2019:8106/supervielle/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerIdentificadorUnicoOperacion\' \
@@ -97,7 +97,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerIdentificadorUnicoOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

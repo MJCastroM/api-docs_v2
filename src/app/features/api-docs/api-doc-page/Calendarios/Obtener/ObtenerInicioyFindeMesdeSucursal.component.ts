@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerInicioyFindeMesdeSucursalComponent1750945331337 {
+export class ObtenerInicioyFindeMesdeSucursalComponent1751987195649 {
   pageTitle        = 'Obtener Inicio y Fin de Mes de Sucursal';
   description      = `Método para obtener la primer y última fecha hábil para el mes indicado, para la sucursal recibida por parámetro.`;
   pubName    = 'BTCalendario.ObtenerInicioYFinMesSucursal';
@@ -21,7 +21,7 @@ export class ObtenerInicioyFindeMesdeSucursalComponent1750945331337 {
 
   inputData  = [{ Nombre: 'mesConsulta', Tipo: 'Short', Comentarios: 'Mes de consulta.' }, { Nombre: 'anioConsulta', Tipo: 'Int', Comentarios: 'Año de consulta.' }, { Nombre: 'sucursalId', Tipo: 'Int', Comentarios: 'Identificador de sucursal.' }];
   outputData = [{ Nombre: 'fechaHabilInicio', Tipo: 'Date', Comentarios: 'Primera fecha hábil del mes.' }, { Nombre: 'fechaHabilFin', Tipo: 'Date', Comentarios: 'Última fecha hábil del mes.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar mes a consultar.' }, { Codigo: '30002', Descripcion: 'Debe ingresar año a consultar.' }, { Codigo: '30003', Descripcion: 'Debe ingresar identificador de sucursal.' }, { Codigo: '40001', Descripcion: 'La Sucursal no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar mes a consultar.' }, { Código: '30002', Descripción: 'Debe ingresar año a consultar.' }, { Código: '30003', Descripción: 'Debe ingresar identificador de sucursal.' }, { Código: '40001', Descripción: 'La Sucursal no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class ObtenerInicioyFindeMesdeSucursalComponent1750945331337 {
          <bts:sucursalId>1</bts:sucursalId>
       </bts:BTCalendarios.ObtenerInicioYFinMesSucursal>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCalendarios_v1?ObtenerInicioYFinMesSucursal\' \
@@ -85,7 +85,7 @@ curl -X POST \
          </Btoutreq>
       </BTCalendarios.ObtenerInicioYFinMesSucursalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

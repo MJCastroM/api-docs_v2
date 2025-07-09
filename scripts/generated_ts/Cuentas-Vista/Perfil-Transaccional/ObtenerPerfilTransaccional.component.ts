@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPerfilTransaccionalComponent1750945332949 {
+export class ObtenerPerfilTransaccionalComponent1751987197302 {
   pageTitle        = 'Obtener Perfil Transaccional';
   description      = `Método para obtener el perfil transaccional de una cuenta vista.`;
   pubName    = 'BTCuentasVista.ObtenerPerfilTransaccional';
@@ -21,7 +21,7 @@ export class ObtenerPerfilTransaccionalComponent1750945332949 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }];
   outputData = [{ Nombre: 'sdtPerfilTransaccional', Tipo: '[sBTDatosPerfilTransaccional](#sbtdatosperfiltransaccional)', Comentarios: 'Datos del perfil transaccional.' }, { Nombre: 'totalCantidadDepositos', Tipo: 'Int', Comentarios: 'Total de movimientos de depósitos.' }, { Nombre: 'totalCantidadRetiros', Tipo: 'Int', Comentarios: 'Total de movimientos de retiros.' }, { Nombre: 'totalMontoDepositos', Tipo: 'Double', Comentarios: 'Total de importes de depósitos.' }, { Nombre: 'totalMontoRetiros', Tipo: 'Double', Comentarios: 'Total de importes de retiros.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30021', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Producto a consultar no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30021', Descripción: 'No se recuperó la operación para el Identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'Producto a consultar no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPerfilTransaccionalComponent1750945332949 {
          <bts:operaionUId>2</bts:operaionUId>
       </bts:BTCuentasVista.ObtenerPerfilTransaccional>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasVista?ObtenerPerfilTransaccional=\' \
@@ -117,7 +117,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasVista.ObtenerPerfilTransaccionalResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

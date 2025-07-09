@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarBeneficiariosComponent1750945333031 {
+export class ActualizarBeneficiariosComponent1751987197358 {
   pageTitle        = 'Actualizar Beneficiarios';
   description      = `Método para actualizar el listado de beneficiarios de un depósito a plazo. Luego de la ejecución, se eliminarán los beneficiarios previamente registrados, y se asociarán los ingresados en el listado.`;
   pubName    = 'BTDepositosAPlazo.ActualizarBeneficiarios';
@@ -21,7 +21,7 @@ export class ActualizarBeneficiariosComponent1750945333031 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación.' }, { Nombre: 'sdtBeneficiarios', Tipo: '[sBTBeneficiario](#sbtbeneficiario)', Comentarios: 'Listado de beneficiarios del depósito a plazo.' }, { Nombre: 'modo', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'UPD\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el identificador único de la operación.' }, { Codigo: '30003', Descripcion: 'No se recupero la operación para el identificador [Número de Identificador].' }, { Codigo: '30004', Descripcion: 'Se tiene que ingresar al menos un beneficiario.' }, { Codigo: '30005', Descripcion: 'Debe ingresar identificador único de la persona o número de documento completo, pero no ambos.' }, { Codigo: '30006', Descripcion: 'No se recibió el porcentaje de participación para la persona ingresada.' }, { Codigo: '30007', Descripcion: 'No se recibió el identificador de parentesco para la persona ingresada.' }, { Codigo: '40001', Descripcion: 'Debe ingresar País del Documento.' }, { Codigo: '40002', Descripcion: 'El País del Documento no existe.' }, { Codigo: '40003', Descripcion: 'El identificador de parentesco [Número de Identificador] no es correcto.' }, { Codigo: '40004', Descripcion: 'El Tipo de Documento no existe.' }, { Codigo: '40005', Descripcion: 'Debe ingresar Nro de Documento.' }, { Codigo: '40006', Descripcion: 'La sumatoria de porcentajes de beneficiarios supera el 100%.' }, { Codigo: '40007', Descripcion: 'El porcentaje de participación acumulado difiere del 100%.' }];
+  errors     = [{ Código: '30002', Descripción: 'No se recibió el identificador único de la operación.' }, { Código: '30003', Descripción: 'No se recupero la operación para el identificador [Número de Identificador].' }, { Código: '30004', Descripción: 'Se tiene que ingresar al menos un beneficiario.' }, { Código: '30005', Descripción: 'Debe ingresar identificador único de la persona o número de documento completo, pero no ambos.' }, { Código: '30006', Descripción: 'No se recibió el porcentaje de participación para la persona ingresada.' }, { Código: '30007', Descripción: 'No se recibió el identificador de parentesco para la persona ingresada.' }, { Código: '40001', Descripción: 'Debe ingresar País del Documento.' }, { Código: '40002', Descripción: 'El País del Documento no existe.' }, { Código: '40003', Descripción: 'El identificador de parentesco [Número de Identificador] no es correcto.' }, { Código: '40004', Descripción: 'El Tipo de Documento no existe.' }, { Código: '40005', Descripción: 'Debe ingresar Nro de Documento.' }, { Código: '40006', Descripción: 'La sumatoria de porcentajes de beneficiarios supera el 100%.' }, { Código: '40007', Descripción: 'El porcentaje de participación acumulado difiere del 100%.' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ export class ActualizarBeneficiariosComponent1750945333031 {
          </bts:sdtBeneficiarios>
       </bts:BTDepositosAPlazo.ActualizarBeneficiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTDepositosAPlazo?ActualizarBeneficiarios=\' \
@@ -113,7 +113,7 @@ curl -X POST \
          </Btoutreq>
       </BTDepositosAPlazo.ActualizarBeneficiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
     "Btinreq": {

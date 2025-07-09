@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class CrearClienteComponent1750945333730 {
+export class CrearClienteComponent1751987198021 {
   pageTitle        = 'Crear Cliente';
   description      = `Método para crear cliente de Partner.`;
   pubName    = 'BTPartners.CrearCliente';
@@ -21,7 +21,7 @@ export class CrearClienteComponent1750945333730 {
 
   inputData  = [{ Nombre: 'sdtPartner', Tipo: '[sBTPartnerInReq](#sbtpartnerinreq)', Comentarios: 'Datos del usuario.' }, { Nombre: 'personaUId', Tipo: 'Long', Comentarios: 'Identificador único de la persona.' }, { Nombre: 'sectorId', Tipo: 'Short', Comentarios: 'Identificador del sector.' }, { Nombre: 'clasificacionInternaId', Tipo: 'Short', Comentarios: 'Identificador de la clasificación interna.' }, { Nombre: 'ejecutivoId', Tipo: 'Int', Comentarios: 'Identificador del ejecutivo.' }];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de persona.' }, { Codigo: '30002', Descripcion: 'No se recibió el identificador del sector.' }, { Codigo: '30003', Descripcion: 'No se recibió el identificador de la clasificación interna.' }, { Codigo: '30004', Descripcion: 'No existe persona para el identificador único: [Nùmero de identificador].' }, { Codigo: '30005', Descripcion: 'Ya existe la cuenta.' }, { Codigo: '30007', Descripcion: 'La Contraparte ya está relacionada al Partner: [Número del Partner] - [Nombre del Partner].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de persona.' }, { Código: '30002', Descripción: 'No se recibió el identificador del sector.' }, { Código: '30003', Descripción: 'No se recibió el identificador de la clasificación interna.' }, { Código: '30004', Descripción: 'No existe persona para el identificador único: [Nùmero de identificador].' }, { Código: '30005', Descripción: 'Ya existe la cuenta.' }, { Código: '30007', Descripción: 'La Contraparte ya está relacionada al Partner: [Número del Partner] - [Nombre del Partner].' }];
 
   examples = {
     invocation: { xml: `
@@ -47,7 +47,7 @@ export class CrearClienteComponent1750945333730 {
          <bts:ejecutivoId>23</bts:ejecutivoId>
       </bts:BTPartners.CrearCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 	\'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPartners?CrearCliente\' \
@@ -96,7 +96,7 @@ curl -X POST \
          </Btoutreq>
       </BTPartners.CrearClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
    "Btinreq": {

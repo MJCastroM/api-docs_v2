@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerClientedeunaOperacionComponent1750945332413 {
+export class ObtenerClientedeunaOperacionComponent1751987196757 {
   pageTitle        = 'Obtener Cliente de una Operación';
   description      = `Método para obtener el identificador de cuenta cliente asociado a una operación.`;
   pubName    = 'BTContabilidad.ObtenerClienteDeOperacion';
@@ -21,7 +21,7 @@ export class ObtenerClientedeunaOperacionComponent1750945332413 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de la operación' }];
   outputData = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador único de operación.' }, { Codigo: '30101', Descripcion: 'No se recupero la operación para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador único de operación.' }, { Código: '30101', Descripción: 'No se recupero la operación para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerClientedeunaOperacionComponent1750945332413 {
          <bts:operacionUId>787</bts:operacionUId>
       </bts:BTContabilidad.ObtenerClienteDeOperacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTContabilidad_v1?ObtenerClienteDeOperacion\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTContabilidad.ObtenerClienteDeOperacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
  	"Btinreq": { 

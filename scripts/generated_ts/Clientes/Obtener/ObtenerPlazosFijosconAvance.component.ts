@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPlazosFijosconAvanceComponent1750945331939 {
+export class ObtenerPlazosFijosconAvanceComponent1751987196333 {
   pageTitle        = 'Obtener Plazos Fijos con Avance';
   description      = `Método para obtener los productos de depósito a plazo fijo que tiene contratado un cliente, con su correspondiente avance.`;
   pubName    = 'BTClientes.ObtenerPlazosFijoConAvance';
@@ -38,7 +38,7 @@ Valor específico 2 | Tipo de operación a excluir.
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtProductosPlazoFijo', Tipo: '[sBTProductoPlazoFijo](#sbtproductoplazofijo)', Comentarios: 'Listado de plazos fijos.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se recuperó la cuenta para el Identificador: [Número de identificador]' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de cliente.' }, { Código: '30002', Descripción: 'No se recuperó la cuenta para el Identificador: [Número de identificador]' }];
 
   examples = {
     invocation: { xml: `
@@ -56,7 +56,7 @@ Valor específico 2 | Tipo de operación a excluir.
          <bts:clienteUId>10010</bts:clienteUId>
       </bts:BTClientes.ObtenerPlazosFijoConAvance>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerPlazosFijoConAvance=\' \
@@ -155,7 +155,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerPlazosFijoConAvanceResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 { 
     "Btinreq": { 

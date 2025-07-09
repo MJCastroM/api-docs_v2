@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerCorrelativoGuiaEspecialComponent1750945333874 {
+export class ObtenerCorrelativoGuiaEspecialComponent1751987198198 {
   pageTitle        = 'Obtener Correlativo Guía Especial';
   description      = `Método para obtener los datos de un correlativo de una determinada guía especial de procesos.`;
   pubName    = 'BTParametrosBase.ObtenerCorrelativoGuiaEspecial';
@@ -21,7 +21,7 @@ export class ObtenerCorrelativoGuiaEspecialComponent1750945333874 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Código de empresa [Hidden].' }, { Nombre: 'codigo', Tipo: 'Long', Comentarios: 'Código de la Guía de Procesos.' }, { Nombre: 'correlativo1', Tipo: 'Short', Comentarios: 'Correlativo 1.' }, { Nombre: 'correlativo2', Tipo: 'Short', Comentarios: 'Correlativo 2.' }, { Nombre: 'correlativo3', Tipo: 'Short', Comentarios: 'Correlativo 3.' }];
   outputData = [{ Nombre: 'sdtCorrelativo', Tipo: '[sBTCorrelativoGuiaEspecial](#sbtcorrelativoguiaespecial)', Comentarios: 'Datos de la guía especial de proceso.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió código de guía.' }, { Codigo: '40001', Descripcion: 'No existe el registro.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió código de guía.' }, { Código: '40001', Descripción: 'No existe el registro.' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerCorrelativoGuiaEspecialComponent1750945333874 {
          <bts:correlativo3></bts:correlativo3>
       </bts:BTParametrosBase.ObtenerCorrelativoGuiaEspecial>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerCorrelativoGuiaEspecial \
@@ -96,7 +96,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerCorrelativoGuiaEspecialResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

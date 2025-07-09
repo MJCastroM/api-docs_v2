@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class VerificarEstadoServidorComponent1750945331267 {
+export class VerificarEstadoServidorComponent1751987195581 {
   pageTitle        = 'Verificar Estado del Servidor';
   description      = `Método para verificar el estado del servidor de procesos.`;
   pubName    = 'BTCadenaCierre.VerificarEstadoServidor';
@@ -21,7 +21,7 @@ export class VerificarEstadoServidorComponent1750945331267 {
 
   inputData  = [{ Nombre: 'capability', Tipo: 'String', Comentarios: '[Hidden: Valor fijo "Default" para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30002', Descripcion: 'No hay ningún servidor disponible para ejecutar la tarea.' }, { Codigo: '30004', Descripcion: 'No hay ningún servidor disponible para ejecutar la tarea (con la capacidad Default).' }];
+  errors     = [{ Código: '30002', Descripción: 'No hay ningún servidor disponible para ejecutar la tarea.' }, { Código: '30004', Descripción: 'No hay ningún servidor disponible para ejecutar la tarea (con la capacidad Default).' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class VerificarEstadoServidorComponent1750945331267 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.VerificarEstadoServidor>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?VerificarEstadoServidor\' \
@@ -77,7 +77,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.VerificarEstadoServidorResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

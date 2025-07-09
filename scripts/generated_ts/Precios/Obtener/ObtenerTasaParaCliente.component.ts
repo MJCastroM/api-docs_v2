@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTasaParaClienteComponent1750945334732 {
+export class ObtenerTasaParaClienteComponent1751987199135 {
   pageTitle        = 'Obtener Tasa Para Cliente';
   description      = `Método para obtener la tasa parametrizada al cliente para el producto indicado, junto con la fecha de vigencia.`;
   pubName    = 'BTPrecios.ObtenerTasaCliente';
@@ -21,7 +21,7 @@ export class ObtenerTasaParaClienteComponent1750945334732 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador del cliente.' }, { Nombre: 'productoUId', Tipo: 'Long', Comentarios: 'Identificador del producto.' }, { Nombre: 'fecha', Tipo: 'Date', Comentarios: 'Fecha del consulta.' }, { Nombre: 'importe', Tipo: 'Long', Comentarios: 'Importe a calcular.' }, { Nombre: 'plazo', Tipo: 'Int', Comentarios: 'Plazo.' }];
   outputData = [{ Nombre: 'tipoTasa', Tipo: 'String', Comentarios: 'Tipo de tasa.' }, { Nombre: 'tasa', Tipo: 'Double', Comentarios: 'Tasa.' }, { Nombre: 'tasaMinima', Tipo: 'Double', Comentarios: 'Tasa mínima.' }, { Nombre: 'tasaMaxima', Tipo: 'Double', Comentarios: 'Tasa máxima.' }, { Nombre: 'fechaVigencia', Tipo: 'Date', Comentarios: 'Fecha de vigencia' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Debe ingresar identificador de cliente.' }, { Codigo: '30002', Descripcion: 'Debe ingresar identificador de producto.' }, { Codigo: '30003', Descripcion: 'Debe ingresar fecha.' }, { Codigo: '30004', Descripcion: 'Debe ingresar importe.' }, { Codigo: '30005', Descripcion: 'Debe ingresar plazo.' }, { Codigo: '40003', Descripcion: 'No existe registro con la cuenta indicada.' }, { Codigo: '40004', Descripcion: 'No existe registro con el identificador indicado.' }, { Codigo: '40005', Descripcion: 'No se recibió identificador de cuenta a consultar.' }, { Codigo: '41003', Descripcion: 'No existe registro para el identificador único.' }, { Codigo: '41004', Descripcion: 'No existe registro para el producto indicado.' }, { Codigo: '50001', Descripcion: 'El registro no existe.' }];
+  errors     = [{ Código: '30001', Descripción: 'Debe ingresar identificador de cliente.' }, { Código: '30002', Descripción: 'Debe ingresar identificador de producto.' }, { Código: '30003', Descripción: 'Debe ingresar fecha.' }, { Código: '30004', Descripción: 'Debe ingresar importe.' }, { Código: '30005', Descripción: 'Debe ingresar plazo.' }, { Código: '40003', Descripción: 'No existe registro con la cuenta indicada.' }, { Código: '40004', Descripción: 'No existe registro con el identificador indicado.' }, { Código: '40005', Descripción: 'No se recibió identificador de cuenta a consultar.' }, { Código: '41003', Descripción: 'No existe registro para el identificador único.' }, { Código: '41004', Descripción: 'No existe registro para el producto indicado.' }, { Código: '50001', Descripción: 'El registro no existe.' }];
 
   examples = {
     invocation: { xml: `
@@ -43,7 +43,7 @@ export class ObtenerTasaParaClienteComponent1750945334732 {
          <bts:plazo>360</bts:plazo>
       </bts:BTPrecios.ObtenerTasaCliente>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTasaCliente\' \
@@ -92,7 +92,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ObtenerTasaClienteResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeViviendaComponent1750945332311 {
+export class ObtenerTiposdeViviendaComponent1751987196641 {
   pageTitle        = 'Obtener Tipos de Vivienda';
   description      = `Método para obtener un listado de los tipos de vivienda ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeVivienda';
@@ -38,7 +38,7 @@ export class ObtenerTiposdeViviendaComponent1750945332311 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerTiposDeVivienda>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -98,7 +98,7 @@ export class ObtenerTiposdeViviendaComponent1750945332311 {
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerTiposDeViviendaResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

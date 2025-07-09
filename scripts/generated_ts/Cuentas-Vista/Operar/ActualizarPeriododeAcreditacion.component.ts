@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ActualizarPeriododeAcreditacionComponent1750945332903 {
+export class ActualizarPeriododeAcreditacionComponent1751987197254 {
   pageTitle        = 'Actualizar Período de Acreditación';
   description      = `Método para actualizar el período de acreditación de intereses de una subcuenta contratada.`;
   pubName    = 'BTCuentasVista.ActualizarPeriodoDeAcreditacion';
@@ -21,7 +21,7 @@ export class ActualizarPeriododeAcreditacionComponent1750945332903 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador de subcuenta.' }, { Nombre: 'periodoAcreditacion', Tipo: 'Int', Comentarios: 'Período de acreditación.' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador único de operación.' }, { Codigo: '30002', Descripcion: 'El período de acreditación ingresado es inválido.' }, { Codigo: '30003', Descripcion: 'No se recuperó la operación para el Identificador: [Número de identificador].' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador único de operación.' }, { Código: '30002', Descripción: 'El período de acreditación ingresado es inválido.' }, { Código: '30003', Descripción: 'No se recuperó la operación para el Identificador: [Número de identificador].' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ActualizarPeriododeAcreditacionComponent1750945332903 {
          <bts:periodoAcreditacion>1</bts:periodoAcreditacion>
       </bts:BTCuentasVista.ActualizarPeriodoDeAcreditacion>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 {
     "Btinreq": {
@@ -76,7 +76,7 @@ export class ActualizarPeriododeAcreditacionComponent1750945332903 {
          </Btoutreq>
       </BTCuentasVista.ActualizarPeriodoDeAcreditacionResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
     "Btinreq": {

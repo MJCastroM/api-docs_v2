@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerLimitesComponent1750945331899 {
+export class ObtenerLimitesComponent1751987196295 {
   pageTitle        = 'Obtener Límites';
   description      = `Método para obtener los límites de una cuenta cliente.`;
   pubName    = 'BTClientes.ObtenerLimites';
@@ -21,7 +21,7 @@ export class ObtenerLimitesComponent1750945331899 {
 
   inputData  = [{ Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }];
   outputData = [{ Nombre: 'sdtLimites', Tipo: '[sBTLimiteCliente](#sbtlimitecliente)', Comentarios: 'Listado de límites.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió identificador de cliente.' }, { Codigo: '30002', Descripcion: 'No se encontró un cliente para el identificador recibido.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió identificador de cliente.' }, { Código: '30002', Descripción: 'No se encontró un cliente para el identificador recibido.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerLimitesComponent1750945331899 {
          <bts:clienteUId>61</bts:clienteUId>
       </bts:BTClientes.ObtenerLimites>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTClientes_v1?ObtenerLimites\' \
@@ -129,7 +129,7 @@ curl -X POST \
          </Btoutreq>
       </BTClientes.ObtenerLimitesResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {

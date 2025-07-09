@@ -226,7 +226,7 @@ function renderComponent(mdPath) {
   const pub     = meta.match(/\*\*Nombre publicación:\*\*\s*(.+)/)?.[1] || '';
   const prog    = meta.match(/\*\*Programa:\*\*\s*(.+)/)?.[1] || '';
   const sc      = meta.match(/\*\*Global\/País:\*\*\s*(.+)/)?.[1] || '';
-  
+
   const desc = meta.replace(/::: note/, '').split('\n')[0].trim();
 
   // tablas y ejemplos
@@ -239,7 +239,7 @@ function renderComponent(mdPath) {
     `{ Nombre: '${esc(r.Nombre)}', Tipo: '${esc(r.Tipo)}', Comentarios: '${esc(r.Comentarios)}' }`
   ).join(', ')}]`;
   const toRowsErr = tbl => `[${tbl.map(r =>
-    `{ Codigo: '${esc(r.Codigo||r.Código)}', Descripcion: '${esc(r.Descripción||r.Descripcion)}' }`
+    `{ Código: '${esc(r.Codigo||r.Código)}', Descripción: '${esc(r.Descripción||r.Descripcion)}' }`
   ).join(', ')}]`;
   const sdtLit = `[${sdts.map(s =>
     `{ typeName: '${esc(s.typeName)}', fields: ${toRows(s.fields)} }`
@@ -278,11 +278,11 @@ export class ${cls}${ms} {
 
   examples = {
     invocation: { xml: \`
-${esc(examples.invocation.xml)}\`, 
+${esc(examples.invocation.xml)}\`,
     json: \`
 ${esc(examples.invocation.json)}\` },
     response:   { xml: \`
-${esc(examples.response.xml)}\`,  
+${esc(examples.response.xml)}\`,
     json: \`
 ${esc(examples.response.json)}\` }
   };

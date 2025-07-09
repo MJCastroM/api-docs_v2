@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerServiciosComponent1750945331480 {
+export class ObtenerServiciosComponent1751987195786 {
   pageTitle        = 'Obtener Servicios';
   description      = `Método para obtener un listado de los servicios de CASH.`;
   pubName    = 'BTCASHManagement.ObtenerServicios';
@@ -38,7 +38,7 @@ export class ObtenerServiciosComponent1750945331480 {
          </bts:Btinreq>
       </bts:BTCASHManagement.ObtenerServicios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCASHManagement_v1?ObtenerServicios=\' \
@@ -145,7 +145,7 @@ curl -X POST \
          </Btoutreq>
       </BTCASHManagement.ObtenerServiciosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

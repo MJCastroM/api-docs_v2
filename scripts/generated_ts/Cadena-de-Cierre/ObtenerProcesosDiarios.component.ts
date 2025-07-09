@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerProcesosDiariosComponent1750945331244 {
+export class ObtenerProcesosDiariosComponent1751987195555 {
   pageTitle        = 'Obtener Procesos Diarios';
   description      = `Método para obtener un listado de los procesos diarios de la cadena de cierre.`;
   pubName    = 'BTCadenaCierre.ObtenerProcesosDiarios';
@@ -38,7 +38,7 @@ export class ObtenerProcesosDiariosComponent1750945331244 {
          </bts:Btinreq>
       </bts:BTCadenaCierre.ObtenerProcesosDiarios>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
     \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCadenaCierre?ProcesosDiarios\' \
@@ -151,7 +151,7 @@ curl -X POST \
          </Btoutreq>
       </BTCadenaCierre.ObtenerProcesosDiariosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 "Btinreq": {
       "Device": "mc",

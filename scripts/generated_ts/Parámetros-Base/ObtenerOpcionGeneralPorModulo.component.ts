@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerOpcionGeneralPorModuloComponent1750945333902 {
+export class ObtenerOpcionGeneralPorModuloComponent1751987198236 {
   pageTitle        = 'Obtener Opción General Por Módulo';
   description      = `Método para obtener los datos de una opción general de un determinado módulo.`;
   pubName    = 'BTParametrosBase.ObtenerOpcionGeneralPorModulo';
@@ -21,7 +21,7 @@ export class ObtenerOpcionGeneralPorModuloComponent1750945333902 {
 
   inputData  = [{ Nombre: 'empresaId', Tipo: 'Short', Comentarios: 'Código de empresa [Hidden].' }, { Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Identificador de módulo Bantotal.' }, { Nombre: 'codigo', Tipo: 'Int', Comentarios: 'Código de la opción general de procesos.' }];
   outputData = [{ Nombre: 'sdtOpcionGeneralModulo', Tipo: '[sBTOpcionGeneral](#sbtopciongeneral)', Comentarios: 'Datos de la opción general de procesos.' }];
-  errors     = [{ Codigo: '30002', Descripcion: 'No se recibió el módulo.' }, { Codigo: '30003', Descripcion: 'No se recibió identificador de opción general.' }, { Codigo: '40001', Descripcion: 'El módulo ingresado no es correcto.' }, { Codigo: '40002', Descripcion: 'No se encontró registro para la opción general ingresada.' }];
+  errors     = [{ Código: '30002', Descripción: 'No se recibió el módulo.' }, { Código: '30003', Descripción: 'No se recibió identificador de opción general.' }, { Código: '40001', Descripción: 'El módulo ingresado no es correcto.' }, { Código: '40002', Descripción: 'No se encontró registro para la opción general ingresada.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class ObtenerOpcionGeneralPorModuloComponent1750945333902 {
          <bts:codigo>9</bts:codigo>
       </bts:BTParametrosBase.ObtenerOpcionGeneralPorModulo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
 https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametrosBase_v1?ObtenerOpcionGeneralPorModulo \
@@ -85,7 +85,7 @@ https://appjava2019:8067/bancowdesa/servlet/com.dlya.bantotal.odwsbt_BTParametro
          </Btoutreq>
       </BTParametrosBase.ObtenerOpcionGeneralPorModuloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \' 
 { 

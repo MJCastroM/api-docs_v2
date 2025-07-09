@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class DenunciarDesdeREDComponent1750945335708 {
+export class DenunciarDesdeREDComponent1751987200336 {
   pageTitle        = 'Denunciar Desde RED';
   description      = `Método para denunciar una tarjeta de débito y darla de baja sin notificar a la RED.`;
   pubName    = 'BTTarjetasDeDebito.DenunciarDesdeRED';
@@ -21,7 +21,7 @@ export class DenunciarDesdeREDComponent1750945335708 {
 
   inputData  = [{ Nombre: 'tarjetaUId', Tipo: 'Long', Comentarios: 'Identificador único de tarjeta.' }, { Nombre: 'clienteUId', Tipo: 'Long', Comentarios: 'Identificador único de cliente.' }, { Nombre: 'novedad', Tipo: 'String', Comentarios: '[Hidden: Valor fijo \'DLTRE\' para este método].' }];
   outputData = [];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la tarjeta.' }, { Codigo: '30002', Descripcion: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Codigo: '40001', Descripcion: 'Error interno.' }, { Codigo: '40002', Descripcion: 'No existen tarjetas de débito para los datos ingresados.' }, { Codigo: '40003', Descripcion: 'Error en parámetros de input.' }, { Codigo: '40004', Descripcion: 'No existe la persona (con los datos del titular recibidos).' }, { Codigo: '40005', Descripcion: 'No existe la funcionalidad en TDD025.' }, { Codigo: '40006', Descripcion: 'Motivo de cancelación no valido.' }, { Codigo: '40007', Descripcion: 'Funcionalidad TDD025 inhabilitada.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la tarjeta.' }, { Código: '30002', Descripción: 'No se recuperó la tarjeta de débito para el identificador: [Número de identificador].' }, { Código: '40001', Descripción: 'Error interno.' }, { Código: '40002', Descripción: 'No existen tarjetas de débito para los datos ingresados.' }, { Código: '40003', Descripción: 'Error en parámetros de input.' }, { Código: '40004', Descripción: 'No existe la persona (con los datos del titular recibidos).' }, { Código: '40005', Descripción: 'No existe la funcionalidad en TDD025.' }, { Código: '40006', Descripción: 'Motivo de cancelación no valido.' }, { Código: '40007', Descripción: 'Funcionalidad TDD025 inhabilitada.' }];
 
   examples = {
     invocation: { xml: `
@@ -40,7 +40,7 @@ export class DenunciarDesdeREDComponent1750945335708 {
          <bts:clienteUId>161</bts:clienteUId>
       </bts:BTTarjetasDeDebito.DenunciarDesdeRED>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTTarjetasDeDebito?DenunciarDesdeRED\' \
@@ -80,7 +80,7 @@ curl -X POST \
          </Btoutreq>
       </BTTarjetasDeDebito.DenunciarDesdeREDResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

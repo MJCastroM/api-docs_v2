@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTiposdeTelefonoComponent1750945332305 {
+export class ObtenerTiposdeTelefonoComponent1751987196637 {
   pageTitle        = 'Obtener Tipos de Telefono';
   description      = `Método para obtener un listado de los tipos de teléfono ingresados en Bantotal.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerTiposDeTelefono';
@@ -21,7 +21,7 @@ export class ObtenerTiposdeTelefonoComponent1750945332305 {
 
   inputData  = [];
   outputData = [{ Nombre: 'sdtTiposTelefono', Tipo: '[sBTTipoTelefono](#sbttipotelefono)', Comentarios: 'Listado de tipos de teléfono.' }];
-  errors     = [{ Codigo: '30011', Descripcion: 'No existen tipos de teléfono ingresados en el sistema.' }];
+  errors     = [{ Código: '30011', Descripción: 'No existen tipos de teléfono ingresados en el sistema.' }];
 
   examples = {
     invocation: { xml: `
@@ -38,7 +38,7 @@ export class ObtenerTiposdeTelefonoComponent1750945332305 {
          </bts:Btinreq>
       </bts:BTConfiguracionBantotal.ObtenerTiposDeTelefono>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerTiposDeTelefono\' \
@@ -91,7 +91,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerTiposDeTelefonoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

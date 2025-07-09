@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerEstadosProvinciasyDepartamentosComponent1750945332284 {
+export class ObtenerEstadosProvinciasyDepartamentosComponent1751987196627 {
   pageTitle        = 'Obtener Estados, Provincias y Departamentos';
   description      = `Método para obtener un listado de los estados/provincias/departamentos ingresados en Bantotal para un determinado país.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos';
@@ -39,7 +39,7 @@ export class ObtenerEstadosProvinciasyDepartamentosComponent1750945332284 {
          <bts:pais>845</bts:pais>
       </bts:BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentos>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal?ObtenerEstadosProvinciasDepartamentos=\' \
@@ -157,7 +157,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerEstadosProvinciasDepartamentosResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerTipodeCambioComponent1750945334747 {
+export class ObtenerTipodeCambioComponent1751987199154 {
   pageTitle        = 'Obtener Tipo de Cambio';
   description      = `Método que toma un monto en una determinada moneda origen y lo convierte a una moneda destino, devolviendo los tipos de cambio de ambas monedas.`;
   pubName    = 'BTPrecios.ObtenerTipoCambio';
@@ -21,7 +21,7 @@ export class ObtenerTipodeCambioComponent1750945334747 {
 
   inputData  = [{ Nombre: 'monedaOrigen', Tipo: 'Short', Comentarios: 'Identificador de moneda origen.' }, { Nombre: 'monedaDestino', Tipo: 'Short', Comentarios: 'Identificador de moneda destino.' }, { Nombre: 'montoOrigen', Tipo: 'Double', Comentarios: 'Monto a convertir.' }, { Nombre: 'tipoCotizacion', Tipo: 'String', Comentarios: 'Tipo de cotización. Se pueden enviar los siguientes [valores](#valores).' }];
   outputData = [{ Nombre: 'precioOrigen', Tipo: 'Double', Comentarios: 'Tipo de cambio de la moneda origen respecto a moneda nacional.' }, { Nombre: 'precioDestino', Tipo: 'Double', Comentarios: 'Tipo de cambio de la moneda destino respecto a moneda nacional.' }, { Nombre: 'montoDestino', Tipo: 'Double', Comentarios: 'Monto origen convertido a moneda destino.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'Moneda Origen y Moneda Destino no pueden ser la mismas.' }, { Codigo: '40001', Descripcion: 'Error en la conversión de moneda: [Error generado por rutina RRG0006X].' }];
+  errors     = [{ Código: '30001', Descripción: 'Moneda Origen y Moneda Destino no pueden ser la mismas.' }, { Código: '40001', Descripción: 'Error en la conversión de moneda: [Error generado por rutina RRG0006X].' }];
 
   examples = {
     invocation: { xml: `
@@ -42,7 +42,7 @@ export class ObtenerTipodeCambioComponent1750945334747 {
          <bts:tipoCotizacion>C</bts:tipoCotizacion>
       </bts:BTPrecios.ObtenerTipoCambio>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTPrecios_v1?ObtenerTipoCambio=\' \
@@ -88,7 +88,7 @@ curl -X POST \
          </Btoutreq>
       </BTPrecios.ObtenerTipoCambioResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class AsignarIdaChequeElectronicoComponent1750945331079 {
+export class AsignarIdaChequeElectronicoComponent1751987195413 {
   pageTitle        = 'Asignar Id a Cheque Electrónico';
   description      = `Método para asignar Id a un cheque electrónico.`;
   pubName    = 'BTCuentasCorrientes.AsignarIdChequeElectronico';
@@ -21,7 +21,7 @@ export class AsignarIdaChequeElectronicoComponent1750945331079 {
 
   inputData  = [{ Nombre: 'operacionUId', Tipo: 'Long', Comentarios: 'Identificador único de operación de subcuenta.' }, { Nombre: 'numeroCheque', Tipo: 'Int', Comentarios: 'Número de cheque electrónico.' }, { Nombre: 'chequeElectronicoId', Tipo: 'String', Comentarios: 'Identificador de cheque electrónico.' }];
   outputData = [{ Nombre: 'listaCheques', Tipo: '[sBTChequeElectronico](#sbtchequeelectronico)', Comentarios: 'Listado de cheques.' }];
-  errors     = [{ Codigo: '30001', Descripcion: 'No se recibió el identificador de la operación.' }, { Codigo: '30002', Descripcion: 'No existe registro con el identificador indicado.' }];
+  errors     = [{ Código: '30001', Descripción: 'No se recibió el identificador de la operación.' }, { Código: '30002', Descripción: 'No existe registro con el identificador indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -41,7 +41,7 @@ export class AsignarIdaChequeElectronicoComponent1750945331079 {
          <bts:chequeElectronicoId>10</bts:chequeElectronicoId>
       </bts:BTCuentasCorrientes.AsignarIdChequeElectronico>
    </soapenv:Body>
-</soapenv:Envelope></soapenv:Envelope>`, 
+</soapenv:Envelope></soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTCuentasCorrientes_v1?AsignarIdChequeElectronico\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTCuentasCorrientes.AsignarIdChequeElectronicoResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 \'{
 	"Btinreq": {

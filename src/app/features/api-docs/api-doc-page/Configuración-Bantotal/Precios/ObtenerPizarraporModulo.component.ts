@@ -8,7 +8,7 @@ import { fadeInOut } from '../../../../../route-animations';
   animations: [ fadeInOut ],
   host: { '[@fadeInOut]': '' }
 })
-export class ObtenerPizarraporModuloComponent1750945332316 {
+export class ObtenerPizarraporModuloComponent1751987196645 {
   pageTitle        = 'Obtener Pizarra por Módulo';
   description      = `Método para obtener la pizarra genérica por módulo.`;
   pubName    = 'BTConfiguracionBantotal.ObtenerPizarraPorModulo';
@@ -21,7 +21,7 @@ export class ObtenerPizarraporModuloComponent1750945332316 {
 
   inputData  = [{ Nombre: 'modulo', Tipo: 'Int', Comentarios: 'Módulo.' }];
   outputData = [{ Nombre: 'sdtPizarras', Tipo: '[sBTPizarra](#sbtpizarra)', Comentarios: 'Listado de pizarras.' }];
-  errors     = [{ Codigo: '40001', Descripcion: 'No se encontraron pizarras de tasas para el módulo indicado.' }];
+  errors     = [{ Código: '40001', Descripción: 'No se encontraron pizarras de tasas para el módulo indicado.' }];
 
   examples = {
     invocation: { xml: `
@@ -39,7 +39,7 @@ export class ObtenerPizarraporModuloComponent1750945332316 {
          <bts:modulo>20</bts:modulo>
       </bts:BTConfiguracionBantotal.ObtenerPizarraPorModulo>
    </soapenv:Body>
-</soapenv:Envelope>`, 
+</soapenv:Envelope>`,
     json: `
 curl -X POST \
   \'http://btd-bantotal.eastus2.cloudapp.azure.com:4462/btdeveloper/servlet/com.dlya.bantotal.odwsbt_BTConfiguracionBantotal_v1?ObtenerPizarraPorModulo\' \
@@ -84,7 +84,7 @@ curl -X POST \
          </Btoutreq>
       </BTConfiguracionBantotal.ObtenerPizarraPorModuloResponse>
    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>`,  
+</SOAP-ENV:Envelope>`,
     json: `
 {
 	"Btinreq": {
